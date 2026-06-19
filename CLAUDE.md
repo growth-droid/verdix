@@ -4,6 +4,19 @@ React 18 + TypeScript + Vite + Tailwind + ECharts + zustand + react-router. Veri
 
 ⚠ DEV-SERVER GOTCHA: a long-running `vite` process does NOT pick up `tailwind.config.js` edits — stale config makes custom utilities (e.g. `shadow-glow`) "not exist", PostCSS errors, and the page goes blank white with no page error. Restart the dev server after touching the Tailwind config. Custom component classes in index.css (`.card`, `.glass`, `.kicker`, `.skeleton`) intentionally use plain CSS, not `@apply` of config-extended utilities, to stay immune.
 
+## ⭐ CURRENT STATE — read this first (updated 2026-06-19)
+**Live:** https://verdix-elections.netlify.app (Netlify, team *Mindshare Growth*, project `579af5a5-…`) · source: **private** GitHub repo `growth-droid/verdix` (app-only — root = this `product/app` folder). Deploy = **manual CLI** (`npm run build && netlify deploy --prod --dir=dist --site 579af5a5-…`); NOT auto-linked to git pushes. See [[verdix-deploy]].
+
+- **8 modules**, nav order = **Overview → State → What changed → Compare → Trends → Bypolls → Battlegrounds → Story** (`lib/nav.ts` is the single source — drives tabs, step numbers, taglines, Prev/Next). One shared global filter (`useFilters` + sticky `FilterBar`).
+- **Theme: dark-only glossy matte-black.** The **light theme, ⌘K command palette, and "?" Glossary overlay were ALL REMOVED.** `useTheme()` is a constant `'dark'`; `index.css :root` slate ramp is a neutral true-black (no navy); page bg = matte black + soft top sheen. Inline `<Info>` ⓘ tooltips remain. Light/⌘K/glossary code is left on disk but dead/unmounted — don't re-add a toggle. (The "Design system" + theme-switch notes below are now HISTORICAL.)
+- **Map** (`ChoroplethMap`): symbol-layer **labels** — state names (always, fade-in) + constituency names (assembly `AC_NAME` / parliament `pc_name`, zoom ≥ 4.5), `text-allow-overlap` false so overlaps auto-hide; **self-hosted Open Sans glyphs** in `public/glyphs` (style needs a `glyphs` URL or text won't render). No fullscreen (ResizeObserver). Winner/Alliance/Safe-vs-Swing colour modes; pan/zoom fence.
+- **State page**: single-state only — **defaults to Andhra Pradesh**, "All India" removed from its Focus dropdown (`StatePage` `allIndia=false`; `FilterBar` `onStatePage`/`dispState`).
+- **Battlegrounds + Trends**: forward-looking **projections** — path-to-control seat curve + Attack/Defend boards (Battlegrounds); vote-share trend extrapolation + momentum + Pedersen volatility (Trends). Pure math in `src/lib/projections.ts`.
+- **Data security**: public-by-link but a Netlify **edge function** (`netlify/edge-functions/protect-data.ts`) 403s direct/cross-origin hits to `/data` + `/geo`; CORS locked to own origin; `noindex` + `robots.txt`. **No secrets in the repo.** Not bulletproof vs a headless-browser actor — real fix is the auth API backend.
+- **Verify loop**: `npx tsc --noEmit` → `npm run build` → headless puppeteer-core vs the dev server (temp `_*.mjs`/`_*.png`, then deleted). Standalone on `public/data/*.json` (regenerate via `tools/build_extracts.py` after a Cowork data refresh).
+
+The dated `##` sections below are the change history; **this block is the canonical current state.**
+
 ## Design system (premium, light + dark, 2026-06-13)
 Fonts: **Outfit** for all text, **Plus Jakarta Sans** for numbers (both Google Fonts in index.html). Tailwind `font-sans`=Outfit, `font-num`=Plus Jakarta; numbers route automatically because `.tabular-nums`/`.num` are mapped to Plus Jakarta in index.css (KPI values, tables, year displays all use tabular-nums).
 

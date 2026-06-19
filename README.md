@@ -2,6 +2,8 @@
 
 Interactive retro-analysis of every Indian election 2009–2026 (106 assembly elections + 4 Lok Sabha). Runs **standalone** on bundled JSON extracts — no backend needed — and is built to upgrade to a BigQuery/Cloud Run API later (single swap point in `src/lib/data.ts`).
 
+**Live:** https://verdix-elections.netlify.app · source in the private GitHub repo `growth-droid/verdix`. Dark-only premium UI (no light theme / command palette / glossary overlay — those were removed).
+
 ## Run
     npm install
     npm run dev          # http://localhost:5173
@@ -11,8 +13,8 @@ Interactive retro-analysis of every Indian election 2009–2026 (106 assembly el
 One **global filter** ties the whole product together: pick a **region** and **arena** (Assembly / Lok Sabha) once in the sticky Focus bar and it carries across every module. The numbered tabs follow a deliberate narrative — **Overview → State → What changed → Compare → Trends → Bypolls → Battlegrounds → Story** (macro picture → one state → what shifted there → compare any two → the long arc → midterm signals → what's next → the narrated deck) — and the per-page "what you're looking at" line + Next/Back buttons walk you through it as a guided journey.
 
 ## Modules (8, all live)
-- **Overview** — MapLibre choropleth (4,182 ACs / 543 PCs). Colour by winner · alliance · margin-heat · turnout · single-party scoreboard; level toggle **Seats / States**; KPI strip (seats · turnout w/ trend sparkline · flips vs last · close seats); click any seat → its full **constituency report**; top-parties bar + alliance donut (click to filter the map); grid fallback at `?view=grid`.
-- **State** — an Election-year dropdown drives the whole page; state seat map with a **Winner / Alliance / Safe-vs-Swing** colour toggle (click any seat → its full constituency report); **Stronghold & swing** classification + the stronghold seat list; a **"who beats whom"** contest matrix and a close-seat **battlegrounds** view (both click-to-filter); swing vs previous election (change in vote share); turnout; **seats-won by reservation (GEN/SC/ST)**; and a combined **seats-won + vote-share** conversion chart (columns + line on one timeline, switch party/alliance).
+- **Overview** — MapLibre choropleth (4,182 ACs / 543 PCs). Colour by winner · alliance · margin-heat · turnout · single-party scoreboard; level toggle **Seats / States**; KPI strip (seats · turnout w/ trend sparkline · flips vs last · close seats); click any seat → its full **constituency report**; top-parties bar + alliance donut (click to filter the map); **zoom the map to reveal state names, then constituency (assembly/parliament) names** — overlapping labels are auto-hidden so it never clutters; grid fallback at `?view=grid`.
+- **State** — a **single-state deep-dive** (defaults to **Andhra Pradesh**; there is no "All India" option here). An Election-year dropdown drives the whole page; a state seat map (with zoom-in **constituency name labels**) and a **Winner / Alliance / Safe-vs-Swing** colour toggle (click any seat → its full constituency report); **Stronghold & swing** classification + the stronghold seat list; a **"who beats whom"** contest matrix and a close-seat **battlegrounds** view (both click-to-filter); swing vs previous election (change in vote share); turnout; **seats-won by reservation (GEN/SC/ST)**; and a combined **seats-won + vote-share** conversion chart (columns + line on one timeline, switch party/alliance).
 - **What changed** — flip map (vs each seat's previous election), retention matrix, net seat change, fortress & churn seats, auto strategist insight chips. Region-aware (All-India or a picked state); the net-change bar and retention cells **drill down by state or by parliament**, with click-through to the constituency report.
 - **Compare** — head-to-head of **any two elections** — two assembly years, two Lok Sabha years, or one of each — with a **generated verdict**, a vote-share dumbbell, and a same-map seats-Δ table. Cross-arena pairs also get a segment-level deep-dive — a **scatter ⇄ dumbbell** toggle of assembly-vs-Lok-Sabha vote share that follows the assembly-year pick, a split-ticket table, and a PC-won/ground-held matrix.
 - **Trends** — a combined **vote-share + seats-won** conversion chart (columns + line, per party); a **trajectory projection** that fits each party's vote share with a least-squares trend and extrapolates one election forward (dashed tail + projected-% labels) with a **momentum ranking** (rising/fading fastest, with fit r²); an **electoral-volatility (Pedersen index)** line with a dealignment verdict; votes→seats efficiency scatter, strike-rate small multiples, **win-quality buckets**, alliance roll-up.
@@ -22,14 +24,20 @@ One **global filter** ties the whole product together: pick a **region** and **a
 
 ## What makes it readable
 - A single tuned **glossy matte-black theme** — a neutral true-black palette (no navy/slate tint) with a soft top sheen, across the whole UI, charts, and maps.
+- **Self-decluttering map labels**: zooming the choropleth fades in **state names**, then **constituency names** (assembly `AC_NAME` or parliament `pc_name`, depending on arena). MapLibre's collision engine drops any label that would overlap an already-placed one, so the map never clutters. Label fonts (Open Sans glyphs) are **self-hosted** in `public/glyphs` — no external font calls.
 - Fonts: **Outfit** for text, **Plus Jakarta Sans** for numbers.
 - Inline ⓘ tooltips explain every term (margin, swing, strike rate, flippability…) in plain English. Changes are always shown as **vote share %**, never "pp"/percentage-points.
 - **Party-agnostic**: every default is the largest party in the current view — nothing is hard-coded to one party.
 - An **ErrorBoundary** keeps one bad view from blanking the app; maps self-size via a ResizeObserver and keep the geography on-screen with a pan/zoom fence.
 - **Fast**: the production build code-splits the two heavy vendor libs (echarts, maplibre) into separate cacheable chunks, and concurrent loads of the large data files are de-duped to one fetch.
 
+## Deployment & data protection
+- Hosted on **Netlify** (`netlify.toml`: build `npm run build` → publish `dist`, Node 20, SPA redirect so deep-links don't 404). **Redeploy** with `npm run build && netlify deploy --prod --dir=dist` — or run `netlify init` once to auto-deploy on every `git push`.
+- **Publicly viewable by link, but hardened against scraping.** A Netlify **edge function** (`netlify/edge-functions/protect-data.ts`) returns **403** for any direct request to `/data/*` or `/geo/*` that isn't a same-origin fetch from the app itself — so `curl`/`wget` of the JSON, hotlinking, and other sites embedding the data are all blocked, while the app's own fetches pass. CORS on those paths is locked to the site's own origin; security headers (`X-Frame-Options: DENY`, `nosniff`, `noindex`) + `robots.txt` keep it off search engines.
+- **Ceiling (be honest):** this stops casual + automated scraping, not a determined actor driving a real browser on the page. There are **no secrets in the repo** (no `.env`/keys/tokens; the map uses no tile-provider key). True per-row protection needs the authenticated, rate-limited API backend below.
+
 ## Data
-`tools/build_extracts.py` regenerates all `public/data/*.json` from `../bq_export/*.csv.gz` (read-only). **Re-run it after any Cowork data refresh.** Boundaries live in `public/geo/`. Outstanding data gaps are reported by `tools/audit_datagaps.py`.
+`tools/build_extracts.py` regenerates all `public/data/*.json` from `../bq_export/*.csv.gz` (read-only). **Re-run it after any Cowork data refresh.** Boundaries live in `public/geo/`; map-label fonts in `public/glyphs/`. Outstanding data gaps are reported by `tools/audit_datagaps.py`.
 
 ## Architecture & conventions
 See [CLAUDE.md](CLAUDE.md) — design system, theme mechanics, the global filter spine, the seat-number join rules, party/alliance standardisation, extract quirks, and gotchas (e.g. restart `vite` after editing `tailwind.config.js`).
