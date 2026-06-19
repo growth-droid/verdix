@@ -6,10 +6,34 @@
 [build.environment]
   NODE_VERSION = "20"
 
-# Single-page-app fallback: react-router owns client-side routing, so every path that
-# isn't a real static file must serve index.html (otherwise a refresh / deep-link to
-# /state, /compare, /story, etc. would 404). Keep this LAST.
+# Single-page-app fallback: react-router owns client-side routing, so every path
+# that isn't a real static file must serve index.html (a refresh / deep-link to
+# /state, /compare, /story, etc. would otherwise 404). Real files (assets, /data,
+# /geo) are served directly and are NOT caught by this. Keep it LAST among redirects.
 [[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
+
+# Security + anti-scrape headers on every response.
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"                          # block embedding our UI in another site (clickjacking / iframe data-lift)
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "geolocation=(), microphone=(), camera=()"
+    X-Robots-Tag = "noindex, nofollow"                # shareable by link, but kept out of search-engine indexes
+
+# Data + geometry endpoints: not indexable, and only our own origin may read them in a browser (CORS).
+[[headers]]
+  for = "/data/*"
+  [headers.values]
+    X-Robots-Tag = "noindex, nofollow"
+    Access-Control-Allow-Origin = "https://verdix-elections.netlify.app"
+
+[[headers]]
+  for = "/geo/*"
+  [headers.values]
+    X-Robots-Tag = "noindex, nofollow"
+    Access-Control-Allow-Origin = "https://verdix-elections.netlify.app"
