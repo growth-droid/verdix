@@ -1,0 +1,559 @@
+import { useCallback, useEffect, useMemo, useState } from 'react'
+import { useNavigate } from 'react-router-dom'
+import {
+  loadSeats, loadPartyAE, loadPartyGEState, loadPartyGENat, loadStateTurnout,
+  type Seat, type PartyAgg, type StateTurnout,
+} from '../lib/data'
+import { colorFor, ALLIANCE_COLORS } from '../lib/colors'
+import { useFilters } from '../store'
+import ChoroplethMap from '../components/ChoroplethMap'
+import SeatDrawer from '../components/SeatDrawer'
+import { Chart, ChartCard, Dot, Info, Seg, Select, SortTable, StickyControls, VoteSeatChart, type Col } from '../components/ui'
+import { baseOpt, catAxis, valAxis, pctFmt, AXIS, MUTED } from '../lib/theme'
+import { comparableAE } from '../lib/joins'
+import { swing, classifyState, allianceBase, type SeatClass } from '../lib/analysis'
+
+const tc = (s: string | null) => (s ? s.toLowerCase().replace(/(^|[\s(\-./])([a-z])/g, (_, a: string, b: string) => a + b.toUpperCase()) : '–')
+const SAFE = '#16a34a', LEAN = '#f59e0b', SWING = '#ef4444'
+
+export default function StatePage() {
+  const navTo = useNavigate()
+  const { state, arena, year, setYear } = useFilters()
+  const [rows, setRows] = useState<Seat[]>([])
+  const [partyAE, setPartyAE] = useState<PartyAgg[]>([])
+  const [partyGE, setPartyGE] = useState<PartyAgg[]>([])
+  const [natGE, setNatGE] = useState<PartyAgg[]>([])
+  const [turn, setTurn] = useState<StateTurnout>({ AE: {}, GE: {} })
+  const [band, setBand] = useState(3)
+  const [mapColor, setMapColor] = useState<'winner' | 'alliance' | 'security'>('winner')
+  const [seatGroup, setSeatGroup] = useState<'party' | 'alliance'>('party')
+  const [holdTab, setHoldTab] = useState<'hold' | 'swing'>('hold')
+  const [battleSel, setBattleSel] = useState<{ a: string; b: string } | null>(null)   // close-seat matchup → filters the table
+  const [contestSel, setContestSel] = useState<{ w: string; r: string } | null>(null)  // "who beats whom" cell → seat list
+  const [picked, setPicked] = useState<Seat | null>(null)  // clicked seat → constituency report drawer
+  useEffect(() => { loadSeats(arena).then(setRows) }, [arena])
+  useEffect(() => {
+    loadPartyAE().then(setPartyAE); loadPartyGEState().then(setPartyGE); loadPartyGENat().then(setNatGE)
+    loadStateTurnout().then(setTurn)
+  }, [])
+  const party = arena === 'AE' ? partyAE : partyGE
+
+  const states = useMemo(() => [...new Set(rows.map(r => r.s))].sort(), [rows])
+  // "All India" focus (no state picked) → national rollup across every state, not one state
+  const allIndia = !state
+  const st = allIndia ? 'All India' : (states.includes(state!) ? state! : (states.includes('Uttar Pradesh') ? 'Uttar Pradesh' : states[0] ?? ''))
+  useEffect(() => { setPicked(null) }, [arena, st])  // close the report when the subject changes
+  const mine = useMemo(() => (allIndia ? rows : rows.filter(r => r.s === st)), [rows, st, allIndia])
+  // national vote share only exists for Lok Sabha (party_ge_nat); assembly has no national aggregate
+  const myParty = useMemo(() => (allIndia ? (arena === 'GE' ? natGE : []) : party.filter(r => r.s === st)), [party, st, allIndia, arena, natGE])
+  const years = useMemo(() => [...new Set(mine.map(r => r.y))].sort((a, b) => a - b), [mine])
+  const latest = years[years.length - 1]
+  // the global year drives the whole page (map, swing, alliance, close seats, grid),
+  // clamped to an election this state actually held in the current arena
+  const vy = years.includes(year) ? year : latest
+  const vIdx = years.indexOf(vy)
+  const prevY = vIdx > 0 ? years[vIdx - 1] : null
+  const selected = useMemo(() => mine.filter(r => r.y === vy), [mine, vy])
+  // a few recent assembly elections shipped winners-only (seats, but no candidate votes in
+  // the source) → no vote share at all for that election. Flag it so charts don't fake it.
+  const voteShareMissing = useMemo(() => {
+    const ry = myParty.filter(r => r.y === vy)
+    return ry.length > 0 && ry.every(r => r.v == null)
+  }, [myParty, vy])
+
+  // seats won + vote share % together, one party (or alliance) at a time.
+  // seats come from the constituency rows (mine); vote share is pooled to the same key.
+  const voteSeat = useMemo(() => {
+    const alli = seatGroup === 'alliance'
+    const keyOf = (a: string | null, p: string) => (alli ? allianceBase(a) : p)
+    const colOf = (k: string, a: string | null) => (alli ? (ALLIANCE_COLORS[k] ?? '#64748b') : colorFor(k, a))
+    const seatMap = new Map<string, Map<number, number>>()
+    const aOf = new Map<string, string | null>()
+    mine.forEach(r => {
+      const k = keyOf(r.a, r.p); if (!aOf.has(k)) aOf.set(k, r.a)
+      const m = seatMap.get(k) ?? new Map<number, number>(); m.set(r.y, (m.get(r.y) || 0) + 1); seatMap.set(k, m)
+    })
+    const shareMap = new Map<string, Map<number, number>>()
+    myParty.forEach(r => {
+      if (r.v == null) return
+      const k = keyOf(r.a, r.p)
+      const m = shareMap.get(k) ?? new Map<number, number>(); m.set(r.y, +((m.get(r.y) || 0) + r.v).toFixed(1)); shareMap.set(k, m)
+    })
+    const parties = [...seatMap.keys()]
+      .map(k => ({ k, peak: Math.max(0, ...[...seatMap.get(k)!.values()]) }))
+      .sort((a, b) => b.peak - a.peak).slice(0, alli ? 6 : 8)
+      .map(({ k }) => ({ p: k, a: aOf.get(k) ?? null, color: colOf(k, aOf.get(k) ?? null) }))
+    const seatsOf = (k: string) => years.map(y => seatMap.get(k)?.get(y) ?? (shareMap.get(k)?.has(y) ? 0 : null))
+    const shareOf = (k: string) => years.map(y => shareMap.get(k)?.get(y) ?? null)
+    return { parties, seatsOf, shareOf }
+  }, [mine, myParty, years, seatGroup])
+
+  // map slice: this state's selected election — or, for All India, every state that year
+  const mapByState = useMemo(() => allIndia
+    ? new Map(states.map(s => [s, mine.filter(r => r.s === s && r.y === vy)]))
+    : new Map([[st, selected]]), [allIndia, states, mine, vy, st, selected])
+
+  // ── Stronghold ↔ Swing classification (TN-deck targeting logic) ──
+  const classed = useMemo(() => classifyState(rows, st, arena), [rows, st, arena])
+  const classByJ = useMemo(() => {
+    const m = new Map<number, SeatClass>()
+    classed.seats.forEach(c => m.set(c.cur.j, c))
+    return m
+  }, [classed])
+  const security = useMemo(() => {
+    let safe = 0, lean = 0, swingN = 0
+    const byParty = new Map<string, { a: string | null; n: number }>()
+    classed.seats.forEach(c => {
+      if (c.status === 'swing') { swingN++; return }
+      if (c.status === 'safe') safe++; else lean++
+      const e = byParty.get(c.party!) ?? { a: c.a, n: 0 }
+      e.n++; byParty.set(c.party!, e)
+    })
+    const holds = [...byParty.entries()].map(([p, e]) => ({ p, a: e.a, n: e.n })).sort((x, y) => y.n - x.n)
+    return { safe, lean, swingN, holds, total: classed.seats.length }
+  }, [classed])
+  const securityColorOf = useCallback((r: Seat) => {
+    const c = classByJ.get(r.j)
+    return !c ? '#64748b' : c.status === 'safe' ? SAFE : c.status === 'lean' ? LEAN : SWING
+  }, [classByJ])
+  const securitySubOf = useCallback((r: Seat) => {
+    const c = classByJ.get(r.j)
+    if (!c) return r.s
+    if (c.status === 'swing') return `Swing seat — no party owns it (${classed.window.length} elections)`
+    return `${c.party} ${c.status === 'safe' ? 'stronghold' : 'lean'} — won ${c.wins}/${c.total} of the last ${classed.window.length} elections`
+  }, [classByJ, classed.window.length])
+  const securityLegend = useMemo(() => [
+    { label: 'Safe — one party always wins', color: SAFE, n: security.safe },
+    { label: 'Lean — usually one party', color: LEAN, n: security.lean },
+    { label: 'Swing — changes hands', color: SWING, n: security.swingN },
+  ], [security])
+  const swingSeats = useMemo(() => classed.seats.filter(c => c.status === 'swing'), [classed])
+  // the actual stronghold seats (safe / lean), grouped by the holding party (largest first)
+  const strongholdSeats = useMemo(() => {
+    const rank = new Map(security.holds.map((h, i) => [h.p, i]))
+    return classed.seats.filter(c => c.status !== 'swing' && c.party)
+      .sort((a, b) => (rank.get(a.party!) ?? 99) - (rank.get(b.party!) ?? 99) || b.wins - a.wins || a.cur.c.localeCompare(b.cur.c))
+  }, [classed, security])
+  // contest matrix — who beats whom (winner × runner-up) in the selected election
+  const contest = useMemo(() => {
+    const m = new Map<string, Map<string, number>>()
+    const involve = new Map<string, number>(); const aOf = new Map<string, string | null>()
+    selected.forEach(s => {
+      if (!s.q) return
+      aOf.set(s.p, s.a)
+      involve.set(s.p, (involve.get(s.p) || 0) + 1); involve.set(s.q, (involve.get(s.q) || 0) + 1)
+      if (!m.has(s.p)) m.set(s.p, new Map())
+      m.get(s.p)!.set(s.q, (m.get(s.p)!.get(s.q) || 0) + 1)
+    })
+    const ps = [...involve.keys()].sort((a, b) => (involve.get(b) || 0) - (involve.get(a) || 0)).slice(0, 7)
+    const get = (w: string, r: string) => m.get(w)?.get(r) || 0
+    const maxCell = Math.max(1, ...ps.flatMap(w => ps.map(r => (w === r ? 0 : get(w, r)))))
+    let rival: { a: string; b: string; n: number } | null = null
+    for (let i = 0; i < ps.length; i++) for (let j = i + 1; j < ps.length; j++) {
+      const n = get(ps[i], ps[j]) + get(ps[j], ps[i]); if (n && (!rival || n > rival.n)) rival = { a: ps[i], b: ps[j], n }
+    }
+    return { ps, get, aOf, maxCell, rival, rowTotal: (w: string) => ps.reduce((s, r) => s + get(w, r), 0), total: selected.filter(s => s.q).length }
+  }, [selected])
+
+  // ── Performance by reservation category (GEN / SC / ST) for the selected year ──
+  const reservation = useMemo(() => {
+    // reservation is back-filled in the extract; show every category present (incl. Sikkim's
+    // BL and any residual 'NA') so none are silently dropped.
+    const ORDER = ['GEN', 'SC', 'ST', 'BL', 'SAN', 'NA']
+    const present = [...new Set(selected.map(r => r.r ?? 'NA'))]
+    const cats = [...ORDER.filter(c => present.includes(c)), ...present.filter(c => !ORDER.includes(c)).sort()]
+    const byParty = new Map<string, { a: string | null; byCat: Record<string, number> }>()
+    selected.forEach(r => {
+      const cat = r.r ?? 'NA'
+      const e = byParty.get(r.p) ?? { a: r.a, byCat: {} }
+      e.byCat[cat] = (e.byCat[cat] || 0) + 1
+      byParty.set(r.p, e)
+    })
+    const top = [...byParty.entries()]
+      .map(([p, e]) => ({ p, a: e.a, byCat: e.byCat, total: Object.values(e.byCat).reduce((s2, x) => s2 + x, 0) }))
+      .sort((x, y) => y.total - x.total).slice(0, 6)
+    const catTotals = Object.fromEntries(cats.map(c => [c, selected.filter(r => (r.r ?? 'NA') === c).length]))
+    return {
+      cats, catTotals,
+      option: {
+        ...baseOpt,
+        tooltip: { ...baseOpt.tooltip, trigger: 'axis' },
+        legend: { ...baseOpt.legend, data: top.map(t => t.p) },
+        grid: { ...baseOpt.grid, top: 28 },
+        xAxis: catAxis(cats.map(c => `${c} (${catTotals[c]})`)),
+        yAxis: valAxis(),
+        series: top.map(t => ({
+          name: t.p, type: 'bar', barMaxWidth: 26,
+          data: cats.map(c => t.byCat[c] || 0),
+          itemStyle: { color: colorFor(t.p, t.a), borderRadius: [3, 3, 0, 0] },
+        })),
+      },
+    }
+  }, [selected])
+
+
+  // swing vs previous election (change in vote share)
+  const swingData = useMemo(() => {
+    if (!prevY) return null
+    if (arena === 'AE' && !comparableAE(st, prevY, vy)) return 'incomparable' as const
+    const sw = swing(party, st, vy, prevY, 1.5).filter(r => Math.abs(r.d) >= 0.3).slice(0, 14)
+    if (!sw.length) return null
+    // axis padding so the from→to labels at each bar's end never clip
+    const ds = sw.map(r => +r.d.toFixed(1))
+    const lo = Math.min(0, ...ds), hi = Math.max(0, ...ds), pad = Math.max(6, (hi - lo) * 0.32)
+    type SwDatum = { value: number; from: number | null; to: number | null; clr: string }
+    const arenaLbl = arena === 'GE' ? 'Lok Sabha' : 'Assembly'
+    return {
+      ...baseOpt, legend: undefined,
+      tooltip: {
+        ...baseOpt.tooltip, trigger: 'item', confine: true,
+        backgroundColor: 'transparent', borderColor: 'transparent', borderWidth: 0, padding: 0,
+        extraCssText: 'box-shadow:none;',
+        formatter: (q: { name: string; value: number; data: SwDatum }) => {
+          const c = q.data.clr, d = q.value, up = d > 0.05, down = d < -0.05
+          const arrow = up ? '▲' : down ? '▼' : '▬', word = up ? 'gained' : down ? 'lost' : 'held'
+          const f = q.data.from != null ? q.data.from.toFixed(1) : '–', t = q.data.to != null ? q.data.to.toFixed(1) : '–'
+          const pct = '<span style="font-size:11px;font-weight:600;color:rgb(var(--s400));">%</span>'
+          return `<div style="min-width:212px;padding:13px 15px 12px;border-radius:14px;font-family:Outfit,sans-serif;`
+            + `background:linear-gradient(158deg,rgb(var(--s800)),rgb(var(--s900)));border:1px solid rgb(var(--s500) / .28);box-shadow:0 20px 46px -14px rgb(0 0 0 / .6);">`
+            + `<div style="display:flex;align-items:center;justify-content:space-between;gap:14px;margin-bottom:12px;">`
+            +   `<div style="display:flex;align-items:center;gap:8px;"><span style="width:10px;height:10px;border-radius:3px;background:${c};box-shadow:0 0 9px ${c}aa;"></span>`
+            +   `<span style="font-size:14px;font-weight:700;color:rgb(var(--s50));">${q.name}</span></div>`
+            +   `<span style="font-size:9.5px;font-weight:600;letter-spacing:.7px;text-transform:uppercase;color:rgb(var(--s300));padding:2px 8px;border-radius:999px;background:rgb(var(--s500) / .2);">${arenaLbl}</span>`
+            + `</div>`
+            + `<div style="display:flex;align-items:flex-end;justify-content:space-between;gap:14px;">`
+            +   `<div><div style="font-size:10px;color:rgb(var(--s400));margin-bottom:3px;">${prevY}</div><div style="font-size:19px;font-weight:700;line-height:1;color:rgb(var(--s200));font-family:'Plus Jakarta Sans',sans-serif;">${f}${pct}</div></div>`
+            +   `<div style="font-size:14px;color:rgb(var(--s500));padding-bottom:3px;">→</div>`
+            +   `<div style="text-align:right;"><div style="font-size:10px;color:rgb(var(--s400));margin-bottom:3px;">${vy}</div><div style="font-size:19px;font-weight:700;line-height:1;color:rgb(var(--s50));font-family:'Plus Jakarta Sans',sans-serif;">${t}${pct}</div></div>`
+            + `</div>`
+            + `<div style="margin-top:12px;padding-top:10px;border-top:1px solid rgb(var(--s500) / .22);display:flex;align-items:center;gap:8px;">`
+            +   `<span style="display:inline-flex;align-items:center;gap:5px;font-size:13px;font-weight:700;font-family:'Plus Jakarta Sans',sans-serif;color:${c};background:${c}1f;border:1px solid ${c}3d;padding:3px 9px;border-radius:999px;"><span style="font-size:8px;">${arrow}</span>${d > 0 ? '+' : ''}${d.toFixed(1)}%</span>`
+            +   `<span style="font-size:11px;color:rgb(var(--s400));">${word} vote share</span>`
+            + `</div></div>`
+        },
+      },
+      grid: { left: 8, right: 16, top: 8, bottom: 4, containLabel: true },
+      xAxis: valAxis((v: number) => v + '%', { min: Math.floor(lo - pad), max: Math.ceil(hi + pad) }),
+      yAxis: catAxis(sw.map(r => r.p).reverse()),
+      series: [{
+        type: 'bar', barWidth: 12,
+        data: sw.map(r => { const clr = colorFor(r.p, r.a); return {
+          value: +r.d.toFixed(1), from: r.from, to: r.to, clr,
+          itemStyle: { color: clr, borderRadius: 3 },
+          label: { position: r.d >= 0 ? 'right' : 'left' as const },
+        } }).reverse(),
+        label: {
+          show: true, fontSize: 10,
+          formatter: (q: { value: number; data: SwDatum }) =>
+            (q.data.from != null && q.data.to != null ? `{s|${q.data.from.toFixed(1)}→${q.data.to.toFixed(1)}  }` : '') + `{d|${q.value > 0 ? '+' : ''}${q.value}%}`,
+          rich: { d: { color: AXIS, fontSize: 10, fontWeight: 700 }, s: { color: MUTED, fontSize: 9 } },
+        },
+      }],
+    }
+  }, [party, st, vy, prevY, arena])
+
+  // turnout per election — prefer official state-level turnout (full coverage incl. 2023-26),
+  // fall back to mean of seat turnouts. Selected year highlighted.
+  const turnout = useMemo(() => {
+    const src = turn[arena] ?? {}
+    const t = years.map(y => {
+      const official = src[`${st}|${y}`]
+      if (official != null) return official
+      const v = mine.filter(r => r.y === y && r.t != null)
+      return v.length ? +(v.reduce((s2, r) => s2 + (r.t ?? 0), 0) / v.length).toFixed(1) : null
+    })
+    return {
+      ...baseOpt, legend: undefined,
+      tooltip: { ...baseOpt.tooltip, trigger: 'axis', valueFormatter: (v: number) => (v == null ? 'n/a' : v + '%') },
+      xAxis: catAxis(years), yAxis: valAxis(pctFmt, { scale: true }),
+      series: [{
+        name: 'Turnout', type: 'line', symbolSize: 6, connectNulls: true, data: t,
+        lineStyle: { width: 2.5, color: '#38bdf8' }, itemStyle: { color: '#38bdf8' },
+        areaStyle: { color: 'rgba(56,189,248,0.08)' },
+        markLine: { silent: true, symbol: 'none', lineStyle: { color: '#f97316', type: 'dashed', width: 1 }, data: [{ xAxis: String(vy) }], label: { show: false } },
+        label: { show: true, color: AXIS, fontSize: 10, formatter: '{c}' },
+      }],
+    }
+  }, [mine, years, vy, turn, arena, st])
+
+  const close = useMemo(() => selected.filter(r => r.m != null && r.m < band), [selected, band])
+  // close-seat battlegrounds: who is edging out whom among the seats inside the margin band
+  const closeBattles = useMemo(() => {
+    const pair = new Map<string, { a: string; b: string; aw: number; bw: number }>()
+    close.forEach(s => {
+      if (!s.q) return
+      const [a, b] = s.p < s.q ? [s.p, s.q] : [s.q, s.p]
+      const e = pair.get(a + '|' + b) ?? { a, b, aw: 0, bw: 0 }
+      if (s.p === a) e.aw++; else e.bw++
+      pair.set(a + '|' + b, e)
+    })
+    const rows = [...pair.values()].map(e => ({ ...e, n: e.aw + e.bw })).sort((x, y) => y.n - x.n).slice(0, 8)
+    const max = Math.max(1, ...rows.flatMap(r => [r.aw, r.bw]))
+    return { rows, top: rows[0], max }
+  }, [close])
+  // clicking a battleground bar filters the close-seats table to just that matchup
+  const closeShown = useMemo(() => !battleSel ? close
+    : close.filter(s => s.q && ((s.p === battleSel.a && s.q === battleSel.b) || (s.p === battleSel.b && s.q === battleSel.a))), [close, battleSel])
+  // clicking a "who beats whom" cell lists the seats where that winner beat that runner-up
+  const contestSeats = useMemo(() => contestSel ? selected.filter(s => s.p === contestSel.w && s.q === contestSel.r) : [], [selected, contestSel])
+  useEffect(() => { setBattleSel(null); setContestSel(null) }, [st, vy, arena])   // reset selections when the election changes
+  const closeCols: Col<Seat>[] = [
+    { key: 'n', label: '#', get: r => r.n, align: 'right', width: '36px' },
+    { key: 'c', label: 'Constituency', get: r => r.c, render: r => tc(r.c) },
+    { key: 'p', label: 'Winner', get: r => r.p, render: r => <span><Dot color={colorFor(r.p, r.a)} />{r.p}</span> },
+    { key: 'q', label: 'Runner-up', get: r => r.q, render: r => r.q ? <span><Dot color={colorFor(r.q)} />{r.q}</span> : '–' },
+    { key: 'm', label: 'Margin%', get: r => r.m, align: 'right', render: r => r.m?.toFixed(1) },
+    { key: 't', label: 'Turnout%', get: r => r.t, align: 'right', render: r => r.t?.toFixed(1) ?? '–' },
+  ]
+
+  return (
+    <div>
+      <StickyControls>
+        <div className="flex items-center gap-4 flex-wrap">
+          <div>
+            <h2 className="text-lg font-bold leading-tight tracking-tight">{st}</h2>
+            <div className="kicker">{arena === 'AE' ? 'Assembly' : 'Lok Sabha'} deep dive · change region/arena above</div>
+          </div>
+          <div className="flex items-center gap-2 text-xs text-slate-500">
+            Election
+            <Select value={String(vy)} onChange={v => setYear(+v)} options={[...years].reverse().map(String)} width="w-24" />
+          </div>
+          <span className="text-sm text-slate-400">{years.length} elections · {selected.length} seats</span>
+          {!allIndia && <button onClick={() => navTo('/change')} className="ml-auto text-xs text-orange-400 hover:text-orange-300 underline decoration-dotted decoration-orange-400/40 underline-offset-2 transition-colors">What changed in {st} →</button>}
+        </div>
+      </StickyControls>
+
+      {voteShareMissing && (
+        <div className="mb-4 flex items-start gap-2 rounded-xl border border-amber-400/30 bg-amber-400/[0.06] px-4 py-2.5 text-[12.5px] text-amber-200/90">
+          <span className="text-amber-300 shrink-0">⚠</span>
+          <span><b>{st} {vy}</b> shipped as a winners-only result — its candidate votes aren’t in the source data, so <b>vote share isn’t available for this election</b>. Seat counts, the map and reservation splits are complete; the vote-share line and the swing chart skip {vy}. Pick an earlier election above to see vote share.</span>
+        </div>
+      )}
+
+      {/* Stronghold ↔ Swing: which seats are locked up and which are actually in play */}
+      {!allIndia && (
+      <ChartCard className="mb-4"
+        title={<>Stronghold &amp; swing seats <Info>A stronghold is a seat one party keeps winning; a swing seat changes hands. Swing seats are where elections are decided.</Info></>}
+        note={`Based on this state's last ${classed.window.length} ${arena === 'AE' ? 'assembly' : 'Lok Sabha'} elections (${classed.window.join(', ') || '—'}).`}>
+        {security.total ? (
+          <div className="grid lg:grid-cols-2 gap-4">
+            <div>
+              <div className="flex flex-wrap gap-2 mb-3">
+                <span className="px-3 py-1.5 rounded-xl border border-emerald-400/25 bg-white/[0.03] text-[12px] text-emerald-200/90">{security.safe + security.lean} stronghold seats</span>
+                <span className="px-3 py-1.5 rounded-xl border border-red-400/25 bg-white/[0.03] text-[12px] text-red-200/90">{security.swingN} swing seats — the battleground</span>
+              </div>
+              <div className="text-xs text-muted mb-1.5">Strongholds by party</div>
+              <div className="space-y-1.5">
+                {security.holds.map(h => {
+                  const max = security.holds[0]?.n || 1
+                  return (
+                    <div key={h.p} className="flex items-center gap-2 text-xs">
+                      <span className="w-14 shrink-0 text-right"><Dot color={colorFor(h.p, h.a)} />{h.p}</span>
+                      <div className="flex-1 h-3.5 bg-slate-900 rounded"><div className="h-3.5 rounded" style={{ width: `${(h.n / max) * 100}%`, background: colorFor(h.p, h.a) }} /></div>
+                      <span className="w-7 text-right tabular-nums">{h.n}</span>
+                    </div>
+                  )
+                })}
+              </div>
+            </div>
+            <div>
+              <div className="mb-2">
+                <Seg options={[{ v: 'hold', label: `Stronghold seats (${security.safe + security.lean})` }, { v: 'swing', label: `Swing seats (${security.swingN})` }]} value={holdTab} onChange={v => setHoldTab(v as 'hold' | 'swing')} />
+              </div>
+              <div className="max-h-[230px] overflow-auto pr-1 space-y-1">
+                {holdTab === 'swing' ? <>
+                  {swingSeats.map(c => (
+                    <div key={c.cur.j} className="flex items-center gap-2 text-[11px] border-b border-white/[0.05] py-1">
+                      <span className="w-28 shrink-0 truncate">{tc(c.cur.c)}</span>
+                      <span className="flex items-center gap-1 flex-wrap">
+                        {c.seq.map((w, i) => (
+                          <span key={i} title={`${w.y}: ${w.p}`} className="inline-flex items-center"><Dot color={colorFor(w.p, w.a)} /></span>
+                        ))}
+                      </span>
+                      <span className="ml-auto text-faint">now {c.cur.p}</span>
+                    </div>
+                  ))}
+                  {!swingSeats.length && <div className="text-faint text-xs py-4 text-center">No swing seats — every seat has a clear owner.</div>}
+                </> : <>
+                  {strongholdSeats.map(c => (
+                    <div key={c.cur.j} className="flex items-center gap-2 text-[11px] border-b border-white/[0.05] py-1">
+                      <Dot color={colorFor(c.party!, c.a)} />
+                      <span className="w-28 shrink-0 truncate">{tc(c.cur.c)}</span>
+                      <span className="text-faint">{c.party}</span>
+                      <span className="ml-auto text-faint tabular-nums">won {c.wins}/{c.total} · {c.status === 'safe' ? 'safe' : 'lean'}</span>
+                    </div>
+                  ))}
+                  {!strongholdSeats.length && <div className="text-faint text-xs py-4 text-center">No strongholds — every seat is competitive.</div>}
+                </>}
+              </div>
+            </div>
+          </div>
+        ) : (
+          <div className="h-[120px] flex items-center justify-center text-faint text-sm">Need at least two comparable elections to classify seats.</div>
+        )}
+      </ChartCard>
+      )}
+
+      <ChartCard className="mb-4"
+        title={<>Vote share % + seats won — who is rising, who is fading <Info>Columns are the seats a party (or alliance) won; the line is its {allIndia ? 'national' : 'statewide'} vote share. Reading them together shows whether votes are turning into seats.</Info></>}
+        note={allIndia && arena === 'AE'
+          ? 'National assembly view — columns = seats won across every state that held an election that year. Assembly vote share is recorded per state, not nationally, so there is no vote line here; switch to Lok Sabha for the national vote line.'
+          : 'Columns = seats won (left axis); line = vote share % (right axis), on one timeline. All parties show by default — click a chip to hide/show it (or All / None); switch Party / Alliance to pool pre-poll allies. A few recent winners-only elections have no candidate votes in the source, so the vote line skips those years.'}>
+        <VoteSeatChart years={years} parties={voteSeat.parties} seatsOf={voteSeat.seatsOf} shareOf={voteSeat.shareOf} height={360}
+          extra={<Seg options={[{ v: 'party', label: 'Party' }, { v: 'alliance', label: 'Alliance' }]} value={seatGroup} onChange={v => setSeatGroup(v as 'party' | 'alliance')} />} />
+      </ChartCard>
+
+      {/* Who beats whom — the rivalry / "which party impacts which" matrix */}
+      <ChartCard className="mb-4"
+        title={<>Who beats whom · {vy} <Info>Each cell counts the seats where the row party won and the column party was the runner-up (the challenger it beat). The biggest off-diagonal pair is the state's main contest — i.e. which party is directly impacting which.</Info></>}
+        note="Row = winner, column = runner-up. Cell colour is the winner's colour (deeper = more seats). Read across a row to see who a party beats; read down a column to see who keeps beating that party.">
+        {contest.ps.length > 1 ? (
+          <div>
+            {contest.rival && (
+              <div className="text-[12.5px] text-muted mb-3">
+                Main contest: <b style={{ color: colorFor(contest.rival.a) }}>{contest.rival.a}</b> vs <b style={{ color: colorFor(contest.rival.b) }}>{contest.rival.b}</b> — they finished 1-2 in <b className="text-ink">{contest.rival.n}</b> of {contest.total} decided seats.
+              </div>
+            )}
+            <div className="flex flex-col xl:flex-row gap-4 xl:items-start">
+              <div className="overflow-auto xl:shrink-0">
+                <table className="text-xs border-collapse">
+                  <thead>
+                    <tr>
+                      <th className="p-2 text-left text-faint font-medium whitespace-nowrap">won ↓ / runner-up →</th>
+                      {contest.ps.map(r => <th key={r} className="p-2 text-center font-medium whitespace-nowrap"><Dot color={colorFor(r)} />{r}</th>)}
+                      <th className="p-2 text-right text-faint font-medium">won</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {contest.ps.map(w => (
+                      <tr key={w}>
+                        <td className="p-2 whitespace-nowrap font-medium"><Dot color={colorFor(w, contest.aOf.get(w))} />{w}</td>
+                        {contest.ps.map(r => {
+                          const n = w === r ? 0 : contest.get(w, r)
+                          const isSel = !!contestSel && contestSel.w === w && contestSel.r === r
+                          const alpha = n ? Math.round((0.14 + 0.62 * (n / contest.maxCell)) * 255).toString(16).padStart(2, '0') : ''
+                          return <td key={r} onClick={() => { if (n > 0) setContestSel(isSel ? null : { w, r }) }}
+                            className={`p-2 text-center tabular-nums ${n > 0 ? 'cursor-pointer' : ''} ${isSel ? 'ring-2 ring-inset ring-white/80' : n > 0 ? 'hover:ring-2 hover:ring-inset hover:ring-white/30' : ''}`}
+                            style={{ background: n ? colorFor(w, contest.aOf.get(w)) + alpha : (w === r ? 'rgba(148,163,184,0.05)' : undefined) }}>{w === r ? '·' : (n || '')}</td>
+                        })}
+                        <td className="p-2 text-right tabular-nums text-muted">{contest.rowTotal(w)}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+              <div className="xl:flex-1 xl:min-w-0 xl:self-stretch xl:border-l xl:border-white/[0.06] xl:pl-4">
+                {contestSel ? (
+                  <div className="border-t border-white/[0.06] pt-3 xl:border-t-0 xl:pt-0">
+                    <div className="text-[12.5px] mb-2"><b style={{ color: colorFor(contestSel.w, contest.aOf.get(contestSel.w)) }}>{contestSel.w}</b> beat <b style={{ color: colorFor(contestSel.r) }}>{contestSel.r}</b> in <b className="text-ink">{contestSeats.length}</b> seat{contestSeats.length !== 1 ? 's' : ''} · {vy} <button onClick={() => setContestSel(null)} className="ml-1 text-faint underline decoration-dotted hover:text-ink">clear</button></div>
+                    <SortTable rows={contestSeats} cols={closeCols} defaultSort="m" initialDir="asc" maxH={320} />
+                  </div>
+                ) : <div className="text-[11px] text-faint pt-1 xl:pt-2">Click any coloured cell to list the seats where that party beat that runner-up.</div>}
+              </div>
+            </div>
+          </div>
+        ) : <div className="h-[120px] grid place-items-center text-faint text-sm">Not enough contested seats to map rivalries here.</div>}
+      </ChartCard>
+
+      <div className="grid lg:grid-cols-2 gap-4">
+        <ChartCard title={`Seat map · ${!allIndia && mapColor === 'security' ? `safe vs swing (${classed.window.length} elections)` : !allIndia && mapColor === 'alliance' ? `${vy} · by alliance` : (allIndia ? `All India · ${vy}` : vy)}`}
+          note={!allIndia && mapColor === 'security'
+            ? <>Green = a party always wins here (stronghold). Red = the seat changes hands (swing — where the contest is live). <Info>Computed over this state's comparable elections in the current arena.</Info></>
+            : undefined}>
+          {!allIndia && (
+            <div className="mb-2 flex items-center gap-2 text-xs text-muted">
+              Colour
+              <Seg options={[{ v: 'winner', label: 'Winner' }, { v: 'alliance', label: 'Alliance' }, { v: 'security', label: 'Safe vs Swing' }]} value={mapColor} onChange={v => setMapColor(v as 'winner' | 'alliance' | 'security')} />
+            </div>
+          )}
+          <ChoroplethMap key={arena + st + vy + (allIndia ? 'w' : mapColor)} byState={mapByState} arena={arena} activeYear={vy} focusState={allIndia ? undefined : st} height="h-[300px]"
+            mode={!allIndia && mapColor === 'alliance' ? 'alliance' : 'winner'}
+            colorOf={!allIndia && mapColor === 'security' ? securityColorOf : undefined}
+            subOf={!allIndia && mapColor === 'security' ? securitySubOf : undefined}
+            legendTitle={!allIndia && mapColor === 'security' ? 'Seat security' : undefined}
+            legendItems={!allIndia && mapColor === 'security' ? securityLegend : undefined}
+            onPick={seat => { if (seat) setPicked(seat) }} />
+          <div className="mt-1.5 text-[11px] text-faint">Click any seat for its full constituency report.</div>
+        </ChartCard>
+
+        {!allIndia && (
+        <ChartCard title={`Swing ${prevY ?? '–'} → ${vy} · change in vote share`}
+          note={swingData === 'incomparable' ? undefined : `Each bar = ${vy} vote share − ${prevY} vote share (e.g. 44.0% → 46.2% = +2.2%). Positive = gained share. Parties under 1.5% both times hidden.`}>
+          {swingData === 'incomparable'
+            ? <div className="h-[280px] flex items-center justify-center text-amber-300/90 text-sm text-center px-8">
+                ⚠ {prevY} and {vy} are on different delimitations in {st} — swing is not defined (metrics catalog caveat 4).
+              </div>
+            : swingData
+              ? <Chart option={swingData} style={{ height: 280 }} notMerge />
+              : voteShareMissing
+                ? <div className="h-[280px] flex items-center justify-center text-amber-200/80 text-sm text-center px-8">Vote share isn’t in the source for {st} {vy} (winners-only), so swing vs {prevY} can’t be computed. Select an earlier election above.</div>
+                : <div className="h-[280px] flex items-center justify-center text-slate-500 text-sm">No earlier election before {vy}</div>}
+        </ChartCard>
+        )}
+        <ChartCard title="Turnout by election" note="Official state turnout (assembly: full coverage incl. 2023–26); falls back to mean of seat turnouts where unavailable. Dashed line = selected election.">
+          <Chart option={turnout} style={{ height: 280 }} notMerge />
+        </ChartCard>
+
+        <ChartCard title={<>Seats won by reservation category · {vy} <Info>Some seats are reserved for Scheduled Castes (SC) or Tribes (ST); the rest are General (GEN). Parties often perform very differently across these.</Info></>}
+          note="Grouped bars (not stacked): how each party's wins split across General / SC / ST seats this election.">
+          {reservation.cats.length > 1
+            ? <Chart option={reservation.option} style={{ height: 280 }} notMerge />
+            : <div className="h-[280px] flex items-center justify-center text-faint text-sm">All seats are the same category here.</div>}
+        </ChartCard>
+
+        <ChartCard className="lg:col-span-2" title={`Close seats · ${vy}`} note={`${close.length} seats decided by under ${band}% — the live battleground.`}>
+          <div className="mb-3 flex items-center gap-2 text-xs text-slate-400">
+            Margin band
+            <Seg options={[{ v: '1', label: '<1%' }, { v: '2', label: '<2%' }, { v: '3', label: '<3%' }, { v: '5', label: '<5%' }]}
+              value={String(band)} onChange={v => setBand(+v)} />
+          </div>
+          <div className="grid lg:grid-cols-2 gap-5">
+            <div>
+              <div className="text-xs text-muted mb-2 flex items-center gap-1">Who’s edging out whom in the close seats <Info>Among the seats above (margin under {band}%), the head-to-head pairs that decided the most knife-edge contests. The wider bar won more of those tight seats.</Info></div>
+              {closeBattles.rows.length ? (
+                <div>
+                  {closeBattles.top && (
+                    <div className="text-[12px] text-muted mb-3">Tightest battleground: <b style={{ color: colorFor(closeBattles.top.a) }}>{closeBattles.top.a}</b> vs <b style={{ color: colorFor(closeBattles.top.b) }}>{closeBattles.top.b}</b> — <b className="text-ink">{closeBattles.top.n}</b> seats under {band}%.</div>
+                  )}
+                  <div className="space-y-2">
+                    {closeBattles.rows.map(r => {
+                      const aLead = r.aw >= r.bw
+                      const sel = !!battleSel && ((battleSel.a === r.a && battleSel.b === r.b) || (battleSel.a === r.b && battleSel.b === r.a))
+                      return (
+                        <div key={r.a + r.b} onClick={() => setBattleSel(sel ? null : { a: r.a, b: r.b })}
+                          className={`grid grid-cols-[5.25rem_1fr_5.25rem] items-center gap-1.5 text-[11px] cursor-pointer rounded-md px-1.5 py-1 -mx-1.5 transition-colors ${sel ? 'bg-white/[0.08] ring-1 ring-white/25' : 'hover:bg-white/[0.04]'}`}
+                          title={`${r.a} ${r.aw} – ${r.bw} ${r.b} · click to filter the table`}>
+                          <div className="flex items-center justify-end gap-1.5 min-w-0">
+                            <span className="truncate font-semibold" style={{ color: colorFor(r.a) }}>{r.a}</span>
+                            <span className={`tabular-nums w-4 text-right ${aLead ? 'font-bold text-ink' : 'text-faint'}`}>{r.aw}</span>
+                          </div>
+                          <div className="flex items-center">
+                            <div className="flex-1 flex justify-end"><div className="h-4 rounded-l-md transition-all" style={{ width: `${(r.aw / closeBattles.max) * 100}%`, background: colorFor(r.a), opacity: aLead ? 1 : 0.5 }} /></div>
+                            <div className="w-px self-stretch bg-white/20" />
+                            <div className="flex-1 flex justify-start"><div className="h-4 rounded-r-md transition-all" style={{ width: `${(r.bw / closeBattles.max) * 100}%`, background: colorFor(r.b), opacity: !aLead ? 1 : 0.5 }} /></div>
+                          </div>
+                          <div className="flex items-center gap-1.5 min-w-0">
+                            <span className={`tabular-nums w-4 ${!aLead ? 'font-bold text-ink' : 'text-faint'}`}>{r.bw}</span>
+                            <span className="truncate font-semibold" style={{ color: colorFor(r.b) }}>{r.b}</span>
+                          </div>
+                        </div>
+                      )
+                    })}
+                  </div>
+                  <div className="mt-3 text-[10.5px] text-faint leading-snug">Each row = a head-to-head in the close seats. The longer, brighter bar won more of those knife-edge seats; the centre line is the tie point. <b className="text-muted">Click a bar</b> to filter the table to that matchup.</div>
+                </div>
+              ) : <div className="h-[160px] grid place-items-center text-faint text-sm">No close seats in this band — widen it above.</div>}
+            </div>
+            <div>
+              {battleSel && (
+                <div className="text-[11px] text-muted mb-2">Showing only <b style={{ color: colorFor(battleSel.a) }}>{battleSel.a}</b> ⟷ <b style={{ color: colorFor(battleSel.b) }}>{battleSel.b}</b> · {closeShown.length} of {close.length} close seats <button onClick={() => setBattleSel(null)} className="ml-1 text-faint underline decoration-dotted hover:text-ink">clear</button></div>
+              )}
+              <SortTable rows={closeShown} cols={closeCols} defaultSort="m" initialDir="asc" maxH={360} />
+            </div>
+          </div>
+        </ChartCard>
+      </div>
+      {picked && <SeatDrawer seat={picked} all={rows} arena={arena} onClose={() => setPicked(null)} />}
+    </div>
+  )
+}

@@ -1,0 +1,25 @@
+# dependencies
+node_modules/
+
+# build output
+dist/
+*.tsbuildinfo
+
+# netlify
+.netlify/
+
+# local env / secrets
+.env
+.env.*
+!.env.example
+
+# editor / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# scratch / verification artifacts (headless puppeteer temp files)
+_*.mjs
+_*.png
+*.local

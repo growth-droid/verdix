@@ -1,0 +1,78 @@
+import { useEffect, useRef } from 'react'
+import { Routes, Route, NavLink, useLocation } from 'react-router-dom'
+import MapPage from './pages/MapPage'
+import StoryPage from './pages/StoryPage'
+import StatePage from './pages/StatePage'
+import TrajectoryPage from './pages/TrajectoryPage'
+import ChangePage from './pages/ChangePage'
+import ComparePage from './pages/ComparePage'
+import BypollsPage from './pages/BypollsPage'
+import BattlegroundPage from './pages/BattlegroundPage'
+import FilterBar from './components/FilterBar'
+import ErrorBoundary from './components/ErrorBoundary'
+import { PageTagline, JourneyNav } from './components/Journey'
+import { MODULES } from './lib/nav'
+
+export default function App() {
+  const loc = useLocation()
+  const topRef = useRef<HTMLDivElement>(null)
+  // publish the sticky header+FilterBar height so page-level StickyControls can pin just below it
+  useEffect(() => {
+    const el = topRef.current
+    if (!el || typeof ResizeObserver === 'undefined') return
+    const set = () => document.documentElement.style.setProperty('--app-top', el.offsetHeight + 'px')
+    set()
+    const ro = new ResizeObserver(set); ro.observe(el)
+    return () => ro.disconnect()
+  }, [])
+  return (
+    <div className="min-h-screen flex flex-col">
+     <div ref={topRef} className="sticky top-0 z-30">
+      <header className="border-b border-white/[0.07] bg-slate-950/70 backdrop-blur-xl px-6 py-2.5 flex items-center gap-6">
+        <h1 className="font-extrabold text-[17px] tracking-tight shrink-0 flex items-center gap-2">
+          <span className="inline-block w-2.5 h-2.5 rounded-full bg-gradient-to-br from-orange-400 to-orange-600 shadow-glow" />
+          Verdix
+          <span className="kicker hidden xl:inline font-medium normal-case tracking-wide text-faint">voter verdict intelligence</span>
+        </h1>
+        <nav className="flex gap-1 text-[13px] overflow-x-auto">
+          {MODULES.map((m, i) => (
+            <NavLink key={m.to} to={m.to} end title={m.tagline} className={({ isActive }) =>
+              `px-3 py-1.5 rounded-lg whitespace-nowrap transition-colors duration-150 flex items-center gap-1.5 ${
+                isActive
+                  ? 'bg-white/[0.08] text-ink ring-1 ring-white/10 shadow-card'
+                  : 'text-muted hover:text-ink hover:bg-white/[0.05]'
+              }`}>
+              <span className="text-[10px] text-faint tabular-nums">{i + 1}</span>{m.tab}
+            </NavLink>
+          ))}
+        </nav>
+        <div className="ml-auto shrink-0 flex items-center gap-3">
+          <span className="hidden lg:flex items-center gap-2 text-[11px] text-faint border border-white/[0.08] rounded-full px-3 py-1 bg-slate-900/30">
+            <span className="w-1.5 h-1.5 rounded-full bg-emerald-400/80" />
+            2009–2026 · 106 AEs · 4 GEs
+          </span>
+        </div>
+      </header>
+      <FilterBar />
+     </div>
+      <main className={`flex-1 w-full mx-auto ${loc.pathname === '/story' ? 'px-4 sm:px-6 pt-2 pb-2 max-w-[1800px]' : 'px-6 py-5 max-w-[1700px]'}`}>
+        {loc.pathname !== '/story' && <PageTagline />}
+        <ErrorBoundary resetKey={loc.pathname}>
+          <div key={loc.pathname} className={loc.pathname === '/story' ? '' : 'animate-fadeUp'}>
+            <Routes>
+              <Route path="/story" element={<StoryPage />} />
+              <Route path="/" element={<MapPage />} />
+              <Route path="/state" element={<StatePage />} />
+              <Route path="/change" element={<ChangePage />} />
+              <Route path="/compare" element={<ComparePage />} />
+              <Route path="/trends" element={<TrajectoryPage />} />
+              <Route path="/bypolls" element={<BypollsPage />} />
+              <Route path="/battleground" element={<BattlegroundPage />} />
+            </Routes>
+          </div>
+        </ErrorBoundary>
+        {loc.pathname !== '/story' && <JourneyNav />}
+      </main>
+    </div>
+  )
+}

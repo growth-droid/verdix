@@ -1,0 +1,15 @@
+# Netlify build + deploy config for the Verdix Vite SPA.
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "20"
+
+# Single-page-app fallback: react-router owns client-side routing, so every path that
+# isn't a real static file must serve index.html (otherwise a refresh / deep-link to
+# /state, /compare, /story, etc. would 404). Keep this LAST.
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
