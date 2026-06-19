@@ -40,8 +40,10 @@ export default function StatePage() {
 
   const states = useMemo(() => [...new Set(rows.map(r => r.s))].sort(), [rows])
   // "All India" focus (no state picked) → national rollup across every state, not one state
-  const allIndia = !state
-  const st = allIndia ? 'All India' : (states.includes(state!) ? state! : (states.includes('Uttar Pradesh') ? 'Uttar Pradesh' : states[0] ?? ''))
+  // The State page is always a single state in depth — no all-India rollup. Defaults to
+  // Andhra Pradesh when nothing is picked in the global Focus bar.
+  const allIndia = false
+  const st = state && states.includes(state) ? state : 'Andhra Pradesh'
   useEffect(() => { setPicked(null) }, [arena, st])  // close the report when the subject changes
   const mine = useMemo(() => (allIndia ? rows : rows.filter(r => r.s === st)), [rows, st, allIndia])
   // national vote share only exists for Lok Sabha (party_ge_nat); assembly has no national aggregate

@@ -13,8 +13,8 @@ const allianceColor = (a: string | null) => ALLIANCE_COLORS[allianceBase(a)] ?? 
 type Info = { title: string; sub: string; dataState: string; seat?: Seat }
 
 const MAP_PAL = {
-  dark: { bg: '#05070d', noData: '#1e293b', line: '#05070d', hover: '#f8fafc', stateLine: 'rgba(226,232,240,0.55)' },
-  light: { bg: '#e9edf3', noData: '#d8e0ea', line: '#ffffff', hover: '#0f172a', stateLine: 'rgba(15,23,42,0.5)' },
+  dark: { bg: '#05070d', noData: '#1e293b', line: '#05070d', hover: '#f8fafc', stateLine: 'rgba(226,232,240,0.55)', stateText: '#ffffff', seatText: '#f1f5f9', halo: 'rgba(0,0,0,0.9)' },
+  light: { bg: '#e9edf3', noData: '#d8e0ea', line: '#ffffff', hover: '#0f172a', stateLine: 'rgba(15,23,42,0.5)', stateText: '#0f172a', seatText: '#1e293b', halo: 'rgba(255,255,255,0.95)' },
 } as const
 const norm = (s: string) => s.toUpperCase().replace(/\bAND\b/g, '&').replace(/\s+/g, ' ').trim()
 
@@ -225,7 +225,7 @@ export default function ChoroplethMap({ byState, arena, activeYear, mode = 'winn
     if (!box.current) return
     const map = new maplibregl.Map({
       container: box.current,
-      style: { version: 8, sources: {}, layers: [{ id: 'bg', type: 'background', paint: { 'background-color': palRef.current.bg } }] },
+      style: { version: 8, glyphs: '/glyphs/{fontstack}/{range}.pbf', sources: {}, layers: [{ id: 'bg', type: 'background', paint: { 'background-color': palRef.current.bg } }] },
       center: [80, 22.5], zoom: 3.8, minZoom: 3, maxZoom: 10, attributionControl: false,
     })
     map.addControl(new maplibregl.NavigationControl({ showCompass: false }), 'top-right')
@@ -292,7 +292,7 @@ export default function ChoroplethMap({ byState, arena, activeYear, mode = 'winn
       if (cancelled) return
       if (!map.isStyleLoaded()) { map.once('idle', mount); return }
       popupRef.current?.remove() // hover popup from the previous boundary set is stale
-      for (const id of ['seats-hover', 'state-line', 'seats-line', 'seats-fill']) if (map.getLayer(id)) map.removeLayer(id)
+      for (const id of ['seat-labels', 'state-labels', 'seats-hover', 'state-line', 'seats-line', 'seats-fill']) if (map.getLayer(id)) map.removeLayer(id)
       if (map.getSource('seats')) map.removeSource('seats')
       if (map.getSource('states')) map.removeSource('states')
       map.addSource('seats', { type: 'geojson', data: geo as never })
@@ -301,8 +301,34 @@ export default function ChoroplethMap({ byState, arena, activeYear, mode = 'winn
       if (stateGeo) {   // dissolved state outlines, drawn on top of the constituency fills
         map.addSource('states', { type: 'geojson', data: stateGeo as never })
         map.addLayer({ id: 'state-line', type: 'line', source: 'states', layout: { 'line-join': 'round' }, paint: { 'line-color': palRef.current.stateLine, 'line-width': ['interpolate', ['linear'], ['zoom'], 3, 0.9, 7, 2.2] as never } })
+        // State names — one per state at its visual centre. Placed BEFORE seat labels so they win
+        // collisions (priority). Fades back as you zoom in and the seat names take over.
+        map.addLayer({
+          id: 'state-labels', type: 'symbol', source: 'states', minzoom: 3.2,
+          layout: {
+            'text-field': ['get', 'st_name'] as never, 'text-font': ['OpenSans-Bold'],
+            'text-transform': 'uppercase', 'text-letter-spacing': 0.08, 'text-max-width': 7, 'text-padding': 6,
+            'text-size': ['interpolate', ['linear'], ['zoom'], 3.5, 10.5, 6, 14.5, 9, 19] as never,
+          },
+          paint: {
+            'text-color': palRef.current.stateText, 'text-halo-color': palRef.current.halo, 'text-halo-width': 1.6, 'text-halo-blur': 0.5,
+            'text-opacity': ['interpolate', ['linear'], ['zoom'], 7, 1, 8.6, 0.5] as never,
+          },
+        })
       }
       map.addLayer({ id: 'seats-hover', type: 'line', source: 'seats', paint: { 'line-color': palRef.current.hover, 'line-width': 1.8 }, filter: NO_HOVER as never })
+      // Constituency names (assembly AC_NAME or parliament pc_name, whichever the source carries),
+      // revealed on zoom-in. text-allow-overlap defaults to false, so any name that would collide
+      // with an already-placed one is simply not drawn — the map declutters itself.
+      map.addLayer({
+        id: 'seat-labels', type: 'symbol', source: 'seats', minzoom: 4.5,
+        layout: {
+          'text-field': ['coalesce', ['get', 'AC_NAME'], ['get', 'pc_name']] as never, 'text-font': ['OpenSans-Regular'],
+          'text-max-width': 8, 'text-padding': 5,
+          'text-size': ['interpolate', ['linear'], ['zoom'], 6, 10.5, 8, 13, 10, 15.5] as never,
+        },
+        paint: { 'text-color': palRef.current.seatText, 'text-halo-color': palRef.current.halo, 'text-halo-width': 1.6, 'text-halo-blur': 0.4 },
+      })
       paint()
     }
     mount()
@@ -331,6 +357,8 @@ export default function ChoroplethMap({ byState, arena, activeYear, mode = 'winn
       if (map.getLayer('seats-line')) map.setPaintProperty('seats-line', 'line-color', pal.line)
       if (map.getLayer('state-line')) map.setPaintProperty('state-line', 'line-color', pal.stateLine)
       if (map.getLayer('seats-hover')) map.setPaintProperty('seats-hover', 'line-color', pal.hover)
+      if (map.getLayer('state-labels')) { map.setPaintProperty('state-labels', 'text-color', pal.stateText); map.setPaintProperty('state-labels', 'text-halo-color', pal.halo) }
+      if (map.getLayer('seat-labels')) { map.setPaintProperty('seat-labels', 'text-color', pal.seatText); map.setPaintProperty('seat-labels', 'text-halo-color', pal.halo) }
       paint()
     }
     upd()
