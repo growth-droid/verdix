@@ -234,15 +234,26 @@ export default function ChoroplethMap({ byState, arena, activeYear, mode = 'winn
     // pan/zoom fence: never let the geography fully leave the screen. After any move,
     // if the central third of the view holds no constituency, ease back to the last
     // centre that did — so at least ~a third of the map is always visible.
+    //
+    // GUARDED against recursion: easeTo fires its OWN moveend, and when the OS has
+    // `prefers-reduced-motion` set MapLibre turns easeTo into an INSTANT jump whose moveend
+    // fires synchronously — so an unguarded fence re-enters itself until the stack overflows
+    // ("Maximum call stack size exceeded"). The re-entry flag + the already-at-centre early-out
+    // break that cycle (and stop the thrash that made the map feel slow for those users).
+    let fenceCorrecting = false
     map.on('moveend', () => {
+      if (fenceCorrecting) { fenceCorrecting = false; return }   // this moveend is our own correction — don't re-fence
       if (!map.getLayer('seats-fill')) return
       const c = map.getContainer(); const w = c.clientWidth, h = c.clientHeight
       if (!w || !h) return
       const inCenter = map.queryRenderedFeatures(
         [[w * 0.3, h * 0.3], [w * 0.7, h * 0.7]] as never, { layers: ['seats-fill'] },
       ).length
-      if (inCenter > 0) { const ll = map.getCenter(); lastGoodRef.current = [ll.lng, ll.lat] }
-      else map.easeTo({ center: lastGoodRef.current, duration: 350 })
+      if (inCenter > 0) { const ll = map.getCenter(); lastGoodRef.current = [ll.lng, ll.lat]; return }
+      const cur = map.getCenter(), [gx, gy] = lastGoodRef.current
+      if (Math.abs(cur.lng - gx) < 1e-4 && Math.abs(cur.lat - gy) < 1e-4) return  // already at the good centre — nothing to correct
+      fenceCorrecting = true
+      map.easeTo({ center: lastGoodRef.current, duration: 350 })
     })
     const popup = new maplibregl.Popup({ closeButton: false, closeOnClick: false, maxWidth: '320px', offset: 10 })
     popupRef.current = popup
