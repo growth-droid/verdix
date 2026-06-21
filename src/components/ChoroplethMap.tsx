@@ -401,11 +401,12 @@ export default function ChoroplethMap({ byState, arena, activeYear, mode = 'winn
       src.setData(fc as never)
       const bb = bboxOf(fc)
       if (bb) {
+        // Pin the fence to the focused state's centre BEFORE fitBounds. fitBounds(duration:0) fires
+        // its moveend SYNCHRONOUSLY, and the fence runs before the new fills have painted — so if
+        // lastGoodRef still pointed at the all-India default [80,22.5] the fence would yank the camera
+        // straight back to central India (the bug where picking e.g. Arunachal showed Madhya Pradesh).
+        lastGoodRef.current = [(bb[0][0] + bb[1][0]) / 2, (bb[0][1] + bb[1][1]) / 2]
         map.fitBounds(bb, { padding: 28, duration: 0 })
-        // Pin the pan-fence to the focused state's centre. Otherwise the fitBounds moveend can
-        // fire before the filtered fill paints; the fence then finds no features mid-screen and
-        // eases back to the all-India default centre — but the source now holds only this state,
-        // so the view goes blank. (Surfaced by the Story deck's extra mount/transition async.)
         const c = map.getCenter(); lastGoodRef.current = [c.lng, c.lat]
       }
       paint()

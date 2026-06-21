@@ -332,6 +332,44 @@ export default function StatePage() {
         </div>
       )}
 
+      {/* Seat map + swing vs the previous election, up top */}
+      <div className="grid lg:grid-cols-2 gap-4 mb-4">
+        <ChartCard title={`Seat map · ${!allIndia && mapColor === 'security' ? `safe vs swing (${classed.window.length} elections)` : !allIndia && mapColor === 'alliance' ? `${vy} · by alliance` : (allIndia ? `All India · ${vy}` : vy)}`}
+          note={!allIndia && mapColor === 'security'
+            ? <>Green = a party always wins here (stronghold). Red = the seat changes hands (swing — where the contest is live). <Info>Computed over this state's comparable elections in the current arena.</Info></>
+            : undefined}>
+          {!allIndia && (
+            <div className="mb-2 flex items-center gap-2 text-xs text-muted">
+              Colour
+              <Seg options={[{ v: 'winner', label: 'Winner' }, { v: 'alliance', label: 'Alliance' }, { v: 'security', label: 'Safe vs Swing' }]} value={mapColor} onChange={v => setMapColor(v as 'winner' | 'alliance' | 'security')} />
+            </div>
+          )}
+          <ChoroplethMap key={arena + st + vy + (allIndia ? 'w' : mapColor)} byState={mapByState} arena={arena} activeYear={vy} focusState={allIndia ? undefined : st} height="h-[300px]"
+            mode={!allIndia && mapColor === 'alliance' ? 'alliance' : 'winner'}
+            colorOf={!allIndia && mapColor === 'security' ? securityColorOf : undefined}
+            subOf={!allIndia && mapColor === 'security' ? securitySubOf : undefined}
+            legendTitle={!allIndia && mapColor === 'security' ? 'Seat security' : undefined}
+            legendItems={!allIndia && mapColor === 'security' ? securityLegend : undefined}
+            onPick={seat => { if (seat) setPicked(seat) }} />
+          <div className="mt-1.5 text-[11px] text-faint">Click any seat for its full constituency report.</div>
+        </ChartCard>
+
+        {!allIndia && (
+        <ChartCard title={`Swing ${prevY ?? '–'} → ${vy} · change in vote share`}
+          note={swingData === 'incomparable' ? undefined : `Each bar = ${vy} vote share − ${prevY} vote share (e.g. 44.0% → 46.2% = +2.2%). Positive = gained share. Parties under 1.5% both times hidden.`}>
+          {swingData === 'incomparable'
+            ? <div className="h-[280px] flex items-center justify-center text-amber-300/90 text-sm text-center px-8">
+                ⚠ {prevY} and {vy} are on different delimitations in {st} — swing is not defined (metrics catalog caveat 4).
+              </div>
+            : swingData
+              ? <Chart option={swingData} style={{ height: 280 }} notMerge />
+              : voteShareMissing
+                ? <div className="h-[280px] flex items-center justify-center text-amber-200/80 text-sm text-center px-8">Vote share isn’t in the source for {st} {vy} (winners-only), so swing vs {prevY} can’t be computed. Select an earlier election above.</div>
+                : <div className="h-[280px] flex items-center justify-center text-slate-500 text-sm">No earlier election before {vy}</div>}
+        </ChartCard>
+        )}
+      </div>
+
       {/* Stronghold ↔ Swing: which seats are locked up and which are actually in play */}
       {!allIndia && (
       <ChartCard className="mb-4"
@@ -339,26 +377,18 @@ export default function StatePage() {
         note={`Based on this state's last ${classed.window.length} ${arena === 'AE' ? 'assembly' : 'Lok Sabha'} elections (${classed.window.join(', ') || '—'}).`}>
         {security.total ? (
           <div className="grid lg:grid-cols-2 gap-4">
+            {/* Left panel reserved — owner will specify what goes here. */}
+            <div className="hidden lg:block" />
             <div>
-              <div className="flex flex-wrap gap-2 mb-3">
-                <span className="px-3 py-1.5 rounded-xl border border-emerald-400/25 bg-white/[0.03] text-[12px] text-emerald-200/90">{security.safe + security.lean} stronghold seats</span>
-                <span className="px-3 py-1.5 rounded-xl border border-red-400/25 bg-white/[0.03] text-[12px] text-red-200/90">{security.swingN} swing seats — the battleground</span>
+              {/* tallies moved here from the (now reserved) left panel */}
+              <div className="flex flex-wrap items-center gap-x-3 gap-y-1.5 mb-2.5">
+                <span className="px-2.5 py-1 rounded-lg border border-emerald-400/25 bg-white/[0.03] text-[11.5px] text-emerald-200/90">{security.safe + security.lean} stronghold</span>
+                <span className="px-2.5 py-1 rounded-lg border border-red-400/25 bg-white/[0.03] text-[11.5px] text-red-200/90">{security.swingN} swing</span>
+                {security.holds.length > 0 && <span className="text-faint text-[11px]">held by</span>}
+                {security.holds.map(h => (
+                  <span key={h.p} className="text-[11.5px] text-muted whitespace-nowrap"><Dot color={colorFor(h.p, h.a)} />{h.p} <b className="text-ink tabular-nums">{h.n}</b></span>
+                ))}
               </div>
-              <div className="text-xs text-muted mb-1.5">Strongholds by party</div>
-              <div className="space-y-1.5">
-                {security.holds.map(h => {
-                  const max = security.holds[0]?.n || 1
-                  return (
-                    <div key={h.p} className="flex items-center gap-2 text-xs">
-                      <span className="w-14 shrink-0 text-right"><Dot color={colorFor(h.p, h.a)} />{h.p}</span>
-                      <div className="flex-1 h-3.5 bg-slate-900 rounded"><div className="h-3.5 rounded" style={{ width: `${(h.n / max) * 100}%`, background: colorFor(h.p, h.a) }} /></div>
-                      <span className="w-7 text-right tabular-nums">{h.n}</span>
-                    </div>
-                  )
-                })}
-              </div>
-            </div>
-            <div>
               <div className="mb-2">
                 <Seg options={[{ v: 'hold', label: `Stronghold seats (${security.safe + security.lean})` }, { v: 'swing', label: `Swing seats (${security.swingN})` }]} value={holdTab} onChange={v => setHoldTab(v as 'hold' | 'swing')} />
               </div>
@@ -458,40 +488,6 @@ export default function StatePage() {
       </ChartCard>
 
       <div className="grid lg:grid-cols-2 gap-4">
-        <ChartCard title={`Seat map · ${!allIndia && mapColor === 'security' ? `safe vs swing (${classed.window.length} elections)` : !allIndia && mapColor === 'alliance' ? `${vy} · by alliance` : (allIndia ? `All India · ${vy}` : vy)}`}
-          note={!allIndia && mapColor === 'security'
-            ? <>Green = a party always wins here (stronghold). Red = the seat changes hands (swing — where the contest is live). <Info>Computed over this state's comparable elections in the current arena.</Info></>
-            : undefined}>
-          {!allIndia && (
-            <div className="mb-2 flex items-center gap-2 text-xs text-muted">
-              Colour
-              <Seg options={[{ v: 'winner', label: 'Winner' }, { v: 'alliance', label: 'Alliance' }, { v: 'security', label: 'Safe vs Swing' }]} value={mapColor} onChange={v => setMapColor(v as 'winner' | 'alliance' | 'security')} />
-            </div>
-          )}
-          <ChoroplethMap key={arena + st + vy + (allIndia ? 'w' : mapColor)} byState={mapByState} arena={arena} activeYear={vy} focusState={allIndia ? undefined : st} height="h-[300px]"
-            mode={!allIndia && mapColor === 'alliance' ? 'alliance' : 'winner'}
-            colorOf={!allIndia && mapColor === 'security' ? securityColorOf : undefined}
-            subOf={!allIndia && mapColor === 'security' ? securitySubOf : undefined}
-            legendTitle={!allIndia && mapColor === 'security' ? 'Seat security' : undefined}
-            legendItems={!allIndia && mapColor === 'security' ? securityLegend : undefined}
-            onPick={seat => { if (seat) setPicked(seat) }} />
-          <div className="mt-1.5 text-[11px] text-faint">Click any seat for its full constituency report.</div>
-        </ChartCard>
-
-        {!allIndia && (
-        <ChartCard title={`Swing ${prevY ?? '–'} → ${vy} · change in vote share`}
-          note={swingData === 'incomparable' ? undefined : `Each bar = ${vy} vote share − ${prevY} vote share (e.g. 44.0% → 46.2% = +2.2%). Positive = gained share. Parties under 1.5% both times hidden.`}>
-          {swingData === 'incomparable'
-            ? <div className="h-[280px] flex items-center justify-center text-amber-300/90 text-sm text-center px-8">
-                ⚠ {prevY} and {vy} are on different delimitations in {st} — swing is not defined (metrics catalog caveat 4).
-              </div>
-            : swingData
-              ? <Chart option={swingData} style={{ height: 280 }} notMerge />
-              : voteShareMissing
-                ? <div className="h-[280px] flex items-center justify-center text-amber-200/80 text-sm text-center px-8">Vote share isn’t in the source for {st} {vy} (winners-only), so swing vs {prevY} can’t be computed. Select an earlier election above.</div>
-                : <div className="h-[280px] flex items-center justify-center text-slate-500 text-sm">No earlier election before {vy}</div>}
-        </ChartCard>
-        )}
         <ChartCard title="Turnout by election" note="Official state turnout (assembly: full coverage incl. 2023–26); falls back to mean of seat turnouts where unavailable. Dashed line = selected election.">
           <Chart option={turnout} style={{ height: 280 }} notMerge />
         </ChartCard>
