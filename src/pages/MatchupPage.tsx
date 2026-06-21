@@ -15,7 +15,7 @@ const pct = (n: number | null) => (n == null ? '–' : n.toFixed(1) + '%')
 type Rec = { tone: 'edge' | 'risk' | 'note'; text: string }
 
 export default function MatchupPage({ modeToggle }: { modeToggle?: ReactNode }) {
-  const { arena, state, setArena } = useFilters()
+  const { arena, state, setArena, year, setYear } = useFilters()
   const st = state ?? 'All states'
   const isState = st !== 'All states'
   const [rows, setRows] = useState<Seat[]>([])
@@ -30,11 +30,13 @@ export default function MatchupPage({ modeToggle }: { modeToggle?: ReactNode }) 
   useEffect(() => { loadSeats(arena).then(setRows) }, [arena])
   useEffect(() => { loadPartyAE().then(setPartyAE); loadPartyGEState().then(setPartyGE); loadPartyGENat().then(setNatGE) }, [])
 
-  // latest election per state (then scoped) — the comparison snapshot
-  const active = useMemo(() => {
-    const all = [...activeByState(rows, arena, 2026).values()].flat()
-    return isState ? all.filter(r => r.s === st) : all
-  }, [rows, arena, isState, st])
+  // election years available in scope; the selected snapshot year (global `year`, clamped to scope)
+  const scopeRows = useMemo(() => (isState ? rows.filter(r => r.s === st) : rows), [rows, isState, st])
+  const years = useMemo(() => [...new Set(scopeRows.map(r => r.y))].sort((a, b) => a - b), [scopeRows])
+  const latest = years[years.length - 1]
+  const vy = years.includes(year) ? year : latest
+  // the chosen election: a single state's seats for `vy`, else each state's latest as of `vy`
+  const active = useMemo(() => (isState ? scopeRows.filter(r => r.y === vy) : [...activeByState(rows, arena, vy).values()].flat()), [scopeRows, rows, arena, isState, vy])
 
   // parties present in scope, ranked by presence (winner + runner-up weight)
   const ranked = useMemo(() => {
@@ -54,7 +56,7 @@ export default function MatchupPage({ modeToggle }: { modeToggle?: ReactNode }) 
   // vote share / strike rate source for the scope (per-state, or national for GE; AE-national has none)
   const shareSrc = useMemo(() => (isState ? (arena === 'AE' ? partyAE : partyGE).filter(r => r.s === st) : arena === 'GE' ? natGE : []), [isState, arena, partyAE, partyGE, natGE, st])
   const statOf = (p: string) => {
-    const rs = shareSrc.filter(r => r.p === p)
+    const rs = shareSrc.filter(r => r.p === p && r.y <= vy)
     if (!rs.length) return { v: null as number | null, strike: null as number | null }
     const yr = Math.max(...rs.map(r => r.y)); const r = rs.find(x => x.y === yr)
     return { v: r?.v ?? null, strike: r?.f ? Math.round(((r.wo ?? 0) / r.f) * 100) : null }
@@ -88,9 +90,7 @@ export default function MatchupPage({ modeToggle }: { modeToggle?: ReactNode }) 
   }, [sel, active])
   const h2hMax = Math.max(1, ...h2h.map(x => x.n))
 
-  // ── trajectory: seats + vote share over time ──────────────────────────────
-  const scopeRows = useMemo(() => (isState ? rows.filter(r => r.s === st) : rows), [rows, isState, st])
-  const years = useMemo(() => [...new Set(scopeRows.map(r => r.y))].sort((a, b) => a - b), [scopeRows])
+  // ── trajectory: seats + vote share over ALL years in scope ────────────────
   const seatsByPY = useMemo(() => {
     const m = new Map<string, Map<number, number>>()
     scopeRows.forEach(r => { if (!m.has(r.p)) m.set(r.p, new Map()); const yy = m.get(r.p)!; yy.set(r.y, (yy.get(r.y) || 0) + 1) })
@@ -109,9 +109,8 @@ export default function MatchupPage({ modeToggle }: { modeToggle?: ReactNode }) 
   // ── territory map ─────────────────────────────────────────────────────────
   const mapByState = useMemo(() => {
     if (isState) return new Map([[st, active]])
-    const m = activeByState(rows, arena, 2026)
-    return m
-  }, [isState, st, active, rows, arena])
+    return activeByState(rows, arena, vy)
+  }, [isState, st, active, rows, arena, vy])
   const territoryColor = (s: Seat) => (selSet.has(s.p) ? colorFor(s.p, s.a) : GREY)
   const territorySub = (s: Seat) => (selSet.has(s.p) ? `${s.p}${s.m != null ? ' · won by ' + s.m.toFixed(1) + '%' : ''}` : `${s.p} (not in this matchup)`)
   const legendItems = useMemo(() => [...sel.map(p => ({ label: p, color: colOf(p), n: active.filter(r => r.p === p).length })), { label: 'Other parties', color: GREY, n: active.filter(r => !selSet.has(r.p)).length }], [sel, active, selSet]) // eslint-disable-line react-hooks/exhaustive-deps
@@ -125,8 +124,8 @@ export default function MatchupPage({ modeToggle }: { modeToggle?: ReactNode }) 
     const [lead, second] = s
     const gap = lead.seats - second.seats
     const tone = gap > lead.seats * 0.5 ? 'a commanding lead' : gap > 0 ? 'a working edge' : 'a dead heat'
-    return `Across ${scopeLabel}'s latest ${arenaLabel} election, ${lead.p} holds ${tone} — ${lead.seats} seats to ${second.p}'s ${second.seats}${C ? ` and ${s[2].p}'s ${s[2].seats}` : ''}. The questions below: who is rising, where they collide, and what each should do.`
-  }, [card, C, scopeLabel, arenaLabel])
+    return `Across ${scopeLabel} (${arenaLabel} ${vy}), ${lead.p} holds ${tone} — ${lead.seats} seats to ${second.p}'s ${second.seats}${C ? ` and ${s[2].p}'s ${s[2].seats}` : ''}. The questions below: who is rising, where they collide, and what each should do.`
+  }, [card, C, scopeLabel, arenaLabel, vy])
 
   const recs = useMemo<Rec[]>(() => {
     if (card.length < 2) return []
@@ -193,6 +192,7 @@ export default function MatchupPage({ modeToggle }: { modeToggle?: ReactNode }) 
         <div className="flex items-center gap-3 flex-wrap">
           {modeToggle}
           <Seg options={[{ v: 'AE', label: 'Assembly' }, { v: 'GE', label: 'Lok Sabha' }]} value={arena} onChange={v => setArena(v as 'AE' | 'GE')} />
+          <Select value={String(vy)} onChange={v => setYear(+v)} options={[...years].reverse().map(String)} width="w-24" />
           <span className="inline-flex items-center gap-1.5"><Dot color={colOf(A)} /><Select value={A} onChange={setSelA} options={parties} width="w-32" /></span>
           <span className="text-faint text-xs">vs</span>
           <span className="inline-flex items-center gap-1.5"><Dot color={colOf(B)} /><Select value={B} onChange={setSelB} options={parties.filter(p => p !== A)} width="w-32" /></span>
@@ -286,7 +286,7 @@ export default function MatchupPage({ modeToggle }: { modeToggle?: ReactNode }) 
       {/* Territory map */}
       <ChartCard className="mb-4" title={`Territory — where each party wins${isState ? '' : ' (all-India)'}`}
         note="Each seat is coloured by which of the selected parties won it; everything else is grey. Shows each party's geographic base and where their territories meet. Click a seat for its full report.">
-        <ChoroplethMap key={'matchup' + arena + st + sel.join('-')} byState={mapByState} arena={arena} activeYear={2026}
+        <ChoroplethMap key={'matchup' + arena + st + vy + sel.join('-')} byState={mapByState} arena={arena} activeYear={vy}
           focusState={isState ? st : undefined} height="h-[440px]"
           colorOf={territoryColor} subOf={territorySub} legendTitle="Winner (this matchup)" legendItems={legendItems}
           onPick={s => { if (s) setPicked(s) }} />
