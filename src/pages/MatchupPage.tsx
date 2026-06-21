@@ -244,9 +244,8 @@ export default function MatchupPage({ modeToggle }: { modeToggle?: ReactNode }) 
         </div>
       </ChartCard>
 
-      <div className="grid lg:grid-cols-2 gap-4 mb-4">
-        {/* Trajectory */}
-        <ChartCard title="Trajectory — seats + vote share over time"
+      {/* Trajectory — full width */}
+      <ChartCard className="mb-4" title="Trajectory — seats + vote share over time"
           note="Columns = seats won; line = vote share % (where available). Read them together: who is climbing, who is fading.">
           {momentum.some(m => m.slope != null) && (
             <div className="flex flex-wrap gap-2 mb-3">
@@ -262,7 +261,9 @@ export default function MatchupPage({ modeToggle }: { modeToggle?: ReactNode }) 
             shareOf={p => years.map(y => shareByPY.get(p)?.get(y) ?? null)} height={300} />
         </ChartCard>
 
-        {/* Direct head-to-head */}
+      {/* Head-to-head (left) + territory map (right) — side by side */}
+      <div className="grid lg:grid-cols-2 gap-4 mb-4">
+        {/* Direct head-to-head — left */}
         <ChartCard title="Direct battleground — who beats whom"
           note="Among the selected parties, the seats where two of them finished 1–2. The brighter segment is who won more; the number in brackets is how many were within 5% — the live contest.">
           {h2h.some(x => x.n > 0) ? (
@@ -281,16 +282,15 @@ export default function MatchupPage({ modeToggle }: { modeToggle?: ReactNode }) 
             </div>
           ) : <div className="h-[220px] grid place-items-center text-faint text-sm text-center px-6">These parties rarely finish 1–2 against each other in {scopeLabel} — they aren't each other's main rivals here.</div>}
         </ChartCard>
-      </div>
-
-      {/* Territory map */}
-      <ChartCard className="mb-4" title={`Territory — where each party wins${isState ? '' : ' (all-India)'}`}
+        {/* Territory map — right */}
+        <ChartCard title={`Territory — where each party wins${isState ? '' : ' (all-India)'}`}
         note="Each seat is coloured by which of the selected parties won it; everything else is grey. Shows each party's geographic base and where their territories meet. Click a seat for its full report.">
         <ChoroplethMap key={'matchup' + arena + st + vy + sel.join('-')} byState={mapByState} arena={arena} activeYear={vy}
           focusState={isState ? st : undefined} height="h-[440px]"
           colorOf={territoryColor} subOf={territorySub} legendTitle="Winner (this matchup)" legendItems={legendItems}
           onPick={s => { if (s) setPicked(s) }} />
       </ChartCard>
+      </div>
 
       {/* Strategic recommendations */}
       <ChartCard title="Strategic read — what the data says to do"
