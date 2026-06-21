@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from 'react'
+import { useEffect, useMemo, useState, type ReactNode } from 'react'
 import {
   loadPartyAE, loadPartyGEState, loadSegments, loadSeats, loadStateTurnout, loadSplitIndex, loadSplit, loadAESegShares,
   type PartyAgg, type Segment, type Seat, type StateTurnout, type SplitRow, type SplitFile,
@@ -51,7 +51,7 @@ type Side = {
   turn: number | null; lead: { p: string; n: number; a: string | null } | null
 }
 
-export default function ComparePage() {
+export default function ComparePage({ modeToggle }: { modeToggle?: ReactNode }) {
   const { state: focus } = useFilters()
   const [partyAE, setPartyAE] = useState<PartyAgg[]>([])
   const [partyGE, setPartyGE] = useState<PartyAgg[]>([])
@@ -265,6 +265,7 @@ export default function ComparePage() {
     <div>
       <StickyControls>
       <div className="flex items-end gap-4 flex-wrap">
+        {modeToggle}
         <div>
           <h2 className="text-xl font-bold leading-tight tracking-tight">{st} <span className="text-faint font-normal text-sm">· compare any two elections</span></h2>
           <div className="kicker">Pick two — two assembly years, two Lok Sabha years, or one of each</div>

@@ -1,10 +1,10 @@
-import { useEffect, useMemo, useState } from 'react'
+import { useEffect, useMemo, useState, type ReactNode } from 'react'
 import { loadSeats, loadPartyAE, loadPartyGEState, loadPartyGENat, type Seat, type PartyAgg } from '../lib/data'
 import { colorFor } from '../lib/colors'
 import { useFilters } from '../store'
 import ChoroplethMap from '../components/ChoroplethMap'
 import SeatDrawer from '../components/SeatDrawer'
-import { Chart, ChartCard, Dot, Info, Select, StickyControls, VoteSeatChart } from '../components/ui'
+import { Chart, ChartCard, Dot, Info, Seg, Select, StickyControls, VoteSeatChart } from '../components/ui'
 import { activeByState } from '../lib/analysis'
 import { linearTrend } from '../lib/projections'
 import { baseOpt, valAxis, AXIS, GRID, vgrad } from '../lib/theme'
@@ -14,8 +14,8 @@ const GREY = '#3f3f46'
 const pct = (n: number | null) => (n == null ? '–' : n.toFixed(1) + '%')
 type Rec = { tone: 'edge' | 'risk' | 'note'; text: string }
 
-export default function MatchupPage() {
-  const { arena, state } = useFilters()
+export default function MatchupPage({ modeToggle }: { modeToggle?: ReactNode }) {
+  const { arena, state, setArena } = useFilters()
   const st = state ?? 'All states'
   const isState = st !== 'All states'
   const [rows, setRows] = useState<Seat[]>([])
@@ -191,7 +191,8 @@ export default function MatchupPage() {
     <div>
       <StickyControls>
         <div className="flex items-center gap-3 flex-wrap">
-          <span className="text-xs text-slate-500">Matchup</span>
+          {modeToggle}
+          <Seg options={[{ v: 'AE', label: 'Assembly' }, { v: 'GE', label: 'Lok Sabha' }]} value={arena} onChange={v => setArena(v as 'AE' | 'GE')} />
           <span className="inline-flex items-center gap-1.5"><Dot color={colOf(A)} /><Select value={A} onChange={setSelA} options={parties} width="w-32" /></span>
           <span className="text-faint text-xs">vs</span>
           <span className="inline-flex items-center gap-1.5"><Dot color={colOf(B)} /><Select value={B} onChange={setSelB} options={parties.filter(p => p !== A)} width="w-32" /></span>
@@ -199,7 +200,7 @@ export default function MatchupPage() {
           <button onClick={() => setThreeWay(t => !t)} className="text-xs px-2.5 py-1 rounded-full border border-white/10 text-muted hover:text-ink hover:border-white/25 transition-colors">
             {threeWay ? '− third party' : '+ third party'}
           </button>
-          <span className="text-[11px] text-slate-500 ml-auto">{isState ? st : 'All India'} · {arenaLabel} · change region/arena in the Focus bar</span>
+          <span className="text-[11px] text-slate-500 ml-auto">{isState ? st : 'All India'} · change region in the Focus bar</span>
         </div>
       </StickyControls>
 

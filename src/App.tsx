@@ -1,12 +1,11 @@
 import { useEffect, useRef } from 'react'
-import { Routes, Route, NavLink, useLocation } from 'react-router-dom'
+import { Routes, Route, NavLink, Navigate, useLocation } from 'react-router-dom'
 import MapPage from './pages/MapPage'
 import StoryPage from './pages/StoryPage'
 import StatePage from './pages/StatePage'
 import TrajectoryPage from './pages/TrajectoryPage'
 import ChangePage from './pages/ChangePage'
-import ComparePage from './pages/ComparePage'
-import MatchupPage from './pages/MatchupPage'
+import CompareHub from './pages/CompareHub'
 import BypollsPage from './pages/BypollsPage'
 import BattlegroundPage from './pages/BattlegroundPage'
 import FilterBar from './components/FilterBar'
@@ -65,8 +64,8 @@ export default function App() {
               <Route path="/" element={<MapPage />} />
               <Route path="/state" element={<StatePage />} />
               <Route path="/change" element={<ChangePage />} />
-              <Route path="/compare" element={<ComparePage />} />
-              <Route path="/matchup" element={<MatchupPage />} />
+              <Route path="/compare" element={<CompareHub />} />
+              <Route path="/matchup" element={<Navigate to="/compare" replace />} />
               <Route path="/trends" element={<TrajectoryPage />} />
               <Route path="/bypolls" element={<BypollsPage />} />
               <Route path="/battleground" element={<BattlegroundPage />} />
