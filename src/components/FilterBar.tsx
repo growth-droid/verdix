@@ -6,10 +6,10 @@ import { Seg, Select } from './ui'
 
 const ALL = 'All India'
 // Pages whose view is driven by the Assembly/Lok-Sabha arena toggle.
-const ARENA_PAGES = new Set(['/', '/state', '/change', '/battleground'])
+const ARENA_PAGES = new Set(['/', '/state', '/change', '/battleground', '/matchup'])
 // Pages that already render a single chosen region (so picking one updates them in place).
 // '/change' is region-aware too: All-India shows the national change, a region scopes to it.
-const STATE_CENTRIC = new Set(['/story', '/state', '/compare', '/trends', '/bypolls', '/battleground', '/change'])
+const STATE_CENTRIC = new Set(['/story', '/state', '/compare', '/trends', '/bypolls', '/battleground', '/change', '/matchup'])
 
 /** Persistent global context bar: one Region + Arena selection that the whole
  *  product shares, so analysis flows from module to module instead of resetting. */

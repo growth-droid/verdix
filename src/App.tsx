@@ -6,6 +6,7 @@ import StatePage from './pages/StatePage'
 import TrajectoryPage from './pages/TrajectoryPage'
 import ChangePage from './pages/ChangePage'
 import ComparePage from './pages/ComparePage'
+import MatchupPage from './pages/MatchupPage'
 import BypollsPage from './pages/BypollsPage'
 import BattlegroundPage from './pages/BattlegroundPage'
 import FilterBar from './components/FilterBar'
@@ -65,6 +66,7 @@ export default function App() {
               <Route path="/state" element={<StatePage />} />
               <Route path="/change" element={<ChangePage />} />
               <Route path="/compare" element={<ComparePage />} />
+              <Route path="/matchup" element={<MatchupPage />} />
               <Route path="/trends" element={<TrajectoryPage />} />
               <Route path="/bypolls" element={<BypollsPage />} />
               <Route path="/battleground" element={<BattlegroundPage />} />
