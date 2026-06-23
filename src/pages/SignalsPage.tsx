@@ -116,6 +116,13 @@ export default function SignalsPage() {
     const keys = years.map(y => `${ar}|${y}`)
     return keys.every(k => prev.includes(k)) ? prev.filter(k => !keys.includes(k)) : [...new Set([...prev, ...keys])]
   })
+  // The SWOT + Alliance views analyse ONE election, so their picker is single-select (click = switch).
+  // Only Patterns scans several. Collapse a multi-selection to the most recent when leaving Patterns.
+  const selectOne = (key: string) => { setSel([key]); setOpen(null); setOpenPlay(null) }
+  useEffect(() => {
+    if (view === 'patterns') return
+    setSel(prev => (prev.length > 1 ? [[...prev].sort((a, b) => (+b.split('|')[1]) - (+a.split('|')[1]))[0]] : prev))
+  }, [view])
 
   const selectedEls = useMemo(() => elections.filter(e => sel.includes(e.key)), [elections, sel])
   const signals = useMemo<Tagged[]>(() => {
@@ -176,7 +183,8 @@ export default function SignalsPage() {
     if (!simKey || !simParties.length) return
     if (swotDefaultedFor.current === simKey) return
     swotDefaultedFor.current = simKey
-    setSwotParty(simParties[0].p); setOpenPlay(null)
+    // keep the analysed party across an election switch if it still runs there; else the new leader
+    setSwotParty(prev => (prev && simParties.some(x => x.p === prev) ? prev : simParties[0].p)); setOpenPlay(null)
   }, [simKey, simParties])
   const swot = useMemo(() =>
     (view === 'swot' && simEl && swotParty && simActive.length) ? partyStrategy({ party: swotParty, seats: simActive, allRows: simScopeRows, partyRows: simPartyRows, vy: simEl.year, isState, arena: simEl.arena }) : null,
@@ -224,11 +232,11 @@ export default function SignalsPage() {
       {years.map(y => {
         const key = `${ar}|${y}`, on = sel.includes(key)
         return (
-          <button key={key} onClick={() => toggle(key)}
+          <button key={key} onClick={() => (view === 'patterns' ? toggle(key) : selectOne(key))}
             className={`px-2.5 py-1 rounded-full text-[11px] tabular-nums transition-colors border ${on ? 'bg-orange-500 text-black border-orange-400 font-semibold' : 'text-muted border-white/10 hover:text-ink hover:border-white/25 bg-white/[0.03]'}`}>{y}</button>
         )
       })}
-      {years.length > 1 && <button onClick={() => toggleAll(ar, years)} className="text-[10px] text-faint hover:text-ink ml-0.5 underline decoration-dotted">all</button>}
+      {view === 'patterns' && years.length > 1 && <button onClick={() => toggleAll(ar, years)} className="text-[10px] text-faint hover:text-ink ml-0.5 underline decoration-dotted">all</button>}
     </div>
   )
   const PartyChip = ({ p, a, n, on, onClick }: { p: string; a: string | null; n: number; on: boolean; onClick: () => void }) => (
