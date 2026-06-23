@@ -10,6 +10,7 @@ export type ModuleDef = {
 
 export const MODULES: ModuleDef[] = [
   { to: '/', tab: 'Overview', tagline: 'Who holds India right now — the national map, seats and turnout.', blurb: 'The big picture across every state.' },
+  { to: '/signals', tab: 'Signals', tagline: 'The patterns that change a decision — auto-flagged with the numbers, drill to the seats.', blurb: 'What to act on, flagged for you.' },
   { to: '/state', tab: 'State', tagline: 'One state in depth — its seats, swings, strongholds and turnout.', blurb: 'Zoom into a single state’s story.' },
   { to: '/change', tab: 'What changed', tagline: 'Which seats flipped since the previous election, and where.', blurb: 'The seats that changed hands.' },
   { to: '/compare', tab: 'Compare', tagline: 'Two elections, or two–three parties, head-to-head — toggle Elections / Parties.', blurb: 'Two elections, or two–three parties.' },

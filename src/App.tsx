@@ -1,6 +1,7 @@
 import { useEffect, useRef } from 'react'
 import { Routes, Route, NavLink, Navigate, useLocation } from 'react-router-dom'
 import MapPage from './pages/MapPage'
+import SignalsPage from './pages/SignalsPage'
 import StoryPage from './pages/StoryPage'
 import StatePage from './pages/StatePage'
 import TrajectoryPage from './pages/TrajectoryPage'
@@ -62,6 +63,7 @@ export default function App() {
             <Routes>
               <Route path="/story" element={<StoryPage />} />
               <Route path="/" element={<MapPage />} />
+              <Route path="/signals" element={<SignalsPage />} />
               <Route path="/state" element={<StatePage />} />
               <Route path="/change" element={<ChangePage />} />
               <Route path="/compare" element={<CompareHub />} />

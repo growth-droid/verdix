@@ -18,7 +18,7 @@ const SAFE = '#16a34a', LEAN = '#f59e0b', SWING = '#ef4444'
 
 export default function StatePage() {
   const navTo = useNavigate()
-  const { state, arena, year, setYear } = useFilters()
+  const { state, arena, year, setYear, setState } = useFilters()
   const [rows, setRows] = useState<Seat[]>([])
   const [partyAE, setPartyAE] = useState<PartyAgg[]>([])
   const [partyGE, setPartyGE] = useState<PartyAgg[]>([])
@@ -39,11 +39,12 @@ export default function StatePage() {
   const party = arena === 'AE' ? partyAE : partyGE
 
   const states = useMemo(() => [...new Set(rows.map(r => r.s))].sort(), [rows])
-  // "All India" focus (no state picked) → national rollup across every state, not one state
-  // The State page is always a single state in depth — no all-India rollup. Defaults to
-  // Andhra Pradesh when nothing is picked in the global Focus bar.
-  const allIndia = false
-  const st = state && states.includes(state) ? state : 'Andhra Pradesh'
+  // The State page lands on a single state (default Andhra Pradesh) but ALSO supports an
+  // "All India" national rollup when the user explicitly picks it in the Focus bar (state→null).
+  const allIndia = !state
+  const st = allIndia ? 'All India' : (states.includes(state!) ? state! : 'Andhra Pradesh')
+  // Default to Andhra Pradesh on first arrival, so the landing view is a state, not all-India.
+  useEffect(() => { if (!state) setState('Andhra Pradesh') }, []) // eslint-disable-line react-hooks/exhaustive-deps
   useEffect(() => { setPicked(null) }, [arena, st])  // close the report when the subject changes
   const mine = useMemo(() => (allIndia ? rows : rows.filter(r => r.s === st)), [rows, st, allIndia])
   // national vote share only exists for Lok Sabha (party_ge_nat); assembly has no national aggregate
@@ -376,11 +377,8 @@ export default function StatePage() {
         title={<>Stronghold &amp; swing seats <Info>A stronghold is a seat one party keeps winning; a swing seat changes hands. Swing seats are where elections are decided.</Info></>}
         note={`Based on this state's last ${classed.window.length} ${arena === 'AE' ? 'assembly' : 'Lok Sabha'} elections (${classed.window.join(', ') || '—'}).`}>
         {security.total ? (
-          <div className="grid lg:grid-cols-2 gap-4">
-            {/* Left panel reserved — owner will specify what goes here. */}
-            <div className="hidden lg:block" />
-            <div>
-              {/* tallies moved here from the (now reserved) left panel */}
+          <div>
+              {/* stronghold / swing tallies */}
               <div className="flex flex-wrap items-center gap-x-3 gap-y-1.5 mb-2.5">
                 <span className="px-2.5 py-1 rounded-lg border border-emerald-400/25 bg-white/[0.03] text-[11.5px] text-emerald-200/90">{security.safe + security.lean} stronghold</span>
                 <span className="px-2.5 py-1 rounded-lg border border-red-400/25 bg-white/[0.03] text-[11.5px] text-red-200/90">{security.swingN} swing</span>
@@ -392,7 +390,7 @@ export default function StatePage() {
               <div className="mb-2">
                 <Seg options={[{ v: 'hold', label: `Stronghold seats (${security.safe + security.lean})` }, { v: 'swing', label: `Swing seats (${security.swingN})` }]} value={holdTab} onChange={v => setHoldTab(v as 'hold' | 'swing')} />
               </div>
-              <div className="max-h-[230px] overflow-auto pr-1 space-y-1">
+              <div className="grid sm:grid-cols-2 xl:grid-cols-3 gap-x-6 gap-y-0.5 max-h-[460px] overflow-auto pr-1 content-start">
                 {holdTab === 'swing' ? <>
                   {swingSeats.map(c => (
                     <div key={c.cur.j} className="flex items-center gap-2 text-[11px] border-b border-white/[0.05] py-1">
@@ -418,7 +416,6 @@ export default function StatePage() {
                   {!strongholdSeats.length && <div className="text-faint text-xs py-4 text-center">No strongholds — every seat is competitive.</div>}
                 </>}
               </div>
-            </div>
           </div>
         ) : (
           <div className="h-[120px] flex items-center justify-center text-faint text-sm">Need at least two comparable elections to classify seats.</div>
