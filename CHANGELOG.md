@@ -5,6 +5,22 @@ Readable history of the app (newest first). Engineering detail + gotchas live in
 
 ---
 
+## 2026-06-23 — Signals: the decision layer
+- **New Signals module** (2nd tab, right after Overview). Instead of leaving you to read the
+  charts, Verdix now **scans the selected election and flags the patterns a strategist would
+  act on** — ranked cards, each with the numbers behind it and the decision it informs:
+  - **vote that doesn't convert** — one party winning on concentrated pockets while a rival's
+    broad vote spreads thin (the efficient minority that beats the broad-but-thin majority),
+    plus **thin-margin books**, **split-field (under-40%) wins**, **eroding strongholds**, the
+    **tipping-point** seats that decide control, **momentum**, and **reservation skew**.
+  - Each flag is **critical / watch / note**, states its parameters, and expands to the
+    **exact seats** behind it → click any seat for its full constituency report. The last
+    mile, auto-surfaced.
+  - All detected from constituency data — **no booth data needed**. (Set the region / arena /
+    year in the Focus bar; vote-efficiency and momentum flags need vote-share data, so they sit
+    out for all-India assembly.)
+- Shipped live on Netlify and verified on the production build.
+
 ## 2026-06-21 — Compare does parties too
 - **Compare → Elections / Parties toggle.** The Compare tab now has two modes:
   - **Elections** — any two elections head-to-head (unchanged).
