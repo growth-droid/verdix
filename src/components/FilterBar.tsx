@@ -6,7 +6,8 @@ import { Seg, Select } from './ui'
 
 const ALL = 'All India'
 // Pages whose view is driven by the Assembly/Lok-Sabha arena toggle.
-const ARENA_PAGES = new Set(['/', '/signals', '/state', '/change', '/battleground'])
+// (Signals owns its own Assemblies/Parliaments/Both + multi-election picker, so it's NOT here.)
+const ARENA_PAGES = new Set(['/', '/state', '/change', '/battleground'])
 // Pages that already render a single chosen region (so picking one updates them in place).
 // '/change' is region-aware too: All-India shows the national change, a region scopes to it.
 const STATE_CENTRIC = new Set(['/signals', '/story', '/state', '/compare', '/trends', '/bypolls', '/battleground', '/change'])

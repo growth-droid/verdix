@@ -16,9 +16,13 @@ Readable history of the app (newest first). Engineering detail + gotchas live in
   - Each flag is **critical / watch / note**, states its parameters, and expands to the
     **exact seats** behind it → click any seat for its full constituency report. The last
     mile, auto-surfaced.
-  - All detected from constituency data — **no booth data needed**. (Set the region / arena /
-    year in the Focus bar; vote-efficiency and momentum flags need vote-share data, so they sit
-    out for all-India assembly.)
+  - All detected from constituency data — **no booth data needed**. (Pick the region in the
+    Focus bar; vote-efficiency and momentum flags need vote-share data, so they sit out for
+    all-India assembly.)
+- **One election or many.** The Signals page has its own **Assemblies / Parliaments / Both**
+  switch and a **multi-election picker**: scan a single election (the default) or select
+  several — across assemblies, parliaments, or both — and the flags merge into one ranked
+  board, each tagged with the election it came from; drill any flag to the seats in that election.
 - Shipped live on Netlify and verified on the production build.
 
 ## 2026-06-21 — Compare does parties too
