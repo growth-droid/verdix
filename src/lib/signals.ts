@@ -1,22 +1,43 @@
 // Strategic signal engine — scans the constituency-level data we already have for the handful
 // of patterns that actually change a decision, and flags each with the EXACT parameters plus the
 // seats behind it (the "last mile" drill-down). No booth data needed; everything here derives
-// from the seat-level + party-aggregate extracts. Every signal states its numbers and the
-// decision it informs — the point is to surface the call, not just draw a chart.
+// from the seat-level + party-aggregate extracts.
+//
+// Each signal now carries a per-party BREAKDOWN (`rows`) so the whole field is visible at a glance
+// — not just the one or two parties at the extremes — rendered as a compact mini-bar list. The
+// long prose headline is gone: a short `title` + `caption` says what the pattern is, the breakdown
+// shows every party, and a one-line `soWhat` states the decision.
 import type { Seat, PartyAgg } from './data'
 import { seatHistories } from './analysis'
 import { linearTrend } from './projections'
 
 export type Severity = 'critical' | 'watch' | 'note'
+export type Tone = 'pos' | 'neg' | 'neutral'
+
+/** One party (or category) line in a signal's breakdown. */
+export type SignalRow = {
+  label: string         // party code (or a seat-category name)
+  a: string | null      // alliance, for the colour dot
+  value: string         // the primary figure, e.g. "21% → 27%" or "36 of 59 · 61%"
+  delta?: string         // an optional secondary figure shown at the right (tone-coloured)
+  bar: number           // 0..1 magnitude for the mini-bar
+  tone: Tone            // colours the bar + delta: pos = strength, neg = exposure, neutral
+  badge?: string         // optional one-word tag, e.g. "efficient" / "wasted" / "rising"
+  color?: string         // explicit dot colour (for non-party rows); else derived from label/a
+}
+
 export type Signal = {
   id: string
   severity: Severity
-  party: string | null
+  title: string         // short, scannable — the pattern in a few words
+  caption: string       // what this measures, one short line
+  party: string | null  // the lead party (accent colour for the metric)
   a: string | null
-  headline: string      // the pattern, with its parameters
-  soWhat: string        // the decision it informs
-  metric: string        // the one number to show big
+  metric: string        // the one punchy figure, top-right
   metricSub?: string
+  rows: SignalRow[]     // per-party breakdown — the whole field
+  rowsNote?: string      // small note under the breakdown (e.g. "+3 more parties")
+  soWhat: string        // the decision it informs, one line
   seats: Seat[]         // the seats behind the flag — the drill-down
   score: number         // strategic leverage, for ranking
 }
@@ -32,6 +53,10 @@ export type SignalCtx = {
 
 const SEV: Record<Severity, number> = { critical: 100, watch: 60, note: 30 }
 const resCat = (r: string | null) => (!r ? 'GEN' : /\bST\b/i.test(r) ? 'ST' : /\bSC\b/i.test(r) ? 'SC' : 'GEN')
+const ROWCAP = 8
+function cap<T>(a: T[], n: number) { return a.slice(0, n) }
+function moreNote(total: number) { return total > ROWCAP ? `+${total - ROWCAP} more part${total - ROWCAP === 1 ? 'y' : 'ies'}` : undefined }
+function byParty(seats: Seat[]) { const m = new Map<string, Seat[]>(); seats.forEach(s => { if (s.p) { if (!m.has(s.p)) m.set(s.p, []); m.get(s.p)!.push(s) } }); return m }
 
 export function detectSignals(ctx: SignalCtx): Signal[] {
   return [
@@ -40,78 +65,97 @@ export function detectSignals(ctx: SignalCtx): Signal[] {
   ].filter((s): s is Signal => !!s).sort((a, b) => b.score - a.score)
 }
 
-// ── 1. Concentration vs spread (vote efficiency) — the "wins on pockets, not popularity" read.
+// ── 1. Vote efficiency — every party's vote share → seat share, who over-converts vs wastes.
 function efficiencyGap(ctx: SignalCtx): Signal | null {
   const { seats, partyRows, vy } = ctx
   const total = seats.length
   if (!total) return null
-  const latest = partyRows.filter(r => r.y === vy && r.v != null && (r.v as number) >= 5)
+  const latest = partyRows.filter(r => r.y === vy && r.v != null && (r.v as number) >= 2)
   if (latest.length < 2) return null
-  const rows = latest.map(r => {
+  const data = latest.map(r => {
     const wo = r.wo ?? seats.filter(s => s.p === r.p).length
-    const seatShare = +((wo / total) * 100).toFixed(1)
-    return { p: r.p, a: r.a, v: r.v as number, seatShare, gap: +(seatShare - (r.v as number)).toFixed(1) }
-  })
-  const over = [...rows].sort((a, b) => b.gap - a.gap)[0]
-  const under = [...rows].sort((a, b) => a.gap - b.gap)[0]
-  if (!over || !under || over.p === under.p || over.gap - under.gap < 8) return null
+    const seatShare = (wo / total) * 100, v = r.v as number
+    return { p: r.p, a: r.a, v, seatShare, gap: seatShare - v }
+  }).sort((a, b) => b.gap - a.gap)
+  const over = data[0], under = data[data.length - 1]
+  if (over.p === under.p || over.gap - under.gap < 8) return null
+  const maxAbs = Math.max(...data.map(d => Math.abs(d.gap)), 1)
+  const rows: SignalRow[] = cap(data, ROWCAP).map(d => ({
+    label: d.p, a: d.a,
+    value: `${d.v.toFixed(0)}% → ${d.seatShare.toFixed(0)}%`,
+    delta: `${d.gap >= 0 ? '+' : '−'}${Math.abs(d.gap).toFixed(0)}`,
+    bar: Math.abs(d.gap) / maxAbs,
+    tone: d.gap >= 4 ? 'pos' : d.gap <= -4 ? 'neg' : 'neutral',
+    badge: d.gap >= 10 ? 'efficient' : d.gap <= -10 ? 'wasted' : undefined,
+  }))
   const targets = seats.filter(s => s.q === under.p && s.m != null && (s.m as number) < 8).sort((a, b) => (a.m as number) - (b.m as number))
   return {
     id: 'efficiency', severity: 'watch', party: under.p, a: under.a,
-    headline: `${over.p} wins ${over.seatShare}% of the seats on ${over.v}% of the vote — concentrated, efficient support; ${under.p}'s ${under.v}% of the vote yields only ${under.seatShare}% of seats — broad but spread thin.`,
-    soWhat: `${under.p} doesn't have a popularity problem, it has a conversion problem — a vote that never peaks keeps losing under first-past-the-post. It needs a base or an alliance to concentrate that support somewhere, or it stays the runner-up. ${over.p}'s edge is geographic, not numerical — only as safe as those pockets.`,
-    metric: `${under.p}: ${under.v}% vote → ${under.seatShare}% seats`, metricSub: 'broad vote, few seats',
+    title: 'Vote efficiency', caption: 'vote share → seat share — who converts, whose vote is wasted',
+    metric: `${under.p} ${under.v.toFixed(0)}%→${under.seatShare.toFixed(0)}%`, metricSub: 'broad vote, few seats',
+    rows, rowsNote: moreNote(data.length),
+    soWhat: `${under.p} has a conversion problem, not a popularity one — its vote is too evenly spread to win seats; it needs a base or an alliance to concentrate it. ${over.p}'s edge is geographic, not numerical — only as safe as its pockets.`,
     seats: targets,
     score: SEV.watch + Math.min(35, over.gap - under.gap),
   }
 }
 
-// ── 2. Thin book — a comfortable-looking seat count built on knife-edge margins.
+// ── 2. Thin margins — every party's knife-edge book (seats held under 5%).
 function thinBook(ctx: SignalCtx): Signal | null {
-  const byP = new Map<string, Seat[]>()
-  ctx.seats.forEach(s => { if (s.p) { if (!byP.has(s.p)) byP.set(s.p, []); byP.get(s.p)!.push(s) } })
-  let best: { p: string; a: string | null; thin: Seat[]; won: number } | null = null
-  for (const [p, won] of byP) {
-    if (won.length < 10) continue
+  const data = [...byParty(ctx.seats).entries()].map(([p, won]) => {
     const thin = won.filter(s => s.m != null && (s.m as number) < 5)
-    if (thin.length / won.length < 0.12) continue
-    if (!best || thin.length > best.thin.length) best = { p, a: won[0].a, thin, won: won.length }
-  }
-  if (!best) return null
-  const pct = Math.round((best.thin.length / best.won) * 100)
+    return { p, a: won[0].a, won: won.length, thin, pct: thin.length / won.length }
+  }).filter(d => d.won >= 5 && d.thin.length > 0).sort((a, b) => b.thin.length - a.thin.length)
+  if (!data.length) return null
+  const best = data[0]
+  if (best.won < 10 || best.pct < 0.12) return null
+  const maxThin = Math.max(...data.map(d => d.thin.length), 1)
+  const rows: SignalRow[] = cap(data, ROWCAP).map(d => ({
+    label: d.p, a: d.a,
+    value: `${d.thin.length} of ${d.won} · ${Math.round(d.pct * 100)}%`,
+    bar: d.thin.length / maxThin, tone: 'neg',
+    badge: d === best ? 'most exposed' : undefined,
+  }))
+  const pct = Math.round(best.pct * 100)
   const avgM = best.thin.reduce((s, x) => s + (x.m as number), 0) / best.thin.length
   const sev: Severity = pct >= 30 ? 'critical' : 'watch'
   return {
     id: 'thinbook', severity: sev, party: best.p, a: best.a,
-    headline: `${best.p} holds ${best.thin.length} of its ${best.won} seats by under 5% — ${pct}% of its book; an adverse swing of about ${(avgM / 2).toFixed(1)}% erases them.`,
-    soWhat: `${best.p}'s seat count looks comfortable but it's resting on thin margins — a small wave undoes it. This is the defend-first list, ahead of chasing new ground.`,
+    title: 'Thin margins', caption: 'seats held under 5% — the first to fall on a swing',
     metric: `${best.thin.length} seats < 5%`, metricSub: `${pct}% of ${best.p}'s wins`,
-    seats: [...best.thin].sort((a, b) => (a.m as number) - (b.m as number)),
+    rows, rowsNote: moreNote(data.length),
+    soWhat: `${best.p}'s seat count looks comfortable but rests on thin margins — an adverse swing of about ${(avgM / 2).toFixed(1)}% erases ${best.thin.length} of them. This is the defend-first list, ahead of chasing new ground.`,
+    seats: data.flatMap(d => d.thin).sort((a, b) => (a.m as number) - (b.m as number)),
     score: SEV[sev] + pct,
   }
 }
 
-// ── 3. Divided field — wins on under 40%, exposed to opposition consolidation.
+// ── 3. Split-field wins — wins under 40%, by party, exposed to consolidation.
 function dividedField(ctx: SignalCtx): Signal | null {
-  const v = ctx.seats.filter(s => s.v != null)
-  if (v.length < 30) return null
-  const under = v.filter(s => (s.v as number) < 40)
-  if (under.length < Math.max(4, v.length * 0.08)) return null
-  const byP = new Map<string, number>()
-  under.forEach(s => byP.set(s.p, (byP.get(s.p) || 0) + 1))
-  const [topP, topN] = [...byP.entries()].sort((a, b) => b[1] - a[1])[0]
-  const pct = Math.round((under.length / v.length) * 100)
+  const decided = ctx.seats.filter(s => s.v != null)
+  if (decided.length < 30) return null
+  const under = decided.filter(s => (s.v as number) < 40)
+  if (under.length < Math.max(4, decided.length * 0.08)) return null
+  const m = new Map<string, Seat[]>()
+  under.forEach(s => { if (!m.has(s.p)) m.set(s.p, []); m.get(s.p)!.push(s) })
+  const data = [...m.entries()].map(([p, list]) => ({ p, a: list[0].a, n: list.length })).sort((a, b) => b.n - a.n)
+  const max = Math.max(...data.map(d => d.n), 1)
+  const rows: SignalRow[] = cap(data, ROWCAP).map(d => ({
+    label: d.p, a: d.a, value: `${d.n} seat${d.n !== 1 ? 's' : ''} < 40%`, bar: d.n / max, tone: 'neutral',
+  }))
+  const top = data[0], pct = Math.round((under.length / decided.length) * 100)
   return {
-    id: 'divided', severity: 'watch', party: topP, a: under.find(s => s.p === topP)?.a ?? null,
-    headline: `${under.length} seats (${pct}%) were won on under 40% of the vote — split-field wins; ${topP} took the most (${topN}).`,
-    soWhat: `These flip for free if the trailing parties consolidate the anti-winner vote — no new voters needed, just an alliance or a straight fight. For ${topP} they're the soft underbelly to shore up; for everyone else, the cheapest targets on the board.`,
+    id: 'divided', severity: 'watch', party: top.p, a: rows[0]?.a ?? null,
+    title: 'Split-field wins', caption: 'won on under 40% of the vote — flip if the field consolidates',
     metric: `${under.length} won < 40%`, metricSub: `${pct}% of decided seats`,
+    rows, rowsNote: moreNote(data.length),
+    soWhat: `These need no new voters — they flip if the trailing parties consolidate the anti-winner vote (an alliance, or a straight fight). ${top.p} has the most to shore up; for everyone else they're the cheapest targets on the board.`,
     seats: [...under].sort((a, b) => (a.v as number) - (b.v as number)),
     score: SEV.watch + pct,
   }
 }
 
-// ── 4. Eroding strongholds — safe seats whose margin is shrinking, the early warning.
+// ── 4. Softening strongholds — safe seats whose margin is shrinking, by party.
 function erodingStrongholds(ctx: SignalCtx): Signal | null {
   const hist = seatHistories(ctx.allRows)
   const eroding: { seat: Seat; prevM: number; curM: number; p: string; a: string | null }[] = []
@@ -119,110 +163,139 @@ function erodingStrongholds(ctx: SignalCtx): Signal | null {
     const h = (hist.get(`${cur.s}|${cur.j}`) ?? []).filter(r => r.y <= cur.y)
     if (h.length < 3) continue
     const prev = h[h.length - 2], prev2 = h[h.length - 3]
-    if (cur.p && prev?.p === cur.p && prev2?.p === cur.p && cur.m != null && prev.m != null && (cur.m as number) < (prev.m as number) - 5) {
+    if (cur.p && prev?.p === cur.p && prev2?.p === cur.p && cur.m != null && prev.m != null && (cur.m as number) < (prev.m as number) - 5)
       eroding.push({ seat: cur, prevM: prev.m as number, curM: cur.m as number, p: cur.p, a: cur.a })
-    }
   }
   if (eroding.length < 3) return null
-  const byP = new Map<string, typeof eroding>()
-  eroding.forEach(e => { if (!byP.has(e.p)) byP.set(e.p, []); byP.get(e.p)!.push(e) })
-  const [p, list] = [...byP.entries()].sort((a, b) => b[1].length - a[1].length)[0]
-  if (list.length < 3) return null
-  const prevAvg = (list.reduce((s, e) => s + e.prevM, 0) / list.length).toFixed(0)
-  const curAvg = (list.reduce((s, e) => s + e.curM, 0) / list.length).toFixed(0)
+  const m = new Map<string, typeof eroding>()
+  eroding.forEach(e => { if (!m.has(e.p)) m.set(e.p, []); m.get(e.p)!.push(e) })
+  const data = [...m.entries()].map(([p, list]) => ({ p, a: list[0].a, list, n: list.length, drop: list.reduce((s, e) => s + (e.prevM - e.curM), 0) / list.length })).sort((a, b) => b.n - a.n)
+  const lead = data[0]
+  if (lead.n < 3) return null
+  const max = Math.max(...data.map(d => d.n), 1)
+  const rows: SignalRow[] = cap(data, ROWCAP).map(d => ({
+    label: d.p, a: d.a, value: `${d.n} softening`, delta: `−${d.drop.toFixed(0)}%`, bar: d.n / max, tone: 'neg',
+  }))
+  const prevAvg = (lead.list.reduce((s, e) => s + e.prevM, 0) / lead.list.length).toFixed(0)
+  const curAvg = (lead.list.reduce((s, e) => s + e.curM, 0) / lead.list.length).toFixed(0)
   return {
-    id: 'eroding', severity: 'watch', party: p, a: list[0].a,
-    headline: `${list.length} of ${p}'s strongholds are softening — average margin fell from ${prevAvg}% to ${curAvg}% over the last two elections.`,
-    soWhat: `${p} still wins these, but the base is thinning. On this trajectory they become next cycle's battleground. Reinforce now, while they're still wins — by the time they're swing seats it's too late.`,
-    metric: `${list.length} softening`, metricSub: `${prevAvg}% → ${curAvg}% margin`,
-    seats: list.map(e => e.seat).sort((a, b) => (a.m as number) - (b.m as number)),
-    score: SEV.watch + list.length * 2,
+    id: 'eroding', severity: 'watch', party: lead.p, a: lead.a,
+    title: 'Softening strongholds', caption: 'safe seats whose margin is shrinking — the early warning',
+    metric: `${lead.n} softening`, metricSub: `${prevAvg}% → ${curAvg}% margin`,
+    rows, rowsNote: moreNote(data.length),
+    soWhat: `${lead.p} still wins these, but the base is thinning — on this trajectory they're next cycle's battleground. Reinforce now, while they're still wins, not once they're swing seats.`,
+    seats: lead.list.map(e => e.seat).sort((a, b) => (a.m as number) - (b.m as number)),
+    score: SEV.watch + lead.n * 2,
   }
 }
 
-// ── 5. Tipping point — how few seats decide control (single-state assembly, or all-India LS).
+// ── 5. Margin of control — the seat tally vs the majority line; how few seats decide the house.
 function tippingPoint(ctx: SignalCtx): Signal | null {
   const houseMode = ctx.arena === 'AE' ? ctx.isState : !ctx.isState
   if (!houseMode) return null
   const N = ctx.seats.length
   if (N < 30) return null
   const majority = Math.floor(N / 2) + 1
-  const byP = new Map<string, number>()
-  ctx.seats.forEach(s => byP.set(s.p, (byP.get(s.p) || 0) + 1))
-  const [leadP, leadN] = [...byP.entries()].sort((a, b) => b[1] - a[1])[0]
-  const a = ctx.seats.find(s => s.p === leadP)?.a ?? null
-  if (leadN >= majority) {
-    const cushion = leadN - majority
-    const myThin = ctx.seats.filter(s => s.p === leadP && s.m != null).sort((x, y) => (x.m as number) - (y.m as number))
+  const m = new Map<string, { n: number; a: string | null }>()
+  ctx.seats.forEach(s => { const e = m.get(s.p) ?? { n: 0, a: s.a }; e.n++; m.set(s.p, e) })
+  const ranked = [...m.entries()].map(([p, e]) => ({ p, a: e.a, n: e.n })).sort((a, b) => b.n - a.n)
+  const lead = ranked[0]
+  const maxN = ranked[0].n
+  const rows: SignalRow[] = cap(ranked, ROWCAP).map(d => ({
+    label: d.p, a: d.a, value: `${d.n} seat${d.n !== 1 ? 's' : ''}`, bar: d.n / maxN,
+    tone: d.n >= majority ? 'pos' : 'neutral',
+    badge: d === lead ? (lead.n >= majority ? 'majority' : 'largest') : undefined,
+  }))
+  if (lead.n >= majority) {
+    const cushion = lead.n - majority
+    const myThin = ctx.seats.filter(s => s.p === lead.p && s.m != null).sort((x, y) => (x.m as number) - (y.m as number))
     const pivot = myThin[Math.min(cushion, myThin.length - 1)]
     const sev: Severity = cushion <= Math.max(3, N * 0.03) ? 'critical' : 'note'
     return {
-      id: 'tipping', severity: sev, party: leadP, a,
-      headline: `${leadP}'s majority (${leadN}/${N}) survives losing ${cushion} seats; its pivot seat is held by just ${pivot?.m?.toFixed(1)}%.`,
-      soWhat: `The whole house turns on roughly ${cushion + 1} thin seats — a uniform swing of about ${pivot?.m != null ? ((pivot.m as number) / 2).toFixed(1) : '?'}% to the direct rival flips control. Both sides should pour everything into exactly these.`,
+      id: 'tipping', severity: sev, party: lead.p, a: lead.a,
+      title: 'Margin of control', caption: `seat tally vs the ${majority}-seat majority line`,
       metric: `${cushion}-seat cushion`, metricSub: `pivot held by ${pivot?.m?.toFixed(1)}%`,
+      rows, rowsNote: `majority = ${majority} of ${N}`,
+      soWhat: `The house turns on roughly ${cushion + 1} thin seats — a uniform swing of about ${pivot?.m != null ? ((pivot.m as number) / 2).toFixed(1) : '?'}% to the direct rival flips control. Both sides should pour everything into exactly these.`,
       seats: myThin.slice(0, cushion + 4),
       score: SEV[sev] + 10,
     }
   }
-  const gap = majority - leadN
-  const targets = ctx.seats.filter(s => s.q === leadP && s.m != null).sort((x, y) => (x.m as number) - (y.m as number)).slice(0, gap + 4)
+  const gap = majority - lead.n
   return {
-    id: 'tipping', severity: 'note', party: leadP, a,
-    headline: `No majority — ${leadP} leads ${leadN}/${N}, ${gap} short; its ${gap} closest near-misses decide control.`,
-    soWhat: `Hung-house arithmetic: ${leadP} reaches a majority by flipping its ${gap} nearest losses; the rest hold power by denying them. This short list is the election.`,
-    metric: `${gap} seats from power`, metricSub: `${leadP} leads ${leadN}/${N}`,
-    seats: targets,
+    id: 'tipping', severity: 'note', party: lead.p, a: lead.a,
+    title: 'Margin of control', caption: `no majority — seat tally vs the ${majority}-seat line`,
+    metric: `${gap} seats from power`, metricSub: `${lead.p} leads ${lead.n}/${N}`,
+    rows, rowsNote: `majority = ${majority} of ${N}`,
+    soWhat: `Hung house: ${lead.p} reaches a majority by flipping its ${gap} nearest losses; everyone else holds power by denying them. This short list is the election.`,
+    seats: ctx.seats.filter(s => s.q === lead.p && s.m != null).sort((x, y) => (x.m as number) - (y.m as number)).slice(0, gap + 4),
     score: SEV.note + 20,
   }
 }
 
-// ── 6. Momentum — the party whose vote share is trending up, consistently.
+// ── 6. Momentum — every party's vote-share trend, who's rising and who's fading.
 function momentum(ctx: SignalCtx): Signal | null {
   const years = [...new Set(ctx.partyRows.map(r => r.y))].sort((a, b) => a - b)
   if (years.length < 3) return null
-  let best: { p: string; a: string | null; slope: number; cur: number } | null = null
-  for (const p of new Set(ctx.partyRows.map(r => r.p))) {
+  const data = [...new Set(ctx.partyRows.map(r => r.p))].map(p => {
     const series = years.map(y => ctx.partyRows.find(r => r.p === p && r.y === y)?.v ?? null)
     const tr = linearTrend(series)
-    if (!tr || tr.r2 < 0.5) continue
-    const cur = [...series].reverse().find(v => v != null)
-    if (cur == null || cur < 8) continue
-    if (!best || tr.slope > best.slope) best = { p, a: ctx.partyRows.find(r => r.p === p)?.a ?? null, slope: +tr.slope.toFixed(1), cur: +cur.toFixed(1) }
-  }
-  if (!best || best.slope < 1) return null
+    const cur = [...series].reverse().find(v => v != null) ?? null
+    return tr && cur != null && cur >= 3 ? { p, a: ctx.partyRows.find(r => r.p === p)?.a ?? null, slope: tr.slope, r2: tr.r2, cur } : null
+  }).filter((x): x is { p: string; a: string | null; slope: number; r2: number; cur: number } => !!x).sort((a, b) => b.slope - a.slope)
+  if (data.length < 2) return null
+  const riser = data[0], faller = data[data.length - 1]
+  if (riser.slope < 1 || riser.r2 < 0.5) return null
+  const maxAbs = Math.max(...data.map(d => Math.abs(d.slope)), 1)
+  const rows: SignalRow[] = cap(data, ROWCAP).map(d => ({
+    label: d.p, a: d.a,
+    value: `${d.slope >= 0 ? '+' : '−'}${Math.abs(d.slope).toFixed(1)}%/election`,
+    delta: `now ${d.cur.toFixed(0)}%`,
+    bar: Math.abs(d.slope) / maxAbs,
+    tone: d.slope >= 0.8 ? 'pos' : d.slope <= -0.8 ? 'neg' : 'neutral',
+    badge: d === riser ? 'rising' : (d === faller && faller.slope <= -0.8 ? 'falling' : undefined),
+  }))
   return {
-    id: 'momentum', severity: 'note', party: best.p, a: best.a,
-    headline: `${best.p} is the momentum party — vote share rising about +${best.slope}%/election (now ${best.cur}%) on a consistent trend.`,
-    soWhat: `Direction is with ${best.p}: its targets get easier each cycle while rivals defend a flat or falling base. Its near-misses are the seats most likely to flip next — back them.`,
-    metric: `+${best.slope}%/election`, metricSub: `${best.p} now ${best.cur}%`,
-    seats: ctx.seats.filter(s => s.q === best!.p && s.m != null).sort((a, b) => (a.m as number) - (b.m as number)),
-    score: SEV.note + Math.min(25, best.slope * 5),
+    id: 'momentum', severity: 'note', party: riser.p, a: riser.a,
+    title: 'Momentum', caption: 'vote-share trend per election — who\'s rising, who\'s fading',
+    metric: `${riser.p} +${riser.slope.toFixed(1)}%/elec`, metricSub: `now ${riser.cur.toFixed(0)}%`,
+    rows, rowsNote: moreNote(data.length),
+    soWhat: `Direction is with ${riser.p} — its targets get easier each cycle while ${faller.slope < 0 ? `${faller.p} defends a falling base` : 'rivals stay flat'}. Its near-misses are the seats most likely to flip next.`,
+    seats: ctx.seats.filter(s => s.q === riser.p && s.m != null).sort((a, b) => (a.m as number) - (b.m as number)),
+    score: SEV.note + Math.min(25, riser.slope * 5),
   }
 }
 
-// ── 7. Reservation skew — a base anchored in one seat category, exposed in another.
+// ── 7. Social coalition — the leader's win-rate by seat category (where its base is, where it isn't).
 function reservationSkew(ctx: SignalCtx): Signal | null {
-  const byP = new Map<string, number>()
-  ctx.seats.forEach(s => byP.set(s.p, (byP.get(s.p) || 0) + 1))
-  const lead = [...byP.entries()].sort((a, b) => b[1] - a[1])[0]?.[0]
+  const m = new Map<string, number>()
+  ctx.seats.forEach(s => m.set(s.p, (m.get(s.p) || 0) + 1))
+  const lead = [...m.entries()].sort((a, b) => b[1] - a[1])[0]?.[0]
   if (!lead) return null
-  const rate = (cat: string) => {
+  const TONE_HEX = { pos: '#10b981', neg: '#f43f5e', neutral: '#64748b' }
+  const stat = (cat: string) => {
     const inCat = ctx.seats.filter(s => resCat(s.r) === cat)
     return inCat.length >= 8 ? { cat, n: inCat.length, won: inCat.filter(s => s.p === lead).length, pct: Math.round((inCat.filter(s => s.p === lead).length / inCat.length) * 100) } : null
   }
-  const got = ['SC', 'ST', 'GEN'].map(rate).filter((x): x is { cat: string; n: number; won: number; pct: number } => !!x)
+  const got = ['GEN', 'SC', 'ST'].map(stat).filter((x): x is { cat: string; n: number; won: number; pct: number } => !!x)
   if (got.length < 2) return null
   const hi = [...got].sort((a, b) => b.pct - a.pct)[0]
   const lo = [...got].sort((a, b) => a.pct - b.pct)[0]
   if (hi.cat === lo.cat || hi.pct - lo.pct < 25) return null
-  const label = (c: string) => (c === 'GEN' ? 'general' : c)
+  const label = (c: string) => (c === 'GEN' ? 'General' : c)
+  const rows: SignalRow[] = [...got].sort((a, b) => b.pct - a.pct).map(g => {
+    const tone: Tone = g.cat === hi.cat ? 'pos' : g.cat === lo.cat ? 'neg' : 'neutral'
+    return { label: `${label(g.cat)} seats`, a: null, value: `${g.won}/${g.n} · ${g.pct}%`, bar: g.pct / 100, tone, color: TONE_HEX[tone], badge: g.cat === hi.cat ? 'stronghold' : g.cat === lo.cat ? 'exposed' : undefined }
+  })
+  const loSeats = ctx.seats.filter(s => resCat(s.r) === lo.cat)
+  const loWinner = [...loSeats.reduce((mm, s) => mm.set(s.p, (mm.get(s.p) || 0) + 1), new Map<string, number>()).entries()].filter(([p]) => p !== lead).sort((a, b) => b[1] - a[1])[0]?.[0]
   return {
     id: 'reservation', severity: 'note', party: lead, a: ctx.seats.find(s => s.p === lead)?.a ?? null,
-    headline: `${lead} sweeps ${label(hi.cat)} seats (${hi.won}/${hi.n}, ${hi.pct}%) but wins only ${lo.pct}% of ${label(lo.cat)} ones — its base is ${label(hi.cat)}-anchored.`,
-    soWhat: `${lead}'s coalition is uneven across communities. The ${label(lo.cat)} seats are where it's beatable — and where a rival builds the counter-bloc. Read this against the social arithmetic before allocating effort.`,
-    metric: `${hi.pct}% of ${label(hi.cat)} vs ${lo.pct}% of ${label(lo.cat)}`,
-    seats: ctx.seats.filter(s => resCat(s.r) === lo.cat && s.p !== lead).sort((a, b) => (a.m ?? 99) - (b.m ?? 99)),
+    title: 'Social coalition', caption: `${lead}'s win-rate by seat type — where its base is, where it isn't`,
+    metric: `${hi.pct}% vs ${lo.pct}%`, metricSub: `${label(hi.cat)} vs ${label(lo.cat)} seats`,
+    rows,
+    soWhat: `${lead}'s coalition is ${label(hi.cat)}-anchored. The ${label(lo.cat)} seats are where it's beatable${loWinner ? ` — ${loWinner} leads there` : ''}, and where a rival builds the counter-bloc.`,
+    seats: loSeats.filter(s => s.p !== lead).sort((a, b) => (a.m ?? 99) - (b.m ?? 99)),
     score: SEV.note + (hi.pct - lo.pct) / 4,
   }
 }

@@ -5,7 +5,7 @@ import { useFilters } from '../store'
 import SeatDrawer from '../components/SeatDrawer'
 import { Dot, Seg, SortTable, StickyControls, type Col } from '../components/ui'
 import { activeByState } from '../lib/analysis'
-import { detectSignals, type Severity, type Signal } from '../lib/signals'
+import { detectSignals, type Severity, type Signal, type SignalRow, type Tone } from '../lib/signals'
 
 const tc = (s: string) => (s || '').toLowerCase().replace(/(^|[\s(\-./])([a-z])/g, (_, a: string, b: string) => a + b.toUpperCase())
 
@@ -14,11 +14,30 @@ const SEV: Record<Severity, { label: string; badge: string; ring: string }> = {
   watch: { label: 'WATCH', badge: 'bg-amber-500/15 text-amber-200 border-amber-400/30', ring: 'border-l-amber-500/70' },
   note: { label: 'NOTE', badge: 'bg-white/[0.06] text-slate-300 border-white/15', ring: 'border-l-slate-500/60' },
 }
+const TONE: Record<Tone, string> = { pos: '#10b981', neg: '#f43f5e', neutral: '#64748b' }
+
+// One party (or category) line in a signal's breakdown — dot · name · figure · magnitude bar · delta.
+function Bar({ row }: { row: SignalRow }) {
+  const dot = row.color ?? colorFor(row.label, row.a)
+  const t = TONE[row.tone]
+  return (
+    <div className="flex items-center gap-2.5">
+      <span className="inline-block w-2.5 h-2.5 rounded-full shrink-0 ring-1 ring-black/30" style={{ background: dot }} />
+      <span className="w-16 sm:w-[84px] shrink-0 truncate text-[12px] font-medium text-ink">{row.label}</span>
+      <span className="w-[104px] shrink-0 tabular-nums text-[11px] text-muted">{row.value}</span>
+      <div className="flex-1 h-2.5 rounded-full bg-white/[0.05] overflow-hidden min-w-[32px]">
+        <div className="h-full rounded-full" style={{ width: `${Math.max(3, row.bar * 100)}%`, background: t }} />
+      </div>
+      {row.delta && <span className="w-14 shrink-0 text-right tabular-nums text-[11px] font-semibold" style={{ color: t }}>{row.delta}</span>}
+      {row.badge && <span className="shrink-0 hidden md:inline text-[9px] uppercase tracking-wide px-1.5 py-0.5 rounded text-faint bg-white/[0.04] border border-white/10">{row.badge}</span>}
+    </div>
+  )
+}
 
 type ScopeArena = 'AE' | 'GE' | 'BOTH'
 type Election = { key: string; arena: 'AE' | 'GE'; year: number }
 const elFull = (e: Election) => `${e.arena === 'AE' ? 'Assembly' : 'Lok Sabha'} ${e.year}`
-type Tagged = Signal & { election: Election; rows: Seat[] }
+type Tagged = Signal & { election: Election; arenaRows: Seat[] }
 
 export default function SignalsPage() {
   const { arena, state } = useFilters()
@@ -72,7 +91,7 @@ export default function SignalsPage() {
       if (!active.length) continue
       const partyRows = isState ? (el.arena === 'AE' ? partyAE : partyGE).filter(r => r.s === st) : el.arena === 'GE' ? natGE : []
       detectSignals({ seats: active, allRows: scopeRows, partyRows, vy: el.year, isState, arena: el.arena })
-        .forEach(s => out.push({ ...s, id: `${el.key}:${s.id}`, election: el, rows }))
+        .forEach(s => out.push({ ...s, id: `${el.key}:${s.id}`, election: el, arenaRows: rows }))
     }
     return out.sort((a, b) => b.score - a.score)
   }, [selectedEls, ae, ge, partyAE, partyGE, natGE, isState, st])
@@ -125,7 +144,7 @@ export default function SignalsPage() {
       </StickyControls>
 
       <p className="text-[12.5px] text-muted mb-4 leading-relaxed max-w-3xl">
-        Verdix scans each chosen election for the handful of patterns a strategist would act on — vote that doesn't convert, thin-margin books, split-field wins, eroding strongholds, the seats that decide control, momentum. Pick <b className="text-ink">one election or several</b> (assemblies, parliaments, or both) above; each flag states its parameters and the decision it informs, and opens <b className="text-ink">show seats</b> to drill to the exact constituencies (and their full reports). Set the region in the Focus bar at the top.
+        Verdix scans each chosen election for the handful of patterns a strategist would act on. Every flag opens with the <b className="text-ink">whole field</b> — each party's number on one mini-chart — then the decision it informs; pick <b className="text-ink">one election or several</b> (assemblies, parliaments, or both) above, and open <b className="text-ink">show seats</b> to drill to the exact constituencies. Set the region in the Focus bar at the top.
       </p>
 
       {!sel.length ? (
@@ -135,23 +154,35 @@ export default function SignalsPage() {
           {signals.map(sig => {
             const sv = SEV[sig.severity]
             const isOpen = open === sig.id
-            const col = sig.party ? colorFor(sig.party, sig.a) : undefined
+            const accent = sig.party ? colorFor(sig.party, sig.a) : undefined
             return (
               <div key={sig.id} className={`card p-0 overflow-hidden border-l-4 ${sv.ring}`}>
                 <div className="p-4">
                   <div className="flex items-start gap-3">
                     <span className={`shrink-0 mt-0.5 text-[10px] font-bold tracking-wide px-2 py-1 rounded-md border ${sv.badge}`}>{sv.label}</span>
                     {multi && <span className="shrink-0 mt-0.5 text-[10px] font-medium px-2 py-1 rounded-md border border-white/10 bg-white/[0.04] text-slate-300 whitespace-nowrap">{elFull(sig.election)}</span>}
-                    {sig.party && <Dot color={col!} />}
                     <div className="flex-1 min-w-0">
-                      <div className="text-[14px] font-semibold text-ink leading-snug">{sig.headline}</div>
-                      <div className="text-[12.5px] text-muted mt-1.5 leading-relaxed">{sig.soWhat}</div>
+                      <div className="flex items-center gap-2">
+                        {sig.party && <Dot color={accent!} />}
+                        <span className="text-[14.5px] font-bold text-ink leading-tight">{sig.title}</span>
+                      </div>
+                      <div className="text-[11.5px] text-faint mt-0.5 leading-snug">{sig.caption}</div>
                     </div>
                     <div className="text-right shrink-0 w-40">
-                      <div className="text-[13.5px] font-bold tabular-nums leading-tight" style={col ? { color: col } : undefined}>{sig.metric}</div>
+                      <div className="text-[13px] font-bold tabular-nums leading-tight" style={accent ? { color: accent } : undefined}>{sig.metric}</div>
                       {sig.metricSub && <div className="text-[10px] text-faint mt-0.5">{sig.metricSub}</div>}
                     </div>
                   </div>
+
+                  <div className="mt-3 space-y-1.5">
+                    {sig.rows.map((r, i) => <Bar key={i} row={r} />)}
+                    {sig.rowsNote && <div className="text-[10px] text-faint pl-5">{sig.rowsNote}</div>}
+                  </div>
+
+                  <div className="mt-3 pt-2.5 border-t border-white/[0.05] text-[12px] text-muted leading-relaxed">
+                    <span className="text-orange-300/90 font-bold">▸ </span>{sig.soWhat}
+                  </div>
+
                   {sig.seats.length > 0 && (
                     <button onClick={() => setOpen(isOpen ? null : sig.id)}
                       className="mt-2.5 text-xs text-orange-400 hover:text-orange-300 underline decoration-dotted decoration-orange-400/40 underline-offset-2 transition-colors">
@@ -163,7 +194,7 @@ export default function SignalsPage() {
                   <div className="border-t border-white/[0.06] px-4 py-3 bg-white/[0.015]">
                     <div className="text-[11px] text-faint mb-2">The last mile — {elFull(sig.election)} · click any seat for its full constituency report.</div>
                     <SortTable rows={sig.seats} cols={cols} defaultSort="m" initialDir="asc" maxH={320}
-                      search searchIn={r => `${r.c} ${r.s} ${r.p} ${r.q ?? ''}`} onRowClick={s => setPicked({ seat: s, rows: sig.rows, arena: sig.election.arena })} />
+                      search searchIn={r => `${r.c} ${r.s} ${r.p} ${r.q ?? ''}`} onRowClick={s => setPicked({ seat: s, rows: sig.arenaRows, arena: sig.election.arena })} />
                   </div>
                 )}
               </div>

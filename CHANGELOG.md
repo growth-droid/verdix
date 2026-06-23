@@ -23,6 +23,11 @@ Readable history of the app (newest first). Engineering detail + gotchas live in
   switch and a **multi-election picker**: scan a single election (the default) or select
   several — across assemblies, parliaments, or both — and the flags merge into one ranked
   board, each tagged with the election it came from; drill any flag to the seats in that election.
+- **Readable, every-party breakdown.** Each flag now opens with the **whole field** — a compact
+  per-party mini-bar chart (vote→seat conversion, thin-margin book, split-field wins, momentum,
+  the house tally, …, across *all* parties, not just the one or two at the extremes) under a
+  short title, with a one-line takeaway beneath. Replaces the earlier text-heavy headline, so a
+  flag is scannable at a glance.
 - Shipped live on Netlify and verified on the production build.
 
 ## 2026-06-21 — Compare does parties too
