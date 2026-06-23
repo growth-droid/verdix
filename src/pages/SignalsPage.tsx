@@ -7,6 +7,7 @@ import { Dot, Seg, SortTable, StickyControls, type Col } from '../components/ui'
 import { activeByState } from '../lib/analysis'
 import { detectSignals, type Severity, type Signal, type SignalRow, type SignalGroup, type Tone } from '../lib/signals'
 import { simulateAlliance, type AllianceSim } from '../lib/projections'
+import { partyStrategy, type SwotItem } from '../lib/strategy'
 
 const tc = (s: string) => (s || '').toLowerCase().replace(/(^|[\s(\-./])([a-z])/g, (_, a: string, b: string) => a + b.toUpperCase())
 
@@ -16,7 +17,6 @@ const SEV: Record<Severity, { label: string; badge: string; ring: string }> = {
   note: { label: 'NOTE', badge: 'bg-white/[0.06] text-slate-300 border-white/15', ring: 'border-l-slate-500/60' },
 }
 const TONE: Record<Tone, string> = { pos: '#10b981', neg: '#f43f5e', neutral: '#64748b' }
-// The segmented sections — auto-flags are grouped under these for scannability.
 const GROUPS: { key: SignalGroup; label: string; caption: string }[] = [
   { key: 'control', label: 'Control of the house', caption: 'who holds power — and by how few seats' },
   { key: 'soft', label: 'Where the lead is soft', caption: 'exposure to shore up before chasing new ground' },
@@ -24,7 +24,6 @@ const GROUPS: { key: SignalGroup; label: string; caption: string }[] = [
   { key: 'coalition', label: 'Social coalition', caption: 'the base across communities' },
 ]
 
-// One party (or category) line in a signal's breakdown — dot · name · figure · magnitude bar · delta.
 function Bar({ row }: { row: SignalRow }) {
   const dot = row.color ?? colorFor(row.label, row.a)
   const t = TONE[row.tone]
@@ -52,8 +51,29 @@ function SimStat({ label, value, sub, color, delta }: { label: string; value: nu
     </div>
   )
 }
+// One quadrant of the SWOT grid.
+function SwotQuad({ title, sub, accent, items }: { title: string; sub: string; accent: string; items: SwotItem[] }) {
+  return (
+    <div className="card p-0 overflow-hidden border-l-4" style={{ borderLeftColor: accent }}>
+      <div className="px-4 pt-3 pb-1.5 flex items-baseline gap-2">
+        <span className="text-[13px] font-bold" style={{ color: accent }}>{title}</span>
+        <span className="text-[10.5px] text-faint">{sub}</span>
+        <span className="ml-auto text-[11px] text-faint tabular-nums">{items.length}</span>
+      </div>
+      <div className="px-4 pb-3 space-y-2">
+        {items.length ? items.map((it, i) => (
+          <div key={i} className="flex gap-2 text-[12.5px] text-muted leading-relaxed">
+            <span className="shrink-0 mt-[7px] w-1.5 h-1.5 rounded-full" style={{ background: accent }} />
+            <span>{it.text} <span className="text-[9px] uppercase tracking-wide text-faint border border-white/10 rounded px-1 py-px ml-0.5 whitespace-nowrap">{it.tag}</span></span>
+          </div>
+        )) : <div className="text-faint text-[12px]">No clear read from this election.</div>}
+      </div>
+    </div>
+  )
+}
 
 type ScopeArena = 'AE' | 'GE' | 'BOTH'
+type ViewKey = 'swot' | 'alliance' | 'patterns'
 type Election = { key: string; arena: 'AE' | 'GE'; year: number }
 const elFull = (e: Election) => `${e.arena === 'AE' ? 'Assembly' : 'Lok Sabha'} ${e.year}`
 type Tagged = Signal & { election: Election; arenaRows: Seat[] }
@@ -70,11 +90,11 @@ export default function SignalsPage() {
   const [picked, setPicked] = useState<{ seat: Seat; rows: Seat[]; arena: 'AE' | 'GE' } | null>(null)
   const [open, setOpen] = useState<string | null>(null)
   const [scope, setScope] = useState<ScopeArena>(arena)
+  const [view, setView] = useState<ViewKey>('swot')
   const [sel, setSel] = useState<string[]>([])
   useEffect(() => { loadSeats('AE').then(setAe); loadSeats('GE').then(setGe) }, [])
   useEffect(() => { loadPartyAE().then(setPartyAE); loadPartyGEState().then(setPartyGE); loadPartyGENat().then(setNatGE) }, [])
 
-  // Elections available in the current region scope, restricted by the Assemblies/Parliaments/Both toggle.
   const aeYears = useMemo(() => [...new Set((isState ? ae.filter(r => r.s === st) : ae).map(r => r.y))].sort((a, b) => b - a), [ae, isState, st])
   const geYears = useMemo(() => [...new Set((isState ? ge.filter(r => r.s === st) : ge).map(r => r.y))].sort((a, b) => b - a), [ge, isState, st])
   const elections = useMemo<Election[]>(() => {
@@ -84,9 +104,6 @@ export default function SignalsPage() {
     return list
   }, [scope, aeYears, geYears])
   const optSig = elections.map(e => e.key).join(',')
-
-  // Whenever the option set changes (region / scope / data load), reset to the single most recent
-  // election — so the page opens "one election" by default, and the user adds more from there.
   useEffect(() => {
     if (!elections.length) { setSel([]); return }
     const latest = [...elections].sort((a, b) => b.year - a.year || (a.arena === arena ? -1 : 1))[0]
@@ -118,21 +135,28 @@ export default function SignalsPage() {
   const multi = selectedEls.length > 1
   const grouped = useMemo(() => GROUPS.map(g => ({ ...g, items: signals.filter(s => s.group === g.key) })).filter(g => g.items.length), [signals])
 
-  // ── Alliance simulator — operates on the most recent selected election ──
+  // ── the "active election" the what-if tools (SWOT + simulator) operate on: most recent selected ──
   const simEl = useMemo(() => (selectedEls.length ? [...selectedEls].sort((a, b) => b.year - a.year)[0] : null), [selectedEls])
+  const simScopeRows = useMemo(() => {
+    if (!simEl) return [] as Seat[]
+    const rows = simEl.arena === 'AE' ? ae : ge
+    return isState ? rows.filter(r => r.s === st) : rows
+  }, [simEl, ae, ge, isState, st])
   const simActive = useMemo(() => {
     if (!simEl) return [] as Seat[]
     const rows = simEl.arena === 'AE' ? ae : ge
-    const scopeRows = isState ? rows.filter(r => r.s === st) : rows
-    return isState ? scopeRows.filter(r => r.y === simEl.year) : [...activeByState(rows, simEl.arena, simEl.year).values()].flat()
-  }, [simEl, ae, ge, isState, st])
+    return isState ? simScopeRows.filter(r => r.y === simEl.year) : [...activeByState(rows, simEl.arena, simEl.year).values()].flat()
+  }, [simEl, ae, ge, isState, simScopeRows])
+  const simPartyRows = useMemo(() => {
+    if (!simEl) return [] as PartyAgg[]
+    return isState ? (simEl.arena === 'AE' ? partyAE : partyGE).filter(r => r.s === st) : simEl.arena === 'GE' ? natGE : []
+  }, [simEl, isState, st, partyAE, partyGE, natGE])
   const shareMap = useMemo(() => {
     const m = new Map<string, number>()
     if (!simEl) return m
-    const src = isState ? (simEl.arena === 'AE' ? partyAE : partyGE).filter(r => r.s === st && r.y === simEl.year) : simEl.arena === 'GE' ? natGE.filter(r => r.y === simEl.year) : []
-    src.forEach(r => { if (r.v != null) m.set(r.p, r.v as number) })
+    simPartyRows.filter(r => r.y === simEl.year).forEach(r => { if (r.v != null) m.set(r.p, r.v as number) })
     return m
-  }, [simEl, isState, st, partyAE, partyGE, natGE])
+  }, [simEl, simPartyRows])
   const simParties = useMemo(() => {
     const seatsByP = new Map<string, { a: string | null; n: number }>()
     simActive.forEach(s => { const e = seatsByP.get(s.p) ?? { a: s.a, n: 0 }; e.n++; seatsByP.set(s.p, e) })
@@ -140,36 +164,49 @@ export default function SignalsPage() {
     return [...keys].map(p => ({ p, a: seatsByP.get(p)?.a ?? simActive.find(s => s.q === p)?.a ?? null, seats: seatsByP.get(p)?.n ?? 0, share: shareMap.get(p) ?? 0 }))
       .filter(x => x.seats > 0 || x.share >= 2).sort((a, b) => b.seats - a.seats || b.share - a.share).slice(0, 12)
   }, [simActive, shareMap])
+  // region+election identity for the "default once" guards (election key alone is arena|year, which
+  // does NOT change when the region switches — that would keep a stale all-India selection).
+  const simKey = simEl ? `${isState ? st : 'ALL'}|${simEl.key}` : ''
+
+  // ── Party SWOT ──
+  const [swotParty, setSwotParty] = useState<string>('')
+  const [openPlay, setOpenPlay] = useState<string | null>(null)
+  const swotDefaultedFor = useRef('')
+  useEffect(() => {
+    if (!simKey || !simParties.length) return
+    if (swotDefaultedFor.current === simKey) return
+    swotDefaultedFor.current = simKey
+    setSwotParty(simParties[0].p); setOpenPlay(null)
+  }, [simKey, simParties])
+  const swot = useMemo(() =>
+    (view === 'swot' && simEl && swotParty && simActive.length) ? partyStrategy({ party: swotParty, seats: simActive, allRows: simScopeRows, partyRows: simPartyRows, vy: simEl.year, isState, arena: simEl.arena }) : null,
+  [view, simEl, swotParty, simActive, simScopeRows, simPartyRows, isState])
+
+  // ── Alliance simulator ──
   const [bloc, setBloc] = useState<string[]>([])
   const [transfer, setTransfer] = useState(70)
   const [simOpen, setSimOpen] = useState(false)
-  // Region-qualified: the election key alone is arena|year, which DOESN'T change when the region
-  // switches (All India → a state), so the ref guard below would keep a stale all-India bloc.
-  const simKey = simEl ? `${isState ? st : 'ALL'}|${simEl.key}` : ''
-  // Default the bloc ONCE per election (when its parties first load): the two largest OPPOSITION
-  // vote-blocs (by vote share, excluding the seat leader) — the realistic "consolidate the
-  // opposition" what-if, which is the transfer-sensitive case worth opening on. A ref guards
-  // against re-defaulting over a user's edits while the data settles.
-  const defaultedFor = useRef('')
+  const blocDefaultedFor = useRef('')
   useEffect(() => {
     if (!simKey || simParties.length < 2) return
-    if (defaultedFor.current === simKey) return
-    defaultedFor.current = simKey
+    if (blocDefaultedFor.current === simKey) return
+    blocDefaultedFor.current = simKey
     const leader = simParties[0].p
     const opp = simParties.filter(x => x.p !== leader).sort((a, b) => b.share - a.share || b.seats - a.seats)
-    const pick = (opp.length >= 2 ? opp.slice(0, 2) : simParties.slice(0, 2)).map(x => x.p)
-    setBloc(pick); setSimOpen(false)
+    setBloc((opp.length >= 2 ? opp.slice(0, 2) : simParties.slice(0, 2)).map(x => x.p)); setSimOpen(false)
   }, [simKey, simParties])
   const toggleBloc = (p: string) => setBloc(prev => (prev.includes(p) ? prev.filter(x => x !== p) : prev.length < 4 ? [...prev, p] : prev))
   const hasShares = shareMap.size > 0
   const sim = useMemo<AllianceSim | null>(() =>
-    (simEl && hasShares && bloc.length >= 2 && simActive.length) ? simulateAlliance(simActive, p => shareMap.get(p) ?? 0, bloc, transfer / 100) : null,
-  [simEl, hasShares, bloc, transfer, simActive, shareMap])
+    (view === 'alliance' && simEl && hasShares && bloc.length >= 2 && simActive.length) ? simulateAlliance(simActive, p => shareMap.get(p) ?? 0, bloc, transfer / 100) : null,
+  [view, simEl, hasShares, bloc, transfer, simActive, shareMap])
   const simHouse = simEl ? (simEl.arena === 'AE' ? isState : !isState) : false
   const simN = simActive.length
   const simMaj = simHouse && simN ? Math.floor(simN / 2) + 1 : null
   const blocColor = bloc.length ? colorFor(bloc[0], simParties.find(x => x.p === bloc[0])?.a ?? null) : '#10b981'
   const pct = (n: number) => (simN ? (n / simN) * 100 : 0)
+  const crosses = simMaj != null && sim != null && sim.projected >= simMaj && sim.now < simMaj
+  const shortBy = simMaj != null && sim != null ? Math.max(0, simMaj - sim.projected) : 0
 
   const cols: Col<Seat>[] = [
     { key: 'c', label: 'Constituency', get: r => r.c, render: r => tc(r.c) },
@@ -179,6 +216,7 @@ export default function SignalsPage() {
     { key: 'm', label: 'Margin%', get: r => r.m, align: 'right', render: r => r.m?.toFixed(1) },
     { key: 'v', label: 'Win share%', get: r => r.v, align: 'right', render: r => r.v?.toFixed(1) ?? '–' },
   ]
+  const drillRows = simEl ? (simEl.arena === 'AE' ? ae : ge) : ae
 
   const Group = ({ label, ar, years }: { label: string; ar: 'AE' | 'GE'; years: number[] }) => (
     <div className="flex items-center gap-1.5 flex-wrap">
@@ -192,6 +230,11 @@ export default function SignalsPage() {
       })}
       {years.length > 1 && <button onClick={() => toggleAll(ar, years)} className="text-[10px] text-faint hover:text-ink ml-0.5 underline decoration-dotted">all</button>}
     </div>
+  )
+  const PartyChip = ({ p, a, n, on, onClick }: { p: string; a: string | null; n: number; on: boolean; onClick: () => void }) => (
+    <button onClick={onClick} className={`px-2.5 py-1 rounded-full text-[11px] border transition-colors flex items-center gap-1.5 ${on ? 'border-orange-400/60 bg-orange-500/15 text-ink font-semibold' : 'border-white/10 text-muted hover:text-ink hover:border-white/25 bg-white/[0.03]'}`}>
+      <span className="w-2 h-2 rounded-full" style={{ background: colorFor(p, a) }} />{p}<span className="opacity-60 tabular-nums text-[10px]">{n || '·'}</span>
+    </button>
   )
 
   const renderCard = (sig: Tagged) => {
@@ -241,139 +284,203 @@ export default function SignalsPage() {
     )
   }
 
-  // simulator readout helpers
-  const crosses = simMaj != null && sim != null && sim.projected >= simMaj && sim.now < simMaj
-  const shortBy = simMaj != null && sim != null ? Math.max(0, simMaj - sim.projected) : 0
+  const PLAYS = [
+    { key: 'win', title: (p: string) => `To make ${p} WIN`, sub: 'the offensive plan', accent: '#10b981', arrow: '▲' },
+    { key: 'lose', title: (p: string) => `To make ${p} LOSE`, sub: 'how a rival beats them', accent: '#f43f5e', arrow: '▼' },
+  ] as const
 
   return (
     <div>
       <StickyControls>
-        <div className="flex items-center gap-4 flex-wrap">
+        <div className="flex items-center gap-3 flex-wrap">
           <div>
             <h2 className="text-lg font-bold leading-tight tracking-tight">Signals · {isState ? st : 'All India'}</h2>
-            <div className="kicker">auto-flagged patterns + an alliance simulator — one election or many; assembly · parliament · both</div>
+            <div className="kicker">a strategist's read — party SWOT &amp; playbook · alliance what-ifs · auto-flagged patterns</div>
           </div>
-          <Seg options={[{ v: 'AE', label: 'Assemblies' }, { v: 'GE', label: 'Parliaments' }, { v: 'BOTH', label: 'Both' }]} value={scope} onChange={v => setScope(v as ScopeArena)} />
-          <span className="text-sm text-slate-400 ml-auto">
-            {signals.length} signal{signals.length !== 1 ? 's' : ''}{nCrit ? <span className="text-red-300"> · {nCrit} critical</span> : null}
-            {multi ? <span className="text-faint"> · {selectedEls.length} elections</span> : null}
-          </span>
+          <Seg options={[{ v: 'swot', label: 'Party SWOT' }, { v: 'alliance', label: 'Alliance simulator' }, { v: 'patterns', label: 'Patterns' }]} value={view} onChange={v => setView(v as ViewKey)} />
+          {view === 'patterns' && (
+            <span className="text-sm text-slate-400 ml-auto">
+              {signals.length} signal{signals.length !== 1 ? 's' : ''}{nCrit ? <span className="text-red-300"> · {nCrit} critical</span> : null}{multi ? <span className="text-faint"> · {selectedEls.length} elections</span> : null}
+            </span>
+          )}
         </div>
         <div className="flex items-center gap-x-4 gap-y-1.5 flex-wrap mt-2.5 pt-2.5 border-t border-white/[0.05]">
-          <span className="kicker text-faint">Elections</span>
+          <Seg options={[{ v: 'AE', label: 'Assemblies' }, { v: 'GE', label: 'Parliaments' }, { v: 'BOTH', label: 'Both' }]} value={scope} onChange={v => setScope(v as ScopeArena)} />
+          <span className="kicker text-faint ml-1">{view === 'patterns' ? 'Elections' : 'Election'}</span>
           {scope !== 'GE' && aeYears.length > 0 && <Group label="Assembly" ar="AE" years={aeYears} />}
           {scope !== 'AE' && geYears.length > 0 && <Group label="Lok Sabha" ar="GE" years={geYears} />}
-          {sel.length > 0 && <button onClick={() => setSel([])} className="text-[11px] text-faint hover:text-ink underline decoration-dotted ml-1">clear</button>}
+          {view === 'patterns' && sel.length > 0 && <button onClick={() => setSel([])} className="text-[11px] text-faint hover:text-ink underline decoration-dotted ml-1">clear</button>}
         </div>
       </StickyControls>
 
       <p className="text-[12.5px] text-muted mb-4 leading-relaxed max-w-3xl">
-        Verdix scans each chosen election for the patterns a strategist would act on — every flag opens with the <b className="text-ink">whole field</b> (each party on one mini-chart) and the decision it informs, grouped into the sections below. The <b className="text-ink">alliance simulator</b> then asks the what-if: if these parties contested as one bloc, with a given vote transfer, how does the result change? Pick <b className="text-ink">one election or several</b> above; open <b className="text-ink">show seats</b> to drill to the constituencies. Region is set in the Focus bar.
+        Verdix reads this election the way a senior strategist would. <b className="text-ink">Party SWOT</b> — pick a party for its strengths, weaknesses, opportunities and threats, plus a playbook to make it <b className="text-ink">win</b> and one to make it <b className="text-ink">lose</b>. <b className="text-ink">Alliance simulator</b> — what changes if parties contest as one bloc, at a chosen vote transfer. <b className="text-ink">Patterns</b> — the auto-flagged signals across the whole field. The what-if views use the most recent election picked above; region is set in the Focus bar.
       </p>
 
-      {/* ── Alliance simulator ── */}
-      {sel.length > 0 && simEl && (
-        <div className="card p-4 mb-6">
-          <div className="flex items-center justify-between flex-wrap gap-3">
-            <div>
-              <h3 className="text-[15px] font-bold text-ink flex items-center gap-2"><span className="text-orange-400">⚯</span> Alliance simulator</h3>
-              <div className="kicker">if these parties contested as one bloc — {elFull(simEl)}{isState ? '' : ' · all India'}</div>
-            </div>
-            {hasShares && bloc.length >= 2 && (
-              <div className="flex items-center gap-3">
-                <span className="text-[11px] text-faint">Vote transfer</span>
-                <input type="range" min={0} max={100} step={5} value={transfer} onChange={e => setTransfer(+e.target.value)} className="w-40 sm:w-52 accent-orange-500" />
-                <span className="text-base font-bold tabular-nums w-11 text-right" style={{ color: blocColor }}>{transfer}%</span>
-              </div>
-            )}
+      {!sel.length ? (
+        <div className="h-[160px] grid place-items-center text-faint text-sm text-center px-8">Pick an election above to begin.</div>
+      ) : view === 'swot' ? (
+        /* ── Party SWOT ── */
+        <div className="space-y-4">
+          <div className="flex flex-wrap items-center gap-1.5">
+            <span className="kicker text-faint mr-1">Analyse party · {simEl ? elFull(simEl) : ''}</span>
+            {simParties.map(x => <PartyChip key={x.p} p={x.p} a={x.a} n={x.seats} on={swotParty === x.p} onClick={() => { setSwotParty(x.p); setOpenPlay(null) }} />)}
           </div>
-
-          {!hasShares ? (
-            <div className="text-faint text-[13px] mt-3 leading-relaxed">The simulator needs vote-share data — pick a <b className="text-muted">state</b>, or a <b className="text-muted">Lok Sabha</b> election. (All-India assembly has no national vote-share series to transfer.)</div>
-          ) : (
+          {swot && simEl ? (
             <>
-              <div className="flex flex-wrap items-center gap-1.5 mt-3">
-                <span className="text-[10px] text-faint uppercase tracking-wide mr-1">Bloc</span>
-                {simParties.map(x => {
-                  const on = bloc.includes(x.p)
+              <div className="card p-4">
+                <div className="flex items-center gap-2 flex-wrap">
+                  <Dot color={colorFor(swot.party, swot.a)} />
+                  <h3 className="text-[17px] font-bold text-ink">{swot.party}</h3>
+                  <span className="text-[11px] text-faint">· {elFull(simEl)}{isState ? ` · ${st}` : ' · all India'}</span>
+                </div>
+                <p className="text-[14px] text-muted mt-1.5 leading-snug max-w-3xl"><span className="text-orange-300/90 font-bold">▸ </span>{swot.verdict}</p>
+                <div className="flex flex-wrap gap-x-6 gap-y-2 mt-3">
+                  {swot.scorecard.map((s, i) => (
+                    <div key={i}>
+                      <div className="kicker">{s.label}</div>
+                      <div className="text-[16px] font-bold tabular-nums leading-none" style={{ color: s.tone === 'pos' ? '#34d399' : s.tone === 'neg' ? '#fb7185' : undefined }}>{s.value}</div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              <div className="grid md:grid-cols-2 gap-3 items-start">
+                <SwotQuad title="Strengths" sub="what's working" accent="#10b981" items={swot.strengths} />
+                <SwotQuad title="Weaknesses" sub="what's exposed" accent="#f43f5e" items={swot.weaknesses} />
+                <SwotQuad title="Opportunities" sub="where to gain" accent="#38bdf8" items={swot.opportunities} />
+                <SwotQuad title="Threats" sub="what can go wrong" accent="#f59e0b" items={swot.threats} />
+              </div>
+
+              <div className="grid lg:grid-cols-2 gap-3 items-start">
+                {PLAYS.map(col => {
+                  const plays = col.key === 'win' ? swot.winPlan : swot.losePlan
                   return (
-                    <button key={x.p} onClick={() => toggleBloc(x.p)}
-                      className={`px-2.5 py-1 rounded-full text-[11px] border transition-colors flex items-center gap-1.5 ${on ? 'border-orange-400/60 bg-orange-500/15 text-ink font-semibold' : 'border-white/10 text-muted hover:text-ink hover:border-white/25 bg-white/[0.03]'}`}>
-                      <span className="w-2 h-2 rounded-full" style={{ background: colorFor(x.p, x.a) }} />{x.p}
-                      <span className="opacity-60 tabular-nums text-[10px]">{x.seats || (x.share ? x.share.toFixed(0) + '%' : '·')}</span>
-                    </button>
+                    <div key={col.key} className="card p-0 overflow-hidden border-t-2" style={{ borderTopColor: col.accent }}>
+                      <div className="px-4 pt-3 pb-2">
+                        <div className="text-[13px] font-bold tracking-wide flex items-center gap-1.5" style={{ color: col.accent }}><span>{col.arrow}</span>{col.title(swot.party)}</div>
+                        <div className="text-[10.5px] text-faint uppercase tracking-wide">{col.sub}</div>
+                      </div>
+                      <div className="divide-y divide-white/[0.05]">
+                        {plays.length ? plays.map(pl => {
+                          const k = `${col.key}-${pl.n}`, isO = openPlay === k
+                          return (
+                            <div key={k} className="px-4 py-2.5">
+                              <div className="flex gap-2.5">
+                                <span className="shrink-0 w-5 h-5 grid place-items-center rounded-full text-[11px] font-bold text-black" style={{ background: col.accent }}>{pl.n}</span>
+                                <div className="flex-1 min-w-0">
+                                  <div className="text-[13px] font-semibold text-ink">{pl.move}</div>
+                                  <div className="text-[12px] text-muted mt-0.5 leading-relaxed">{pl.why}</div>
+                                  {pl.seats && pl.seats.length > 0 && (
+                                    <button onClick={() => setOpenPlay(isO ? null : k)} className="mt-1.5 text-[11px] text-orange-400 hover:text-orange-300 underline decoration-dotted decoration-orange-400/40">{isO ? 'Hide seats' : `Show the ${pl.seats.length} seats →`}</button>
+                                  )}
+                                  {isO && pl.seats && (
+                                    <div className="mt-2"><SortTable rows={pl.seats} cols={cols} defaultSort="m" initialDir="asc" maxH={260} search searchIn={r => `${r.c} ${r.s} ${r.p} ${r.q ?? ''}`} onRowClick={s => setPicked({ seat: s, rows: drillRows, arena: simEl.arena })} /></div>
+                                  )}
+                                </div>
+                              </div>
+                            </div>
+                          )
+                        }) : <div className="px-4 py-3 text-faint text-[12px]">No clear moves from this election's data.</div>}
+                      </div>
+                    </div>
                   )
                 })}
-                <span className="text-[10px] text-faint ml-1">pick 2–4</span>
               </div>
-
-              {bloc.length < 2 ? (
-                <div className="text-faint text-[13px] mt-4">Pick at least two parties to simulate an alliance.</div>
-              ) : sim && (
-                <div className="mt-4">
-                  <div className="flex items-end gap-5 flex-wrap">
-                    <SimStat label="Win apart (now)" value={sim.now} />
-                    <span className="text-2xl text-faint pb-1.5">→</span>
-                    <SimStat label="As one bloc" value={sim.projected} color={blocColor} delta={sim.gains.length} />
-                    {simMaj != null && <SimStat label="Majority" value={simMaj} sub={`of ${simN}`} />}
-                  </div>
-                  <div className="relative mt-6">
-                    <div className="h-7 rounded-lg bg-white/[0.04] overflow-hidden ring-1 ring-white/10">
-                      <div className="absolute inset-y-0 left-0" style={{ width: `${pct(sim.now)}%`, background: blocColor }} />
-                      <div className="absolute inset-y-0" style={{ left: `${pct(sim.now)}%`, width: `${pct(sim.gains.length)}%`, background: blocColor, opacity: 0.42 }} />
-                    </div>
-                    {simMaj != null && <div className="absolute top-0 bottom-0 w-px bg-white/80" style={{ left: `${pct(simMaj)}%` }} />}
-                    {simMaj != null && <div className="absolute -top-4 text-[9px] text-faint whitespace-nowrap" style={{ left: `${pct(simMaj)}%`, transform: 'translateX(-50%)' }}>majority {simMaj}</div>}
-                  </div>
-                  <div className="text-[12.5px] text-muted mt-3 leading-relaxed">
-                    <span className="text-orange-300/90 font-bold">▸ </span>
-                    At <b className="text-ink">{transfer}%</b> transfer, <b style={{ color: blocColor }}>{bloc.join(' + ')}</b> would hold <b style={{ color: blocColor }}>{sim.projected}</b> of {simN} —{' '}
-                    {sim.gains.length > 0 ? <><b className="text-emerald-300">+{sim.gains.length}</b> over the {sim.now} they win apart</> : <>no gain over the {sim.now} they win apart</>}
-                    {sim.friendlyFights > 0 ? <>; {sim.friendlyFights} internal contest{sim.friendlyFights !== 1 ? 's' : ''} consolidated</> : null}
-                    {crosses ? <b className="text-emerald-300"> — crosses the majority line</b> : simMaj != null && shortBy > 0 ? <> — still {shortBy} short of majority</> : null}.{' '}
-                    <span className="text-faint">Reachable ceiling: {sim.contestable} runner-up seats.</span>
-                  </div>
-                  {sim.gains.length > 0 && (
-                    <button onClick={() => setSimOpen(o => !o)} className="mt-2.5 text-xs text-orange-400 hover:text-orange-300 underline decoration-dotted decoration-orange-400/40 underline-offset-2 transition-colors">
-                      {simOpen ? 'Hide flip seats' : `Show the ${sim.gains.length} flip seats →`}
-                    </button>
-                  )}
-                  {simOpen && sim.gains.length > 0 && (
-                    <div className="mt-2">
-                      <SortTable rows={sim.gains} cols={cols} defaultSort="m" initialDir="asc" maxH={300}
-                        search searchIn={r => `${r.c} ${r.s} ${r.p} ${r.q ?? ''}`} onRowClick={s => setPicked({ seat: s, rows: simEl.arena === 'AE' ? ae : ge, arena: simEl.arena })} />
-                    </div>
-                  )}
-                  <div className="text-[10px] text-faint mt-2.5 leading-relaxed">Uniform model: a non-bloc seat flips in when {transfer}% of the other bloc members' statewide vote share covers the losing margin. Seats where the bloc ran third can't be judged from top-two data, so this is a <b className="text-muted">floor</b> on the gain, not a forecast.</div>
-                </div>
-              )}
             </>
+          ) : (
+            <div className="h-[160px] grid place-items-center text-faint text-sm text-center px-8">Pick a party above to analyse.</div>
           )}
         </div>
-      )}
-
-      {/* ── Segmented auto-flags ── */}
-      {!sel.length ? (
-        <div className="h-[160px] grid place-items-center text-faint text-sm text-center px-8">Pick one or more elections above to scan for signals.</div>
-      ) : signals.length ? (
-        <div className="space-y-6">
-          {grouped.map(g => (
-            <div key={g.key}>
-              <div className="flex items-baseline gap-2 mb-2.5">
-                <h3 className="text-[12.5px] font-bold uppercase tracking-wide text-ink">{g.label}</h3>
-                <span className="text-[11px] text-faint">{g.caption}</span>
-                <span className="text-[11px] text-faint ml-auto tabular-nums">{g.items.length}</span>
+      ) : view === 'alliance' ? (
+        /* ── Alliance simulator ── */
+        simEl ? (
+          <div className="card p-4">
+            <div className="flex items-center justify-between flex-wrap gap-3">
+              <div>
+                <h3 className="text-[15px] font-bold text-ink flex items-center gap-2"><span className="text-orange-400">⚯</span> Alliance simulator</h3>
+                <div className="kicker">if these parties contested as one bloc — {elFull(simEl)}{isState ? '' : ' · all India'}</div>
               </div>
-              <div className="grid xl:grid-cols-2 gap-3 items-start">
-                {g.items.map(renderCard)}
-              </div>
+              {hasShares && bloc.length >= 2 && (
+                <div className="flex items-center gap-3">
+                  <span className="text-[11px] text-faint">Vote transfer</span>
+                  <input type="range" min={0} max={100} step={5} value={transfer} onChange={e => setTransfer(+e.target.value)} className="w-40 sm:w-52 accent-orange-500" />
+                  <span className="text-base font-bold tabular-nums w-11 text-right" style={{ color: blocColor }}>{transfer}%</span>
+                </div>
+              )}
             </div>
-          ))}
-        </div>
+            {!hasShares ? (
+              <div className="text-faint text-[13px] mt-3 leading-relaxed">The simulator needs vote-share data — pick a <b className="text-muted">state</b>, or a <b className="text-muted">Lok Sabha</b> election. (All-India assembly has no national vote-share series to transfer.)</div>
+            ) : (
+              <>
+                <div className="flex flex-wrap items-center gap-1.5 mt-3">
+                  <span className="text-[10px] text-faint uppercase tracking-wide mr-1">Bloc</span>
+                  {simParties.map(x => <PartyChip key={x.p} p={x.p} a={x.a} n={x.seats} on={bloc.includes(x.p)} onClick={() => toggleBloc(x.p)} />)}
+                  <span className="text-[10px] text-faint ml-1">pick 2–4</span>
+                </div>
+                {bloc.length < 2 ? (
+                  <div className="text-faint text-[13px] mt-4">Pick at least two parties to simulate an alliance.</div>
+                ) : sim && (
+                  <div className="mt-4">
+                    <div className="flex items-end gap-5 flex-wrap">
+                      <SimStat label="Win apart (now)" value={sim.now} />
+                      <span className="text-2xl text-faint pb-1.5">→</span>
+                      <SimStat label="As one bloc" value={sim.projected} color={blocColor} delta={sim.gains.length} />
+                      {simMaj != null && <SimStat label="Majority" value={simMaj} sub={`of ${simN}`} />}
+                    </div>
+                    <div className="relative mt-6">
+                      <div className="h-7 rounded-lg bg-white/[0.04] overflow-hidden ring-1 ring-white/10">
+                        <div className="absolute inset-y-0 left-0" style={{ width: `${pct(sim.now)}%`, background: blocColor }} />
+                        <div className="absolute inset-y-0" style={{ left: `${pct(sim.now)}%`, width: `${pct(sim.gains.length)}%`, background: blocColor, opacity: 0.42 }} />
+                      </div>
+                      {simMaj != null && <div className="absolute top-0 bottom-0 w-px bg-white/80" style={{ left: `${pct(simMaj)}%` }} />}
+                      {simMaj != null && <div className="absolute -top-4 text-[9px] text-faint whitespace-nowrap" style={{ left: `${pct(simMaj)}%`, transform: 'translateX(-50%)' }}>majority {simMaj}</div>}
+                    </div>
+                    <div className="text-[12.5px] text-muted mt-3 leading-relaxed">
+                      <span className="text-orange-300/90 font-bold">▸ </span>
+                      At <b className="text-ink">{transfer}%</b> transfer, <b style={{ color: blocColor }}>{bloc.join(' + ')}</b> would hold <b style={{ color: blocColor }}>{sim.projected}</b> of {simN} —{' '}
+                      {sim.gains.length > 0 ? <><b className="text-emerald-300">+{sim.gains.length}</b> over the {sim.now} they win apart</> : <>no gain over the {sim.now} they win apart</>}
+                      {sim.friendlyFights > 0 ? <>; {sim.friendlyFights} internal contest{sim.friendlyFights !== 1 ? 's' : ''} consolidated</> : null}
+                      {crosses ? <b className="text-emerald-300"> — crosses the majority line</b> : simMaj != null && shortBy > 0 ? <> — still {shortBy} short of majority</> : null}.{' '}
+                      <span className="text-faint">Reachable ceiling: {sim.contestable} runner-up seats.</span>
+                    </div>
+                    {sim.gains.length > 0 && (
+                      <button onClick={() => setSimOpen(o => !o)} className="mt-2.5 text-xs text-orange-400 hover:text-orange-300 underline decoration-dotted decoration-orange-400/40 underline-offset-2 transition-colors">
+                        {simOpen ? 'Hide flip seats' : `Show the ${sim.gains.length} flip seats →`}
+                      </button>
+                    )}
+                    {simOpen && sim.gains.length > 0 && (
+                      <div className="mt-2"><SortTable rows={sim.gains} cols={cols} defaultSort="m" initialDir="asc" maxH={300} search searchIn={r => `${r.c} ${r.s} ${r.p} ${r.q ?? ''}`} onRowClick={s => setPicked({ seat: s, rows: drillRows, arena: simEl.arena })} /></div>
+                    )}
+                    <div className="text-[10px] text-faint mt-2.5 leading-relaxed">Uniform model: a non-bloc seat flips in when {transfer}% of the other bloc members' statewide vote share covers the losing margin. Seats where the bloc ran third can't be judged from top-two data, so this is a <b className="text-muted">floor</b> on the gain, not a forecast.</div>
+                  </div>
+                )}
+              </>
+            )}
+          </div>
+        ) : null
       ) : (
-        <div className="h-[160px] grid place-items-center text-faint text-sm text-center px-8">
-          No strong signals in the {selectedEls.length === 1 ? elFull(selectedEls[0]).toLowerCase() : `${selectedEls.length} selected elections`} for {isState ? st : 'All India'}. Try another election, add more, or pick a region with a real contest (vote-efficiency and momentum flags need vote-share data).
-        </div>
+        /* ── Patterns (segmented auto-flags) ── */
+        signals.length ? (
+          <div className="space-y-6">
+            {grouped.map(g => (
+              <div key={g.key}>
+                <div className="flex items-baseline gap-2 mb-2.5">
+                  <h3 className="text-[12.5px] font-bold uppercase tracking-wide text-ink">{g.label}</h3>
+                  <span className="text-[11px] text-faint">{g.caption}</span>
+                  <span className="text-[11px] text-faint ml-auto tabular-nums">{g.items.length}</span>
+                </div>
+                <div className="grid xl:grid-cols-2 gap-3 items-start">
+                  {g.items.map(renderCard)}
+                </div>
+              </div>
+            ))}
+          </div>
+        ) : (
+          <div className="h-[160px] grid place-items-center text-faint text-sm text-center px-8">
+            No strong signals in the {selectedEls.length === 1 ? elFull(selectedEls[0]).toLowerCase() : `${selectedEls.length} selected elections`} for {isState ? st : 'All India'}. Try another election, add more, or pick a region with a real contest (vote-efficiency and momentum flags need vote-share data).
+          </div>
+        )
       )}
 
       {picked && <SeatDrawer seat={picked.seat} all={picked.rows} arena={picked.arena} onClose={() => setPicked(null)} />}

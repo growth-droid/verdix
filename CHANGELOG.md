@@ -38,6 +38,13 @@ Readable history of the app (newest first). Engineering detail + gotchas live in
   (drill to each). Honest model: a seat flips when the chosen transfer of the allies' statewide
   vote covers the losing margin; seats where the bloc ran third can't be judged from the data, so
   the gain is a floor, not a forecast.
+- **Party SWOT + win/lose playbooks.** Pick a party for a senior-strategist read: a scorecard, a
+  full **SWOT** (strengths · weaknesses · opportunities · threats, each line quoting the numbers),
+  and two ordered playbooks — **what to do to make it win**, and **what to do to make it lose** —
+  every move drilling to the exact seats. Computed from strongholds & erosion, thin / split-field
+  margins, vote→seat conversion, momentum, the social base, and who beats it. Signals is now
+  **three views behind one toggle** — *Party SWOT · Alliance simulator · Patterns* — sharing the
+  election picker, so the page stays focused instead of one long scroll.
 - Shipped live on Netlify and verified on the production build.
 
 ## 2026-06-21 — Compare does parties too
