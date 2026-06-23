@@ -13,6 +13,8 @@ import { linearTrend } from './projections'
 
 export type Severity = 'critical' | 'watch' | 'note'
 export type Tone = 'pos' | 'neg' | 'neutral'
+// Theme a signal belongs to — drives the segmented sections on the board.
+export type SignalGroup = 'control' | 'soft' | 'momentum' | 'coalition'
 
 /** One party (or category) line in a signal's breakdown. */
 export type SignalRow = {
@@ -29,6 +31,7 @@ export type SignalRow = {
 export type Signal = {
   id: string
   severity: Severity
+  group: SignalGroup    // which segmented section it sits under
   title: string         // short, scannable — the pattern in a few words
   caption: string       // what this measures, one short line
   party: string | null  // the lead party (accent colour for the metric)
@@ -90,7 +93,7 @@ function efficiencyGap(ctx: SignalCtx): Signal | null {
   }))
   const targets = seats.filter(s => s.q === under.p && s.m != null && (s.m as number) < 8).sort((a, b) => (a.m as number) - (b.m as number))
   return {
-    id: 'efficiency', severity: 'watch', party: under.p, a: under.a,
+    id: 'efficiency', severity: 'watch', group: 'momentum', party: under.p, a: under.a,
     title: 'Vote efficiency', caption: 'vote share → seat share — who converts, whose vote is wasted',
     metric: `${under.p} ${under.v.toFixed(0)}%→${under.seatShare.toFixed(0)}%`, metricSub: 'broad vote, few seats',
     rows, rowsNote: moreNote(data.length),
@@ -120,7 +123,7 @@ function thinBook(ctx: SignalCtx): Signal | null {
   const avgM = best.thin.reduce((s, x) => s + (x.m as number), 0) / best.thin.length
   const sev: Severity = pct >= 30 ? 'critical' : 'watch'
   return {
-    id: 'thinbook', severity: sev, party: best.p, a: best.a,
+    id: 'thinbook', severity: sev, group: 'soft', party: best.p, a: best.a,
     title: 'Thin margins', caption: 'seats held under 5% — the first to fall on a swing',
     metric: `${best.thin.length} seats < 5%`, metricSub: `${pct}% of ${best.p}'s wins`,
     rows, rowsNote: moreNote(data.length),
@@ -145,7 +148,7 @@ function dividedField(ctx: SignalCtx): Signal | null {
   }))
   const top = data[0], pct = Math.round((under.length / decided.length) * 100)
   return {
-    id: 'divided', severity: 'watch', party: top.p, a: rows[0]?.a ?? null,
+    id: 'divided', severity: 'watch', group: 'soft', party: top.p, a: rows[0]?.a ?? null,
     title: 'Split-field wins', caption: 'won on under 40% of the vote — flip if the field consolidates',
     metric: `${under.length} won < 40%`, metricSub: `${pct}% of decided seats`,
     rows, rowsNote: moreNote(data.length),
@@ -179,7 +182,7 @@ function erodingStrongholds(ctx: SignalCtx): Signal | null {
   const prevAvg = (lead.list.reduce((s, e) => s + e.prevM, 0) / lead.list.length).toFixed(0)
   const curAvg = (lead.list.reduce((s, e) => s + e.curM, 0) / lead.list.length).toFixed(0)
   return {
-    id: 'eroding', severity: 'watch', party: lead.p, a: lead.a,
+    id: 'eroding', severity: 'watch', group: 'soft', party: lead.p, a: lead.a,
     title: 'Softening strongholds', caption: 'safe seats whose margin is shrinking — the early warning',
     metric: `${lead.n} softening`, metricSub: `${prevAvg}% → ${curAvg}% margin`,
     rows, rowsNote: moreNote(data.length),
@@ -212,7 +215,7 @@ function tippingPoint(ctx: SignalCtx): Signal | null {
     const pivot = myThin[Math.min(cushion, myThin.length - 1)]
     const sev: Severity = cushion <= Math.max(3, N * 0.03) ? 'critical' : 'note'
     return {
-      id: 'tipping', severity: sev, party: lead.p, a: lead.a,
+      id: 'tipping', severity: sev, group: 'control', party: lead.p, a: lead.a,
       title: 'Margin of control', caption: `seat tally vs the ${majority}-seat majority line`,
       metric: `${cushion}-seat cushion`, metricSub: `pivot held by ${pivot?.m?.toFixed(1)}%`,
       rows, rowsNote: `majority = ${majority} of ${N}`,
@@ -223,7 +226,7 @@ function tippingPoint(ctx: SignalCtx): Signal | null {
   }
   const gap = majority - lead.n
   return {
-    id: 'tipping', severity: 'note', party: lead.p, a: lead.a,
+    id: 'tipping', severity: 'note', group: 'control', party: lead.p, a: lead.a,
     title: 'Margin of control', caption: `no majority — seat tally vs the ${majority}-seat line`,
     metric: `${gap} seats from power`, metricSub: `${lead.p} leads ${lead.n}/${N}`,
     rows, rowsNote: `majority = ${majority} of ${N}`,
@@ -256,7 +259,7 @@ function momentum(ctx: SignalCtx): Signal | null {
     badge: d === riser ? 'rising' : (d === faller && faller.slope <= -0.8 ? 'falling' : undefined),
   }))
   return {
-    id: 'momentum', severity: 'note', party: riser.p, a: riser.a,
+    id: 'momentum', severity: 'note', group: 'momentum', party: riser.p, a: riser.a,
     title: 'Momentum', caption: 'vote-share trend per election — who\'s rising, who\'s fading',
     metric: `${riser.p} +${riser.slope.toFixed(1)}%/elec`, metricSub: `now ${riser.cur.toFixed(0)}%`,
     rows, rowsNote: moreNote(data.length),
@@ -290,7 +293,7 @@ function reservationSkew(ctx: SignalCtx): Signal | null {
   const loSeats = ctx.seats.filter(s => resCat(s.r) === lo.cat)
   const loWinner = [...loSeats.reduce((mm, s) => mm.set(s.p, (mm.get(s.p) || 0) + 1), new Map<string, number>()).entries()].filter(([p]) => p !== lead).sort((a, b) => b[1] - a[1])[0]?.[0]
   return {
-    id: 'reservation', severity: 'note', party: lead, a: ctx.seats.find(s => s.p === lead)?.a ?? null,
+    id: 'reservation', severity: 'note', group: 'coalition', party: lead, a: ctx.seats.find(s => s.p === lead)?.a ?? null,
     title: 'Social coalition', caption: `${lead}'s win-rate by seat type — where its base is, where it isn't`,
     metric: `${hi.pct}% vs ${lo.pct}%`, metricSub: `${label(hi.cat)} vs ${label(lo.cat)} seats`,
     rows,

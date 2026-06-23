@@ -82,3 +82,37 @@ export function pedersen(rows: PartyAgg[], years: number[]): { y: number; v: num
   }
   return out
 }
+
+// ── Alliance simulator ───────────────────────────────────────────────────────
+export type AllianceSim = {
+  now: number              // seats bloc members already hold, combined
+  friendlyFights: number   // held seats where two+ bloc members were the top two (now consolidated)
+  gains: Seat[]            // seats that flip INTO the bloc at this transfer level
+  projected: number        // now + gains.length
+  contestable: number      // flip-candidate seats (a bloc member was runner-up) — the reachable ceiling
+}
+/** What changes if a set of parties contest as ONE bloc, with a tunable vote-transfer
+ *  efficiency `transfer` ∈ [0,1]. Seat-level + uniform: a seat the bloc doesn't already hold flips
+ *  in only when a bloc member was the runner-up AND the chosen transfer of the OTHER bloc members'
+ *  (statewide) vote share covers the losing margin. Seats where the bloc ran 3rd+ can't be judged
+ *  from top-two data, so the gain is a FLOOR, not a forecast. `shareOf` returns a party's statewide
+ *  vote share (%); margins are %; transfer scales the pooled ally share against the margin. */
+export function simulateAlliance(
+  seats: Seat[], shareOf: (party: string) => number, bloc: string[], transfer: number,
+): AllianceSim {
+  const set = new Set(bloc)
+  let now = 0, friendlyFights = 0, contestable = 0
+  const gains: Seat[] = []
+  for (const s of seats) {
+    const winIn = set.has(s.p)
+    const runIn = s.q != null && set.has(s.q)
+    if (winIn) { now++; if (runIn) friendlyFights++; continue }
+    if (runIn && s.m != null) {
+      contestable++
+      const pool = bloc.filter(p => p !== s.q).reduce((sum, p) => sum + shareOf(p), 0)
+      if (transfer * pool >= (s.m as number)) gains.push(s)
+    }
+  }
+  gains.sort((a, b) => (a.m as number) - (b.m as number))
+  return { now, friendlyFights, gains, projected: now + gains.length, contestable }
+}

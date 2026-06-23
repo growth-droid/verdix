@@ -28,6 +28,16 @@ Readable history of the app (newest first). Engineering detail + gotchas live in
   the house tally, …, across *all* parties, not just the one or two at the extremes) under a
   short title, with a one-line takeaway beneath. Replaces the earlier text-heavy headline, so a
   flag is scannable at a glance.
+- **Segmented board.** The flags are grouped into themed sections — *Control of the house ·
+  Where the lead is soft · Momentum & conversion · Social coalition* — in a two-column layout,
+  so the board reads at a glance instead of one long stack.
+- **Alliance simulator + vote-transfer slider.** A new panel answers the what-if: pick **2–4
+  parties** to contest as **one bloc**, set a **0–100% vote-transfer** slider, and watch the seat
+  count move from what they win apart to what they'd win together — whether it crosses the
+  majority line, how many internal contests it consolidates, and exactly which seats flip in
+  (drill to each). Honest model: a seat flips when the chosen transfer of the allies' statewide
+  vote covers the losing margin; seats where the bloc ran third can't be judged from the data, so
+  the gain is a floor, not a forecast.
 - Shipped live on Netlify and verified on the production build.
 
 ## 2026-06-21 — Compare does parties too
