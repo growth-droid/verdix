@@ -333,94 +333,99 @@ export default function StatePage() {
         </div>
       )}
 
-      {/* Seat map + swing vs the previous election, up top */}
-      <div className="grid lg:grid-cols-2 gap-4 mb-4">
-        <ChartCard title={`Seat map · ${!allIndia && mapColor === 'security' ? `safe vs swing (${classed.window.length} elections)` : !allIndia && mapColor === 'alliance' ? `${vy} · by alliance` : (allIndia ? `All India · ${vy}` : vy)}`}
-          note={!allIndia && mapColor === 'security'
-            ? <>Green = a party always wins here (stronghold). Red = the seat changes hands (swing — where the contest is live). <Info>Computed over this state's comparable elections in the current arena.</Info></>
-            : undefined}>
-          {!allIndia && (
-            <div className="mb-2 flex items-center gap-2 text-xs text-muted">
-              Colour
-              <Seg options={[{ v: 'winner', label: 'Winner' }, { v: 'alliance', label: 'Alliance' }, { v: 'security', label: 'Safe vs Swing' }]} value={mapColor} onChange={v => setMapColor(v as 'winner' | 'alliance' | 'security')} />
-            </div>
-          )}
-          <ChoroplethMap key={arena + st + vy + (allIndia ? 'w' : mapColor)} byState={mapByState} arena={arena} activeYear={vy} focusState={allIndia ? undefined : st} height="h-[300px]"
-            mode={!allIndia && mapColor === 'alliance' ? 'alliance' : 'winner'}
-            colorOf={!allIndia && mapColor === 'security' ? securityColorOf : undefined}
-            subOf={!allIndia && mapColor === 'security' ? securitySubOf : undefined}
-            legendTitle={!allIndia && mapColor === 'security' ? 'Seat security' : undefined}
-            legendItems={!allIndia && mapColor === 'security' ? securityLegend : undefined}
+      {/* Big seat map on the left; swing + strongholds stacked on the right (map stretches to match) */}
+      {allIndia ? (
+        <ChartCard className="mb-4" title={`Seat map · All India · ${vy}`}>
+          <ChoroplethMap key={arena + st + vy + 'w'} byState={mapByState} arena={arena} activeYear={vy} height="h-[460px]"
             onPick={seat => { if (seat) setPicked(seat) }} />
           <div className="mt-1.5 text-[11px] text-faint">Click any seat for its full constituency report.</div>
         </ChartCard>
-
-        {!allIndia && (
-        <ChartCard title={`Swing ${prevY ?? '–'} → ${vy} · change in vote share`}
-          note={swingData === 'incomparable' ? undefined : `Each bar = ${vy} vote share − ${prevY} vote share (e.g. 44.0% → 46.2% = +2.2%). Positive = gained share. Parties under 1.5% both times hidden.`}>
-          {swingData === 'incomparable'
-            ? <div className="h-[280px] flex items-center justify-center text-amber-300/90 text-sm text-center px-8">
-                ⚠ {prevY} and {vy} are on different delimitations in {st} — swing is not defined (metrics catalog caveat 4).
-              </div>
-            : swingData
-              ? <Chart option={swingData} style={{ height: 280 }} notMerge />
-              : voteShareMissing
-                ? <div className="h-[280px] flex items-center justify-center text-amber-200/80 text-sm text-center px-8">Vote share isn’t in the source for {st} {vy} (winners-only), so swing vs {prevY} can’t be computed. Select an earlier election above.</div>
-                : <div className="h-[280px] flex items-center justify-center text-slate-500 text-sm">No earlier election before {vy}</div>}
-        </ChartCard>
-        )}
-      </div>
-
-      {/* Stronghold ↔ Swing: which seats are locked up and which are actually in play */}
-      {!allIndia && (
-      <ChartCard className="mb-4"
-        title={<>Stronghold &amp; swing seats <Info>A stronghold is a seat one party keeps winning; a swing seat changes hands. Swing seats are where elections are decided.</Info></>}
-        note={`Based on this state's last ${classed.window.length} ${arena === 'AE' ? 'assembly' : 'Lok Sabha'} elections (${classed.window.join(', ') || '—'}).`}>
-        {security.total ? (
-          <div>
-              {/* stronghold / swing tallies */}
-              <div className="flex flex-wrap items-center gap-x-3 gap-y-1.5 mb-2.5">
-                <span className="px-2.5 py-1 rounded-lg border border-emerald-400/25 bg-white/[0.03] text-[11.5px] text-emerald-200/90">{security.safe + security.lean} stronghold</span>
-                <span className="px-2.5 py-1 rounded-lg border border-red-400/25 bg-white/[0.03] text-[11.5px] text-red-200/90">{security.swingN} swing</span>
-                {security.holds.length > 0 && <span className="text-faint text-[11px]">held by</span>}
-                {security.holds.map(h => (
-                  <span key={h.p} className="text-[11.5px] text-muted whitespace-nowrap"><Dot color={colorFor(h.p, h.a)} />{h.p} <b className="text-ink tabular-nums">{h.n}</b></span>
-                ))}
-              </div>
-              <div className="mb-2">
-                <Seg options={[{ v: 'hold', label: `Stronghold seats (${security.safe + security.lean})` }, { v: 'swing', label: `Swing seats (${security.swingN})` }]} value={holdTab} onChange={v => setHoldTab(v as 'hold' | 'swing')} />
-              </div>
-              <div className="grid sm:grid-cols-2 xl:grid-cols-3 gap-x-6 gap-y-0.5 max-h-[460px] overflow-auto pr-1 content-start">
-                {holdTab === 'swing' ? <>
-                  {swingSeats.map(c => (
-                    <div key={c.cur.j} className="flex items-center gap-2 text-[11px] border-b border-white/[0.05] py-1">
-                      <span className="w-28 shrink-0 truncate">{tc(c.cur.c)}</span>
-                      <span className="flex items-center gap-1 flex-wrap">
-                        {c.seq.map((w, i) => (
-                          <span key={i} title={`${w.y}: ${w.p}`} className="inline-flex items-center"><Dot color={colorFor(w.p, w.a)} /></span>
-                        ))}
-                      </span>
-                      <span className="ml-auto text-faint">now {c.cur.p}</span>
-                    </div>
-                  ))}
-                  {!swingSeats.length && <div className="text-faint text-xs py-4 text-center">No swing seats — every seat has a clear owner.</div>}
-                </> : <>
-                  {strongholdSeats.map(c => (
-                    <div key={c.cur.j} className="flex items-center gap-2 text-[11px] border-b border-white/[0.05] py-1">
-                      <Dot color={colorFor(c.party!, c.a)} />
-                      <span className="w-28 shrink-0 truncate">{tc(c.cur.c)}</span>
-                      <span className="text-faint">{c.party}</span>
-                      <span className="ml-auto text-faint tabular-nums">won {c.wins}/{c.total} · {c.status === 'safe' ? 'safe' : 'lean'}</span>
-                    </div>
-                  ))}
-                  {!strongholdSeats.length && <div className="text-faint text-xs py-4 text-center">No strongholds — every seat is competitive.</div>}
-                </>}
-              </div>
+      ) : (
+      <div className="grid lg:grid-cols-2 gap-4 mb-4 lg:items-stretch">
+        <ChartCard className="flex flex-col" title={`Seat map · ${mapColor === 'security' ? `safe vs swing (${classed.window.length} elections)` : mapColor === 'alliance' ? `${vy} · by alliance` : vy}`}
+          note={mapColor === 'security'
+            ? <>Green = a party always wins here (stronghold). Red = the seat changes hands (swing — where the contest is live). <Info>Computed over this state's comparable elections in the current arena.</Info></>
+            : undefined}>
+          <div className="mb-2 flex items-center gap-2 text-xs text-muted">
+            Colour
+            <Seg options={[{ v: 'winner', label: 'Winner' }, { v: 'alliance', label: 'Alliance' }, { v: 'security', label: 'Safe vs Swing' }]} value={mapColor} onChange={v => setMapColor(v as 'winner' | 'alliance' | 'security')} />
           </div>
-        ) : (
-          <div className="h-[120px] flex items-center justify-center text-faint text-sm">Need at least two comparable elections to classify seats.</div>
-        )}
-      </ChartCard>
+          <div className="flex-1 min-h-[400px]">
+            <ChoroplethMap key={arena + st + vy + mapColor} byState={mapByState} arena={arena} activeYear={vy} focusState={st} height="h-full"
+              mode={mapColor === 'alliance' ? 'alliance' : 'winner'}
+              colorOf={mapColor === 'security' ? securityColorOf : undefined}
+              subOf={mapColor === 'security' ? securitySubOf : undefined}
+              legendTitle={mapColor === 'security' ? 'Seat security' : undefined}
+              legendItems={mapColor === 'security' ? securityLegend : undefined}
+              onPick={seat => { if (seat) setPicked(seat) }} />
+          </div>
+          <div className="mt-1.5 text-[11px] text-faint">Click any seat for its full constituency report.</div>
+        </ChartCard>
+
+        <div className="flex flex-col gap-4 min-w-0">
+          <ChartCard title={`Swing ${prevY ?? '–'} → ${vy} · change in vote share`}
+            note={swingData === 'incomparable' ? undefined : `Each bar = ${vy} vote share − ${prevY} vote share (e.g. 44.0% → 46.2% = +2.2%). Positive = gained share. Parties under 1.5% both times hidden.`}>
+            {swingData === 'incomparable'
+              ? <div className="h-[280px] flex items-center justify-center text-amber-300/90 text-sm text-center px-8">
+                  ⚠ {prevY} and {vy} are on different delimitations in {st} — swing is not defined (metrics catalog caveat 4).
+                </div>
+              : swingData
+                ? <Chart option={swingData} style={{ height: 280 }} notMerge />
+                : voteShareMissing
+                  ? <div className="h-[280px] flex items-center justify-center text-amber-200/80 text-sm text-center px-8">Vote share isn’t in the source for {st} {vy} (winners-only), so swing vs {prevY} can’t be computed. Select an earlier election above.</div>
+                  : <div className="h-[280px] flex items-center justify-center text-slate-500 text-sm">No earlier election before {vy}</div>}
+          </ChartCard>
+
+          {/* Stronghold ↔ Swing: which seats are locked up and which are actually in play */}
+          <ChartCard
+            title={<>Stronghold &amp; swing seats <Info>A stronghold is a seat one party keeps winning; a swing seat changes hands. Swing seats are where elections are decided.</Info></>}
+            note={`Based on this state's last ${classed.window.length} ${arena === 'AE' ? 'assembly' : 'Lok Sabha'} elections (${classed.window.join(', ') || '—'}).`}>
+            {security.total ? (
+              <div>
+                <div className="flex flex-wrap items-center gap-x-3 gap-y-1.5 mb-2.5">
+                  <span className="px-2.5 py-1 rounded-lg border border-emerald-400/25 bg-white/[0.03] text-[11.5px] text-emerald-200/90">{security.safe + security.lean} stronghold</span>
+                  <span className="px-2.5 py-1 rounded-lg border border-red-400/25 bg-white/[0.03] text-[11.5px] text-red-200/90">{security.swingN} swing</span>
+                  {security.holds.length > 0 && <span className="text-faint text-[11px]">held by</span>}
+                  {security.holds.map(h => (
+                    <span key={h.p} className="text-[11.5px] text-muted whitespace-nowrap"><Dot color={colorFor(h.p, h.a)} />{h.p} <b className="text-ink tabular-nums">{h.n}</b></span>
+                  ))}
+                </div>
+                <div className="mb-2">
+                  <Seg options={[{ v: 'hold', label: `Stronghold seats (${security.safe + security.lean})` }, { v: 'swing', label: `Swing seats (${security.swingN})` }]} value={holdTab} onChange={v => setHoldTab(v as 'hold' | 'swing')} />
+                </div>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-5 gap-y-0.5 max-h-[360px] overflow-auto pr-1 content-start">
+                  {holdTab === 'swing' ? <>
+                    {swingSeats.map(c => (
+                      <div key={c.cur.j} className="flex items-center gap-2 text-[11px] border-b border-white/[0.05] py-1">
+                        <span className="w-28 shrink-0 truncate">{tc(c.cur.c)}</span>
+                        <span className="flex items-center gap-1 flex-wrap">
+                          {c.seq.map((w, i) => (
+                            <span key={i} title={`${w.y}: ${w.p}`} className="inline-flex items-center"><Dot color={colorFor(w.p, w.a)} /></span>
+                          ))}
+                        </span>
+                        <span className="ml-auto text-faint">now {c.cur.p}</span>
+                      </div>
+                    ))}
+                    {!swingSeats.length && <div className="text-faint text-xs py-4 text-center">No swing seats — every seat has a clear owner.</div>}
+                  </> : <>
+                    {strongholdSeats.map(c => (
+                      <div key={c.cur.j} className="flex items-center gap-2 text-[11px] border-b border-white/[0.05] py-1">
+                        <Dot color={colorFor(c.party!, c.a)} />
+                        <span className="w-28 shrink-0 truncate">{tc(c.cur.c)}</span>
+                        <span className="text-faint">{c.party}</span>
+                        <span className="ml-auto text-faint tabular-nums">won {c.wins}/{c.total} · {c.status === 'safe' ? 'safe' : 'lean'}</span>
+                      </div>
+                    ))}
+                    {!strongholdSeats.length && <div className="text-faint text-xs py-4 text-center">No strongholds — every seat is competitive.</div>}
+                  </>}
+                </div>
+              </div>
+            ) : (
+              <div className="h-[120px] flex items-center justify-center text-faint text-sm">Need at least two comparable elections to classify seats.</div>
+            )}
+          </ChartCard>
+        </div>
+      </div>
       )}
 
       <ChartCard className="mb-4"
