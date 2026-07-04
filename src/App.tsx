@@ -9,13 +9,17 @@ import ChangePage from './pages/ChangePage'
 import CompareHub from './pages/CompareHub'
 import BypollsPage from './pages/BypollsPage'
 import BattlegroundPage from './pages/BattlegroundPage'
+import AdminPage from './pages/AdminPage'
 import FilterBar from './components/FilterBar'
+import AccountMenu from './components/AccountMenu'
 import ErrorBoundary from './components/ErrorBoundary'
 import { PageTagline, JourneyNav } from './components/Journey'
 import { MODULES } from './lib/nav'
 
 export default function App() {
   const loc = useLocation()
+  // /admin is chrome-free: no filter bar, page tagline or journey nav (it isn't a data module).
+  const isModulePage = loc.pathname !== '/story' && loc.pathname !== '/admin'
   const topRef = useRef<HTMLDivElement>(null)
   // publish the sticky header+FilterBar height so page-level StickyControls can pin just below it
   useEffect(() => {
@@ -52,12 +56,13 @@ export default function App() {
             <span className="w-1.5 h-1.5 rounded-full bg-emerald-400/80" />
             2009–2026 · 106 AEs · 4 GEs
           </span>
+          <AccountMenu />
         </div>
       </header>
-      <FilterBar />
+      {isModulePage && <FilterBar />}
      </div>
       <main className={`flex-1 w-full mx-auto ${loc.pathname === '/story' ? 'px-4 sm:px-6 pt-2 pb-2 max-w-[1800px]' : 'px-6 py-5 max-w-[1700px]'}`}>
-        {loc.pathname !== '/story' && <PageTagline />}
+        {isModulePage && <PageTagline />}
         <ErrorBoundary resetKey={loc.pathname}>
           <div key={loc.pathname} className={loc.pathname === '/story' ? '' : 'animate-fadeUp'}>
             <Routes>
@@ -71,10 +76,11 @@ export default function App() {
               <Route path="/trends" element={<TrajectoryPage />} />
               <Route path="/bypolls" element={<BypollsPage />} />
               <Route path="/battleground" element={<BattlegroundPage />} />
+              <Route path="/admin" element={<AdminPage />} />
             </Routes>
           </div>
         </ErrorBoundary>
-        {loc.pathname !== '/story' && <JourneyNav />}
+        {isModulePage && <JourneyNav />}
       </main>
     </div>
   )

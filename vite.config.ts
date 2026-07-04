@@ -17,6 +17,7 @@ export default defineConfig({
           if (id.includes('echarts-for-react')) return            // wrapper → keep with app
           if (id.includes('echarts') || id.includes('zrender')) return 'echarts'
           if (id.includes('maplibre')) return 'maplibre'
+          if (id.includes('firebase')) return 'firebase'          // auth + firestore SDK → own chunk
         },
       },
     },

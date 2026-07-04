@@ -5,6 +5,22 @@ Readable history of the app (newest first). Engineering detail + gotchas live in
 
 ---
 
+## 2026-07-04 — Private access: Google sign-in + admin user management
+- **Verdix is now invite-only.** Opening the app shows a **"Sign in with Google"** screen; only
+  accounts on the allow-list get in. Anyone else sees a "no access — request it from the admin"
+  screen with a one-click email to Sai. (Gates the dashboard itself; the raw `/data` files stay as
+  before — locking those down is the planned next step.)
+- **sai.prasanth@themindshare.in is the admin.** Permanent access, can never be locked out, and is
+  the only account allowed to change who can get in.
+- **Live user management, no redeploy.** A new **Manage users** panel (visible to Sai only) lets him
+  add a person by email or remove them; the change takes effect the next time that person signs in.
+  The list is held in Firebase/Firestore and protected by server-side rules so only the admin can edit it.
+- **Setup pending (owner, one-time ~10 min).** Enable Google sign-in + Firestore on the existing
+  Google Cloud (BigQuery) project, paste the web config into `.env.local`, publish `firestore.rules`,
+  add the Netlify domain as an authorized domain — then a normal rebuild + deploy. Until that's done
+  the app shows a "login isn't configured yet" screen. Code is built, type-checked and headless-verified;
+  the live login flow gets verified once the project is configured.
+
 ## 2026-06-23 — Signals: the decision layer
 - **New Signals module** (2nd tab, right after Overview). Instead of leaving you to read the
   charts, Verdix now **scans the selected election and flags the patterns a strategist would

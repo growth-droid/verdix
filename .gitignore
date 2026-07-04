@@ -22,4 +22,5 @@ Thumbs.db
 # scratch / verification artifacts (headless puppeteer temp files)
 _*.mjs
 _*.png
+_*.log
 *.local

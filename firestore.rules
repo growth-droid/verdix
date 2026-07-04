@@ -1,0 +1,33 @@
+rules_version = '2';
+
+// Firestore security rules for Verdix access control.
+// Deploy these in Firebase console → Firestore Database → Rules (or `firebase deploy --only firestore:rules`).
+// This is the REAL, server-enforced boundary — the app's UI checks are only convenience on top of it.
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // The permanent super-admin. MUST match SUPER_ADMIN in src/lib/auth.tsx.
+    function isAdmin() {
+      return request.auth != null
+        && request.auth.token.email_verified == true
+        && request.auth.token.email.lower() == 'sai.prasanth@themindshare.in';
+    }
+
+    // The allow-list. Doc id = the user's lower-cased email.
+    match /allowed_users/{email} {
+      // A signed-in user may read ONLY their own doc — that's how the app checks its own access.
+      // The admin may read any doc (and list the whole collection) to manage it.
+      allow get:   if request.auth != null
+                   && (isAdmin() || request.auth.token.email.lower() == email);
+      allow list:  if isAdmin();
+
+      // Only the admin may add or remove users.
+      allow create, update, delete: if isAdmin();
+    }
+
+    // Everything else is denied by default (no other collections are used by the app).
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}
