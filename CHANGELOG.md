@@ -5,6 +5,21 @@ Readable history of the app (newest first). Engineering detail + gotchas live in
 
 ---
 
+## 2026-07-04 — New look: "The New Democracy" design system, light + dark
+- **A full visual redesign** in the TND house style — a premium, editorial look built on
+  three colours: **cream + forest-green + metallic gold** in the light theme, and a
+  **near-black teal with gold and a soft cyan glow** in the dark theme.
+- **Both themes ship, with a sun/moon toggle** in the top-right of the header (your choice
+  sticks between visits). Opens in dark by default; switch to the cream light theme anytime.
+- **Serif headlines** (Fraunces) for the Verdix wordmark and every section title, clean
+  **DM Sans** for labels and controls, and the tabular number font kept for the data.
+- Cards are glass with a subtle gold (light) / cyan (dark) glow on hover; the toggles,
+  active tabs and links are now **gold** instead of orange.
+- The **party and alliance colours are untouched** — those carry meaning, so only the
+  surrounding "chrome" changed. The India map now sits on the themed canvas (teal in dark,
+  cream in light) with matching borders.
+- Shipped live and verified in both themes.
+
 ## 2026-07-04 — Private access: Google sign-in + admin user management
 - **Verdix is now invite-only.** Opening the app shows a **"Sign in with Google"** screen; only
   accounts on the allow-list get in. Anyone else sees a "no access — request it from the admin"
