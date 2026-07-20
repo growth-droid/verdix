@@ -5,10 +5,10 @@
 import type { Theme } from '../store'
 
 // neutral mid-greys used for inline series labels / reference lines — legible on both themes
-export const AXIS = '#94a3b8'
-export const MUTED = '#64748b'
-export const GRID = 'rgba(148,163,184,0.35)'
-export const TXT = '#94a3b8'
+export const AXIS = '#8ba3a0'
+export const MUTED = '#6e857c'
+export const GRID = 'rgba(140,170,165,0.32)'
+export const TXT = '#8ba3a0'
 export const pctFmt = '{value}%'
 
 const NUM = '"Plus Jakarta Sans", Outfit, sans-serif'
@@ -46,12 +46,12 @@ const mk = (ink: string, label: string, line: string, split: string, tipBg: stri
   },
 })
 
-export const DARK_ECHARTS = mk('#cbd5e1', '#94a3b8', '#334155', '#1e293b', 'rgba(10,15,26,0.94)', 'rgba(148,163,184,0.25)', '#e2e8f0')
-export const LIGHT_ECHARTS = mk('#334155', '#64748b', '#cbd5e1', '#e2e8f0', 'rgba(255,255,255,0.97)', 'rgba(15,23,42,0.12)', '#0f172a')
+export const DARK_ECHARTS = mk('#c8e0dd', '#84a5a2', '#1d3b3d', '#123033', 'rgba(6,20,22,0.94)', 'rgba(0,168,181,0.28)', '#eafaf8')
+export const LIGHT_ECHARTS = mk('#26463f', '#5a736a', '#c6d4cd', '#dde6df', 'rgba(255,255,255,0.97)', 'rgba(15,58,52,0.14)', '#0f3a34')
 export const echartsTheme = (mode: Theme) => (mode === 'light' ? LIGHT_ECHARTS : DARK_ECHARTS)
 // for inline chart labels/gridlines that the registered theme can't reach (Sankey labels, pie labels…)
-export const labelColor = (mode: Theme) => (mode === 'light' ? '#475569' : '#cbd5e1')
-export const faintLine = (mode: Theme) => (mode === 'light' ? '#e2e8f0' : '#1e293b')
+export const labelColor = (mode: Theme) => (mode === 'light' ? '#4a6c63' : '#c8e0dd')
+export const faintLine = (mode: Theme) => (mode === 'light' ? '#dde6df' : '#123033')
 
 // vertical gradient fill for premium-looking columns (hex colour → faded foot)
 export const vgrad = (c: string) => ({ type: 'linear', x: 0, y: 0, x2: 0, y2: 1, colorStops: [{ offset: 0, color: c }, { offset: 1, color: c + '55' }] })

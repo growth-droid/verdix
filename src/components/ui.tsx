@@ -147,7 +147,7 @@ export function SortTable<T>({ rows, cols, defaultSort, search, searchIn, maxH =
     <div>
       {search && (
         <input value={q} onChange={e => setQ(e.target.value)} placeholder="Search…"
-          className="mb-2 w-60 bg-slate-950/60 border border-white/[0.09] rounded-lg px-3 py-1.5 text-xs outline-none placeholder:text-slate-600 focus:border-orange-500/50 transition-colors" />
+          className="mb-2 w-60 bg-slate-950/60 border border-white/[0.09] rounded-lg px-3 py-1.5 text-xs outline-none placeholder:text-slate-600 focus:border-gold/50 transition-colors" />
       )}
       <div className="overflow-auto rounded-lg" style={{ maxHeight: maxH }}>
         <table className="w-full text-xs">
@@ -188,7 +188,7 @@ export function Seg({ options, value, onChange }: { options: readonly { v: strin
         <button key={o.v} onClick={() => onChange(o.v)}
           className={`px-3.5 py-1 text-[12.5px] rounded-full transition-all duration-150 ${
             value === o.v
-              ? 'bg-gradient-to-b from-orange-400 to-orange-600 text-black font-semibold shadow-glow'
+              ? 'bg-gradient-to-b from-[#e8c766] to-[#b0812a] text-black font-semibold shadow-glow'
               : 'text-slate-400 hover:text-white'
           }`}>
           {o.label}
@@ -202,7 +202,7 @@ export function Select({ value, onChange, options, width = 'w-48' }:
   { value: string; onChange: (v: string) => void; options: string[]; width?: string }) {
   return (
     <select value={value} onChange={e => onChange(e.target.value)}
-      className={`bg-slate-950/70 border border-white/[0.09] rounded-lg px-3 py-1.5 text-[13px] hover:border-white/20 focus:border-orange-500/50 outline-none transition-colors cursor-pointer ${width}`}>
+      className={`bg-slate-950/70 border border-white/[0.09] rounded-lg px-3 py-1.5 text-[13px] hover:border-white/20 focus:border-gold/50 outline-none transition-colors cursor-pointer ${width}`}>
       {options.map(o => <option key={o} className="bg-slate-900">{o}</option>)}
     </select>
   )

@@ -13,8 +13,8 @@ const allianceColor = (a: string | null) => ALLIANCE_COLORS[allianceBase(a)] ?? 
 type Info = { title: string; sub: string; dataState: string; seat?: Seat }
 
 const MAP_PAL = {
-  dark: { bg: '#05070d', noData: '#1e293b', line: '#05070d', hover: '#f8fafc', stateLine: 'rgba(226,232,240,0.55)', stateText: '#ffffff', seatText: '#f1f5f9', halo: 'rgba(0,0,0,0.9)' },
-  light: { bg: '#e9edf3', noData: '#d8e0ea', line: '#ffffff', hover: '#0f172a', stateLine: 'rgba(15,23,42,0.5)', stateText: '#0f172a', seatText: '#1e293b', halo: 'rgba(255,255,255,0.95)' },
+  dark: { bg: '#040d0e', noData: '#0c2a2c', line: '#040d0e', hover: '#eafaf8', stateLine: 'rgba(180,220,218,0.5)', stateText: '#eafaf8', seatText: '#d3ebe8', halo: 'rgba(4,13,14,0.9)' },
+  light: { bg: '#e9ede7', noData: '#dbe4dc', line: '#f5f6f1', hover: '#0f3a34', stateLine: 'rgba(15,58,52,0.5)', stateText: '#0f3a34', seatText: '#26463f', halo: 'rgba(245,246,241,0.95)' },
 } as const
 const norm = (s: string) => s.toUpperCase().replace(/\bAND\b/g, '&').replace(/\s+/g, ' ').trim()
 

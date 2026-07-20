@@ -9,7 +9,12 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['Outfit', 'ui-sans-serif', 'system-ui', '-apple-system', 'Segoe UI', 'sans-serif'],
+        // TND: DM Sans is the default UI/label face; Fraunces (serif) is the display/heading face;
+        // Plus Jakarta stays for tabular numbers. Outfit kept only as a fallback in the stack.
+        sans: ['"DM Sans"', 'Outfit', 'ui-sans-serif', 'system-ui', '-apple-system', 'Segoe UI', 'sans-serif'],
+        display: ['Fraunces', 'Georgia', 'ui-serif', 'serif'],
+        serif: ['Fraunces', 'Georgia', 'ui-serif', 'serif'],
+        quote: ['"Cormorant Garamond"', 'Georgia', 'ui-serif', 'serif'],
         num: ['"Plus Jakarta Sans"', 'Outfit', 'ui-sans-serif', 'sans-serif'],
       },
       colors: {
@@ -18,9 +23,11 @@ export default {
         ink: 'rgb(var(--s100) / <alpha-value>)',
         muted: 'rgb(var(--s400) / <alpha-value>)',
         faint: 'rgb(var(--s500) / <alpha-value>)',
+        // TND metallic gold accent (light/dark values supplied by --gold in index.css)
+        gold: 'rgb(var(--gold) / <alpha-value>)',
       },
       boxShadow: {
-        glow: '0 0 0 1px rgba(249,115,22,.35), 0 4px 24px -6px rgba(249,115,22,.45)',
+        glow: '0 0 0 1px rgb(var(--gold) / .35), 0 4px 24px -6px rgb(var(--gold) / .5)',
         card: 'var(--card-shadow)',
         pop: 'var(--pop-shadow)',
       },

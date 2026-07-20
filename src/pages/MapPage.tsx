@@ -221,7 +221,7 @@ export default function MapPage() {
       <div className="flex items-center gap-4 flex-wrap">
         <div className="flex items-center gap-2 text-xs text-slate-500">
           Year
-          <input type="range" min={2009} max={2026} value={year} onChange={e => setYear(+e.target.value)} className="w-56 accent-orange-500" />
+          <input type="range" min={2009} max={2026} value={year} onChange={e => setYear(+e.target.value)} className="w-56 accent-gold" />
           <span className="text-xl font-bold tabular-nums text-ink">{activeYear}</span>
         </div>
         <div className="flex items-center gap-2 text-xs text-slate-500">
@@ -283,7 +283,7 @@ export default function MapPage() {
                 spark={turnoutTrend.spark} delta={turnoutTrend.delta}
                 sub={turnoutTrend.headline == null ? `${activeYear} turnout not yet in data`
                   : turnoutTrend.delta && turnoutTrend.prevYear ? `vs ${turnoutTrend.prevYear} Lok Sabha` : 'mean across seats'} />
-              <KPI label={<>Flips vs last <Info>Seats whose winning party changed compared with the previous election.</Info></>} value={kpi.flips.toLocaleString()} accent="#fb923c"
+              <KPI label={<>Flips vs last <Info>Seats whose winning party changed compared with the previous election.</Info></>} value={kpi.flips.toLocaleString()} accent="#c99a2e"
                 sub={kpi.nc ? `${kpi.nc} seats not comparable (delim.)` : 'same-seat winner change'} />
               <KPI label={<>Close seats <Info>Seats the winner took by less than 3% of the vote — the genuine nail-biters.</Info></>} value={kpi.close.toLocaleString()} accent="#f87171" sub="margin &lt; 3%" />
             </div>

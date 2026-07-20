@@ -75,7 +75,7 @@ export default function CommandPalette() {
           {filtered.length === 0 && <div className="px-4 py-10 text-center text-faint text-sm">No matches for “{q}”</div>}
           {filtered.map((it, idx) => (
             <button key={it.id} data-idx={idx} onMouseMove={() => setI(idx)} onClick={() => it.run()}
-              className={`w-full flex items-center justify-between gap-3 px-4 py-2 text-left text-sm transition-colors ${idx === i ? 'bg-orange-500/15 text-ink' : 'text-muted'}`}>
+              className={`w-full flex items-center justify-between gap-3 px-4 py-2 text-left text-sm transition-colors ${idx === i ? 'bg-gold/15 text-ink' : 'text-muted'}`}>
               <span className="truncate">{it.label}</span>
               <span className="kicker shrink-0">{it.hint}</span>
             </button>

@@ -131,7 +131,7 @@ function Shell({ eyebrow, title, sowhat, foot, children }: { eyebrow: string; ti
   return (
     <div className="flex flex-col h-full deck-stagger">
       <div className="shrink-0">
-        <div className="kicker text-orange-300/80">{eyebrow}</div>
+        <div className="kicker text-gold/80">{eyebrow}</div>
         <h2 className="text-[clamp(18px,2.45vw,28px)] font-extrabold tracking-tight leading-[1.09] mt-1 max-w-5xl">{title}</h2>
         {sowhat && <div className="mt-2.5 max-w-4xl">{sowhat}</div>}
       </div>
@@ -244,7 +244,7 @@ export default function StoryPage() {
       return [
         { id: 'n1', crumb: 'Thesis', body: (
           <div className="flex flex-col justify-center h-full deck-stagger">
-            <div className="kicker text-orange-300/80">The brief · India 2009–2026</div>
+            <div className="kicker text-gold/80">The brief · India 2009–2026</div>
             <h1 className="text-[clamp(30px,5.4vw,62px)] font-black tracking-tighter leading-[0.98] mt-2 max-w-5xl bg-gradient-to-br from-ink to-slate-400 bg-clip-text text-transparent">Two democracies, one country</h1>
             <p className="text-[clamp(15px,1.85vw,20px)] text-muted font-medium mt-3 max-w-4xl leading-relaxed">{ls && gov && <><b className="text-ink">{ls.p}</b> commands Delhi with {ls.n} of 543 seats, yet governs only <b className="text-ink">{natGovern.find(g => g.p === ls.p)?.n ?? 0}</b> of {byStateAE.size} assemblies. The distance between the national vote and the state vote is where every election is decided.</>}</p>
             <BlocStrip items={blocStrip} total={543} />
@@ -307,7 +307,7 @@ export default function StoryPage() {
         ) },
         { id: 'n10', crumb: 'Synthesis', body: (
           <div className="flex flex-col justify-center h-full deck-stagger max-w-4xl">
-            <div className="kicker text-orange-300/80">The takeaway</div>
+            <div className="kicker text-gold/80">The takeaway</div>
             <p className="text-[clamp(20px,2.6vw,31px)] font-bold leading-snug mt-3">India is not one electorate but two, voting on the same ground for different prizes.</p>
             <div className="space-y-2.5 mt-5">{cushion && <SoWhat ins={cushion} />}{minor && <SoWhat ins={minor} />}{flips && <SoWhat ins={flips} />}</div>
             <p className="text-muted text-[clamp(14px,1.7vw,18px)] mt-5 leading-relaxed">Watch the soft seats, the consolidation index, and the trajectory — not the headline number. The next mandate is decided in the gap between the two Indias.</p>
@@ -329,7 +329,7 @@ export default function StoryPage() {
     return [
       { id: 's1', crumb: 'Thesis', body: (
         <div className="flex flex-col justify-center h-full deck-stagger">
-          <div className="kicker text-orange-300/80">The brief · {st}</div>
+          <div className="kicker text-gold/80">The brief · {st}</div>
           <h1 className="text-[clamp(30px,5.4vw,60px)] font-black tracking-tighter leading-[0.98] mt-2 bg-gradient-to-br from-ink to-slate-400 bg-clip-text text-transparent">{st}</h1>
           <p className="text-[clamp(15px,1.85vw,20px)] text-muted font-medium mt-3 max-w-4xl leading-relaxed">{same ? <><b className="text-ink">{aeLead?.p}</b> holds {st} in both houses — but the contest is never the {sec.safe + sec.lean} locked seats; it is the <b className="text-ink">{sec.swg}</b> that move.</> : <>{st} splits its ticket — <b className="text-ink">{aeLead?.p}</b> rules the assembly, <b className="text-ink">{geLead?.p}</b> carried the {geLatest} national vote. The prize is the bloc that switches.</>}</p>
           <BlocStrip items={blocStrip} total={aeSel.length} />
@@ -434,7 +434,7 @@ export default function StoryPage() {
           <div className="flex items-center gap-1.5 px-3 sm:px-4 py-2 border-t border-white/[0.07] overflow-x-auto shrink-0">
             <button onClick={() => go(-1)} disabled={idx === 0} className="shrink-0 w-8 h-8 grid place-items-center rounded-lg border border-white/10 text-muted enabled:hover:text-ink enabled:hover:border-white/25 disabled:opacity-30 transition-colors">←</button>
             {slides.map((s, k) => (
-              <button key={s.id} onClick={() => setI(k)} className={`shrink-0 px-2.5 py-1 rounded-full text-[11px] whitespace-nowrap transition-all ${k === idx ? 'bg-orange-500 text-black font-semibold' : 'text-faint hover:text-ink bg-white/[0.04] hover:bg-white/[0.08]'}`}>
+              <button key={s.id} onClick={() => setI(k)} className={`shrink-0 px-2.5 py-1 rounded-full text-[11px] whitespace-nowrap transition-all ${k === idx ? 'bg-gold text-black font-semibold' : 'text-faint hover:text-ink bg-white/[0.04] hover:bg-white/[0.08]'}`}>
                 <span className="tabular-nums opacity-60">{k + 1}</span> {s.crumb}
               </button>
             ))}

@@ -12,8 +12,21 @@ export const useFilters = create<S>((set)=>({
   setArena:(arena)=>set({arena}), setYear:(year)=>set({year}), setState:(state)=>set({state}), setParty:(party)=>set({party})
 }))
 
-// Light theme removed — the app is always dark. `useThemeStore`/`toggle` are kept (no-op) so any
-// remaining importer compiles; `useTheme()` is a constant 'dark'.
+// Theme (TND design system ships BOTH light + dark). Persisted to localStorage; `data-theme`
+// on <html> drives every CSS-var value in index.css. Default = dark (matches the data-heavy maps).
 export type Theme = 'dark' | 'light'
-export const useThemeStore = create<{ mode: Theme; toggle: () => void }>(() => ({ mode: 'dark', toggle: () => {} }))
-export const useTheme = (): Theme => 'dark'
+const THEME_KEY = 'verdix-theme'
+const readTheme = (): Theme => {
+  try { const t = localStorage.getItem(THEME_KEY); if (t === 'light' || t === 'dark') return t } catch { /* SSR/denied */ }
+  return 'dark'
+}
+const applyTheme = (m: Theme) => {
+  try { document.documentElement.dataset.theme = m } catch { /* no document */ }
+  try { localStorage.setItem(THEME_KEY, m) } catch { /* denied */ }
+}
+export const useThemeStore = create<{ mode: Theme; toggle: () => void; setMode: (m: Theme) => void }>((set, get) => ({
+  mode: readTheme(),
+  toggle: () => { const m: Theme = get().mode === 'dark' ? 'light' : 'dark'; applyTheme(m); set({ mode: m }) },
+  setMode: (m) => { applyTheme(m); set({ mode: m }) },
+}))
+export const useTheme = (): Theme => useThemeStore(s => s.mode)

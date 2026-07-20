@@ -233,7 +233,7 @@ export default function BattlegroundPage() {
               <span className="text-slate-200 font-semibold">{P}</span>
             </div>
             <div className="flex items-center gap-3 mb-1">
-              <input type="range" min={0} max={10} step={0.25} value={swingPP} onChange={e => setSwingPP(+e.target.value)} className="flex-1 accent-orange-500" />
+              <input type="range" min={0} max={10} step={0.25} value={swingPP} onChange={e => setSwingPP(+e.target.value)} className="flex-1 accent-gold" />
               <span className="text-lg font-bold tabular-nums w-16 text-right">{swingPP.toFixed(2)}%</span>
             </div>
             {swing && FROM ? (

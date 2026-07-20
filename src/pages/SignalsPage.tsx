@@ -233,14 +233,14 @@ export default function SignalsPage() {
         const key = `${ar}|${y}`, on = sel.includes(key)
         return (
           <button key={key} onClick={() => (view === 'patterns' ? toggle(key) : selectOne(key))}
-            className={`px-2.5 py-1 rounded-full text-[11px] tabular-nums transition-colors border ${on ? 'bg-orange-500 text-black border-orange-400 font-semibold' : 'text-muted border-white/10 hover:text-ink hover:border-white/25 bg-white/[0.03]'}`}>{y}</button>
+            className={`px-2.5 py-1 rounded-full text-[11px] tabular-nums transition-colors border ${on ? 'bg-gold text-black border-gold font-semibold' : 'text-muted border-white/10 hover:text-ink hover:border-white/25 bg-white/[0.03]'}`}>{y}</button>
         )
       })}
       {view === 'patterns' && years.length > 1 && <button onClick={() => toggleAll(ar, years)} className="text-[10px] text-faint hover:text-ink ml-0.5 underline decoration-dotted">all</button>}
     </div>
   )
   const PartyChip = ({ p, a, n, on, onClick }: { p: string; a: string | null; n: number; on: boolean; onClick: () => void }) => (
-    <button onClick={onClick} className={`px-2.5 py-1 rounded-full text-[11px] border transition-colors flex items-center gap-1.5 ${on ? 'border-orange-400/60 bg-orange-500/15 text-ink font-semibold' : 'border-white/10 text-muted hover:text-ink hover:border-white/25 bg-white/[0.03]'}`}>
+    <button onClick={onClick} className={`px-2.5 py-1 rounded-full text-[11px] border transition-colors flex items-center gap-1.5 ${on ? 'border-gold/60 bg-gold/15 text-ink font-semibold' : 'border-white/10 text-muted hover:text-ink hover:border-white/25 bg-white/[0.03]'}`}>
       <span className="w-2 h-2 rounded-full" style={{ background: colorFor(p, a) }} />{p}<span className="opacity-60 tabular-nums text-[10px]">{n || '·'}</span>
     </button>
   )
@@ -272,11 +272,11 @@ export default function SignalsPage() {
             {sig.rowsNote && <div className="text-[10px] text-faint pl-5">{sig.rowsNote}</div>}
           </div>
           <div className="mt-3 pt-2.5 border-t border-white/[0.05] text-[12px] text-muted leading-relaxed">
-            <span className="text-orange-300/90 font-bold">▸ </span>{sig.soWhat}
+            <span className="text-gold/90 font-bold">▸ </span>{sig.soWhat}
           </div>
           {sig.seats.length > 0 && (
             <button onClick={() => setOpen(isOpen ? null : sig.id)}
-              className="mt-2.5 text-xs text-orange-400 hover:text-orange-300 underline decoration-dotted decoration-orange-400/40 underline-offset-2 transition-colors">
+              className="mt-2.5 text-xs text-gold hover:text-gold underline decoration-dotted decoration-gold/40 underline-offset-2 transition-colors">
               {isOpen ? 'Hide seats' : `Show the ${sig.seats.length} seats →`}
             </button>
           )}
@@ -342,7 +342,7 @@ export default function SignalsPage() {
                   <h3 className="text-[17px] font-bold text-ink">{swot.party}</h3>
                   <span className="text-[11px] text-faint">· {elFull(simEl)}{isState ? ` · ${st}` : ' · all India'}</span>
                 </div>
-                <p className="text-[14px] text-muted mt-1.5 leading-snug max-w-3xl"><span className="text-orange-300/90 font-bold">▸ </span>{swot.verdict}</p>
+                <p className="text-[14px] text-muted mt-1.5 leading-snug max-w-3xl"><span className="text-gold/90 font-bold">▸ </span>{swot.verdict}</p>
                 <div className="flex flex-wrap gap-x-6 gap-y-2 mt-3">
                   {swot.scorecard.map((s, i) => (
                     <div key={i}>
@@ -380,7 +380,7 @@ export default function SignalsPage() {
                                   <div className="text-[13px] font-semibold text-ink">{pl.move}</div>
                                   <div className="text-[12px] text-muted mt-0.5 leading-relaxed">{pl.why}</div>
                                   {pl.seats && pl.seats.length > 0 && (
-                                    <button onClick={() => setOpenPlay(isO ? null : k)} className="mt-1.5 text-[11px] text-orange-400 hover:text-orange-300 underline decoration-dotted decoration-orange-400/40">{isO ? 'Hide seats' : `Show the ${pl.seats.length} seats →`}</button>
+                                    <button onClick={() => setOpenPlay(isO ? null : k)} className="mt-1.5 text-[11px] text-gold hover:text-gold underline decoration-dotted decoration-gold/40">{isO ? 'Hide seats' : `Show the ${pl.seats.length} seats →`}</button>
                                   )}
                                   {isO && pl.seats && (
                                     <div className="mt-2"><SortTable rows={pl.seats} cols={cols} defaultSort="m" initialDir="asc" maxH={260} search searchIn={r => `${r.c} ${r.s} ${r.p} ${r.q ?? ''}`} onRowClick={s => setPicked({ seat: s, rows: drillRows, arena: simEl.arena })} /></div>
@@ -406,13 +406,13 @@ export default function SignalsPage() {
           <div className="card p-4">
             <div className="flex items-center justify-between flex-wrap gap-3">
               <div>
-                <h3 className="text-[15px] font-bold text-ink flex items-center gap-2"><span className="text-orange-400">⚯</span> Alliance simulator</h3>
+                <h3 className="text-[15px] font-bold text-ink flex items-center gap-2"><span className="text-gold">⚯</span> Alliance simulator</h3>
                 <div className="kicker">if these parties contested as one bloc — {elFull(simEl)}{isState ? '' : ' · all India'}</div>
               </div>
               {hasShares && bloc.length >= 2 && (
                 <div className="flex items-center gap-3">
                   <span className="text-[11px] text-faint">Vote transfer</span>
-                  <input type="range" min={0} max={100} step={5} value={transfer} onChange={e => setTransfer(+e.target.value)} className="w-40 sm:w-52 accent-orange-500" />
+                  <input type="range" min={0} max={100} step={5} value={transfer} onChange={e => setTransfer(+e.target.value)} className="w-40 sm:w-52 accent-gold" />
                   <span className="text-base font-bold tabular-nums w-11 text-right" style={{ color: blocColor }}>{transfer}%</span>
                 </div>
               )}
@@ -445,7 +445,7 @@ export default function SignalsPage() {
                       {simMaj != null && <div className="absolute -top-4 text-[9px] text-faint whitespace-nowrap" style={{ left: `${pct(simMaj)}%`, transform: 'translateX(-50%)' }}>majority {simMaj}</div>}
                     </div>
                     <div className="text-[12.5px] text-muted mt-3 leading-relaxed">
-                      <span className="text-orange-300/90 font-bold">▸ </span>
+                      <span className="text-gold/90 font-bold">▸ </span>
                       At <b className="text-ink">{transfer}%</b> transfer, <b style={{ color: blocColor }}>{bloc.join(' + ')}</b> would hold <b style={{ color: blocColor }}>{sim.projected}</b> of {simN} —{' '}
                       {sim.gains.length > 0 ? <><b className="text-emerald-300">+{sim.gains.length}</b> over the {sim.now} they win apart</> : <>no gain over the {sim.now} they win apart</>}
                       {sim.friendlyFights > 0 ? <>; {sim.friendlyFights} internal contest{sim.friendlyFights !== 1 ? 's' : ''} consolidated</> : null}
@@ -453,7 +453,7 @@ export default function SignalsPage() {
                       <span className="text-faint">Reachable ceiling: {sim.contestable} runner-up seats.</span>
                     </div>
                     {sim.gains.length > 0 && (
-                      <button onClick={() => setSimOpen(o => !o)} className="mt-2.5 text-xs text-orange-400 hover:text-orange-300 underline decoration-dotted decoration-orange-400/40 underline-offset-2 transition-colors">
+                      <button onClick={() => setSimOpen(o => !o)} className="mt-2.5 text-xs text-gold hover:text-gold underline decoration-dotted decoration-gold/40 underline-offset-2 transition-colors">
                         {simOpen ? 'Hide flip seats' : `Show the ${sim.gains.length} flip seats →`}
                       </button>
                     )}

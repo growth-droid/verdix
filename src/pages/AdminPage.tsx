@@ -91,12 +91,12 @@ export default function AdminPage() {
             onKeyDown={(e) => { if (e.key === 'Enter') void add() }}
             type="email"
             placeholder="name@themindshare.in"
-            className="flex-1 h-10 px-3 rounded-lg bg-slate-900/50 border border-white/10 text-sm text-ink placeholder:text-faint focus:border-orange-500/50 outline-none transition-colors"
+            className="flex-1 h-10 px-3 rounded-lg bg-slate-900/50 border border-white/10 text-sm text-ink placeholder:text-faint focus:border-gold/50 outline-none transition-colors"
           />
           <button
             onClick={() => void add()}
             disabled={busy}
-            className="h-10 px-4 rounded-lg bg-gradient-to-br from-orange-500 to-orange-600 text-white font-semibold text-sm disabled:opacity-50 hover:brightness-110 transition">
+            className="h-10 px-4 rounded-lg bg-gradient-to-br from-[#d1a842] to-[#b0812a] text-white font-semibold text-sm disabled:opacity-50 hover:brightness-110 transition">
             Add
           </button>
         </div>
@@ -117,7 +117,7 @@ export default function AdminPage() {
             <div className="text-sm text-ink truncate">{SUPER_ADMIN}</div>
             <div className="text-[11px] text-faint">Administrator · permanent access</div>
           </div>
-          <span className="text-[10px] uppercase tracking-wider font-semibold text-orange-300/80 border border-orange-500/25 rounded-full px-2 py-0.5">Admin</span>
+          <span className="text-[10px] uppercase tracking-wider font-semibold text-gold/80 border border-gold/25 rounded-full px-2 py-0.5">Admin</span>
         </div>
 
         {loading ? (

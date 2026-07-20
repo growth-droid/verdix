@@ -10,7 +10,9 @@ export function PageTagline() {
   const m = MODULES[idx]
   return (
     <div className="mb-4 flex flex-wrap items-baseline gap-x-3 gap-y-1">
-      <span className="font-bold text-[15px] tracking-tight">{m.tab}</span>
+      <h2 className="font-display font-bold text-[22px] tracking-tight leading-none flex items-baseline gap-2">
+        <span className="text-gold text-base leading-none">✦</span>{m.tab}
+      </h2>
       <span className="text-sm text-muted">{m.tagline}</span>
     </div>
   )
@@ -42,7 +44,7 @@ export function JourneyHome() {
       <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-7 gap-2">
         {MODULES.map((m, i) => (
           <button key={m.to} onClick={() => nav(m.to)}
-            className={`text-left p-2.5 rounded-xl border transition-all hover:-translate-y-[1px] ${m.to === pathname ? 'border-orange-400/40 bg-orange-500/10' : 'border-white/10 bg-white/[0.03] hover:border-white/25'}`}>
+            className={`text-left p-2.5 rounded-xl border transition-all hover:-translate-y-[1px] ${m.to === pathname ? 'border-gold/40 bg-gold/10' : 'border-white/10 bg-white/[0.03] hover:border-white/25'}`}>
             <div className="w-5 h-5 rounded-full grid place-items-center text-[11px] font-bold bg-white/10 mb-1.5 tabular-nums">{i + 1}</div>
             <div className="text-[12.5px] font-semibold leading-tight">{m.tab}</div>
             <div className="text-[11px] text-faint leading-snug mt-0.5">{m.blurb}</div>
@@ -69,8 +71,8 @@ export function JourneyNav() {
         </button>
       ) : <span />}
       {next ? (
-        <button onClick={() => nav(next.to)} className="group flex flex-col items-end px-4 py-2.5 rounded-xl border border-orange-400/30 bg-orange-500/[0.06] hover:bg-orange-500/[0.12] hover:border-orange-400/50 transition-colors text-right max-w-md">
-          <span className="kicker text-orange-300/80">Next step →</span>
+        <button onClick={() => nav(next.to)} className="group flex flex-col items-end px-4 py-2.5 rounded-xl border border-gold/30 bg-gold/[0.06] hover:bg-gold/[0.12] hover:border-gold/50 transition-colors text-right max-w-md">
+          <span className="kicker text-gold/80">Next step →</span>
           <span className="text-sm font-semibold">{next.tab}</span>
           <span className="text-[11px] text-muted leading-snug hidden sm:block">{next.tagline}</span>
         </button>

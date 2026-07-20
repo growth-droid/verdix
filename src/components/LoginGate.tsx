@@ -9,9 +9,9 @@ function Shell({ children }: { children: ReactNode }) {
     <div className="min-h-screen grid place-items-center px-6 py-10">
       <div className="w-full max-w-md">
         <div className="flex items-center justify-center gap-2 mb-6">
-          <span className="inline-block w-3 h-3 rounded-full bg-gradient-to-br from-orange-400 to-orange-600 shadow-glow" />
-          <span className="font-extrabold text-2xl tracking-tight">Verdix</span>
-          <span className="kicker font-medium normal-case tracking-wide text-faint mt-1">voter verdict intelligence</span>
+          <span className="inline-block w-3 h-3 rounded-full bg-gradient-to-br from-[#e5c15a] to-[#b0812a] shadow-glow" />
+          <span className="font-display font-extrabold text-2xl tracking-tight">Verdix</span>
+          <span className="font-quote italic text-sm tracking-wide text-gold/80 mt-0.5">voter verdict intelligence</span>
         </div>
         {children}
       </div>
@@ -43,7 +43,7 @@ export default function LoginGate({ children }: { children: ReactNode }) {
     return (
       <Shell>
         <div className="card p-8 grid place-items-center gap-3">
-          <div className="w-6 h-6 rounded-full border-2 border-white/15 border-t-orange-500 animate-spin" />
+          <div className="w-6 h-6 rounded-full border-2 border-white/15 border-t-gold animate-spin" />
           <p className="text-sm text-muted">Checking your access…</p>
         </div>
       </Shell>
@@ -110,7 +110,7 @@ export default function LoginGate({ children }: { children: ReactNode }) {
         {error && <p className="text-xs text-red-400">{error}</p>}
         <a
           href={mailto}
-          className="w-full h-10 rounded-xl bg-gradient-to-br from-orange-500 to-orange-600 text-white font-semibold text-sm grid place-items-center hover:brightness-110 transition">
+          className="w-full h-10 rounded-xl bg-gradient-to-br from-[#d1a842] to-[#b0812a] text-white font-semibold text-sm grid place-items-center hover:brightness-110 transition">
           Request access from the admin
         </a>
         <button

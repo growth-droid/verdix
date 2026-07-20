@@ -162,12 +162,12 @@ export default function SeatDrawer({ seat, all, arena, onClose }:
   return createPortal(
     <div className="fixed inset-0 z-[60] flex items-start justify-center overflow-y-auto" style={{ background: 'rgba(0,0,0,0.72)', backdropFilter: 'blur(3px)' }} onClick={onClose}>
       <div onClick={e => e.stopPropagation()} className="animate-fadeUp"
-        style={{ background: C.bg, color: C.text, border: `1px solid ${C.line}`, borderRadius: 18, width: '96vw', maxWidth: 1080, margin: '3vh 0 5vh', boxShadow: '0 40px 120px -30px rgba(0,0,0,0.8)', fontFamily: 'Outfit, sans-serif' }}>
+        style={{ background: C.bg, color: C.text, border: `1px solid ${C.line}`, borderRadius: 18, width: '96vw', maxWidth: 1080, margin: '3vh 0 5vh', boxShadow: '0 40px 120px -30px rgba(0,0,0,0.8)', fontFamily: 'DM Sans, ui-sans-serif, sans-serif' }}>
         {/* header */}
         <div style={{ padding: '18px 22px 16px', borderBottom: `1px solid ${C.line}` }}>
           <div className="flex items-start justify-between gap-4">
             <div>
-              <div style={{ fontSize: 10.5, letterSpacing: '1.2px', textTransform: 'uppercase', color: '#f97316', fontWeight: 700 }}>{arena === 'AE' ? 'Assembly' : 'Parliament'} constituency briefing</div>
+              <div style={{ fontSize: 10.5, letterSpacing: '1.2px', textTransform: 'uppercase', color: '#c99a2e', fontWeight: 700 }}>{arena === 'AE' ? 'Assembly' : 'Parliament'} constituency briefing</div>
               <h1 style={{ fontSize: 27, fontWeight: 800, color: C.text, lineHeight: 1.05, marginTop: 4 }}>{tc(seat.c)}</h1>
               <div style={{ fontSize: 12.5, color: C.sub, marginTop: 5 }}>
                 {seat.s} · {arena === 'AE' ? 'AC' : 'PC'} {seat.n} · {N > 1 ? `${N} elections, ${A.yrs[0]}–${A.yrs[N - 1]}` : `${A.yrs[0]}`}
@@ -202,7 +202,7 @@ export default function SeatDrawer({ seat, all, arena, onClose }:
             <ul style={{ display: 'flex', flexDirection: 'column', gap: 7 }}>
               {reads.map((r, i) => (
                 <li key={i} className="flex gap-2.5" style={{ fontSize: 13, color: C.sub, lineHeight: 1.45 }}>
-                  <span style={{ color: '#f97316', flex: 'none', marginTop: 1 }}>▸</span><span>{r}</span>
+                  <span style={{ color: '#c99a2e', flex: 'none', marginTop: 1 }}>▸</span><span>{r}</span>
                 </li>
               ))}
             </ul>
@@ -339,7 +339,7 @@ export default function SeatDrawer({ seat, all, arena, onClose }:
           </Section>
 
           <button onClick={() => { setFocus(seat.s); nav('/state'); onClose() }}
-            style={{ background: 'linear-gradient(180deg,#fb923c,#ea580c)', color: '#000', fontWeight: 700, fontSize: 13.5, padding: '11px', borderRadius: 12 }} className="hover:brightness-110 transition-all">
+            style={{ background: 'linear-gradient(180deg,#e5c15a,#b0812a)', color: '#000', fontWeight: 700, fontSize: 13.5, padding: '11px', borderRadius: 12 }} className="hover:brightness-110 transition-all">
             Open {seat.s} deep-dive →
           </button>
         </div>

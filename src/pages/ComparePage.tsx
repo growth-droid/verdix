@@ -290,7 +290,7 @@ export default function ComparePage({ modeToggle }: { modeToggle?: ReactNode }) 
           {/* the verdict — strategist's read */}
           {story && (
             <div className="card p-4 mb-4 relative overflow-hidden">
-              <span className="absolute inset-x-0 top-0 h-[2px] opacity-70" style={{ background: `linear-gradient(90deg, transparent, ${story.shift ? '#f97316' : '#38bdf8'}, transparent)` }} />
+              <span className="absolute inset-x-0 top-0 h-[2px] opacity-70" style={{ background: `linear-gradient(90deg, transparent, ${story.shift ? '#c99a2e' : '#38bdf8'}, transparent)` }} />
               <div className="kicker mb-1">The verdict — {h2h.A.label} → {h2h.B.label}</div>
               <p className="text-[15px] leading-relaxed text-ink font-medium">{story.verdict}</p>
               {story.chips.length > 0 && (

@@ -12,6 +12,7 @@ import BattlegroundPage from './pages/BattlegroundPage'
 import AdminPage from './pages/AdminPage'
 import FilterBar from './components/FilterBar'
 import AccountMenu from './components/AccountMenu'
+import ThemeToggle from './components/ThemeToggle'
 import ErrorBoundary from './components/ErrorBoundary'
 import { PageTagline, JourneyNav } from './components/Journey'
 import { MODULES } from './lib/nav'
@@ -34,17 +35,17 @@ export default function App() {
     <div className="min-h-screen flex flex-col">
      <div ref={topRef} className="sticky top-0 z-30">
       <header className="border-b border-white/[0.07] bg-slate-950/70 backdrop-blur-xl px-6 py-2.5 flex items-center gap-6">
-        <h1 className="font-extrabold text-[17px] tracking-tight shrink-0 flex items-center gap-2">
-          <span className="inline-block w-2.5 h-2.5 rounded-full bg-gradient-to-br from-orange-400 to-orange-600 shadow-glow" />
+        <h1 className="font-display font-extrabold text-[19px] tracking-tight shrink-0 flex items-center gap-2">
+          <span className="inline-block w-2.5 h-2.5 rounded-full bg-gradient-to-br from-[#e5c15a] to-[#b0812a] shadow-glow" />
           Verdix
-          <span className="kicker hidden xl:inline font-medium normal-case tracking-wide text-faint">voter verdict intelligence</span>
+          <span className="font-quote italic hidden xl:inline text-[13px] font-medium tracking-wide text-gold/80">voter verdict intelligence</span>
         </h1>
         <nav className="flex gap-1 text-[13px] overflow-x-auto">
           {MODULES.map((m, i) => (
             <NavLink key={m.to} to={m.to} end title={m.tagline} className={({ isActive }) =>
               `px-3 py-1.5 rounded-lg whitespace-nowrap transition-colors duration-150 flex items-center gap-1.5 ${
                 isActive
-                  ? 'bg-white/[0.08] text-ink ring-1 ring-white/10 shadow-card'
+                  ? 'bg-gold/10 text-gold ring-1 ring-gold/30'
                   : 'text-muted hover:text-ink hover:bg-white/[0.05]'
               }`}>
               <span className="text-[10px] text-faint tabular-nums">{i + 1}</span>{m.tab}
@@ -56,6 +57,7 @@ export default function App() {
             <span className="w-1.5 h-1.5 rounded-full bg-emerald-400/80" />
             2009–2026 · 106 AEs · 4 GEs
           </span>
+          <ThemeToggle />
           <AccountMenu />
         </div>
       </header>

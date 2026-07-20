@@ -15,7 +15,7 @@ export default function AccountMenu() {
           className={({ isActive }) =>
             `px-2.5 py-1 rounded-lg text-[12px] font-medium border transition-colors ${
               isActive
-                ? 'border-orange-500/40 text-orange-300 bg-orange-500/10'
+                ? 'border-gold/40 text-gold bg-gold/10'
                 : 'border-white/10 text-muted hover:text-ink hover:border-white/25'
             }`
           }>

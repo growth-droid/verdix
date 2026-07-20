@@ -276,7 +276,7 @@ export default function TrajectoryPage() {
             value={scope} onChange={v => setScope(v as Scope)} />
           {scope !== 'NAT' && <span className="text-sm text-slate-400">{st}</span>}
           <label className="flex items-center gap-2 text-sm text-slate-300 cursor-pointer">
-            <input type="checkbox" checked={rollup} onChange={e => setRollup(e.target.checked)} className="accent-orange-500" />
+            <input type="checkbox" checked={rollup} onChange={e => setRollup(e.target.checked)} className="accent-gold" />
             Alliance roll-up
           </label>
         </div>

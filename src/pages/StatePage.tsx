@@ -273,7 +273,7 @@ export default function StatePage() {
         name: 'Turnout', type: 'line', symbolSize: 6, connectNulls: true, data: t,
         lineStyle: { width: 2.5, color: '#38bdf8' }, itemStyle: { color: '#38bdf8' },
         areaStyle: { color: 'rgba(56,189,248,0.08)' },
-        markLine: { silent: true, symbol: 'none', lineStyle: { color: '#f97316', type: 'dashed', width: 1 }, data: [{ xAxis: String(vy) }], label: { show: false } },
+        markLine: { silent: true, symbol: 'none', lineStyle: { color: '#c99a2e', type: 'dashed', width: 1 }, data: [{ xAxis: String(vy) }], label: { show: false } },
         label: { show: true, color: AXIS, fontSize: 10, formatter: '{c}' },
       }],
     }
@@ -322,7 +322,7 @@ export default function StatePage() {
             <Select value={String(vy)} onChange={v => setYear(+v)} options={[...years].reverse().map(String)} width="w-24" />
           </div>
           <span className="text-sm text-slate-400">{years.length} elections · {selected.length} seats</span>
-          {!allIndia && <button onClick={() => navTo('/change')} className="ml-auto text-xs text-orange-400 hover:text-orange-300 underline decoration-dotted decoration-orange-400/40 underline-offset-2 transition-colors">What changed in {st} →</button>}
+          {!allIndia && <button onClick={() => navTo('/change')} className="ml-auto text-xs text-gold hover:text-gold underline decoration-dotted decoration-gold/40 underline-offset-2 transition-colors">What changed in {st} →</button>}
         </div>
       </StickyControls>
 
