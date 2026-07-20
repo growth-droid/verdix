@@ -34,7 +34,7 @@ export default function App() {
   return (
     <div className="min-h-screen flex flex-col">
      <div ref={topRef} className="sticky top-0 z-30">
-      <header className="border-b border-white/[0.07] bg-slate-950/70 backdrop-blur-xl px-6 py-2.5 flex items-center gap-6">
+      <header className="relative z-20 border-b border-white/[0.07] bg-slate-950/70 backdrop-blur-xl px-6 py-2.5 flex items-center gap-6">
         <h1 className="font-display font-extrabold text-[19px] tracking-tight shrink-0 flex items-center gap-2">
           <span className="inline-block w-2.5 h-2.5 rounded-full bg-gradient-to-br from-[#e5c15a] to-[#b0812a] shadow-glow" />
           Verdix
@@ -52,11 +52,7 @@ export default function App() {
             </NavLink>
           ))}
         </nav>
-        <div className="ml-auto shrink-0 flex items-center gap-3">
-          <span className="hidden lg:flex items-center gap-2 text-[11px] text-faint border border-white/[0.08] rounded-full px-3 py-1 bg-slate-900/30">
-            <span className="w-1.5 h-1.5 rounded-full bg-emerald-400/80" />
-            2009–2026 · 106 AEs · 4 GEs
-          </span>
+        <div className="ml-auto shrink-0 flex items-center gap-2.5">
           <ThemeToggle />
           <AccountMenu />
         </div>
