@@ -4,9 +4,9 @@
 
 /* ── TND theme tokens ───────────────────────────────────────────────
    "The New Democracy" design language: cream + forest-green + metallic gold (light);
-   near-black teal + gold + a signature cyan glow (dark). slate-*/white Tailwind classes
-   resolve through --s* / --white (tailwind.config.js), so the WHOLE UI re-skins + flips
-   by theme from these blocks alone. */
+   near-black teal + gold + a signature cyan glow (dark). The slate and white Tailwind
+   classes resolve through the --s NNN and --white vars (tailwind.config.js), so the WHOLE
+   UI re-skins and flips by theme from these blocks alone. */
 :root {
   /* Dark: near-black teal surfaces, cream-white text, cyan-tinted borders, gold accent. */
   --s50: 238 250 248;  --s100: 223 240 238; --s200: 196 220 218;
