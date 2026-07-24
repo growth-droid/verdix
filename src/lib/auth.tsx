@@ -49,7 +49,10 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     if (!firebaseReady || !auth) return
     // If we're returning from the full-page Google redirect, finish it (surfaces any error).
     // The onAuthStateChanged listener below is what actually sets the signed-in state.
-    getRedirectResult(auth).catch(() => setError('Sign-in could not be completed. Please try again.'))
+    getRedirectResult(auth).catch((e) => {
+      const code = (e as { code?: string })?.code || ''
+      setError(code ? `Sign-in could not be completed (${code}).` : 'Sign-in could not be completed. Please try again.')
+    })
     const unsub = onAuthStateChanged(auth, async (u) => {
       setError(null)
       setUser(u)
@@ -82,8 +85,15 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       // uses first-party storage, so it completes. (The page navigates away, so this await won't
       // resolve here — any real failure surfaces via getRedirectResult on return.)
       await signInWithRedirect(auth, googleProvider)
-    } catch {
-      setError('Sign-in failed. Please try again.')
+    } catch (e) {
+      const code = (e as { code?: string })?.code || ''
+      if (code === 'auth/unauthorized-domain') {
+        setError(`This site (${window.location.hostname}) isn’t authorized in Firebase yet. Add it in Firebase → Authentication → Settings → Authorized domains, then try again.`)
+      } else if (code === 'auth/operation-not-supported-in-this-environment' || code === 'auth/web-storage-unsupported') {
+        setError('Your browser is blocking the storage sign-in needs. Allow cookies/site data for this site (and firebaseapp.com), then try again.')
+      } else {
+        setError(code ? `Sign-in failed (${code}). Please try again.` : 'Sign-in failed. Please try again.')
+      }
     }
   }
 
