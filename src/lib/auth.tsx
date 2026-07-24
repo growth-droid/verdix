@@ -3,7 +3,7 @@
 // to decide what to render; nothing in the dashboard mounts until status === 'allowed'.
 import { createContext, useContext, useEffect, useState, type ReactNode } from 'react'
 import {
-  onAuthStateChanged, signInWithRedirect, getRedirectResult, signOut as fbSignOut, type User,
+  onAuthStateChanged, signInWithPopup, signOut as fbSignOut, type User,
 } from 'firebase/auth'
 import { doc, getDoc } from 'firebase/firestore'
 import { auth, db, googleProvider, firebaseReady } from './firebase'
@@ -47,12 +47,6 @@ export function AuthProvider({ children }: { children: ReactNode }) {
 
   useEffect(() => {
     if (!firebaseReady || !auth) return
-    // If we're returning from the full-page Google redirect, finish it (surfaces any error).
-    // The onAuthStateChanged listener below is what actually sets the signed-in state.
-    getRedirectResult(auth).catch((e) => {
-      const code = (e as { code?: string })?.code || ''
-      setError(code ? `Sign-in could not be completed (${code}).` : 'Sign-in could not be completed. Please try again.')
-    })
     const unsub = onAuthStateChanged(auth, async (u) => {
       setError(null)
       setUser(u)
@@ -80,17 +74,14 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     if (!firebaseReady || !auth) return
     setError(null)
     try {
-      // Full-page redirect, NOT a popup: modern browsers partition firebaseapp.com's third-party
-      // storage, which leaves the popup handler blank/stuck. Redirect runs in the app's own tab and
-      // uses first-party storage, so it completes. (The page navigates away, so this await won't
-      // resolve here — any real failure surfaces via getRedirectResult on return.)
-      await signInWithRedirect(auth, googleProvider)
+      await signInWithPopup(auth, googleProvider)
     } catch (e) {
       const code = (e as { code?: string })?.code || ''
+      if (code === 'auth/popup-closed-by-user' || code === 'auth/cancelled-popup-request') return // user dismissed
       if (code === 'auth/unauthorized-domain') {
-        setError(`This site (${window.location.hostname}) isn’t authorized in Firebase yet. Add it in Firebase → Authentication → Settings → Authorized domains, then try again.`)
-      } else if (code === 'auth/operation-not-supported-in-this-environment' || code === 'auth/web-storage-unsupported') {
-        setError('Your browser is blocking the storage sign-in needs. Allow cookies/site data for this site (and firebaseapp.com), then try again.')
+        setError(`This site (${window.location.hostname}) isn’t authorized in Firebase → Authentication → Settings → Authorized domains.`)
+      } else if (code === 'auth/popup-blocked') {
+        setError('Your browser blocked the sign-in popup — allow popups for this site and try again.')
       } else {
         setError(code ? `Sign-in failed (${code}). Please try again.` : 'Sign-in failed. Please try again.')
       }
