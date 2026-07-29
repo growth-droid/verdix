@@ -3,6 +3,7 @@ import ReactECharts from 'echarts-for-react'
 import { useTheme } from '../store'
 import { echartsTheme, voteSeatOption } from '../lib/theme'
 import { GLOSSARY } from '../lib/glossary'
+import { readable } from '../lib/colors'
 
 /** Hoverable ⓘ that shows a plain-language explanation. */
 export function Info({ children, w = 'w-60' }: { children: ReactNode; w?: string }) {
@@ -60,10 +61,10 @@ export function Chart({ option, h, style, notMerge = true, onEvents }: { option:
 export function ChartCard({ title, children, note, className = '' }:
   { title: ReactNode; children: ReactNode; note?: ReactNode; className?: string }) {
   return (
-    <div className={`card p-4 ${className}`}>
-      <h3 className="text-[13px] font-semibold mb-2.5 text-slate-200 tracking-tight">{title}</h3>
+    <div className={`card p-3.5 ${className}`}>
+      <h3 className="text-[12.5px] font-semibold mb-2 text-slate-200 tracking-tight">{title}</h3>
       {children}
-      {note && <p className="mt-2.5 text-[11px] text-slate-500 leading-snug border-t border-white/[0.05] pt-2">{note}</p>}
+      {note && <p className="mt-2 text-[11px] text-slate-500 leading-snug border-t border-white/[0.05] pt-2">{note}</p>}
     </div>
   )
 }
@@ -71,15 +72,16 @@ export function ChartCard({ title, children, note, className = '' }:
 export function KPI({ label, value, sub, accent, delta, spark }:
   { label: ReactNode; value: ReactNode; sub?: ReactNode; accent?: string
     delta?: { value: string; up: boolean; good?: boolean }; spark?: (number | null)[] }) {
+  const mode = useTheme()
   const good = delta ? (delta.good ?? delta.up) : false
   return (
-    <div className="card px-4 py-3 relative overflow-hidden">
+    <div className="card px-3.5 py-2.5 relative overflow-hidden">
       {accent && <span className="absolute inset-x-0 top-0 h-[2px] opacity-70" style={{ background: `linear-gradient(90deg, transparent, ${accent}, transparent)` }} />}
       <div className="kicker">{label}</div>
-      <div className="flex items-end gap-2 mt-1">
-        <div className="text-[26px] leading-8 font-bold tabular-nums" style={accent ? { color: accent } : undefined}>{value}</div>
+      <div className="flex items-end gap-2 mt-0.5">
+        <div className="text-[24px] leading-7 font-bold tabular-nums" style={accent ? { color: readable(accent, mode) } : undefined}>{value}</div>
         {delta && (
-          <span className={`mb-1 text-[11px] font-semibold tabular-nums inline-flex items-center gap-0.5 ${good ? 'text-emerald-400' : 'text-red-400'}`}>
+          <span className="mb-0.5 text-[11px] font-semibold tabular-nums inline-flex items-center gap-0.5" style={{ color: readable(good ? '#16a34a' : '#dc2626', mode) }}>
             {delta.up ? '▲' : '▼'}{delta.value}
           </span>
         )}

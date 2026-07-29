@@ -121,7 +121,7 @@
 
 @layer components {
   .card {
-    border-radius: 1.15rem;
+    border-radius: 0.9rem;
     box-shadow: var(--card-shadow);
     background: var(--card-bg);
     border: 1px solid var(--card-border);

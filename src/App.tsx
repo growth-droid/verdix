@@ -59,7 +59,7 @@ export default function App() {
       </header>
       {isModulePage && <FilterBar />}
      </div>
-      <main className={`flex-1 w-full mx-auto ${loc.pathname === '/story' ? 'px-4 sm:px-6 pt-2 pb-2 max-w-[1800px]' : 'px-6 py-5 max-w-[1700px]'}`}>
+      <main className={`flex-1 w-full mx-auto ${loc.pathname === '/story' ? 'px-4 sm:px-6 pt-2 pb-2 max-w-[1800px]' : 'px-5 py-4 max-w-[1720px]'}`}>
         {isModulePage && <PageTagline />}
         <ErrorBoundary resetKey={loc.pathname}>
           <div key={loc.pathname} className={loc.pathname === '/story' ? '' : 'animate-fadeUp'}>
