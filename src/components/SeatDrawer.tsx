@@ -67,6 +67,21 @@ export default function SeatDrawer({ seat, all, arena, onClose }:
     return { yrs, tally, contenders, flips, retained, decided, rivalry, closest, safest, meanM, volat, withMargin: withM.length, meanT, firstT, lastT, bipolar, N: hist.length, shareIn }
   }, [hist])
 
+  // How this seat sits among its state peers THIS election — turns generic reads into sharp
+  // comparative insight ("#3 closest of 175", turnout/share vs the state average).
+  const stateCtx = useMemo(() => {
+    const peers = all.filter(h => h.s === seat.s && h.y === seat.y)
+    if (peers.length < 4) return null
+    const cm = seat.m
+    const wm = peers.filter(h => h.m != null).map(h => h.m as number)
+    const rank = cm != null && wm.length ? wm.filter(m => m < cm).length + 1 : null
+    const wt = peers.filter(h => h.t != null).map(h => h.t as number)
+    const avgT = wt.length ? +(wt.reduce((s, v) => s + v, 0) / wt.length).toFixed(1) : null
+    const wv = peers.filter(h => h.v != null).map(h => h.v as number)
+    const avgV = wv.length ? +(wv.reduce((s, v) => s + v, 0) / wv.length).toFixed(1) : null
+    return { mCount: wm.length, rank, avgT, avgV }
+  }, [all, seat])
+
   const N = A.N, dom = A.tally[0]
   const fortress = A.tally.length === 1 && N > 1
   const allDiff = A.tally.length === N && N > 1
@@ -196,6 +211,26 @@ export default function SeatDrawer({ seat, all, arena, onClose }:
             <Metric label="Times flipped" value={N > 1 ? `${A.flips}` : '–'} sub={N > 1 ? `of ${A.decided}` : ''} />
             <Metric label="Margin range" value={A.volat != null ? A.volat.toFixed(0) + '%' : '–'} sub="high–low" />
           </div>
+
+          {/* how this seat sits in the state */}
+          {stateCtx && (
+            <Section eyebrow={`In ${seat.s} · ${seat.y}`}>
+              <div className="grid grid-cols-2 sm:grid-cols-3 gap-2.5">
+                <Metric label="Closeness rank" value={stateCtx.rank != null ? `#${stateCtx.rank}` : '–'} sub={stateCtx.rank != null ? `of ${stateCtx.mCount}` : ''} tone={stateCtx.rank != null && stateCtx.rank <= Math.max(1, Math.ceil(stateCtx.mCount * 0.1)) ? '#f43f5e' : undefined} />
+                <Metric label="Turnout vs state" value={seat.t != null && stateCtx.avgT != null ? `${seat.t - stateCtx.avgT >= 0 ? '+' : ''}${(seat.t - stateCtx.avgT).toFixed(1)}` : '–'} sub={stateCtx.avgT != null ? `avg ${stateCtx.avgT}%` : ''} tone={seat.t != null && stateCtx.avgT != null ? (seat.t >= stateCtx.avgT ? '#10b981' : '#f59e0b') : undefined} />
+                <Metric label="Win share vs state" value={seat.v != null && stateCtx.avgV != null ? `${seat.v - stateCtx.avgV >= 0 ? '+' : ''}${(seat.v - stateCtx.avgV).toFixed(1)}` : '–'} sub={stateCtx.avgV != null ? `avg ${stateCtx.avgV}%` : ''} />
+              </div>
+              {stateCtx.rank != null && (
+                <div style={{ fontSize: 12, color: C.sub, marginTop: 9 }}>
+                  {stateCtx.rank <= Math.max(1, Math.ceil(stateCtx.mCount * 0.1))
+                    ? `Among the tightest seats in ${seat.s} this election — a genuine battleground.`
+                    : stateCtx.rank >= Math.floor(stateCtx.mCount * 0.9)
+                      ? `One of the safest seats in ${seat.s} — hold it efficiently and redeploy resources.`
+                      : `The #${stateCtx.rank} closest of ${stateCtx.mCount} decided seats in ${seat.s}.`}
+                </div>
+              )}
+            </Section>
+          )}
 
           {/* executive read */}
           <Section eyebrow="Executive read">

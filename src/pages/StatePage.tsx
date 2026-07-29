@@ -4,8 +4,8 @@ import {
   loadSeats, loadPartyAE, loadPartyGEState, loadPartyGENat, loadStateTurnout,
   type Seat, type PartyAgg, type StateTurnout,
 } from '../lib/data'
-import { colorFor, ALLIANCE_COLORS } from '../lib/colors'
-import { useFilters } from '../store'
+import { colorFor, ALLIANCE_COLORS, readable } from '../lib/colors'
+import { useFilters, useTheme } from '../store'
 import ChoroplethMap from '../components/ChoroplethMap'
 import SeatDrawer from '../components/SeatDrawer'
 import { Chart, ChartCard, Dot, Info, Seg, Select, SortTable, StickyControls, VoteSeatChart, type Col } from '../components/ui'
@@ -19,6 +19,7 @@ const SAFE = '#16a34a', LEAN = '#f59e0b', SWING = '#ef4444'
 export default function StatePage() {
   const navTo = useNavigate()
   const { state, arena, year, setYear, setState } = useFilters()
+  const mode = useTheme()
   const [rows, setRows] = useState<Seat[]>([])
   const [partyAE, setPartyAE] = useState<PartyAgg[]>([])
   const [partyGE, setPartyGE] = useState<PartyAgg[]>([])
@@ -63,6 +64,30 @@ export default function StatePage() {
     const ry = myParty.filter(r => r.y === vy)
     return ry.length > 0 && ry.every(r => r.v == null)
   }, [myParty, vy])
+
+  // ── State scorecard: this state's most-recent Assembly AND Lok Sabha standing, side by side —
+  // "how does each party do across BOTH arenas here", in one table (split-ticket at a glance).
+  const scorecard = useMemo(() => {
+    if (allIndia) return null
+    const ae = partyAE.filter(r => r.s === st), ge = partyGE.filter(r => r.s === st)
+    const aeY = ae.length ? Math.max(...ae.map(r => r.y)) : null
+    const geY = ge.length ? Math.max(...ge.map(r => r.y)) : null
+    if (aeY == null && geY == null) return null
+    const aeRows = ae.filter(r => r.y === aeY), geRows = ge.filter(r => r.y === geY)
+    type SRow = { p: string; a: string | null; aeS: number | null; aeV: number | null; geS: number | null; geV: number | null }
+    const map = new Map<string, SRow>()
+    const up = (p: string, a: string | null) => { let e = map.get(p); if (!e) { e = { p, a, aeS: null, aeV: null, geS: null, geV: null }; map.set(p, e) } return e }
+    aeRows.forEach(r => { const e = up(r.p, r.a); e.aeS = r.wo ?? 0; e.aeV = r.v })
+    geRows.forEach(r => { const e = up(r.p, r.a); e.geS = r.wo ?? 0; e.geV = r.v })
+    const rows = [...map.values()]
+      .filter(e => (e.aeS ?? 0) > 0 || (e.geS ?? 0) > 0 || (e.aeV ?? 0) >= 1 || (e.geV ?? 0) >= 1)
+      .sort((x, y) => Math.max(y.geS ?? 0, y.aeS ?? 0) - Math.max(x.geS ?? 0, x.aeS ?? 0) || ((y.geV ?? 0) + (y.aeV ?? 0)) - ((x.geV ?? 0) + (x.aeV ?? 0)))
+      .slice(0, 12)
+    const aeTot = aeRows.reduce((s2, r) => s2 + (r.wo ?? 0), 0), geTot = geRows.reduce((s2, r) => s2 + (r.wo ?? 0), 0)
+    const aeLead = [...map.values()].filter(e => (e.aeS ?? 0) > 0).sort((x, y) => (y.aeS ?? 0) - (x.aeS ?? 0))[0]
+    const geLead = [...map.values()].filter(e => (e.geS ?? 0) > 0).sort((x, y) => (y.geS ?? 0) - (x.geS ?? 0))[0]
+    return { aeY, geY, aeTot, geTot, rows, aeLead, geLead }
+  }, [partyAE, partyGE, st, allIndia])
 
   // seats won + vote share % together, one party (or alliance) at a time.
   // seats come from the constituency rows (mine); vote share is pooled to the same key.
@@ -331,6 +356,54 @@ export default function StatePage() {
           <span className="text-amber-300 shrink-0">⚠</span>
           <span><b>{st} {vy}</b> shipped as a winners-only result — its candidate votes aren’t in the source data, so <b>vote share isn’t available for this election</b>. Seat counts, the map and reservation splits are complete; the vote-share line and the swing chart skip {vy}. Pick an earlier election above to see vote share.</span>
         </div>
+      )}
+
+      {/* State scorecard — Assembly + Lok Sabha side by side (the "both arenas at one place" view) */}
+      {!allIndia && scorecard && (
+        <ChartCard className="mb-4"
+          title={<>State scorecard · Assembly {scorecard.aeY ?? '–'} vs Lok Sabha {scorecard.geY ?? '–'} <Info>Each party's most recent Assembly result beside its most recent Lok Sabha result in {st} — seats and vote share in BOTH arenas at once, whatever the toggle above is set to. The “LS − AE” gap exposes split-ticket voting: many people back a national party for Parliament and a regional one for the Assembly.</Info></>}
+          note={`${st}: latest Assembly (${scorecard.aeY ?? '–'} · ${scorecard.aeTot} seats) beside latest Lok Sabha (${scorecard.geY ?? '–'} · ${scorecard.geTot} seats). “LS − AE” = Lok Sabha vote share minus Assembly vote share (＋ green = the party runs stronger nationally than in the state).`}>
+          {scorecard.aeLead && scorecard.geLead && (
+            <div className="text-[12.5px] text-muted mb-3">
+              {scorecard.aeLead.p === scorecard.geLead.p
+                ? <><b style={{ color: readable(colorFor(scorecard.aeLead.p, scorecard.aeLead.a), mode) }}>{scorecard.aeLead.p}</b> leads {st} in <b className="text-ink">both</b> arenas — the Assembly (<b className="text-ink">{scorecard.aeLead.aeS}</b> seats) and Lok Sabha (<b className="text-ink">{scorecard.geLead.geS}</b>).</>
+                : <><b style={{ color: readable(colorFor(scorecard.aeLead.p, scorecard.aeLead.a), mode) }}>{scorecard.aeLead.p}</b> leads the Assembly (<b className="text-ink">{scorecard.aeLead.aeS}</b> seats) while <b style={{ color: readable(colorFor(scorecard.geLead.p, scorecard.geLead.a), mode) }}>{scorecard.geLead.p}</b> leads Lok Sabha (<b className="text-ink">{scorecard.geLead.geS}</b>) — a split-ticket state.</>}
+            </div>
+          )}
+          <div className="overflow-x-auto">
+            <table className="w-full text-[12.5px] min-w-[560px]">
+              <thead>
+                <tr className="text-faint">
+                  <th className="text-left font-medium py-1 pr-2 align-bottom" rowSpan={2}>Party</th>
+                  <th className="text-center font-semibold px-2 pb-1 text-muted border-b border-white/[0.08]" colSpan={2}>Assembly · {scorecard.aeY ?? '–'}</th>
+                  <th className="text-center font-semibold px-2 pb-1 text-muted border-b border-white/[0.08]" colSpan={2}>Lok Sabha · {scorecard.geY ?? '–'}</th>
+                  <th className="text-right font-medium pl-2 align-bottom" rowSpan={2} title="Lok Sabha vote share minus Assembly vote share">LS − AE</th>
+                </tr>
+                <tr className="text-faint text-[10px] uppercase tracking-wide">
+                  <th className="text-right font-medium px-2 pb-1">Seats</th><th className="text-right font-medium px-2 pb-1">Vote%</th>
+                  <th className="text-right font-medium px-2 pb-1">Seats</th><th className="text-right font-medium px-2 pb-1">Vote%</th>
+                </tr>
+              </thead>
+              <tbody>
+                {scorecard.rows.map(r => {
+                  const gap = (r.geV != null && r.aeV != null) ? +(r.geV - r.aeV).toFixed(1) : null
+                  return (
+                    <tr key={r.p} className="border-t border-white/[0.05] hover:bg-white/[0.03] transition-colors">
+                      <td className="py-1.5 pr-2 whitespace-nowrap"><Dot color={colorFor(r.p, r.a)} /><b className="text-ink">{r.p}</b></td>
+                      <td className="text-right px-2 tabular-nums text-ink font-semibold">{r.aeS != null ? r.aeS : '–'}</td>
+                      <td className="text-right px-2 tabular-nums text-muted">{r.aeV != null ? r.aeV.toFixed(1) : '–'}</td>
+                      <td className="text-right px-2 tabular-nums text-ink font-semibold">{r.geS != null ? r.geS : '–'}</td>
+                      <td className="text-right px-2 tabular-nums text-muted">{r.geV != null ? r.geV.toFixed(1) : '–'}</td>
+                      <td className="text-right pl-2 tabular-nums font-semibold" style={{ color: gap == null ? 'rgb(var(--s500))' : readable(gap > 0.3 ? '#16a34a' : gap < -0.3 ? '#dc2626' : '#64748b', mode) }}>
+                        {gap == null ? '–' : (gap > 0 ? '+' : '') + gap}
+                      </td>
+                    </tr>
+                  )
+                })}
+              </tbody>
+            </table>
+          </div>
+        </ChartCard>
       )}
 
       {/* Big seat map on the left; swing + strongholds stacked on the right (map stretches to match) */}
