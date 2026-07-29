@@ -148,28 +148,34 @@ export function SortTable<T>({ rows, cols, defaultSort, search, searchIn, maxH =
   return (
     <div>
       {search && (
-        <input value={q} onChange={e => setQ(e.target.value)} placeholder="Search…"
-          className="mb-2 w-60 bg-slate-950/60 border border-white/[0.09] rounded-lg px-3 py-1.5 text-xs outline-none placeholder:text-slate-600 focus:border-gold/50 transition-colors" />
+        <div className="relative mb-2.5 w-64 max-w-full">
+          <svg className="absolute left-2.5 top-1/2 -translate-y-1/2 text-faint pointer-events-none" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><circle cx="11" cy="11" r="7" /><path d="M21 21l-4.3-4.3" /></svg>
+          <input value={q} onChange={e => setQ(e.target.value)} placeholder="Search…"
+            className="w-full bg-slate-950/50 border border-white/[0.09] rounded-lg pl-8 pr-3 py-1.5 text-xs outline-none placeholder:text-faint focus:border-gold/50 focus:bg-slate-950/70 transition-colors" />
+        </div>
       )}
-      <div className="overflow-auto rounded-lg" style={{ maxHeight: maxH }}>
-        <table className="w-full text-xs">
+      <div className="overflow-auto rounded-xl border border-white/[0.07]" style={{ maxHeight: maxH }}>
+        <table className="w-full text-xs border-separate" style={{ borderSpacing: 0 }}>
           <thead className="sticky top-0 z-10">
-            <tr className="bg-slate-950/95 backdrop-blur">
-              {cols.map(c => (
-                <th key={c.key} style={c.width ? { width: c.width } : undefined}
-                  className={`py-2 px-2 cursor-pointer select-none whitespace-nowrap kicker hover:text-slate-300 transition-colors ${c.align === 'right' ? 'text-right' : 'text-left'}`}
-                  onClick={() => { if (sort === c.key) setDir(d => (d === 'asc' ? 'desc' : 'asc')); else { setSort(c.key); setDir('desc') } }}>
-                  {c.label}{sort === c.key ? (dir === 'asc' ? ' ▲' : ' ▼') : ''}
-                </th>
-              ))}
+            <tr>
+              {cols.map(c => {
+                const active = sort === c.key
+                return (
+                  <th key={c.key} style={c.width ? { width: c.width } : undefined}
+                    onClick={() => { if (active) setDir(d => (d === 'asc' ? 'desc' : 'asc')); else { setSort(c.key); setDir('desc') } }}
+                    className={`group py-2 px-2.5 cursor-pointer select-none whitespace-nowrap text-[10px] uppercase tracking-[0.07em] font-semibold border-b border-white/[0.09] bg-slate-900/85 backdrop-blur-md transition-colors ${active ? 'text-gold' : 'text-faint hover:text-muted'} ${c.align === 'right' ? 'text-right' : 'text-left'}`}>
+                    {c.label}<span className={`ml-1 inline-block ${active ? 'opacity-90' : 'opacity-0 group-hover:opacity-40'}`}>{active ? (dir === 'asc' ? '↑' : '↓') : '↕'}</span>
+                  </th>
+                )
+              })}
             </tr>
           </thead>
           <tbody>
             {sorted.map((r, idx) => (
               <tr key={idx} onClick={onRowClick ? () => onRowClick(r) : undefined}
-                className={`border-t border-white/[0.04] hover:bg-white/[0.03] transition-colors ${onRowClick ? 'cursor-pointer' : ''}`}>
+                className={`transition-colors hover:bg-white/[0.035] ${onRowClick ? 'cursor-pointer' : ''}`}>
                 {cols.map(c => (
-                  <td key={c.key} className={`py-[7px] px-2 whitespace-nowrap ${c.align === 'right' ? 'text-right tabular-nums' : ''}`}>
+                  <td key={c.key} className={`py-[7px] px-2.5 whitespace-nowrap border-b border-white/[0.04] ${c.align === 'right' ? 'text-right tabular-nums' : ''}`}>
                     {c.render ? c.render(r) : c.get(r) ?? '–'}
                   </td>
                 ))}
@@ -177,7 +183,9 @@ export function SortTable<T>({ rows, cols, defaultSort, search, searchIn, maxH =
             ))}
           </tbody>
         </table>
-        {sorted.length === 0 && <div className="text-slate-500 text-xs py-8 text-center">No rows</div>}
+        {sorted.length === 0 && (
+          <div className="py-10 text-center text-faint text-xs">{q ? 'No matching rows' : 'No rows'}</div>
+        )}
       </div>
     </div>
   )
@@ -185,13 +193,13 @@ export function SortTable<T>({ rows, cols, defaultSort, search, searchIn, maxH =
 
 export function Seg({ options, value, onChange }: { options: readonly { v: string; label: string }[]; value: string; onChange: (v: string) => void }) {
   return (
-    <div className="flex rounded-full p-[3px] bg-slate-950/70 border border-white/[0.08]">
+    <div className="inline-flex rounded-full p-[3px] bg-slate-950/60 border border-white/[0.08] shadow-[inset_0_1px_2px_rgba(0,0,0,0.25)]">
       {options.map(o => (
         <button key={o.v} onClick={() => onChange(o.v)}
-          className={`px-3.5 py-1 text-[12.5px] rounded-full transition-all duration-150 ${
+          className={`px-3.5 py-1 text-[12.5px] rounded-full transition-all duration-200 ${
             value === o.v
-              ? 'bg-gradient-to-b from-[#e8c766] to-[#b0812a] text-black font-semibold shadow-glow'
-              : 'text-slate-400 hover:text-white'
+              ? 'bg-gradient-to-b from-[#e8c766] to-[#b0812a] text-black font-semibold shadow-[0_1px_3px_rgba(0,0,0,0.3),inset_0_1px_0_rgba(255,255,255,0.35)]'
+              : 'text-muted hover:text-ink'
           }`}>
           {o.label}
         </button>
@@ -203,10 +211,13 @@ export function Seg({ options, value, onChange }: { options: readonly { v: strin
 export function Select({ value, onChange, options, width = 'w-48' }:
   { value: string; onChange: (v: string) => void; options: string[]; width?: string }) {
   return (
-    <select value={value} onChange={e => onChange(e.target.value)}
-      className={`bg-slate-950/70 border border-white/[0.09] rounded-lg px-3 py-1.5 text-[13px] hover:border-white/20 focus:border-gold/50 outline-none transition-colors cursor-pointer ${width}`}>
-      {options.map(o => <option key={o} className="bg-slate-900">{o}</option>)}
-    </select>
+    <div className={`relative inline-block align-middle ${width}`}>
+      <select value={value} onChange={e => onChange(e.target.value)}
+        className="w-full appearance-none bg-slate-950/60 border border-white/[0.09] rounded-lg pl-3 pr-8 py-1.5 text-[13px] hover:border-white/20 focus:border-gold/50 outline-none transition-colors cursor-pointer">
+        {options.map(o => <option key={o} className="bg-slate-900 text-ink">{o}</option>)}
+      </select>
+      <svg className="absolute right-2.5 top-1/2 -translate-y-1/2 text-faint pointer-events-none" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M6 9l6 6 6-6" /></svg>
+    </div>
   )
 }
 

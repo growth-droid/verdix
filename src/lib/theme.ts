@@ -37,7 +37,7 @@ export const valAxis = (formatter?: string | ((v: number) => string), extra: Rec
 const mk = (ink: string, label: string, line: string, split: string, tipBg: string, tipBorder: string, tipInk: string) => ({
   textStyle: { color: ink, fontFamily: SANS },
   categoryAxis: { axisLine: { lineStyle: { color: line } }, axisLabel: { color: label }, axisTick: { show: false }, splitLine: { show: false } },
-  valueAxis: { axisLine: { show: false }, axisLabel: { color: label }, splitLine: { lineStyle: { color: split } } },
+  valueAxis: { axisLine: { show: false }, axisLabel: { color: label }, splitLine: { lineStyle: { color: split, type: 'dashed', width: 1 } } },
   legend: { textStyle: { color: label } },
   tooltip: {
     backgroundColor: tipBg, borderColor: tipBorder, borderWidth: 1,
