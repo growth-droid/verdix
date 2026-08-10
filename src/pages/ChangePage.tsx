@@ -239,7 +239,7 @@ export default function ChangePage() {
         <span className="text-sm font-semibold text-ink">{stateSel ? `What changed in ${stateSel}` : 'What changed across India'}</span>
         <div className="flex items-center gap-2 text-xs text-slate-500">
           Year
-          <input type="range" min={2009} max={2026} value={year} onChange={e => setYear(+e.target.value)} className="w-56 accent-gold" />
+          <input type="range" min={2004} max={2026} value={year} onChange={e => setYear(+e.target.value)} className="w-56 accent-gold" />
           <span className="text-xl font-bold tabular-nums text-ink">{activeYear}</span>
         </div>
         <span className="text-xs text-slate-500">each seat vs its previous election{arena === 'AE' && !stateSel ? ' (state-wise)' : ''}</span>

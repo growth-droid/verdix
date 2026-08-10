@@ -12,6 +12,9 @@ export const PARTY_COLORS: Record<string, string> = {
   AIMIM: '#047857', IUML: '#059669', INLD: '#4d7c0f', JJP: '#a16207', AGP: '#ca8a04',
   NPP: '#be185d', NDPP: '#be123c', NPF: '#9f1239', MNF: '#0369a1', ZPM: '#075985',
   AINRC: '#d97706', IND: '#475569', NOTA: '#64748b',
+  // 2004-era parties (the 2004 overlay): distinct identity hues, no collisions with the above
+  'JD(S)': '#14532d', SAD: '#1e3a8a', PMK: '#c2410c', LJP: '#0c4a6e', MDMK: '#881337',
+  JSS: '#6b21a8', RLD: '#7da512', 'RPI(A)': '#4338ca',
 }
 export const ALLIANCE_COLORS: Record<string, string> = {
   'BJP Alliance': '#f97316', 'INC Alliance': '#3b82f6', 'LDF': '#dc2626',

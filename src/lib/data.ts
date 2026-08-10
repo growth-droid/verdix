@@ -40,16 +40,48 @@ function getJSON<T>(path: string): Promise<T> {
   return cache[path] as Promise<T>
 }
 
-export const loadSeats = (arena: 'AE' | 'GE') => getJSON<Seat[]>(`/data/seats_${arena.toLowerCase()}.json`)
-export const loadPartyAE = () => getJSON<PartyAgg[]>('/data/party_ae.json')
-export const loadPartyGEState = () => getJSON<PartyAgg[]>('/data/party_ge_state.json')
-export const loadPartyGENat = () => getJSON<PartyAgg[]>('/data/party_ge_nat.json')
-export const loadBypolls = () => getJSON<Bypoll[]>('/data/bypolls.json')
+// ── 2004 overlay ────────────────────────────────────────────────────────────
+// The 2004 General Election + the six 2004-cycle assembly elections live in an ADDITIVE
+// overlay extract (public/data/overlay_2004.json, built by tools/build_2004_overlay.mjs from
+// ECI-derived candidate CSVs) merged here at load — so a Cowork regeneration of the main
+// extracts can never wipe them. 2004 is the pre-2008 delimitation: its seats carry j ≥ 1000
+// (a separate continuity domain — no seat chains 2004↔2009) and joins.ts declares the breaks.
+type Overlay = {
+  seats_ge: Seat[]; seats_ae: Seat[]
+  party_ge_state: PartyAgg[]; party_ge_nat: PartyAgg[]; party_ae: PartyAgg[]
+  ge_turnout: Record<string, number>; ae_index: IndexRow[]; bypolls: Bypoll[]
+}
+const loadOverlay = () => getJSON<Overlay>('/data/overlay.json').catch(() => null)
+
+export const loadSeats = (arena: 'AE' | 'GE') =>
+  Promise.all([getJSON<Seat[]>(`/data/seats_${arena.toLowerCase()}.json`), loadOverlay()])
+    .then(([base, ov]) => (ov ? [...(arena === 'AE' ? ov.seats_ae : ov.seats_ge), ...base] : base))
+export const loadPartyAE = () =>
+  Promise.all([getJSON<PartyAgg[]>('/data/party_ae.json'), loadOverlay()])
+    .then(([base, ov]) => (ov ? [...ov.party_ae, ...base] : base))
+export const loadPartyGEState = () =>
+  Promise.all([getJSON<PartyAgg[]>('/data/party_ge_state.json'), loadOverlay()])
+    .then(([base, ov]) => (ov ? [...ov.party_ge_state, ...base] : base))
+export const loadPartyGENat = () =>
+  Promise.all([getJSON<PartyAgg[]>('/data/party_ge_nat.json'), loadOverlay()])
+    .then(([base, ov]) => (ov ? [...ov.party_ge_nat, ...base] : base))
+export const loadBypolls = () =>
+  Promise.all([getJSON<Bypoll[]>('/data/bypolls.json'), loadOverlay()])
+    .then(([base, ov]) => {
+      if (!ov?.bypolls?.length) return base
+      // dedupe insurance: if a future Cowork refresh adds the same bypolls, base wins
+      const seen = new Set(base.map(b => `${b.s}|${b.y}|${b.c}`))
+      return [...base, ...ov.bypolls.filter(b => !seen.has(`${b.s}|${b.y}|${b.c}`))]
+    })
 export const loadSegments = () => getJSON<Segment[]>('/data/segments.json')
-export const loadAEIndex = () => getJSON<IndexRow[]>('/data/ae_index.json')
+export const loadAEIndex = () =>
+  Promise.all([getJSON<IndexRow[]>('/data/ae_index.json'), loadOverlay()])
+    .then(([base, ov]) => (ov ? [...ov.ae_index, ...base] : base))
 export const loadAllianceCF = () => getJSON<CFRow[]>('/data/alliance_cf.json')
 export type StateTurnout = { AE: Record<string, number>; GE: Record<string, number> }
-export const loadStateTurnout = () => getJSON<StateTurnout>('/data/state_turnout.json')
+export const loadStateTurnout = () =>
+  Promise.all([getJSON<StateTurnout>('/data/state_turnout.json'), loadOverlay()])
+    .then(([base, ov]) => (ov ? { AE: base.AE, GE: { ...base.GE, ...ov.ge_turnout } } : base))
 export const loadSplitIndex = () => getJSON<Record<string, string[]>>('/data/split/index.json')
 const slug = (s: string) => s.toLowerCase().replace(/[^a-z0-9]+/g, '_').replace(/^_|_$/g, '')
 export const loadSplit = (geYear: number, state: string) => getJSON<SplitFile>(`/data/split/${geYear}_${slug(state)}.json`)

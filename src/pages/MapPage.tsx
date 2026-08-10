@@ -221,7 +221,7 @@ export default function MapPage() {
       <div className="flex items-center gap-4 flex-wrap">
         <div className="flex items-center gap-2 text-xs text-slate-500">
           Year
-          <input type="range" min={2009} max={2026} value={year} onChange={e => setYear(+e.target.value)} className="w-56 accent-gold" />
+          <input type="range" min={2004} max={2026} value={year} onChange={e => setYear(+e.target.value)} className="w-56 accent-gold" />
           <span className="text-xl font-bold tabular-nums text-ink">{activeYear}</span>
         </div>
         <div className="flex items-center gap-2 text-xs text-slate-500">
