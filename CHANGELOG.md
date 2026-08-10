@@ -5,6 +5,25 @@ Readable history of the app (newest first). Engineering detail + gotchas live in
 
 ---
 
+## 2026-08-10 — 2004 elections + fresh by-elections
+- **The dataset now reaches back to 2004.** The 2004 General Election (all 543 seats) and the
+  six assembly elections of the 2004 cycle — undivided Andhra Pradesh (294, split into today's
+  Telangana/AP), Karnataka, Maharashtra, Odisha, Sikkim, Arunachal — join the product, with
+  party vote shares, margins, winners and runner-ups, **validated seat-for-seat against the
+  official results** (INC 145 / BJP 138 nationally; NCP 71/INC 69 in Maharashtra; BJP 79/INC 65/JDS 58
+  in Karnataka; the INC+TRS+Left sweep of undivided AP…).
+- **2004's own alliances**, correctly: NDA-2004 (with TDP, AIADMK, Trinamool, SAD, BJD…),
+  the Congress-side seat pacts that became the UPA, the Left Front — including the TN and AP
+  cases where the Left sat inside the Congress pact. New party colours for the 2004-era parties
+  (JD(S), SAD, PMK, LJP, MDMK…).
+- **Honest boundaries:** 2004 was the pre-2008 constituency map, so no swing, flip or seat-history
+  math ever crosses 2004→2009 — the app marks them as different delimitations.
+- **By-elections brought current:** the five results missing from the last refresh — Davanagere
+  South (INC hold), Rahuri (BJP hold), Datia (INC hold), Manjalpur (BJP hold), and **Bankipur,
+  where Prashant Kishor won Jan Suraaj's first-ever assembly seat off the BJP**. (Ponda's bypoll
+  was cancelled and is correctly absent.)
+- Known gap: 2004 turnout percentages aren't in the source and show as n/a.
+
 ## 2026-07-04 — New look: "The New Democracy" design system, light + dark
 - **A full visual redesign** in the TND house style — a premium, editorial look built on
   three colours: **cream + forest-green + metallic gold** in the light theme, and a
