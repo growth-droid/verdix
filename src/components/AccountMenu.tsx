@@ -39,7 +39,7 @@ export default function AccountMenu() {
     return () => { document.removeEventListener('mousedown', onDoc); document.removeEventListener('keydown', onKey) }
   }, [open])
 
-  if (status !== 'allowed') return null
+  if (status !== 'allowed' || !user) return null   // hidden in open mode (no signed-in user)
 
   const name = user?.displayName || email || ''
   const initial = (name || 'U').trim().charAt(0).toUpperCase()

@@ -7,6 +7,7 @@ import {
 } from 'firebase/auth'
 import { doc, getDoc } from 'firebase/firestore'
 import { auth, db, googleProvider, firebaseReady } from './firebase'
+import { AUTH_ENABLED } from './config'
 
 // The permanent super-admin: can ALWAYS sign in, ALWAYS sees the admin panel, and is the only
 // email allowed to edit the allow-list. Hardcoded so a fresh deploy can bootstrap (he's never on
@@ -41,11 +42,12 @@ export function useAuth(): Ctx {
 const norm = (e: string | null | undefined) => (e || '').trim().toLowerCase()
 
 export function AuthProvider({ children }: { children: ReactNode }) {
-  const [status, setStatus] = useState<AuthStatus>(firebaseReady ? 'loading' : 'unconfigured')
+  const [status, setStatus] = useState<AuthStatus>(!AUTH_ENABLED ? 'allowed' : firebaseReady ? 'loading' : 'unconfigured')
   const [user, setUser] = useState<User | null>(null)
   const [error, setError] = useState<string | null>(null)
 
   useEffect(() => {
+    if (!AUTH_ENABLED) return                 // open mode: no sign-in, everyone allowed
     if (!firebaseReady || !auth) return
     const unsub = onAuthStateChanged(auth, async (u) => {
       setError(null)

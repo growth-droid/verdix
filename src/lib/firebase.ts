@@ -11,6 +11,7 @@
 import { initializeApp, type FirebaseApp } from 'firebase/app'
 import { getAuth, GoogleAuthProvider, type Auth } from 'firebase/auth'
 import { getFirestore, type Firestore } from 'firebase/firestore'
+import { AUTH_ENABLED } from './config'
 
 const cfg = {
   apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
@@ -28,7 +29,8 @@ export const firebaseReady = Boolean(cfg.apiKey && cfg.authDomain && cfg.project
 let app: FirebaseApp | undefined
 let authInst: Auth | undefined
 let dbInst: Firestore | undefined
-if (firebaseReady) {
+// Only initialise Firebase when auth is ON — in open mode we never connect to Google at all.
+if (AUTH_ENABLED && firebaseReady) {
   app = initializeApp(cfg)
   authInst = getAuth(app)
   dbInst = getFirestore(app)

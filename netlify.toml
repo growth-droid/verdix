@@ -22,8 +22,16 @@
     X-Frame-Options = "DENY"                          # block embedding our UI in another site (clickjacking / iframe data-lift)
     X-Content-Type-Options = "nosniff"
     Referrer-Policy = "strict-origin-when-cross-origin"
-    Permissions-Policy = "geolocation=(), microphone=(), camera=()"
+    Permissions-Policy = "geolocation=(), microphone=(), camera=(), payment=(), usb=(), interest-cohort=()"
     X-Robots-Tag = "noindex, nofollow"                # shareable by link, but kept out of search-engine indexes
+    Strict-Transport-Security = "max-age=63072000; includeSubDomains; preload"   # force HTTPS for 2y
+    # Strict Content-Security-Policy: ONLY our own origin can run scripts — any injected/XSS <script>
+    # is refused by the browser. Styles allow inline (React/ECharts) + Google Fonts; map workers need
+    # blob:; everything else is 'self'. All data/JS is same-origin, so nothing external is trusted.
+    # ⚠ WHEN YOU RE-ENABLE GOOGLE SIGN-IN (config.ts AUTH_ENABLED=true), append to this policy:
+    #   connect-src … https://*.googleapis.com https://identitytoolkit.googleapis.com https://securetoken.googleapis.com https://*.firebaseio.com
+    #   frame-src https://verdix-d369c.firebaseapp.com
+    Content-Security-Policy = "default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'none'; form-action 'self'; script-src 'self'; worker-src 'self' blob:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data: blob:; connect-src 'self'; upgrade-insecure-requests"
 
 # Data + geometry endpoints: not indexable, and only our own origin may read them in a browser (CORS).
 # Long-cache immutable build artifacts (filenames are content-hashed, so they change when content
