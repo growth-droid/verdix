@@ -1,0 +1,43 @@
+# Verdix static SPA — served with the same security posture as the old Netlify config.
+:8080 {
+	root * /srv
+	encode gzip zstd
+
+	# Security headers on every response.
+	header {
+		X-Frame-Options "DENY"
+		X-Content-Type-Options "nosniff"
+		Referrer-Policy "strict-origin-when-cross-origin"
+		Permissions-Policy "geolocation=(), microphone=(), camera=(), payment=(), usb=(), interest-cohort=()"
+		X-Robots-Tag "noindex, nofollow"
+		Strict-Transport-Security "max-age=63072000; includeSubDomains; preload"
+		# Strict CSP: only our own origin can run scripts (blocks injected/XSS <script>). Styles allow
+		# inline (React/ECharts) + Google Fonts; map workers need blob:. ⚠ WHEN RE-ENABLING GOOGLE
+		# SIGN-IN (config.ts AUTH_ENABLED=true) append to connect-src: https://*.googleapis.com
+		# https://identitytoolkit.googleapis.com https://securetoken.googleapis.com https://*.firebaseio.com
+		# and add: frame-src https://verdix-d369c.firebaseapp.com
+		Content-Security-Policy "default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'none'; form-action 'self'; script-src 'self'; worker-src 'self' blob:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data: blob:; connect-src 'self'; upgrade-insecure-requests"
+		-Server
+	}
+
+	# Anti-scrape: /data + /geo are only readable by our own app (same-origin browser fetch);
+	# direct hits, curl, bots and hotlinks (no/other Sec-Fetch-Site) get 403.
+	@scrape {
+		path /data/* /geo/*
+		not header Sec-Fetch-Site same-origin
+		not header Sec-Fetch-Site same-site
+	}
+	respond @scrape "Forbidden — this endpoint is only available to the Verdix app." 403
+
+	# Caching: content-hashed assets are immutable; data/geometry are shorter-lived.
+	@immutable path /assets/* /glyphs/*
+	header @immutable Cache-Control "public, max-age=31536000, immutable"
+	@data path /data/*
+	header @data Cache-Control "public, max-age=3600"
+	@geo path /geo/*
+	header @geo Cache-Control "public, max-age=86400"
+
+	# SPA fallback: client routes → index.html; real files served directly.
+	try_files {path} /index.html
+	file_server
+}

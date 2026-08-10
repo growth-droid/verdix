@@ -1,0 +1,14 @@
+# Keep the Docker build context lean (npm ci reinstalls; the build produces dist).
+# NOTE: .env.local is intentionally NOT ignored — the (public) Firebase web config is inlined at build.
+node_modules
+dist
+.git
+.netlify
+.fly
+*.tsbuildinfo
+*.log
+_*.mjs
+_*.png
+_*.cjs
+.DS_Store
+Thumbs.db
