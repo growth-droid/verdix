@@ -22,7 +22,6 @@ export default function MapPage() {
   const [turn, setTurn] = useState<StateTurnout>({ AE: {}, GE: {} })
   const [picked, setPicked] = useState<Seat | null>(null)
   const [sp, setSp] = useSearchParams()
-  const view = sp.get('view') === 'grid' ? 'grid' : 'map'
   const grouped = sp.get('group') === 'state'
   const colorParam = sp.get('color') ?? 'winner'
   const mode = (['winner', 'alliance', 'margin', 'turnout', 'party'].includes(colorParam) ? colorParam : 'winner') as MapMode | 'party'
@@ -204,14 +203,6 @@ export default function MapPage() {
       .map(([p, e]) => ({ label: p, color: colorFor(p, e.a), n: e.n }))
   }, [grouped, stateLeader, isPhone])
 
-  const tiles = useMemo(() => [...byState.entries()].filter(([, seats]) => seats.length).map(([state, seats]) => {
-    const counts = new Map<string, number>()
-    seats.forEach(s => counts.set(s.p, (counts.get(s.p) || 0) + 1))
-    const top = [...counts.entries()].sort((a, b) => b[1] - a[1])[0]
-    const seat0 = seats.find(s => s.p === top[0])!
-    return { state, total: seats.length, top: top[0], topSeats: top[1], color: colorFor(top[0], seat0.a), year: seats[0]?.y }
-  }).sort((a, b) => b.total - a.total), [byState])
-
   const setParam = (k: string, v: string | null) => {
     const next = new URLSearchParams(sp)
     if (v) next.set(k, v); else next.delete(k)
@@ -244,7 +235,6 @@ export default function MapPage() {
                 {mode === 'party' && <Select value={P} onChange={v => setParam('pp', v)} options={partyList} width="w-28" />}
               </div>
             )}
-            <div className="sm:ml-auto"><Seg options={[{ v: 'map', label: 'Map' }, { v: 'grid', label: 'Grid' }]} value={view} onChange={v => setParam('view', v === 'grid' ? 'grid' : null)} /></div>
           </div>
         </div>
       </div>
@@ -259,7 +249,7 @@ export default function MapPage() {
             <Skeleton h={246} />
           </div>
         </div>
-      ) : view === 'map' ? (
+      ) : (
         <div className="grid lg:grid-cols-3 gap-4">
           <div className="lg:col-span-2 min-h-[340px] sm:min-h-[480px] flex flex-col">
             {pick && (
@@ -307,21 +297,6 @@ export default function MapPage() {
               </div>
             </div>
           </div>
-        </div>
-      ) : (
-        <div className="grid grid-cols-1 gap-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6">
-          {tiles.map(t => (
-            <button key={t.state} onClick={() => { setState(t.state); nav('/state') }}
-              className="card p-3 text-left hover:!border-white/25 transition-all hover:-translate-y-[1px]"
-              style={{ background: `linear-gradient(135deg, ${t.color}22, rgb(var(--s900) / .3))` }}>
-              <div className="text-sm font-semibold truncate">{t.state}</div>
-              <div className="text-xs text-muted">{t.year} · {t.total} seats</div>
-              <div className="mt-1 flex items-center gap-2">
-                <span className="inline-block w-3 h-3 rounded-full" style={{ background: t.color }} />
-                <span className="text-xs">{t.top} · {t.topSeats}</span>
-              </div>
-            </button>
-          ))}
         </div>
       )}
 
