@@ -5,6 +5,22 @@ Readable history of the app (newest first). Engineering detail + gotchas live in
 
 ---
 
+## 2026-08-11 — Works like an app on your phone, and everything is readable
+- **Mobile.** The dashboard is now built for a phone: a **bottom tab bar** (Results · Analysis ·
+  Strategy) sits in thumb reach and opens a sheet listing that group's pages, the header shrinks to
+  the wordmark plus your account, and every page is compact — no wasted padding. It can be added to
+  your home screen and behaves like an installed app.
+- **No more sideways scrolling.** Every screen used to slide left-right on a phone. All eight now
+  sit inside the screen; wide tables and charts scroll *inside their own card* instead of dragging
+  the whole page.
+- **Text you can actually read.** Secondary text was too light in both themes — darkened on the
+  cream theme, lifted on the dark one. Gold links and headings were the worst offenders on cream and
+  are now a deeper gold. Party names shown in their party colour, and the numbers inside coloured
+  heat-map cells, now adjust automatically so they stay legible on either background.
+- Verified by measurement, not by eye: **zero sideways scroll and zero unreadable text** across all
+  eight screens in both themes. Desktop is unchanged.
+- **Story deck removed** (old links land on National), and the menus now sit centre-right.
+
 ## 2026-08-10 — Simpler navigation: four menus instead of nine tabs
 - The header no longer lists nine tabs in a row. The modules are now grouped into **four
   menus**: **Results** (National · States), **Analysis** (Change · Trends · Compare · Bypolls),
