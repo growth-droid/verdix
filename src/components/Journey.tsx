@@ -11,7 +11,11 @@ export function PageTagline() {
   return (
     <div className="mb-4 flex flex-wrap items-baseline gap-x-3 gap-y-1">
       <h2 className="font-display font-bold text-[22px] tracking-tight leading-none flex items-baseline gap-2">
-        <span className="text-gold text-base leading-none">✦</span>{m.tab}
+        <span className="text-gold text-base leading-none">✦</span>
+        {m.group !== m.tab && (
+          <span className="font-sans font-medium text-[14px] text-faint">{m.group}<span className="mx-1.5 opacity-60">/</span></span>
+        )}
+        {m.tab}
       </h2>
       <span className="text-sm text-muted">{m.tagline}</span>
     </div>

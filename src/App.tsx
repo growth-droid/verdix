@@ -1,5 +1,5 @@
 import { useEffect, useRef } from 'react'
-import { Routes, Route, NavLink, Navigate, useLocation } from 'react-router-dom'
+import { Routes, Route, Navigate, useLocation } from 'react-router-dom'
 import MapPage from './pages/MapPage'
 import SignalsPage from './pages/SignalsPage'
 import StoryPage from './pages/StoryPage'
@@ -11,11 +11,11 @@ import BypollsPage from './pages/BypollsPage'
 import BattlegroundPage from './pages/BattlegroundPage'
 import AdminPage from './pages/AdminPage'
 import FilterBar from './components/FilterBar'
+import NavMenu from './components/NavMenu'
 import AccountMenu from './components/AccountMenu'
 import ThemeToggle from './components/ThemeToggle'
 import ErrorBoundary from './components/ErrorBoundary'
 import { PageTagline, JourneyNav } from './components/Journey'
-import { MODULES } from './lib/nav'
 
 export default function App() {
   const loc = useLocation()
@@ -40,18 +40,7 @@ export default function App() {
           Verdix
           <span className="font-quote italic hidden xl:inline text-[13px] font-medium tracking-wide text-gold/80">voter verdict intelligence</span>
         </h1>
-        <nav className="flex gap-1 text-[13px] overflow-x-auto">
-          {MODULES.map((m, i) => (
-            <NavLink key={m.to} to={m.to} end title={m.tagline} className={({ isActive }) =>
-              `px-3 py-1.5 rounded-lg whitespace-nowrap transition-colors duration-150 flex items-center gap-1.5 ${
-                isActive
-                  ? 'bg-gold/10 text-gold ring-1 ring-gold/30'
-                  : 'text-muted hover:text-ink hover:bg-white/[0.05]'
-              }`}>
-              <span className="text-[10px] text-faint tabular-nums">{i + 1}</span>{m.tab}
-            </NavLink>
-          ))}
-        </nav>
+        <NavMenu />
         <div className="ml-auto shrink-0 flex items-center gap-2.5">
           <ThemeToggle />
           <AccountMenu />
