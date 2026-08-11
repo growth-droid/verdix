@@ -5,6 +5,16 @@ Readable history of the app (newest first). Engineering detail + gotchas live in
 
 ---
 
+## 2026-08-10 — Simpler navigation: four menus instead of nine tabs
+- The header no longer lists nine tabs in a row. The modules are now grouped into **four
+  menus**: **Results** (National · States), **Analysis** (Change · Trends · Compare · Bypolls),
+  **Strategy** (Signals · Targets) and **Story**. Each menu lists its pages with a one-line
+  description, so you can see what's inside before clicking.
+- **Names standardised — every page is now a single word**: "Overview" → **National**,
+  "State" → **States**, "What changed" → **Change**, "Battlegrounds" → **Targets**. The step
+  numbers are gone from the nav, and each page now shows a small *Group / Page* breadcrumb.
+- Nothing moved or was removed — same nine modules, same links, just fewer things to scan.
+
 ## 2026-08-10 — 2004 elections + fresh by-elections
 - **The dataset now reaches back to 2004.** The 2004 General Election (all 543 seats) and the
   six assembly elections of the 2004 cycle — undivided Andhra Pradesh (294, split into today's
