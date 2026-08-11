@@ -4,7 +4,7 @@ import {
   loadSeats, loadPartyAE, loadPartyGEState, loadPartyGENat, loadStateTurnout,
   type Seat, type PartyAgg, type StateTurnout,
 } from '../lib/data'
-import { colorFor, ALLIANCE_COLORS, readable } from '../lib/colors'
+import { colorFor, ALLIANCE_COLORS, readable, inkOn } from '../lib/colors'
 import { useFilters, useTheme } from '../store'
 import ChoroplethMap from '../components/ChoroplethMap'
 import SeatDrawer from '../components/SeatDrawer'
@@ -337,23 +337,24 @@ export default function StatePage() {
   return (
     <div>
       <StickyControls>
-        <div className="flex items-center gap-4 flex-wrap">
+        <div className="flex items-center gap-x-3 gap-y-1.5 flex-wrap">
           <div>
             <h2 className="text-lg font-bold leading-tight tracking-tight">{st}</h2>
             <div className="kicker">{arena === 'AE' ? 'Assembly' : 'Lok Sabha'} deep dive · change region/arena above</div>
           </div>
-          <div className="flex items-center gap-2 text-xs text-slate-500">
+          <div className="flex items-center gap-2 text-xs text-muted">
             Election
             <Select value={String(vy)} onChange={v => setYear(+v)} options={[...years].reverse().map(String)} width="w-24" />
           </div>
-          <span className="text-sm text-slate-400">{years.length} elections · {selected.length} seats</span>
-          {!allIndia && <button onClick={() => navTo('/change')} className="ml-auto text-xs text-gold hover:text-gold underline decoration-dotted decoration-gold/40 underline-offset-2 transition-colors">What changed in {st} →</button>}
+          <span className="hidden sm:inline text-sm text-muted">{years.length} elections · {selected.length} seats</span>
+          {!allIndia && <button onClick={() => navTo('/change')} className="ml-auto inline-flex items-center min-h-[32px] py-1.5 sm:min-h-0 sm:py-0 text-xs text-gold hover:text-gold underline decoration-dotted decoration-gold/40 underline-offset-2 transition-colors">What changed in {st} →</button>}
         </div>
       </StickyControls>
 
+      {/* pale amber-200 vanished on the light canvas — readable() keeps the hue and clears AA on both themes */}
       {voteShareMissing && (
-        <div className="mb-4 flex items-start gap-2 rounded-xl border border-amber-400/30 bg-amber-400/[0.06] px-4 py-2.5 text-[12.5px] text-amber-200/90">
-          <span className="text-amber-300 shrink-0">⚠</span>
+        <div className="mb-4 flex items-start gap-2 rounded-xl border border-amber-400/30 bg-amber-400/[0.06] px-4 py-2.5 text-[12.5px]" style={{ color: readable('#f59e0b', mode) }}>
+          <span className="shrink-0">⚠</span>
           <span><b>{st} {vy}</b> shipped as a winners-only result — its candidate votes aren’t in the source data, so <b>vote share isn’t available for this election</b>. Seat counts, the map and reservation splits are complete; the vote-share line and the swing chart skip {vy}. Pick an earlier election above to see vote share.</span>
         </div>
       )}
@@ -371,15 +372,15 @@ export default function StatePage() {
             </div>
           )}
           <div className="overflow-x-auto">
-            <table className="w-full text-[12.5px] min-w-[560px]">
+            <table className="w-full text-[11.5px] min-w-[420px] sm:text-[12.5px] sm:min-w-[560px]">
               <thead>
-                <tr className="text-faint">
+                <tr className="text-muted">
                   <th className="text-left font-medium py-1 pr-2 align-bottom" rowSpan={2}>Party</th>
                   <th className="text-center font-semibold px-2 pb-1 text-muted border-b border-white/[0.08]" colSpan={2}>Assembly · {scorecard.aeY ?? '–'}</th>
                   <th className="text-center font-semibold px-2 pb-1 text-muted border-b border-white/[0.08]" colSpan={2}>Lok Sabha · {scorecard.geY ?? '–'}</th>
                   <th className="text-right font-medium pl-2 align-bottom" rowSpan={2} title="Lok Sabha vote share minus Assembly vote share">LS − AE</th>
                 </tr>
-                <tr className="text-faint text-[10px] uppercase tracking-wide">
+                <tr className="text-muted text-[11px] uppercase tracking-wide">
                   <th className="text-right font-medium px-2 pb-1">Seats</th><th className="text-right font-medium px-2 pb-1">Vote%</th>
                   <th className="text-right font-medium px-2 pb-1">Seats</th><th className="text-right font-medium px-2 pb-1">Vote%</th>
                 </tr>
@@ -391,9 +392,9 @@ export default function StatePage() {
                     <tr key={r.p} className="border-t border-white/[0.05] hover:bg-white/[0.03] transition-colors">
                       <td className="py-1.5 pr-2 whitespace-nowrap"><Dot color={colorFor(r.p, r.a)} /><b className="text-ink">{r.p}</b></td>
                       <td className="text-right px-2 tabular-nums text-ink font-semibold">{r.aeS != null ? r.aeS : '–'}</td>
-                      <td className="text-right px-2 tabular-nums text-muted">{r.aeV != null ? r.aeV.toFixed(1) : '–'}</td>
+                      <td className="text-right px-2 tabular-nums text-ink">{r.aeV != null ? r.aeV.toFixed(1) : '–'}</td>
                       <td className="text-right px-2 tabular-nums text-ink font-semibold">{r.geS != null ? r.geS : '–'}</td>
-                      <td className="text-right px-2 tabular-nums text-muted">{r.geV != null ? r.geV.toFixed(1) : '–'}</td>
+                      <td className="text-right px-2 tabular-nums text-ink">{r.geV != null ? r.geV.toFixed(1) : '–'}</td>
                       <td className="text-right pl-2 tabular-nums font-semibold" style={{ color: gap == null ? 'rgb(var(--s500))' : readable(gap > 0.3 ? '#16a34a' : gap < -0.3 ? '#dc2626' : '#64748b', mode) }}>
                         {gap == null ? '–' : (gap > 0 ? '+' : '') + gap}
                       </td>
@@ -409,9 +410,9 @@ export default function StatePage() {
       {/* Big seat map on the left; swing + strongholds stacked on the right (map stretches to match) */}
       {allIndia ? (
         <ChartCard className="mb-4" title={`Seat map · All India · ${vy}`}>
-          <ChoroplethMap key={arena + st + vy + 'w'} byState={mapByState} arena={arena} activeYear={vy} height="h-[460px]"
+          <ChoroplethMap key={arena + st + vy + 'w'} byState={mapByState} arena={arena} activeYear={vy} height="h-[280px] sm:h-[460px]"
             onPick={seat => { if (seat) setPicked(seat) }} />
-          <div className="mt-1.5 text-[11px] text-faint">Click any seat for its full constituency report.</div>
+          <div className="mt-1.5 text-[11.5px] text-muted">Click any seat for its full constituency report.</div>
         </ChartCard>
       ) : (
       <div className="grid lg:grid-cols-2 gap-4 mb-4 lg:items-stretch">
@@ -419,11 +420,11 @@ export default function StatePage() {
           note={mapColor === 'security'
             ? <>Green = a party always wins here (stronghold). Red = the seat changes hands (swing — where the contest is live). <Info>Computed over this state's comparable elections in the current arena.</Info></>
             : undefined}>
-          <div className="mb-2 flex items-center gap-2 text-xs text-muted">
+          <div className="mb-2 flex flex-wrap items-center gap-x-2 gap-y-1.5 text-xs text-muted">
             Colour
             <Seg options={[{ v: 'winner', label: 'Winner' }, { v: 'alliance', label: 'Alliance' }, { v: 'security', label: 'Safe vs Swing' }]} value={mapColor} onChange={v => setMapColor(v as 'winner' | 'alliance' | 'security')} />
           </div>
-          <div className="flex-1 min-h-[400px]">
+          <div className="flex-1 min-h-[260px] lg:min-h-[400px]">
             <ChoroplethMap key={arena + st + vy + mapColor} byState={mapByState} arena={arena} activeYear={vy} focusState={st} height="h-full"
               mode={mapColor === 'alliance' ? 'alliance' : 'winner'}
               colorOf={mapColor === 'security' ? securityColorOf : undefined}
@@ -432,21 +433,21 @@ export default function StatePage() {
               legendItems={mapColor === 'security' ? securityLegend : undefined}
               onPick={seat => { if (seat) setPicked(seat) }} />
           </div>
-          <div className="mt-1.5 text-[11px] text-faint">Click any seat for its full constituency report.</div>
+          <div className="mt-1.5 text-[11.5px] text-muted">Click any seat for its full constituency report.</div>
         </ChartCard>
 
         <div className="flex flex-col gap-4 min-w-0">
           <ChartCard title={`Swing ${prevY ?? '–'} → ${vy} · change in vote share`}
             note={swingData === 'incomparable' ? undefined : `Each bar = ${vy} vote share − ${prevY} vote share (e.g. 44.0% → 46.2% = +2.2%). Positive = gained share. Parties under 1.5% both times hidden.`}>
             {swingData === 'incomparable'
-              ? <div className="h-[280px] flex items-center justify-center text-amber-300/90 text-sm text-center px-8">
+              ? <div className="h-[150px] sm:h-[280px] flex items-center justify-center text-sm text-center px-8" style={{ color: readable('#f59e0b', mode) }}>
                   ⚠ {prevY} and {vy} are on different delimitations in {st} — swing is not defined (metrics catalog caveat 4).
                 </div>
               : swingData
                 ? <Chart option={swingData} style={{ height: 280 }} notMerge />
                 : voteShareMissing
-                  ? <div className="h-[280px] flex items-center justify-center text-amber-200/80 text-sm text-center px-8">Vote share isn’t in the source for {st} {vy} (winners-only), so swing vs {prevY} can’t be computed. Select an earlier election above.</div>
-                  : <div className="h-[280px] flex items-center justify-center text-slate-500 text-sm">No earlier election before {vy}</div>}
+                  ? <div className="h-[150px] sm:h-[280px] flex items-center justify-center text-sm text-center px-8" style={{ color: readable('#f59e0b', mode) }}>Vote share isn’t in the source for {st} {vy} (winners-only), so swing vs {prevY} can’t be computed. Select an earlier election above.</div>
+                  : <div className="h-[150px] sm:h-[280px] flex items-center justify-center text-muted text-sm">No earlier election before {vy}</div>}
           </ChartCard>
 
           {/* Stronghold ↔ Swing: which seats are locked up and which are actually in play */}
@@ -456,9 +457,10 @@ export default function StatePage() {
             {security.total ? (
               <div>
                 <div className="flex flex-wrap items-center gap-x-3 gap-y-1.5 mb-2.5">
-                  <span className="px-2.5 py-1 rounded-lg border border-emerald-400/25 bg-white/[0.03] text-[11.5px] text-emerald-200/90">{security.safe + security.lean} stronghold</span>
-                  <span className="px-2.5 py-1 rounded-lg border border-red-400/25 bg-white/[0.03] text-[11.5px] text-red-200/90">{security.swingN} swing</span>
-                  {security.holds.length > 0 && <span className="text-faint text-[11px]">held by</span>}
+                  {/* emerald-200/red-200 are unreadable on the cream canvas — readable() clears AA on both themes */}
+                  <span className="px-2.5 py-1 rounded-lg border border-emerald-400/25 bg-white/[0.03] text-[11.5px]" style={{ color: readable(SAFE, mode) }}>{security.safe + security.lean} stronghold</span>
+                  <span className="px-2.5 py-1 rounded-lg border border-red-400/25 bg-white/[0.03] text-[11.5px]" style={{ color: readable('#dc2626', mode) }}>{security.swingN} swing</span>
+                  {security.holds.length > 0 && <span className="text-muted text-[11px]">held by</span>}
                   {security.holds.map(h => (
                     <span key={h.p} className="text-[11.5px] text-muted whitespace-nowrap"><Dot color={colorFor(h.p, h.a)} />{h.p} <b className="text-ink tabular-nums">{h.n}</b></span>
                   ))}
@@ -476,25 +478,25 @@ export default function StatePage() {
                             <span key={i} title={`${w.y}: ${w.p}`} className="inline-flex items-center"><Dot color={colorFor(w.p, w.a)} /></span>
                           ))}
                         </span>
-                        <span className="ml-auto text-faint">now {c.cur.p}</span>
+                        <span className="ml-auto text-muted">now {c.cur.p}</span>
                       </div>
                     ))}
-                    {!swingSeats.length && <div className="text-faint text-xs py-4 text-center">No swing seats — every seat has a clear owner.</div>}
+                    {!swingSeats.length && <div className="text-muted text-xs py-4 text-center">No swing seats — every seat has a clear owner.</div>}
                   </> : <>
                     {strongholdSeats.map(c => (
                       <div key={c.cur.j} className="flex items-center gap-2 text-[11px] border-b border-white/[0.05] py-1">
                         <Dot color={colorFor(c.party!, c.a)} />
                         <span className="w-28 shrink-0 truncate">{tc(c.cur.c)}</span>
-                        <span className="text-faint">{c.party}</span>
-                        <span className="ml-auto text-faint tabular-nums">won {c.wins}/{c.total} · {c.status === 'safe' ? 'safe' : 'lean'}</span>
+                        <span className="text-muted">{c.party}</span>
+                        <span className="ml-auto text-muted tabular-nums">won {c.wins}/{c.total} · {c.status === 'safe' ? 'safe' : 'lean'}</span>
                       </div>
                     ))}
-                    {!strongholdSeats.length && <div className="text-faint text-xs py-4 text-center">No strongholds — every seat is competitive.</div>}
+                    {!strongholdSeats.length && <div className="text-muted text-xs py-4 text-center">No strongholds — every seat is competitive.</div>}
                   </>}
                 </div>
               </div>
             ) : (
-              <div className="h-[120px] flex items-center justify-center text-faint text-sm">Need at least two comparable elections to classify seats.</div>
+              <div className="h-[120px] flex items-center justify-center text-muted text-sm">Need at least two comparable elections to classify seats.</div>
             )}
           </ChartCard>
         </div>
@@ -518,7 +520,7 @@ export default function StatePage() {
           <div>
             {contest.rival && (
               <div className="text-[12.5px] text-muted mb-3">
-                Main contest: <b style={{ color: colorFor(contest.rival.a) }}>{contest.rival.a}</b> vs <b style={{ color: colorFor(contest.rival.b) }}>{contest.rival.b}</b> — they finished 1-2 in <b className="text-ink">{contest.rival.n}</b> of {contest.total} decided seats.
+                Main contest: <b style={{ color: readable(colorFor(contest.rival.a), mode) }}>{contest.rival.a}</b> vs <b style={{ color: readable(colorFor(contest.rival.b), mode) }}>{contest.rival.b}</b> — they finished 1-2 in <b className="text-ink">{contest.rival.n}</b> of {contest.total} decided seats.
               </div>
             )}
             <div className="flex flex-col xl:flex-row gap-4 xl:items-start">
@@ -526,9 +528,9 @@ export default function StatePage() {
                 <table className="text-xs border-collapse">
                   <thead>
                     <tr>
-                      <th className="p-2 text-left text-faint font-medium whitespace-nowrap">won ↓ / runner-up →</th>
+                      <th className="p-2 text-left text-muted font-medium whitespace-nowrap">won ↓ / runner-up →</th>
                       {contest.ps.map(r => <th key={r} className="p-2 text-center font-medium whitespace-nowrap"><Dot color={colorFor(r)} />{r}</th>)}
-                      <th className="p-2 text-right text-faint font-medium">won</th>
+                      <th className="p-2 text-right text-muted font-medium">won</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -538,10 +540,16 @@ export default function StatePage() {
                         {contest.ps.map(r => {
                           const n = w === r ? 0 : contest.get(w, r)
                           const isSel = !!contestSel && contestSel.w === w && contestSel.r === r
-                          const alpha = n ? Math.round((0.14 + 0.62 * (n / contest.maxCell)) * 255).toString(16).padStart(2, '0') : ''
+                          const frac = n ? 0.14 + 0.62 * (n / contest.maxCell) : 0
+                          const alpha = n ? Math.round(frac * 255).toString(16).padStart(2, '0') : ''
+                          const cellHue = colorFor(w, contest.aOf.get(w))
                           return <td key={r} onClick={() => { if (n > 0) setContestSel(isSel ? null : { w, r }) }}
                             className={`p-2 text-center tabular-nums ${n > 0 ? 'cursor-pointer' : ''} ${isSel ? 'ring-2 ring-inset ring-white/80' : n > 0 ? 'hover:ring-2 hover:ring-inset hover:ring-white/30' : ''}`}
-                            style={{ background: n ? colorFor(w, contest.aOf.get(w)) + alpha : (w === r ? 'rgba(148,163,184,0.05)' : undefined) }}>{w === r ? '·' : (n || '')}</td>
+                            style={{
+                              background: n ? cellHue + alpha : (w === r ? 'rgba(148,163,184,0.05)' : undefined),
+                              // the count sits ON the party tint, so pick ink by the blended fill, not the card
+                              color: n ? inkOn(cellHue, frac, mode) : undefined,
+                            }}>{w === r ? '·' : (n || '')}</td>
                         })}
                         <td className="p-2 text-right tabular-nums text-muted">{contest.rowTotal(w)}</td>
                       </tr>
@@ -552,14 +560,16 @@ export default function StatePage() {
               <div className="xl:flex-1 xl:min-w-0 xl:self-stretch xl:border-l xl:border-white/[0.06] xl:pl-4">
                 {contestSel ? (
                   <div className="border-t border-white/[0.06] pt-3 xl:border-t-0 xl:pt-0">
-                    <div className="text-[12.5px] mb-2"><b style={{ color: colorFor(contestSel.w, contest.aOf.get(contestSel.w)) }}>{contestSel.w}</b> beat <b style={{ color: colorFor(contestSel.r) }}>{contestSel.r}</b> in <b className="text-ink">{contestSeats.length}</b> seat{contestSeats.length !== 1 ? 's' : ''} · {vy} <button onClick={() => setContestSel(null)} className="ml-1 text-faint underline decoration-dotted hover:text-ink">clear</button></div>
-                    <SortTable rows={contestSeats} cols={closeCols} defaultSort="m" initialDir="asc" maxH={320} />
+                    <div className="text-[12.5px] mb-2"><b style={{ color: readable(colorFor(contestSel.w, contest.aOf.get(contestSel.w)), mode) }}>{contestSel.w}</b> beat <b style={{ color: readable(colorFor(contestSel.r), mode) }}>{contestSel.r}</b> in <b className="text-ink">{contestSeats.length}</b> seat{contestSeats.length !== 1 ? 's' : ''} · {vy} <button onClick={() => setContestSel(null)} className="ml-1 text-muted underline decoration-dotted hover:text-ink">clear</button></div>
+                    <div className="overflow-x-auto -mx-1 px-1">
+                      <SortTable rows={contestSeats} cols={closeCols} defaultSort="m" initialDir="asc" maxH={320} />
+                    </div>
                   </div>
-                ) : <div className="text-[11px] text-faint pt-1 xl:pt-2">Click any coloured cell to list the seats where that party beat that runner-up.</div>}
+                ) : <div className="text-[11.5px] text-muted pt-1 xl:pt-2">Click any coloured cell to list the seats where that party beat that runner-up.</div>}
               </div>
             </div>
           </div>
-        ) : <div className="h-[120px] grid place-items-center text-faint text-sm">Not enough contested seats to map rivalries here.</div>}
+        ) : <div className="h-[120px] grid place-items-center text-muted text-sm">Not enough contested seats to map rivalries here.</div>}
       </ChartCard>
 
       <div className="grid lg:grid-cols-2 gap-4">
@@ -571,11 +581,11 @@ export default function StatePage() {
           note="Grouped bars (not stacked): how each party's wins split across General / SC / ST seats this election.">
           {reservation.cats.length > 1
             ? <Chart option={reservation.option} style={{ height: 280 }} notMerge />
-            : <div className="h-[280px] flex items-center justify-center text-faint text-sm">All seats are the same category here.</div>}
+            : <div className="h-[280px] flex items-center justify-center text-muted text-sm">All seats are the same category here.</div>}
         </ChartCard>
 
         <ChartCard className="lg:col-span-2" title={`Close seats · ${vy}`} note={`${close.length} seats decided by under ${band}% — the live battleground.`}>
-          <div className="mb-3 flex items-center gap-2 text-xs text-slate-400">
+          <div className="mb-3 flex flex-wrap items-center gap-x-2 gap-y-1.5 text-xs text-muted">
             Margin band
             <Seg options={[{ v: '1', label: '<1%' }, { v: '2', label: '<2%' }, { v: '3', label: '<3%' }, { v: '5', label: '<5%' }]}
               value={String(band)} onChange={v => setBand(+v)} />
@@ -586,7 +596,7 @@ export default function StatePage() {
               {closeBattles.rows.length ? (
                 <div>
                   {closeBattles.top && (
-                    <div className="text-[12px] text-muted mb-3">Tightest battleground: <b style={{ color: colorFor(closeBattles.top.a) }}>{closeBattles.top.a}</b> vs <b style={{ color: colorFor(closeBattles.top.b) }}>{closeBattles.top.b}</b> — <b className="text-ink">{closeBattles.top.n}</b> seats under {band}%.</div>
+                    <div className="text-[12px] text-muted mb-3">Tightest battleground: <b style={{ color: readable(colorFor(closeBattles.top.a), mode) }}>{closeBattles.top.a}</b> vs <b style={{ color: readable(colorFor(closeBattles.top.b), mode) }}>{closeBattles.top.b}</b> — <b className="text-ink">{closeBattles.top.n}</b> seats under {band}%.</div>
                   )}
                   <div className="space-y-2">
                     {closeBattles.rows.map(r => {
@@ -594,11 +604,11 @@ export default function StatePage() {
                       const sel = !!battleSel && ((battleSel.a === r.a && battleSel.b === r.b) || (battleSel.a === r.b && battleSel.b === r.a))
                       return (
                         <div key={r.a + r.b} onClick={() => setBattleSel(sel ? null : { a: r.a, b: r.b })}
-                          className={`grid grid-cols-[5.25rem_1fr_5.25rem] items-center gap-1.5 text-[11px] cursor-pointer rounded-md px-1.5 py-1 -mx-1.5 transition-colors ${sel ? 'bg-white/[0.08] ring-1 ring-white/25' : 'hover:bg-white/[0.04]'}`}
+                          className={`grid grid-cols-[3.5rem_1fr_3.5rem] sm:grid-cols-[5.25rem_1fr_5.25rem] items-center gap-1.5 text-[11px] cursor-pointer rounded-md px-1.5 py-2 sm:py-1 -mx-1.5 transition-colors ${sel ? 'bg-white/[0.08] ring-1 ring-white/25' : 'hover:bg-white/[0.04]'}`}
                           title={`${r.a} ${r.aw} – ${r.bw} ${r.b} · click to filter the table`}>
                           <div className="flex items-center justify-end gap-1.5 min-w-0">
-                            <span className="truncate font-semibold" style={{ color: colorFor(r.a) }}>{r.a}</span>
-                            <span className={`tabular-nums w-4 text-right ${aLead ? 'font-bold text-ink' : 'text-faint'}`}>{r.aw}</span>
+                            <span className="truncate font-semibold" style={{ color: readable(colorFor(r.a), mode) }}>{r.a}</span>
+                            <span className={`tabular-nums w-4 text-right ${aLead ? 'font-bold text-ink' : 'text-muted'}`}>{r.aw}</span>
                           </div>
                           <div className="flex items-center">
                             <div className="flex-1 flex justify-end"><div className="h-4 rounded-l-md transition-all" style={{ width: `${(r.aw / closeBattles.max) * 100}%`, background: colorFor(r.a), opacity: aLead ? 1 : 0.5 }} /></div>
@@ -606,22 +616,24 @@ export default function StatePage() {
                             <div className="flex-1 flex justify-start"><div className="h-4 rounded-r-md transition-all" style={{ width: `${(r.bw / closeBattles.max) * 100}%`, background: colorFor(r.b), opacity: !aLead ? 1 : 0.5 }} /></div>
                           </div>
                           <div className="flex items-center gap-1.5 min-w-0">
-                            <span className={`tabular-nums w-4 ${!aLead ? 'font-bold text-ink' : 'text-faint'}`}>{r.bw}</span>
-                            <span className="truncate font-semibold" style={{ color: colorFor(r.b) }}>{r.b}</span>
+                            <span className={`tabular-nums w-4 ${!aLead ? 'font-bold text-ink' : 'text-muted'}`}>{r.bw}</span>
+                            <span className="truncate font-semibold" style={{ color: readable(colorFor(r.b), mode) }}>{r.b}</span>
                           </div>
                         </div>
                       )
                     })}
                   </div>
-                  <div className="mt-3 text-[10.5px] text-faint leading-snug">Each row = a head-to-head in the close seats. The longer, brighter bar won more of those knife-edge seats; the centre line is the tie point. <b className="text-muted">Click a bar</b> to filter the table to that matchup.</div>
+                  <div className="mt-3 text-[11.5px] text-muted leading-snug">Each row = a head-to-head in the close seats. The longer, brighter bar won more of those knife-edge seats; the centre line is the tie point. <b className="text-muted">Click a bar</b> to filter the table to that matchup.</div>
                 </div>
-              ) : <div className="h-[160px] grid place-items-center text-faint text-sm">No close seats in this band — widen it above.</div>}
+              ) : <div className="h-[160px] grid place-items-center text-muted text-sm">No close seats in this band — widen it above.</div>}
             </div>
             <div>
               {battleSel && (
-                <div className="text-[11px] text-muted mb-2">Showing only <b style={{ color: colorFor(battleSel.a) }}>{battleSel.a}</b> ⟷ <b style={{ color: colorFor(battleSel.b) }}>{battleSel.b}</b> · {closeShown.length} of {close.length} close seats <button onClick={() => setBattleSel(null)} className="ml-1 text-faint underline decoration-dotted hover:text-ink">clear</button></div>
+                <div className="text-[11px] text-muted mb-2">Showing only <b style={{ color: readable(colorFor(battleSel.a), mode) }}>{battleSel.a}</b> ⟷ <b style={{ color: readable(colorFor(battleSel.b), mode) }}>{battleSel.b}</b> · {closeShown.length} of {close.length} close seats <button onClick={() => setBattleSel(null)} className="ml-1 text-muted underline decoration-dotted hover:text-ink">clear</button></div>
               )}
-              <SortTable rows={closeShown} cols={closeCols} defaultSort="m" initialDir="asc" maxH={360} />
+              <div className="overflow-x-auto -mx-1 px-1">
+                <SortTable rows={closeShown} cols={closeCols} defaultSort="m" initialDir="asc" maxH={360} />
+              </div>
             </div>
           </div>
         </ChartCard>

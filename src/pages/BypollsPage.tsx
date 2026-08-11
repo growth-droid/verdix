@@ -98,7 +98,7 @@ export default function BypollsPage() {
       </div>
       </StickyControls>
 
-      <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 mb-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 mb-4">
         <KPI label="Bypolls" value={kpi.total} sub="2009–2026 in data" />
         <KPI label="With verdict" value={kpi.judged} sub="previous holder known" />
         <KPI label="Held" value={kpi.held} accent="#10b981" />
@@ -109,21 +109,26 @@ export default function BypollsPage() {
       <div className="grid lg:grid-cols-3 gap-4">
         <ChartCard title="Timeline — every adjudicated bypoll" className="lg:col-span-2"
           note="Green = holder defended the seat, red = flipped. Clusters of red around one party are the early-warning signal.">
-          <Chart option={timeline} style={{ height: 380 }} notMerge />
+          <div className="h-[260px] sm:h-[380px]">
+            <Chart option={timeline} style={{ height: '100%' }} notMerge />
+          </div>
         </ChartCard>
         <div className="flex flex-col gap-4">
           <ChartCard title="Defend vs raid record">
-            <table className="w-full text-xs">
-              <thead className="text-slate-500 text-left"><tr><th className="py-1">Party</th><th className="text-right">Defended</th><th className="text-right">Held</th><th className="text-right">Raided</th><th className="text-right">Hold%</th></tr></thead>
-              <tbody>{ledger.map(e => (
-                <tr key={e.p} className="border-t border-slate-800/60">
-                  <td className="py-1.5"><Dot color={colorFor(e.p, e.a)} />{e.p}</td>
-                  <td className="text-right tabular-nums">{e.defended}</td>
-                  <td className="text-right tabular-nums">{e.held}</td>
-                  <td className="text-right tabular-nums">{e.gained}</td>
-                  <td className={`text-right tabular-nums ${e.rate != null && e.rate < 50 ? 'text-red-300' : 'text-emerald-300'}`}>{e.rate ?? '–'}</td>
-                </tr>))}</tbody>
-            </table>
+            <div className="overflow-x-auto">
+              <table className="w-full min-w-[360px] text-xs">
+                <thead className="text-muted text-left"><tr><th className="py-1">Party</th><th className="text-right">Defended</th><th className="text-right">Held</th><th className="text-right">Raided</th><th className="text-right">Hold%</th></tr></thead>
+                <tbody>{ledger.map(e => (
+                  <tr key={e.p} className="border-t border-slate-800/60">
+                    <td className="py-1.5"><Dot color={colorFor(e.p, e.a)} />{e.p}</td>
+                    <td className="text-right tabular-nums">{e.defended}</td>
+                    <td className="text-right tabular-nums">{e.held}</td>
+                    <td className="text-right tabular-nums">{e.gained}</td>
+                    {/* Hold% is the ledger's verdict number — the 300-tints are unreadable on the cream light canvas, so darken them there (mode is already in scope via useTheme). */}
+                    <td className={`text-right tabular-nums ${e.rate != null && e.rate < 50 ? (mode === 'light' ? 'text-red-700' : 'text-red-300') : (mode === 'light' ? 'text-emerald-700' : 'text-emerald-300')}`}>{e.rate ?? '–'}</td>
+                  </tr>))}</tbody>
+              </table>
+            </div>
           </ChartCard>
           <ChartCard title="Why the seat fell vacant" note="Votes for 2023+ bypolls pending in source (winners verified).">
             <Chart option={causes} style={{ height: 200 }} notMerge />

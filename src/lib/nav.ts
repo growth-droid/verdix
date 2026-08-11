@@ -3,11 +3,11 @@
 //
 // NOMENCLATURE (standardised): every tab label is ONE word, Title case, no sentence
 // fragments ("What changed" → "Change"), and the pair National/States reads as a set.
-// Group names are plain nouns: Results · Analysis · Strategy · Story.
+// Group names are plain nouns: Results · Analysis · Strategy.
 //
 // ORDER = the intended narrative flow, and it matches the group order so Prev/Next walks
-// the groups in sequence: where things stand → what moved → what to do → the whole story.
-export type GroupName = 'Results' | 'Analysis' | 'Strategy' | 'Story'
+// the groups in sequence: where things stand → what moved → what to act on.
+export type GroupName = 'Results' | 'Analysis' | 'Strategy'
 
 export type ModuleDef = {
   to: string
@@ -29,11 +29,9 @@ export const MODULES: ModuleDef[] = [
   // ── Strategy: what to act on ──
   { to: '/signals', group: 'Strategy', tab: 'Signals', tagline: 'The patterns that change a decision — auto-flagged with the numbers, drill to the seats.', blurb: 'What to act on, flagged for you.' },
   { to: '/battleground', group: 'Strategy', tab: 'Targets', tagline: 'Where the next election is winnable — the close, flippable seats.', blurb: 'Each party’s realistic targets.' },
-  // ── Story: the narrated deck ──
-  { to: '/story', group: 'Story', tab: 'Story', tagline: 'The whole story — a narrated deck of a state or the nation, assembly and Lok Sabha together.', blurb: 'The complete story as a slideshow.' },
 ]
 
-export const GROUP_ORDER: GroupName[] = ['Results', 'Analysis', 'Strategy', 'Story']
+export const GROUP_ORDER: GroupName[] = ['Results', 'Analysis', 'Strategy']
 
 /** The header menus: one entry per group, in order, each holding its modules. */
 export const NAV_GROUPS = GROUP_ORDER.map(label => ({

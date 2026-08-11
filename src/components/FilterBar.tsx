@@ -10,7 +10,7 @@ const ALL = 'All India'
 const ARENA_PAGES = new Set(['/', '/state', '/change', '/battleground'])
 // Pages that already render a single chosen region (so picking one updates them in place).
 // '/change' is region-aware too: All-India shows the national change, a region scopes to it.
-const STATE_CENTRIC = new Set(['/signals', '/story', '/state', '/compare', '/trends', '/bypolls', '/battleground', '/change'])
+const STATE_CENTRIC = new Set(['/signals', '/state', '/compare', '/trends', '/bypolls', '/battleground', '/change'])
 
 /** Persistent global context bar: one Region + Arena selection that the whole
  *  product shares, so analysis flows from module to module instead of resetting. */
@@ -30,16 +30,19 @@ export default function FilterBar() {
   const showArena = ARENA_PAGES.has(pathname)
 
   return (
-    <div className="border-b border-white/[0.05] bg-slate-950/50 backdrop-blur-xl px-6 py-2 flex items-center gap-3 flex-wrap">
-      <span className="kicker text-faint shrink-0">Focus</span>
-      <Select value={state ?? ALL} onChange={onRegion} options={[ALL, ...states]} width="w-52" />
+    <div className="border-b border-white/[0.05] bg-slate-950/50 backdrop-blur-xl px-3 sm:px-5 py-1.5 sm:py-2 flex items-center gap-2 sm:gap-3 flex-wrap">
+      <span className="kicker text-muted shrink-0 hidden sm:inline">Focus</span>
+      <Select value={state ?? ALL} onChange={onRegion} options={[ALL, ...states]} width="w-[9.5rem] sm:w-52" />
       {showArena && (
         <Seg options={[{ v: 'AE', label: 'Assembly' }, { v: 'GE', label: 'Lok Sabha' }]} value={arena} onChange={v => setArena(v as 'AE' | 'GE')} />
       )}
-      <span className="ml-auto text-[11px] text-faint hidden md:inline">
-        {state ? <>Focus: <span className="text-muted font-medium">{state}</span></> : <>Focus: <span className="text-muted font-medium">all of India</span></>}
-        {showArena ? <> · {arena === 'AE' ? 'Assembly' : 'Lok Sabha'}</> : null}
-        {state ? <> — <button onClick={() => { setState(null); if (pathname !== '/') nav('/') }} className="underline decoration-dotted hover:text-ink transition-colors">clear</button></> : null}
+      {/* Global scope readout — now visible on phones too: it is the only confirmation of what the
+          product is scoped to, and the only `clear` (which also exits a state-only page). On mobile it
+          drops onto its own full-width line; from md up it is the same right-aligned inline strip as before. */}
+      <span className="ml-auto w-full md:w-auto text-[11px] text-muted">
+        {state ? <>Focus: <span className="text-ink font-medium">{state}</span></> : <>Focus: <span className="text-ink font-medium">all of India</span></>}
+        {showArena ? <span className="hidden md:inline"> · {arena === 'AE' ? 'Assembly' : 'Lok Sabha'}</span> : null}
+        {state ? <> — <button onClick={() => { setState(null); if (pathname !== '/') nav('/') }} className="underline decoration-dotted hover:text-ink transition-colors inline-flex items-center min-h-[32px] px-1.5 -mx-1.5 md:inline md:min-h-0 md:px-0 md:mx-0">clear</button></> : null}
       </span>
     </div>
   )

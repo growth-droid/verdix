@@ -8,12 +8,14 @@ import SeatDrawer from '../components/SeatDrawer'
 import { Chart, Info, KPI, Seg, Select, Skeleton, StickyControls } from '../components/ui'
 import { activeByState, seatChanges, allianceBase } from '../lib/analysis'
 import { baseOpt, catAxis, valAxis, labelColor } from '../lib/theme'
+import { useIsPhone } from '../lib/useMedia'
 
 const WON = '#16a34a', LOST = '#dc2626'
 
 export default function MapPage() {
   const { arena, year, setYear, setState } = useFilters()
   const themeMode = useTheme()
+  const isPhone = useIsPhone()
   const lab = labelColor(themeMode)
   const OUT = themeMode === 'light' ? '#e2e8f0' : '#101727'   // "not in top-2" fill — flips with theme
   const [rows, setRows] = useState<Seat[]>([])
@@ -197,9 +199,10 @@ export default function MapPage() {
       x.n++
       c.set(e.p, x)
     }
-    return [...c.entries()].sort((a, b) => b[1].n - a[1].n).slice(0, 8)
+    // cap the overlay legend on phones — 8 rows cover too much of a ~358px-wide map
+    return [...c.entries()].sort((a, b) => b[1].n - a[1].n).slice(0, isPhone ? 4 : 8)
       .map(([p, e]) => ({ label: p, color: colorFor(p, e.a), n: e.n }))
-  }, [grouped, stateLeader])
+  }, [grouped, stateLeader, isPhone])
 
   const tiles = useMemo(() => [...byState.entries()].filter(([, seats]) => seats.length).map(([state, seats]) => {
     const counts = new Map<string, number>()
@@ -219,25 +222,28 @@ export default function MapPage() {
     <div>
       <StickyControls>
       <div className="flex items-center gap-4 flex-wrap">
-        <div className="flex items-center gap-2 text-xs text-slate-500">
+        <div className="flex w-full flex-1 items-center gap-2 text-xs text-slate-400 sm:w-auto sm:flex-none">
           Year
-          <input type="range" min={2004} max={2026} value={year} onChange={e => setYear(+e.target.value)} className="w-56 accent-gold" />
+          <input type="range" min={2004} max={2026} value={year} onChange={e => setYear(+e.target.value)} className="w-full min-w-0 h-8 accent-gold sm:w-56 sm:h-auto" />
           <span className="text-xl font-bold tabular-nums text-ink">{activeYear}</span>
         </div>
-        <div className="flex items-center gap-2 text-xs text-slate-500">
+        <div className="flex items-center gap-2 text-xs text-slate-400">
           Level
           <Seg options={[{ v: 'seat', label: 'Seats' }, { v: 'state', label: 'States' }]}
             value={grouped ? 'state' : 'seat'} onChange={v => setParam('group', v === 'state' ? 'state' : null)} />
         </div>
         {!grouped && (
-          <div className="flex items-center gap-2 text-xs text-slate-500">
+          <div className="flex w-full flex-wrap items-center gap-2 text-xs text-slate-400 sm:w-auto sm:flex-nowrap">
             Color
-            <Seg options={[{ v: 'winner', label: 'Winner' }, { v: 'alliance', label: 'Alliance' }, { v: 'margin', label: 'Margin' }, { v: 'turnout', label: 'Turnout' }, { v: 'party', label: 'Party' }]}
-              value={mode} onChange={v => setParam('color', v === 'winner' ? null : v)} />
-            {mode === 'party' && <Select value={P} onChange={v => setParam('pp', v)} options={partyList} width="w-28" />}
+            {/* the 5-pill row can't wrap — let it scroll inside its own box instead of widening the page */}
+            <div className="w-full overflow-x-auto sm:w-auto sm:overflow-visible">
+              <Seg options={[{ v: 'winner', label: 'Winner' }, { v: 'alliance', label: 'Alliance' }, { v: 'margin', label: 'Margin' }, { v: 'turnout', label: 'Turnout' }, { v: 'party', label: 'Party' }]}
+                value={mode} onChange={v => setParam('color', v === 'winner' ? null : v)} />
+            </div>
+            {mode === 'party' && <Select value={P} onChange={v => setParam('pp', v)} options={partyList} width="w-full sm:w-28" />}
           </div>
         )}
-        <div className="ml-auto">
+        <div className="w-full sm:w-auto sm:ml-auto">
           <Seg options={[{ v: 'map', label: 'Map' }, { v: 'grid', label: 'Grid' }]} value={view} onChange={v => setParam('view', v === 'grid' ? 'grid' : null)} />
         </div>
       </div>
@@ -245,21 +251,21 @@ export default function MapPage() {
 
       {!rows.length ? (
         <div className="grid lg:grid-cols-3 gap-4">
-          <Skeleton h={640} className="lg:col-span-2 !rounded-2xl" />
+          <Skeleton h={340} className="lg:col-span-2 !rounded-2xl lg:!h-[640px]" />
           <div className="flex flex-col gap-4">
-            <div className="grid grid-cols-2 gap-3"><Skeleton h={86} /><Skeleton h={86} /><Skeleton h={86} /><Skeleton h={86} /></div>
+            <div className="grid grid-cols-1 gap-3 sm:grid-cols-2"><Skeleton h={86} /><Skeleton h={86} /><Skeleton h={86} /><Skeleton h={86} /></div>
             <Skeleton h={266} />
             <Skeleton h={246} />
           </div>
         </div>
       ) : view === 'map' ? (
         <div className="grid lg:grid-cols-3 gap-4">
-          <div className="lg:col-span-2 min-h-[480px] flex flex-col">
+          <div className="lg:col-span-2 min-h-[340px] sm:min-h-[480px] flex flex-col">
             {pick && (
-              <div className="mb-2 flex items-center gap-2 text-xs shrink-0">
+              <div className="mb-2 flex flex-wrap items-center gap-2 text-xs shrink-0">
                 <span className="inline-block w-3 h-3 rounded-[3px] ring-1 ring-black/30" style={{ background: pickInfo?.color }} />
                 <span className="text-muted">Map filtered to {pick.kind === 'alliance' ? 'alliance' : 'party'} <b className="text-ink">{pick.value}</b> · {pickInfo?.n} seats</span>
-                <button onClick={() => setPick(null)} className="ml-1 px-2 py-0.5 rounded-md border border-white/10 text-faint hover:text-ink hover:border-white/25 transition-colors">clear ✕</button>
+                <button onClick={() => setPick(null)} className="ml-1 px-3 py-1.5 min-h-[32px] inline-flex items-center rounded-md border border-white/20 text-muted hover:text-ink hover:border-white/25 transition-colors sm:min-h-0 sm:px-2 sm:py-0.5">clear ✕</button>
               </div>
             )}
             <div className="flex-1 min-h-0">
@@ -276,7 +282,7 @@ export default function MapPage() {
             </div>
           </div>
           <div className="flex flex-col gap-4">
-            <div className="grid grid-cols-2 gap-3">
+            <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
               <KPI label="Seats" value={kpi.total.toLocaleString()} sub={arena === 'AE' ? 'held as of ' + activeYear : activeYear + ' Lok Sabha'} />
               <KPI label={<>Avg turnout <Info>Of everyone registered to vote, the share who actually voted. Uses official state turnout where seat-level figures aren't published; the sparkline is the trend across elections.</Info></>}
                 value={turnoutTrend.headline != null ? turnoutTrend.headline.toFixed(1) + '%' : 'n/a'}
@@ -288,23 +294,27 @@ export default function MapPage() {
               <KPI label={<>Close seats <Info>Seats the winner took by less than 3% of the vote — the genuine nail-biters.</Info></>} value={kpi.close.toLocaleString()} accent="#f87171" sub="margin &lt; 3%" />
             </div>
             <div className="card p-3">
-              <h3 className="kicker mb-1">Top parties · seats <span className="text-faint normal-case tracking-normal">· click to filter map</span></h3>
-              <Chart option={partyBar} style={{ height: 230 }} notMerge onEvents={barEvents} />
+              <h3 className="kicker mb-1">Top parties · seats <span className="text-muted normal-case tracking-normal">· click to filter map</span></h3>
+              <div className="h-[300px] sm:h-[230px]">
+                <Chart option={partyBar} style={{ height: '100%' }} notMerge onEvents={barEvents} />
+              </div>
             </div>
             <div className="card p-3 flex-1">
-              <h3 className="kicker mb-1">Alliance share <span className="text-faint normal-case tracking-normal">· click to filter map</span></h3>
-              <Chart option={donut} style={{ height: 210 }} notMerge onEvents={donutEvents} />
+              <h3 className="kicker mb-1">Alliance share <span className="text-muted normal-case tracking-normal">· click to filter map</span></h3>
+              <div className="h-[260px] sm:h-[210px]">
+                <Chart option={donut} style={{ height: '100%' }} notMerge onEvents={donutEvents} />
+              </div>
             </div>
           </div>
         </div>
       ) : (
-        <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-6 gap-3">
+        <div className="grid grid-cols-1 gap-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6">
           {tiles.map(t => (
             <button key={t.state} onClick={() => { setState(t.state); nav('/state') }}
               className="card p-3 text-left hover:!border-white/25 transition-all hover:-translate-y-[1px]"
-              style={{ background: `linear-gradient(135deg, ${t.color}22, rgba(15,23,42,.3))` }}>
+              style={{ background: `linear-gradient(135deg, ${t.color}22, rgb(var(--s900) / .3))` }}>
               <div className="text-sm font-semibold truncate">{t.state}</div>
-              <div className="text-xs text-slate-400">{t.year} · {t.total} seats</div>
+              <div className="text-xs text-muted">{t.year} · {t.total} seats</div>
               <div className="mt-1 flex items-center gap-2">
                 <span className="inline-block w-3 h-3 rounded-full" style={{ background: t.color }} />
                 <span className="text-xs">{t.top} · {t.topSeats}</span>

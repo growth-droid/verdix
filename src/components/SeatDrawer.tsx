@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom'
 import type { Seat } from '../lib/data'
 import { seatHistories, seatKey } from '../lib/analysis'
 import { comparable } from '../lib/joins'
-import { colorFor } from '../lib/colors'
+import { colorFor, readable } from '../lib/colors'
 import { baseOpt, catAxis, valAxis } from '../lib/theme'
 import { useFilters, useTheme } from '../store'
 import { Chart, Dot } from './ui'
@@ -31,9 +31,11 @@ export default function SeatDrawer({ seat, all, arena, onClose }:
   }, [onClose])
 
   // ── neutral palette (black in dark, white in light — never blue) ──
+  // light: faint/eyebrow/axis lifted to zinc-600 (#52525b) — the pale #a1a1aa/#71717a greys
+  // failed contrast on the white panel for eyebrows, KPI labels and 9–10px chart labels.
   const C = mode === 'light'
-    ? { bg: '#ffffff', panel: '#ffffff', panel2: '#f7f7f8', line: 'rgba(0,0,0,0.10)', text: '#0a0a0a', sub: '#3f3f46', faint: '#71717a', eyebrow: '#a1a1aa', axis: '#71717a', split: 'rgba(0,0,0,0.06)' }
-    : { bg: '#000000', panel: '#0c0c0e', panel2: '#141417', line: 'rgba(255,255,255,0.09)', text: '#fafafa', sub: '#a1a1aa', faint: '#71717a', eyebrow: '#71717a', axis: '#a1a1aa', split: 'rgba(255,255,255,0.06)' }
+    ? { bg: '#ffffff', panel: '#ffffff', panel2: '#f7f7f8', line: 'rgba(0,0,0,0.10)', text: '#0a0a0a', sub: '#3f3f46', faint: '#52525b', eyebrow: '#52525b', axis: '#52525b', split: 'rgba(0,0,0,0.06)', warn: '#a16207' }
+    : { bg: '#000000', panel: '#0c0c0e', panel2: '#141417', line: 'rgba(255,255,255,0.09)', text: '#fafafa', sub: '#a1a1aa', faint: '#71717a', eyebrow: '#71717a', axis: '#a1a1aa', split: 'rgba(255,255,255,0.06)', warn: '#fbbf24' }
 
   const A = useMemo(() => {
     const yrs = hist.map(h => h.y)
@@ -144,7 +146,7 @@ export default function SeatDrawer({ seat, all, arena, onClose }:
     tooltip: { ...baseOpt.tooltip, trigger: 'item', formatter: (q: { dataIndex: number }) => { const h = hist[q.dataIndex]; return `<b>${h.y}</b> · ${h.p ?? '–'}<br/>won by ${h.m != null ? h.m.toFixed(1) + '%' : '–'}` } },
     xAxis: { ...catAxis(hist.map(h => String(h.y))), ...ax },
     yAxis: { ...valAxis((v: number) => v + '%'), ...ax, splitLine: { lineStyle: { color: C.split } } },
-    series: [{ type: 'bar', barMaxWidth: 28, data: hist.map(h => ({ value: h.m, itemStyle: { color: colorFor(h.p, h.a), borderRadius: [3, 3, 0, 0] } })), label: { show: true, position: 'top', fontSize: 9, color: C.axis, formatter: (q: { value: number | null }) => (q.value != null ? q.value + '%' : '') } }],
+    series: [{ type: 'bar', barMaxWidth: 28, data: hist.map(h => ({ value: h.m, itemStyle: { color: colorFor(h.p, h.a), borderRadius: [3, 3, 0, 0] } })), label: { show: true, position: 'top', fontSize: 10, color: C.axis, formatter: (q: { value: number | null }) => (q.value != null ? q.value + '%' : '') } }],
   }), [hist, C.axis, C.split, C.line])
 
   const turnoutOpt = useMemo(() => ({
@@ -167,9 +169,9 @@ export default function SeatDrawer({ seat, all, arena, onClose }:
   )
   const Metric = ({ label, value, sub, tone }: { label: string; value: ReactNode; sub?: ReactNode; tone?: string }) => (
     <div style={{ background: C.panel2, border: `1px solid ${C.line}`, borderRadius: 12, padding: '10px 12px' }}>
-      <div style={{ fontSize: 9.5, letterSpacing: '.5px', textTransform: 'uppercase', color: C.faint }}>{label}</div>
+      <div style={{ fontSize: 9.5, letterSpacing: '.5px', textTransform: 'uppercase', color: C.sub }}>{label}</div>
       <div className="font-num" style={{ fontSize: 19, fontWeight: 800, color: tone ?? C.text, lineHeight: 1.15, marginTop: 2 }}>
-        {value}{sub != null && sub !== '' ? <span style={{ fontSize: 11, fontWeight: 500, color: C.faint, marginLeft: 5 }}>{sub}</span> : null}
+        {value}{sub != null && sub !== '' ? <span style={{ fontSize: 11, fontWeight: 500, color: C.sub, marginLeft: 5 }}>{sub}</span> : null}
       </div>
     </div>
   )
@@ -191,12 +193,12 @@ export default function SeatDrawer({ seat, all, arena, onClose }:
                 {chips.map((ch, i) => <span key={`${ch.t}${i}`} style={{ fontSize: 10.5, fontWeight: 600, color: ch.c, background: ch.c + '1f', border: `1px solid ${ch.c}44`, padding: '2px 9px', borderRadius: 999 }}>{ch.t}</span>)}
               </div>
             </div>
-            <button onClick={onClose} style={{ color: C.faint, fontSize: 26, lineHeight: 1 }} className="hover:opacity-70 transition-opacity">×</button>
+            <button onClick={onClose} style={{ color: C.faint, fontSize: 26, lineHeight: 1 }} className="hover:opacity-70 transition-opacity w-11 h-11 -mr-2 -mt-2 shrink-0 grid place-items-center">×</button>
           </div>
           {/* recommendation banner */}
-          <div className="mt-3.5 flex items-center gap-3" style={{ background: rec.c + '14', border: `1px solid ${rec.c}3a`, borderRadius: 12, padding: '9px 13px' }}>
+          <div className="mt-3.5 flex flex-col sm:flex-row sm:items-center gap-1.5 sm:gap-3" style={{ background: rec.c + '14', border: `1px solid ${rec.c}3a`, borderRadius: 12, padding: '9px 13px' }}>
             <span style={{ fontSize: 11, fontWeight: 800, letterSpacing: '.6px', color: rec.c, whiteSpace: 'nowrap' }}>{rec.k}</span>
-            <span style={{ width: 1, alignSelf: 'stretch', background: rec.c + '44' }} />
+            <span className="hidden sm:block" style={{ width: 1, alignSelf: 'stretch', background: rec.c + '44' }} />
             <span style={{ fontSize: 12.5, color: C.sub }}>{rec.t}</span>
           </div>
         </div>
@@ -247,7 +249,7 @@ export default function SeatDrawer({ seat, all, arena, onClose }:
           <div className="grid lg:grid-cols-2 gap-3.5">
             <Section eyebrow={`The mandate · ${seat.y}`}>
               <div className="flex items-center justify-between" style={{ fontSize: 13 }}>
-                <span className="flex items-center gap-2"><Dot color={colorFor(seat.p, seat.a)} /><b style={{ color: C.text }}>{seat.p}</b>{seat.a ? <span style={{ color: C.faint, fontSize: 11 }}>· {seat.a}</span> : null}</span>
+                <span className="flex items-center gap-2"><Dot color={colorFor(seat.p, seat.a)} /><b style={{ color: C.text }}>{seat.p}</b>{seat.a ? <span style={{ color: C.sub, fontSize: 11 }}>· {seat.a}</span> : null}</span>
                 <span className="font-num" style={{ fontWeight: 800, color: C.text }}>{seat.v != null ? seat.v.toFixed(1) + '%' : '–'}</span>
               </div>
               <div style={{ fontSize: 12.5, color: C.sub, marginTop: 3 }}>{tc(seat.w) ?? '—'}</div>
@@ -275,13 +277,13 @@ export default function SeatDrawer({ seat, all, arena, onClose }:
               <div style={{ fontSize: 12.5, color: C.sub }}>
                 Average top-two share <b style={{ color: C.text }}>{A.bipolar != null ? A.bipolar.toFixed(0) + '%' : '–'}</b> — {A.bipolar == null ? 'unknown' : A.bipolar >= 82 ? 'a straight two-party fight.' : A.bipolar >= 68 ? 'mostly two-cornered with a live third force.' : 'a fragmented, multi-cornered field.'}
               </div>
-              <div style={{ fontSize: 12.5, color: C.sub, marginTop: 7 }}>{hasRivalry ? <>Defining rivalry · <b style={{ color: C.text }}>{A.rivalry![0]}</b> <span style={{ color: C.faint }}>({A.rivalry![1]} of {N})</span></> : <span style={{ color: C.faint }}>No recurring matchup — challengers rotate.</span>}</div>
+              <div style={{ fontSize: 12.5, color: C.sub, marginTop: 7 }}>{hasRivalry ? <>Defining rivalry · <b style={{ color: C.text }}>{A.rivalry![0]}</b> <span style={{ color: C.sub }}>({A.rivalry![1]} of {N})</span></> : <span style={{ color: C.sub }}>No recurring matchup — challengers rotate.</span>}</div>
               <div style={{ fontSize: 10, letterSpacing: '.5px', textTransform: 'uppercase', color: C.faint, marginTop: 12, marginBottom: 5 }}>Who contests here</div>
               <div style={{ display: 'flex', flexDirection: 'column', gap: 6 }}>
                 {A.contenders.slice(0, 6).map(c => (
                   <div key={c.p} className="flex items-center justify-between" style={{ fontSize: 12 }}>
                     <span className="flex items-center gap-1.5"><Dot color={colorFor(c.p, c.a)} /><b style={{ color: C.text }}>{c.p}</b></span>
-                    <span style={{ color: C.faint }}>{c.first ? `${c.first}× won` : ''}{c.first && c.second ? ' · ' : ''}{c.second ? `${c.second}× 2nd` : ''}</span>
+                    <span style={{ color: C.sub }}>{c.first ? `${c.first}× won` : ''}{c.first && c.second ? ' · ' : ''}{c.second ? `${c.second}× 2nd` : ''}</span>
                   </div>
                 ))}
               </div>
@@ -297,11 +299,11 @@ export default function SeatDrawer({ seat, all, arena, onClose }:
               </div>
               <div>
                 <div style={{ fontSize: 11, color: C.sub, marginBottom: 4 }}>Winning margin <span style={{ color: C.faint }}>· colour = winner</span></div>
-                {A.withMargin > 0 ? <Chart option={marginOpt} h={158} /> : <div style={{ height: 158, fontSize: 12, color: C.faint }} className="grid place-items-center">No margin data</div>}
+                {A.withMargin > 0 ? <Chart option={marginOpt} h={158} /> : <div style={{ height: 158, fontSize: 12, color: C.sub }} className="grid place-items-center">No margin data</div>}
               </div>
               <div>
                 <div style={{ fontSize: 11, color: C.sub, marginBottom: 4 }}>Turnout</div>
-                {A.meanT != null ? <Chart option={turnoutOpt} h={158} /> : <div style={{ height: 158, fontSize: 12, color: C.faint }} className="grid place-items-center">No turnout data</div>}
+                {A.meanT != null ? <Chart option={turnoutOpt} h={158} /> : <div style={{ height: 158, fontSize: 12, color: C.sub }} className="grid place-items-center">No turnout data</div>}
               </div>
             </div>
           </Section>
@@ -309,7 +311,7 @@ export default function SeatDrawer({ seat, all, arena, onClose }:
           {/* volatility + swing math */}
           <div className="grid lg:grid-cols-2 gap-3.5">
             <Section eyebrow="Volatility & incumbency">
-              <div className="grid grid-cols-2 gap-2.5">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
                 <Metric label="Classification" value={<span style={{ color: fortress ? '#10b981' : (allDiff || swingy) ? '#f43f5e' : '#38bdf8' }}>{classKind}</span>} />
                 <Metric label="Closest win" value={A.closest?.m != null ? A.closest.m.toFixed(1) + '%' : '–'} sub={A.closest ? `’${String(A.closest.y).slice(2)}` : ''} />
                 <Metric label="Safest win" value={A.safest?.m != null ? A.safest.m.toFixed(1) + '%' : '–'} sub={A.safest ? `’${String(A.safest.y).slice(2)}` : ''} />
@@ -327,7 +329,7 @@ export default function SeatDrawer({ seat, all, arena, onClose }:
               {curM != null && seat.q ? (
                 <>
                   <div style={{ fontSize: 13, color: C.sub, lineHeight: 1.5 }}>
-                    {seat.p} leads {seat.q} by <b style={{ color: C.text }}>{curM.toFixed(1)}%</b>. A uniform swing of <b style={{ color: '#f43f5e' }}>{swingToFlip}%</b> from <b style={{ color: colorFor(seat.p, seat.a) }}>{seat.p}</b> to <b style={{ color: colorFor(seat.q) }}>{seat.q}</b> would level it.
+                    {seat.p} leads {seat.q} by <b style={{ color: C.text }}>{curM.toFixed(1)}%</b>. A uniform swing of <b style={{ color: '#f43f5e' }}>{swingToFlip}%</b> from <b style={{ color: readable(colorFor(seat.p, seat.a), mode) }}>{seat.p}</b> to <b style={{ color: readable(colorFor(seat.q), mode) }}>{seat.q}</b> would level it.
                   </div>
                   <div style={{ marginTop: 12 }}>
                     {[{ lab: seat.p, v: seat.v, c: colorFor(seat.p, seat.a) }, { lab: seat.q, v: runnerShare, c: colorFor(seat.q) }].map((r, i) => (
@@ -337,17 +339,17 @@ export default function SeatDrawer({ seat, all, arena, onClose }:
                       </div>
                     ))}
                   </div>
-                  <div style={{ fontSize: 11.5, color: C.faint, marginTop: 8 }}>{safety === 'Marginal' ? 'Within reach of a single bad cycle.' : safety === 'Lean' ? 'A competitive but not knife-edge hold.' : 'A cushion that absorbs normal swings.'}</div>
+                  <div style={{ fontSize: 11.5, color: C.sub, marginTop: 8 }}>{safety === 'Marginal' ? 'Within reach of a single bad cycle.' : safety === 'Lean' ? 'A competitive but not knife-edge hold.' : 'A cushion that absorbs normal swings.'}</div>
                 </>
-              ) : <div style={{ fontSize: 12.5, color: C.faint }}>No margin/runner-up data for the latest election.</div>}
+              ) : <div style={{ fontSize: 12.5, color: C.sub }}>No margin/runner-up data for the latest election.</div>}
             </Section>
           </div>
 
           {/* full history */}
           <Section eyebrow="Full record" title="Election history">
             <div style={{ overflowX: 'auto' }}>
-              <table className="w-full" style={{ fontSize: 12 }}>
-                <thead><tr style={{ color: C.faint, textAlign: 'left' }}>
+              <table className="w-full min-w-[560px]" style={{ fontSize: 12 }}>
+                <thead><tr style={{ color: C.sub, textAlign: 'left' }}>
                   <th style={{ padding: '5px 6px', fontWeight: 600 }}>Year</th><th style={{ fontWeight: 600 }}>Winner</th><th style={{ fontWeight: 600 }}>Party</th>
                   <th style={{ fontWeight: 600 }}>Runner-up</th><th style={{ textAlign: 'right', fontWeight: 600 }}>Share</th><th style={{ textAlign: 'right', fontWeight: 600 }}>Margin</th><th style={{ textAlign: 'right', fontWeight: 600 }}>Turnout</th>
                 </tr></thead>
@@ -357,20 +359,20 @@ export default function SeatDrawer({ seat, all, arena, onClose }:
                     const brk = nxt && !comparable(arena, h.s, nxt.y, h.y)
                     return (
                       <tr key={h.y} style={{ borderTop: `1px solid ${C.line}` }}>
-                        <td style={{ padding: '6px', color: C.text }}>{h.y}{brk ? <span title="New delimitation — boundaries redrawn" style={{ color: '#fbbf24' }}> ⚠</span> : ''}</td>
+                        <td style={{ padding: '6px', color: C.text }}>{h.y}{brk ? <span title="New delimitation — boundaries redrawn" style={{ color: C.warn }}> ⚠</span> : ''}</td>
                         <td style={{ color: C.sub, maxWidth: 150, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>{tc(h.w) ?? '–'}</td>
                         <td style={{ color: C.text }}><Dot color={colorFor(h.p, h.a)} />{h.p}</td>
-                        <td style={{ color: C.faint }}>{h.q ?? '–'}</td>
+                        <td style={{ color: C.sub }}>{h.q ?? '–'}</td>
                         <td className="font-num" style={{ textAlign: 'right', color: C.sub }}>{h.v != null ? h.v.toFixed(1) : '–'}</td>
                         <td className="font-num" style={{ textAlign: 'right', color: C.text }}>{h.m != null ? h.m.toFixed(1) : '–'}</td>
-                        <td className="font-num" style={{ textAlign: 'right', color: C.faint }}>{h.t != null ? h.t.toFixed(1) : '–'}</td>
+                        <td className="font-num" style={{ textAlign: 'right', color: C.sub }}>{h.t != null ? h.t.toFixed(1) : '–'}</td>
                       </tr>
                     )
                   })}
                 </tbody>
               </table>
             </div>
-            {hist.some((h, i) => i > 0 && !comparable(arena, h.s, hist[i - 1].y, h.y)) && <div style={{ fontSize: 10.5, color: '#fbbf24cc', marginTop: 8 }}>⚠ boundaries were redrawn (delimitation); rows across that line aren’t directly comparable.</div>}
+            {hist.some((h, i) => i > 0 && !comparable(arena, h.s, hist[i - 1].y, h.y)) && <div style={{ fontSize: 10.5, color: C.warn, marginTop: 8 }}>⚠ boundaries were redrawn (delimitation); rows across that line aren’t directly comparable.</div>}
           </Section>
 
           <button onClick={() => { setFocus(seat.s); nav('/state'); onClose() }}

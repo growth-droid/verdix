@@ -1,12 +1,13 @@
 import { useEffect, useMemo, useState } from 'react'
 import { loadSeats, loadSegments, loadBypolls, type Seat, type Segment, type Bypoll } from '../lib/data'
-import { colorFor } from '../lib/colors'
-import { useFilters } from '../store'
+import { colorFor, readable } from '../lib/colors'
+import { useFilters, useTheme } from '../store'
 import { Chart, ChartCard, Dot, Info, KPI, Seg, Select, SortTable, Spark, StickyControls, type Col } from '../components/ui'
 import { activeByState, seatHistories, seatKey } from '../lib/analysis'
 import { swingometer } from '../lib/insights'
 import { seatCurve, swingToMajority, tippingSeat, projSeatsAt } from '../lib/projections'
 import { baseOpt, valAxis, AXIS, GRID, vgrad } from '../lib/theme'
+import { useIsPhone } from '../lib/useMedia'
 
 const tc = (s: string) => s.toLowerCase().replace(/(^|[\s(\-./])([a-z])/g, (_, a: string, b: string) => a + b.toUpperCase())
 
@@ -17,7 +18,9 @@ type Row = {
 }
 
 export default function BattlegroundPage() {
+  const themeMode = useTheme()
   const { arena, state, party, setParty } = useFilters()
+  const isPhone = useIsPhone()
   const st = state ?? 'All states'
   const [rows, setRows] = useState<Seat[]>([])
   const [segs, setSegs] = useState<Segment[]>([])
@@ -145,35 +148,39 @@ export default function BattlegroundPage() {
   const swing = useMemo(() => (P && FROM ? swingometer(scoped, FROM, P, swingPP) : null), [scoped, FROM, P, swingPP])
   const swingMax = swing ? Math.max(swing.fromBefore, swing.toBefore, swing.fromAfter, swing.toAfter, 1) : 1
 
-  const cols: Col<Row>[] = [
-    { key: 'c', label: 'Seat', get: t => t.seat.c, render: t => <span>{tc(t.seat.c)} <span className="text-slate-500">· {t.seat.y}</span></span> },
+  // Tone classes below are mid-tone (500/600/700) rather than the old 200/300 tints so they stay
+  // legible on BOTH the cream and the near-black canvas — this page has no useTheme() to key off.
+  const allCols: Col<Row>[] = [
+    { key: 'c', label: 'Seat', get: t => t.seat.c, render: t => <span>{tc(t.seat.c)} <span className="text-muted">· {t.seat.y}</span></span> },
     { key: 's', label: 'State', get: t => t.seat.s },
     mode === 'attack'
       ? { key: 'p', label: 'Held by', get: t => t.seat.p, render: t => <span><Dot color={colorFor(t.seat.p, t.seat.a)} />{t.seat.p}</span> }
       : { key: 'p', label: 'Challenger', get: t => t.seat.q, render: t => <span><Dot color={colorFor(t.seat.q ?? '')} />{t.seat.q ?? '–'}</span> },
     { key: 'm', label: 'Margin%', get: t => t.seat.m, align: 'right', render: t => t.seat.m?.toFixed(1) },
-    { key: 'wv', label: mode === 'attack' ? 'Holder share%' : 'Your share%', get: t => t.seat.v, align: 'right', render: t => <span className={(t.seat.v ?? 100) < 40 ? 'text-amber-300' : ''}>{t.seat.v?.toFixed(1) ?? '–'}</span> },
+    { key: 'wv', label: mode === 'attack' ? 'Holder share%' : 'Your share%', get: t => t.seat.v, align: 'right', render: t => <span className={(t.seat.v ?? 100) < 40 ? 'text-amber-700' : ''}>{t.seat.v?.toFixed(1) ?? '–'}</span> },
     { key: 'tr', label: mode === 'attack' ? `${P} gap trend` : `${P} lead trend`, get: t => t.gapTrend.filter(g => g != null).length, render: t => <Spark data={t.gapTrend} color={t.mom ? (mode === 'attack' ? '#34d399' : '#f87171') : '#94a3b8'} /> },
     {
       key: 'sig', label: 'Signals', get: t => (t.mom ? 1 : 0) + (t.bypoll ? 1 : 0) + (t.seg ? 1 : 0) + (t.sub40 ? 1 : 0),
       render: t => mode === 'attack' ? (
         <span className="flex gap-1 flex-wrap">
-          {t.mom && <span className="px-1.5 py-0.5 rounded bg-emerald-900/40 text-emerald-300 text-[10px]">momentum</span>}
-          {t.bypoll && <span className="px-1.5 py-0.5 rounded bg-sky-900/40 text-sky-300 text-[10px]">bypoll✓</span>}
-          {t.seg && <span className="px-1.5 py-0.5 rounded bg-violet-900/40 text-violet-300 text-[10px]">led LS-24</span>}
-          {t.sub40 && <span className="px-1.5 py-0.5 rounded bg-amber-900/40 text-amber-300 text-[10px]">&lt;40% hold</span>}
+          {t.mom && <span className="px-1.5 py-0.5 rounded bg-emerald-500/15 text-emerald-600 text-[11px]">momentum</span>}
+          {t.bypoll && <span className="px-1.5 py-0.5 rounded bg-sky-500/15 text-sky-600 text-[11px]">bypoll✓</span>}
+          {t.seg && <span className="px-1.5 py-0.5 rounded bg-violet-500/15 text-violet-500 text-[11px]">led LS-24</span>}
+          {t.sub40 && <span className="px-1.5 py-0.5 rounded bg-amber-500/20 text-amber-700 text-[11px]">&lt;40% hold</span>}
         </span>
       ) : (
         <span className="flex gap-1 flex-wrap">
-          {t.mom && <span className="px-1.5 py-0.5 rounded bg-red-900/40 text-red-300 text-[10px]">lead eroding</span>}
-          {t.bypoll && <span className="px-1.5 py-0.5 rounded bg-red-900/40 text-red-300 text-[10px]">bypoll✗</span>}
-          {t.seg && <span className="px-1.5 py-0.5 rounded bg-amber-900/40 text-amber-300 text-[10px]">lost LS-24</span>}
-          {t.sub40 && <span className="px-1.5 py-0.5 rounded bg-amber-900/40 text-amber-300 text-[10px]">&lt;40% win</span>}
+          {t.mom && <span className="px-1.5 py-0.5 rounded bg-red-500/15 text-red-600 text-[11px]">lead eroding</span>}
+          {t.bypoll && <span className="px-1.5 py-0.5 rounded bg-red-500/15 text-red-600 text-[11px]">bypoll✗</span>}
+          {t.seg && <span className="px-1.5 py-0.5 rounded bg-amber-500/20 text-amber-700 text-[11px]">lost LS-24</span>}
+          {t.sub40 && <span className="px-1.5 py-0.5 rounded bg-amber-500/20 text-amber-700 text-[11px]">&lt;40% win</span>}
         </span>
       ),
     },
-    { key: 'score', label: mode === 'attack' ? 'Flippability' : 'Vulnerability', get: t => t.score, align: 'right', render: t => <b className={t.score >= 60 ? (mode === 'attack' ? 'text-emerald-300' : 'text-red-300') : t.score >= 35 ? 'text-amber-200' : 'text-slate-300'}>{t.score}</b> },
+    { key: 'score', label: mode === 'attack' ? 'Flippability' : 'Vulnerability', get: t => t.score, align: 'right', render: t => <b className={t.score >= 60 ? (mode === 'attack' ? 'text-emerald-600' : 'text-red-600') : t.score >= 35 ? 'text-amber-700' : 'text-ink'}>{t.score}</b> },
   ]
+  // On phones the 8-column board can't fit 390px — keep the decision columns, drop the rest.
+  const cols: Col<Row>[] = isPhone ? allCols.filter(c => ['c', 'm', 'sig', 'score'].includes(c.key)) : allCols
 
   const kpi3 = houseMode && s2m
     ? (s2m.kind === 'reach'
@@ -184,18 +191,18 @@ export default function BattlegroundPage() {
   return (
     <div>
       <StickyControls>
-      <div className="flex items-center gap-3 flex-wrap">
+      <div className="flex items-center gap-2 sm:gap-3 flex-wrap">
         <Seg options={[{ v: 'attack', label: '⚔ Attack' }, { v: 'defend', label: '🛡 Defend' }]} value={mode} onChange={v => setMode(v as Mode)} />
-        <span className="text-xs text-slate-500">for</span>
+        <span className="hidden sm:inline text-xs text-muted">for</span>
         <Select value={P} onChange={setParty} options={parties} width="w-32" />
-        <span className="text-xs text-slate-500">{mode === 'attack' ? 'lost by under' : 'held by under'}</span>
+        <span className="text-xs text-muted">{mode === 'attack' ? 'lost by under' : 'held by under'}</span>
         <Seg options={[{ v: '3', label: '3%' }, { v: '5', label: '5%' }, { v: '8', label: '8%' }]} value={String(band)} onChange={v => setBand(+v)} />
         <span className="text-xs text-slate-400">{st === 'All states' ? 'across India' : `in ${st}`}</span>
-        <span className="text-[11px] text-slate-500 ml-auto">{arena === 'AE' ? 'basis: each state’s most recent assembly election' : 'basis: 2024 Lok Sabha'}</span>
+        <span className="hidden sm:inline text-[11px] text-muted sm:ml-auto">{arena === 'AE' ? 'basis: each state’s most recent assembly election' : 'basis: 2024 Lok Sabha'}</span>
       </div>
       </StickyControls>
 
-      <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 mb-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 mb-4">
         <KPI label="Target seats" value={offense.length} accent={mode === 'attack' ? '#34d399' : undefined} sub={`${P} runner-up within ${band}%`} />
         <KPI label="Seats at risk" value={defense.length} accent={mode === 'defend' ? '#f87171' : undefined} sub={`${P} holds these by <${band}%`} />
         {kpi3}
@@ -207,7 +214,9 @@ export default function BattlegroundPage() {
         note={houseMode
           ? `${majority}-seat line = majority of the ${houseN}-seat house. ${s2m?.kind === 'reach' ? `${P} reaches it on a +${s2m.s}%${s2m.capped ? '+' : ''} swing${tip ? ` — the seat that tips it is ${tc(tip.c)} (${tip.s}, held by ${tip.p} by ${tip.m?.toFixed(1)}%)` : ''}.` : `${P} already holds the majority — it survives an adverse swing of −${s2m?.s}%${s2m?.capped ? '+' : ''}.`}`
           : `Across ${st === 'All states' ? 'all elections in scope' : st} this is a reach/exposure curve, not a single house — there’s no one majority line. At +5% ${P} nets ${netAt(5) >= 0 ? '+' : ''}${netAt(5)} seats; at −5%, ${netAt(-5)}.`}>
-        <Chart option={curveOption} style={{ height: 300 }} notMerge />
+        <div className="h-[220px] sm:h-[300px]">
+          <Chart option={curveOption} style={{ height: '100%' }} notMerge />
+        </div>
       </ChartCard>
 
       <div className="grid lg:grid-cols-3 gap-4">
@@ -216,12 +225,14 @@ export default function BattlegroundPage() {
             ? `${P} as runner-up, lost by under ${band}%${st !== 'All states' ? ' in ' + st : ''}. Flippability = margin closeness (50) + margin-trend momentum (20) + bypoll won since (15) + led the seat in LS-2024 (15). Read the signals, not just the number.`
             : `${P} as winner, holding by under ${band}%${st !== 'All states' ? ' in ' + st : ''}. Vulnerability = margin thinness (50) + eroding lead (20) + bypoll lost since (15) + lost the seat's ground in LS-2024 (15). High score = defend first.`}>
           {board.length
-            ? <SortTable rows={board} cols={cols} defaultSort="score" initialDir="desc" maxH={560}
-                search searchIn={t => `${t.seat.c} ${t.seat.s} ${t.seat.p} ${t.seat.q ?? ''}`} />
-            : <div className="h-[200px] flex items-center justify-center text-slate-500 text-sm text-center px-8">
+            ? <div className="overflow-x-auto">
+                <SortTable rows={board} cols={cols} defaultSort="score" initialDir="desc" maxH={isPhone ? 340 : 560}
+                  search searchIn={t => `${t.seat.c} ${t.seat.s} ${t.seat.p} ${t.seat.q ?? ''}`} />
+              </div>
+            : <div className="min-h-[160px] py-8 flex items-center justify-center text-muted text-sm text-center px-4 sm:px-8">
                 {mode === 'attack'
-                  ? <span>No seats where <b className="text-slate-300 mx-1">{P}</b> finished runner-up within {band}%{st !== 'All states' ? ` in ${st}` : ''}. Widen the band or pick another party.</span>
-                  : <span><b className="text-slate-300 mx-1">{P}</b> holds no seat by under {band}%{st !== 'All states' ? ` in ${st}` : ''} — no thin-margin exposure at this band.</span>}
+                  ? <span>No seats where <b className="text-ink mx-1">{P}</b> finished runner-up within {band}%{st !== 'All states' ? ` in ${st}` : ''}. Widen the band or pick another party.</span>
+                  : <span><b className="text-ink mx-1">{P}</b> holds no seat by under {band}%{st !== 'All states' ? ` in ${st}` : ''} — no thin-margin exposure at this band.</span>}
               </div>}
         </ChartCard>
         <div className="flex flex-col gap-4">
@@ -233,14 +244,14 @@ export default function BattlegroundPage() {
               <span className="text-slate-200 font-semibold">{P}</span>
             </div>
             <div className="flex items-center gap-3 mb-1">
-              <input type="range" min={0} max={10} step={0.25} value={swingPP} onChange={e => setSwingPP(+e.target.value)} className="flex-1 accent-gold" />
+              <input type="range" min={0} max={10} step={0.25} value={swingPP} onChange={e => setSwingPP(+e.target.value)} className="flex-1 h-8 py-2 accent-gold touch-manipulation" />
               <span className="text-lg font-bold tabular-nums w-16 text-right">{swingPP.toFixed(2)}%</span>
             </div>
             {swing && FROM ? (
               <>
                 <p className="text-xs text-muted mb-3 leading-relaxed">
                   If <b className="num text-ink">{swingPP.toFixed(2)}</b> in every 100 votes shift from{' '}
-                  <b style={{ color: colorFor(FROM) }}>{FROM}</b> to <b style={{ color: colorFor(P) }}>{P}</b>
+                  <b style={{ color: readable(colorFor(FROM), themeMode) }}>{FROM}</b> to <b style={{ color: readable(colorFor(P), themeMode) }}>{P}</b>
                   {st !== 'All states' ? ` across ${st}` : ' nationwide'}, <b className="text-ink">{swing.flips.length}</b> seats would change hands:
                 </p>
                 {([[FROM, swing.fromBefore, swing.fromAfter], [P, swing.toBefore, swing.toAfter]] as const).map(([pty, before, after]) => {
@@ -249,8 +260,8 @@ export default function BattlegroundPage() {
                     <div key={pty} className="mb-2.5">
                       <div className="flex items-center justify-between text-xs mb-1">
                         <span><Dot color={col} />{pty}</span>
-                        <span className="num text-faint">{before} → <b className="text-ink">{after}</b>{' '}
-                          <span className={d > 0 ? 'text-emerald-400' : d < 0 ? 'text-red-400' : ''}>{d > 0 ? '+' : ''}{d}</span></span>
+                        <span className="num text-muted">{before} → <b className="text-ink">{after}</b>{' '}
+                          <span className={d > 0 ? 'text-emerald-600' : d < 0 ? 'text-red-600' : ''}>{d > 0 ? '+' : ''}{d}</span></span>
                       </div>
                       <div className="relative h-2.5 rounded-full bg-slate-900 overflow-hidden">
                         <div className="absolute inset-y-0 left-0 rounded-full" style={{ width: `${(before / swingMax) * 100}%`, background: col, opacity: 0.4 }} title="now" />
@@ -259,20 +270,20 @@ export default function BattlegroundPage() {
                     </div>
                   )
                 })}
-                <div className="mt-3 mb-1 text-[11px] text-muted">Seats that would flip — closest first ({FROM} holds them by this margin today)</div>
-                <div className="max-h-[150px] overflow-auto">
+                <div className="mt-3 mb-1 text-xs text-ink">Seats that would flip — closest first ({FROM} holds them by this margin today)</div>
+                <div className="max-h-none sm:max-h-[150px] overflow-visible sm:overflow-auto">
                   <table className="w-full text-[11px]">
                     <tbody>{swing.flips.slice(0, 30).map(r => (
                       <tr key={seatKey(r)} className="border-t border-white/[0.05]">
-                        <td className="py-1">{tc(r.c)}</td><td className="text-faint">{r.s}</td>
+                        <td className="py-1">{tc(r.c)}</td><td className="text-muted">{r.s}</td>
                         <td className="text-right tabular-nums">{r.m?.toFixed(1)}%</td>
                       </tr>))}</tbody>
                   </table>
-                  {!swing.flips.length && <div className="text-faint text-xs py-4 text-center">No seats flip at this swing — raise the slider.</div>}
+                  {!swing.flips.length && <div className="text-muted text-sm py-4 text-center">No seats flip at this swing — raise the slider.</div>}
                 </div>
               </>
             ) : (
-              <div className="text-sm text-faint py-6 text-center">Pick a party with target seats to project a swing.</div>
+              <div className="text-sm text-muted py-6 text-center">Pick a party with target seats to project a swing.</div>
             )}
           </ChartCard>
         </div>

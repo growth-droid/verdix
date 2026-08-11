@@ -8,9 +8,11 @@ import { readable } from '../lib/colors'
 /** Hoverable ⓘ that shows a plain-language explanation. */
 export function Info({ children, w = 'w-60' }: { children: ReactNode; w?: string }) {
   return (
-    <span className="relative inline-flex group align-middle">
-      <span className="ml-1 w-3.5 h-3.5 grid place-items-center rounded-full border border-slate-400/50 text-[9px] leading-none text-faint cursor-help select-none font-sans font-semibold">i</span>
-      <span className={`pointer-events-none absolute left-1/2 -translate-x-1/2 bottom-full mb-2 ${w} glass p-2.5 text-[11px] leading-relaxed text-ink opacity-0 group-hover:opacity-100 transition-opacity duration-150 z-50 normal-case tracking-normal font-normal`}>
+    /* tabIndex makes the ⓘ focusable so a TAP opens the tooltip on phones (hover never fires on touch) */
+    <span tabIndex={0} className="relative inline-flex group align-middle">
+      {/* ::before adds an invisible ~32px hit area around the 14px glyph without changing its visual size */}
+      <span className="relative ml-1 w-3.5 h-3.5 grid place-items-center rounded-full border border-slate-400 text-[10px] leading-none text-muted cursor-help select-none font-sans font-semibold before:absolute before:-inset-[9px] before:content-['']">i</span>
+      <span className={`pointer-events-none absolute left-1/2 -translate-x-1/2 bottom-full mb-2 ${w} max-w-[calc(100vw-1.5rem)] glass p-2.5 text-[11px] leading-relaxed text-ink opacity-0 group-hover:opacity-100 group-focus-within:opacity-100 transition-opacity duration-150 z-50 normal-case tracking-normal font-normal`}>
         {children}
       </span>
     </span>
@@ -33,7 +35,7 @@ export function Glossary() {
             className="absolute right-0 top-0 h-full w-[440px] max-w-[94vw] bg-slate-950/95 backdrop-blur-xl border-l border-white/10 p-5 overflow-y-auto shadow-pop animate-fadeUp">
             <div className="flex items-center justify-between mb-1">
               <h2 className="font-bold text-lg">Glossary — in plain English</h2>
-              <button onClick={() => setOpen(false)} className="text-faint hover:text-ink text-xl leading-none">×</button>
+              <button onClick={() => setOpen(false)} className="text-muted hover:text-ink text-xl leading-none">×</button>
             </div>
             <p className="text-xs text-muted mb-4">Every term used in this dashboard, explained simply.</p>
             <dl className="space-y-3.5">
@@ -64,7 +66,7 @@ export function ChartCard({ title, children, note, className = '' }:
     <div className={`card p-3.5 ${className}`}>
       <h3 className="text-[12.5px] font-semibold mb-2 text-slate-200 tracking-tight">{title}</h3>
       {children}
-      {note && <p className="mt-2 text-[11px] text-slate-500 leading-snug border-t border-white/[0.05] pt-2">{note}</p>}
+      {note && <p className="mt-2 text-[11px] text-slate-400 leading-snug border-t border-white/[0.05] pt-2">{note}</p>}
     </div>
   )
 }
@@ -109,7 +111,7 @@ export function Spark({ data, color = '#94a3b8', w = 84, h = 22 }: { data: (numb
       return `${x},${y}`
     }).filter(Boolean).join(' ')
   }, [data, w, h])
-  if (!d) return <span className="text-slate-600 text-[10px]">–</span>
+  if (!d) return <span className="text-slate-400 text-[11px]">–</span>
   return (
     <svg width={w} height={h} className="inline-block align-middle">
       <polyline points={d} fill="none" stroke={color} strokeWidth="1.5" strokeLinejoin="round" strokeLinecap="round" />
@@ -149,9 +151,10 @@ export function SortTable<T>({ rows, cols, defaultSort, search, searchIn, maxH =
     <div>
       {search && (
         <div className="relative mb-2.5 w-64 max-w-full">
-          <svg className="absolute left-2.5 top-1/2 -translate-y-1/2 text-faint pointer-events-none" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><circle cx="11" cy="11" r="7" /><path d="M21 21l-4.3-4.3" /></svg>
+          <svg className="absolute left-2.5 top-1/2 -translate-y-1/2 text-muted pointer-events-none" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><circle cx="11" cy="11" r="7" /><path d="M21 21l-4.3-4.3" /></svg>
+          {/* text-[16px] on phones stops iOS Safari auto-zooming the viewport on focus; sm: restores the compact desktop field */}
           <input value={q} onChange={e => setQ(e.target.value)} placeholder="Search…"
-            className="w-full bg-slate-950/50 border border-white/[0.09] rounded-lg pl-8 pr-3 py-1.5 text-xs outline-none placeholder:text-faint focus:border-gold/50 focus:bg-slate-950/70 transition-colors" />
+            className="w-full bg-slate-950/50 border border-white/[0.09] rounded-lg pl-8 pr-3 py-2 sm:py-1.5 min-h-[34px] sm:min-h-0 text-[16px] sm:text-xs outline-none placeholder:text-muted focus:border-gold/50 focus:bg-slate-950/70 transition-colors" />
         </div>
       )}
       <div className="overflow-auto rounded-xl border border-white/[0.07]" style={{ maxHeight: maxH }}>
@@ -163,7 +166,7 @@ export function SortTable<T>({ rows, cols, defaultSort, search, searchIn, maxH =
                 return (
                   <th key={c.key} style={c.width ? { width: c.width } : undefined}
                     onClick={() => { if (active) setDir(d => (d === 'asc' ? 'desc' : 'asc')); else { setSort(c.key); setDir('desc') } }}
-                    className={`group py-2 px-2.5 cursor-pointer select-none whitespace-nowrap text-[10px] uppercase tracking-[0.07em] font-semibold border-b border-white/[0.09] bg-slate-900/85 backdrop-blur-md transition-colors ${active ? 'text-gold' : 'text-faint hover:text-muted'} ${c.align === 'right' ? 'text-right' : 'text-left'}`}>
+                    className={`group py-2 px-2.5 cursor-pointer select-none whitespace-nowrap text-[10px] uppercase tracking-[0.07em] font-semibold border-b border-white/[0.09] bg-slate-900/85 backdrop-blur-md transition-colors ${active ? 'text-gold' : 'text-muted hover:text-ink'} ${c.align === 'right' ? 'text-right' : 'text-left'}`}>
                     {c.label}<span className={`ml-1 inline-block ${active ? 'opacity-90' : 'opacity-0 group-hover:opacity-40'}`}>{active ? (dir === 'asc' ? '↑' : '↓') : '↕'}</span>
                   </th>
                 )
@@ -184,7 +187,7 @@ export function SortTable<T>({ rows, cols, defaultSort, search, searchIn, maxH =
           </tbody>
         </table>
         {sorted.length === 0 && (
-          <div className="py-10 text-center text-faint text-xs">{q ? 'No matching rows' : 'No rows'}</div>
+          <div className="py-10 text-center text-muted text-xs">{q ? 'No matching rows' : 'No rows'}</div>
         )}
       </div>
     </div>
@@ -193,10 +196,11 @@ export function SortTable<T>({ rows, cols, defaultSort, search, searchIn, maxH =
 
 export function Seg({ options, value, onChange }: { options: readonly { v: string; label: string }[]; value: string; onChange: (v: string) => void }) {
   return (
-    <div className="inline-flex rounded-full p-[3px] bg-slate-950/60 border border-white/[0.08] shadow-[inset_0_1px_2px_rgba(0,0,0,0.25)]">
+    /* flex-wrap + max-w-full so a 3-option Seg wraps inside a 390px phone instead of pushing the page sideways */
+    <div className="inline-flex flex-wrap max-w-full rounded-2xl sm:rounded-full p-[3px] bg-slate-950/60 border border-white/[0.08] shadow-[inset_0_1px_2px_rgba(0,0,0,0.25)]">
       {options.map(o => (
         <button key={o.v} onClick={() => onChange(o.v)}
-          className={`px-3.5 py-1 text-[12.5px] rounded-full transition-all duration-200 ${
+          className={`px-3 sm:px-3.5 py-2 sm:py-1 min-h-[32px] sm:min-h-0 text-[12.5px] rounded-full transition-all duration-200 ${
             value === o.v
               ? 'bg-gradient-to-b from-[#e8c766] to-[#b0812a] text-black font-semibold shadow-[0_1px_3px_rgba(0,0,0,0.3),inset_0_1px_0_rgba(255,255,255,0.35)]'
               : 'text-muted hover:text-ink'
@@ -212,8 +216,9 @@ export function Select({ value, onChange, options, width = 'w-48' }:
   { value: string; onChange: (v: string) => void; options: string[]; width?: string }) {
   return (
     <div className={`relative inline-block align-middle ${width}`}>
+      {/* text-[16px] on phones keeps iOS Safari from zooming the viewport when the native picker opens */}
       <select value={value} onChange={e => onChange(e.target.value)}
-        className="w-full appearance-none bg-slate-950/60 border border-white/[0.09] rounded-lg pl-3 pr-8 py-1.5 text-[13px] hover:border-white/20 focus:border-gold/50 outline-none transition-colors cursor-pointer">
+        className="w-full appearance-none bg-slate-950/60 border border-white/[0.09] rounded-lg pl-3 pr-8 py-2 sm:py-1.5 min-h-[34px] sm:min-h-0 text-[16px] sm:text-[13px] hover:border-white/20 focus:border-gold/50 outline-none transition-colors cursor-pointer">
         {options.map(o => <option key={o} className="bg-slate-900 text-ink">{o}</option>)}
       </select>
       <svg className="absolute right-2.5 top-1/2 -translate-y-1/2 text-faint pointer-events-none" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M6 9l6 6 6-6" /></svg>
@@ -232,7 +237,8 @@ export function Skeleton({ h = 320, className = '' }: { h?: number; className?: 
  *  scroll cleanly underneath. */
 export function StickyControls({ children, className = '' }: { children: ReactNode; className?: string }) {
   return (
-    <div className={`sticky z-20 -mx-6 px-6 py-2.5 mb-4 bg-slate-950/80 backdrop-blur-xl border-b border-white/[0.07] ${className}`}
+    /* the negative bleed MUST match the page padding (px-3 mobile / sm:px-5) or it overflows the viewport */
+    <div className={`sticky z-20 -mx-3 px-3 sm:-mx-5 sm:px-5 max-w-[100vw] py-2 sm:py-2.5 mb-3 sm:mb-4 bg-slate-950/80 backdrop-blur-xl border-b border-white/[0.07] ${className}`}
       style={{ top: 'var(--app-top, 92px)' }}>
       {children}
     </div>
@@ -263,19 +269,22 @@ export function VoteSeatChart({ years, parties, seatsOf, shareOf, height = 320, 
   // stable ceilings across EVERY party (so showing/hiding never rescales the axes)
   const seatMax = useMemo(() => { const m = Math.max(0, ...list.flatMap(x => seatsOf(x.p).map(v => v ?? 0))); return m ? Math.ceil(m / 5) * 5 : undefined }, [sig, seatsOf])
   const shareMax = useMemo(() => { const m = Math.max(0, ...list.flatMap(x => shareOf(x.p).map(v => v ?? 0))); return m ? Math.min(100, Math.ceil(m / 10) * 10 + 5) : undefined }, [sig, shareOf])
-  if (!list.length) return <div style={{ height }} className="grid place-items-center text-faint text-sm">No data for this view.</div>
+  // cap the chart at 48vh so a phone never hands a single chart 320–460px of a ~700px viewport
+  const boxH = `min(${height}px, 48vh)`
+  if (!list.length) return <div style={{ height: boxH }} className="grid place-items-center text-muted text-sm">No data for this view.</div>
   const chosen = list.filter(x => has(x.p))
   return (
     <div>
-      <div className="flex items-center gap-1.5 mb-2.5 flex-wrap">
+      {/* on phones the chip row is capped + scrolls internally so 12 parties can't push the chart below the fold */}
+      <div className="flex items-center gap-2 sm:gap-1.5 mb-2.5 flex-wrap max-h-[5.5rem] overflow-y-auto sm:max-h-none sm:overflow-visible">
         {extra}
-        <button onClick={() => setSel(keys)} className="px-2 py-1 rounded-full text-[11px] border border-white/10 text-faint hover:text-ink transition-colors">All</button>
-        <button onClick={() => setSel([])} className="px-2 py-1 rounded-full text-[11px] border border-white/10 text-faint hover:text-ink transition-colors">None</button>
+        <button onClick={() => setSel(keys)} className="inline-flex items-center px-2.5 sm:px-2 py-1.5 sm:py-1 min-h-[32px] sm:min-h-0 rounded-full text-[11px] border border-white/10 text-muted hover:text-ink transition-colors">All</button>
+        <button onClick={() => setSel([])} className="inline-flex items-center px-2.5 sm:px-2 py-1.5 sm:py-1 min-h-[32px] sm:min-h-0 rounded-full text-[11px] border border-white/10 text-muted hover:text-ink transition-colors">None</button>
         {list.map(x => {
           const on = has(x.p)
           return (
             <button key={x.p} onClick={() => toggle(x.p)} title={on ? 'Click to hide' : 'Click to show'}
-              className={`px-2.5 py-1 rounded-full text-[11.5px] border transition-all ${on ? 'text-ink font-semibold' : 'text-faint opacity-55 hover:opacity-100'}`}
+              className={`inline-flex items-center px-2.5 py-1.5 sm:py-1 min-h-[32px] sm:min-h-0 rounded-full text-[11.5px] border transition-all ${on ? 'text-ink font-semibold' : 'text-muted hover:text-ink'}`}
               style={{ background: on ? x.color + '22' : 'transparent', borderColor: on ? x.color + '88' : 'rgba(148,163,184,0.16)' }}>
               <span className="inline-block w-2 h-2 rounded-full mr-1.5 align-middle" style={{ background: x.color, opacity: on ? 1 : 0.5 }} />{x.p}
             </button>
@@ -283,8 +292,8 @@ export function VoteSeatChart({ years, parties, seatsOf, shareOf, height = 320, 
         })}
       </div>
       {chosen.length
-        ? <Chart option={voteSeatOption({ years, series: chosen.map(x => ({ label: x.p, color: x.color, seats: seatsOf(x.p), share: shareOf(x.p) })), seatMax, shareMax, glow })} style={{ height }} notMerge />
-        : <div style={{ height }} className="grid place-items-center text-faint text-sm">No parties selected — pick one or more above.</div>}
+        ? <Chart option={voteSeatOption({ years, series: chosen.map(x => ({ label: x.p, color: x.color, seats: seatsOf(x.p), share: shareOf(x.p) })), seatMax, shareMax, glow })} style={{ height: boxH }} notMerge />
+        : <div style={{ height: boxH }} className="grid place-items-center text-muted text-sm">No parties selected — pick one or more above.</div>}
     </div>
   )
 }

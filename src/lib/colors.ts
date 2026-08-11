@@ -52,6 +52,18 @@ const relLum = ([r, g, b]: RGB) => {
 }
 const contrast = (a: RGB, b: RGB) => { const l1 = relLum(a), l2 = relLum(b); return (Math.max(l1, l2) + 0.05) / (Math.min(l1, l2) + 0.05) }
 
+/** Black or white — whichever is legible ON a `hex` fill laid at `alpha` over the theme's card
+ *  surface. For tinted heat-map / matrix cells, where the text sits on the fill, not the card. */
+export function inkOn(hex: string, alpha: number, mode: Mode): string {
+  const s = CARD_SURFACE[mode], c = toRgb(hex)
+  const blended: RGB = [
+    c[0] * alpha + s[0] * (1 - alpha),
+    c[1] * alpha + s[1] * (1 - alpha),
+    c[2] * alpha + s[2] * (1 - alpha),
+  ]
+  return contrast(blended, [10, 10, 10]) >= contrast(blended, [255, 255, 255]) ? '#0a0a0a' : '#ffffff'
+}
+
 /** A version of `hex` that meets `min` contrast on the theme's card surface, hue preserved. */
 export function readable(hex: string, mode: Mode, min = 4.5): string {
   const surface = CARD_SURFACE[mode], pole = TEXT_POLE[mode], base = toRgb(hex)

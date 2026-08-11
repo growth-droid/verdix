@@ -1,8 +1,9 @@
 import { useCallback, useEffect, useMemo, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { loadSeats, loadSegments, type Seat, type Segment } from '../lib/data'
-import { colorFor } from '../lib/colors'
+import { colorFor, readable } from '../lib/colors'
 import { useFilters, useTheme } from '../store'
+import { useIsPhone } from '../lib/useMedia'
 import ChoroplethMap from '../components/ChoroplethMap'
 import SeatDrawer from '../components/SeatDrawer'
 import { Chart, ChartCard, Dot, Seg, SortTable, StickyControls, type Col } from '../components/ui'
@@ -15,7 +16,9 @@ const norm = (s: string) => (s || '').toLowerCase().replace(/[^a-z0-9]/g, '')
 
 function InsightStrip({ items }: { items: Insight[] }) {
   if (!items.length) return null
-  const toneCls = { risk: 'border-red-400/25 text-red-200/90', edge: 'border-emerald-400/25 text-emerald-200/90', note: 'border-white/10 text-slate-300' }
+  // 200-level tints are raw Tailwind (NOT re-pointed by the theme vars) so they vanish on the cream
+  // canvas — these headline findings use mid-tones that clear both canvases. No useTheme() here by design.
+  const toneCls = { risk: 'border-red-400/40 text-red-500', edge: 'border-emerald-400/40 text-emerald-600', note: 'border-white/10 text-muted' }
   return (
     <div className="flex flex-wrap gap-2 mb-4">
       {items.map((it, i) => (
@@ -38,6 +41,7 @@ export default function ChangePage() {
   const [expanded, setExpanded] = useState<Set<string>>(new Set())   // drill rows expanded to show ALL their seats
   const toggleExp = (k: string) => setExpanded(s => { const n = new Set(s); if (n.has(k)) n.delete(k); else n.add(k); return n })
   const mode = useTheme()
+  const isPhone = useIsPhone()   // phone-only column drops (reactive — survives resize/rotate)
   const lab = labelColor(mode)
   const HELD = mode === 'light' ? '#e2e8f0' : '#1e293b'
   const NOCMP = mode === 'light' ? '#d6d3d1' : '#44403c'
@@ -214,7 +218,8 @@ export default function ChangePage() {
   type Churn = { seat: Seat; flips: number; n: number }
   const partyCell = (s: Seat) => <span className="whitespace-nowrap"><Dot color={colorFor(s.p, s.a)} />{s.p}</span>
   const pcName = useCallback((s: Seat) => pcByKey.get(`${s.s}::${norm(s.c)}`) ?? '–', [pcByKey])
-  const pcCol = <T extends { seat: Seat }>(): Col<T>[] => arena === 'AE' ? [{ key: 'pc', label: 'Parliament', get: r => pcName(r.seat) }] : []
+  // Parliament is the widest optional column — drop it below sm so the 5-col table fits a phone.
+  const pcCol = <T extends { seat: Seat }>(): Col<T>[] => arena === 'AE' && !isPhone ? [{ key: 'pc', label: 'Parliament', get: r => pcName(r.seat) }] : []
   const fortressCols = useMemo<Col<Fort>[]>(() => [
     { key: 'c', label: 'Seat', get: r => tc(r.seat.c) },
     { key: 's', label: 'State', get: r => r.seat.s },
@@ -222,7 +227,7 @@ export default function ChangePage() {
     { key: 'p', label: 'Party', get: r => r.seat.p, render: r => partyCell(r.seat) },
     { key: 'streak', label: 'Streak', align: 'right', get: r => r.streak, render: r => `${r.streak}×` },
     { key: 'since', label: 'Since', align: 'right', get: r => r.since },
-  ], [arena, pcName])
+  ], [arena, pcName, isPhone])
   const churnCols = useMemo<Col<Churn>[]>(() => [
     { key: 'c', label: 'Seat', get: r => tc(r.seat.c) },
     { key: 's', label: 'State', get: r => r.seat.s },
@@ -230,19 +235,19 @@ export default function ChangePage() {
     { key: 'p', label: 'Now', get: r => r.seat.p, render: r => partyCell(r.seat) },
     { key: 'flips', label: 'Flips', align: 'right', get: r => r.flips },
     { key: 'n', label: 'Elections', align: 'right', get: r => r.n + 1 },
-  ], [arena, pcName])
+  ], [arena, pcName, isPhone])
 
   return (
     <div>
       <StickyControls>
       <div className="flex items-center gap-4 flex-wrap">
         <span className="text-sm font-semibold text-ink">{stateSel ? `What changed in ${stateSel}` : 'What changed across India'}</span>
-        <div className="flex items-center gap-2 text-xs text-slate-500">
+        <div className="flex flex-wrap items-center gap-2 text-xs text-slate-400">
           Year
-          <input type="range" min={2004} max={2026} value={year} onChange={e => setYear(+e.target.value)} className="w-56 accent-gold" />
+          <input type="range" min={2004} max={2026} value={year} onChange={e => setYear(+e.target.value)} className="w-full max-w-[220px] h-8 sm:h-auto accent-gold" />
           <span className="text-xl font-bold tabular-nums text-ink">{activeYear}</span>
         </div>
-        <span className="text-xs text-slate-500">each seat vs its previous election{arena === 'AE' && !stateSel ? ' (state-wise)' : ''}</span>
+        <span className="text-xs text-slate-400">each seat vs its previous election{arena === 'AE' && !stateSel ? ' (state-wise)' : ''}</span>
         <button onClick={() => nav('/state')} className="ml-auto text-xs text-gold hover:text-gold underline decoration-dotted decoration-gold/40 underline-offset-2 transition-colors">
           {stateSel ? `Full ${stateSel} deep-dive →` : 'Open the full state deep-dive →'}
         </button>
@@ -252,7 +257,7 @@ export default function ChangePage() {
       <InsightStrip items={insights} />
 
       <div className="grid lg:grid-cols-3 gap-4">
-        <div className="lg:col-span-2 min-h-[480px]">
+        <div className="lg:col-span-2 min-h-[280px] sm:min-h-[360px] lg:min-h-[480px]">
           <ChoroplethMap key={arena + (stateSel ?? 'all') + activeYear} byState={byState} arena={arena} activeYear={activeYear}
             focusState={stateSel ?? undefined}
             colorOf={colorOf} subOf={subOf} legendTitle="Seat status vs previous" legendItems={legendItems}
@@ -261,12 +266,14 @@ export default function ChangePage() {
         </div>
         <div className="flex flex-col gap-4">
           <ChartCard title="Net seat change (vs previous)" note="Click a party's bar to break its change down by state, biggest first.">
-            <Chart option={net} style={{ height: 300 }} notMerge onEvents={netEvents} />
+            <div className="h-[220px] sm:h-[300px]">
+              <Chart option={net} style={{ height: '100%' }} notMerge onEvents={netEvents} />
+            </div>
           </ChartCard>
           <ChartCard title="Retention matrix — defended → outcome" note="Rows: party defending the seat. Columns: who holds it now. Diagonal = retained. Click a cell to see those seats by state.">
             <div className="overflow-auto">
-              <table className="text-[10px] border-collapse">
-                <thead><tr><th className="p-1 text-slate-500 text-left">prev ↓ / now →</th>
+              <table className="text-[11px] sm:text-[10px] border-collapse">
+                <thead><tr><th className="p-1 text-slate-400 text-left">prev ↓ / now →</th>
                   {matrix.parties.map(p => <th key={p} className="p-1 text-slate-400 font-medium">{p}</th>)}</tr></thead>
                 <tbody>
                   {matrix.parties.map(a => (
@@ -279,7 +286,7 @@ export default function ChangePage() {
                         return (
                           <td key={b} title={`${a} → ${b}: ${v}`}
                             onClick={() => { if (v > 0) setDrill(d => (d?.kind === 'flow' && d.from === a && d.to === b ? null : { kind: 'flow', from: a, to: b })) }}
-                            className={`p-1 text-center tabular-nums min-w-[30px] ${v > 0 ? 'cursor-pointer' : ''} ${a === b ? 'outline outline-1 outline-slate-600' : ''} ${sel ? 'ring-2 ring-inset ring-white/80' : ''}`}
+                            className={`p-2 sm:p-1 text-center tabular-nums min-w-[34px] sm:min-w-[30px] ${v > 0 ? 'cursor-pointer' : ''} ${a === b ? 'outline outline-1 outline-slate-600' : ''} ${sel ? 'ring-2 ring-inset ring-white/80' : ''}`}
                             style={{ background: v ? `rgba(249,115,22,${alpha})` : 'transparent', color: alpha > 0.5 ? '#0f172a' : lab }}>
                             {v || ''}
                           </td>
@@ -302,34 +309,34 @@ export default function ChangePage() {
               ? <><Dot color={colorFor(drillData.from)} />{drillData.from} retained · {drillData.total} seats · by {grp === 'pc' ? 'parliament' : 'state'}</>
               : <><Dot color={colorFor(drillData.from)} />{drillData.from} → <Dot color={colorFor(drillData.to)} />{drillData.to} · {drillData.total} seats · by {grp === 'pc' ? 'parliament' : 'state'}</>}>
           <div className="mb-2 flex items-center justify-between gap-3 flex-wrap">
-            <span className="text-[11px] text-faint">{drillData.rows.length} {grp === 'pc' ? 'parliament' : 'state'}{drillData.rows.length !== 1 ? 's' : ''} · sorted high → low · click a seat for its report · <b className="text-muted">+N more</b> to expand</span>
+            <span className="text-[11px] text-muted">{drillData.rows.length} {grp === 'pc' ? 'parliament' : 'state'}{drillData.rows.length !== 1 ? 's' : ''} · sorted high → low · click a seat for its report · <b className="text-ink">+N more</b> to expand</span>
             <div className="flex items-center gap-2">
               {arena === 'AE' && <Seg options={[{ v: 'state', label: 'By state' }, { v: 'pc', label: 'By parliament' }]} value={groupBy} onChange={v => setGroupBy(v as 'state' | 'pc')} />}
-              <button onClick={() => setDrill(null)} className="text-[11px] text-faint underline decoration-dotted hover:text-ink transition-colors">clear ✕</button>
+              <button onClick={() => setDrill(null)} className="inline-flex items-center min-h-[32px] sm:min-h-0 text-[11px] text-muted underline decoration-dotted hover:text-ink transition-colors">clear ✕</button>
             </div>
           </div>
-          {drillData.rows.length === 0 ? <div className="text-faint text-sm py-6">No comparable seats moved here.</div> : drillData.kind === 'net' ? (
-            <div className="overflow-y-auto max-h-[420px] rounded-lg border border-white/[0.05]">
+          {drillData.rows.length === 0 ? <div className="text-muted text-sm py-6">No comparable seats moved here.</div> : drillData.kind === 'net' ? (
+            <div className="overflow-auto max-h-[55vh] sm:max-h-[420px] rounded-lg border border-white/[0.05]">
               <table className="w-full text-xs">
-                <thead className="text-slate-500 text-left sticky top-0 bg-slate-950/95 backdrop-blur z-10">
-                  <tr><th className="py-2 px-3 font-medium">{grp === 'pc' ? 'Parliament' : 'State'}</th><th className="text-right px-2 font-medium">Before</th><th className="text-right px-2 font-medium">Now</th><th className="text-right px-2 font-medium">Net</th><th className="pl-4 pr-3 font-medium">Where it moved</th></tr>
+                <thead className="text-slate-400 text-left sticky top-0 bg-slate-950/95 backdrop-blur z-10">
+                  <tr><th className="py-2 px-3 font-medium">{grp === 'pc' ? 'Parliament' : 'State'}</th><th className="hidden sm:table-cell text-right px-2 font-medium">Before</th><th className="hidden sm:table-cell text-right px-2 font-medium">Now</th><th className="text-right px-2 font-medium">Net</th><th className="pl-4 pr-3 font-medium">Where it moved</th></tr>
                 </thead>
                 <tbody>
                   {drillData.rows.map(r => (
                     <tr key={r.s} className="border-t border-white/[0.05] align-top hover:bg-white/[0.02]">
-                      <td className="py-2.5 px-3 font-medium whitespace-nowrap">{r.label}{r.sub ? <span className="text-slate-500 font-normal"> · {r.sub}</span> : null}</td>
-                      <td className="text-right px-2 py-2.5 tabular-nums text-slate-400">{r.before}</td>
-                      <td className="text-right px-2 py-2.5 tabular-nums text-slate-400">{r.now}</td>
-                      <td className="text-right px-2 py-2.5 tabular-nums font-bold" style={{ color: r.net > 0 ? '#34d399' : r.net < 0 ? '#fb7185' : undefined }}>{r.net > 0 ? '+' : ''}{r.net}</td>
+                      <td className="py-2.5 px-3 font-medium whitespace-nowrap">{r.label}{r.sub ? <span className="text-slate-400 font-normal"> · {r.sub}</span> : null}</td>
+                      <td className="hidden sm:table-cell text-right px-2 py-2.5 tabular-nums text-muted">{r.before}</td>
+                      <td className="hidden sm:table-cell text-right px-2 py-2.5 tabular-nums text-muted">{r.now}</td>
+                      <td className="text-right px-2 py-2.5 tabular-nums font-bold" style={{ color: r.net > 0 ? readable('#34d399', mode) : r.net < 0 ? readable('#fb7185', mode) : undefined }}>{r.net > 0 ? '+' : ''}{r.net}</td>
                       <td className="pl-4 pr-3 py-2">
                         {(() => {
                           const exp = expanded.has(r.s), more = Math.max(0, r.gained.length - netCap) + Math.max(0, r.lost.length - netCap)
                           return (
                             <div className="flex flex-wrap gap-1.5">
-                              {r.gained.slice(0, exp ? r.gained.length : netCap).map((g, i) => <button key={'g' + i} onClick={() => setPicked(g.seat)} className="px-1.5 py-0.5 rounded bg-emerald-500/10 border border-emerald-500/20 text-[11px] text-emerald-200/90 whitespace-nowrap hover:bg-emerald-500/20 transition-colors">▲ {tc(g.seat.c)} <span className="text-emerald-200/45">· {g.from}</span></button>)}
-                              {r.lost.slice(0, exp ? r.lost.length : netCap).map((l, i) => <button key={'l' + i} onClick={() => setPicked(l.seat)} className="px-1.5 py-0.5 rounded bg-rose-500/10 border border-rose-500/20 text-[11px] text-rose-200/90 whitespace-nowrap hover:bg-rose-500/20 transition-colors">▼ {tc(l.seat.c)} <span className="text-rose-200/45">· {l.to}</span></button>)}
-                              {more > 0 && <button onClick={() => toggleExp(r.s)} className="px-2 py-0.5 rounded-full border border-white/20 text-[11px] text-slate-300 hover:bg-white/10 hover:border-white/35 transition-colors">{exp ? '− show less' : `+${more} more`}</button>}
-                              {!r.gained.length && !r.lost.length && <span className="text-[11px] text-slate-600">no flips — count shift only</span>}
+                              {r.gained.slice(0, exp ? r.gained.length : netCap).map((g, i) => <button key={'g' + i} onClick={() => setPicked(g.seat)} className="inline-flex items-center min-h-[32px] px-2 py-1.5 sm:min-h-0 sm:px-1.5 sm:py-0.5 rounded bg-emerald-500/10 border border-emerald-500/20 text-[11px] whitespace-nowrap hover:bg-emerald-500/20 transition-colors" style={{ color: readable('#10b981', mode) }}>{`▲ ${tc(g.seat.c)}`}<span style={{ color: readable('#34d399', mode) }}>&nbsp;· {g.from}</span></button>)}
+                              {r.lost.slice(0, exp ? r.lost.length : netCap).map((l, i) => <button key={'l' + i} onClick={() => setPicked(l.seat)} className="inline-flex items-center min-h-[32px] px-2 py-1.5 sm:min-h-0 sm:px-1.5 sm:py-0.5 rounded bg-rose-500/10 border border-rose-500/20 text-[11px] whitespace-nowrap hover:bg-rose-500/20 transition-colors" style={{ color: readable('#f43f5e', mode) }}>{`▼ ${tc(l.seat.c)}`}<span style={{ color: readable('#fb7185', mode) }}>&nbsp;· {l.to}</span></button>)}
+                              {more > 0 && <button onClick={() => toggleExp(r.s)} className="inline-flex items-center min-h-[32px] px-3 py-1.5 sm:min-h-0 sm:px-2 sm:py-0.5 rounded-full border border-white/20 text-[11px] text-slate-300 hover:bg-white/10 hover:border-white/35 transition-colors">{exp ? '− show less' : `+${more} more`}</button>}
+                              {!r.gained.length && !r.lost.length && <span className="text-[11px] text-slate-400">no flips — count shift only</span>}
                             </div>
                           )
                         })()}
@@ -340,21 +347,21 @@ export default function ChangePage() {
               </table>
             </div>
           ) : (
-            <div className="overflow-y-auto max-h-[420px] rounded-lg border border-white/[0.05]">
+            <div className="overflow-auto max-h-[55vh] sm:max-h-[420px] rounded-lg border border-white/[0.05]">
               <table className="w-full text-xs">
-                <thead className="text-slate-500 text-left sticky top-0 bg-slate-950/95 backdrop-blur z-10"><tr><th className="py-2 px-3 font-medium">{grp === 'pc' ? 'Parliament' : 'State'}</th><th className="text-right px-2 font-medium">Seats</th><th className="pl-4 pr-3 font-medium">Which seats</th></tr></thead>
+                <thead className="text-slate-400 text-left sticky top-0 bg-slate-950/95 backdrop-blur z-10"><tr><th className="py-2 px-3 font-medium">{grp === 'pc' ? 'Parliament' : 'State'}</th><th className="text-right px-2 font-medium">Seats</th><th className="pl-4 pr-3 font-medium">Which seats</th></tr></thead>
                 <tbody>
                   {drillData.rows.map(r => (
                     <tr key={r.s} className="border-t border-white/[0.05] align-top hover:bg-white/[0.02]">
-                      <td className="py-2.5 px-3 font-medium whitespace-nowrap">{r.label}{r.sub ? <span className="text-slate-500 font-normal"> · {r.sub}</span> : null}</td>
+                      <td className="py-2.5 px-3 font-medium whitespace-nowrap">{r.label}{r.sub ? <span className="text-slate-400 font-normal"> · {r.sub}</span> : null}</td>
                       <td className="text-right px-2 py-2.5 tabular-nums font-bold text-ink">{r.seats.length}</td>
                       <td className="pl-4 pr-3 py-2">
                         {(() => {
                           const exp = expanded.has(r.s), more = Math.max(0, r.seats.length - flowCap)
                           return (
                             <div className="flex flex-wrap gap-1.5">
-                              {r.seats.slice(0, exp ? r.seats.length : flowCap).map((s, i) => <button key={i} onClick={() => setPicked(s)} className="px-1.5 py-0.5 rounded bg-white/[0.04] border border-white/[0.07] text-[11px] text-slate-300 whitespace-nowrap hover:bg-white/[0.09] transition-colors">{tc(s.c)}</button>)}
-                              {more > 0 && <button onClick={() => toggleExp(r.s)} className="px-2 py-0.5 rounded-full border border-white/20 text-[11px] text-slate-300 hover:bg-white/10 hover:border-white/35 transition-colors">{exp ? '− show less' : `+${more} more`}</button>}
+                              {r.seats.slice(0, exp ? r.seats.length : flowCap).map((s, i) => <button key={i} onClick={() => setPicked(s)} className="inline-flex items-center min-h-[32px] px-2 py-1.5 sm:min-h-0 sm:px-1.5 sm:py-0.5 rounded bg-white/[0.04] border border-white/[0.07] text-[11px] text-slate-300 whitespace-nowrap hover:bg-white/[0.09] transition-colors">{tc(s.c)}</button>)}
+                              {more > 0 && <button onClick={() => toggleExp(r.s)} className="inline-flex items-center min-h-[32px] px-3 py-1.5 sm:min-h-0 sm:px-2 sm:py-0.5 rounded-full border border-white/20 text-[11px] text-slate-300 hover:bg-white/10 hover:border-white/35 transition-colors">{exp ? '− show less' : `+${more} more`}</button>}
                             </div>
                           )
                         })()}
@@ -372,12 +379,12 @@ export default function ChangePage() {
         <ChartCard title={`Fortresses — longest live winning streaks (${strongholds.length})`} note="Same party, ≥3 consecutive wins, unbroken by delimitation. Sort any column · search · click a row for its report.">
           {strongholds.length
             ? <SortTable rows={strongholds} cols={fortressCols} defaultSort="streak" initialDir="desc" maxH={360} search searchIn={r => `${r.seat.c} ${r.seat.s} ${r.seat.p}`} onRowClick={r => setPicked(r.seat)} />
-            : <div className="text-faint text-sm py-6">No seat here has a live ≥3-win streak.</div>}
+            : <div className="text-muted text-sm py-6">No seat here has a live ≥3-win streak.</div>}
         </ChartCard>
         <ChartCard title={`Churn seats — flip most often (${churn.length})`} note="Bellwether/no-loyalty seats: ≥2 flips across comparable elections since 2009. Sort any column · search · click a row for its report.">
           {churn.length
             ? <SortTable rows={churn} cols={churnCols} defaultSort="flips" initialDir="desc" maxH={360} search searchIn={r => `${r.seat.c} ${r.seat.s} ${r.seat.p}`} onRowClick={r => setPicked(r.seat)} />
-            : <div className="text-faint text-sm py-6">No seat here has flipped ≥2 times.</div>}
+            : <div className="text-muted text-sm py-6">No seat here has flipped ≥2 times.</div>}
         </ChartCard>
       </div>
 

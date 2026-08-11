@@ -1,22 +1,28 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
 import { loadSeats, loadPartyAE, loadPartyGEState, loadPartyGENat, type Seat, type PartyAgg } from '../lib/data'
-import { colorFor } from '../lib/colors'
-import { useFilters } from '../store'
+import { colorFor, readable } from '../lib/colors'
+import { useFilters, useTheme } from '../store'
 import SeatDrawer from '../components/SeatDrawer'
 import { Dot, Seg, SortTable, StickyControls, type Col } from '../components/ui'
 import { activeByState } from '../lib/analysis'
 import { detectSignals, type Severity, type Signal, type SignalRow, type SignalGroup, type Tone } from '../lib/signals'
 import { simulateAlliance, type AllianceSim } from '../lib/projections'
 import { partyStrategy, type SwotItem } from '../lib/strategy'
+import { useIsPhone } from '../lib/useMedia'
 
 const tc = (s: string) => (s || '').toLowerCase().replace(/(^|[\s(\-./])([a-z])/g, (_, a: string, b: string) => a + b.toUpperCase())
 
+// Severity badges use MID-TONE text (red-500 / amber-700) instead of the old red-300/amber-200
+// pastels: this page has no useTheme(), so the colour must clear contrast on BOTH the cream light
+// canvas and the teal-black dark canvas. The 200/300 tints were ~1.4-2.0:1 on cream.
 const SEV: Record<Severity, { label: string; badge: string; ring: string }> = {
-  critical: { label: 'CRITICAL', badge: 'bg-red-500/15 text-red-300 border-red-400/30', ring: 'border-l-red-500/70' },
-  watch: { label: 'WATCH', badge: 'bg-amber-500/15 text-amber-200 border-amber-400/30', ring: 'border-l-amber-500/70' },
+  critical: { label: 'CRITICAL', badge: 'bg-red-500/20 text-red-500 border-red-500/40', ring: 'border-l-red-500/70' },
+  watch: { label: 'WATCH', badge: 'bg-amber-500/20 text-amber-700 border-amber-500/40', ring: 'border-l-amber-500/70' },
   note: { label: 'NOTE', badge: 'bg-white/[0.06] text-slate-300 border-white/15', ring: 'border-l-slate-500/60' },
 }
-const TONE: Record<Tone, string> = { pos: '#10b981', neg: '#f43f5e', neutral: '#64748b' }
+// Tone hexes double as TEXT colour (the per-party delta) — deepened to mid-tones that read on both
+// themes (#10b981 was 2.3:1 on cream, #f43f5e 3.4:1). Same reason as SEV above: no useTheme() here.
+const TONE: Record<Tone, string> = { pos: '#059669', neg: '#e11d48', neutral: '#64748b' }
 const GROUPS: { key: SignalGroup; label: string; caption: string }[] = [
   { key: 'control', label: 'Control of the house', caption: 'who holds power — and by how few seats' },
   { key: 'soft', label: 'Where the lead is soft', caption: 'exposure to shore up before chasing new ground' },
@@ -31,12 +37,12 @@ function Bar({ row }: { row: SignalRow }) {
     <div className="flex items-center gap-2.5">
       <span className="inline-block w-2.5 h-2.5 rounded-full shrink-0 ring-1 ring-black/30" style={{ background: dot }} />
       <span className="w-16 sm:w-[84px] shrink-0 truncate text-[12px] font-medium text-ink">{row.label}</span>
-      <span className="w-[104px] shrink-0 tabular-nums text-[11px] text-muted">{row.value}</span>
+      <span className="w-[72px] sm:w-[104px] shrink-0 tabular-nums text-[11px] text-muted">{row.value}</span>
       <div className="flex-1 h-2.5 rounded-full bg-white/[0.05] overflow-hidden min-w-[32px]">
         <div className="h-full rounded-full" style={{ width: `${Math.max(3, row.bar * 100)}%`, background: t }} />
       </div>
-      {row.delta && <span className="w-14 shrink-0 text-right tabular-nums text-[11px] font-semibold" style={{ color: t }}>{row.delta}</span>}
-      {row.badge && <span className="shrink-0 hidden md:inline text-[9px] uppercase tracking-wide px-1.5 py-0.5 rounded text-faint bg-white/[0.04] border border-white/10">{row.badge}</span>}
+      {row.delta && <span className="w-11 sm:w-14 shrink-0 text-right tabular-nums text-[11px] font-semibold" style={{ color: t }}>{row.delta}</span>}
+      {row.badge && <span className="shrink-0 hidden md:inline text-[10px] uppercase tracking-wide px-1.5 py-0.5 rounded text-muted bg-white/[0.04] border border-white/20">{row.badge}</span>}
     </div>
   )
 }
@@ -45,28 +51,31 @@ function SimStat({ label, value, sub, color, delta }: { label: string; value: nu
     <div>
       <div className="kicker">{label}</div>
       <div className="text-[26px] font-bold tabular-nums leading-none" style={color ? { color } : undefined}>
-        {value}{delta != null && delta > 0 && <span className="text-[13px] text-emerald-300 ml-1.5 align-middle">+{delta}</span>}
+        {/* emerald-600, not -300: the projected gain must read on the cream canvas too (no useTheme here) */}
+        {value}{delta != null && delta > 0 && <span className="text-[13px] text-emerald-600 ml-1.5 align-middle">+{delta}</span>}
       </div>
-      {sub && <div className="text-[10px] text-faint mt-0.5">{sub}</div>}
+      {sub && <div className="text-[11px] text-muted mt-0.5">{sub}</div>}
     </div>
   )
 }
 // One quadrant of the SWOT grid.
 function SwotQuad({ title, sub, accent, items }: { title: string; sub: string; accent: string; items: SwotItem[] }) {
+  const mode = useTheme()
   return (
     <div className="card p-0 overflow-hidden border-l-4" style={{ borderLeftColor: accent }}>
       <div className="px-4 pt-3 pb-1.5 flex items-baseline gap-2">
-        <span className="text-[13px] font-bold" style={{ color: accent }}>{title}</span>
-        <span className="text-[10.5px] text-faint">{sub}</span>
-        <span className="ml-auto text-[11px] text-faint tabular-nums">{items.length}</span>
+        {/* the border keeps the raw accent; the TEXT is contrast-corrected for the canvas */}
+        <span className="text-[13px] font-bold" style={{ color: readable(accent, mode) }}>{title}</span>
+        <span className="text-[11px] text-muted">{sub}</span>
+        <span className="ml-auto text-[11px] text-muted tabular-nums">{items.length}</span>
       </div>
       <div className="px-4 pb-3 space-y-2">
         {items.length ? items.map((it, i) => (
           <div key={i} className="flex gap-2 text-[12.5px] text-muted leading-relaxed">
             <span className="shrink-0 mt-[7px] w-1.5 h-1.5 rounded-full" style={{ background: accent }} />
-            <span>{it.text} <span className="text-[9px] uppercase tracking-wide text-faint border border-white/10 rounded px-1 py-px ml-0.5 whitespace-nowrap">{it.tag}</span></span>
+            <span>{it.text} <span className="text-[10px] uppercase tracking-wide text-muted border border-white/20 rounded px-1 py-px ml-0.5 whitespace-nowrap">{it.tag}</span></span>
           </div>
-        )) : <div className="text-faint text-[12px]">No clear read from this election.</div>}
+        )) : <div className="text-muted text-[12px]">No clear read from this election.</div>}
       </div>
     </div>
   )
@@ -80,6 +89,8 @@ type Tagged = Signal & { election: Election; arenaRows: Seat[] }
 
 export default function SignalsPage() {
   const { arena, state } = useFilters()
+  const mode = useTheme()
+  const isPhone = useIsPhone()   // reactive (matchMedia) — only used to shorten the view-toggle labels
   const st = state ?? 'All states'
   const isState = st !== 'All states'
   const [ae, setAe] = useState<Seat[]>([])
@@ -211,7 +222,7 @@ export default function SignalsPage() {
   const simHouse = simEl ? (simEl.arena === 'AE' ? isState : !isState) : false
   const simN = simActive.length
   const simMaj = simHouse && simN ? Math.floor(simN / 2) + 1 : null
-  const blocColor = bloc.length ? colorFor(bloc[0], simParties.find(x => x.p === bloc[0])?.a ?? null) : '#10b981'
+  const blocColor = bloc.length ? colorFor(bloc[0], simParties.find(x => x.p === bloc[0])?.a ?? null) : '#059669'   // fallback deepened to read on cream
   const pct = (n: number) => (simN ? (n / simN) * 100 : 0)
   const crosses = simMaj != null && sim != null && sim.projected >= simMaj && sim.now < simMaj
   const shortBy = simMaj != null && sim != null ? Math.max(0, simMaj - sim.projected) : 0
@@ -227,21 +238,22 @@ export default function SignalsPage() {
   const drillRows = simEl ? (simEl.arena === 'AE' ? ae : ge) : ae
 
   const Group = ({ label, ar, years }: { label: string; ar: 'AE' | 'GE'; years: number[] }) => (
-    <div className="flex items-center gap-1.5 flex-wrap">
-      <span className="text-[10px] text-faint uppercase tracking-wide">{label}</span>
+    /* shrink-0 on phones so the row above scrolls horizontally instead of squashing the chips */
+    <div className="flex items-center gap-1.5 flex-wrap shrink-0 sm:shrink">
+      <span className="text-[11px] text-muted uppercase tracking-wide">{label}</span>
       {years.map(y => {
         const key = `${ar}|${y}`, on = sel.includes(key)
         return (
           <button key={key} onClick={() => (view === 'patterns' ? toggle(key) : selectOne(key))}
-            className={`px-2.5 py-1 rounded-full text-[11px] tabular-nums transition-colors border ${on ? 'bg-gold text-black border-gold font-semibold' : 'text-muted border-white/10 hover:text-ink hover:border-white/25 bg-white/[0.03]'}`}>{y}</button>
+            className={`px-3 py-1.5 min-h-[32px] inline-flex items-center rounded-full text-[11px] tabular-nums transition-colors border ${on ? 'bg-gold text-black border-gold font-semibold' : 'text-muted border-white/10 hover:text-ink hover:border-white/25 bg-white/[0.03]'}`}>{y}</button>
         )
       })}
-      {view === 'patterns' && years.length > 1 && <button onClick={() => toggleAll(ar, years)} className="text-[10px] text-faint hover:text-ink ml-0.5 underline decoration-dotted">all</button>}
+      {view === 'patterns' && years.length > 1 && <button onClick={() => toggleAll(ar, years)} className="text-[11px] text-muted hover:text-ink ml-0.5 px-2 py-1.5 min-h-[32px] inline-flex items-center underline decoration-dotted">all</button>}
     </div>
   )
   const PartyChip = ({ p, a, n, on, onClick }: { p: string; a: string | null; n: number; on: boolean; onClick: () => void }) => (
-    <button onClick={onClick} className={`px-2.5 py-1 rounded-full text-[11px] border transition-colors flex items-center gap-1.5 ${on ? 'border-gold/60 bg-gold/15 text-ink font-semibold' : 'border-white/10 text-muted hover:text-ink hover:border-white/25 bg-white/[0.03]'}`}>
-      <span className="w-2 h-2 rounded-full" style={{ background: colorFor(p, a) }} />{p}<span className="opacity-60 tabular-nums text-[10px]">{n || '·'}</span>
+    <button onClick={onClick} className={`px-3 py-1.5 min-h-[32px] rounded-full text-[11px] border transition-colors flex items-center gap-1.5 ${on ? 'border-gold/60 bg-gold/15 text-ink font-semibold' : 'border-white/10 text-muted hover:text-ink hover:border-white/25 bg-white/[0.03]'}`}>
+      <span className="w-2 h-2 rounded-full" style={{ background: colorFor(p, a) }} />{p}<span className="tabular-nums text-[10.5px] text-muted">{n || '·'}</span>
     </button>
   )
 
@@ -252,7 +264,7 @@ export default function SignalsPage() {
     return (
       <div key={sig.id} className={`card p-0 overflow-hidden border-l-4 ${sv.ring}`}>
         <div className="p-4">
-          <div className="flex items-start gap-3">
+          <div className="flex items-start gap-2 flex-wrap sm:flex-nowrap sm:gap-3">
             <span className={`shrink-0 mt-0.5 text-[10px] font-bold tracking-wide px-2 py-1 rounded-md border ${sv.badge}`}>{sv.label}</span>
             {multi && <span className="shrink-0 mt-0.5 text-[10px] font-medium px-2 py-1 rounded-md border border-white/10 bg-white/[0.04] text-slate-300 whitespace-nowrap">{elFull(sig.election)}</span>}
             <div className="flex-1 min-w-0">
@@ -260,41 +272,46 @@ export default function SignalsPage() {
                 {sig.party && <Dot color={accent!} />}
                 <span className="text-[14.5px] font-bold text-ink leading-tight">{sig.title}</span>
               </div>
-              <div className="text-[11.5px] text-faint mt-0.5 leading-snug">{sig.caption}</div>
+              <div className="text-[11.5px] text-muted mt-0.5 leading-snug">{sig.caption}</div>
             </div>
-            <div className="text-right shrink-0 w-36">
-              <div className="text-[13px] font-bold tabular-nums leading-tight" style={accent ? { color: accent } : undefined}>{sig.metric}</div>
-              {sig.metricSub && <div className="text-[10px] text-faint mt-0.5">{sig.metricSub}</div>}
+            <div className="w-full text-left sm:w-36 sm:text-right shrink-0 mt-1 sm:mt-0">
+              <div className="text-[13px] font-bold tabular-nums leading-tight" style={accent ? { color: readable(accent, mode) } : undefined}>{sig.metric}</div>
+              {sig.metricSub && <div className="text-[11px] text-muted mt-0.5">{sig.metricSub}</div>}
             </div>
           </div>
           <div className="mt-3 space-y-1.5">
             {sig.rows.map((r, i) => <Bar key={i} row={r} />)}
-            {sig.rowsNote && <div className="text-[10px] text-faint pl-5">{sig.rowsNote}</div>}
+            {sig.rowsNote && <div className="text-[11px] text-muted pl-5">{sig.rowsNote}</div>}
           </div>
           <div className="mt-3 pt-2.5 border-t border-white/[0.05] text-[12px] text-muted leading-relaxed">
             <span className="text-gold/90 font-bold">▸ </span>{sig.soWhat}
           </div>
           {sig.seats.length > 0 && (
             <button onClick={() => setOpen(isOpen ? null : sig.id)}
-              className="mt-2.5 text-xs text-gold hover:text-gold underline decoration-dotted decoration-gold/40 underline-offset-2 transition-colors">
+              className="mt-2.5 inline-flex items-center min-h-[32px] py-1 text-xs text-gold hover:text-gold underline decoration-dotted decoration-gold/40 underline-offset-2 transition-colors">
               {isOpen ? 'Hide seats' : `Show the ${sig.seats.length} seats →`}
             </button>
           )}
         </div>
         {isOpen && sig.seats.length > 0 && (
-          <div className="border-t border-white/[0.06] px-4 py-3 bg-white/[0.015]">
-            <div className="text-[11px] text-faint mb-2">The last mile — {elFull(sig.election)} · click any seat for its full constituency report.</div>
-            <SortTable rows={sig.seats} cols={cols} defaultSort="m" initialDir="asc" maxH={320}
-              search searchIn={r => `${r.c} ${r.s} ${r.p} ${r.q ?? ''}`} onRowClick={s => setPicked({ seat: s, rows: sig.arenaRows, arena: sig.election.arena })} />
+          <div className="border-t border-white/[0.06] px-4 py-3 bg-white/[0.015] overflow-x-auto">
+            <div className="text-[11px] text-muted mb-2">The last mile — {elFull(sig.election)} · click any seat for its full constituency report.</div>
+            {/* min-w keeps the 6-column table readable and scrolling INSIDE the card, not the page */}
+            <div className="min-w-[520px]">
+              <SortTable rows={sig.seats} cols={cols} defaultSort="m" initialDir="asc" maxH={320}
+                search searchIn={r => `${r.c} ${r.s} ${r.p} ${r.q ?? ''}`} onRowClick={s => setPicked({ seat: s, rows: sig.arenaRows, arena: sig.election.arena })} />
+            </div>
           </div>
         )}
       </div>
     )
   }
 
+  // Accents are used as 13px BOLD TEXT (the playbook headings), so they carry the same
+  // both-canvases mid-tone rule as TONE/SEV above — #10b981/#f43f5e failed on the cream theme.
   const PLAYS = [
-    { key: 'win', title: (p: string) => `To make ${p} WIN`, sub: 'the offensive plan', accent: '#10b981', arrow: '▲' },
-    { key: 'lose', title: (p: string) => `To make ${p} LOSE`, sub: 'how a rival beats them', accent: '#f43f5e', arrow: '▼' },
+    { key: 'win', title: (p: string) => `To make ${p} WIN`, sub: 'the offensive plan', accent: '#059669', arrow: '▲' },
+    { key: 'lose', title: (p: string) => `To make ${p} LOSE`, sub: 'how a rival beats them', accent: '#e11d48', arrow: '▼' },
   ] as const
 
   return (
@@ -305,33 +322,40 @@ export default function SignalsPage() {
             <h2 className="text-lg font-bold leading-tight tracking-tight">Signals · {isState ? st : 'All India'}</h2>
             <div className="kicker">a strategist's read — party SWOT &amp; playbook · alliance what-ifs · auto-flagged patterns</div>
           </div>
-          <Seg options={[{ v: 'swot', label: 'Party SWOT' }, { v: 'alliance', label: 'Alliance simulator' }, { v: 'patterns', label: 'Patterns' }]} value={view} onChange={v => setView(v as ViewKey)} />
+          {/* the three labels total ~330px — wider than a 390px phone's sticky bar, so shorten them
+              there (useIsPhone is reactive) and keep a scroll container as the belt-and-braces */}
+          <div className="w-full overflow-x-auto sm:w-auto sm:overflow-visible">
+            <Seg options={[{ v: 'swot', label: isPhone ? 'SWOT' : 'Party SWOT' }, { v: 'alliance', label: isPhone ? 'Alliance' : 'Alliance simulator' }, { v: 'patterns', label: 'Patterns' }]} value={view} onChange={v => setView(v as ViewKey)} />
+          </div>
           {view === 'patterns' && (
-            <span className="text-sm text-slate-400 ml-auto">
-              {signals.length} signal{signals.length !== 1 ? 's' : ''}{nCrit ? <span className="text-red-300"> · {nCrit} critical</span> : null}{multi ? <span className="text-faint"> · {selectedEls.length} elections</span> : null}
+            <span className="text-sm text-muted ml-auto">
+              {signals.length} signal{signals.length !== 1 ? 's' : ''}{nCrit ? <span className="text-red-500"> · {nCrit} critical</span> : null}{multi ? <span className="text-muted"> · {selectedEls.length} elections</span> : null}
             </span>
           )}
         </div>
-        <div className="flex items-center gap-x-4 gap-y-1.5 flex-wrap mt-2.5 pt-2.5 border-t border-white/[0.05]">
-          <Seg options={[{ v: 'AE', label: 'Assemblies' }, { v: 'GE', label: 'Parliaments' }, { v: 'BOTH', label: 'Both' }]} value={scope} onChange={v => setScope(v as ScopeArena)} />
-          <span className="kicker text-faint ml-1">{view === 'patterns' ? 'Elections' : 'Election'}</span>
+        <div className="flex items-center gap-x-3 sm:gap-x-4 gap-y-1.5 flex-nowrap overflow-x-auto sm:flex-wrap sm:overflow-visible mt-2.5 pt-2.5 border-t border-white/[0.05]">
+          <div className="shrink-0">
+            <Seg options={[{ v: 'AE', label: 'Assemblies' }, { v: 'GE', label: 'Parliaments' }, { v: 'BOTH', label: 'Both' }]} value={scope} onChange={v => setScope(v as ScopeArena)} />
+          </div>
+          <span className="kicker text-[11px] text-muted ml-1 shrink-0">{view === 'patterns' ? 'Elections' : 'Election'}</span>
           {scope !== 'GE' && aeYears.length > 0 && <Group label="Assembly" ar="AE" years={aeYears} />}
           {scope !== 'AE' && geYears.length > 0 && <Group label="Lok Sabha" ar="GE" years={geYears} />}
-          {view === 'patterns' && sel.length > 0 && <button onClick={() => setSel([])} className="text-[11px] text-faint hover:text-ink underline decoration-dotted ml-1">clear</button>}
+          {view === 'patterns' && sel.length > 0 && <button onClick={() => setSel([])} className="text-[11px] text-muted hover:text-ink underline decoration-dotted ml-1 px-2 py-1.5 min-h-[32px] inline-flex items-center shrink-0">clear</button>}
         </div>
       </StickyControls>
 
-      <p className="text-[12.5px] text-muted mb-4 leading-relaxed max-w-3xl">
+      {/* ~11 lines of prose at 390px would push every card below the fold — desktop keeps it */}
+      <p className="hidden sm:block text-[12.5px] text-muted mb-4 leading-relaxed max-w-3xl">
         Verdix reads this election the way a senior strategist would. <b className="text-ink">Party SWOT</b> — pick a party for its strengths, weaknesses, opportunities and threats, plus a playbook to make it <b className="text-ink">win</b> and one to make it <b className="text-ink">lose</b>. <b className="text-ink">Alliance simulator</b> — what changes if parties contest as one bloc, at a chosen vote transfer. <b className="text-ink">Patterns</b> — the auto-flagged signals across the whole field. The what-if views use the most recent election picked above; region is set in the Focus bar.
       </p>
 
       {!sel.length ? (
-        <div className="h-[160px] grid place-items-center text-faint text-sm text-center px-8">Pick an election above to begin.</div>
+        <div className="h-[160px] grid place-items-center text-muted text-sm text-center px-8">Pick an election above to begin.</div>
       ) : view === 'swot' ? (
         /* ── Party SWOT ── */
         <div className="space-y-4">
           <div className="flex flex-wrap items-center gap-1.5">
-            <span className="kicker text-faint mr-1">Analyse party · {simEl ? elFull(simEl) : ''}</span>
+            <span className="kicker text-[11px] text-muted mr-1">Analyse party · {simEl ? elFull(simEl) : ''}</span>
             {simParties.map(x => <PartyChip key={x.p} p={x.p} a={x.a} n={x.seats} on={swotParty === x.p} onClick={() => { setSwotParty(x.p); setOpenPlay(null) }} />)}
           </div>
           {swot && simEl ? (
@@ -340,24 +364,27 @@ export default function SignalsPage() {
                 <div className="flex items-center gap-2 flex-wrap">
                   <Dot color={colorFor(swot.party, swot.a)} />
                   <h3 className="text-[17px] font-bold text-ink">{swot.party}</h3>
-                  <span className="text-[11px] text-faint">· {elFull(simEl)}{isState ? ` · ${st}` : ' · all India'}</span>
+                  <span className="text-[11px] text-muted">· {elFull(simEl)}{isState ? ` · ${st}` : ' · all India'}</span>
                 </div>
                 <p className="text-[14px] text-muted mt-1.5 leading-snug max-w-3xl"><span className="text-gold/90 font-bold">▸ </span>{swot.verdict}</p>
                 <div className="flex flex-wrap gap-x-6 gap-y-2 mt-3">
                   {swot.scorecard.map((s, i) => (
                     <div key={i}>
                       <div className="kicker">{s.label}</div>
-                      <div className="text-[16px] font-bold tabular-nums leading-none" style={{ color: s.tone === 'pos' ? '#34d399' : s.tone === 'neg' ? '#fb7185' : undefined }}>{s.value}</div>
+                      {/* mid-tones, not #34d399/#fb7185: these scorecard numbers must read on cream too */}
+                      <div className="text-[16px] font-bold tabular-nums leading-none" style={{ color: s.tone === 'pos' ? readable('#059669', mode) : s.tone === 'neg' ? readable('#e11d48', mode) : undefined }}>{s.value}</div>
                     </div>
                   ))}
                 </div>
               </div>
 
               <div className="grid md:grid-cols-2 gap-3 items-start">
-                <SwotQuad title="Strengths" sub="what's working" accent="#10b981" items={swot.strengths} />
-                <SwotQuad title="Weaknesses" sub="what's exposed" accent="#f43f5e" items={swot.weaknesses} />
-                <SwotQuad title="Opportunities" sub="where to gain" accent="#38bdf8" items={swot.opportunities} />
-                <SwotQuad title="Threats" sub="what can go wrong" accent="#f59e0b" items={swot.threats} />
+                {/* accents are also the 13px bold quadrant titles → mid-tones that clear both canvases
+                    (the old #10b981 / #38bdf8 / #f59e0b were ~2:1 on the cream light theme) */}
+                <SwotQuad title="Strengths" sub="what's working" accent="#059669" items={swot.strengths} />
+                <SwotQuad title="Weaknesses" sub="what's exposed" accent="#e11d48" items={swot.weaknesses} />
+                <SwotQuad title="Opportunities" sub="where to gain" accent="#0284c7" items={swot.opportunities} />
+                <SwotQuad title="Threats" sub="what can go wrong" accent="#b45309" items={swot.threats} />
               </div>
 
               <div className="grid lg:grid-cols-2 gap-3 items-start">
@@ -366,8 +393,8 @@ export default function SignalsPage() {
                   return (
                     <div key={col.key} className="card p-0 overflow-hidden border-t-2" style={{ borderTopColor: col.accent }}>
                       <div className="px-4 pt-3 pb-2">
-                        <div className="text-[13px] font-bold tracking-wide flex items-center gap-1.5" style={{ color: col.accent }}><span>{col.arrow}</span>{col.title(swot.party)}</div>
-                        <div className="text-[10.5px] text-faint uppercase tracking-wide">{col.sub}</div>
+                        <div className="text-[13px] font-bold tracking-wide flex items-center gap-1.5" style={{ color: readable(col.accent, mode) }}><span>{col.arrow}</span>{col.title(swot.party)}</div>
+                        <div className="text-[11px] text-muted uppercase tracking-wide">{col.sub}</div>
                       </div>
                       <div className="divide-y divide-white/[0.05]">
                         {plays.length ? plays.map(pl => {
@@ -380,16 +407,16 @@ export default function SignalsPage() {
                                   <div className="text-[13px] font-semibold text-ink">{pl.move}</div>
                                   <div className="text-[12px] text-muted mt-0.5 leading-relaxed">{pl.why}</div>
                                   {pl.seats && pl.seats.length > 0 && (
-                                    <button onClick={() => setOpenPlay(isO ? null : k)} className="mt-1.5 text-[11px] text-gold hover:text-gold underline decoration-dotted decoration-gold/40">{isO ? 'Hide seats' : `Show the ${pl.seats.length} seats →`}</button>
+                                    <button onClick={() => setOpenPlay(isO ? null : k)} className="mt-1.5 inline-flex items-center min-h-[32px] py-1 text-[11px] text-gold hover:text-gold underline decoration-dotted decoration-gold/40">{isO ? 'Hide seats' : `Show the ${pl.seats.length} seats →`}</button>
                                   )}
                                   {isO && pl.seats && (
-                                    <div className="mt-2"><SortTable rows={pl.seats} cols={cols} defaultSort="m" initialDir="asc" maxH={260} search searchIn={r => `${r.c} ${r.s} ${r.p} ${r.q ?? ''}`} onRowClick={s => setPicked({ seat: s, rows: drillRows, arena: simEl.arena })} /></div>
+                                    <div className="mt-2 -mr-4 overflow-x-auto"><div className="min-w-[520px] pr-4"><SortTable rows={pl.seats} cols={cols} defaultSort="m" initialDir="asc" maxH={260} search searchIn={r => `${r.c} ${r.s} ${r.p} ${r.q ?? ''}`} onRowClick={s => setPicked({ seat: s, rows: drillRows, arena: simEl.arena })} /></div></div>
                                   )}
                                 </div>
                               </div>
                             </div>
                           )
-                        }) : <div className="px-4 py-3 text-faint text-[12px]">No clear moves from this election's data.</div>}
+                        }) : <div className="px-4 py-3 text-muted text-[12px]">No clear moves from this election's data.</div>}
                       </div>
                     </div>
                   )
@@ -397,7 +424,7 @@ export default function SignalsPage() {
               </div>
             </>
           ) : (
-            <div className="h-[160px] grid place-items-center text-faint text-sm text-center px-8">Pick a party above to analyse.</div>
+            <div className="h-[160px] grid place-items-center text-muted text-sm text-center px-8">Pick a party above to analyse.</div>
           )}
         </div>
       ) : view === 'alliance' ? (
@@ -410,29 +437,29 @@ export default function SignalsPage() {
                 <div className="kicker">if these parties contested as one bloc — {elFull(simEl)}{isState ? '' : ' · all India'}</div>
               </div>
               {hasShares && bloc.length >= 2 && (
-                <div className="flex items-center gap-3">
-                  <span className="text-[11px] text-faint">Vote transfer</span>
-                  <input type="range" min={0} max={100} step={5} value={transfer} onChange={e => setTransfer(+e.target.value)} className="w-40 sm:w-52 accent-gold" />
+                <div className="flex items-center gap-2 sm:gap-3 w-full sm:w-auto">
+                  <span className="text-[11px] text-muted shrink-0">Vote transfer</span>
+                  <input type="range" min={0} max={100} step={5} value={transfer} onChange={e => setTransfer(+e.target.value)} className="flex-1 min-w-0 sm:flex-none sm:w-52 accent-gold" />
                   <span className="text-base font-bold tabular-nums w-11 text-right" style={{ color: blocColor }}>{transfer}%</span>
                 </div>
               )}
             </div>
             {!hasShares ? (
-              <div className="text-faint text-[13px] mt-3 leading-relaxed">The simulator needs vote-share data — pick a <b className="text-muted">state</b>, or a <b className="text-muted">Lok Sabha</b> election. (All-India assembly has no national vote-share series to transfer.)</div>
+              <div className="text-muted text-[13px] mt-3 leading-relaxed">The simulator needs vote-share data — pick a <b className="text-muted">state</b>, or a <b className="text-muted">Lok Sabha</b> election. (All-India assembly has no national vote-share series to transfer.)</div>
             ) : (
               <>
                 <div className="flex flex-wrap items-center gap-1.5 mt-3">
-                  <span className="text-[10px] text-faint uppercase tracking-wide mr-1">Bloc</span>
+                  <span className="text-[11px] text-muted uppercase tracking-wide mr-1">Bloc</span>
                   {simParties.map(x => <PartyChip key={x.p} p={x.p} a={x.a} n={x.seats} on={bloc.includes(x.p)} onClick={() => toggleBloc(x.p)} />)}
-                  <span className="text-[10px] text-faint ml-1">pick 2–4</span>
+                  <span className="text-[11px] text-muted ml-1">pick 2–4</span>
                 </div>
                 {bloc.length < 2 ? (
-                  <div className="text-faint text-[13px] mt-4">Pick at least two parties to simulate an alliance.</div>
+                  <div className="text-muted text-[13px] mt-4">Pick at least two parties to simulate an alliance.</div>
                 ) : sim && (
                   <div className="mt-4">
                     <div className="flex items-end gap-5 flex-wrap">
                       <SimStat label="Win apart (now)" value={sim.now} />
-                      <span className="text-2xl text-faint pb-1.5">→</span>
+                      <span className="text-2xl text-muted pb-1.5">→</span>
                       <SimStat label="As one bloc" value={sim.projected} color={blocColor} delta={sim.gains.length} />
                       {simMaj != null && <SimStat label="Majority" value={simMaj} sub={`of ${simN}`} />}
                     </div>
@@ -442,25 +469,25 @@ export default function SignalsPage() {
                         <div className="absolute inset-y-0" style={{ left: `${pct(sim.now)}%`, width: `${pct(sim.gains.length)}%`, background: blocColor, opacity: 0.42 }} />
                       </div>
                       {simMaj != null && <div className="absolute top-0 bottom-0 w-px bg-white/80" style={{ left: `${pct(simMaj)}%` }} />}
-                      {simMaj != null && <div className="absolute -top-4 text-[9px] text-faint whitespace-nowrap" style={{ left: `${pct(simMaj)}%`, transform: 'translateX(-50%)' }}>majority {simMaj}</div>}
+                      {simMaj != null && <div className="absolute -top-4 text-[10.5px] text-muted font-medium whitespace-nowrap" style={{ left: `${pct(simMaj)}%`, transform: 'translateX(-50%)' }}>majority {simMaj}</div>}
                     </div>
                     <div className="text-[12.5px] text-muted mt-3 leading-relaxed">
                       <span className="text-gold/90 font-bold">▸ </span>
                       At <b className="text-ink">{transfer}%</b> transfer, <b style={{ color: blocColor }}>{bloc.join(' + ')}</b> would hold <b style={{ color: blocColor }}>{sim.projected}</b> of {simN} —{' '}
-                      {sim.gains.length > 0 ? <><b className="text-emerald-300">+{sim.gains.length}</b> over the {sim.now} they win apart</> : <>no gain over the {sim.now} they win apart</>}
+                      {sim.gains.length > 0 ? <><b className="text-emerald-600">+{sim.gains.length}</b> over the {sim.now} they win apart</> : <>no gain over the {sim.now} they win apart</>}
                       {sim.friendlyFights > 0 ? <>; {sim.friendlyFights} internal contest{sim.friendlyFights !== 1 ? 's' : ''} consolidated</> : null}
-                      {crosses ? <b className="text-emerald-300"> — crosses the majority line</b> : simMaj != null && shortBy > 0 ? <> — still {shortBy} short of majority</> : null}.{' '}
-                      <span className="text-faint">Reachable ceiling: {sim.contestable} runner-up seats.</span>
+                      {crosses ? <b className="text-emerald-600"> — crosses the majority line</b> : simMaj != null && shortBy > 0 ? <> — still {shortBy} short of majority</> : null}.{' '}
+                      <span className="text-muted">Reachable ceiling: {sim.contestable} runner-up seats.</span>
                     </div>
                     {sim.gains.length > 0 && (
-                      <button onClick={() => setSimOpen(o => !o)} className="mt-2.5 text-xs text-gold hover:text-gold underline decoration-dotted decoration-gold/40 underline-offset-2 transition-colors">
+                      <button onClick={() => setSimOpen(o => !o)} className="mt-2.5 inline-flex items-center min-h-[32px] py-1 text-xs text-gold hover:text-gold underline decoration-dotted decoration-gold/40 underline-offset-2 transition-colors">
                         {simOpen ? 'Hide flip seats' : `Show the ${sim.gains.length} flip seats →`}
                       </button>
                     )}
                     {simOpen && sim.gains.length > 0 && (
-                      <div className="mt-2"><SortTable rows={sim.gains} cols={cols} defaultSort="m" initialDir="asc" maxH={300} search searchIn={r => `${r.c} ${r.s} ${r.p} ${r.q ?? ''}`} onRowClick={s => setPicked({ seat: s, rows: drillRows, arena: simEl.arena })} /></div>
+                      <div className="mt-2 -mx-4 px-4 overflow-x-auto"><div className="min-w-[520px]"><SortTable rows={sim.gains} cols={cols} defaultSort="m" initialDir="asc" maxH={300} search searchIn={r => `${r.c} ${r.s} ${r.p} ${r.q ?? ''}`} onRowClick={s => setPicked({ seat: s, rows: drillRows, arena: simEl.arena })} /></div></div>
                     )}
-                    <div className="text-[10px] text-faint mt-2.5 leading-relaxed">Uniform model: a non-bloc seat flips in when {transfer}% of the other bloc members' statewide vote share covers the losing margin. Seats where the bloc ran third can't be judged from top-two data, so this is a <b className="text-muted">floor</b> on the gain, not a forecast.</div>
+                    <div className="text-[11px] text-muted mt-2.5 leading-relaxed">Uniform model: a non-bloc seat flips in when {transfer}% of the other bloc members' statewide vote share covers the losing margin. Seats where the bloc ran third can't be judged from top-two data, so this is a <b className="text-muted">floor</b> on the gain, not a forecast.</div>
                   </div>
                 )}
               </>
@@ -475,8 +502,8 @@ export default function SignalsPage() {
               <div key={g.key}>
                 <div className="flex items-baseline gap-2 mb-2.5">
                   <h3 className="text-[12.5px] font-bold uppercase tracking-wide text-ink">{g.label}</h3>
-                  <span className="text-[11px] text-faint">{g.caption}</span>
-                  <span className="text-[11px] text-faint ml-auto tabular-nums">{g.items.length}</span>
+                  <span className="text-[11px] text-muted">{g.caption}</span>
+                  <span className="text-[11px] text-muted ml-auto tabular-nums">{g.items.length}</span>
                 </div>
                 <div className="grid xl:grid-cols-2 gap-3 items-start">
                   {g.items.map(renderCard)}
@@ -485,7 +512,7 @@ export default function SignalsPage() {
             ))}
           </div>
         ) : (
-          <div className="h-[160px] grid place-items-center text-faint text-sm text-center px-8">
+          <div className="h-[160px] grid place-items-center text-muted text-sm text-center px-8">
             No strong signals in the {selectedEls.length === 1 ? elFull(selectedEls[0]).toLowerCase() : `${selectedEls.length} selected elections`} for {isState ? st : 'All India'}. Try another election, add more, or pick a region with a real contest (vote-efficiency and momentum flags need vote-share data).
           </div>
         )

@@ -7,6 +7,7 @@ import SeatDrawer from '../components/SeatDrawer'
 import { Chart, ChartCard, Dot, Info, Seg, Select, StickyControls, VoteSeatChart } from '../components/ui'
 import { activeByState } from '../lib/analysis'
 import { linearTrend } from '../lib/projections'
+import { useIsPhone } from '../lib/useMedia'
 import { baseOpt, valAxis, AXIS, GRID, vgrad } from '../lib/theme'
 
 const tc = (s: string) => (s || '').toLowerCase().replace(/(^|[\s(\-./])([a-z])/g, (_, a: string, b: string) => a + b.toUpperCase())
@@ -16,6 +17,7 @@ type Rec = { tone: 'edge' | 'risk' | 'note'; text: string }
 
 export default function MatchupPage({ modeToggle }: { modeToggle?: ReactNode }) {
   const { arena, state, setArena, year, setYear } = useFilters()
+  const isPhone = useIsPhone()   // reactive phone breakpoint — drives chart heights only
   const st = state ?? 'All states'
   const isState = st !== 'All states'
   const [rows, setRows] = useState<Seat[]>([])
@@ -184,29 +186,29 @@ export default function MatchupPage({ modeToggle }: { modeToggle?: ReactNode }) 
     { label: 'Won on <40%', get: c => c.sub40, fmt: n => (n == null ? '–' : String(n)), hiGood: false, info: 'Wins on a divided field — exposed to opposition consolidation.' },
   ]
 
-  if (ranked.length < 2) return <div className="text-faint text-sm py-16 text-center">Not enough parties in this view to compare. Pick a region/arena with a real contest.</div>
+  if (ranked.length < 2) return <div className="text-muted text-sm py-16 text-center px-4">Not enough parties in this view to compare. Pick a region/arena with a real contest.</div>
 
   return (
     <div>
       <StickyControls>
-        <div className="flex items-center gap-3 flex-wrap">
+        <div className="flex items-center gap-2 sm:gap-3 flex-wrap">
           {modeToggle}
           <Seg options={[{ v: 'AE', label: 'Assembly' }, { v: 'GE', label: 'Lok Sabha' }]} value={arena} onChange={v => setArena(v as 'AE' | 'GE')} />
           <Select value={String(vy)} onChange={v => setYear(+v)} options={[...years].reverse().map(String)} width="w-24" />
           <span className="inline-flex items-center gap-1.5"><Dot color={colOf(A)} /><Select value={A} onChange={setSelA} options={parties} width="w-32" /></span>
-          <span className="text-faint text-xs">vs</span>
+          <span className="text-muted text-xs">vs</span>
           <span className="inline-flex items-center gap-1.5"><Dot color={colOf(B)} /><Select value={B} onChange={setSelB} options={parties.filter(p => p !== A)} width="w-32" /></span>
-          {C && <><span className="text-faint text-xs">vs</span><span className="inline-flex items-center gap-1.5"><Dot color={colOf(C)} /><Select value={C} onChange={setSelC} options={parties.filter(p => p !== A && p !== B)} width="w-32" /></span></>}
-          <button onClick={() => setThreeWay(t => !t)} className="text-xs px-2.5 py-1 rounded-full border border-white/10 text-muted hover:text-ink hover:border-white/25 transition-colors">
+          {C && <><span className="text-muted text-xs">vs</span><span className="inline-flex items-center gap-1.5"><Dot color={colOf(C)} /><Select value={C} onChange={setSelC} options={parties.filter(p => p !== A && p !== B)} width="w-32" /></span></>}
+          <button onClick={() => setThreeWay(t => !t)} className="text-xs px-3 py-1.5 min-h-[32px] inline-flex items-center sm:px-2.5 sm:py-1 sm:min-h-0 rounded-full border border-white/10 text-muted hover:text-ink hover:border-white/25 transition-colors">
             {threeWay ? '− third party' : '+ third party'}
           </button>
-          <span className="text-[11px] text-slate-500 ml-auto">{isState ? st : 'All India'} · change region in the Focus bar</span>
+          <span className="hidden sm:inline text-[12px] text-muted sm:ml-auto">{isState ? st : 'All India'} · change region in the Focus bar</span>
         </div>
       </StickyControls>
 
       {verdict && (
         <div className="mb-4 rounded-2xl border border-white/[0.08] bg-white/[0.02] px-5 py-3.5">
-          <div className="flex items-center gap-2 mb-1">
+          <div className="flex flex-wrap items-center gap-x-2 gap-y-1 mb-1">
             {sel.map(p => <span key={p} className="inline-flex items-center text-[12px] font-semibold" style={{ color: colOf(p) }}><Dot color={colOf(p)} />{p}</span>)}
           </div>
           <p className="text-[13.5px] text-ink leading-relaxed">{verdict}</p>
@@ -216,11 +218,12 @@ export default function MatchupPage({ modeToggle }: { modeToggle?: ReactNode }) 
       {/* Scorecard — metric rows × party columns */}
       <ChartCard className="mb-4" title="Head-to-head scorecard"
         note="Best value in each row is highlighted in the party's colour. ‘Reachable targets’ = seats where the party was runner-up; ‘thin holds’ and ‘won on <40%’ are vulnerability signals. Vote share / strike rate need candidate-vote data (statewide or Lok Sabha-national).">
-        <div className="overflow-auto">
+        <div className="overflow-x-auto">
           <table className="w-full text-sm border-collapse">
             <thead>
               <tr className="border-b border-white/10">
-                <th className="text-left font-medium text-faint py-2 pr-3 whitespace-nowrap">Metric</th>
+                {/* first column pinned so the metric names stay visible while the party columns scroll on a phone */}
+                <th className="text-left font-medium text-muted py-2 pr-3 whitespace-nowrap sticky left-0 z-10 bg-[rgb(var(--s900))]">Metric</th>
                 {card.map(c => <th key={c.p} className="text-right font-semibold py-2 px-3 whitespace-nowrap" style={{ color: c.color }}><Dot color={c.color} />{c.p}</th>)}
               </tr>
             </thead>
@@ -230,7 +233,7 @@ export default function MatchupPage({ modeToggle }: { modeToggle?: ReactNode }) 
                 const bi = bestOf(vals, mt.hiGood)
                 return (
                   <tr key={mt.label} className="border-b border-white/[0.05]">
-                    <td className="py-2 pr-3 text-muted whitespace-nowrap">{mt.label}{mt.info && <Info>{mt.info}</Info>}</td>
+                    <td className="py-2 pr-3 text-muted whitespace-nowrap sticky left-0 z-10 bg-[rgb(var(--s900))]">{mt.label}{mt.info && <Info>{mt.info}</Info>}</td>
                     {card.map((c, i) => (
                       <td key={c.p} className={`py-2 px-3 text-right tabular-nums ${i === bi ? 'font-bold' : 'text-slate-300'}`} style={i === bi ? { color: c.color } : undefined}>
                         {mt.fmt(mt.get(c))}
@@ -250,7 +253,8 @@ export default function MatchupPage({ modeToggle }: { modeToggle?: ReactNode }) 
           {momentum.some(m => m.slope != null) && (
             <div className="flex flex-wrap gap-2 mb-3">
               {momentum.filter(m => m.slope != null).map(m => (
-                <span key={m.p} className={`text-[11.5px] px-2.5 py-1 rounded-lg border ${m.slope! > 0.2 ? 'border-emerald-400/25 text-emerald-200/90' : m.slope! < -0.2 ? 'border-red-400/25 text-red-200/90' : 'border-white/10 text-muted'}`}>
+                // mid-tone emerald/red: this page has no useTheme(), and the 200-level tints vanish on the light canvas
+                <span key={m.p} className={`text-[11.5px] px-2.5 py-1 rounded-lg border ${m.slope! > 0.2 ? 'border-emerald-400/25 text-emerald-500' : m.slope! < -0.2 ? 'border-red-400/25 text-red-400' : 'border-white/10 text-ink'}`}>
                   <Dot color={colOf(m.p)} />{m.p} {m.slope! > 0 ? '+' : ''}{m.slope}%/election
                 </span>
               ))}
@@ -258,7 +262,7 @@ export default function MatchupPage({ modeToggle }: { modeToggle?: ReactNode }) 
           )}
           <VoteSeatChart years={years} parties={sel.map(p => ({ p, a: active.find(r => r.p === p)?.a ?? null, color: colOf(p) }))}
             seatsOf={p => years.map(y => seatsByPY.get(p)?.get(y) ?? null)}
-            shareOf={p => years.map(y => shareByPY.get(p)?.get(y) ?? null)} height={300} />
+            shareOf={p => years.map(y => shareByPY.get(p)?.get(y) ?? null)} height={isPhone ? 210 : 300} />
         </ChartCard>
 
       {/* Head-to-head (left) + territory map (right) — side by side */}
@@ -270,9 +274,10 @@ export default function MatchupPage({ modeToggle }: { modeToggle?: ReactNode }) 
             <div className="space-y-2.5 pt-1">
               {h2h.filter(x => x.n > 0).map(x => (
                 <div key={x.w + x.r} className="text-[12px]">
-                  <div className="flex items-center justify-between mb-1">
-                    <span><b style={{ color: colOf(x.w) }}>{x.w}</b> <span className="text-faint">beat</span> <b style={{ color: colOf(x.r) }}>{x.r}</b></span>
-                    <span className="tabular-nums text-muted">{x.n} seats {x.close > 0 && <span className="text-amber-300">· {x.close} within 5%</span>}</span>
+                  <div className="flex flex-wrap items-baseline justify-between gap-x-2 mb-1">
+                    <span><b style={{ color: colOf(x.w) }}>{x.w}</b> <span className="text-muted">beat</span> <b style={{ color: colOf(x.r) }}>{x.r}</b></span>
+                    {/* amber-500 mid-tone: amber-300 washes out on the light canvas and this page has no useTheme() */}
+                    <span className="tabular-nums text-ink">{x.n} seats {x.close > 0 && <span className="text-amber-500">· {x.close} within 5%</span>}</span>
                   </div>
                   <div className="h-2.5 rounded-full bg-slate-900 overflow-hidden">
                     <div className="h-2.5 rounded-full" style={{ width: `${(x.n / h2hMax) * 100}%`, background: colOf(x.w) }} />
@@ -280,13 +285,13 @@ export default function MatchupPage({ modeToggle }: { modeToggle?: ReactNode }) 
                 </div>
               ))}
             </div>
-          ) : <div className="h-[220px] grid place-items-center text-faint text-sm text-center px-6">These parties rarely finish 1–2 against each other in {scopeLabel} — they aren't each other's main rivals here.</div>}
+          ) : <div className="h-[120px] sm:h-[220px] grid place-items-center text-muted text-sm text-center px-4 sm:px-6">These parties rarely finish 1–2 against each other in {scopeLabel} — they aren't each other's main rivals here.</div>}
         </ChartCard>
         {/* Territory map — right */}
         <ChartCard title={`Territory — where each party wins${isState ? '' : ' (all-India)'}`}
         note="Each seat is coloured by which of the selected parties won it; everything else is grey. Shows each party's geographic base and where their territories meet. Click a seat for its full report.">
         <ChoroplethMap key={'matchup' + arena + st + vy + sel.join('-')} byState={mapByState} arena={arena} activeYear={vy}
-          focusState={isState ? st : undefined} height="h-[440px]"
+          focusState={isState ? st : undefined} height="h-[260px] sm:h-[340px] lg:h-[440px]"
           colorOf={territoryColor} subOf={territorySub} legendTitle="Winner (this matchup)" legendItems={legendItems}
           onPick={s => { if (s) setPicked(s) }} />
       </ChartCard>
@@ -298,12 +303,13 @@ export default function MatchupPage({ modeToggle }: { modeToggle?: ReactNode }) 
         {recs.length ? (
           <div className="grid md:grid-cols-2 gap-2.5">
             {recs.map((rc, i) => (
-              <div key={i} className={`text-[12.5px] leading-relaxed px-3.5 py-2.5 rounded-xl border ${rc.tone === 'edge' ? 'border-emerald-400/25 bg-emerald-400/[0.05] text-emerald-100/90' : rc.tone === 'risk' ? 'border-red-400/25 bg-red-400/[0.05] text-red-100/90' : 'border-white/10 bg-white/[0.02] text-slate-200/90'}`}>
+              // tone stays on the border/tint/glyph; the copy itself is full-strength ink so it reads on both themes
+              <div key={i} className={`text-[12.5px] leading-relaxed px-3.5 py-2.5 rounded-xl border ${rc.tone === 'edge' ? 'border-emerald-400/25 bg-emerald-400/[0.05] text-ink' : rc.tone === 'risk' ? 'border-red-400/25 bg-red-400/[0.05] text-ink' : 'border-white/10 bg-white/[0.02] text-ink'}`}>
                 <span className="mr-1.5">{rc.tone === 'edge' ? '▲' : rc.tone === 'risk' ? '▼' : '◆'}</span>{rc.text}
               </div>
             ))}
           </div>
-        ) : <div className="h-[80px] grid place-items-center text-faint text-sm">Pick two parties to generate the strategic read.</div>}
+        ) : <div className="h-[80px] grid place-items-center text-muted text-sm text-center px-4">Pick two parties to generate the strategic read.</div>}
       </ChartCard>
 
       {picked && <SeatDrawer seat={picked} all={rows} arena={arena} onClose={() => setPicked(null)} />}

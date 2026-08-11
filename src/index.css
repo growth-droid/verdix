@@ -9,9 +9,11 @@
    UI re-skins and flips by theme from these blocks alone. */
 :root {
   /* Dark: near-black teal surfaces, cream-white text, cyan-tinted borders, gold accent. */
-  --s50: 238 250 248;  --s100: 223 240 238; --s200: 196 220 218;
-  --s300: 150 182 180; --s400: 122 160 160; --s500: 92 124 125;
-  --s600: 58 90 92;    --s700: 30 60 62;    --s800: 12 40 42;
+  /* s400 = text-muted, s500 = text-faint/.kicker — both lifted for legibility (WCAG AA on the
+     dark canvas); s300/s600 nudged to keep the ramp evenly spaced. */
+  --s50: 238 250 248;  --s100: 223 240 238; --s200: 200 224 222;
+  --s300: 170 200 198; --s400: 146 180 178; --s500: 124 156 156;
+  --s600: 76 108 110;  --s700: 38 68 70;    --s800: 12 40 42;
   --s900: 7 27 29;     --s950: 4 13 14;     --white: 255 255 255;
 
   --gold: 212 175 55;                 /* #D4AF37 metallic gold accent */
@@ -39,12 +41,16 @@
 
 [data-theme='light'] {
   /* Light: cream surfaces, forest-green text, gold accent, soft gold hover glow. */
-  --s50: 13 52 46;     --s100: 15 58 52;    --s200: 26 70 62;
-  --s300: 44 88 80;    --s400: 74 108 99;   --s500: 108 136 126;
-  --s600: 150 174 164; --s700: 200 214 207; --s800: 224 233 227;
-  --s900: 238 243 238; --s950: 250 250 246; --white: 15 58 52;
+  /* Inverted ramp. s400 = text-muted, s500 = text-faint/.kicker — DARKENED so secondary text
+     stays readable on cream (the old 74/108/99 + 108/136/126 washed out). */
+  --s50: 10 44 39;     --s100: 15 58 52;    --s200: 24 68 60;
+  --s300: 36 80 72;    --s400: 52 88 80;    --s500: 78 106 98;
+  --s600: 126 152 143; --s700: 186 202 194; --s800: 220 230 224;
+  --s900: 236 241 236; --s950: 250 250 246; --white: 15 58 52;
 
-  --gold: 176 129 42;                  /* #B0812A — deeper gold for contrast on cream */
+  /* #8A6414 — measured: the old #B0812A gave only 3.1:1 on cream, so every gold link, active
+     sort header and eyebrow failed AA. This clears 4.8:1 while still reading as gold. */
+  --gold: 138 100 20;
   --glow: 212 164 55;                  /* gold hover glow (rgb triplet) */
 
   --page-bg:
@@ -68,9 +74,13 @@
 }
 
 @layer base {
-  html { font-feature-settings: 'cv02', 'cv03', 'cv04', 'ss01'; }
+  html {
+    font-feature-settings: 'cv02', 'cv03', 'cv04', 'ss01';
+    -webkit-text-size-adjust: 100%;        /* stop iOS inflating text on rotate */
+  }
   body {
     min-height: 100vh;
+    overscroll-behavior-y: none;           /* no rubber-band bounce behind the fixed tab bar */
     background: var(--page-bg);
     background-attachment: fixed;
     color: rgb(var(--s100));
@@ -109,6 +119,22 @@
   }
 }
 
+/* ── Light-theme tone corrections ───────────────────────────────────────────
+   The mid-tone Tailwind palette classes are tuned for the dark canvas; on cream the 500/600
+   steps land at 3.1–3.8:1 (below AA for small text). Darken just those steps in light mode —
+   dark mode is untouched, so nothing regresses there. Measured, not guessed. */
+[data-theme='light'] {
+  .text-amber-700, .text-amber-600, .text-amber-500, .text-amber-400, .text-amber-300 { color: #8a5a08; }
+  .text-emerald-700, .text-emerald-600, .text-emerald-500, .text-emerald-400 { color: #056646; }
+  .text-red-600, .text-red-500, .text-red-400, .text-red-300 { color: #b91c1c; }
+  .text-rose-600, .text-rose-500, .text-rose-400, .text-rose-300 { color: #be123c; }
+  .text-violet-600, .text-violet-500, .text-violet-400 { color: #6d28d9; }
+  .text-sky-600, .text-sky-500, .text-sky-400, .text-sky-300 { color: #075985; }
+  .text-cyan-600, .text-cyan-500, .text-cyan-400 { color: #0e7490; }
+  /* light-mode gold is deep (#8A6414), so a filled gold chip needs WHITE ink, not black */
+  .bg-gold.text-black { color: #fff; }
+}
+
 /* numbers render in Plus Jakarta Sans wherever tabular figures are used */
 .tabular-nums, .num { font-family: 'Plus Jakarta Sans', 'DM Sans', ui-sans-serif, sans-serif; font-feature-settings: 'tnum'; letter-spacing: -0.01em; }
 
@@ -127,8 +153,14 @@
     box-shadow: var(--card-shadow);
     background: var(--card-bg);
     border: 1px solid var(--card-border);
+    /* grid/flex children default to min-width:auto, so a wide table or chart inside a card
+       stretches the whole page on a phone. min-width:0 lets the card shrink and hands the
+       scrolling to its own overflow-x-auto wrapper instead of the document. */
+    min-width: 0;
     transition: border-color 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1), background 0.3s ease;
   }
+  /* same reasoning for the chart wrapper — never let a canvas dictate page width */
+  .echarts-for-react { max-width: 100%; }
   .card:hover { border-color: var(--card-border-hover); box-shadow: var(--card-hover-shadow); }
   .glass {
     border-radius: 0.85rem;

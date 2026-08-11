@@ -5,6 +5,7 @@ import {
 } from '../lib/data'
 import { colorFor } from '../lib/colors'
 import { useFilters } from '../store'
+import { useIsPhone } from '../lib/useMedia'
 import { Chart, ChartCard, Dot, Info, Seg, Select, SortTable, StickyControls, type Col } from '../components/ui'
 import { baseOpt, valAxis, GRID } from '../lib/theme'
 
@@ -15,13 +16,15 @@ const tc = (s: string) => s.toLowerCase().replace(/(^|[\s(\-./])([a-z])/g, (_, a
 function SplitDumbbell({ rows, max, aeYear, geYear }: {
   rows: { p: string; a: string | null; n: number; aeV: number; geV: number }[]; max: number; aeYear?: number; geYear: number | null
 }) {
-  if (!rows.length) return <div className="h-[200px] grid place-items-center text-faint text-sm">No comparable segments.</div>
+  if (!rows.length) return <div className="h-[200px] grid place-items-center text-muted text-sm">No comparable segments.</div>
   return (
     <div className="space-y-3.5 pt-1">
       <div className="text-[11px] text-muted flex flex-wrap items-center gap-x-4 gap-y-1">
         <span><span className="inline-block w-3 h-3 rounded-full border-2 border-slate-400 align-middle mr-1.5" />Assembly {aeYear ?? ''}</span>
         <span><span className="inline-block w-3 h-3 rounded-full bg-slate-300 align-middle mr-1.5" />Lok Sabha {geYear ?? ''}</span>
-        <span className="text-faint">line: <span className="text-sky-300">blue</span> = stronger nationally · <span className="text-amber-300">amber</span> = stronger in state</span>
+        {/* sky-300/amber-300 are pale tints the theme vars don't re-point → unreadable on the cream canvas.
+            This component has no useTheme(), so use mid-tones that clear both canvases. */}
+        <span className="text-muted">line: <span className="text-sky-600">blue</span> = stronger nationally · <span className="text-amber-600">amber</span> = stronger in state</span>
       </div>
       {rows.map(r => {
         const color = colorFor(r.p, r.a)
@@ -29,18 +32,20 @@ function SplitDumbbell({ rows, max, aeYear, geYear }: {
         const lo = Math.min(pa, pg), w = Math.abs(pg - pa), gain = r.geV >= r.aeV, d = +(r.geV - r.aeV).toFixed(1)
         return (
           <div key={r.p} className="flex items-center gap-3">
-            <span className="w-20 text-xs shrink-0 text-right truncate"><Dot color={color} />{r.p}</span>
+            <span className="w-12 sm:w-20 text-[11px] sm:text-xs shrink-0 text-right truncate"><Dot color={color} />{r.p}</span>
             <div className="relative flex-1 h-5">
               <div className="absolute inset-x-0 top-1/2 h-px bg-white/[0.07]" />
               <div className="absolute top-1/2 -translate-y-1/2 h-[3px] rounded-full" style={{ left: `${lo}%`, width: `${w}%`, background: gain ? '#38bdf8' : '#fbbf24' }} />
               <span className="absolute top-1/2 -translate-y-1/2 -translate-x-1/2 w-3.5 h-3.5 rounded-full border-2 bg-slate-950" style={{ left: `${pa}%`, borderColor: color }} />
               <span className="absolute top-1/2 -translate-y-1/2 -translate-x-1/2 w-3.5 h-3.5 rounded-full" style={{ left: `${pg}%`, background: color }} />
             </div>
-            <span className="w-[120px] text-[11px] tabular-nums text-faint shrink-0 text-right">{r.aeV.toFixed(1)}→{r.geV.toFixed(1)}% <span className={gain ? 'text-sky-300' : 'text-amber-300'}>({d > 0 ? '+' : ''}{d})</span></span>
+            <span className="w-[84px] sm:w-[120px] text-[10px] sm:text-[11px] tabular-nums text-muted shrink-0 text-right">{r.aeV.toFixed(1)}→{r.geV.toFixed(1)}% <span className={gain ? 'text-sky-600' : 'text-amber-600'}>({d > 0 ? '+' : ''}{d})</span></span>
           </div>
         )
       })}
-      <div className="flex justify-between text-[10px] text-faint" style={{ paddingLeft: '5.75rem', paddingRight: '7.5rem' }}><span>0%</span><span>{max / 2}%</span><span>{max}%</span></div>
+      {/* Axis gutters must equal the label / value columns + the gap-3, so the scale sits under the track.
+          Phone: 48+12 = 60px left, 84+12 = 96px right. Desktop values unchanged (5.75rem / 7.5rem). */}
+      <div className="flex justify-between text-[11px] text-muted pl-[60px] pr-[96px] sm:pl-[5.75rem] sm:pr-[7.5rem]"><span>0%</span><span>{max / 2}%</span><span>{max}%</span></div>
     </div>
   )
 }
@@ -53,6 +58,7 @@ type Side = {
 
 export default function ComparePage({ modeToggle }: { modeToggle?: ReactNode }) {
   const { state: focus } = useFilters()
+  const isPhone = useIsPhone()   // phones drop the PC column + shorten table/toggle labels (pure display)
   const [partyAE, setPartyAE] = useState<PartyAgg[]>([])
   const [partyGE, setPartyGE] = useState<PartyAgg[]>([])
   const [segs, setSegs] = useState<Segment[]>([])
@@ -245,21 +251,24 @@ export default function ComparePage({ modeToggle }: { modeToggle?: ReactNode }) 
 
   const splitCols: Col<SplitRow>[] = [
     { key: 'c', label: 'Segment', get: r => r.c, render: r => tc(r.c) },
-    { key: 'pcn', label: 'PC', get: r => r.pcn, render: r => tc(String(r.pcn ?? '–')) },
+    // the PC name is the widest low-value column — six columns cannot fit a 390px card, so drop it on phones
+    ...(isPhone ? [] : [{ key: 'pcn', label: 'PC', get: (r: SplitRow) => r.pcn, render: (r: SplitRow) => tc(String(r.pcn ?? '–')) }]),
     { key: 'p', label: 'Party', get: r => r.p, render: r => <span><Dot color={colorFor(r.p, r.a)} />{r.p}</span> },
     { key: 'av', label: `AE${aeY ? ' ' + aeY : ''}%`, get: r => r.av, align: 'right', render: r => r.av?.toFixed(1) ?? '–' },
     { key: 'gv', label: `LS ${geYear}%`, get: r => r.gv, align: 'right', render: r => r.gv.toFixed(1) },
     { key: 'd', label: 'Split %', get: r => (r.av == null ? null : r.gv - r.av), align: 'right',
-      render: r => { if (r.av == null) return '–'; const d = r.gv - r.av; return <span className={d > 0 ? 'text-sky-300' : 'text-amber-300'}>{d > 0 ? '+' : ''}{d.toFixed(1)}</span> } },
+      render: r => { if (r.av == null) return '–'; const d = r.gv - r.av; return <span className={d > 0 ? 'text-sky-600' : 'text-amber-600'}>{d > 0 ? '+' : ''}{d.toFixed(1)}</span> } },
   ]
   const mCols: Col<(typeof pcMatrix)[number]>[] = [
     { key: 'pcn', label: 'PC', get: r => r.pcn, render: r => tc(r.pcn) },
-    { key: 'w', label: 'PC winner', get: r => r.w?.p ?? null, render: r => r.w ? <span><Dot color={colorFor(r.w.p, r.w.a)} />{r.w.p}</span> : '–' },
-    { key: 'led', label: 'Segments led by winner', get: r => r.led / r.total, align: 'right', render: r => `${r.led} / ${r.total}` },
-    { key: 'top', label: 'Most segments', get: r => r.topSegP ?? null, render: r => r.topSegP ? <span><Dot color={colorFor(r.topSegP)} />{r.topSegP} ({r.topSegN})</span> : '–' },
+    { key: 'w', label: isPhone ? 'Winner' : 'PC winner', get: r => r.w?.p ?? null, render: r => r.w ? <span><Dot color={colorFor(r.w.p, r.w.a)} />{r.w.p}</span> : '–' },
+    { key: 'led', label: isPhone ? 'Led' : 'Segments led by winner', get: r => r.led / r.total, align: 'right', render: r => `${r.led} / ${r.total}` },
+    { key: 'top', label: isPhone ? 'Top party' : 'Most segments', get: r => r.topSegP ?? null, render: r => r.topSegP ? <span><Dot color={colorFor(r.topSegP)} />{r.topSegP} ({r.topSegN})</span> : '–' },
   ]
 
-  const toneCls = { edge: 'border-emerald-400/25 text-emerald-200/90', risk: 'border-red-400/25 text-red-200/90', note: 'border-white/10 text-slate-300' }
+  // emerald-200 / red-200 are pale palette tints the theme vars never re-point, so the verdict chips
+  // vanish on the cream canvas. Mid-tones (600) clear both canvases; this page has no useTheme().
+  const toneCls = { edge: 'border-emerald-400/25 text-emerald-600', risk: 'border-red-400/25 text-red-600', note: 'border-white/10 text-slate-300' }
 
   return (
     <div>
@@ -273,7 +282,7 @@ export default function ComparePage({ modeToggle }: { modeToggle?: ReactNode }) 
         <div className="flex items-center gap-2 text-xs text-muted">
           <Select value={keyA ?? ''} onChange={setCmpA} options={elabels} width="w-28" />
           <button onClick={() => { const a = keyA, b = keyB; setCmpA(b); setCmpB(a) }} title="Swap"
-            className="px-2 py-1.5 rounded-lg border border-white/10 text-faint hover:text-ink hover:border-white/25 transition-colors">⇄</button>
+            className="min-w-[36px] min-h-[36px] grid place-items-center px-3 py-2 sm:min-w-0 sm:min-h-0 sm:px-2 sm:py-1.5 rounded-lg border border-white/10 text-muted hover:text-ink hover:border-white/25 transition-colors">⇄</button>
           <Select value={keyB ?? ''} onChange={setCmpB} options={elabels} width="w-28" />
         </div>
       </div>
@@ -281,7 +290,7 @@ export default function ComparePage({ modeToggle }: { modeToggle?: ReactNode }) 
 
       {!h2h ? (
         <ChartCard title="Compare two elections">
-          <div className="h-[160px] flex items-center justify-center text-faint text-sm text-center px-6">
+          <div className="h-[160px] flex items-center justify-center text-muted text-sm text-center px-6">
             Need at least two elections for {st || 'this state'} (Lok Sabha segment data excludes J&K / Ladakh).
           </div>
         </ChartCard>
@@ -306,12 +315,12 @@ export default function ComparePage({ modeToggle }: { modeToggle?: ReactNode }) 
           )}
 
           {/* side-by-side summary */}
-          <div className="grid grid-cols-2 gap-3 mb-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-4">
             {[h2h.A, h2h.B].map((S, i) => (
               <div key={i} className="card !rounded-xl p-3">
                 <div className="kicker">{S.label} · {S.seatNoun}</div>
                 {S.lead && <div className="text-sm mt-1"><Dot color={colorFor(S.lead.p, S.lead.a)} /><b>{S.lead.p}</b> {S.arena === 'AE' ? 'won' : 'led'} <span className="num">{S.lead.n}</span>/<span className="num">{S.total}</span></div>}
-                <div className="text-[11px] text-faint mt-0.5">turnout {S.turn != null ? <span className="num text-slate-300">{S.turn}%</span> : '–'}</div>
+                <div className="text-[11px] text-muted mt-0.5">turnout {S.turn != null ? <span className="num text-ink">{S.turn}%</span> : '–'}</div>
               </div>
             ))}
           </div>
@@ -336,7 +345,7 @@ export default function ComparePage({ modeToggle }: { modeToggle?: ReactNode }) 
                           {r.vA != null && <span className="absolute top-1/2 -translate-y-1/2 -translate-x-1/2 w-3 h-3 rounded-full border-2 bg-slate-950" style={{ left: `${pa}%`, borderColor: color }} title={`${h2h.A.label} ${r.vA?.toFixed(1)}%`} />}
                           {r.vB != null && <span className="absolute top-1/2 -translate-y-1/2 -translate-x-1/2 w-3 h-3 rounded-full" style={{ left: `${pg}%`, background: color }} title={`${h2h.B.label} ${r.vB?.toFixed(1)}%`} />}
                         </div>
-                        <span className="w-24 text-[11px] tabular-nums text-faint shrink-0">{r.vA?.toFixed(1) ?? '–'}→{r.vB?.toFixed(1) ?? '–'}%</span>
+                        <span className="w-24 text-[11px] tabular-nums text-muted shrink-0">{r.vA?.toFixed(1) ?? '–'}→{r.vB?.toFixed(1) ?? '–'}%</span>
                       </div>
                     )
                   })}
@@ -344,19 +353,21 @@ export default function ComparePage({ modeToggle }: { modeToggle?: ReactNode }) 
               </div>
               <div>
                 <div className="text-xs text-muted mb-1.5">{h2h.A.label} {h2h.A.seatNoun} vs {h2h.B.label} {h2h.B.seatNoun} — same assembly map</div>
-                <table className="w-full text-xs">
-                  <thead className="text-faint text-left"><tr><th className="py-1">Party</th><th className="text-right">{h2h.A.label}</th><th className="text-right">{h2h.B.label}</th><th className="text-right">Δ</th></tr></thead>
-                  <tbody>
-                    {h2h.rows.filter(r => r.sA > 0 || r.sB > 0).map(r => (
-                      <tr key={r.p} className="border-t border-white/[0.05]">
-                        <td className="py-1"><Dot color={colorFor(r.p, r.a)} />{r.p}</td>
-                        <td className="text-right tabular-nums">{r.sA}</td>
-                        <td className="text-right tabular-nums">{r.sB}</td>
-                        <td className={`text-right tabular-nums ${r.sB - r.sA > 0 ? 'text-sky-300' : r.sB - r.sA < 0 ? 'text-amber-300' : 'text-faint'}`}>{r.sB - r.sA > 0 ? '+' : ''}{r.sB - r.sA}</td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
+                <div className="overflow-x-auto">
+                  <table className="w-full min-w-[280px] text-xs">
+                    <thead className="text-muted text-left"><tr><th className="py-1">Party</th><th className="text-right">{h2h.A.label}</th><th className="text-right">{h2h.B.label}</th><th className="text-right">Δ</th></tr></thead>
+                    <tbody>
+                      {h2h.rows.filter(r => r.sA > 0 || r.sB > 0).map(r => (
+                        <tr key={r.p} className="border-t border-white/[0.05]">
+                          <td className="py-1"><Dot color={colorFor(r.p, r.a)} />{r.p}</td>
+                          <td className="text-right tabular-nums">{r.sA}</td>
+                          <td className="text-right tabular-nums">{r.sB}</td>
+                          <td className={`text-right tabular-nums ${r.sB - r.sA > 0 ? 'text-sky-600' : r.sB - r.sA < 0 ? 'text-amber-600' : 'text-muted'}`}>{r.sB - r.sA > 0 ? '+' : ''}{r.sB - r.sA}</td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
               </div>
             </div>
           </ChartCard>
@@ -370,8 +381,8 @@ export default function ComparePage({ modeToggle }: { modeToggle?: ReactNode }) 
                     {partySplit.slice(0, 5).map(e => (
                       <div key={e.p} className="text-[12px] px-3.5 py-2 rounded-xl border border-white/10 bg-white/[0.03]">
                         <Dot color={colorFor(e.p, e.a)} /><b>{e.p}</b>{' '}
-                        {e.mean >= 0 ? <span className="text-sky-300">+{e.mean.toFixed(1)}%</span> : <span className="text-amber-300">{e.mean.toFixed(1)}%</span>}
-                        <span className="text-slate-500"> in LS vs AE ({e.n} seg)</span>
+                        {e.mean >= 0 ? <span className="text-sky-600">+{e.mean.toFixed(1)}%</span> : <span className="text-amber-600">{e.mean.toFixed(1)}%</span>}
+                        <span className="text-slate-400"> in LS vs AE ({e.n} seg)</span>
                         <span className="text-slate-400"> — {e.mean > 3 ? 'national brand outruns state unit' : e.mean < -3 ? 'state-first vote; weak national transfer' : 'vote transfers cleanly'}</span>
                       </div>
                     ))}
@@ -382,29 +393,34 @@ export default function ComparePage({ modeToggle }: { modeToggle?: ReactNode }) 
                     note={splitView === 'dots'
                       ? <>Each dot = one assembly segment: <b>AE {aeY}</b> share (x) vs <b>LS {geYear}</b> share (y). Above the dashed parity line = the party ran <b>stronger nationally</b> there. {geYear === 2024 && <b>2024 segment shares are EVM-only; Surat absent.</b>} J&K/Ladakh excluded.</>
                       : <>Per party: average vote share across the state's assembly segments in <b>AE {aeY}</b> vs the same ground in <b>LS {geYear}</b>. Blue line = stronger nationally; amber = stronger in state. {geYear === 2024 && <b>2024 EVM-only; Surat absent.</b>} J&K/Ladakh excluded.</>}>
-                    <div className="mb-2 flex items-center gap-2 text-xs text-muted">View
-                      <Seg options={[{ v: 'dots', label: 'Per-segment dots' }, { v: 'summary', label: 'Party summary' }]} value={splitView} onChange={v => setSplitView(v as 'dots' | 'summary')} />
+                    <div className="mb-2 flex flex-wrap items-center gap-2 text-xs text-muted">View
+                      <Seg options={isPhone
+                        ? [{ v: 'dots', label: 'Dots' }, { v: 'summary', label: 'Summary' }]
+                        : [{ v: 'dots', label: 'Per-segment dots' }, { v: 'summary', label: 'Party summary' }]}
+                        value={splitView} onChange={v => setSplitView(v as 'dots' | 'summary')} />
                     </div>
                     {splitView === 'dots'
-                      ? (scatter ? <Chart option={scatter} style={{ height: 392 }} notMerge /> : <div className="h-[200px]" />)
+                      ? (scatter
+                        ? <div className="h-[240px] sm:h-[392px]"><Chart option={scatter} style={{ height: '100%' }} notMerge /></div>
+                        : <div className="h-[140px] sm:h-[200px]" />)
                       : <SplitDumbbell rows={splitDumbbell.rows} max={splitDumbbell.max} aeYear={aeY ?? undefined} geYear={geYear} />}
                   </ChartCard>
                   <ChartCard title="Biggest split-ticket segments" note="Same party, same ground, different ballot — the gap is the persuadable / tactical vote that splits between state and national elections.">
-                    <SortTable rows={paired} cols={splitCols} defaultSort="d" initialDir="desc" maxH={430} search searchIn={r => `${r.c} ${r.pcn} ${r.p}`} />
+                    <SortTable rows={paired} cols={splitCols} defaultSort="d" initialDir="desc" maxH={isPhone ? 300 : 430} search searchIn={r => `${r.c} ${r.pcn} ${r.p}`} />
                   </ChartCard>
                 </div>
                 <div className="mt-4">
                   <ChartCard title={`PC won vs ground held — ${st} · LS ${geYear}`}
                     note={pcMatrix.length ? `${pcMatrix.filter(r => r.led < r.total / 2).length} of ${pcMatrix.length} seats were won while leading under half the segments — alliance arithmetic or a candidate's personal pull decided them, not uniform ground strength.` : undefined}>
-                    <SortTable rows={pcMatrix} cols={mCols} defaultSort="led" initialDir="asc" maxH={360} />
+                    <SortTable rows={pcMatrix} cols={mCols} defaultSort="led" initialDir="asc" maxH={isPhone ? 300 : 360} />
                   </ChartCard>
                 </div>
               </>
             ) : (
               <ChartCard title="Segment-level vote transfer">
-                <div className="h-[120px] flex items-center justify-center text-faint text-sm text-center px-6">
+                <div className="h-[120px] flex items-center justify-center text-muted text-sm text-center px-6">
                   {hasSplit && aeY != null && !aeAvail
-                    ? <>The segment breakdown needs full assembly candidate lists, but <b className="text-amber-300">AE {aeY}</b> is winners-only for {st}. Pick an assembly year with complete data (an earlier one) to compare its segments against LS {geYear}.</>
+                    ? <>The segment breakdown needs full assembly candidate lists, but <b className="text-amber-600">AE {aeY}</b> is winners-only for {st}. Pick an assembly year with complete data (an earlier one) to compare its segments against LS {geYear}.</>
                     : <>Segment-level assembly↔Lok Sabha data isn’t available for {st} in LS {geYear} (J&K/Ladakh use non-comparable numbering, or candidate data is incomplete).</>}
                 </div>
               </ChartCard>

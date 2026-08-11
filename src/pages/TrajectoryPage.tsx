@@ -1,7 +1,8 @@
 import { useEffect, useMemo, useState } from 'react'
 import { loadPartyAE, loadPartyGENat, loadPartyGEState, loadSeats, loadSegments, type PartyAgg, type Seat, type Segment } from '../lib/data'
-import { colorFor, ALLIANCE_COLORS } from '../lib/colors'
-import { useFilters, useTheme } from '../store'
+import { colorFor, ALLIANCE_COLORS, readable, inkOn } from '../lib/colors'
+import { useFilters, useTheme, type Theme } from '../store'
+import { useIsPhone } from '../lib/useMedia'
 import { Chart, ChartCard, Dot, Info, Seg, Select, StickyControls, VoteSeatChart } from '../components/ui'
 import { allianceBase } from '../lib/analysis'
 import { linearTrend, pedersen } from '../lib/projections'
@@ -30,10 +31,11 @@ type HoverCell = { year: number; bucket: string; color: string; suffix: string; 
 // Heatmap of a party's win-quality: rows = quality buckets (strongest on top), columns =
 // elections. Cell shows the % (or seat count, via the toggle) of that election's wins in the
 // bucket; brighter = more. Hover a cell to list the actual constituencies it covers.
-function BucketHeatmap({ title, wins, years, buckets, get, mode, suffix, valueLabel, grouping, selKey, onSelect }: {
+function BucketHeatmap({ title, wins, years, buckets, get, mode, suffix, valueLabel, grouping, selKey, onSelect, theme }: {
   title: string; wins: Seat[]; years: number[]; buckets: typeof SHARE_BUCKETS
   get: (r: Seat) => number | null; mode: 'pct' | 'count'; suffix: string; valueLabel: string
   grouping: Grouping; selKey: string | null; onSelect: (key: string | null, cell: HoverCell | null) => void
+  theme: Theme
 }) {
   const rows = buckets.map((b, bi) => ({
     b,
@@ -46,29 +48,37 @@ function BucketHeatmap({ title, wins, years, buckets, get, mode, suffix, valueLa
   })).reverse()   // strongest bucket on top
   return (
     <div>
-      <div className="text-xs text-muted mb-2">{title} <span className="text-faint">· {mode === 'count' ? 'seats won' : "% of each election's wins"}</span></div>
-      <table className="w-full border-separate" style={{ borderSpacing: 4 }}>
+      <div className="text-xs text-muted mb-2">{title} <span className="text-muted">· {mode === 'count' ? 'seats won' : "% of each election's wins"}</span></div>
+      {/* phones: the table scrolls INSIDE the card instead of widening the page */}
+      <div className="overflow-x-auto -mx-2 px-2">
+      <table className="w-full min-w-[300px] border-separate" style={{ borderSpacing: 4 }}>
         <thead>
           <tr>
-            <th className="w-32" />
+            <th className="w-20 sm:w-32" />
             {years.map(y => <th key={y} className="text-center text-[11px] font-semibold text-muted pb-1 tabular-nums">{y}</th>)}
           </tr>
         </thead>
         <tbody>
           {rows.map(({ b, cells }) => (
             <tr key={b.label}>
-              <td className="text-[11px] whitespace-nowrap pr-2 text-right text-muted"><Dot color={b.color} />{b.label}</td>
+              <td className="text-[11px] whitespace-nowrap pr-1 sm:pr-2 text-right text-muted"><Dot color={b.color} />{b.label}</td>
               {cells.map((c, i) => {
                 const pct = c.total ? Math.round((c.n / c.total) * 100) : null
-                const op = pct == null ? 0 : 0.12 + 0.78 * (pct / 100)
+                // Cap the tint on the cream canvas: a near-solid fill leaves neither black nor white
+                // ink at AA, so keep it light enough for dark ink to win outright. Dark is unchanged.
+                const op = pct == null ? 0
+                  : theme === 'light' ? 0.10 + 0.48 * (pct / 100)
+                    : 0.12 + 0.78 * (pct / 100)
                 const display = c.total === 0 ? '–' : (mode === 'count' ? String(c.n) : pct + '%')
                 const cellKey = `${title}|${b.label}|${years[i]}`
                 const isSel = selKey === cellKey
+                // the numeral sits ON the bucket tint — pick its ink from the BLENDED fill (measured),
+                // instead of guessing an opacity threshold per theme
                 return (
                   <td key={i}
                     onClick={() => { if (c.n > 0) onSelect(isSel ? null : cellKey, isSel ? null : { year: years[i], bucket: b.label, color: b.color, suffix, valueLabel, groupLabel: grouping ? grouping.label : null, items: c.seats.map(s => ({ name: tc(s.c), group: grouping ? grouping.of(s) : '', v: get(s) ?? 0 })) }) }}
-                    className={`text-center text-[12px] font-bold tabular-nums rounded-md h-9 transition-shadow ${c.n > 0 ? 'cursor-pointer' : ''} ${isSel ? 'ring-2 ring-white/80' : c.n > 0 ? 'hover:ring-2 hover:ring-white/30' : ''}`}
-                    style={{ background: pct == null ? 'rgba(148,163,184,0.05)' : b.color + Math.round(op * 255).toString(16).padStart(2, '0'), color: pct != null && op > 0.45 ? '#fff' : undefined }}>
+                    className={`text-center text-[12px] font-bold tabular-nums rounded-md h-9 min-w-[38px] transition-shadow ${c.n > 0 ? 'cursor-pointer' : ''} ${isSel ? 'ring-2 ring-white/80' : c.n > 0 ? 'hover:ring-2 hover:ring-white/30' : ''}`}
+                    style={{ background: pct == null ? 'rgba(148,163,184,0.05)' : b.color + Math.round(op * 255).toString(16).padStart(2, '0'), color: pct != null ? inkOn(b.color, op, theme) : undefined }}>
                     {display}
                   </td>
                 )
@@ -77,13 +87,16 @@ function BucketHeatmap({ title, wins, years, buckets, get, mode, suffix, valueLa
           ))}
         </tbody>
       </table>
+      </div>
     </div>
   )
 }
 
 export default function TrajectoryPage() {
   const { state } = useFilters()
-  const track = faintLine(useTheme())   // strike-rate "contested" track — light grey on light, dark on dark
+  const themeMode = useTheme()
+  const isPhone = useIsPhone()          // phone-width layout switches (reactive — updates on resize/rotate)
+  const track = faintLine(themeMode)    // strike-rate "contested" track — light grey on light, dark on dark
   const [scope, setScope] = useState<Scope>('NAT')
   const [rollup, setRollup] = useState(false)
   const [nat, setNat] = useState<PartyAgg[]>([])
@@ -195,12 +208,14 @@ export default function TrajectoryPage() {
         ...baseOpt, legend: undefined,
         tooltip: { ...baseOpt.tooltip, trigger: 'axis', formatter: (qs: { dataIndex: number }[]) => { const d = data[qs[0].dataIndex]; return `${d.y}: won ${d.wo ?? '–'} / ${d.f ?? '–'} contested (${d.rate ?? '–'}%)` } },
         grid: { left: 4, right: 6, top: 18, bottom: 2, containLabel: true },
-        xAxis: catAxis(years, { axisLabel: { color: AXIS, fontSize: 9 } }),
+        xAxis: catAxis(years, { axisLabel: { color: AXIS, fontSize: 10 } }),
         yAxis: { type: 'value', show: false },
         series: [
           { type: 'bar', barGap: '-100%', barMaxWidth: 16, data: data.map(d => d.f), itemStyle: { color: track, borderRadius: 2 }, silent: true },
           { type: 'bar', barMaxWidth: 16, data: data.map(d => d.wo), itemStyle: { color: colorOfKey(e.p, e.a), borderRadius: 2 },
-            label: { show: true, position: 'top', fontSize: 9, color: AXIS, formatter: (q: { dataIndex: number }) => data[q.dataIndex].rate != null ? data[q.dataIndex].rate + '%' : '' } },
+            // the strike rate IS the point of this card — paint it in the party's own colour at a
+            // legible size, not in AXIS (the dimmest chrome grey)
+            label: { show: true, position: 'top', fontSize: 11, color: colorOfKey(e.p, e.a), formatter: (q: { dataIndex: number }) => data[q.dataIndex].rate != null ? data[q.dataIndex].rate + '%' : '' } },
         ],
       },
     }
@@ -225,7 +240,8 @@ export default function TrajectoryPage() {
       proj[lastIdx] = d.hist[lastIdx]; proj[years.length] = d.next
       return [solid,
         { name: d.p + ' proj', type: 'line', data: proj, connectNulls: true, symbol: 'none', silent: true, lineStyle: { width: 2, type: 'dashed' as const, color: d.color, opacity: 0.9 }, z: 4,
-          endLabel: { show: true, formatter: `${d.p}  ${d.next}%`, color: d.color, fontSize: 10, fontWeight: 600 } },
+          // phones: end labels would stack on one x position inside a 326px plot — drop them (tooltip still has the numbers)
+          endLabel: { show: !isPhone, formatter: `${d.p}  ${d.next}%`, color: d.color, fontSize: 10, fontWeight: 600 } },
       ]
     })
     return {
@@ -236,12 +252,12 @@ export default function TrajectoryPage() {
         return `<b>${ps[0].axisValue}</b><br/>` + real.sort((a, b) => (b.data ?? 0) - (a.data ?? 0))
           .map(p => `<span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:${p.color};margin-right:6px"></span>${p.seriesName}: <b>${(+(p.data ?? 0)).toFixed(1)}%</b>`).join('<br/>')
       } },
-      grid: { left: 8, right: 86, top: 14, bottom: 8, containLabel: true },
+      grid: { left: 8, right: isPhone ? 10 : 86, top: 14, bottom: 8, containLabel: true },
       xAxis: catAxis(cats, { boundaryGap: false, axisLabel: { color: AXIS, fontSize: 11, formatter: (v: string) => v } }),
       yAxis: { ...valAxis('{value}%'), name: 'vote share', nameTextStyle: { color: AXIS, fontSize: 10 }, splitLine: { lineStyle: { type: 'dashed', color: GRID } } },
       series,
     }
-  }, [projection, years])
+  }, [projection, years, isPhone])
 
   const momentum = useMemo(() => {
     const w = projection.filter(d => d.slope != null && d.r2 != null && d.next != null)
@@ -272,11 +288,14 @@ export default function TrajectoryPage() {
     <div>
       <StickyControls>
         <div className="flex items-center gap-3 flex-wrap">
-          <Seg options={[{ v: 'NAT', label: 'National · LS' }, { v: 'SAE', label: 'State · Assembly' }, { v: 'SGE', label: 'State · LS' }]}
-            value={scope} onChange={v => setScope(v as Scope)} />
+          {/* the 3-pill scope row can't wrap — on phones let it scroll inside its own box instead of widening the bar */}
+          <div className="w-full overflow-x-auto sm:w-auto sm:overflow-visible">
+            <Seg options={[{ v: 'NAT', label: 'National · LS' }, { v: 'SAE', label: 'State · Assembly' }, { v: 'SGE', label: 'State · LS' }]}
+              value={scope} onChange={v => setScope(v as Scope)} />
+          </div>
           {scope !== 'NAT' && <span className="text-sm text-slate-400">{st}</span>}
-          <label className="flex items-center gap-2 text-sm text-slate-300 cursor-pointer">
-            <input type="checkbox" checked={rollup} onChange={e => setRollup(e.target.checked)} className="accent-gold" />
+          <label className="flex items-center gap-2 text-sm text-slate-300 cursor-pointer py-1.5 min-h-[32px] sm:py-0 sm:min-h-0">
+            <input type="checkbox" checked={rollup} onChange={e => setRollup(e.target.checked)} className="accent-gold w-4 h-4" />
             Alliance roll-up
           </label>
         </div>
@@ -285,7 +304,7 @@ export default function TrajectoryPage() {
       {efficiency.verdicts.length > 1 && (
         <div className="flex flex-wrap gap-2 mb-4">
           {[efficiency.verdicts[0], efficiency.verdicts[efficiency.verdicts.length - 1]].map(e => (
-            <div key={e.p} className={`text-[12px] px-3.5 py-2 rounded-xl border bg-white/[0.03] ${e.gap >= 0 ? 'border-emerald-400/25 text-emerald-200/90' : 'border-amber-400/25 text-amber-200/90'}`}>
+            <div key={e.p} className={`text-[12px] px-3.5 py-2 rounded-xl border bg-white/[0.03] ${e.gap >= 0 ? 'border-emerald-500/30 text-emerald-600' : 'border-amber-500/30 text-amber-600'}`}>
               <b>{e.p}</b> converts votes {e.gap >= 0 ? 'efficiently' : 'poorly'}: seat share runs {e.gap >= 0 ? '+' : ''}{e.gap.toFixed(1)}% vs vote share
               {e.gap >= 0 ? ' — concentrated, transfer-friendly vote.' : ' — spread vote without regional anchor: classic wasted-share pattern.'}
             </div>
@@ -299,7 +318,7 @@ export default function TrajectoryPage() {
           parties={top.map(e => ({ p: e.p, a: e.a, color: colorOfKey(e.p, e.a) }))}
           seatsOf={p => years.map(y => { const r = byKey.get(p)?.get(y); return r ? (r.wo ?? 0) : null })}
           shareOf={p => years.map(y => { const r = byKey.get(p)?.get(y); return r ? r.v : null })}
-          height={340} />
+          height={isPhone ? 240 : 340} />
       </ChartCard>
 
       <div className="grid lg:grid-cols-3 gap-4 mt-4">
@@ -309,36 +328,36 @@ export default function TrajectoryPage() {
           {(momentum.rising || momentum.falling) && (
             <div className="flex flex-wrap gap-2 mb-3">
               {momentum.rising && (
-                <div className="text-[12px] px-3.5 py-2 rounded-xl border border-emerald-400/25 bg-emerald-400/[0.06] text-emerald-200/90">
-                  <b>{momentum.rising.p}</b> is gaining fastest — about <b>+{momentum.rising.slope}%</b>/election → projected <b>{momentum.rising.next}%</b> next <span className="text-faint">(fit r² {momentum.rising.r2})</span>
+                <div className="text-[12px] px-3.5 py-2 rounded-xl border border-emerald-400/25 bg-emerald-500/[0.10] text-emerald-600">
+                  <b>{momentum.rising.p}</b> is gaining fastest — about <b>+{momentum.rising.slope}%</b>/election → projected <b>{momentum.rising.next}%</b> next <span className="text-muted">(fit r² {momentum.rising.r2})</span>
                 </div>
               )}
               {momentum.falling && (
-                <div className="text-[12px] px-3.5 py-2 rounded-xl border border-amber-400/25 bg-amber-400/[0.06] text-amber-200/90">
-                  <b>{momentum.falling.p}</b> is fading — about <b>{momentum.falling.slope}%</b>/election → projected <b>{momentum.falling.next}%</b> next <span className="text-faint">(fit r² {momentum.falling.r2})</span>
+                <div className="text-[12px] px-3.5 py-2 rounded-xl border border-amber-400/25 bg-amber-500/[0.10] text-amber-600">
+                  <b>{momentum.falling.p}</b> is fading — about <b>{momentum.falling.slope}%</b>/election → projected <b>{momentum.falling.next}%</b> next <span className="text-muted">(fit r² {momentum.falling.r2})</span>
                 </div>
               )}
             </div>
           )}
-          <Chart option={projOption} style={{ height: 320 }} notMerge />
+          <div className="h-[230px] sm:h-[320px]"><Chart option={projOption} style={{ height: '100%' }} notMerge /></div>
         </ChartCard>
         <ChartCard title={<>Electoral volatility <Info>The Pedersen index: half the sum of every listed party's vote-share change between two consecutive elections. It measures how much of the vote is moving between parties — a proxy for how dealigned and in-play the electorate is. Computed over listed parties, so unlisted “Others” are not captured.</Info></>}
           note={volVerdict ?? 'Need at least two comparable elections to measure vote churn.'}>
           {volatility.length
-            ? <Chart option={volOption} style={{ height: 300 }} notMerge />
-            : <div className="h-[300px] grid place-items-center text-faint text-sm text-center px-6">Not enough comparable elections in this scope to chart volatility.</div>}
+            ? <div className="h-[200px] sm:h-[300px]"><Chart option={volOption} style={{ height: '100%' }} notMerge /></div>
+            : <div className="h-[140px] sm:h-[300px] grid place-items-center text-muted text-sm text-center px-6">Not enough comparable elections in this scope to chart volatility.</div>}
         </ChartCard>
       </div>
 
       <div className="grid lg:grid-cols-2 gap-4 mt-4">
         <ChartCard title="Votes → seats conversion" note="Above the dashed line = over-converts (geographic concentration / alliance leverage). Below = wasted vote share. Points are party-elections ≥4% share.">
-          <Chart option={efficiency.option} style={{ height: 380 }} notMerge />
+          <div className="h-[260px] sm:h-[380px]"><Chart option={efficiency.option} style={{ height: '100%' }} notMerge /></div>
         </ChartCard>
         <ChartCard title="Strike rate — won vs contested" note="Grey = contested, colored = won, label = strike rate. Wide footprint with a low rate is expansion mode — or a spoiler.">
-          <div className="grid grid-cols-2 gap-3">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
             {strike.map(s2 => (
               <div key={s2.p} className="border border-slate-800/70 rounded-lg p-2">
-                <div className="text-xs font-semibold mb-1" style={{ color: s2.color }}>{s2.p}</div>
+                <div className="text-xs font-semibold mb-1" style={{ color: readable(s2.color, themeMode) }}>{s2.p}</div>
                 <Chart option={s2.option} style={{ height: 120 }} notMerge />
               </div>
             ))}
@@ -346,13 +365,13 @@ export default function TrajectoryPage() {
         </ChartCard>
       </div>
 
-      <WinQuality seats={scopeSeats} party={qp} setParty={setQp} grouping={grouping} />
+      <WinQuality seats={scopeSeats} party={qp} setParty={setQp} grouping={grouping} theme={themeMode} />
     </div>
   )
 }
 
 /** Win-quality buckets (national-analysis-deck pattern): is the mandate deepening or are wins getting flukier? */
-function WinQuality({ seats, party, setParty, grouping }: { seats: Seat[]; party: string; setParty: (p: string) => void; grouping: Grouping }) {
+function WinQuality({ seats, party, setParty, grouping, theme }: { seats: Seat[]; party: string; setParty: (p: string) => void; grouping: Grouping; theme: Theme }) {
   const ranked = useMemo(() => {
     const c = new Map<string, number>()
     seats.forEach(r => c.set(r.p, (c.get(r.p) || 0) + 1))
@@ -389,8 +408,8 @@ function WinQuality({ seats, party, setParty, grouping }: { seats: Seat[]; party
           {verdict && <span className="text-[12px] text-slate-300">{verdict}</span>}
         </div>
         <div className="grid lg:grid-cols-2 gap-6">
-          <BucketHeatmap title="Winning vote-share buckets" wins={wins} years={years} buckets={SHARE_BUCKETS} get={r => r.v} mode={metric} suffix="%" valueLabel="vote share" grouping={grouping} selKey={selKey} onSelect={onSelect} />
-          <BucketHeatmap title="Victory-margin buckets" wins={wins} years={years} buckets={MARGIN_BUCKETS} get={r => r.m} mode={metric} suffix="%" valueLabel="victory margin" grouping={grouping} selKey={selKey} onSelect={onSelect} />
+          <BucketHeatmap title="Winning vote-share buckets" wins={wins} years={years} buckets={SHARE_BUCKETS} get={r => r.v} mode={metric} suffix="%" valueLabel="vote share" grouping={grouping} selKey={selKey} onSelect={onSelect} theme={theme} />
+          <BucketHeatmap title="Victory-margin buckets" wins={wins} years={years} buckets={MARGIN_BUCKETS} get={r => r.m} mode={metric} suffix="%" valueLabel="victory margin" grouping={grouping} selKey={selKey} onSelect={onSelect} theme={theme} />
         </div>
         <div className="mt-3 border-t border-white/[0.06] pt-2.5 text-[11px] leading-relaxed min-h-[3rem]">
           {sel ? (() => {
@@ -404,17 +423,17 @@ function WinQuality({ seats, party, setParty, grouping }: { seats: Seat[]; party
               <div>
                 <div className="mb-1.5 text-[11.5px] flex items-center gap-2 flex-wrap">
                   <span className="font-semibold" style={{ color: sel.color }}>{sel.year} · {sel.bucket}</span>
-                  <span className="text-faint">· {items.length} seats · sorted by {sel.valueLabel} high → low{grouped ? ` · grouped by ${sel.groupLabel}` : ''}</span>
-                  <button onClick={() => onSelect(null, null)} className="text-faint underline decoration-dotted hover:text-ink">clear</button>
+                  <span className="text-muted">· {items.length} seats · sorted by {sel.valueLabel} high → low{grouped ? ` · grouped by ${sel.groupLabel}` : ''}</span>
+                  <button onClick={() => onSelect(null, null)} className="text-muted underline decoration-dotted hover:text-ink px-2 py-1 -my-1 min-h-[32px] inline-flex items-center sm:px-0 sm:py-0 sm:my-0 sm:min-h-0">clear</button>
                 </div>
                 <div className="max-h-[200px] overflow-auto pr-1 space-y-1">
                   {grouped ? groups.map(([g, list]) => (
-                    <div key={g} className="text-muted"><span className="text-ink font-medium">{g}</span> <span className="text-faint">({list.length})</span> — {list.map(fmt).join('  ·  ')}</div>
-                  )) : <div className="text-muted">{items.map(fmt).join('  ·  ')}</div>}
+                    <div key={g} className="text-ink"><span className="text-ink font-medium">{g}</span> <span className="text-muted">({list.length})</span> — {list.map(fmt).join('  ·  ')}</div>
+                  )) : <div className="text-ink">{items.map(fmt).join('  ·  ')}</div>}
                 </div>
               </div>
             )
-          })() : <span className="text-faint"><b className="text-muted">Click</b> any cell to list <b className="text-muted">all</b> its constituencies — grouped by {grouping ? grouping.label : 'state'}, sorted high → low. Toggle <b className="text-muted">%</b> / <b className="text-muted">#</b> above for share vs seat counts.</span>}
+          })() : <span className="text-muted"><b className="text-ink">Click</b> any cell to list <b className="text-ink">all</b> its constituencies — grouped by {grouping ? grouping.label : 'state'}, sorted high → low. Toggle <b className="text-ink">%</b> / <b className="text-ink">#</b> above for share vs seat counts.</span>}
         </div>
       </ChartCard>
     </div>

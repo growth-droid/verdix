@@ -2,7 +2,7 @@ import { useEffect, useMemo, useRef, useState } from 'react'
 import maplibregl from 'maplibre-gl'
 import 'maplibre-gl/dist/maplibre-gl.css'
 import { loadACGeo, loadPCGeo, loadStateBorders, type Seat } from '../lib/data'
-import { colorFor, ALLIANCE_COLORS } from '../lib/colors'
+import { colorFor, ALLIANCE_COLORS, readable } from '../lib/colors'
 import { DELIM_BREAK_AE } from '../lib/joins'
 import { useTheme } from '../store'
 
@@ -100,7 +100,9 @@ const TURNOUT_BANDS_L = [
 const band = (v: number | null, bands: typeof MARGIN_BANDS_D) =>
   v == null ? null : bands.find(b => v < b.lt)!
 
-export default function ChoroplethMap({ byState, arena, activeYear, mode = 'winner', onPick, height = 'h-[calc(100vh-230px)]', colorOf, subOf, legendTitle, legendItems, focusState }: {
+// default height: phones get a viewport-proportional block (100vh on mobile browsers is the LARGE
+// viewport, and the 230px offset assumes the desktop header+FilterBar) — desktop keeps the old value.
+export default function ChoroplethMap({ byState, arena, activeYear, mode = 'winner', onPick, height = 'h-[62vh] sm:h-[calc(100dvh-230px)]', colorOf, subOf, legendTitle, legendItems, focusState }: {
   byState: Map<string, Seat[]>; arena: Arena; activeYear: number
   mode?: MapMode; onPick?: (seat: Seat | null, state: string) => void; height?: string
   /** Custom analysis painting (e.g. flip status) — overrides `mode`. Memoize these. */
@@ -255,7 +257,9 @@ export default function ChoroplethMap({ byState, arena, activeYear, mode = 'winn
       fenceCorrecting = true
       map.easeTo({ center: lastGoodRef.current, duration: 350 })
     })
-    const popup = new maplibregl.Popup({ closeButton: false, closeOnClick: false, maxWidth: '320px', offset: 10 })
+    // maxWidth is a raw CSS length: min() keeps the desktop 320px but caps the popup at ~56% of a
+    // phone screen (a 320px card blankets a 390px map). Pure CSS, so it survives rotation.
+    const popup = new maplibregl.Popup({ closeButton: false, closeOnClick: false, maxWidth: 'min(320px, 56vw)', offset: 10 })
     popupRef.current = popup
 
     const featKey = featKeyOf
@@ -269,7 +273,7 @@ export default function ChoroplethMap({ byState, arena, activeYear, mode = 'winn
       const html = i
         ? `<div class="font-semibold text-[13px]">${i.title}</div>
            <div class="text-slate-300 mt-0.5">${i.sub}</div>
-           <div class="text-slate-500 mt-1">${i.dataState}${i.seat ? ' — click for seat detail' : ' — click for deep-dive'}</div>`
+           <div class="text-slate-300 mt-1">${i.dataState}${i.seat ? ' — click for seat detail' : ' — click for deep-dive'}</div>`
         : `<div class="font-semibold text-[13px]">${geoName || 'Unnamed'}</div>
            <div class="text-slate-400 mt-0.5">No data for this view</div>`
       popup.setLngLat(e.lngLat).setHTML(html).addTo(map)
@@ -446,19 +450,34 @@ export default function ChoroplethMap({ byState, arena, activeYear, mode = 'winn
 
   return (
     <div className={`relative ${height}`}>
-      <div ref={box} className="absolute inset-0 rounded-2xl overflow-hidden ring-1 ring-white/10 shadow-card" />
-      <div className="absolute top-3 left-3 glass px-3.5 py-2.5 space-y-1.5 min-w-[136px]">
+      {/* the arbitrary variants size MapLibre's NavigationControl buttons (29px by default) up to a
+          36px tap target on phones; sm: restores the native size so desktop is unchanged */}
+      <div
+        ref={box}
+        className="absolute inset-0 rounded-2xl overflow-hidden ring-1 ring-white/10 shadow-card
+          [&_.maplibregl-ctrl-group_button]:w-9 [&_.maplibregl-ctrl-group_button]:h-9
+          sm:[&_.maplibregl-ctrl-group_button]:w-[29px] sm:[&_.maplibregl-ctrl-group_button]:h-[29px]"
+      />
+      <div className="absolute top-2 left-2 max-w-[55%] min-w-0 glass px-2 py-1.5 space-y-1 sm:top-3 sm:left-3 sm:max-w-none sm:min-w-[136px] sm:px-3.5 sm:py-2.5 sm:space-y-1.5">
         <div className="kicker">{legend.title}</div>
         {legend.items.map(it => (
-          <div key={it.label} className="flex items-center gap-2 text-xs">
-            <span className="inline-block w-3 h-3 rounded-[4px] shrink-0 ring-1 ring-black/40" style={{ background: it.color }} />
-            <span className="text-slate-200">{it.label}</span>
-            {it.n != null && <span className="text-slate-500 tabular-nums ml-auto pl-3">{it.n}</span>}
+          <div key={it.label} className="flex items-center gap-2 text-[10px] sm:text-xs">
+            <span className="inline-block w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-[4px] shrink-0 ring-1 ring-black/40" style={{ background: it.color }} />
+            <span className="text-slate-200 truncate">{it.label}</span>
+            {it.n != null && <span className="text-slate-300 tabular-nums ml-auto pl-2 sm:pl-3">{it.n}</span>}
           </div>
         ))}
       </div>
       {notes.length > 0 && (
-        <div className="absolute bottom-3 left-3 max-w-md glass !border-amber-400/20 px-3.5 py-2.5 text-[11px] text-amber-200/90 space-y-1">
+        // Full-bleed (inset) on phones — max-w-md is 448px, wider than a 390px viewport, and the
+        // parent isn't clipped, so it used to spill past the right edge and scroll the whole page.
+        // Colour was text-amber-200/90 (~1.4:1 on the cream light glass); readable() keeps amber-200
+        // as-is on dark (identical to before, minus the opacity) and darkens it to clear AA on light.
+        <div
+          className="absolute bottom-2 left-2 right-2 max-h-24 overflow-y-auto glass !border-amber-400/20 px-3 py-2 text-[11px] space-y-1
+            sm:bottom-3 sm:left-3 sm:right-auto sm:max-w-md sm:max-h-none sm:overflow-visible sm:px-3.5 sm:py-2.5"
+          style={{ color: readable('#fde68a', themeMode) }}
+        >
           {notes.map(n => <div key={n}>⚠ {n}</div>)}
         </div>
       )}
