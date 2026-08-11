@@ -6,6 +6,7 @@ elections, every constituency, with winners, runner-ups, margins, vote share and
 Run API later (single swap point in `src/lib/data.ts`).
 
 **Live:** https://verdix-elections.fly.dev · source in the private GitHub repo `growth-droid/verdix`.
+*Accurate as of 2026-08-12.*
 
 ## Run
 

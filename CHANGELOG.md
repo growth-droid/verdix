@@ -1,7 +1,15 @@
 # Changelog — Verdix
 
-Readable history of the app (newest first). Engineering detail + gotchas live in
-[CLAUDE.md](CLAUDE.md); this is the plain-English summary. Dates are 2026.
+Readable history of the app (newest first) in plain English. Dates are 2026.
+
+For engineering detail: **[CLAUDE.md](CLAUDE.md)** = current state + condensed history ·
+**[CONVENTIONS.md](CONVENTIONS.md)** = the rules and gotchas · **[README.md](README.md)** = what it
+is and how to run it.
+
+> **Where the product stands (2026-08-12):** 2004–2026 coverage, 8 modules in 3 menus, light + dark
+> themes, mobile-ready, live on Fly.io at https://verdix-elections.fly.dev with access **open** (no
+> login). Entries below this line are history — several describe things that were later changed or
+> removed (the Story deck, the Grid view, dark-only, Netlify hosting).
 
 ---
 
@@ -20,12 +28,16 @@ Readable history of the app (newest first). Engineering detail + gotchas live in
 - Verified by measurement, not by eye: **zero sideways scroll and zero unreadable text** across all
   eight screens in both themes. Desktop is unchanged.
 - **Story deck removed** (old links land on National), and the menus now sit centre-right.
+- **The Grid view is gone too** (2026-08-12). The map was the only view anyone used, so the
+  Map/Grid toggle had nothing left to switch between — an old `?view=grid` link simply shows the
+  map. One less control row on a phone.
 
-## 2026-08-10 — Simpler navigation: four menus instead of nine tabs
-- The header no longer lists nine tabs in a row. The modules are now grouped into **four
-  menus**: **Results** (National · States), **Analysis** (Change · Trends · Compare · Bypolls),
-  **Strategy** (Signals · Targets) and **Story**. Each menu lists its pages with a one-line
-  description, so you can see what's inside before clicking.
+## 2026-08-10 — Simpler navigation: menus instead of nine tabs
+- The header no longer lists nine tabs in a row. The modules are now grouped into
+  menus: **Results** (National · States), **Analysis** (Change · Trends · Compare · Bypolls),
+  **Strategy** (Signals · Targets) — and, at the time, Story. Each menu lists its pages with a
+  one-line description, so you can see what's inside before clicking.
+  *(Story was removed the next day, leaving the three menus the app has now.)*
 - **Names standardised — every page is now a single word**: "Overview" → **National**,
   "State" → **States**, "What changed" → **Change**, "Battlegrounds" → **Targets**. The step
   numbers are gone from the nav, and each page now shows a small *Group / Page* breadcrumb.
