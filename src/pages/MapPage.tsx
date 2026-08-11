@@ -221,30 +221,31 @@ export default function MapPage() {
   return (
     <div>
       <StickyControls>
-      <div className="flex items-center gap-4 flex-wrap">
-        <div className="flex w-full flex-1 items-center gap-2 text-xs text-slate-400 sm:w-auto sm:flex-none">
-          Year
-          <input type="range" min={2004} max={2026} value={year} onChange={e => setYear(+e.target.value)} className="w-full min-w-0 h-8 accent-gold sm:w-56 sm:h-auto" />
-          <span className="text-xl font-bold tabular-nums text-ink">{activeYear}</span>
+      {/* PHONE: exactly two rows — the year, then every toggle in one side-scrolling strip.
+          The text labels and the wide gaps are desktop-only, so the map starts near the top. */}
+      <div className="flex items-center gap-2 sm:gap-4 flex-wrap">
+        <div className="flex w-full flex-1 items-center gap-2 text-xs text-muted sm:w-auto sm:flex-none">
+          <span className="hidden sm:inline">Year</span>
+          <input type="range" min={2004} max={2026} value={year} onChange={e => setYear(+e.target.value)} className="w-full min-w-0 h-7 accent-gold sm:w-56 sm:h-auto" />
+          <span className="text-lg sm:text-xl font-bold tabular-nums text-ink shrink-0">{activeYear}</span>
         </div>
-        <div className="flex items-center gap-2 text-xs text-slate-400">
-          Level
-          <Seg options={[{ v: 'seat', label: 'Seats' }, { v: 'state', label: 'States' }]}
-            value={grouped ? 'state' : 'seat'} onChange={v => setParam('group', v === 'state' ? 'state' : null)} />
-        </div>
-        {!grouped && (
-          <div className="flex w-full flex-wrap items-center gap-2 text-xs text-slate-400 sm:w-auto sm:flex-nowrap">
-            Color
-            {/* the 5-pill row can't wrap — let it scroll inside its own box instead of widening the page */}
-            <div className="w-full overflow-x-auto sm:w-auto sm:overflow-visible">
-              <Seg options={[{ v: 'winner', label: 'Winner' }, { v: 'alliance', label: 'Alliance' }, { v: 'margin', label: 'Margin' }, { v: 'turnout', label: 'Turnout' }, { v: 'party', label: 'Party' }]}
-                value={mode} onChange={v => setParam('color', v === 'winner' ? null : v)} />
+        <div className="w-full sm:flex-1 overflow-x-auto sm:overflow-visible -mx-3 px-3 sm:mx-0 sm:px-0">
+          <div className="flex items-center gap-2 sm:gap-4 w-max sm:w-auto">
+            <div className="flex items-center gap-2 text-xs text-muted">
+              <span className="hidden sm:inline">Level</span>
+              <Seg options={[{ v: 'seat', label: 'Seats' }, { v: 'state', label: 'States' }]}
+                value={grouped ? 'state' : 'seat'} onChange={v => setParam('group', v === 'state' ? 'state' : null)} />
             </div>
-            {mode === 'party' && <Select value={P} onChange={v => setParam('pp', v)} options={partyList} width="w-full sm:w-28" />}
+            {!grouped && (
+              <div className="flex items-center gap-2 text-xs text-muted">
+                <span className="hidden sm:inline">Color</span>
+                <Seg options={[{ v: 'winner', label: 'Winner' }, { v: 'alliance', label: 'Alliance' }, { v: 'margin', label: 'Margin' }, { v: 'turnout', label: 'Turnout' }, { v: 'party', label: 'Party' }]}
+                  value={mode} onChange={v => setParam('color', v === 'winner' ? null : v)} />
+                {mode === 'party' && <Select value={P} onChange={v => setParam('pp', v)} options={partyList} width="w-28" />}
+              </div>
+            )}
+            <div className="sm:ml-auto"><Seg options={[{ v: 'map', label: 'Map' }, { v: 'grid', label: 'Grid' }]} value={view} onChange={v => setParam('view', v === 'grid' ? 'grid' : null)} /></div>
           </div>
-        )}
-        <div className="w-full sm:w-auto sm:ml-auto">
-          <Seg options={[{ v: 'map', label: 'Map' }, { v: 'grid', label: 'Grid' }]} value={view} onChange={v => setParam('view', v === 'grid' ? 'grid' : null)} />
         </div>
       </div>
       </StickyControls>

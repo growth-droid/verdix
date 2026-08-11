@@ -338,16 +338,17 @@ export default function StatePage() {
     <div>
       <StickyControls>
         <div className="flex items-center gap-x-3 gap-y-1.5 flex-wrap">
-          <div>
-            <h2 className="text-lg font-bold leading-tight tracking-tight">{st}</h2>
-            <div className="kicker">{arena === 'AE' ? 'Assembly' : 'Lok Sabha'} deep dive · change region/arena above</div>
+          <div className="min-w-0">
+            <h2 className="text-base sm:text-lg font-bold leading-tight tracking-tight truncate">{st}</h2>
+            {/* the strapline just repeats the Focus bar + breadcrumb on a phone */}
+            <div className="kicker hidden sm:block">{arena === 'AE' ? 'Assembly' : 'Lok Sabha'} deep dive · change region/arena above</div>
           </div>
           <div className="flex items-center gap-2 text-xs text-muted">
-            Election
+            <span className="hidden sm:inline">Election</span>
             <Select value={String(vy)} onChange={v => setYear(+v)} options={[...years].reverse().map(String)} width="w-24" />
           </div>
           <span className="hidden sm:inline text-sm text-muted">{years.length} elections · {selected.length} seats</span>
-          {!allIndia && <button onClick={() => navTo('/change')} className="ml-auto inline-flex items-center min-h-[32px] py-1.5 sm:min-h-0 sm:py-0 text-xs text-gold hover:text-gold underline decoration-dotted decoration-gold/40 underline-offset-2 transition-colors">What changed in {st} →</button>}
+          {!allIndia && <button onClick={() => navTo('/change')} className="ml-auto inline-flex items-center min-h-[32px] py-1.5 sm:min-h-0 sm:py-0 text-xs text-gold hover:text-gold underline decoration-dotted decoration-gold/40 underline-offset-2 transition-colors"><span className="sm:hidden">Changes →</span><span className="hidden sm:inline">What changed in {st} →</span></button>}
         </div>
       </StickyControls>
 

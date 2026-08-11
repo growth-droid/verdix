@@ -252,8 +252,8 @@ export default function SignalsPage() {
     </div>
   )
   const PartyChip = ({ p, a, n, on, onClick }: { p: string; a: string | null; n: number; on: boolean; onClick: () => void }) => (
-    <button onClick={onClick} className={`px-3 py-1.5 min-h-[32px] rounded-full text-[11px] border transition-colors flex items-center gap-1.5 ${on ? 'border-gold/60 bg-gold/15 text-ink font-semibold' : 'border-white/10 text-muted hover:text-ink hover:border-white/25 bg-white/[0.03]'}`}>
-      <span className="w-2 h-2 rounded-full" style={{ background: colorFor(p, a) }} />{p}<span className="tabular-nums text-[10.5px] text-muted">{n || '·'}</span>
+    <button onClick={onClick} className={`shrink-0 whitespace-nowrap px-3 py-1.5 min-h-[32px] rounded-full text-[11px] border transition-colors flex items-center gap-1.5 ${on ? 'border-gold/60 bg-gold/15 text-ink font-semibold' : 'border-white/10 text-muted hover:text-ink hover:border-white/25 bg-white/[0.03]'}`}>
+      <span className="w-2 h-2 rounded-full shrink-0" style={{ background: colorFor(p, a) }} />{p}<span className="tabular-nums text-[10.5px] text-muted">{n || '·'}</span>
     </button>
   )
 
@@ -317,23 +317,25 @@ export default function SignalsPage() {
   return (
     <div>
       <StickyControls>
-        <div className="flex items-center gap-3 flex-wrap">
-          <div>
+        <div className="flex items-center gap-2 sm:gap-3 flex-wrap">
+          {/* the title + strapline are desktop-only: on a phone the page breadcrumb above already
+              says "Strategy / Signals" and the Focus bar names the region — two rows saved */}
+          <div className="hidden sm:block">
             <h2 className="text-lg font-bold leading-tight tracking-tight">Signals · {isState ? st : 'All India'}</h2>
             <div className="kicker">a strategist's read — party SWOT &amp; playbook · alliance what-ifs · auto-flagged patterns</div>
           </div>
           {/* the three labels total ~330px — wider than a 390px phone's sticky bar, so shorten them
               there (useIsPhone is reactive) and keep a scroll container as the belt-and-braces */}
-          <div className="w-full overflow-x-auto sm:w-auto sm:overflow-visible">
+          <div className="min-w-0 flex-1 overflow-x-auto sm:flex-none sm:overflow-visible">
             <Seg options={[{ v: 'swot', label: isPhone ? 'SWOT' : 'Party SWOT' }, { v: 'alliance', label: isPhone ? 'Alliance' : 'Alliance simulator' }, { v: 'patterns', label: 'Patterns' }]} value={view} onChange={v => setView(v as ViewKey)} />
           </div>
           {view === 'patterns' && (
-            <span className="text-sm text-muted ml-auto">
+            <span className="text-xs sm:text-sm text-muted shrink-0 sm:ml-auto">
               {signals.length} signal{signals.length !== 1 ? 's' : ''}{nCrit ? <span className="text-red-500"> · {nCrit} critical</span> : null}{multi ? <span className="text-muted"> · {selectedEls.length} elections</span> : null}
             </span>
           )}
         </div>
-        <div className="flex items-center gap-x-3 sm:gap-x-4 gap-y-1.5 flex-nowrap overflow-x-auto sm:flex-wrap sm:overflow-visible mt-2.5 pt-2.5 border-t border-white/[0.05]">
+        <div className="flex items-center gap-x-2 sm:gap-x-4 gap-y-1.5 flex-nowrap overflow-x-auto sm:flex-wrap sm:overflow-visible mt-1.5 pt-1.5 sm:mt-2.5 sm:pt-2.5 border-t border-white/[0.05]">
           <div className="shrink-0">
             <Seg options={[{ v: 'AE', label: 'Assemblies' }, { v: 'GE', label: 'Parliaments' }, { v: 'BOTH', label: 'Both' }]} value={scope} onChange={v => setScope(v as ScopeArena)} />
           </div>
@@ -354,9 +356,14 @@ export default function SignalsPage() {
       ) : view === 'swot' ? (
         /* ── Party SWOT ── */
         <div className="space-y-4">
-          <div className="flex flex-wrap items-center gap-1.5">
-            <span className="kicker text-[11px] text-muted mr-1">Analyse party · {simEl ? elFull(simEl) : ''}</span>
-            {simParties.map(x => <PartyChip key={x.p} p={x.p} a={x.a} n={x.seats} on={swotParty === x.p} onClick={() => { setSwotParty(x.p); setOpenPlay(null) }} />)}
+          {/* a dozen chips wrapped to ~4 rows on a phone (≈280px before any content) — keep them on
+              ONE side-scrolling line there; desktop still wraps as before */}
+          <div>
+            <span className="kicker text-[11px] text-muted block sm:hidden mb-1">Analyse party · {simEl ? elFull(simEl) : ''}</span>
+            <div className="flex flex-nowrap sm:flex-wrap items-center gap-1.5 overflow-x-auto sm:overflow-visible -mx-3 px-3 sm:mx-0 sm:px-0">
+              <span className="kicker text-[11px] text-muted mr-1 hidden sm:inline">Analyse party · {simEl ? elFull(simEl) : ''}</span>
+              {simParties.map(x => <PartyChip key={x.p} p={x.p} a={x.a} n={x.seats} on={swotParty === x.p} onClick={() => { setSwotParty(x.p); setOpenPlay(null) }} />)}
+            </div>
           </div>
           {swot && simEl ? (
             <>

@@ -36,10 +36,9 @@ export default function FilterBar() {
       {showArena && (
         <Seg options={[{ v: 'AE', label: 'Assembly' }, { v: 'GE', label: 'Lok Sabha' }]} value={arena} onChange={v => setArena(v as 'AE' | 'GE')} />
       )}
-      {/* Global scope readout — now visible on phones too: it is the only confirmation of what the
-          product is scoped to, and the only `clear` (which also exits a state-only page). On mobile it
-          drops onto its own full-width line; from md up it is the same right-aligned inline strip as before. */}
-      <span className="ml-auto w-full md:w-auto text-[11px] text-muted">
+      {/* Global scope readout — hidden on phones, where it would cost a whole row to repeat what the
+          dropdown and the arena toggle already show (and picking "All India" is the same as `clear`). */}
+      <span className="ml-auto hidden md:inline text-[11px] text-muted">
         {state ? <>Focus: <span className="text-ink font-medium">{state}</span></> : <>Focus: <span className="text-ink font-medium">all of India</span></>}
         {showArena ? <span className="hidden md:inline"> · {arena === 'AE' ? 'Assembly' : 'Lok Sabha'}</span> : null}
         {state ? <> — <button onClick={() => { setState(null); if (pathname !== '/') nav('/') }} className="underline decoration-dotted hover:text-ink transition-colors inline-flex items-center min-h-[32px] px-1.5 -mx-1.5 md:inline md:min-h-0 md:px-0 md:mx-0">clear</button></> : null}

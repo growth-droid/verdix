@@ -196,11 +196,12 @@ export function SortTable<T>({ rows, cols, defaultSort, search, searchIn, maxH =
 
 export function Seg({ options, value, onChange }: { options: readonly { v: string; label: string }[]; value: string; onChange: (v: string) => void }) {
   return (
-    /* flex-wrap + max-w-full so a 3-option Seg wraps inside a 390px phone instead of pushing the page sideways */
-    <div className="inline-flex flex-wrap max-w-full rounded-2xl sm:rounded-full p-[3px] bg-slate-950/60 border border-white/[0.08] shadow-[inset_0_1px_2px_rgba(0,0,0,0.25)]">
+    /* Stays on ONE line (no wrap) and never shrinks — callers put it in a horizontally
+       scrollable strip on phones, which is far more compact than letting pills wrap. */
+    <div className="inline-flex shrink-0 rounded-full p-[3px] bg-slate-950/60 border border-white/[0.08] shadow-[inset_0_1px_2px_rgba(0,0,0,0.25)]">
       {options.map(o => (
         <button key={o.v} onClick={() => onChange(o.v)}
-          className={`px-3 sm:px-3.5 py-2 sm:py-1 min-h-[32px] sm:min-h-0 text-[12.5px] rounded-full transition-all duration-200 ${
+          className={`whitespace-nowrap px-2.5 sm:px-3.5 py-1.5 sm:py-1 min-h-[32px] sm:min-h-0 text-[12.5px] rounded-full transition-all duration-200 ${
             value === o.v
               ? 'bg-gradient-to-b from-[#e8c766] to-[#b0812a] text-black font-semibold shadow-[0_1px_3px_rgba(0,0,0,0.3),inset_0_1px_0_rgba(255,255,255,0.35)]'
               : 'text-muted hover:text-ink'

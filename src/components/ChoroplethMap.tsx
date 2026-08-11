@@ -458,28 +458,39 @@ export default function ChoroplethMap({ byState, arena, activeYear, mode = 'winn
           [&_.maplibregl-ctrl-group_button]:w-9 [&_.maplibregl-ctrl-group_button]:h-9
           sm:[&_.maplibregl-ctrl-group_button]:w-[29px] sm:[&_.maplibregl-ctrl-group_button]:h-[29px]"
       />
-      <div className="absolute top-2 left-2 max-w-[55%] min-w-0 glass px-2 py-1.5 space-y-1 sm:top-3 sm:left-3 sm:max-w-none sm:min-w-[136px] sm:px-3.5 sm:py-2.5 sm:space-y-1.5">
-        <div className="kicker">{legend.title}</div>
-        {legend.items.map(it => (
-          <div key={it.label} className="flex items-center gap-2 text-[10px] sm:text-xs">
-            <span className="inline-block w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-[4px] shrink-0 ring-1 ring-black/40" style={{ background: it.color }} />
+      {/* Legend: on a phone the map IS the content, so show only the top 4 entries in a tight box
+          (a 7-row legend covered a third of the map); desktop keeps the full list. */}
+      <div className="absolute top-2 left-2 max-w-[48%] min-w-0 glass px-1.5 py-1 space-y-0.5 sm:top-3 sm:left-3 sm:max-w-none sm:min-w-[136px] sm:px-3.5 sm:py-2.5 sm:space-y-1.5">
+        <div className="kicker text-[9px] sm:text-[10px]">{legend.title}</div>
+        {legend.items.map((it, i) => (
+          <div key={it.label} className={`items-center gap-1.5 sm:gap-2 text-[10px] sm:text-xs ${i >= 4 ? 'hidden sm:flex' : 'flex'}`}>
+            <span className="inline-block w-2 h-2 sm:w-3 sm:h-3 rounded-[3px] sm:rounded-[4px] shrink-0 ring-1 ring-black/40" style={{ background: it.color }} />
             <span className="text-slate-200 truncate">{it.label}</span>
-            {it.n != null && <span className="text-slate-300 tabular-nums ml-auto pl-2 sm:pl-3">{it.n}</span>}
+            {it.n != null && <span className="text-slate-300 tabular-nums ml-auto pl-1.5 sm:pl-3">{it.n}</span>}
           </div>
         ))}
+        {legend.items.length > 4 && <div className="sm:hidden text-[9px] text-muted pl-3.5">+{legend.items.length - 4} more</div>}
       </div>
       {notes.length > 0 && (
         // Full-bleed (inset) on phones — max-w-md is 448px, wider than a 390px viewport, and the
         // parent isn't clipped, so it used to spill past the right edge and scroll the whole page.
         // Colour was text-amber-200/90 (~1.4:1 on the cream light glass); readable() keeps amber-200
         // as-is on dark (identical to before, minus the opacity) and darkens it to clear AA on light.
-        <div
-          className="absolute bottom-2 left-2 right-2 max-h-24 overflow-y-auto glass !border-amber-400/20 px-3 py-2 text-[11px] space-y-1
-            sm:bottom-3 sm:left-3 sm:right-auto sm:max-w-md sm:max-h-none sm:overflow-visible sm:px-3.5 sm:py-2.5"
+        // On a phone these caveats used to blanket the bottom third of the map, so they collapse to
+        // a tap-to-open chip; desktop keeps the always-visible panel.
+        <details
+          className="absolute bottom-2 left-2 right-2 group glass !border-amber-400/20 px-2.5 py-1.5 text-[11px] open:max-h-28 open:overflow-y-auto
+            sm:bottom-3 sm:left-3 sm:right-auto sm:max-w-md sm:px-3.5 sm:py-2.5 sm:open:max-h-none sm:open:overflow-visible"
           style={{ color: readable('#fde68a', themeMode) }}
+          open={typeof window !== 'undefined' && window.innerWidth >= 640}
         >
-          {notes.map(n => <div key={n}>⚠ {n}</div>)}
-        </div>
+          <summary className="cursor-pointer list-none marker:hidden select-none sm:hidden">
+            ⚠ {notes.length} boundary note{notes.length > 1 ? 's' : ''} <span className="opacity-70 group-open:hidden">— tap</span>
+          </summary>
+          <div className="space-y-1 mt-1 sm:mt-0">
+            {notes.map(n => <div key={n}>⚠ {n}</div>)}
+          </div>
+        </details>
       )}
     </div>
   )
