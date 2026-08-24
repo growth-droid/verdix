@@ -113,7 +113,7 @@ export default function BypollsPage() {
             <Chart option={timeline} style={{ height: '100%' }} notMerge />
           </div>
         </ChartCard>
-        <div className="flex flex-col gap-4">
+        <div className="min-w-0 flex flex-col gap-4">
           <ChartCard title="Defend vs raid record">
             <div className="overflow-x-auto">
               <table className="w-full min-w-[360px] text-xs">

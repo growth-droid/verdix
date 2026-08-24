@@ -364,76 +364,6 @@ export default function StatePage() {
         </div>
       )}
 
-      {/* The two state-level read-outs sit SIDE BY SIDE: the party scorecard (who leads in each
-          arena) next to the candidate positions (who actually stood, seat by seat). Each table
-          still scrolls inside its own card, so neither is squashed at half width. */}
-      <div className="grid lg:grid-cols-2 gap-4 mb-4">
-      {/* State scorecard — Assembly + Lok Sabha side by side (the "both arenas at one place" view) */}
-      {!allIndia && scorecard && (
-        <ChartCard
-          title={<>State scorecard · Assembly {scorecard.aeY ?? '–'} vs Lok Sabha {scorecard.geY ?? '–'} <Info>Each party's most recent Assembly result beside its most recent Lok Sabha result in {st} — seats and vote share in BOTH arenas at once, whatever the toggle above is set to. The “LS − AE” gap exposes split-ticket voting: many people back a national party for Parliament and a regional one for the Assembly.</Info></>}
-          note={`${st}: latest Assembly (${scorecard.aeY ?? '–'} · ${scorecard.aeTot} seats) beside latest Lok Sabha (${scorecard.geY ?? '–'} · ${scorecard.geTot} seats). “LS − AE” = Lok Sabha vote share minus Assembly vote share (＋ green = the party runs stronger nationally than in the state).`}>
-          {scorecard.aeLead && scorecard.geLead && (
-            <div className="text-[12.5px] text-muted mb-3">
-              {scorecard.aeLead.p === scorecard.geLead.p
-                ? <><b style={{ color: readable(colorFor(scorecard.aeLead.p, scorecard.aeLead.a), mode) }}>{scorecard.aeLead.p}</b> leads {st} in <b className="text-ink">both</b> arenas — the Assembly (<b className="text-ink">{scorecard.aeLead.aeS}</b> seats) and Lok Sabha (<b className="text-ink">{scorecard.geLead.geS}</b>).</>
-                : <><b style={{ color: readable(colorFor(scorecard.aeLead.p, scorecard.aeLead.a), mode) }}>{scorecard.aeLead.p}</b> leads the Assembly (<b className="text-ink">{scorecard.aeLead.aeS}</b> seats) while <b style={{ color: readable(colorFor(scorecard.geLead.p, scorecard.geLead.a), mode) }}>{scorecard.geLead.p}</b> leads Lok Sabha (<b className="text-ink">{scorecard.geLead.geS}</b>) — a split-ticket state.</>}
-            </div>
-          )}
-          <div className="overflow-x-auto">
-            <table className="w-full text-[11.5px] min-w-[420px] sm:text-[12.5px] sm:min-w-[560px]">
-              <thead>
-                <tr className="text-muted">
-                  <th className="text-left font-medium py-1 pr-2 align-bottom" rowSpan={2}>Party</th>
-                  <th className="text-center font-semibold px-2 pb-1 text-muted border-b border-white/[0.08]" colSpan={2}>Assembly · {scorecard.aeY ?? '–'}</th>
-                  <th className="text-center font-semibold px-2 pb-1 text-muted border-b border-white/[0.08]" colSpan={2}>Lok Sabha · {scorecard.geY ?? '–'}</th>
-                  <th className="text-right font-medium pl-2 align-bottom" rowSpan={2} title="Lok Sabha vote share minus Assembly vote share">LS − AE</th>
-                </tr>
-                <tr className="text-muted text-[11px] uppercase tracking-wide">
-                  <th className="text-right font-medium px-2 pb-1">Seats</th><th className="text-right font-medium px-2 pb-1">Vote%</th>
-                  <th className="text-right font-medium px-2 pb-1">Seats</th><th className="text-right font-medium px-2 pb-1">Vote%</th>
-                </tr>
-              </thead>
-              <tbody>
-                {scorecard.rows.map(r => {
-                  const gap = (r.geV != null && r.aeV != null) ? +(r.geV - r.aeV).toFixed(1) : null
-                  return (
-                    <tr key={r.p} className="border-t border-white/[0.05] hover:bg-white/[0.03] transition-colors">
-                      <td className="py-1.5 pr-2 whitespace-nowrap"><Dot color={colorFor(r.p, r.a)} /><b className="text-ink">{r.p}</b></td>
-                      <td className="text-right px-2 tabular-nums text-ink font-semibold">{r.aeS != null ? r.aeS : '–'}</td>
-                      <td className="text-right px-2 tabular-nums text-ink">{r.aeV != null ? r.aeV.toFixed(1) : '–'}</td>
-                      <td className="text-right px-2 tabular-nums text-ink font-semibold">{r.geS != null ? r.geS : '–'}</td>
-                      <td className="text-right px-2 tabular-nums text-ink">{r.geV != null ? r.geV.toFixed(1) : '–'}</td>
-                      <td className="text-right pl-2 tabular-nums font-semibold" style={{ color: gap == null ? 'rgb(var(--s500))' : readable(gap > 0.3 ? '#16a34a' : gap < -0.3 ? '#dc2626' : '#64748b', mode) }}>
-                        {gap == null ? '–' : (gap > 0 ? '+' : '') + gap}
-                      </td>
-                    </tr>
-                  )
-                })}
-              </tbody>
-            </table>
-          </div>
-        </ChartCard>
-      )}
-
-      {/* Candidate positions — top 5 per seat, filterable to one parliament seat */}
-      {!allIndia && (
-        <ChartCard
-          title={<>Who stood, and where they finished · {st} <Info>The top five candidates in every constituency — name, party, votes and vote share. Choose a parliament seat to narrow it to just the assembly seats inside it, and hover any candidate for the margin, deposit status and turnout behind the number.</Info></>}>
-          <PositionsTable state={st} />
-        </ChartCard>
-      )}
-
-      </div>
-
-      {/* Winner matrix — every constituency × every election, filled with the winning party's colour */}
-      {!allIndia && (
-        <ChartCard className="mb-4"
-          title={<>{st} deep dive · winner matrix <Info>Each row is one constituency, each column one election, and every cell is painted the winning party's colour — so a seat's entire history reads as a colour band. Switch between assembly (AC) and parliamentary (PC) seats, and search for any constituency.</Info></>}>
-          <WinnerMatrix state={st} onPick={(seat, all, arena) => setMPick({ seat, all, arena })} />
-        </ChartCard>
-      )}
-
       {/* Big seat map on the left; swing + strongholds stacked on the right (map stretches to match) */}
       {allIndia ? (
         <ChartCard className="mb-4" title={`Seat map · All India · ${vy}`}>
@@ -617,8 +547,10 @@ export default function StatePage() {
             <Seg options={[{ v: '1', label: '<1%' }, { v: '2', label: '<2%' }, { v: '3', label: '<3%' }, { v: '5', label: '<5%' }]}
               value={String(band)} onChange={v => setBand(+v)} />
           </div>
+          {/* min-w-0 on BOTH tracks: a grid child defaults to min-width:auto, so the wide table inside
+              the left one stretched the whole document to 538px at a 390px viewport. */}
           <div className="grid lg:grid-cols-2 gap-5">
-            <div>
+            <div className="min-w-0">
               <div className="text-xs text-muted mb-2 flex items-center gap-1">Who’s edging out whom in the close seats <Info>Among the seats above (margin under {band}%), the head-to-head pairs that decided the most knife-edge contests. The wider bar won more of those tight seats.</Info></div>
               {closeBattles.rows.length ? (
                 <div>
@@ -654,7 +586,7 @@ export default function StatePage() {
                 </div>
               ) : <div className="h-[160px] grid place-items-center text-muted text-sm">No close seats in this band — widen it above.</div>}
             </div>
-            <div>
+            <div className="min-w-0">
               {battleSel && (
                 <div className="text-[11px] text-muted mb-2">Showing only <b style={{ color: readable(colorFor(battleSel.a), mode) }}>{battleSel.a}</b> ⟷ <b style={{ color: readable(colorFor(battleSel.b), mode) }}>{battleSel.b}</b> · {closeShown.length} of {close.length} close seats <button onClick={() => setBattleSel(null)} className="ml-1 text-muted underline decoration-dotted hover:text-ink">clear</button></div>
               )}
@@ -665,6 +597,75 @@ export default function StatePage() {
           </div>
         </ChartCard>
       </div>
+      {/* Scorecard: full width but the table is width-capped — spread across 1700px its six
+          columns turned into mostly whitespace. */}
+      {/* State scorecard — Assembly + Lok Sabha side by side (the "both arenas at one place" view) */}
+      {!allIndia && scorecard && (
+        <ChartCard
+          title={<>State scorecard · Assembly {scorecard.aeY ?? '–'} vs Lok Sabha {scorecard.geY ?? '–'} <Info>Each party's most recent Assembly result beside its most recent Lok Sabha result in {st} — seats and vote share in BOTH arenas at once, whatever the toggle above is set to. The “LS − AE” gap exposes split-ticket voting: many people back a national party for Parliament and a regional one for the Assembly.</Info></>}
+          note={`${st}: latest Assembly (${scorecard.aeY ?? '–'} · ${scorecard.aeTot} seats) beside latest Lok Sabha (${scorecard.geY ?? '–'} · ${scorecard.geTot} seats). “LS − AE” = Lok Sabha vote share minus Assembly vote share (＋ green = the party runs stronger nationally than in the state).`}>
+          {scorecard.aeLead && scorecard.geLead && (
+            <div className="text-[12.5px] text-muted mb-3">
+              {scorecard.aeLead.p === scorecard.geLead.p
+                ? <><b style={{ color: readable(colorFor(scorecard.aeLead.p, scorecard.aeLead.a), mode) }}>{scorecard.aeLead.p}</b> leads {st} in <b className="text-ink">both</b> arenas — the Assembly (<b className="text-ink">{scorecard.aeLead.aeS}</b> seats) and Lok Sabha (<b className="text-ink">{scorecard.geLead.geS}</b>).</>
+                : <><b style={{ color: readable(colorFor(scorecard.aeLead.p, scorecard.aeLead.a), mode) }}>{scorecard.aeLead.p}</b> leads the Assembly (<b className="text-ink">{scorecard.aeLead.aeS}</b> seats) while <b style={{ color: readable(colorFor(scorecard.geLead.p, scorecard.geLead.a), mode) }}>{scorecard.geLead.p}</b> leads Lok Sabha (<b className="text-ink">{scorecard.geLead.geS}</b>) — a split-ticket state.</>}
+            </div>
+          )}
+          <div className="overflow-x-auto max-w-3xl">
+            <table className="w-full text-[11.5px] min-w-[420px] sm:text-[12.5px] sm:min-w-[560px]">
+              <thead>
+                <tr className="text-muted">
+                  <th className="text-left font-medium py-1 pr-2 align-bottom" rowSpan={2}>Party</th>
+                  <th className="text-center font-semibold px-2 pb-1 text-muted border-b border-white/[0.08]" colSpan={2}>Assembly · {scorecard.aeY ?? '–'}</th>
+                  <th className="text-center font-semibold px-2 pb-1 text-muted border-b border-white/[0.08]" colSpan={2}>Lok Sabha · {scorecard.geY ?? '–'}</th>
+                  <th className="text-right font-medium pl-2 align-bottom" rowSpan={2} title="Lok Sabha vote share minus Assembly vote share">LS − AE</th>
+                </tr>
+                <tr className="text-muted text-[11px] uppercase tracking-wide">
+                  <th className="text-right font-medium px-2 pb-1">Seats</th><th className="text-right font-medium px-2 pb-1">Vote%</th>
+                  <th className="text-right font-medium px-2 pb-1">Seats</th><th className="text-right font-medium px-2 pb-1">Vote%</th>
+                </tr>
+              </thead>
+              <tbody>
+                {scorecard.rows.map(r => {
+                  const gap = (r.geV != null && r.aeV != null) ? +(r.geV - r.aeV).toFixed(1) : null
+                  return (
+                    <tr key={r.p} className="border-t border-white/[0.05] hover:bg-white/[0.03] transition-colors">
+                      <td className="py-1 pr-2 whitespace-nowrap"><Dot color={colorFor(r.p, r.a)} /><b className="text-ink">{r.p}</b></td>
+                      <td className="text-right px-2 py-1 tabular-nums text-ink font-semibold">{r.aeS != null ? r.aeS : '–'}</td>
+                      <td className="text-right px-2 py-1 tabular-nums text-ink">{r.aeV != null ? r.aeV.toFixed(1) : '–'}</td>
+                      <td className="text-right px-2 py-1 tabular-nums text-ink font-semibold">{r.geS != null ? r.geS : '–'}</td>
+                      <td className="text-right px-2 py-1 tabular-nums text-ink">{r.geV != null ? r.geV.toFixed(1) : '–'}</td>
+                      <td className="text-right pl-2 tabular-nums font-semibold" style={{ color: gap == null ? 'rgb(var(--s500))' : readable(gap > 0.3 ? '#16a34a' : gap < -0.3 ? '#dc2626' : '#64748b', mode) }}>
+                        {gap == null ? '–' : (gap > 0 ? '+' : '') + gap}
+                      </td>
+                    </tr>
+                  )
+                })}
+              </tbody>
+            </table>
+          </div>
+        </ChartCard>
+      )}
+
+      {/* The two wide read-outs share a row: the colour matrix beside the candidate positions. */}
+      <div className="grid xl:grid-cols-2 gap-4 mb-4">
+      {/* Winner matrix — every constituency × every election, filled with the winning party's colour */}
+      {!allIndia && (
+        <ChartCard className="mb-4"
+          title={<>{st} deep dive · winner matrix <Info>Each row is one constituency, each column one election, and every cell is painted the winning party's colour — so a seat's entire history reads as a colour band. Switch between assembly (AC) and parliamentary (PC) seats, and search for any constituency.</Info></>}>
+          <WinnerMatrix state={st} onPick={(seat, all, arena) => setMPick({ seat, all, arena })} />
+        </ChartCard>
+      )}
+
+      {/* Candidate positions — top 5 per seat, filterable to one parliament seat */}
+      {!allIndia && (
+        <ChartCard
+          title={<>Who stood, and where they finished · {st} <Info>The top five candidates in every constituency — name, party, votes and vote share. Choose a parliament seat to narrow it to just the assembly seats inside it, and hover any candidate for the margin, deposit status and turnout behind the number.</Info></>}>
+          <PositionsTable state={st} />
+        </ChartCard>
+      )}
+      </div>
+
       {picked && <SeatDrawer seat={picked} all={rows} arena={arena} onClose={() => setPicked(null)} />}
       {mPick && <SeatDrawer seat={mPick.seat} all={mPick.all} arena={mPick.arena} onClose={() => setMPick(null)} />}
     </div>

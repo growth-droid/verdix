@@ -1,20 +1,49 @@
-import { useEffect, useMemo, useState, type CSSProperties, type ReactNode } from 'react'
+import { useEffect, useMemo, useRef, useState, type CSSProperties, type ReactNode } from 'react'
+import { createPortal } from 'react-dom'
 import ReactECharts from 'echarts-for-react'
 import { useTheme } from '../store'
 import { echartsTheme, voteSeatOption } from '../lib/theme'
 import { GLOSSARY } from '../lib/glossary'
 import { readable } from '../lib/colors'
 
-/** Hoverable ⓘ that shows a plain-language explanation. */
+/** Hoverable ⓘ that shows a plain-language explanation.
+ *  The bubble is PORTALLED to <body> and fixed-positioned, then clamped to the viewport. It used to be
+ *  an in-flow `absolute` span centred on the glyph, which pushed the document 148px wide at 390px
+ *  whenever a ⓘ sat near the right edge — an absolutely-positioned child still counts toward the
+ *  page's scroll area. Rendering nothing while closed means it can never affect layout again. */
 export function Info({ children, w = 'w-60' }: { children: ReactNode; w?: string }) {
+  const [box, setBox] = useState<{ left: number; top: number; below: boolean } | null>(null)
+  const ref = useRef<HTMLSpanElement>(null)
+
+  const place = () => {
+    const r = ref.current?.getBoundingClientRect()
+    if (!r) return
+    const W = 240, GAP = 8, PAD = 12                     // W must match the w-60 default
+    const left = Math.min(Math.max(PAD, r.left + r.width / 2 - W / 2), innerWidth - W - PAD)
+    const below = r.top < 140                            // not enough room above → flip under the glyph
+    setBox({ left, top: below ? r.bottom + GAP : r.top - GAP, below })
+  }
+
+  // any scroll or resize invalidates a fixed-position bubble, so just close it
+  useEffect(() => {
+    if (!box) return
+    const close = () => setBox(null)
+    const key = (e: KeyboardEvent) => e.key === 'Escape' && close()
+    addEventListener('scroll', close, true); addEventListener('resize', close); addEventListener('keydown', key)
+    return () => { removeEventListener('scroll', close, true); removeEventListener('resize', close); removeEventListener('keydown', key) }
+  }, [box])
+
   return (
     /* tabIndex makes the ⓘ focusable so a TAP opens the tooltip on phones (hover never fires on touch) */
-    <span tabIndex={0} className="relative inline-flex group align-middle">
+    <span ref={ref} tabIndex={0} onMouseEnter={place} onFocus={place} onMouseLeave={() => setBox(null)} onBlur={() => setBox(null)}
+      className="relative inline-flex align-middle">
       {/* ::before adds an invisible ~32px hit area around the 14px glyph without changing its visual size */}
       <span className="relative ml-1 w-3.5 h-3.5 grid place-items-center rounded-full border border-slate-400 text-[10px] leading-none text-muted cursor-help select-none font-sans font-semibold before:absolute before:-inset-[9px] before:content-['']">i</span>
-      <span className={`pointer-events-none absolute left-1/2 -translate-x-1/2 bottom-full mb-2 ${w} max-w-[calc(100vw-1.5rem)] glass p-2.5 text-[11px] leading-relaxed text-ink opacity-0 group-hover:opacity-100 group-focus-within:opacity-100 transition-opacity duration-150 z-50 normal-case tracking-normal font-normal`}>
-        {children}
-      </span>
+      {box && createPortal(
+        <span style={{ left: box.left, top: box.top, transform: box.below ? undefined : 'translateY(-100%)' }}
+          className={`pointer-events-none fixed ${w} glass p-2.5 text-[11px] leading-relaxed text-ink z-[100] normal-case tracking-normal font-normal animate-fadeUp`}>
+          {children}
+        </span>, document.body)}
     </span>
   )
 }

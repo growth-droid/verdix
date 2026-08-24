@@ -257,14 +257,14 @@ export default function ChangePage() {
       <InsightStrip items={insights} />
 
       <div className="grid lg:grid-cols-3 gap-4">
-        <div className="lg:col-span-2 min-h-[280px] sm:min-h-[360px] lg:min-h-[480px]">
+        <div className="min-w-0 lg:col-span-2 min-h-[280px] sm:min-h-[360px] lg:min-h-[480px]">
           <ChoroplethMap key={arena + (stateSel ?? 'all') + activeYear} byState={byState} arena={arena} activeYear={activeYear}
             focusState={stateSel ?? undefined}
             colorOf={colorOf} subOf={subOf} legendTitle="Seat status vs previous" legendItems={legendItems}
             height="h-full"
             onPick={seat => { if (seat) setPicked(seat) }} />
         </div>
-        <div className="flex flex-col gap-4">
+        <div className="min-w-0 flex flex-col gap-4">
           <ChartCard title="Net seat change (vs previous)" note="Click a party's bar to break its change down by state, biggest first.">
             <div className="h-[220px] sm:h-[300px]">
               <Chart option={net} style={{ height: '100%' }} notMerge onEvents={netEvents} />
