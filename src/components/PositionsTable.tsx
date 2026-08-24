@@ -130,7 +130,7 @@ export default function PositionsTable({ state }: { state: string }) {
         </div>
       )}
 
-      <div className="overflow-auto rounded-xl border border-white/[0.07] max-h-[70vh]">
+      <div className="overflow-auto rounded-xl border border-white/[0.07] max-h-[60vh] lg:max-h-[520px]">
         <table className="w-full text-xs border-separate" style={{ borderSpacing: 0 }}>
           <thead className="sticky top-0 z-20">
             <tr>
@@ -138,7 +138,7 @@ export default function PositionsTable({ state }: { state: string }) {
                 {arena === 'AE' ? 'Assembly seat' : 'Parliament seat'}
               </th>
               {[1, 2, 3, 4, 5].map(i => (
-                <th key={i} className="bg-slate-900 px-2.5 py-2 text-[10px] uppercase tracking-[0.07em] font-semibold text-muted border-b border-white/[0.09] text-left min-w-[168px]">
+                <th key={i} className="bg-slate-900 px-2.5 py-2 text-[10px] uppercase tracking-[0.07em] font-semibold text-muted border-b border-white/[0.09] text-left min-w-[150px]">
                   Position {i}
                 </th>
               ))}

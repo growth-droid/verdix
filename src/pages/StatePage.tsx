@@ -364,9 +364,13 @@ export default function StatePage() {
         </div>
       )}
 
+      {/* The two state-level read-outs sit SIDE BY SIDE: the party scorecard (who leads in each
+          arena) next to the candidate positions (who actually stood, seat by seat). Each table
+          still scrolls inside its own card, so neither is squashed at half width. */}
+      <div className="grid lg:grid-cols-2 gap-4 mb-4">
       {/* State scorecard — Assembly + Lok Sabha side by side (the "both arenas at one place" view) */}
       {!allIndia && scorecard && (
-        <ChartCard className="mb-4"
+        <ChartCard
           title={<>State scorecard · Assembly {scorecard.aeY ?? '–'} vs Lok Sabha {scorecard.geY ?? '–'} <Info>Each party's most recent Assembly result beside its most recent Lok Sabha result in {st} — seats and vote share in BOTH arenas at once, whatever the toggle above is set to. The “LS − AE” gap exposes split-ticket voting: many people back a national party for Parliament and a regional one for the Assembly.</Info></>}
           note={`${st}: latest Assembly (${scorecard.aeY ?? '–'} · ${scorecard.aeTot} seats) beside latest Lok Sabha (${scorecard.geY ?? '–'} · ${scorecard.geTot} seats). “LS − AE” = Lok Sabha vote share minus Assembly vote share (＋ green = the party runs stronger nationally than in the state).`}>
           {scorecard.aeLead && scorecard.geLead && (
@@ -412,19 +416,21 @@ export default function StatePage() {
         </ChartCard>
       )}
 
+      {/* Candidate positions — top 5 per seat, filterable to one parliament seat */}
+      {!allIndia && (
+        <ChartCard
+          title={<>Who stood, and where they finished · {st} <Info>The top five candidates in every constituency — name, party, votes and vote share. Choose a parliament seat to narrow it to just the assembly seats inside it, and hover any candidate for the margin, deposit status and turnout behind the number.</Info></>}>
+          <PositionsTable state={st} />
+        </ChartCard>
+      )}
+
+      </div>
+
       {/* Winner matrix — every constituency × every election, filled with the winning party's colour */}
       {!allIndia && (
         <ChartCard className="mb-4"
           title={<>{st} deep dive · winner matrix <Info>Each row is one constituency, each column one election, and every cell is painted the winning party's colour — so a seat's entire history reads as a colour band. Switch between assembly (AC) and parliamentary (PC) seats, and search for any constituency.</Info></>}>
           <WinnerMatrix state={st} onPick={(seat, all, arena) => setMPick({ seat, all, arena })} />
-        </ChartCard>
-      )}
-
-      {/* Candidate positions — top 5 per seat, filterable to one parliament seat */}
-      {!allIndia && (
-        <ChartCard className="mb-4"
-          title={<>Who stood, and where they finished · {st} <Info>The top five candidates in every constituency — name, party, votes and vote share. Choose a parliament seat to narrow it to just the assembly seats inside it, and hover any candidate for the margin, deposit status and turnout behind the number.</Info></>}>
-          <PositionsTable state={st} />
         </ChartCard>
       )}
 

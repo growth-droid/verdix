@@ -63,8 +63,8 @@ export function Chart({ option, h, style, notMerge = true, onEvents }: { option:
 export function ChartCard({ title, children, note, className = '' }:
   { title: ReactNode; children: ReactNode; note?: ReactNode; className?: string }) {
   return (
-    <div className={`card p-3.5 ${className}`}>
-      <h3 className="text-[12.5px] font-semibold mb-2 text-slate-200 tracking-tight">{title}</h3>
+    <div className={`card p-3.5 flex flex-col ${className}`}>
+      <h3 className="text-[12.5px] font-semibold mb-2 text-slate-200 tracking-tight shrink-0">{title}</h3>
       {children}
       {note && <p className="mt-2 text-[11px] text-slate-400 leading-snug border-t border-white/[0.05] pt-2">{note}</p>}
     </div>
