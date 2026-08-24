@@ -13,6 +13,19 @@ is and how to run it.
 
 ---
 
+## 2026-08-12 — Winner matrix: a state's whole electoral history in one grid
+- **New on the States page: a deep dive that paints every result.** One row per constituency, one
+  column per election, and **every cell filled with the winning party's colour** — so a seat's entire
+  history reads as a colour band at a glance. An unbroken band is a fortress; alternating colours mark
+  a swing seat.
+- **Two views.** *Assembly (AC)* puts each seat's own assembly results **next to the Lok Sabha result
+  measured inside the same area**, so split-ticket voting jumps out on a single row. *Parliament (PC)*
+  shows each parliamentary seat's own results plus a roll-up of which party won the most assembly
+  seats inside it.
+- **Search any constituency** by name or number, and click any cell for that seat's full briefing.
+- Elections on an older constituency map (pre-2008 delimitation) are left out rather than joined to
+  today's seats — the rows would not be the same places.
+
 ## 2026-08-11 — Works like an app on your phone, and everything is readable
 - **Mobile.** The dashboard is now built for a phone: a **bottom tab bar** (Results · Analysis ·
   Strategy) sits in thumb reach and opens a sheet listing that group's pages, the header shrinks to

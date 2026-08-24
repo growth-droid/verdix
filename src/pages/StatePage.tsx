@@ -8,6 +8,7 @@ import { colorFor, ALLIANCE_COLORS, readable, inkOn } from '../lib/colors'
 import { useFilters, useTheme } from '../store'
 import ChoroplethMap from '../components/ChoroplethMap'
 import SeatDrawer from '../components/SeatDrawer'
+import WinnerMatrix from '../components/WinnerMatrix'
 import { Chart, ChartCard, Dot, Info, Seg, Select, SortTable, StickyControls, VoteSeatChart, type Col } from '../components/ui'
 import { baseOpt, catAxis, valAxis, pctFmt, AXIS, MUTED } from '../lib/theme'
 import { comparableAE } from '../lib/joins'
@@ -32,6 +33,8 @@ export default function StatePage() {
   const [battleSel, setBattleSel] = useState<{ a: string; b: string } | null>(null)   // close-seat matchup → filters the table
   const [contestSel, setContestSel] = useState<{ w: string; r: string } | null>(null)  // "who beats whom" cell → seat list
   const [picked, setPicked] = useState<Seat | null>(null)  // clicked seat → constituency report drawer
+  // the winner matrix can open a seat from EITHER arena, so it carries its own rows + arena
+  const [mPick, setMPick] = useState<{ seat: Seat; all: Seat[]; arena: 'AE' | 'GE' } | null>(null)
   useEffect(() => { loadSeats(arena).then(setRows) }, [arena])
   useEffect(() => {
     loadPartyAE().then(setPartyAE); loadPartyGEState().then(setPartyGE); loadPartyGENat().then(setNatGE)
@@ -408,6 +411,14 @@ export default function StatePage() {
         </ChartCard>
       )}
 
+      {/* Winner matrix — every constituency × every election, filled with the winning party's colour */}
+      {!allIndia && (
+        <ChartCard className="mb-4"
+          title={<>{st} deep dive · winner matrix <Info>Each row is one constituency, each column one election, and every cell is painted the winning party's colour — so a seat's entire history reads as a colour band. Switch between assembly (AC) and parliamentary (PC) seats, and search for any constituency.</Info></>}>
+          <WinnerMatrix state={st} onPick={(seat, all, arena) => setMPick({ seat, all, arena })} />
+        </ChartCard>
+      )}
+
       {/* Big seat map on the left; swing + strongholds stacked on the right (map stretches to match) */}
       {allIndia ? (
         <ChartCard className="mb-4" title={`Seat map · All India · ${vy}`}>
@@ -640,6 +651,7 @@ export default function StatePage() {
         </ChartCard>
       </div>
       {picked && <SeatDrawer seat={picked} all={rows} arena={arena} onClose={() => setPicked(null)} />}
+      {mPick && <SeatDrawer seat={mPick.seat} all={mPick.all} arena={mPick.arena} onClose={() => setMPick(null)} />}
     </div>
   )
 }
