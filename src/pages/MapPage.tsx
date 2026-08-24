@@ -5,7 +5,8 @@ import { colorFor, ALLIANCE_COLORS } from '../lib/colors'
 import { useFilters, useTheme } from '../store'
 import ChoroplethMap, { type MapMode } from '../components/ChoroplethMap'
 import SeatDrawer from '../components/SeatDrawer'
-import { Chart, Info, KPI, Seg, Select, Skeleton, StickyControls } from '../components/ui'
+import StatesAtAGlance from '../components/StatesAtAGlance'
+import { Chart, ChartCard, Info, KPI, Seg, Select, Skeleton, StickyControls } from '../components/ui'
 import { activeByState, seatChanges, allianceBase } from '../lib/analysis'
 import { baseOpt, catAxis, valAxis, labelColor } from '../lib/theme'
 import { useIsPhone } from '../lib/useMedia'
@@ -298,6 +299,14 @@ export default function MapPage() {
             </div>
           </div>
         </div>
+      )}
+
+      {/* The macro picture: every state, who leads it and by how much */}
+      {!!active.length && (
+        <ChartCard className="mt-4"
+          title={<>Every state at a glance · {arena === 'AE' ? 'assembly' : 'Lok Sabha'} <Info>The national counterpart to a state's own deep dive: each state's most recent election on or before the selected year, who leads it, whether that is a majority, and how many seats are close enough to change hands. Hover a row for the arithmetic; click to open the state.</Info></>}>
+          <StatesAtAGlance rows={active} arena={arena} year={activeYear} />
+        </ChartCard>
       )}
 
       {picked && <SeatDrawer seat={picked} all={rows} arena={arena} onClose={() => setPicked(null)} />}

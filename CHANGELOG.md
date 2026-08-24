@@ -13,6 +13,19 @@ is and how to run it.
 
 ---
 
+## 2026-08-12 — Who stood and where they finished + every state at a glance
+- **Candidate positions, on the States page.** Every constituency now lists its **top five
+  candidates** — name, party, votes and vote share — the way a results sheet does. Pick a
+  **parliament seat** and it narrows to just the assembly seats inside it (e.g. Vijayawada's seven),
+  or search for any seat by name or number.
+- **Hover anything for the insight behind the number.** A candidate tells you the margin they won or
+  lost by in votes *and* percent, whether they saved their deposit, and the seat's turnout.
+- **A macro picture on National: every state at a glance.** One row per state — who leads it, a bar
+  showing how much of the house they hold, whether that clears a majority, how many seats were
+  decided by under 5%, and turnout. Hovering gives the majority arithmetic in words ("BJP holds 255
+  of 403 — a majority, needs 202; 144 ahead of SP"), and clicking opens that state in depth.
+- By-elections are excluded from the candidate tables — those live in the Bypolls module.
+
 ## 2026-08-12 — Winner matrix: a state's whole electoral history in one grid
 - **New on the States page: a deep dive that paints every result.** One row per constituency, one
   column per election, and **every cell filled with the winning party's colour** — so a seat's entire

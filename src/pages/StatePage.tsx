@@ -9,6 +9,7 @@ import { useFilters, useTheme } from '../store'
 import ChoroplethMap from '../components/ChoroplethMap'
 import SeatDrawer from '../components/SeatDrawer'
 import WinnerMatrix from '../components/WinnerMatrix'
+import PositionsTable from '../components/PositionsTable'
 import { Chart, ChartCard, Dot, Info, Seg, Select, SortTable, StickyControls, VoteSeatChart, type Col } from '../components/ui'
 import { baseOpt, catAxis, valAxis, pctFmt, AXIS, MUTED } from '../lib/theme'
 import { comparableAE } from '../lib/joins'
@@ -416,6 +417,14 @@ export default function StatePage() {
         <ChartCard className="mb-4"
           title={<>{st} deep dive · winner matrix <Info>Each row is one constituency, each column one election, and every cell is painted the winning party's colour — so a seat's entire history reads as a colour band. Switch between assembly (AC) and parliamentary (PC) seats, and search for any constituency.</Info></>}>
           <WinnerMatrix state={st} onPick={(seat, all, arena) => setMPick({ seat, all, arena })} />
+        </ChartCard>
+      )}
+
+      {/* Candidate positions — top 5 per seat, filterable to one parliament seat */}
+      {!allIndia && (
+        <ChartCard className="mb-4"
+          title={<>Who stood, and where they finished · {st} <Info>The top five candidates in every constituency — name, party, votes and vote share. Choose a parliament seat to narrow it to just the assembly seats inside it, and hover any candidate for the margin, deposit status and turnout behind the number.</Info></>}>
+          <PositionsTable state={st} />
         </ChartCard>
       )}
 

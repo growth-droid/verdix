@@ -88,6 +88,15 @@ export const loadSplit = (geYear: number, state: string) => getJSON<SplitFile>(`
 // per-state AE segment-share baselines, keyed { ae_year: { "segDom|party": share } } — lets the
 // Compare deep-dive follow the assembly-year picker instead of the split file's fixed nearest-AE.
 export const loadAESegShares = (state: string) => getJSON<Record<string, Record<string, number>>>(`/data/split/ae_${slug(state)}.json`)
+// ── Top-5 candidates per seat (built by tools/build_candidates.py, one file per state) ──
+// Lazy: only the state being viewed is fetched. [candidate, party, votes, share%]
+export type CandRow = [string, string, number | null, number | null]
+export type CandSeat = { n: string; r: string | null; t: number | null; vv: number | null; c: CandRow[] }
+export type CandFile = { AE: Record<string, Record<string, CandSeat>>; GE: Record<string, Record<string, CandSeat>> }
+const candSlug = (s: string) => s.toLowerCase().replace(/[^a-z0-9]+/g, '_').replace(/^_|_$/g, '')
+export const loadCandidates = (state: string) =>
+  getJSON<CandFile>(`/data/cand/${candSlug(state)}.json`).catch(() => null)
+
 export const loadACGeo = () => getJSON<GeoJSON.FeatureCollection>('/geo/india_ac_simplified.geojson')
 export const loadPCGeo = () => getJSON<GeoJSON.FeatureCollection>('/geo/india_pc_2019_simplified.geojson')
 export const loadStateBorders = () => getJSON<GeoJSON.FeatureCollection>('/geo/india_states_borders.geojson')
