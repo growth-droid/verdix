@@ -161,6 +161,13 @@
   }
   /* same reasoning for the chart wrapper — never let a canvas dictate page width */
   .echarts-for-react { max-width: 100%; }
+  /* PositionsTable — every cell paints its own party fill, so a row-level background wash can no
+     longer show through it. Row tracking (needed across five columns at 175 rows) and the per-cell
+     hover affordance are drawn as OUTLINES instead: out of flow, zero layout cost, no collision
+     with the cell's inset party rail, and theme-aware through the --s50 ramp. */
+  .pos-row:hover > td,
+  .pos-row:hover > th { outline: 1px solid rgb(var(--s50) / 0.30); outline-offset: -1px; }
+  td.pos-cell:hover   { outline: 2px solid rgb(var(--s50) / 0.60); outline-offset: -2px; }
   .card:hover { border-color: var(--card-border-hover); box-shadow: var(--card-hover-shadow); }
   .glass {
     border-radius: 0.85rem;
