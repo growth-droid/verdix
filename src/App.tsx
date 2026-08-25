@@ -10,7 +10,7 @@ import BypollsPage from './pages/BypollsPage'
 import BattlegroundPage from './pages/BattlegroundPage'
 import AdminPage from './pages/AdminPage'
 import FilterBar from './components/FilterBar'
-import NavMenu from './components/NavMenu'
+import SideNav from './components/SideNav'
 import MobileNav from './components/MobileNav'
 import AccountMenu from './components/AccountMenu'
 import ThemeToggle from './components/ThemeToggle'
@@ -40,16 +40,19 @@ export default function App() {
           Verdix
           <span className="font-quote italic hidden xl:inline text-[13px] font-medium tracking-wide text-gold/80">voter verdict intelligence</span>
         </h1>
-        {/* nav sits centre → right (desktop); phones get the bottom tab bar instead */}
-        <div className="hidden lg:flex ml-auto"><NavMenu /></div>
-        <div className="ml-auto lg:ml-3 shrink-0 flex items-center gap-2">
+        {/* modules live in the left rail (SideNav) now, not in the header */}
+        <div className="ml-auto shrink-0 flex items-center gap-2">
           <ThemeToggle />
           <AccountMenu />
         </div>
       </header>
       {isModulePage && <FilterBar />}
      </div>
-      <main className="flex-1 w-full mx-auto px-3 sm:px-5 py-3 sm:py-4 pb-24 lg:pb-6 max-w-[1720px]">
+      {/* rail + content. min-w-0 on <main> is load-bearing: it is a flex child, so without it a wide
+          table inside would stretch the whole document instead of scrolling in its own card. */}
+      <div className="flex-1 w-full mx-auto max-w-[1720px] flex items-start">
+      <SideNav />
+      <main className="flex-1 min-w-0 px-3 sm:px-5 py-3 sm:py-4 pb-24 lg:pb-6">
         {isModulePage && <PageTagline />}
         <ErrorBoundary resetKey={loc.pathname}>
           <div key={loc.pathname} className="animate-fadeUp">
@@ -70,6 +73,7 @@ export default function App() {
         </ErrorBoundary>
         {isModulePage && <JourneyNav />}
       </main>
+      </div>
       <MobileNav />
     </div>
   )

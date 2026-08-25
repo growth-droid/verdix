@@ -9,16 +9,24 @@
 //  • PC (parliamentary constituencies) — Lok Sabha results (direct), plus an Assembly ROLL-UP
 //    column per AE year (the party that won the most assembly seats inside that PC).
 import { useEffect, useMemo, useState } from 'react'
-import { loadSeats, loadSegments, type Seat, type Segment } from '../lib/data'
+import { loadCandidates, loadSeats, loadSegments, type CandFile, type Seat, type Segment } from '../lib/data'
 import { colorFor, inkOn } from '../lib/colors'
 import { comparableAE } from '../lib/joins'
 import { useTheme } from '../store'
 import { Info, Seg } from './ui'
 
 const tc = (s: string | null) => (s ? s.toLowerCase().replace(/(^|[\s(\-./])([a-z])/g, (_, a: string, b: string) => a + b.toUpperCase()) : '–')
-const norm = (s: string) => (s || '').toUpperCase().replace(/[^A-Z0-9]/g, '')
+// Reservation suffixes vary between the seat tables and segments.json — "ARAKU (ST)" and "ARAKU"
+// are one seat, and not stripping the suffix silently dropped their segment joins.
+const norm = (s: string) =>
+  (s || '').toUpperCase().replace(/\s*\((?:SC|ST|GEN)\)\s*$/, '').replace(/[^A-Z0-9]/g, '')
 
-type Cell = { p: string; a: string | null; v: number | null; m: number | null; seat?: Seat } | null
+// `won`/`of` = seats (or segments) the party led inside this parliamentary seat, so a roll-up cell
+// and a Lok Sabha cell both read party -> seats won -> vote share -> lead over the next party.
+type Cell = {
+  p: string; a: string | null; v: number | null; m: number | null; seat?: Seat
+  won?: number; of?: number; unit?: 'seats' | 'segments'; vs?: string | null
+} | null
 type Col = { key: string; year: number; arena: 'AE' | 'GE'; rollup?: boolean }
 type Row = { no: number; name: string; cells: Cell[] }
 
@@ -38,10 +46,15 @@ export default function WinnerMatrix({ state, onPick }: { state: string; onPick?
   const [ae, setAe] = useState<Seat[]>([])
   const [ge, setGe] = useState<Seat[]>([])
   const [seg, setSeg] = useState<Segment[]>([])
+  const [cand, setCand] = useState<CandFile | null>(null)
   const [view, setView] = useState<'AC' | 'PC'>('AC')
   const [q, setQ] = useState('')
 
   useEffect(() => { loadSeats('AE').then(setAe); loadSeats('GE').then(setGe); loadSegments().then(setSeg) }, [])
+  // Candidate lists give a per-party vote share per assembly seat, which is what lets a roll-up cell
+  // report the leader's vote share across the PC rather than only how many seats it won. Already
+  // cached by the positions table on the same page, so this is usually free.
+  useEffect(() => { setCand(null); loadCandidates(state).then(setCand) }, [state])
 
   const mine = useMemo(() => ({
     ae: ae.filter(r => r.s === state),
@@ -123,6 +136,53 @@ export default function WinnerMatrix({ state, onPick }: { state: string; onPick?
       return { p, a: raw.a?.get(p) ?? null, won, of }
     }
 
+    // Which assembly seats sit inside each PC, PER YEAR. Keyed by year because AC NUMBERING is not
+    // stable: undivided Andhra numbered its assembly seats 1-294 and the post-2014 state numbers its
+    // own 1-175, so a list built from the latest year finds only 56 of 175 seats in 2009.
+    // The AC -> PC link itself is by NAME, which survives renumbering.
+    const acsOfPc = new Map<string, { no: number; name: string }[]>()
+    A.forEach(r => {
+      const pc = pcOfAc.get(norm(r.c)); if (!pc) return
+      const k = `${pc}|${r.y}`
+      const list = acsOfPc.get(k) ?? []; list.push({ no: r.n, name: r.c }); acsOfPc.set(k, list)
+    })
+    // Leader's MEAN vote share across the PC's assembly segments, and its lead over the next party.
+    // Assembly seats inside a PC are drawn to be near-equal in population, so an unweighted mean is
+    // a fair reading; per-seat electorate weights are not in the extracts.
+    const shareOf = (pc: string, y: number, party: string) => {
+      const acs = acsOfPc.get(`${pc}|${y}`)
+      const bucket = cand?.AE?.[String(y)]
+      if (!acs?.length || !bucket) return { v: null as number | null, m: null as number | null, vs: null as string | null }
+      const sums = new Map<string, number>()
+      let counted = 0
+      for (const ac of acs) {
+        const seat = bucket[String(ac.no)]
+        if (!seat) continue
+        counted++
+        for (const c of seat.c) if (c[3] != null) sums.set(c[1], (sums.get(c[1]) ?? 0) + c[3])
+      }
+      if (!counted) return { v: null, m: null, vs: null }
+      const mean = [...sums.entries()].map(([p2, t]) => [p2, t / counted] as const).sort((x, z) => z[1] - x[1])
+      const own = mean.find(x => x[0] === party)
+      if (!own) return { v: null, m: null, vs: null }
+      const next = mean.find(x => x[0] !== party)
+      // Can be NEGATIVE, and that is the interesting case: the party won the most SEATS here while
+      // polling fewer votes than a rival — efficient conversion. Keep the sign, name the rival.
+      return { v: own[1], m: next ? own[1] - next[1] : null, vs: next ? next[0] : null }
+    }
+    // How many of a PC's assembly segments a party led in a given Lok Sabha election.
+    // Match on NAME first, then on PC NUMBER — neither key is reliable on its own: names drift
+    // between years ("ARUKU" in 2009-19 vs "ARAKU" in 2024) and numbers shift when a state splits
+    // (Andhra's 2009/2014 rows still carry undivided-AP numbering, overlapping today's by 56/175).
+    // When BOTH fail we return null rather than guess, which is the correct answer for those
+    // pre-split rows: they belong to a different map and must not join to today's seats.
+    const segLed = (pcName: string, pcNo: number, y: number, party: string) => {
+      let rows2 = S.filter(r => r.y === y && norm(r.pcn) === norm(pcName))
+      if (!rows2.length) rows2 = S.filter(r => r.y === y && r.pc === pcNo)
+      if (!rows2.length) return null
+      return { won: rows2.filter(r => r.p === party).length, of: rows2.length }
+    }
+
     const latest = geYears[0]
     const rows: Row[] = G.filter(r => r.y === latest).sort((a, b) => a.n - b.n).map(r => ({
       no: r.n,
@@ -130,14 +190,18 @@ export default function WinnerMatrix({ state, onPick }: { state: string; onPick?
       cells: cols.map(c => {
         if (c.arena === 'GE') {
           const s = byJ.get(r.j)?.get(c.year)
-          return s ? { p: s.p, a: s.a, v: s.v, m: s.m, seat: s } : null
+          if (!s) return null
+          const sl = segLed(r.c, r.n, c.year, s.p)
+          return { p: s.p, a: s.a, v: s.v, m: s.m, seat: s, won: sl?.won, of: sl?.of, unit: 'segments' as const }
         }
         const l = leaderOf(norm(r.c), c.year)
-        return l ? { p: l.p, a: l.a, v: null, m: null, seat: undefined, ...{ won: l.won, of: l.of } } as Cell : null
+        if (!l) return null
+        const sh = shareOf(norm(r.c), c.year, l.p)
+        return { p: l.p, a: l.a, v: sh.v, m: sh.m, vs: sh.vs, seat: undefined, won: l.won, of: l.of, unit: 'seats' as const }
       }),
     }))
     return prune(cols, rows)
-  }, [mine, state])
+  }, [mine, state, cand])
 
   const data = view === 'AC' ? acData : pcData
   const shown = useMemo(() => {
@@ -204,18 +268,35 @@ export default function WinnerMatrix({ state, onPick }: { state: string; onPick?
                   const bg = colorFor(cell.p, cell.a)
                   const ink = inkOn(bg, 1, mode)
                   const clickable = !!(cell.seat && onPick)
-                  const rollup = cell as unknown as { won?: number; of?: number }
+                  const isRoll = cell.unit === 'seats'
+                  // Both kinds of cell now read the same way: party -> how much of the seat it took
+                  // -> vote share -> lead over the next party.
+                  const tip = `${r.name} · ${data.cols[i].year} ${data.cols[i].arena === 'GE' ? 'Lok Sabha' : 'Assembly'} — ${cell.p}`
+                    + (cell.won != null ? `, led ${cell.won} of ${cell.of} assembly ${cell.unit === 'segments' ? 'segments' : 'seats'} here` : '')
+                    + (cell.v != null ? `, ${cell.v.toFixed(1)}% ${isRoll ? 'average vote share across those segments' : 'of the vote'}` : '')
+                    + (cell.m != null
+                        ? isRoll
+                          ? (cell.m >= 0
+                              ? `, ${cell.m.toFixed(1)} clear of ${cell.vs ?? 'the next party'}`
+                              : `, ${Math.abs(cell.m).toFixed(1)} BEHIND ${cell.vs ?? 'the next party'} on votes — it won more seats on fewer votes`)
+                          : `, +${cell.m.toFixed(1)} winning margin`
+                        : '')
+                    + (clickable ? ' (click for the full briefing)' : '')
                   return (
                     <td key={i}
                       onClick={clickable ? () => onPick!(cell.seat!, view === 'AC' ? mine.ae : mine.ge, view === 'AC' ? 'AE' : 'GE') : undefined}
-                      title={`${r.name} · ${data.cols[i].year} ${data.cols[i].arena === 'GE' ? 'Lok Sabha' : 'Assembly'} — won by ${cell.p}${clickable ? ' (click for the full briefing)' : ''}`}
+                      title={tip}
                       className={`rounded-md px-2 py-1.5 align-middle min-w-[104px] transition-shadow ${clickable ? 'cursor-pointer hover:ring-2 hover:ring-white/70' : ''}`}
                       style={{ background: bg, color: ink }}>
                       <div className="font-bold text-[12px] leading-none truncate">{cell.p}</div>
+                      {cell.won != null && (
+                        <div className="text-[10px] leading-none mt-1 tabular-nums font-semibold">
+                          {cell.won}/{cell.of} {cell.unit === 'segments' ? 'seg' : 'seats'}
+                        </div>
+                      )}
                       <div className="text-[10px] leading-none mt-1 tabular-nums" style={{ opacity: 0.85 }}>
-                        {rollup.won != null
-                          ? `${rollup.won}/${rollup.of} seats`
-                          : <>{cell.v != null ? `${cell.v.toFixed(1)}%` : '–'}{cell.m != null ? <> · <span title="winning margin">+{cell.m.toFixed(1)}</span></> : null}</>}
+                        {cell.v != null ? `${cell.v.toFixed(1)}%` : '–'}
+                        {cell.m != null ? <> · <span>{cell.m >= 0 ? '+' : ''}{cell.m.toFixed(1)}</span></> : null}
                       </div>
                     </td>
                   )
@@ -231,7 +312,7 @@ export default function WinnerMatrix({ state, onPick }: { state: string; onPick?
         Every cell is filled with the <b className="text-ink">winning party's colour</b> — read a row left-to-right to see a seat's whole history: an unbroken colour band is a fortress, alternating colours mark a swing seat.
         {view === 'AC'
           ? <> Assembly columns are that seat's own result; <b className="text-ink">LS · segment</b> columns are the Lok Sabha result measured <i>inside</i> the same area, so a row that changes colour between them is split-ticket voting. Click any Assembly cell for the full constituency briefing.</>
-          : <> Lok Sabha columns are the seat's own result; <b className="text-ink">AE · roll-up</b> columns show which party won the most assembly seats inside that parliamentary seat. Click any Lok Sabha cell for the full briefing.</>}
+          : <> Lok Sabha columns are the seat's own result — the party, how many of the seat's <b className="text-ink">assembly segments</b> it led, its vote share and its winning margin. <b className="text-ink">AE · roll-up</b> columns read the same way for the assembly election: the party that won the most assembly seats inside that parliamentary seat, how many it won, its average vote share across those segments and how far clear of the next party that put it. Click any Lok Sabha cell for the full briefing.</>}
         {' '}Second line = winner's vote share and margin. <Info>Margins and shares are percentages of votes polled. Segment figures come from assembly-segment results published with each Lok Sabha election (GE-2024 segment votes are EVM-only).</Info>
       </p>
     </div>
