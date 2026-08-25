@@ -5,7 +5,7 @@
 // Data: public/data/cand/<state>.json (tools/build_candidates.py), lazy-loaded per state.
 // The AC→PC mapping comes from segments.json, so "show me the assemblies inside Vijayawada" works.
 import { useEffect, useMemo, useRef, useState } from 'react'
-import { loadCandidates, loadSegments, type CandFile, type CandSeat, type Segment } from '../lib/data'
+import { loadCandidates, loadSeats, loadSegments, type CandFile, type CandSeat, type Segment } from '../lib/data'
 import { colorFor, inkOn, readable } from '../lib/colors'
 import { useTheme, type Theme } from '../store'
 import { Info, Seg, Select } from './ui'
@@ -51,6 +51,8 @@ export default function PositionsTable({ state }: { state: string }) {
   const mode = useTheme()
   const [file, setFile] = useState<CandFile | null>(null)
   const [seg, setSeg] = useState<Segment[]>([])
+  // Every election the APP holds for this state, whether or not candidate lists exist for it.
+  const [heldYears, setHeldYears] = useState<Record<'AE' | 'GE', number[]>>({ AE: [], GE: [] })
   const [arena, setArena] = useState<'AE' | 'GE'>('AE')
   const [year, setYear] = useState<string>('')
   const [pc, setPc] = useState<string>(ALL)
@@ -60,9 +62,45 @@ export default function PositionsTable({ state }: { state: string }) {
 
   useEffect(() => { setFile(null); loadCandidates(state).then(setFile) }, [state])
   useEffect(() => { loadSegments().then(setSeg) }, [])
+  useEffect(() => {
+    let live = true
+    Promise.all([loadSeats('AE'), loadSeats('GE')]).then(([ae, ge]) => {
+      if (!live) return
+      const yrs = (rows: { s: string; y: number }[]) =>
+        [...new Set(rows.filter(r => r.s === state).map(r => r.y))].sort((a, b) => b - a)
+      setHeldYears({ AE: yrs(ae), GE: yrs(ge) })
+    })
+    return () => { live = false }
+  }, [state])
 
-  const years = useMemo(() => Object.keys(file?.[arena] ?? {}).sort((a, b) => +b - +a), [file, arena])
-  useEffect(() => { if (years.length && !years.includes(year)) setYear(years[0]) }, [years, year])
+  // Candidate lists exist for most but not all elections — the ECI has not published full candidate
+  // tables for 16 of the recent ones. Offer EVERY election the app holds and mark the ones with no
+  // candidate list, rather than silently dropping them from the picker and leaving the reader to
+  // wonder where the year went.
+  const withCands = useMemo(() => new Set(Object.keys(file?.[arena] ?? {})), [file, arena])
+  const years = useMemo(() => {
+    const held = heldYears[arena].map(String)
+    const all = held.length ? held : [...withCands]
+    return [...new Set([...all, ...withCands])].sort((a, b) => +b - +a)
+  }, [heldYears, arena, withCands])
+  // Open on the most recent year that actually HAS candidates — but only when the reader has not
+  // chosen one. Re-picking whenever the current year lacks candidates would bounce them straight
+  // back out of any "winners only" year they deliberately selected, so the explanation below could
+  // never be seen. Reset only when the year is not offered at all, or the state/arena changed.
+  const pickedFor = useRef<string>('')
+  useEffect(() => {
+    // Wait for the candidate file. seats_*.json is usually already cached by the page, so it lands
+    // first — picking before `withCands` is populated finalised the choice on a year with no
+    // candidates and then held it there, which is how every gap state opened on its empty year.
+    if (!file || !years.length) return
+    const scope = `${state}|${arena}`
+    if (pickedFor.current === scope && years.includes(year)) return
+    pickedFor.current = scope
+    setYear(years.find(y => withCands.has(y)) ?? years[0])
+  }, [file, years, year, withCands, state, arena])
+  const yearOptions = useMemo(
+    () => years.map(y => (withCands.has(y) ? y : { v: y, label: `${y} · winners only` })),
+    [years, withCands])
 
   // AC → PC name, from the most recent segment year we hold for this state
   const pcOfAc = useMemo(() => {
@@ -147,7 +185,7 @@ export default function PositionsTable({ state }: { state: string }) {
         <Seg options={[{ v: 'AE', label: 'Assembly' }, { v: 'GE', label: 'Lok Sabha' }]} value={arena} onChange={v => setArena(v as 'AE' | 'GE')} />
         <div className="flex items-center gap-2 text-xs text-muted">
           <span className="hidden sm:inline">Election</span>
-          <Select value={year} onChange={setYear} options={years} width="w-24" />
+          <Select value={year} onChange={setYear} options={yearOptions} width="w-24 sm:w-36" />
         </div>
         {arena === 'AE' && pcList.length > 1 && (
           <div className="flex items-center gap-2 text-xs text-muted min-w-0">
@@ -169,8 +207,30 @@ export default function PositionsTable({ state }: { state: string }) {
         </div>
       )}
 
+      {/* A year the app HOLDS but has no candidate list for. Say so where the reader is looking,
+          instead of the year quietly vanishing from the picker. */}
+      {!withCands.has(year) && (
+        <div className="rounded-xl border border-white/[0.09] bg-slate-950/40 p-4 text-[12.5px] leading-relaxed">
+          <div className="font-semibold text-ink mb-1">
+            No candidate list published for {state} {year}{arena === 'AE' ? ' · Assembly' : ' · Lok Sabha'}
+          </div>
+          <p className="text-muted">
+            This election is fully covered everywhere else in Verdix — the winner, party, vote share and margin
+            for every seat are in the winner matrix above and on the seat map. What the ECI has not released is
+            the <b className="text-ink">full candidate table</b> — the also-rans and their votes — which is what
+            this view is built from. Pick another year below, or read this election on the winner matrix.
+          </p>
+          {years.some(y => withCands.has(y)) && (
+            <button onClick={() => setYear(years.find(y => withCands.has(y))!)}
+              className="mt-2.5 btn-gold text-[12px] px-3 py-1.5 rounded-lg">
+              Show {years.find(y => withCands.has(y))} instead
+            </button>
+          )}
+        </div>
+      )}
+
       {/* Reads the ramp back in a colour already on screen: "this is what TDP looks like at each position". */}
-      <div className="mb-2 flex items-center gap-1.5 flex-wrap text-[10px] text-muted">
+      {withCands.has(year) && <div className="mb-2 flex items-center gap-1.5 flex-wrap text-[10px] text-muted">
         <span className="uppercase tracking-[0.07em] font-semibold text-ink shrink-0">Fill = party</span>
         {[0, 1, 2, 3, 4].map(i => {
           const col = colorFor(keyParty), t = TIERS[i]
@@ -186,9 +246,9 @@ export default function PositionsTable({ state }: { state: string }) {
           )
         })}
         <span className="min-w-0">— depth of colour = where they finished; the rule near a cell's bottom is that candidate's vote share.</span>
-      </div>
+      </div>}
 
-      <div className="overflow-auto rounded-xl border border-white/[0.07] max-h-[60vh] lg:max-h-[560px]">
+      {withCands.has(year) && <div className="overflow-auto rounded-xl border border-white/[0.07] max-h-[60vh] lg:max-h-[560px]">
         <table className="w-full text-xs border-separate" style={{ borderSpacing: 0 }}>
           <thead className="sticky top-0 z-20">
             <tr>
@@ -277,7 +337,7 @@ export default function PositionsTable({ state }: { state: string }) {
           </tbody>
         </table>
         {!rows.length && <div className="py-10 text-center text-muted text-xs">No seat matches “{q}”.</div>}
-      </div>
+      </div>}
 
       {/* hover insight */}
       {hover && (

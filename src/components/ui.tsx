@@ -242,14 +242,20 @@ export function Seg({ options, value, onChange }: { options: readonly { v: strin
   )
 }
 
+/** Options are plain strings, or `{v, label}` when the VALUE and what the user reads differ —
+ *  e.g. a year that exists but has no candidate list behind it, labelled so the absence is visible
+ *  in the picker rather than the year silently going missing from it. */
+export type Option = string | { v: string; label: string }
 export function Select({ value, onChange, options, width = 'w-48' }:
-  { value: string; onChange: (v: string) => void; options: string[]; width?: string }) {
+  { value: string; onChange: (v: string) => void; options: Option[]; width?: string }) {
   return (
     <div className={`relative inline-block align-middle ${width}`}>
       {/* text-[16px] on phones keeps iOS Safari from zooming the viewport when the native picker opens */}
       <select value={value} onChange={e => onChange(e.target.value)}
         className="w-full appearance-none bg-slate-950/60 border border-white/[0.09] rounded-lg pl-3 pr-8 py-2 sm:py-1.5 min-h-[34px] sm:min-h-0 text-[16px] sm:text-[13px] hover:border-white/20 focus:border-gold/50 outline-none transition-colors cursor-pointer">
-        {options.map(o => <option key={o} className="bg-slate-900 text-ink">{o}</option>)}
+        {options.map(o => typeof o === 'string'
+          ? <option key={o} value={o} className="bg-slate-900 text-ink">{o}</option>
+          : <option key={o.v} value={o.v} className="bg-slate-900 text-ink">{o.label}</option>)}
       </select>
       <svg className="absolute right-2.5 top-1/2 -translate-y-1/2 text-faint pointer-events-none" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M6 9l6 6 6-6" /></svg>
     </div>
