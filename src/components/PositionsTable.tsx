@@ -155,7 +155,7 @@ export default function PositionsTable({ state }: { state: string }) {
             <Select value={pc} onChange={setPc} options={pcList} width="w-[11rem] sm:w-56" />
           </div>
         )}
-        <div className="relative flex-1 min-w-[150px] sm:flex-none sm:w-56">
+        <div className="relative flex-1 min-w-[168px] sm:flex-none sm:w-56">
           <svg className="absolute left-2.5 top-1/2 -translate-y-1/2 text-muted pointer-events-none" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><circle cx="11" cy="11" r="7" /><path d="M21 21l-4.3-4.3" /></svg>
           <input value={q} onChange={e => setQ(e.target.value)} placeholder="Search seat…"
             className="w-full bg-slate-950/50 border border-white/[0.09] rounded-lg pl-8 pr-8 py-2 sm:py-1.5 min-h-[34px] text-[16px] sm:text-xs outline-none placeholder:text-muted focus:border-gold/50 transition-colors" />
@@ -188,7 +188,7 @@ export default function PositionsTable({ state }: { state: string }) {
         <span className="min-w-0">— depth of colour = where they finished; the rule near a cell's bottom is that candidate's vote share.</span>
       </div>
 
-      <div className="overflow-auto rounded-xl border border-white/[0.07] max-h-[60vh] lg:max-h-[520px]">
+      <div className="overflow-auto rounded-xl border border-white/[0.07] max-h-[60vh] lg:max-h-[560px]">
         <table className="w-full text-xs border-separate" style={{ borderSpacing: 0 }}>
           <thead className="sticky top-0 z-20">
             <tr>
@@ -196,7 +196,7 @@ export default function PositionsTable({ state }: { state: string }) {
                 {arena === 'AE' ? 'Assembly seat' : 'Parliament seat'}
               </th>
               {[1, 2, 3, 4, 5].map(i => (
-                <th key={i} className="bg-slate-900 px-2.5 py-2 text-[10px] uppercase tracking-[0.07em] font-semibold text-muted border-b border-white/[0.09] text-left min-w-[150px]">
+                <th key={i} className="bg-slate-900 px-2.5 py-2 text-[10px] uppercase tracking-[0.07em] font-semibold text-muted border-b border-white/[0.09] text-left min-w-[168px]">
                   Position {i}
                 </th>
               ))}

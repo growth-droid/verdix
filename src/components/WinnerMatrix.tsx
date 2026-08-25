@@ -171,7 +171,10 @@ export default function WinnerMatrix({ state, onPick }: { state: string; onPick?
 
       {/* matrix — scrolls inside its own box, never the page */}
       <div className="overflow-auto rounded-xl border border-white/[0.07] max-h-[70vh]">
-        <table className="border-separate text-xs" style={{ borderSpacing: 3 }}>
+        {/* w-full only matters when the columns DON'T fill the card — full width now that this card
+            is stacked rather than paired, a state with few elections left half the card empty. Once
+            the columns need more than the container, their min-w-[104px] wins and it scrolls as before. */}
+        <table className="w-full border-separate text-xs" style={{ borderSpacing: 3 }}>
           <thead className="sticky top-0 z-20">
             <tr>
               <th className="sticky left-0 z-30 bg-slate-900 text-left px-2 sm:px-2.5 py-2 text-[10px] uppercase tracking-[0.07em] font-semibold text-muted rounded-md whitespace-nowrap w-[104px] sm:w-auto">

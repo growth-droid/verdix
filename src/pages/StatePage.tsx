@@ -647,9 +647,9 @@ export default function StatePage() {
         </ChartCard>
       )}
 
-      {/* The two wide read-outs share a row: the colour matrix beside the candidate positions. */}
-      <div className="grid xl:grid-cols-2 gap-4 mb-4">
-      {/* Winner matrix — every constituency × every election, filled with the winning party's colour */}
+      {/* Winner matrix — every constituency × every election, filled with the winning party's colour.
+          FULL WIDTH, stacked above the positions table: both are wide, horizontally-scrolling tables,
+          and side by side each showed ~4 of its columns with the rest behind an inner scrollbar. */}
       {!allIndia && (
         <ChartCard className="mb-4"
           title={<>{st} deep dive · winner matrix <Info>Each row is one constituency, each column one election, and every cell is painted the winning party's colour — so a seat's entire history reads as a colour band. Switch between assembly (AC) and parliamentary (PC) seats, and search for any constituency.</Info></>}>
@@ -659,12 +659,11 @@ export default function StatePage() {
 
       {/* Candidate positions — top 5 per seat, filterable to one parliament seat */}
       {!allIndia && (
-        <ChartCard
+        <ChartCard className="mb-4"
           title={<>Who stood, and where they finished · {st} <Info>The top five candidates in every constituency — name, party, votes and vote share. Choose a parliament seat to narrow it to just the assembly seats inside it, and hover any candidate for the margin, deposit status and turnout behind the number.</Info></>}>
           <PositionsTable state={st} />
         </ChartCard>
       )}
-      </div>
 
       {picked && <SeatDrawer seat={picked} all={rows} arena={arena} onClose={() => setPicked(null)} />}
       {mPick && <SeatDrawer seat={mPick.seat} all={mPick.all} arena={mPick.arena} onClose={() => setMPick(null)} />}
