@@ -94,8 +94,23 @@ export type CandRow = [string, string, number | null, number | null]
 export type CandSeat = { n: string; r: string | null; t: number | null; vv: number | null; c: CandRow[] }
 export type CandFile = { AE: Record<string, Record<string, CandSeat>>; GE: Record<string, Record<string, CandSeat>> }
 const candSlug = (s: string) => s.toLowerCase().replace(/[^a-z0-9]+/g, '_').replace(/^_|_$/g, '')
+// The workbooks carry no candidate rows at all for 16 recent assembly elections, so those years had
+// nothing to show. cand_overlay/ fills 14 of them from ECI-derived sources (tools/build_cand_overlay.py)
+// and is merged in HERE rather than baked into cand/, keeping it ADDITIVE: re-running
+// build_candidates.py or refreshing bq_export cannot wipe it. Same pattern as overlay.json for 2004.
+// The base file always wins on a year both hold — the overlay only ever fills a hole.
 export const loadCandidates = (state: string) =>
-  getJSON<CandFile>(`/data/cand/${candSlug(state)}.json`).catch(() => null)
+  Promise.all([
+    getJSON<CandFile>(`/data/cand/${candSlug(state)}.json`).catch(() => null),
+    getJSON<Partial<CandFile>>(`/data/cand_overlay/${candSlug(state)}.json`).catch(() => null),
+  ]).then(([base, ov]) => {
+    if (!ov) return base
+    const out: CandFile = { AE: { ...(base?.AE ?? {}) }, GE: { ...(base?.GE ?? {}) } }
+    for (const arena of ['AE', 'GE'] as const)
+      for (const [year, seats] of Object.entries(ov[arena] ?? {}))
+        if (!out[arena][year]) out[arena][year] = seats
+    return out
+  })
 
 export const loadACGeo = () => getJSON<GeoJSON.FeatureCollection>('/geo/india_ac_simplified.geojson')
 export const loadPCGeo = () => getJSON<GeoJSON.FeatureCollection>('/geo/india_pc_2019_simplified.geojson')
