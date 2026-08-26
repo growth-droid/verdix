@@ -58,8 +58,8 @@ export default function App() {
           width is the product. min-w-0 on <main> is load-bearing: it is a flex child, so without it
           a wide table inside would stretch the whole document instead of scrolling in its own card. */}
       <div className="flex-1 w-full flex items-start">
-      {!focus && <SideNav />}
-      <main className={`flex-1 min-w-0 px-3 sm:px-5 py-3 sm:py-4 lg:pb-6 ${focus ? 'pb-6' : 'pb-24'}`}>
+      <SideNav />
+      <main className="flex-1 min-w-0 px-3 sm:px-5 py-3 sm:py-4 pb-24 lg:pb-6">
         {isModulePage && <PageTagline />}
         <ErrorBoundary resetKey={loc.pathname}>
           <div key={loc.pathname} className="animate-fadeUp">
@@ -82,7 +82,7 @@ export default function App() {
       </main>
       </div>
       {focus && <FocusBar />}
-      {!focus && <MobileNav />}
+      <MobileNav />
     </div>
   )
 }

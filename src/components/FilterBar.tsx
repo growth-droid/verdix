@@ -30,10 +30,10 @@ export default function FilterBar() {
   }
   const showArena = ARENA_PAGES.has(pathname)
 
-  // pr-* in focus mode: the FocusBar is FIXED over this bar's right end, and without the
+  // pr-12 in focus mode: the exit button is FIXED over this bar's right end, and without the
   // reservation it covered the "clear" link (and the arena toggle on a phone).
   return (
-    <div className={`border-b border-white/[0.05] bg-slate-950/50 backdrop-blur-xl px-3 sm:px-5 py-1.5 sm:py-2 flex items-center gap-2 sm:gap-3 flex-wrap ${focus ? 'pr-[150px] sm:pr-[160px]' : ''}`}>
+    <div className={`border-b border-white/[0.05] bg-slate-950/50 backdrop-blur-xl px-3 sm:px-5 py-1.5 sm:py-2 flex items-center gap-2 sm:gap-3 flex-wrap ${focus ? 'pr-12' : ''}`}>
       <span className="kicker text-muted shrink-0 hidden sm:inline">Focus</span>
       <Select value={state ?? ALL} onChange={onRegion} options={[ALL, ...states]} width="w-[9.5rem] sm:w-52" />
       {showArena && (

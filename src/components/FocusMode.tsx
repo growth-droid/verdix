@@ -1,14 +1,13 @@
 // Full-screen / focus mode.
 //
 // Two independent things, deliberately kept separate:
-//   1. FOCUS   — hides the app's own chrome (header + module rail) so the dashboard owns the window.
+//   1. FOCUS   — hides the app HEADER (wordmark, theme, account) so the dashboard owns the window.
+//                The left rail and the phone tab bar STAY: they are navigation, not chrome.
 //   2. FULLSCREEN — asks the browser to drop its tab strip and address bar (the Fullscreen API).
 // requestFullscreen needs a user gesture and can be refused by policy or an embedding frame; when it
 // is refused, focus mode still applies on its own, which is most of the win. Leaving fullscreen by
 // any route (Esc, F11, the OS) switches focus back off, so the two never drift apart on screen.
-import { useEffect, useRef, useState } from 'react'
-import { NavLink, useLocation } from 'react-router-dom'
-import { MODULES, NAV_GROUPS } from '../lib/nav'
+import { useEffect } from 'react'
 import { useFocusStore } from '../store'
 
 const Expand = () => (
@@ -19,11 +18,6 @@ const Expand = () => (
 const Collapse = () => (
   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
     <path d="M8 3v3a2 2 0 0 1-2 2H3M16 3v3a2 2 0 0 0 2 2h3M8 21v-3a2 2 0 0 0-2-2H3M16 21v-3a2 2 0 0 1 2-2h3" />
-  </svg>
-)
-const Chevron = () => (
-  <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" className="opacity-60">
-    <path d="M6 9l6 6 6-6" />
   </svg>
 )
 
@@ -62,55 +56,18 @@ export function FocusButton() {
   )
 }
 
-/** The only chrome left on screen in focus mode: which module you're in, a way to switch, and a way out. */
+/** The way out of focus mode. Navigation is NOT here — the left rail stays visible in focus mode,
+ *  so a second module switcher in the corner would only duplicate it. */
 export function FocusBar() {
-  const { pathname } = useLocation()
   const set = useFocusStore(s => s.set)
-  const [open, setOpen] = useState(false)
-  const ref = useRef<HTMLDivElement>(null)
-  const current = MODULES.find(m => m.to === pathname)
-
-  useEffect(() => { setOpen(false) }, [pathname])
-  useEffect(() => {
-    if (!open) return
-    const onDoc = (e: MouseEvent) => { if (ref.current && !ref.current.contains(e.target as Node)) setOpen(false) }
-    document.addEventListener('mousedown', onDoc)
-    return () => document.removeEventListener('mousedown', onDoc)
-  }, [open])
-
   const leave = async () => {
     set(false)
     try { if (document.fullscreenElement) await document.exitFullscreen() } catch { /* already out */ }
   }
-
   return (
-    <div ref={ref} className="fixed top-2 right-2 z-40 flex items-center gap-1">
-      <div className="relative">
-        <button onClick={() => setOpen(o => !o)} aria-haspopup="menu" aria-expanded={open}
-          className="glass rounded-lg pl-2.5 pr-2 py-1.5 text-[12px] text-muted hover:text-ink flex items-center gap-1.5 transition-colors">
-          {current?.tab ?? 'Menu'}<Chevron />
-        </button>
-        {open && (
-          <div role="menu" className="absolute right-0 mt-1 w-44 glass rounded-xl p-1.5 shadow-pop">
-            {NAV_GROUPS.map(g => (
-              <div key={g.label}>
-                <div className="px-2 pt-1.5 pb-0.5 text-[9.5px] uppercase tracking-[0.13em] font-semibold text-faint">{g.label}</div>
-                {g.items.map(m => (
-                  <NavLink key={m.to} to={m.to} end
-                    className={({ isActive }) => `block px-2 py-1.5 rounded-lg text-[12.5px] transition-colors ${
-                      isActive ? 'bg-gold/10 text-gold font-semibold' : 'text-muted hover:text-ink hover:bg-white/[0.05]'}`}>
-                    {m.tab}
-                  </NavLink>
-                ))}
-              </div>
-            ))}
-          </div>
-        )}
-      </div>
-      <button onClick={leave} title="Leave full screen (Esc)" aria-label="Leave full screen"
-        className="glass w-8 h-8 grid place-items-center rounded-lg text-muted hover:text-ink transition-colors">
-        <Collapse />
-      </button>
-    </div>
+    <button onClick={leave} title="Leave full screen (Esc)" aria-label="Leave full screen"
+      className="fixed top-2 right-2 z-40 glass w-8 h-8 grid place-items-center rounded-lg text-muted hover:text-ink transition-colors">
+      <Collapse />
+    </button>
   )
 }
