@@ -71,26 +71,62 @@ export default function StatePage() {
 
   // ── State scorecard: this state's most-recent Assembly AND Lok Sabha standing, side by side —
   // "how does each party do across BOTH arenas here", in one table (split-ticket at a glance).
+  // Scorecard across EVERY election the state has, not just the latest of each arena — one column
+  // pair (seats + vote share) per election, newest first, assemblies then Lok Sabhas. The column
+  // matching the page's current arena+year is highlighted so the picker above has a visible anchor.
   const scorecard = useMemo(() => {
     if (allIndia) return null
     const ae = partyAE.filter(r => r.s === st), ge = partyGE.filter(r => r.s === st)
-    const aeY = ae.length ? Math.max(...ae.map(r => r.y)) : null
-    const geY = ge.length ? Math.max(...ge.map(r => r.y)) : null
-    if (aeY == null && geY == null) return null
-    const aeRows = ae.filter(r => r.y === aeY), geRows = ge.filter(r => r.y === geY)
-    type SRow = { p: string; a: string | null; aeS: number | null; aeV: number | null; geS: number | null; geV: number | null }
+    const aeYears = [...new Set(ae.map(r => r.y))].sort((a, b) => b - a)
+    const geYears = [...new Set(ge.map(r => r.y))].sort((a, b) => b - a)
+    if (!aeYears.length && !geYears.length) return null
+    const cols = [
+      ...aeYears.map(y => ({ arena: 'AE' as const, y, key: `AE${y}` })),
+      ...geYears.map(y => ({ arena: 'GE' as const, y, key: `GE${y}` })),
+    ]
+    type Cell = { s: number | null; v: number | null }
+    type SRow = { p: string; a: string | null; cells: Record<string, Cell> }
     const map = new Map<string, SRow>()
-    const up = (p: string, a: string | null) => { let e = map.get(p); if (!e) { e = { p, a, aeS: null, aeV: null, geS: null, geV: null }; map.set(p, e) } return e }
-    aeRows.forEach(r => { const e = up(r.p, r.a); e.aeS = r.wo ?? 0; e.aeV = r.v })
-    geRows.forEach(r => { const e = up(r.p, r.a); e.geS = r.wo ?? 0; e.geV = r.v })
+    const up = (p: string, a: string | null) => {
+      let e = map.get(p); if (!e) { e = { p, a, cells: {} }; map.set(p, e) } return e
+    }
+    ae.forEach(r => { up(r.p, r.a).cells[`AE${r.y}`] = { s: r.wo ?? 0, v: r.v } })
+    ge.forEach(r => { up(r.p, r.a).cells[`GE${r.y}`] = { s: r.wo ?? 0, v: r.v } })
+
+    const best = (e: SRow) => Math.max(0, ...cols.map(c => e.cells[c.key]?.s ?? 0))
+    const peakV = (e: SRow) => Math.max(0, ...cols.map(c => e.cells[c.key]?.v ?? 0))
     const rows = [...map.values()]
-      .filter(e => (e.aeS ?? 0) > 0 || (e.geS ?? 0) > 0 || (e.aeV ?? 0) >= 1 || (e.geV ?? 0) >= 1)
-      .sort((x, y) => Math.max(y.geS ?? 0, y.aeS ?? 0) - Math.max(x.geS ?? 0, x.aeS ?? 0) || ((y.geV ?? 0) + (y.aeV ?? 0)) - ((x.geV ?? 0) + (x.aeV ?? 0)))
-      .slice(0, 12)
-    const aeTot = aeRows.reduce((s2, r) => s2 + (r.wo ?? 0), 0), geTot = geRows.reduce((s2, r) => s2 + (r.wo ?? 0), 0)
-    const aeLead = [...map.values()].filter(e => (e.aeS ?? 0) > 0).sort((x, y) => (y.aeS ?? 0) - (x.aeS ?? 0))[0]
-    const geLead = [...map.values()].filter(e => (e.geS ?? 0) > 0).sort((x, y) => (y.geS ?? 0) - (x.geS ?? 0))[0]
-    return { aeY, geY, aeTot, geTot, rows, aeLead, geLead }
+      // a party earns a row if it ever won a seat here, or ever polled 1%+ in any election
+      .filter(e => best(e) > 0 || peakV(e) >= 1)
+      .sort((x, y) => best(y) - best(x) || peakV(y) - peakV(x))
+      .slice(0, 14)
+
+    // totals per column, for the header's "N seats" line
+    const totals: Record<string, number> = {}
+    cols.forEach(c => {
+      const src = c.arena === 'AE' ? ae : ge
+      totals[c.key] = src.filter(r => r.y === c.y).reduce((t, r) => t + (r.wo ?? 0), 0)
+    })
+
+    // The split-ticket read stays anchored on the LATEST of each arena — that is the comparison
+    // that means something; a 2012 assembly against a 2024 Lok Sabha would not.
+    const aeY = aeYears[0] ?? null, geY = geYears[0] ?? null
+    const leadOf = (key: string | null) => key == null ? undefined
+      : [...map.values()].filter(e => (e.cells[key]?.s ?? 0) > 0)
+          .sort((x, y) => (y.cells[key]!.s ?? 0) - (x.cells[key]!.s ?? 0))[0]
+    const aeLead = leadOf(aeY == null ? null : `AE${aeY}`)
+    const geLead = leadOf(geY == null ? null : `GE${geY}`)
+    return {
+      cols, rows, totals, aeY, geY,
+      aeTot: aeY == null ? 0 : totals[`AE${aeY}`], geTot: geY == null ? 0 : totals[`GE${geY}`],
+      aeLead: aeLead && { p: aeLead.p, a: aeLead.a, aeS: aeLead.cells[`AE${aeY}`]?.s ?? 0 },
+      geLead: geLead && { p: geLead.p, a: geLead.a, geS: geLead.cells[`GE${geY}`]?.s ?? 0 },
+      gapOf: (e: SRow) => {
+        const a = aeY == null ? null : e.cells[`AE${aeY}`]?.v ?? null
+        const g = geY == null ? null : e.cells[`GE${geY}`]?.v ?? null
+        return a != null && g != null ? +(g - a).toFixed(1) : null
+      },
+    }
   }, [partyAE, partyGE, st, allIndia])
 
   // seats won + vote share % together, one party (or alliance) at a time.
@@ -602,8 +638,8 @@ export default function StatePage() {
       {/* State scorecard — Assembly + Lok Sabha side by side (the "both arenas at one place" view) */}
       {!allIndia && scorecard && (
         <ChartCard
-          title={<>State scorecard · Assembly {scorecard.aeY ?? '–'} vs Lok Sabha {scorecard.geY ?? '–'} <Info>Each party's most recent Assembly result beside its most recent Lok Sabha result in {st} — seats and vote share in BOTH arenas at once, whatever the toggle above is set to. The “LS − AE” gap exposes split-ticket voting: many people back a national party for Parliament and a regional one for the Assembly.</Info></>}
-          note={`${st}: latest Assembly (${scorecard.aeY ?? '–'} · ${scorecard.aeTot} seats) beside latest Lok Sabha (${scorecard.geY ?? '–'} · ${scorecard.geTot} seats). “LS − AE” = Lok Sabha vote share minus Assembly vote share (＋ green = the party runs stronger nationally than in the state).`}>
+          title={<>State scorecard · every election in {st} <Info>Every party's seats and vote share in EVERY election {st} has held — assemblies first, then Lok Sabhas, newest first. The election selected above is highlighted in gold. The “LS − AE” gap compares the LATEST Lok Sabha with the LATEST Assembly and exposes split-ticket voting: many people back a national party for Parliament and a regional one for the Assembly.</Info></>}
+          note={`${st}: ${scorecard.cols.length} elections — ${scorecard.cols.filter(c => c.arena === 'AE').length} assembly, ${scorecard.cols.filter(c => c.arena === 'GE').length} Lok Sabha. The gold column is the election selected above. “LS − AE” = latest Lok Sabha (${scorecard.geY ?? '–'}) vote share minus latest Assembly (${scorecard.aeY ?? '–'}) vote share (＋ green = the party runs stronger nationally than in the state).`}>
           {scorecard.aeLead && scorecard.geLead && (
             <div className="text-[12.5px] text-muted mb-3">
               {scorecard.aeLead.p === scorecard.geLead.p
@@ -611,31 +647,67 @@ export default function StatePage() {
                 : <><b style={{ color: readable(colorFor(scorecard.aeLead.p, scorecard.aeLead.a), mode) }}>{scorecard.aeLead.p}</b> leads the Assembly (<b className="text-ink">{scorecard.aeLead.aeS}</b> seats) while <b style={{ color: readable(colorFor(scorecard.geLead.p, scorecard.geLead.a), mode) }}>{scorecard.geLead.p}</b> leads Lok Sabha (<b className="text-ink">{scorecard.geLead.geS}</b>) — a split-ticket state.</>}
             </div>
           )}
-          <div className="overflow-x-auto max-w-3xl">
-            <table className="w-full text-[11.5px] min-w-[420px] sm:text-[12.5px] sm:min-w-[560px]">
+          {/* No max-w cap here any more: with every election on it the table earns the width, and
+              it scrolls inside its own card rather than stretching the page. */}
+          <div className="overflow-x-auto">
+            <table className="text-[11.5px] sm:text-[12.5px] border-separate" style={{ borderSpacing: 0 }}>
               <thead>
                 <tr className="text-muted">
-                  <th className="text-left font-medium py-1 pr-2 align-bottom" rowSpan={2}>Party</th>
-                  <th className="text-center font-semibold px-2 pb-1 text-muted border-b border-white/[0.08]" colSpan={2}>Assembly · {scorecard.aeY ?? '–'}</th>
-                  <th className="text-center font-semibold px-2 pb-1 text-muted border-b border-white/[0.08]" colSpan={2}>Lok Sabha · {scorecard.geY ?? '–'}</th>
-                  <th className="text-right font-medium pl-2 align-bottom" rowSpan={2} title="Lok Sabha vote share minus Assembly vote share">LS − AE</th>
+                  <th className="sticky left-0 z-10 bg-slate-900 text-left font-medium py-1 pr-3 align-middle min-w-[132px]" rowSpan={2}>Party</th>
+                  {scorecard.cols.map(c => {
+                    const on = c.arena === arena && c.y === vy
+                    return (
+                      <th key={c.key} colSpan={2}
+                        title={`${c.arena === 'AE' ? 'Assembly' : 'Lok Sabha'} ${c.y} · ${scorecard.totals[c.key]} seats`}
+                        className={`text-center align-middle font-semibold px-2 pb-1 whitespace-nowrap border-b ${
+                          on ? 'text-gold border-gold/50' : 'text-muted border-white/[0.08]'}`}
+                        style={on ? { background: 'rgb(var(--gold) / 0.10)' } : undefined}>
+                        {c.arena === 'AE' ? 'Assembly' : 'Lok Sabha'} · {c.y}
+                      </th>
+                    )
+                  })}
+                  <th className="text-right font-medium pl-3 align-middle whitespace-nowrap" rowSpan={2}
+                    title={`Lok Sabha ${scorecard.geY ?? '–'} vote share minus Assembly ${scorecard.aeY ?? '–'} vote share`}>
+                    LS − AE
+                  </th>
                 </tr>
-                <tr className="text-muted text-[11px] uppercase tracking-wide">
-                  <th className="text-right font-medium px-2 pb-1">Seats</th><th className="text-right font-medium px-2 pb-1">Vote%</th>
-                  <th className="text-right font-medium px-2 pb-1">Seats</th><th className="text-right font-medium px-2 pb-1">Vote%</th>
+                <tr className="text-muted text-[10.5px] uppercase tracking-wide">
+                  {scorecard.cols.map(c => {
+                    const on = c.arena === arena && c.y === vy
+                    const cell = `text-right font-medium px-2 pb-1 ${on ? 'text-gold' : ''}`
+                    const bg = on ? { background: 'rgb(var(--gold) / 0.10)' } : undefined
+                    return [
+                      <th key={c.key + 's'} className={cell} style={bg}>Seats</th>,
+                      <th key={c.key + 'v'} className={cell} style={bg}>Vote%</th>,
+                    ]
+                  })}
                 </tr>
               </thead>
               <tbody>
                 {scorecard.rows.map(r => {
-                  const gap = (r.geV != null && r.aeV != null) ? +(r.geV - r.aeV).toFixed(1) : null
+                  const gap = scorecard.gapOf(r)
                   return (
-                    <tr key={r.p} className="border-t border-white/[0.05] hover:bg-white/[0.03] transition-colors">
-                      <td className="py-1 pr-2 whitespace-nowrap"><Dot color={colorFor(r.p, r.a)} /><b className="text-ink">{r.p}</b></td>
-                      <td className="text-right px-2 py-1 tabular-nums text-ink font-semibold">{r.aeS != null ? r.aeS : '–'}</td>
-                      <td className="text-right px-2 py-1 tabular-nums text-ink">{r.aeV != null ? r.aeV.toFixed(1) : '–'}</td>
-                      <td className="text-right px-2 py-1 tabular-nums text-ink font-semibold">{r.geS != null ? r.geS : '–'}</td>
-                      <td className="text-right px-2 py-1 tabular-nums text-ink">{r.geV != null ? r.geV.toFixed(1) : '–'}</td>
-                      <td className="text-right pl-2 tabular-nums font-semibold" style={{ color: gap == null ? 'rgb(var(--s500))' : readable(gap > 0.3 ? '#16a34a' : gap < -0.3 ? '#dc2626' : '#64748b', mode) }}>
+                    <tr key={r.p} className="group">
+                      <th scope="row" className="sticky left-0 z-10 bg-slate-900 text-left font-normal border-t border-white/[0.05] py-1 pr-3 whitespace-nowrap">
+                        <Dot color={colorFor(r.p, r.a)} /><b className="text-ink">{r.p}</b>
+                      </th>
+                      {scorecard.cols.map(c => {
+                        const on = c.arena === arena && c.y === vy
+                        const cell = r.cells[c.key]
+                        const bg = on ? { background: 'rgb(var(--gold) / 0.07)' } : undefined
+                        return [
+                          <td key={c.key + 's'} style={bg}
+                            className={`text-right px-2 py-1 tabular-nums border-t border-white/[0.05] font-semibold ${cell?.s ? 'text-ink' : 'text-muted'}`}>
+                            {cell?.s != null ? cell.s : '–'}
+                          </td>,
+                          <td key={c.key + 'v'} style={bg}
+                            className={`text-right px-2 py-1 tabular-nums border-t border-white/[0.05] ${cell?.v != null ? 'text-ink' : 'text-muted'}`}>
+                            {cell?.v != null ? cell.v.toFixed(1) : '–'}
+                          </td>,
+                        ]
+                      })}
+                      <td className="text-right pl-3 py-1 tabular-nums font-semibold border-t border-white/[0.05]"
+                        style={{ color: gap == null ? 'rgb(var(--s500))' : readable(gap > 0.3 ? '#16a34a' : gap < -0.3 ? '#dc2626' : '#64748b', mode) }}>
                         {gap == null ? '–' : (gap > 0 ? '+' : '') + gap}
                       </td>
                     </tr>
