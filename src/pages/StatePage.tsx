@@ -647,26 +647,31 @@ export default function StatePage() {
                 : <><b style={{ color: readable(colorFor(scorecard.aeLead.p, scorecard.aeLead.a), mode) }}>{scorecard.aeLead.p}</b> leads the Assembly (<b className="text-ink">{scorecard.aeLead.aeS}</b> seats) while <b style={{ color: readable(colorFor(scorecard.geLead.p, scorecard.geLead.a), mode) }}>{scorecard.geLead.p}</b> leads Lok Sabha (<b className="text-ink">{scorecard.geLead.geS}</b>) — a split-ticket state.</>}
             </div>
           )}
-          {/* No max-w cap here any more: with every election on it the table earns the width, and
-              it scrolls inside its own card rather than stretching the page. */}
+          {/* Each election is drawn as its OWN BOX — a left/right rule down its two columns, closed
+              top and bottom — so the eye groups Seats+Vote% as one election instead of reading ten
+              loose numeric columns. Boxes are built from per-cell borders because the table is
+              `border-separate` with spacing 0; a real gap between groups is the edge cells' padding. */}
           <div className="overflow-x-auto">
             <table className="text-[11.5px] sm:text-[12.5px] border-separate" style={{ borderSpacing: 0 }}>
               <thead>
                 <tr className="text-muted">
-                  <th className="sticky left-0 z-10 bg-slate-900 text-left font-medium py-1 pr-3 align-middle min-w-[132px]" rowSpan={2}>Party</th>
+                  <th className="sticky left-0 z-10 bg-slate-900 text-left font-medium py-1.5 pr-4 align-middle min-w-[128px]" rowSpan={2}>Party</th>
                   {scorecard.cols.map(c => {
                     const on = c.arena === arena && c.y === vy
                     return (
                       <th key={c.key} colSpan={2}
                         title={`${c.arena === 'AE' ? 'Assembly' : 'Lok Sabha'} ${c.y} · ${scorecard.totals[c.key]} seats`}
-                        className={`text-center align-middle font-semibold px-2 pb-1 whitespace-nowrap border-b ${
-                          on ? 'text-gold border-gold/50' : 'text-muted border-white/[0.08]'}`}
-                        style={on ? { background: 'rgb(var(--gold) / 0.10)' } : undefined}>
+                        className={`text-center align-middle font-semibold px-2.5 py-1.5 whitespace-nowrap rounded-t-lg
+                          border-t border-l border-r ${on ? 'text-gold' : 'text-muted'}`}
+                        style={{
+                          background: on ? 'rgb(var(--gold) / 0.12)' : 'rgb(var(--s50) / 0.035)',
+                          borderColor: on ? 'rgb(var(--gold) / 0.45)' : 'rgb(var(--s50) / 0.12)',
+                        }}>
                         {c.arena === 'AE' ? 'Assembly' : 'Lok Sabha'} · {c.y}
                       </th>
                     )
                   })}
-                  <th className="text-right font-medium pl-3 align-middle whitespace-nowrap" rowSpan={2}
+                  <th className="text-center font-medium pl-4 align-middle whitespace-nowrap" rowSpan={2}
                     title={`Lok Sabha ${scorecard.geY ?? '–'} vote share minus Assembly ${scorecard.aeY ?? '–'} vote share`}>
                     LS − AE
                   </th>
@@ -674,40 +679,55 @@ export default function StatePage() {
                 <tr className="text-muted text-[10.5px] uppercase tracking-wide">
                   {scorecard.cols.map(c => {
                     const on = c.arena === arena && c.y === vy
-                    const cell = `text-right font-medium px-2 pb-1 ${on ? 'text-gold' : ''}`
-                    const bg = on ? { background: 'rgb(var(--gold) / 0.10)' } : undefined
+                    const edge = on ? 'rgb(var(--gold) / 0.45)' : 'rgb(var(--s50) / 0.12)'
+                    const bg = on ? 'rgb(var(--gold) / 0.12)' : 'rgb(var(--s50) / 0.035)'
+                    const base = `text-center font-medium px-2.5 pb-1.5 border-b ${on ? 'text-gold' : ''}`
                     return [
-                      <th key={c.key + 's'} className={cell} style={bg}>Seats</th>,
-                      <th key={c.key + 'v'} className={cell} style={bg}>Vote%</th>,
+                      <th key={c.key + 's'} className={`${base} border-l`} style={{ background: bg, borderColor: edge }}>Seats</th>,
+                      <th key={c.key + 'v'} className={`${base} border-r`} style={{ background: bg, borderColor: edge }}>Vote%</th>,
                     ]
                   })}
                 </tr>
               </thead>
               <tbody>
-                {scorecard.rows.map(r => {
+                {scorecard.rows.map((r, ri) => {
                   const gap = scorecard.gapOf(r)
+                  const last = ri === scorecard.rows.length - 1
                   return (
-                    <tr key={r.p} className="group">
-                      <th scope="row" className="sticky left-0 z-10 bg-slate-900 text-left font-normal border-t border-white/[0.05] py-1 pr-3 whitespace-nowrap">
+                    <tr key={r.p}>
+                      <th scope="row" className="sticky left-0 z-10 bg-slate-900 text-left font-normal py-1.5 pr-4 whitespace-nowrap">
                         <Dot color={colorFor(r.p, r.a)} /><b className="text-ink">{r.p}</b>
                       </th>
                       {scorecard.cols.map(c => {
                         const on = c.arena === arena && c.y === vy
                         const cell = r.cells[c.key]
-                        const bg = on ? { background: 'rgb(var(--gold) / 0.07)' } : undefined
+                        const edge = on ? 'rgb(var(--gold) / 0.45)' : 'rgb(var(--s50) / 0.12)'
+                        const bg = on ? 'rgb(var(--gold) / 0.07)' : 'rgb(var(--s50) / 0.02)'
+                        // the box closes on the last row; every row keeps a hairline row rule
+                        const base = `text-center px-2.5 py-1.5 tabular-nums border-t ${last ? 'border-b' : ''}`
+                        const st = (side: 'l' | 'r') => ({
+                          background: bg,
+                          borderTopColor: 'rgb(var(--s50) / 0.06)',
+                          borderLeftColor: side === 'l' ? edge : undefined,
+                          borderRightColor: side === 'r' ? edge : undefined,
+                          borderBottomColor: last ? edge : undefined,
+                        })
                         return [
-                          <td key={c.key + 's'} style={bg}
-                            className={`text-right px-2 py-1 tabular-nums border-t border-white/[0.05] font-semibold ${cell?.s ? 'text-ink' : 'text-muted'}`}>
+                          <td key={c.key + 's'} style={st('l')}
+                            className={`${base} border-l font-semibold ${cell?.s ? 'text-ink' : 'text-muted'} ${last ? 'rounded-bl-lg' : ''}`}>
                             {cell?.s != null ? cell.s : '–'}
                           </td>,
-                          <td key={c.key + 'v'} style={bg}
-                            className={`text-right px-2 py-1 tabular-nums border-t border-white/[0.05] ${cell?.v != null ? 'text-ink' : 'text-muted'}`}>
+                          <td key={c.key + 'v'} style={st('r')}
+                            className={`${base} border-r ${cell?.v != null ? 'text-ink' : 'text-muted'} ${last ? 'rounded-br-lg' : ''}`}>
                             {cell?.v != null ? cell.v.toFixed(1) : '–'}
                           </td>,
                         ]
                       })}
-                      <td className="text-right pl-3 py-1 tabular-nums font-semibold border-t border-white/[0.05]"
-                        style={{ color: gap == null ? 'rgb(var(--s500))' : readable(gap > 0.3 ? '#16a34a' : gap < -0.3 ? '#dc2626' : '#64748b', mode) }}>
+                      <td className="text-center pl-4 py-1.5 tabular-nums font-semibold border-t"
+                        style={{
+                          borderTopColor: 'rgb(var(--s50) / 0.06)',
+                          color: gap == null ? 'rgb(var(--s500))' : readable(gap > 0.3 ? '#16a34a' : gap < -0.3 ? '#dc2626' : '#64748b', mode),
+                        }}>
                         {gap == null ? '–' : (gap > 0 ? '+' : '') + gap}
                       </td>
                     </tr>
