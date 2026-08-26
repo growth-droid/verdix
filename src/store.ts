@@ -30,3 +30,14 @@ export const useThemeStore = create<{ mode: Theme; toggle: () => void; setMode: 
   setMode: (m) => { applyTheme(m); set({ mode: m }) },
 }))
 export const useTheme = (): Theme => useThemeStore(s => s.mode)
+
+// Focus mode — hide the app's own chrome (header + module rail) so a dashboard gets the whole
+// window, and ask the browser for real fullscreen so its tab strip and address bar go too.
+// The two are DECOUPLED on purpose: requestFullscreen needs a user gesture and can be refused by
+// policy, and when it is, hiding our own chrome is still worth doing on its own.
+export const useFocusStore = create<{ on: boolean; set: (v: boolean) => void; toggle: () => void }>((set, get) => ({
+  on: false,
+  set: (on) => set({ on }),
+  toggle: () => set({ on: !get().on }),
+}))
+export const useFocus = () => useFocusStore(s => s.on)

@@ -16,9 +16,13 @@ import AccountMenu from './components/AccountMenu'
 import ThemeToggle from './components/ThemeToggle'
 import ErrorBoundary from './components/ErrorBoundary'
 import { PageTagline, JourneyNav } from './components/Journey'
+import { FocusButton, FocusBar, useFullscreenSync } from './components/FocusMode'
+import { useFocus } from './store'
 
 export default function App() {
   const loc = useLocation()
+  const focus = useFocus()
+  useFullscreenSync()
   // /admin is chrome-free: no filter bar, page tagline or journey nav (it isn't a data module).
   const isModulePage = loc.pathname !== '/admin'
   const topRef = useRef<HTMLDivElement>(null)
@@ -34,7 +38,7 @@ export default function App() {
   return (
     <div className="min-h-screen flex flex-col">
      <div ref={topRef} className="sticky top-0 z-30">
-      <header className="relative z-20 border-b border-white/[0.07] bg-slate-950/70 backdrop-blur-xl px-3 sm:px-5 py-2 sm:py-2.5 flex items-center gap-3 sm:gap-6">
+      {!focus && <header className="relative z-20 border-b border-white/[0.07] bg-slate-950/70 backdrop-blur-xl px-3 sm:px-5 py-2 sm:py-2.5 flex items-center gap-3 sm:gap-6">
         <h1 className="font-display font-extrabold text-[17px] sm:text-[19px] tracking-tight shrink-0 flex items-center gap-2">
           <span className="inline-block w-2.5 h-2.5 rounded-full bg-gradient-to-br from-[#e5c15a] to-[#b0812a] shadow-glow" />
           Verdix
@@ -42,17 +46,20 @@ export default function App() {
         </h1>
         {/* modules live in the left rail (SideNav) now, not in the header */}
         <div className="ml-auto shrink-0 flex items-center gap-2">
+          <FocusButton />
           <ThemeToggle />
           <AccountMenu />
         </div>
-      </header>
+      </header>}
       {isModulePage && <FilterBar />}
      </div>
-      {/* rail + content. min-w-0 on <main> is load-bearing: it is a flex child, so without it a wide
-          table inside would stretch the whole document instead of scrolling in its own card. */}
-      <div className="flex-1 w-full mx-auto max-w-[1720px] flex items-start">
-      <SideNav />
-      <main className="flex-1 min-w-0 px-3 sm:px-5 py-3 sm:py-4 pb-24 lg:pb-6">
+      {/* rail + content, FULL BLEED. A max-w cap here left 200px unused at 1920px and 840px at
+          2560px while the header ran edge to edge — on a dashboard of maps and wide tables that
+          width is the product. min-w-0 on <main> is load-bearing: it is a flex child, so without it
+          a wide table inside would stretch the whole document instead of scrolling in its own card. */}
+      <div className="flex-1 w-full flex items-start">
+      {!focus && <SideNav />}
+      <main className={`flex-1 min-w-0 px-3 sm:px-5 py-3 sm:py-4 lg:pb-6 ${focus ? 'pb-6' : 'pb-24'}`}>
         {isModulePage && <PageTagline />}
         <ErrorBoundary resetKey={loc.pathname}>
           <div key={loc.pathname} className="animate-fadeUp">
@@ -74,7 +81,8 @@ export default function App() {
         {isModulePage && <JourneyNav />}
       </main>
       </div>
-      <MobileNav />
+      {focus && <FocusBar />}
+      {!focus && <MobileNav />}
     </div>
   )
 }
