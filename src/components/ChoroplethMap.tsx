@@ -128,6 +128,72 @@ export default function ChoroplethMap({ byState, arena, activeYear, mode = 'winn
   const [geo, setGeo] = useState<GeoJSON.FeatureCollection | null>(null)
   const [stateGeo, setStateGeo] = useState<GeoJSON.FeatureCollection | null>(null)
 
+  // ── One label point per state ───────────────────────────────────────────────────────────────
+  // A symbol layer over POLYGONS places a label on every part of a MultiPolygon. Andaman &
+  // Nicobar is 142 islands, so the map asked for its name 142 times (269 placements across the
+  // 36 states) and collision-hiding left a scattered handful visible — the owner saw the name
+  // four times in open sea. Reducing each state to ONE point makes a duplicate impossible.
+  //
+  // The point must also be INSIDE the state: an area centroid of a multi-island or concave state
+  // lands in water. So we take the largest part, and if its centroid falls outside the ring we
+  // grid-search for the interior point furthest from any edge (a cheap pole-of-inaccessibility).
+  const stateLabelGeo = useMemo<GeoJSON.FeatureCollection | null>(() => {
+    if (!stateGeo) return null
+    type Ring = number[][]
+    const areaOf = (r: Ring) => {
+      let a = 0
+      for (let i = 0; i < r.length - 1; i++) a += r[i][0] * r[i + 1][1] - r[i + 1][0] * r[i][1]
+      return Math.abs(a) / 2
+    }
+    const inside = (pt: number[], r: Ring) => {
+      let hit = false
+      for (let i = 0, j = r.length - 1; i < r.length; j = i++) {
+        const [xi, yi] = r[i], [xj, yj] = r[j]
+        if ((yi > pt[1]) !== (yj > pt[1]) && pt[0] < ((xj - xi) * (pt[1] - yi)) / (yj - yi) + xi) hit = !hit
+      }
+      return hit
+    }
+    const edgeDist = (pt: number[], r: Ring) => {
+      let best = Infinity
+      for (let i = 0; i < r.length - 1; i++) {
+        const [x1, y1] = r[i], [x2, y2] = r[i + 1]
+        const dx = x2 - x1, dy = y2 - y1
+        const t = dx || dy ? Math.max(0, Math.min(1, ((pt[0] - x1) * dx + (pt[1] - y1) * dy) / (dx * dx + dy * dy))) : 0
+        best = Math.min(best, Math.hypot(pt[0] - (x1 + t * dx), pt[1] - (y1 + t * dy)))
+      }
+      return best
+    }
+    const features = stateGeo.features.map(f => {
+      const g = f.geometry as GeoJSON.Geometry
+      const parts: Ring[] =
+        g.type === 'MultiPolygon' ? (g.coordinates as number[][][][]).map(poly => poly[0])
+        : g.type === 'Polygon' ? [(g.coordinates as number[][][])[0]]
+        : []
+      if (!parts.length) return null
+      const ring = parts.reduce((a, b) => (areaOf(b) > areaOf(a) ? b : a))
+      // area-weighted centroid of the largest part
+      let cx = 0, cy = 0, a2 = 0
+      for (let i = 0; i < ring.length - 1; i++) {
+        const cross = ring[i][0] * ring[i + 1][1] - ring[i + 1][0] * ring[i][1]
+        a2 += cross; cx += (ring[i][0] + ring[i + 1][0]) * cross; cy += (ring[i][1] + ring[i + 1][1]) * cross
+      }
+      let pt = a2 ? [cx / (3 * a2), cy / (3 * a2)] : ring[0]
+      if (!inside(pt, ring)) {
+        const xs = ring.map(c => c[0]), ys = ring.map(c => c[1])
+        const [x0, x1] = [Math.min(...xs), Math.max(...xs)], [y0, y1] = [Math.min(...ys), Math.max(...ys)]
+        let best = -1
+        for (let i = 1; i < 24; i++) for (let j = 1; j < 24; j++) {
+          const c = [x0 + ((x1 - x0) * i) / 24, y0 + ((y1 - y0) * j) / 24]
+          if (!inside(c, ring)) continue
+          const d = edgeDist(c, ring)
+          if (d > best) { best = d; pt = c }
+        }
+      }
+      return { type: 'Feature' as const, properties: { ...f.properties }, geometry: { type: 'Point' as const, coordinates: pt } }
+    }).filter(Boolean) as GeoJSON.Feature[]
+    return { type: 'FeatureCollection', features }
+  }, [stateGeo])
+
   useEffect(() => {
     let live = true
     ;(arena === 'AE' ? loadACGeo() : loadPCGeo()).then(g => { if (live) setGeo(g) })
@@ -310,16 +376,22 @@ export default function ChoroplethMap({ byState, arena, activeYear, mode = 'winn
       for (const id of ['seat-labels', 'state-labels', 'seats-hover', 'state-line', 'seats-line', 'seats-fill']) if (map.getLayer(id)) map.removeLayer(id)
       if (map.getSource('seats')) map.removeSource('seats')
       if (map.getSource('states')) map.removeSource('states')
+      if (map.getSource('state-points')) map.removeSource('state-points')
       map.addSource('seats', { type: 'geojson', data: geo as never })
       map.addLayer({ id: 'seats-fill', type: 'fill', source: 'seats', paint: { 'fill-color': palRef.current.noData, 'fill-opacity': 0.9 } })
       map.addLayer({ id: 'seats-line', type: 'line', source: 'seats', paint: { 'line-color': palRef.current.line, 'line-width': ['interpolate', ['linear'], ['zoom'], 3, 0.2, 7, 0.8] as never } })
       if (stateGeo) {   // dissolved state outlines, drawn on top of the constituency fills
         map.addSource('states', { type: 'geojson', data: stateGeo as never })
         map.addLayer({ id: 'state-line', type: 'line', source: 'states', layout: { 'line-join': 'round' }, paint: { 'line-color': palRef.current.stateLine, 'line-width': ['interpolate', ['linear'], ['zoom'], 3, 0.9, 7, 2.2] as never } })
-        // State names — one per state at its visual centre. Placed BEFORE seat labels so they win
-        // collisions (priority). Fades back as you zoom in and the seat names take over.
+      }
+      // State names — ONE per state, from a dedicated point source. ⚠ Never drive this off the
+      // polygon source: MapLibre labels every part of a MultiPolygon, which drew Andaman &
+      // Nicobar's name once per island. Placed BEFORE seat labels so it wins collisions.
+      // Fades back as you zoom in and the seat names take over.
+      if (stateLabelGeo) {
+        map.addSource('state-points', { type: 'geojson', data: stateLabelGeo as never })
         map.addLayer({
-          id: 'state-labels', type: 'symbol', source: 'states', minzoom: 3.2,
+          id: 'state-labels', type: 'symbol', source: 'state-points', minzoom: 3.2,
           layout: {
             'text-field': ['get', 'st_name'] as never, 'text-font': ['OpenSans-Bold'],
             'text-transform': 'uppercase', 'text-letter-spacing': 0.08, 'text-max-width': 7, 'text-padding': 6,
@@ -348,7 +420,7 @@ export default function ChoroplethMap({ byState, arena, activeYear, mode = 'winn
     }
     mount()
     return () => { cancelled = true }
-  }, [geo, stateGeo])
+  }, [geo, stateGeo, stateLabelGeo])
 
   useEffect(() => { paint() }, [colors])
 
