@@ -16,10 +16,17 @@ const SignOutIcon = () => (
 )
 
 function Avatar({ photo, initial, size }: { photo?: string | null; initial: string; size: number }) {
+  // ⚠ The initial is the fallback for a MISSING photo — it must also be the fallback for one that
+  // fails to LOAD. Without the error path a blocked photo rendered the browser's broken-image glyph
+  // inside the circle, which is exactly what the Caddyfile's img-src did to Google's avatar host
+  // before it was allow-listed. Any future CSP tightening, dead URL or offline load lands here now.
+  const [failed, setFailed] = useState(false)
+  useEffect(() => { setFailed(false) }, [photo])   // a different account deserves a fresh attempt
   return (
     <span className="rounded-full overflow-hidden grid place-items-center shrink-0" style={{ width: size, height: size }}>
-      {photo
-        ? <img src={photo} alt="" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
+      {photo && !failed
+        ? <img src={photo} alt="" onError={() => setFailed(true)}
+            className="w-full h-full object-cover" referrerPolicy="no-referrer" />
         : <span className="w-full h-full grid place-items-center font-semibold text-black bg-gradient-to-br from-[#e8c766] to-[#b0812a]" style={{ fontSize: size * 0.42 }}>{initial}</span>}
     </span>
   )
