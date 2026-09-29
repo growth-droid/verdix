@@ -1,0 +1,3 @@
+arena,state,year,seat_no,seat_name,el_m,el_f,el_tg,el_total,svc,vt_m,vt_f,vt_tg,vt_postal,vt_total,poll_pct,source_file
+GE,Dadra & Nagar Haveli and Daman & Diu,2024,1,Daman & Diu,67710,66491,0,134201,12,44779,47500,0,169,92448,68.89,https://www.eci.gov.in/eci-backend/public/all_files/GE-2024-statistical-report/13-PC-Wise-Voters-Turn-Out.xls
+GE,Dadra & Nagar Haveli and Daman & Diu,2024,2,Dadar & Nagar Haveli (ST),148106,134929,0,283035,11,106270,98987,0,368,205625,72.65,https://www.eci.gov.in/eci-backend/public/all_files/GE-2024-statistical-report/13-PC-Wise-Voters-Turn-Out.xls

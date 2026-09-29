@@ -1,0 +1,41 @@
+arena,state,year,seat_no,seat_name,el_m,el_f,el_tg,el_total,svc,vt_m,vt_f,vt_tg,vt_postal,vt_total,poll_pct,source_file
+GE,Bihar,2024,1,Valmiki Nagar,968965,860015,72,1829052,1771,532471,567647,7,3349,1103474,60.33,https://www.eci.gov.in/eci-backend/public/all_files/GE-2024-statistical-report/13-PC-Wise-Voters-Turn-Out.xls
+GE,Bihar,2024,2,Paschim Champaran,939087,820083,64,1759234,3156,535461,546703,6,4628,1086798,61.78,https://www.eci.gov.in/eci-backend/public/all_files/GE-2024-statistical-report/13-PC-Wise-Voters-Turn-Out.xls
+GE,Bihar,2024,3,Purvi Champaran,942619,850800,21,1793440,2679,517273,551813,5,5253,1074344,59.90,https://www.eci.gov.in/eci-backend/public/all_files/GE-2024-statistical-report/13-PC-Wise-Voters-Turn-Out.xls
+GE,Bihar,2024,4,Sheohar,969489,864885,63,1834437,1692,501272,551231,2,3484,1055989,57.56,https://www.eci.gov.in/eci-backend/public/all_files/GE-2024-statistical-report/13-PC-Wise-Voters-Turn-Out.xls
+GE,Bihar,2024,5,Sitamarhi,1029895,920058,75,1950028,2032,518587,575804,5,2564,1096960,56.25,https://www.eci.gov.in/eci-backend/public/all_files/GE-2024-statistical-report/13-PC-Wise-Voters-Turn-Out.xls
+GE,Bihar,2024,6,Madhubani,1016061,920607,91,1936759,1779,473327,553007,4,1790,1028128,53.08,https://www.eci.gov.in/eci-backend/public/all_files/GE-2024-statistical-report/13-PC-Wise-Voters-Turn-Out.xls
+GE,Bihar,2024,7,Jhanjharpur,1047537,957652,89,2005278,2238,503619,587770,5,2723,1094117,54.56,https://www.eci.gov.in/eci-backend/public/all_files/GE-2024-statistical-report/13-PC-Wise-Voters-Turn-Out.xls
+GE,Bihar,2024,8,Supaul,998369,930477,41,1928887,1680,568472,656552,2,6528,1231554,63.85,https://www.eci.gov.in/eci-backend/public/all_files/GE-2024-statistical-report/13-PC-Wise-Voters-Turn-Out.xls
+GE,Bihar,2024,9,Araria,1050929,968734,94,2019757,990,598132,652069,6,2544,1252751,62.02,https://www.eci.gov.in/eci-backend/public/all_files/GE-2024-statistical-report/13-PC-Wise-Voters-Turn-Out.xls
+GE,Bihar,2024,10,Kishanganj,945306,884825,66,1830197,203,556663,593406,1,1226,1151296,62.91,https://www.eci.gov.in/eci-backend/public/all_files/GE-2024-statistical-report/13-PC-Wise-Voters-Turn-Out.xls
+GE,Bihar,2024,11,Katihar,955971,878511,30,1834512,1503,561942,606768,0,3823,1172533,63.92,https://www.eci.gov.in/eci-backend/public/all_files/GE-2024-statistical-report/13-PC-Wise-Voters-Turn-Out.xls
+GE,Bihar,2024,12,Purnia,977600,917363,73,1895036,1338,590192,604414,1,1631,1196238,63.12,https://www.eci.gov.in/eci-backend/public/all_files/GE-2024-statistical-report/13-PC-Wise-Voters-Turn-Out.xls
+GE,Bihar,2024,13,Madhepura,1076602,996956,50,2073608,2442,575199,632297,3,2323,1209822,58.34,https://www.eci.gov.in/eci-backend/public/all_files/GE-2024-statistical-report/13-PC-Wise-Voters-Turn-Out.xls
+GE,Bihar,2024,14,Darbhanga,937999,844820,34,1782853,1497,491044,531090,0,2852,1024986,57.49,https://www.eci.gov.in/eci-backend/public/all_files/GE-2024-statistical-report/13-PC-Wise-Voters-Turn-Out.xls
+GE,Bihar,2024,15,Muzaffarpur,987259,881759,54,1869072,2966,550167,559926,2,2838,1112933,59.54,https://www.eci.gov.in/eci-backend/public/all_files/GE-2024-statistical-report/13-PC-Wise-Voters-Turn-Out.xls
+GE,Bihar,2024,16,Vaishali,989468,882340,69,1871877,2699,564561,605297,3,2575,1172436,62.63,https://www.eci.gov.in/eci-backend/public/all_files/GE-2024-statistical-report/13-PC-Wise-Voters-Turn-Out.xls
+GE,Bihar,2024,17,Gopalganj (SC),1031493,995481,80,2027054,2381,477669,581719,5,5188,1064581,52.52,https://www.eci.gov.in/eci-backend/public/all_files/GE-2024-statistical-report/13-PC-Wise-Voters-Turn-Out.xls
+GE,Bihar,2024,18,Siwan,992994,908907,55,1901956,5444,465107,530396,3,2698,998204,52.48,https://www.eci.gov.in/eci-backend/public/all_files/GE-2024-statistical-report/13-PC-Wise-Voters-Turn-Out.xls
+GE,Bihar,2024,19,Maharajganj,1015534,926911,4,1942449,7512,470759,540703,0,3851,1015313,52.27,https://www.eci.gov.in/eci-backend/public/all_files/GE-2024-statistical-report/13-PC-Wise-Voters-Turn-Out.xls
+GE,Bihar,2024,20,Saran,946197,854584,9,1800790,5780,504215,514278,1,4119,1022613,56.79,https://www.eci.gov.in/eci-backend/public/all_files/GE-2024-statistical-report/13-PC-Wise-Voters-Turn-Out.xls
+GE,Bihar,2024,21,Hajipur (SC),1037490,935354,71,1972915,5821,574484,574904,6,6211,1155605,58.57,https://www.eci.gov.in/eci-backend/public/all_files/GE-2024-statistical-report/13-PC-Wise-Voters-Turn-Out.xls
+GE,Bihar,2024,22,Ujiarpur,922736,825621,20,1748377,2969,503464,536716,3,2566,1042749,59.64,https://www.eci.gov.in/eci-backend/public/all_files/GE-2024-statistical-report/13-PC-Wise-Voters-Turn-Out.xls
+GE,Bihar,2024,23,Samastipur (SC),956619,863369,28,1820016,1486,526434,566849,5,2578,1095866,60.21,https://www.eci.gov.in/eci-backend/public/all_files/GE-2024-statistical-report/13-PC-Wise-Voters-Turn-Out.xls
+GE,Bihar,2024,24,Begusarai,1159084,1041292,59,2200435,4346,627666,661367,9,7185,1296227,58.91,https://www.eci.gov.in/eci-backend/public/all_files/GE-2024-statistical-report/13-PC-Wise-Voters-Turn-Out.xls
+GE,Bihar,2024,25,Khagaria,966449,877270,48,1843767,3550,502543,556066,3,3687,1062299,57.62,https://www.eci.gov.in/eci-backend/public/all_files/GE-2024-statistical-report/13-PC-Wise-Voters-Turn-Out.xls
+GE,Bihar,2024,26,Bhagalpur,1031249,956849,109,1988207,5176,545424,516186,4,3417,1065031,53.57,https://www.eci.gov.in/eci-backend/public/all_files/GE-2024-statistical-report/13-PC-Wise-Voters-Turn-Out.xls
+GE,Bihar,2024,27,Banka,982365,877574,28,1859967,3401,499906,511710,0,3315,1014931,54.57,https://www.eci.gov.in/eci-backend/public/all_files/GE-2024-statistical-report/13-PC-Wise-Voters-Turn-Out.xls
+GE,Bihar,2024,28,Munger,1091862,959915,52,2051829,9550,597974,536569,7,4634,1139184,55.52,https://www.eci.gov.in/eci-backend/public/all_files/GE-2024-statistical-report/13-PC-Wise-Voters-Turn-Out.xls
+GE,Bihar,2024,29,Nalanda,1202273,1091652,69,2293994,5754,566513,572822,1,5620,1144956,49.91,https://www.eci.gov.in/eci-backend/public/all_files/GE-2024-statistical-report/13-PC-Wise-Voters-Turn-Out.xls
+GE,Bihar,2024,30,Patna Sahib,1211129,1084287,111,2295527,3482,592775,480981,6,2230,1075992,46.87,https://www.eci.gov.in/eci-backend/public/all_files/GE-2024-statistical-report/13-PC-Wise-Voters-Turn-Out.xls
+GE,Bihar,2024,31,Patliputra,1095711,984846,56,2080613,6928,664265,563524,4,2901,1230694,59.15,https://www.eci.gov.in/eci-backend/public/all_files/GE-2024-statistical-report/13-PC-Wise-Voters-Turn-Out.xls
+GE,Bihar,2024,32,Arrah,1168844,1014748,33,2183625,18051,580976,507760,2,8342,1097080,50.24,https://www.eci.gov.in/eci-backend/public/all_files/GE-2024-statistical-report/13-PC-Wise-Voters-Turn-Out.xls
+GE,Bihar,2024,33,Buxar,1016998,917337,17,1934352,11188,562516,503778,6,7786,1074086,55.53,https://www.eci.gov.in/eci-backend/public/all_files/GE-2024-statistical-report/13-PC-Wise-Voters-Turn-Out.xls
+GE,Bihar,2024,34,Sasaram (SC),1000776,914111,27,1914914,4546,578643,513511,4,5767,1097925,57.34,https://www.eci.gov.in/eci-backend/public/all_files/GE-2024-statistical-report/13-PC-Wise-Voters-Turn-Out.xls
+GE,Bihar,2024,35,Karakat,986518,901417,70,1888005,6814,546361,482271,9,4738,1033379,54.73,https://www.eci.gov.in/eci-backend/public/all_files/GE-2024-statistical-report/13-PC-Wise-Voters-Turn-Out.xls
+GE,Bihar,2024,36,Jahanabad,881253,797431,32,1678716,8389,480456,440509,0,6731,927696,55.26,https://www.eci.gov.in/eci-backend/public/all_files/GE-2024-statistical-report/13-PC-Wise-Voters-Turn-Out.xls
+GE,Bihar,2024,37,Aurangabad,982046,893729,34,1875809,4245,500839,441460,2,3743,946044,50.43,https://www.eci.gov.in/eci-backend/public/all_files/GE-2024-statistical-report/13-PC-Wise-Voters-Turn-Out.xls
+GE,Bihar,2024,38,Gaya (SC),948485,872825,20,1821330,4515,508825,449559,3,6483,964870,52.98,https://www.eci.gov.in/eci-backend/public/all_files/GE-2024-statistical-report/13-PC-Wise-Voters-Turn-Out.xls
+GE,Bihar,2024,39,Nawada,1047731,962405,150,2010286,4162,455951,409925,4,5958,871838,43.37,https://www.eci.gov.in/eci-backend/public/all_files/GE-2024-statistical-report/13-PC-Wise-Voters-Turn-Out.xls
+GE,Bihar,2024,40,Jamui (SC),1000537,910031,51,1910619,3493,499732,477605,1,1999,979337,51.26,https://www.eci.gov.in/eci-backend/public/all_files/GE-2024-statistical-report/13-PC-Wise-Voters-Turn-Out.xls

@@ -1,0 +1,5 @@
+arena,state,year,seat_no,seat_name,el_m,el_f,el_tg,el_total,svc,vt_m,vt_f,vt_tg,vt_postal,vt_total,poll_pct,source_file
+GE,Himachal Pradesh,2024,1,KANGRA,776880,747147,5,1524032,21518,488637,531432,3,18606,1038678,68.15,https://www.eci.gov.in/eci-backend/public/all_files/GE-2024-statistical-report/13-PC-Wise-Voters-Turn-Out.xls
+GE,Himachal Pradesh,2024,2,MANDI,698666,678504,3,1377173,13113,494734,503173,3,20775,1018685,73.97,https://www.eci.gov.in/eci-backend/public/all_files/GE-2024-statistical-report/13-PC-Wise-Voters-Turn-Out.xls
+GE,Himachal Pradesh,2024,3,HAMIRPUR,738522,717562,15,1456099,23463,485390,537567,13,29428,1052398,72.28,https://www.eci.gov.in/eci-backend/public/all_files/GE-2024-statistical-report/13-PC-Wise-Voters-Turn-Out.xls
+GE,Himachal Pradesh,2024,4,SHIMLA (SC),699007,655646,12,1354665,8296,501197,458261,8,11849,971315,71.70,https://www.eci.gov.in/eci-backend/public/all_files/GE-2024-statistical-report/13-PC-Wise-Voters-Turn-Out.xls

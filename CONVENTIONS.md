@@ -4,11 +4,11 @@
 CURRENTLY TRUE in the codebase and cost real time to learn. Mined from the dated build log in
 [CLAUDE.md](CLAUDE.md) so that file could stay readable — this is the reference, that is the state + history.
 
-Last synced with the code: **2026-08-12**. If you change one of these, update it here in the same commit.
+Last synced with the code: **2026-09-29**. If you change one of these, update it here in the same commit.
 
 ## Contents
 - [Build & dev-server gotchas](#build--devserver-gotchas) (14)
-- [Data & extracts](#data--extracts) (24)
+- [Data & extracts](#data--extracts) (28)
 - [Map & geo joins](#map--geo-joins) (18)
 - [Charts (ECharts)](#charts-echarts) (18)
 - [Theming & design tokens](#theming--design-tokens) (12)
@@ -65,6 +65,11 @@ _How public/data is produced and what is quirky in it._
 - The Compare segment deep-dive FOLLOWS the assembly-year picker via the per-state extract `split/ae_<slug>.json` (`{ ae_year: { "segDom|party": share } }`, emitted by build_extracts for every AE year with candidate data, read by `loadAESegShares`), which overrides each split row's `av` with the SELECTED AE year's segment share. If the picked AE has no entry (winners-only, e.g. AP AE 2024) `paired` empties → show the "AE {yr} is winners-only for {state}; pick an assembly year with complete data" message. The fixed `splitFile.ay` baseline is now unused by the deep-dive.
 - `alliance_cf.json` (the pooling counterfactual): UNALIGNED parties NEVER pool, and it is gated to elections with ≥98% candidate coverage and ≥3 candidates/seat.
 - Don't recompute alliance labels in the app — they're baked into the data by the extract build.
+- ELECTORS: the OFFICIAL ECI extract (`electors_eci/`) beats the database baseline (`electors/`) in `loadElectors` — per seat, a WHOLE-RECORD choice (`src: 'eci' | 'db'`), never a field-by-field blend, so a total and its gender split always come from the same report. This is deliberately the OPPOSITE of the candidate overlay, where the base file wins.  
+  **Why:** the baseline (TCPD via bq_export) is wrong in both directions — Karnataka 2023: 0/224 seats agree, +637,011 in total, and it can't reproduce the official 73.84% turnout. Never "fill" a gender split into a `db` record.
+- `tools/sources/eci_electors/*.csv` are COMMITTED source data (163 files, fixed header contract in `build_electors_eci.py`), not scratch. ECI purges old result folders (the LS-2024 archive path already 404s); these are the only way to rebuild. ECI `.xls` files need `xlrd.open_workbook(..., ignore_workbook_corruption=True)`. Fetch ECI with plain public requests only — never replay the request header the site's JS carries.
+- Both elector builders gate every row against the app's own `seats_ae`/`seats_ge` (via `build_candidates.load_allowed`) and WALK to the next free number when two different seats share one — the pre-2020 Dadra & Nagar Haveli / Daman & Diu pair are both PC 1. Each record stores its seat name `c`, and SeatDrawer's lookup verifies it (number → name match → unique name → number). ECI hard checks: voters > electors × 1.02 drops the row; m+f+tg off the total by >0.5% (with or without service electors) drops only the gender split.
+- Gender turnout in the briefing = EVM voters ÷ electors per gender, which EXCLUDES postal votes (they have no gender in the ECI reports), so men's and women's rates can both sit a little below the headline turnout. The UI says so. Express the gap as both rates or "{x}%" — never "points".
 
 ## Map & geo joins
 
@@ -131,7 +136,7 @@ _The two-token-block system, fonts, colour rules._
 - `useThemeStore` / `useTheme()` live in store.ts, persist to localStorage key `verdix-theme` (default dark), and `main.tsx` sets `data-theme` on <html> pre-paint so there is no flash. `useTheme()` must stay REACTIVE — the Chart wrapper and the map repaint off it.
 - `ChoroplethMap` owns `MAP_PAL[dark|light]` (bg/noData/line/hover/stateLine/stateText/seatText/halo) and a `useTheme()`-driven effect that repaints bg/line/hover and re-runs `paint()` on switch; the colours memo must list `themeMode` explicitly in its deps.
 - `colors.ts` party/alliance palette is a SINGLE dual-theme set (old neon-light tones were deepened to mid-tones: TDP #eab308, BJD #65a30d, IND #475569). Only greys/tracks/bands that can't satisfy both canvases go theme-aware per-component: ChoroplethMap `MARGIN_BANDS_L/D` + `TURNOUT_BANDS_L/D`, MapPage party-scoreboard `OUT` fill, Trajectory strike-rate track (`faintLine(mode)`).
-- `SeatDrawer` uses its own black/neutral palette — a `C` object keyed on `useTheme()` mode (`#000`/`#0c0c0e`/`#141417` + neutral grey text/axes in dark, white in light) — NOT the slate vars, and forces ECharts `axisLabel` to neutral grey.
+- `SeatDrawer` uses its own black/neutral palette — a `C` object keyed on `useTheme()` mode (`#000`/`#0c0c0e`/`#141417` + neutral grey text/axes in dark, white in light) — NOT the slate vars, and forces ECharts `axisLabel` to neutral grey. Its dark `faint`/`eyebrow` grey is **`#7f7f88`** (lifted from `#71717a`, which measured 4.04:1 on the drawer's `#0c0c0e` panels and failed AA on every section eyebrow).
 
 ## Global filter & navigation
 

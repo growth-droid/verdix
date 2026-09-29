@@ -1,0 +1,26 @@
+arena,state,year,seat_no,seat_name,el_m,el_f,el_tg,el_total,svc,vt_m,vt_f,vt_tg,vt_postal,vt_total,poll_pct,source_file
+GE,Rajasthan,2024,1,GANGANAGAR (SC),1098275,1005628,65,2103968,1966,743894,655765,43,14608,1414310,67.22,https://www.eci.gov.in/eci-backend/public/all_files/GE-2024-statistical-report/13-PC-Wise-Voters-Turn-Out.xls
+GE,Rajasthan,2024,2,BIKANER (SC),1080305,970411,32,2050748,2349,617152,491253,18,10949,1119372,54.58,https://www.eci.gov.in/eci-backend/public/all_files/GE-2024-statistical-report/13-PC-Wise-Voters-Turn-Out.xls
+GE,Rajasthan,2024,3,CHURU,1164762,1057435,16,2222213,9026,734239,673539,11,18809,1426598,64.20,https://www.eci.gov.in/eci-backend/public/all_files/GE-2024-statistical-report/13-PC-Wise-Voters-Turn-Out.xls
+GE,Rajasthan,2024,4,JHUNJHUNU,1108445,989274,13,2097732,29192,560934,533967,7,30208,1125116,53.63,https://www.eci.gov.in/eci-backend/public/all_files/GE-2024-statistical-report/13-PC-Wise-Voters-Turn-Out.xls
+GE,Rajasthan,2024,5,SIKAR,1172253,1060067,14,2232334,17434,650064,624239,8,30026,1304337,58.43,https://www.eci.gov.in/eci-backend/public/all_files/GE-2024-statistical-report/13-PC-Wise-Voters-Turn-Out.xls
+GE,Rajasthan,2024,6,JAIPUR RURAL,1154768,1039779,8,2194555,9577,662155,576600,7,26826,1265588,57.67,https://www.eci.gov.in/eci-backend/public/all_files/GE-2024-statistical-report/13-PC-Wise-Voters-Turn-Out.xls
+GE,Rajasthan,2024,7,JAIPUR,1192089,1096624,80,2288793,1443,782994,666587,36,15383,1465000,64.01,https://www.eci.gov.in/eci-backend/public/all_files/GE-2024-statistical-report/13-PC-Wise-Voters-Turn-Out.xls
+GE,Rajasthan,2024,8,ALWAR,1099008,976062,23,2075093,15205,661191,576274,8,19348,1256821,60.57,https://www.eci.gov.in/eci-backend/public/all_files/GE-2024-statistical-report/13-PC-Wise-Voters-Turn-Out.xls
+GE,Rajasthan,2024,9,BHARATPUR (SC),1136386,988564,21,2124971,10055,610675,506165,10,19164,1136014,53.46,https://www.eci.gov.in/eci-backend/public/all_files/GE-2024-statistical-report/13-PC-Wise-Voters-Turn-Out.xls
+GE,Rajasthan,2024,10,KARAULI-DHOLPUR (SC),1068519,911647,16,1980182,4830,545202,434406,7,11383,990998,50.05,https://www.eci.gov.in/eci-backend/public/all_files/GE-2024-statistical-report/13-PC-Wise-Voters-Turn-Out.xls
+GE,Rajasthan,2024,11,DAUSA (ST),1007209,896307,4,1903520,4216,573806,484775,2,15949,1074532,56.45,https://www.eci.gov.in/eci-backend/public/all_files/GE-2024-statistical-report/13-PC-Wise-Voters-Turn-Out.xls
+GE,Rajasthan,2024,12,TONK-SAWAI MADHOPUR,1124371,1026231,14,2150616,2488,658943,556401,7,13251,1228602,57.13,https://www.eci.gov.in/eci-backend/public/all_files/GE-2024-statistical-report/13-PC-Wise-Voters-Turn-Out.xls
+GE,Rajasthan,2024,13,AJMER,1018562,980810,27,1999399,3700,620954,569606,16,12259,1202835,60.16,https://www.eci.gov.in/eci-backend/public/all_files/GE-2024-statistical-report/13-PC-Wise-Voters-Turn-Out.xls
+GE,Rajasthan,2024,14,NAGAUR,1117896,1037594,12,2155502,8777,637028,591461,7,12783,1241279,57.59,https://www.eci.gov.in/eci-backend/public/all_files/GE-2024-statistical-report/13-PC-Wise-Voters-Turn-Out.xls
+GE,Rajasthan,2024,15,PALI,1222106,1126130,38,2348274,5042,695443,644557,18,15556,1355574,57.73,https://www.eci.gov.in/eci-backend/public/all_files/GE-2024-statistical-report/13-PC-Wise-Voters-Turn-Out.xls
+GE,Rajasthan,2024,16,JODHPUR,1120959,1017235,47,2138241,5528,736619,633721,31,15547,1385918,64.82,https://www.eci.gov.in/eci-backend/public/all_files/GE-2024-statistical-report/13-PC-Wise-Voters-Turn-Out.xls
+GE,Rajasthan,2024,17,BARMER,1179235,1029386,9,2208630,2393,900810,774502,2,13824,1689138,76.48,https://www.eci.gov.in/eci-backend/public/all_files/GE-2024-statistical-report/13-PC-Wise-Voters-Turn-Out.xls
+GE,Rajasthan,2024,18,JALORE,1205880,1091798,14,2297692,364,753227,691665,4,6635,1451531,63.17,https://www.eci.gov.in/eci-backend/public/all_files/GE-2024-statistical-report/13-PC-Wise-Voters-Turn-Out.xls
+GE,Rajasthan,2024,19,UDAIPUR (ST),1133450,1097771,19,2231240,269,740759,746590,6,11719,1499074,67.19,https://www.eci.gov.in/eci-backend/public/all_files/GE-2024-statistical-report/13-PC-Wise-Voters-Turn-Out.xls
+GE,Rajasthan,2024,20,BANSWARA (ST),1111037,1089548,22,2200607,169,800393,825345,9,11275,1637022,74.39,https://www.eci.gov.in/eci-backend/public/all_files/GE-2024-statistical-report/13-PC-Wise-Voters-Turn-Out.xls
+GE,Rajasthan,2024,21,CHITTORGARH,1092935,1077776,27,2170738,571,768329,720557,16,10694,1499596,69.08,https://www.eci.gov.in/eci-backend/public/all_files/GE-2024-statistical-report/13-PC-Wise-Voters-Turn-Out.xls
+GE,Rajasthan,2024,22,RAJSAMAND,1059097,1005356,25,2064478,3536,608423,594871,12,11117,1214423,58.82,https://www.eci.gov.in/eci-backend/public/all_files/GE-2024-statistical-report/13-PC-Wise-Voters-Turn-Out.xls
+GE,Rajasthan,2024,23,BHILWARA,1090873,1057766,18,2148657,1498,662662,633572,10,8900,1305144,60.74,https://www.eci.gov.in/eci-backend/public/all_files/GE-2024-statistical-report/13-PC-Wise-Voters-Turn-Out.xls
+GE,Rajasthan,2024,24,KOTA,1073583,1015232,38,2088853,830,788227,699652,22,13058,1500959,71.86,https://www.eci.gov.in/eci-backend/public/all_files/GE-2024-statistical-report/13-PC-Wise-Voters-Turn-Out.xls
+GE,Rajasthan,2024,25,JHALAWAR-BARAN,1042530,988418,26,2030974,449,760326,655210,16,6605,1422157,70.02,https://www.eci.gov.in/eci-backend/public/all_files/GE-2024-statistical-report/13-PC-Wise-Voters-Turn-Out.xls

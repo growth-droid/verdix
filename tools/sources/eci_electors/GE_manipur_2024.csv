@@ -1,0 +1,3 @@
+arena,state,year,seat_no,seat_name,el_m,el_f,el_tg,el_total,svc,vt_m,vt_f,vt_tg,vt_postal,vt_total,poll_pct,source_file
+GE,Manipur,2024,1,Inner Manipur,483280,517622,213,1001115,9541,374862,419752,107,11316,806037,80.51,https://www.eci.gov.in/eci-backend/public/all_files/GE-2024-statistical-report/13-PC-Wise-Voters-Turn-Out.xls
+GE,Manipur,2024,2,Outer Manipur (ST),518482,531725,35,1050242,12215,387336,406318,10,6068,799732,76.15,https://www.eci.gov.in/eci-backend/public/all_files/GE-2024-statistical-report/13-PC-Wise-Voters-Turn-Out.xls

@@ -1,0 +1,12 @@
+arena,state,year,seat_no,seat_name,el_m,el_f,el_tg,el_total,svc,vt_m,vt_f,vt_tg,vt_postal,vt_total,poll_pct,source_file
+GE,Chhattisgarh,2024,1,SURGUJA (ST),906410,914436,34,1820880,1533,729883,723594,17,2583,1456077,79.97,https://www.eci.gov.in/eci-backend/public/all_files/GE-2024-statistical-report/13-PC-Wise-Voters-Turn-Out.xls
+GE,Chhattisgarh,2024,2,RAIGARH (ST),910278,930519,50,1840847,2300,717183,732501,24,3834,1453542,78.96,https://www.eci.gov.in/eci-backend/public/all_files/GE-2024-statistical-report/13-PC-Wise-Voters-Turn-Out.xls
+GE,Chhattisgarh,2024,3,JANJGIR-CHAMPA (SC),1034274,1023959,27,2058260,2213,695289,693749,16,5899,1394953,67.77,https://www.eci.gov.in/eci-backend/public/all_files/GE-2024-statistical-report/13-PC-Wise-Voters-Turn-Out.xls
+GE,Chhattisgarh,2024,4,KORBA,804659,815340,52,1620051,1187,611280,612740,12,2902,1226934,75.73,https://www.eci.gov.in/eci-backend/public/all_files/GE-2024-statistical-report/13-PC-Wise-Voters-Turn-Out.xls
+GE,Chhattisgarh,2024,5,BILASPUR,1057148,1046690,99,2103937,1250,691721,669675,23,3707,1365126,64.88,https://www.eci.gov.in/eci-backend/public/all_files/GE-2024-statistical-report/13-PC-Wise-Voters-Turn-Out.xls
+GE,Chhattisgarh,2024,6,RAJNANDGAON,930847,938374,8,1869229,1208,729271,716971,5,1641,1447888,77.46,https://www.eci.gov.in/eci-backend/public/all_files/GE-2024-statistical-report/13-PC-Wise-Voters-Turn-Out.xls
+GE,Chhattisgarh,2024,7,DURG,1044025,1048472,54,2092551,2137,775642,764521,20,3678,1543861,73.78,https://www.eci.gov.in/eci-backend/public/all_files/GE-2024-statistical-report/13-PC-Wise-Voters-Turn-Out.xls
+GE,Chhattisgarh,2024,8,RAIPUR,1187126,1188600,304,2376030,651,802653,784404,59,4895,1592011,67.00,https://www.eci.gov.in/eci-backend/public/all_files/GE-2024-statistical-report/13-PC-Wise-Voters-Turn-Out.xls
+GE,Chhattisgarh,2024,9,MAHASAMUND,867846,895818,34,1763698,1221,657072,665050,12,4307,1326441,75.21,https://www.eci.gov.in/eci-backend/public/all_files/GE-2024-statistical-report/13-PC-Wise-Voters-Turn-Out.xls
+GE,Chhattisgarh,2024,10,BASTAR (ST),701885,771873,52,1473810,1603,483145,522436,21,3321,1008923,68.46,https://www.eci.gov.in/eci-backend/public/all_files/GE-2024-statistical-report/13-PC-Wise-Voters-Turn-Out.xls
+GE,Chhattisgarh,2024,11,KANKER (ST),813775,845581,18,1659374,4934,621453,639479,10,6609,1267551,76.39,https://www.eci.gov.in/eci-backend/public/all_files/GE-2024-statistical-report/13-PC-Wise-Voters-Turn-Out.xls

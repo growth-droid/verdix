@@ -1,0 +1,8 @@
+arena,state,year,seat_no,seat_name,el_m,el_f,el_tg,el_total,svc,vt_m,vt_f,vt_tg,vt_postal,vt_total,poll_pct,source_file
+GE,Delhi,2024,1,Chandni Chowk,884174,762125,168,1646467,509,525080,438761,54,2457,966352,58.69,https://www.eci.gov.in/eci-backend/public/all_files/GE-2024-statistical-report/13-PC-Wise-Voters-Turn-Out.xls
+GE,Delhi,2024,2,North-East Delhi,1327153,1137095,149,2464397,1238,842715,706348,56,4560,1553679,63.04,https://www.eci.gov.in/eci-backend/public/all_files/GE-2024-statistical-report/13-PC-Wise-Voters-Turn-Out.xls
+GE,Delhi,2024,3,East Delhi,1152084,969422,104,2121610,1026,683033,578799,55,2524,1264411,59.60,https://www.eci.gov.in/eci-backend/public/all_files/GE-2024-statistical-report/13-PC-Wise-Voters-Turn-Out.xls
+GE,Delhi,2024,4,New Delhi,831520,695096,78,1526694,1623,460308,384559,22,2875,847764,55.53,https://www.eci.gov.in/eci-backend/public/all_files/GE-2024-statistical-report/13-PC-Wise-Voters-Turn-Out.xls
+GE,Delhi,2024,5,North-West Delhi (SC),1385389,1183623,262,2569274,1851,809077,676284,64,4897,1490322,58.01,https://www.eci.gov.in/eci-backend/public/all_files/GE-2024-statistical-report/13-PC-Wise-Voters-Turn-Out.xls
+GE,Delhi,2024,6,West Delhi,1374284,1218083,131,2592498,4521,811670,706359,46,6676,1524751,58.81,https://www.eci.gov.in/eci-backend/public/all_files/GE-2024-statistical-report/13-PC-Wise-Voters-Turn-Out.xls
+GE,Delhi,2024,7,South Delhi,1269141,1024221,336,2293698,1934,713974,579455,47,2830,1296306,56.52,https://www.eci.gov.in/eci-backend/public/all_files/GE-2024-statistical-report/13-PC-Wise-Voters-Turn-Out.xls

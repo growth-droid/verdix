@@ -1,7 +1,7 @@
-import { useEffect, useMemo, type CSSProperties, type ReactNode } from 'react'
+import { useEffect, useMemo, useState, type CSSProperties, type ReactNode } from 'react'
 import { createPortal } from 'react-dom'
 import { useNavigate } from 'react-router-dom'
-import type { Seat } from '../lib/data'
+import { loadElectors, type ElectorFile, type ElectorRec, type Seat } from '../lib/data'
 import { seatHistories, seatKey } from '../lib/analysis'
 import { comparable } from '../lib/joins'
 import { colorFor, readable } from '../lib/colors'
@@ -25,6 +25,61 @@ export default function SeatDrawer({ seat, all, arena, onClose }:
   const mode = useTheme()
   const hist = useMemo(() => seatHistories(all).get(seatKey(seat)) ?? [seat], [all, seat])
 
+  // ── electorate (total + gender) — lazy per state; absent seats just don't render the section ──
+  const [electors, setElectors] = useState<ElectorFile | null>(null)
+  useEffect(() => {
+    let live = true
+    setElectors(null)
+    loadElectors(seat.s).then(f => { if (live) setElectors(f) }).catch(() => {})
+    return () => { live = false }
+  }, [seat.s])
+  const EL = useMemo(() => {
+    // Look up by number, then VERIFY by name. The app's own seat table numbers some pairs of
+    // seats identically — pre-2020 Dadra & Nagar Haveli and Daman & Diu are both PC 1 — so a
+    // number alone would show Dadra's electorate when you open Daman & Diu. If the name at that
+    // number isn't this seat, find the record that is.
+    const norm = (x?: string | null) => (x ?? '').toUpperCase().replace(/\s*\((?:SC|ST|GEN)\)\s*$/, '').replace(/[^A-Z0-9]/g, '')
+    const same = (a?: string | null, b?: string | null) => { const x = norm(a), y = norm(b); return !!x && !!y && (x === y || x.includes(y) || y.includes(x)) }
+    // Precedence matters, and each step exists for a case that broke without it:
+    //  1. number AND name agree — the normal case. Checking the numbered record FIRST also keeps
+    //     India's repeated names safe (Gujarat has two KALOLs; a name-first search could grab the
+    //     wrong one).
+    //  2. the number points at a different seat, and exactly ONE record carries this name — a
+    //     numbering collision (Dadra & Nagar Haveli / Daman & Diu, both PC 1). Use that one.
+    //  3. otherwise trust the number. The names are then just spelled differently (Badwani /
+    //     BARWANI (S.T.), Jeypore / Jayapur) — all 375 such cases were audited as the same seat.
+    //     Rejecting them would silently hide the section for every one.
+    const find = (year: number, no: number, name: string | null): ElectorRec | undefined => {
+      const yr = electors?.[arena]?.[String(year)]
+      if (!yr) return undefined
+      const hit = yr[String(no)]
+      if (hit && (!hit.c || same(hit.c, name))) return hit
+      const named = Object.values(yr).filter(r => same(r.c, name))
+      if (named.length === 1) return named[0]
+      return hit
+    }
+    const rec = find(seat.y, seat.n, seat.c)
+    if (!rec) return null
+    // Previous COMPARABLE election of this same seat — never across a delimitation, where the
+    // "same" number is different ground and growth would be meaningless.
+    const idx = hist.findIndex(h => h.y === seat.y)
+    const prevH = idx > 0 ? hist[idx - 1] : null
+    const prev = prevH && comparable(arena, seat.s, prevH.y, seat.y)
+      ? find(prevH.y, prevH.n, prevH.c) : undefined
+    const hasG = rec.m != null && rec.f != null
+    // Gender turnout = EVM voters / electors of that gender. Postal votes are not split by gender,
+    // so these are turnout EXCLUDING postal votes — ECI labels its own figure the same way.
+    const tm = rec.vm != null && rec.m ? (rec.vm / rec.m) * 100 : null
+    const tf = rec.vf != null && rec.f ? (rec.vf / rec.f) * 100 : null
+    return {
+      rec, hasG,
+      ratio: hasG && rec.m ? Math.round((rec.f! / rec.m) * 1000) : null,      // women per 1,000 men
+      tm, tf, gap: tm != null && tf != null ? tf - tm : null,
+      growth: prev?.e ? ((rec.e - prev.e) / prev.e) * 100 : null,
+      prevYear: prev?.e ? prevH!.y : null,
+    }
+  }, [electors, arena, seat.y, seat.n, seat.s, hist])
+
   useEffect(() => {
     const k = (e: KeyboardEvent) => { if (e.key === 'Escape') onClose() }
     window.addEventListener('keydown', k); return () => window.removeEventListener('keydown', k)
@@ -33,9 +88,13 @@ export default function SeatDrawer({ seat, all, arena, onClose }:
   // ── neutral palette (black in dark, white in light — never blue) ──
   // light: faint/eyebrow/axis lifted to zinc-600 (#52525b) — the pale #a1a1aa/#71717a greys
   // failed contrast on the white panel for eyebrows, KPI labels and 9–10px chart labels.
+  // dark: faint/eyebrow lifted #71717a -> #7f7f88. The old grey measured 4.04:1 on the panel, so
+  // EVERY section eyebrow in the briefing was below AA in dark; light had been fixed, dark never
+  // was. #7f7f88 is the smallest lift clearing 4.6:1 on both panels, and stays below `sub` so the
+  // eyebrow still reads as the quieter tier.
   const C = mode === 'light'
     ? { bg: '#ffffff', panel: '#ffffff', panel2: '#f7f7f8', line: 'rgba(0,0,0,0.10)', text: '#0a0a0a', sub: '#3f3f46', faint: '#52525b', eyebrow: '#52525b', axis: '#52525b', split: 'rgba(0,0,0,0.06)', warn: '#a16207' }
-    : { bg: '#000000', panel: '#0c0c0e', panel2: '#141417', line: 'rgba(255,255,255,0.09)', text: '#fafafa', sub: '#a1a1aa', faint: '#71717a', eyebrow: '#71717a', axis: '#a1a1aa', split: 'rgba(255,255,255,0.06)', warn: '#fbbf24' }
+    : { bg: '#000000', panel: '#0c0c0e', panel2: '#141417', line: 'rgba(255,255,255,0.09)', text: '#fafafa', sub: '#a1a1aa', faint: '#7f7f88', eyebrow: '#7f7f88', axis: '#a1a1aa', split: 'rgba(255,255,255,0.06)', warn: '#fbbf24' }
 
   const A = useMemo(() => {
     const yrs = hist.map(h => h.y)
@@ -231,6 +290,67 @@ export default function SeatDrawer({ seat, all, arena, onClose }:
                       : `The #${stateCtx.rank} closest of ${stateCtx.mCount} decided seats in ${seat.s}.`}
                 </div>
               )}
+            </Section>
+          )}
+
+          {/* the electorate — who could vote here, and who did */}
+          {EL && (
+            <Section eyebrow={`The electorate · ${seat.y}`}
+              title={EL.hasG ? `${EL.rec.e.toLocaleString('en-IN')} electors · ${EL.ratio} women per 1,000 men` : `${EL.rec.e.toLocaleString('en-IN')} electors`}>
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5">
+                <Metric label="Total electors" value={EL.rec.e.toLocaleString('en-IN')}
+                  sub={EL.growth != null ? `${EL.growth >= 0 ? '+' : ''}${EL.growth.toFixed(1)}% since ${EL.prevYear}` : ''} />
+                {EL.hasG && <Metric label="Men" value={EL.rec.m!.toLocaleString('en-IN')} sub={`${((EL.rec.m! / EL.rec.e) * 100).toFixed(1)}%`} />}
+                {EL.hasG && <Metric label="Women" value={EL.rec.f!.toLocaleString('en-IN')} sub={`${((EL.rec.f! / EL.rec.e) * 100).toFixed(1)}%`} />}
+                {EL.hasG && <Metric label="Third gender" value={(EL.rec.tg ?? 0).toLocaleString('en-IN')} />}
+              </div>
+
+              {EL.hasG && (
+                // proportional split — the widths ARE the data, so no axis needed
+                <div style={{ marginTop: 12 }}>
+                  <div style={{ display: 'flex', height: 10, borderRadius: 999, overflow: 'hidden', background: C.panel2 }}
+                    aria-label={`Men ${EL.rec.m}, women ${EL.rec.f}, third gender ${EL.rec.tg ?? 0}`}>
+                    <div style={{ width: `${(EL.rec.m! / EL.rec.e) * 100}%`, background: '#3b82f6' }} />
+                    <div style={{ width: `${(EL.rec.f! / EL.rec.e) * 100}%`, background: '#ec4899' }} />
+                    <div style={{ width: `${((EL.rec.tg ?? 0) / EL.rec.e) * 100}%`, background: '#a855f7' }} />
+                  </div>
+                  <div className="flex flex-wrap gap-x-4 gap-y-1" style={{ fontSize: 11, color: C.sub, marginTop: 6 }}>
+                    <span className="flex items-center gap-1.5"><span style={{ width: 8, height: 8, borderRadius: 2, background: '#3b82f6' }} />Men</span>
+                    <span className="flex items-center gap-1.5"><span style={{ width: 8, height: 8, borderRadius: 2, background: '#ec4899' }} />Women</span>
+                    <span className="flex items-center gap-1.5"><span style={{ width: 8, height: 8, borderRadius: 2, background: '#a855f7' }} />Third gender</span>
+                    {EL.rec.svc ? <span>· {EL.rec.svc.toLocaleString('en-IN')} service electors included</span> : null}
+                  </div>
+                </div>
+              )}
+
+              {EL.tm != null && EL.tf != null && (
+                <div style={{ marginTop: 14, paddingTop: 12, borderTop: `1px solid ${C.line}` }}>
+                  <div style={{ fontSize: 10, letterSpacing: '.5px', textTransform: 'uppercase', color: C.faint, marginBottom: 7 }}>Who turned out</div>
+                  <div className="grid grid-cols-3 gap-2.5">
+                    <Metric label="Men voted" value={EL.tm.toFixed(1) + '%'} />
+                    <Metric label="Women voted" value={EL.tf.toFixed(1) + '%'} />
+                    {/* direction lives in the LABEL, not a caption beside the value: at a third of a
+                        390px screen the old "+11.0% women ahead" ran 16px past its tile. */}
+                    <Metric label={Math.abs(EL.gap!) < 1 ? 'Gender gap' : EL.gap! > 0 ? 'Women ahead by' : 'Men ahead by'}
+                      value={`${Math.abs(EL.gap!).toFixed(1)}%`}
+                      tone={Math.abs(EL.gap!) < 1 ? undefined : readable(EL.gap! > 0 ? '#ec4899' : '#3b82f6', mode)} />
+                  </div>
+                  <div style={{ fontSize: 12, color: C.sub, marginTop: 9 }}>
+                    {Math.abs(EL.gap!) < 1
+                      ? 'Men and women turned out at almost exactly the same rate here.'
+                      : EL.gap! > 0
+                        ? `Women out-voted men — ${EL.tf!.toFixed(1)}% of women against ${EL.tm!.toFixed(1)}% of men. A mobilised female electorate is part of how this seat is decided.`
+                        : `Men out-voted women — ${EL.tm!.toFixed(1)}% of men against ${EL.tf!.toFixed(1)}% of women. The female vote here is under-mobilised headroom.`}
+                    {' '}Turnout excludes postal votes, which ECI does not split by gender.
+                  </div>
+                </div>
+              )}
+
+              <div style={{ fontSize: 10.5, color: C.faint, marginTop: 11 }}>
+                {EL.rec.src === 'eci'
+                  ? 'Source: Election Commission of India, statistical report for this election.'
+                  : 'Source: election database (total electors only — no gender split published for this election).'}
+              </div>
             </Section>
           )}
 

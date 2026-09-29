@@ -1,0 +1,3 @@
+arena,state,year,seat_no,seat_name,el_m,el_f,el_tg,el_total,svc,vt_m,vt_f,vt_tg,vt_postal,vt_total,poll_pct,source_file
+GE,Arunachal Pradesh,2024,1,Arunachal West,251346,268735,4,520085,2701,177023,202586,2,22719,402330,77.36,https://www.eci.gov.in/eci-backend/public/all_files/GE-2024-statistical-report/13-PC-Wise-Voters-Turn-Out.xls
+GE,Arunachal Pradesh,2024,2,Arunachal East,192732,185624,1,378357,3047,153140,158252,0,14671,326063,86.18,https://www.eci.gov.in/eci-backend/public/all_files/GE-2024-statistical-report/13-PC-Wise-Voters-Turn-Out.xls

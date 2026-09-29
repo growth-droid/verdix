@@ -1,0 +1,22 @@
+arena,state,year,seat_no,seat_name,el_m,el_f,el_tg,el_total,svc,vt_m,vt_f,vt_tg,vt_postal,vt_total,poll_pct,source_file
+GE,Odisha,2024,1,Bargarh,822825,810946,122,1633893,1919,663442,638598,29,10457,1312526,80.33,https://www.eci.gov.in/eci-backend/public/all_files/GE-2024-statistical-report/13-PC-Wise-Voters-Turn-Out.xls
+GE,Odisha,2024,2,Sundargarh (ST),780601,798327,168,1579096,2991,569214,581876,39,8631,1159760,73.44,https://www.eci.gov.in/eci-backend/public/all_files/GE-2024-statistical-report/13-PC-Wise-Voters-Turn-Out.xls
+GE,Odisha,2024,3,Sambalpur,753505,747896,137,1501538,1810,596342,596926,34,7513,1200815,79.97,https://www.eci.gov.in/eci-backend/public/all_files/GE-2024-statistical-report/13-PC-Wise-Voters-Turn-Out.xls
+GE,Odisha,2024,4,Keonjhar (ST),791403,798443,95,1589941,1762,617308,635438,15,6010,1258771,79.17,https://www.eci.gov.in/eci-backend/public/all_files/GE-2024-statistical-report/13-PC-Wise-Voters-Turn-Out.xls
+GE,Odisha,2024,5,Mayurbhanj (ST),767080,779143,51,1546274,3347,568416,600915,4,8806,1178141,76.19,https://www.eci.gov.in/eci-backend/public/all_files/GE-2024-statistical-report/13-PC-Wise-Voters-Turn-Out.xls
+GE,Odisha,2024,6,Balasore,817822,792067,154,1610043,2029,611996,623511,42,5450,1240999,77.08,https://www.eci.gov.in/eci-backend/public/all_files/GE-2024-statistical-report/13-PC-Wise-Voters-Turn-Out.xls
+GE,Odisha,2024,7,Bhadrak (SC),912525,861215,188,1773928,3013,624297,671903,38,7345,1303583,73.49,https://www.eci.gov.in/eci-backend/public/all_files/GE-2024-statistical-report/13-PC-Wise-Voters-Turn-Out.xls
+GE,Odisha,2024,8,Jajpur (SC),797675,750851,68,1548594,2930,584753,567085,9,9749,1161596,75.01,https://www.eci.gov.in/eci-backend/public/all_files/GE-2024-statistical-report/13-PC-Wise-Voters-Turn-Out.xls
+GE,Odisha,2024,9,Dhenkanal,792631,740900,171,1533702,3917,611216,582084,31,8672,1202003,78.37,https://www.eci.gov.in/eci-backend/public/all_files/GE-2024-statistical-report/13-PC-Wise-Voters-Turn-Out.xls
+GE,Odisha,2024,10,Bolangir,919930,883309,305,1803544,1800,700985,696273,65,7130,1404453,77.87,https://www.eci.gov.in/eci-backend/public/all_files/GE-2024-statistical-report/13-PC-Wise-Voters-Turn-Out.xls
+GE,Odisha,2024,11,Kalahandi,852184,849744,110,1702038,1258,653769,671244,24,13443,1338480,78.64,https://www.eci.gov.in/eci-backend/public/all_files/GE-2024-statistical-report/13-PC-Wise-Voters-Turn-Out.xls
+GE,Odisha,2024,12,Nabarangpur (ST),742873,771621,116,1514610,470,610090,633386,40,6659,1250175,82.54,https://www.eci.gov.in/eci-backend/public/all_files/GE-2024-statistical-report/13-PC-Wise-Voters-Turn-Out.xls
+GE,Odisha,2024,13,Kandhamal,672860,667607,113,1340580,1490,493057,500210,36,6462,999765,74.58,https://www.eci.gov.in/eci-backend/public/all_files/GE-2024-statistical-report/13-PC-Wise-Voters-Turn-Out.xls
+GE,Odisha,2024,14,Cuttack,813196,761574,209,1574979,3357,581320,537805,35,3919,1123079,71.31,https://www.eci.gov.in/eci-backend/public/all_files/GE-2024-statistical-report/13-PC-Wise-Voters-Turn-Out.xls
+GE,Odisha,2024,15,Kendrapara,929863,865772,90,1795725,3002,638849,638413,10,6192,1283464,71.47,https://www.eci.gov.in/eci-backend/public/all_files/GE-2024-statistical-report/13-PC-Wise-Voters-Turn-Out.xls
+GE,Odisha,2024,16,Jagatsinghpur (SC),879289,824064,136,1703489,2675,657574,626403,25,7324,1291326,75.80,https://www.eci.gov.in/eci-backend/public/all_files/GE-2024-statistical-report/13-PC-Wise-Voters-Turn-Out.xls
+GE,Odisha,2024,17,Puri,823575,766014,109,1589698,3233,608964,585858,27,6585,1201434,75.58,https://www.eci.gov.in/eci-backend/public/all_files/GE-2024-statistical-report/13-PC-Wise-Voters-Turn-Out.xls
+GE,Odisha,2024,18,Bhubaneswar,870888,803561,570,1675019,2245,563065,514851,127,5498,1083541,64.69,https://www.eci.gov.in/eci-backend/public/all_files/GE-2024-statistical-report/13-PC-Wise-Voters-Turn-Out.xls
+GE,Odisha,2024,19,Aska,847842,775419,143,1623404,2430,485508,530520,19,2492,1018539,62.74,https://www.eci.gov.in/eci-backend/public/all_files/GE-2024-statistical-report/13-PC-Wise-Voters-Turn-Out.xls
+GE,Odisha,2024,20,Berhampur,801105,793974,149,1595228,3848,513058,527858,38,5734,1046688,65.61,https://www.eci.gov.in/eci-backend/public/all_files/GE-2024-statistical-report/13-PC-Wise-Voters-Turn-Out.xls
+GE,Odisha,2024,21,Koraput (ST),707468,773914,260,1481642,720,554704,593747,108,6662,1155221,77.97,https://www.eci.gov.in/eci-backend/public/all_files/GE-2024-statistical-report/13-PC-Wise-Voters-Turn-Out.xls

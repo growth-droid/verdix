@@ -6,12 +6,36 @@ For engineering detail: **[CLAUDE.md](CLAUDE.md)** = current state + condensed h
 **[CONVENTIONS.md](CONVENTIONS.md)** = the rules and gotchas · **[README.md](README.md)** = what it
 is and how to run it.
 
-> **Where the product stands (2026-08-12):** 2004–2026 coverage, 8 modules in 3 menus, light + dark
-> themes, mobile-ready, live on Fly.io at https://verdix-elections.fly.dev with access **open** (no
-> login). Entries below this line are history — several describe things that were later changed or
-> removed (the Story deck, the Grid view, dark-only, Netlify hosting).
+> **Where the product stands (2026-09-29):** 2004–2026 coverage, 8 modules in a left-hand rail,
+> light + dark themes, mobile-ready, live on Fly.io at https://verdix-elections.fly.dev behind
+> **Google sign-in** (invite-only; admins manage users at `/admin`). Every seat briefing now carries
+> its electorate and gender split. Entries below this line are history — several describe things
+> that were later changed or removed (the Story deck, the Grid view, dark-only, Netlify hosting,
+> open access).
 
 ---
+
+## 2026-09-29 — Who can vote, and who turned out: men and women in every seat
+- **A new "The electorate" section in every constituency briefing** (click any seat, anywhere).
+  It shows how many people were on the voter roll, how much that grew since the last election,
+  and how it splits into **men, women and third gender** — with the sex ratio (women per 1,000
+  men) and a bar you can read at a glance.
+- **Who actually voted, by gender.** Men's turnout next to women's turnout, and which was higher.
+  Example: Ichchapuram (Andhra Pradesh, 2024) has 1,037 women on the roll for every 1,000 men, and
+  74.3% of women voted against 63.3% of men.
+- **Straight from the Election Commission.** The figures come from the ECI's own statistical
+  reports — almost every assembly election from 2017 to 2026 and every Lok Sabha seat in 2014,
+  2019 and 2024, about 8,950 seats in all. For India as a whole in 2024 that is 97.98 crore voters: 50.34
+  crore men, 47.63 crore women and 48,272 third gender — the official totals.
+- **Older elections still show the total electorate**, just without the men/women split, because
+  the ECI only published those years as PDF documents (the same goes for five 2018 states and
+  Kerala 2021). The briefing says which source it used.
+- **Why the switch to ECI figures:** our database's electorate numbers turned out to be wrong in
+  places — for Karnataka 2023 not one of 224 seats matched the official count — so wherever the ECI
+  report exists, it now wins.
+- **Coming next, pending a decision:** population, SC/ST share, literacy and urban share for every
+  seat from the 2011 Census. The only ready-made seat-level version is licensed for
+  non-commercial use only, so it is on hold until that is settled.
 
 ## 2026-08-12 — Who stood and where they finished + every state at a glance
 - **Candidate positions, on the States page.** Every constituency now lists its **top five

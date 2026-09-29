@@ -1,0 +1,18 @@
+arena,state,year,seat_no,seat_name,el_m,el_f,el_tg,el_total,svc,vt_m,vt_f,vt_tg,vt_postal,vt_total,poll_pct,source_file
+GE,Telangana,2024,1,Adilabad (ST),807060,845247,87,1652394,2219,599098,622388,35,16797,1238318,74.94,https://www.eci.gov.in/eci-backend/public/all_files/GE-2024-statistical-report/13-PC-Wise-Voters-Turn-Out.xls
+GE,Telangana,2024,2,Peddapalle (SC),789125,808664,103,1597892,1462,540807,542627,33,13205,1096672,68.63,https://www.eci.gov.in/eci-backend/public/all_files/GE-2024-statistical-report/13-PC-Wise-Voters-Turn-Out.xls
+GE,Telangana,2024,3,Karimnagar,878459,919607,102,1798168,1018,634663,668982,45,10884,1314574,73.11,https://www.eci.gov.in/eci-backend/public/all_files/GE-2024-statistical-report/13-PC-Wise-Voters-Turn-Out.xls
+GE,Telangana,2024,4,Nizamabad,806832,898669,90,1705591,724,552505,673671,39,7780,1233995,72.35,https://www.eci.gov.in/eci-backend/public/all_files/GE-2024-statistical-report/13-PC-Wise-Voters-Turn-Out.xls
+GE,Telangana,2024,5,Zahirabad,802858,839508,59,1642425,1015,608094,616917,16,11650,1236677,75.30,https://www.eci.gov.in/eci-backend/public/all_files/GE-2024-statistical-report/13-PC-Wise-Voters-Turn-Out.xls
+GE,Telangana,2024,6,Medak,902595,925913,209,1828717,507,688854,683977,65,14315,1387211,75.86,https://www.eci.gov.in/eci-backend/public/all_files/GE-2024-statistical-report/13-PC-Wise-Voters-Turn-Out.xls
+GE,Telangana,2024,7,Malkajgiri,1946386,1833525,542,3780453,857,995829,923240,134,19259,1938462,51.28,https://www.eci.gov.in/eci-backend/public/all_files/GE-2024-statistical-report/13-PC-Wise-Voters-Turn-Out.xls
+GE,Telangana,2024,8,Secunderabad,1087006,1033414,130,2120550,149,537102,502572,32,8898,1048604,49.45,https://www.eci.gov.in/eci-backend/public/all_files/GE-2024-statistical-report/13-PC-Wise-Voters-Turn-Out.xls
+GE,Telangana,2024,9,Hyderabad,1125479,1091630,196,2217305,211,562632,512302,27,6917,1081878,48.79,https://www.eci.gov.in/eci-backend/public/all_files/GE-2024-statistical-report/13-PC-Wise-Voters-Turn-Out.xls
+GE,Telangana,2024,10,Chevella,1504909,1433868,280,2939057,687,853037,803647,43,19397,1676124,57.03,https://www.eci.gov.in/eci-backend/public/all_files/GE-2024-statistical-report/13-PC-Wise-Voters-Turn-Out.xls
+GE,Telangana,2024,11,Mahbubnagar,833461,850206,42,1683709,1239,613044,605792,16,8708,1227560,72.91,https://www.eci.gov.in/eci-backend/public/all_files/GE-2024-statistical-report/13-PC-Wise-Voters-Turn-Out.xls
+GE,Telangana,2024,12,Nagarkurnool (SC),865907,873364,39,1739310,1056,613006,594381,19,14280,1221686,70.24,https://www.eci.gov.in/eci-backend/public/all_files/GE-2024-statistical-report/13-PC-Wise-Voters-Turn-Out.xls
+GE,Telangana,2024,13,Nalgonda,845548,880487,169,1726204,739,633596,643450,90,20129,1297265,75.15,https://www.eci.gov.in/eci-backend/public/all_files/GE-2024-statistical-report/13-PC-Wise-Voters-Turn-Out.xls
+GE,Telangana,2024,14,Bhongir,899047,910115,79,1809241,656,702634,685904,41,13142,1401721,77.48,https://www.eci.gov.in/eci-backend/public/all_files/GE-2024-statistical-report/13-PC-Wise-Voters-Turn-Out.xls
+GE,Telangana,2024,15,Warangal (SC),896395,928700,397,1825492,1026,626627,629460,85,13093,1269265,69.53,https://www.eci.gov.in/eci-backend/public/all_files/GE-2024-statistical-report/13-PC-Wise-Voters-Turn-Out.xls
+GE,Telangana,2024,16,Mahabubabad (ST),749256,784496,106,1533858,1492,542304,558678,48,8504,1109534,72.34,https://www.eci.gov.in/eci-backend/public/all_files/GE-2024-statistical-report/13-PC-Wise-Voters-Turn-Out.xls
+GE,Telangana,2024,17,Khammam,788043,843779,130,1631952,913,605969,635099,67,11151,1252286,76.74,https://www.eci.gov.in/eci-backend/public/all_files/GE-2024-statistical-report/13-PC-Wise-Voters-Turn-Out.xls

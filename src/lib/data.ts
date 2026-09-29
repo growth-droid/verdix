@@ -99,6 +99,51 @@ const candSlug = (s: string) => s.toLowerCase().replace(/[^a-z0-9]+/g, '_').repl
 // and is merged in HERE rather than baked into cand/, keeping it ADDITIVE: re-running
 // build_candidates.py or refreshing bq_export cannot wipe it. Same pattern as overlay.json for 2004.
 // The base file always wins on a year both hold — the overlay only ever fills a hole.
+// ── Electorate per seat ────────────────────────────────────────────────────────────────────
+// TWO sources, and the ORDER matters:
+//   electors/      — total electors carried through from bq_export (build_electors.py). The
+//                    database always held these for ~80% of seats but build_extracts.py dropped
+//                    them. Mostly TCPD-derived.
+//   electors_eci/  — the Election Commission's own statistical reports (build_electors_eci.py):
+//                    electors AND voters split male / female / third gender.
+// ⚠ ECI WINS where both exist. It is the primary official source, and the TCPD-derived totals
+// are measurably wrong in places: Karnataka 2023 matches ECI on 0 of 224 seats (Shorapur 305,191
+// vs 275,483), sums 637,011 too high, and implies 72.82% turnout where the official figure — which
+// ECI's own numbers reproduce exactly — is 73.84%. The baseline only fills seats ECI does not cover.
+// Gender fields are optional: a seat without an ECI report simply omits them. Never estimated.
+export type ElectorRec = {
+  e: number; vv?: number; t?: number
+  c?: string                                    // the seat's name, so a lookup can be VERIFIED (see SeatDrawer)
+  m?: number; f?: number; tg?: number          // electors by gender
+  svc?: number                                  // service electors (inside e)
+  vm?: number; vf?: number; vtg?: number        // voters by gender
+  vp?: number; vt?: number                      // postal votes · total who voted
+  src?: 'eci' | 'db'                            // which source this seat's numbers came from
+}
+export type ElectorFile = { AE: Record<string, Record<string, ElectorRec>>; GE: Record<string, Record<string, ElectorRec>> }
+export const loadElectors = (state: string) =>
+  Promise.all([
+    getJSON<ElectorFile>(`/data/electors/${candSlug(state)}.json`).catch(() => null),
+    getJSON<Partial<ElectorFile>>(`/data/electors_eci/${candSlug(state)}.json`).catch(() => null),
+  ]).then(([db, eci]) => {
+    if (!db && !eci) return null
+    const out: ElectorFile = { AE: {}, GE: {} }
+    for (const arena of ['AE', 'GE'] as const) {
+      const d = db?.[arena] ?? {}, o = eci?.[arena] ?? {}
+      for (const year of new Set([...Object.keys(d), ...Object.keys(o)])) {
+        const seats: Record<string, ElectorRec> = {}
+        for (const no of new Set([...Object.keys(d[year] ?? {}), ...Object.keys(o[year] ?? {})])) {
+          const official = o[year]?.[no]
+          // A whole-record choice, not a field merge: mixing ECI's gender split with a TCPD total
+          // would produce an m + f that no longer adds up to e.
+          seats[no] = official ? { ...official, src: 'eci' } : { ...(d[year]?.[no] as ElectorRec), src: 'db' }
+        }
+        out[arena][year] = seats
+      }
+    }
+    return out
+  })
+
 export const loadCandidates = (state: string) =>
   Promise.all([
     getJSON<CandFile>(`/data/cand/${candSlug(state)}.json`).catch(() => null),

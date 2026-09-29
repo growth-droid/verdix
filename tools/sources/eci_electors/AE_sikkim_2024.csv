@@ -1,0 +1,33 @@
+arena,state,year,seat_no,seat_name,el_m,el_f,el_tg,el_total,svc,vt_m,vt_f,vt_tg,vt_postal,vt_total,poll_pct,source_file
+AE,Sikkim,2024,1,YUKSOM-TASHIDING (BL),7804,7720,0,15524,49,6787,6425,0,428,13640,87.86,https://www.eci.gov.in/eci-backend/public/all_files/AE-2024-statistical-report-SK/12-AC-Wise-Voters-Information.xlsx
+AE,Sikkim,2024,2,YANGTHANG,6988,7133,0,14121,71,5716,5830,0,631,12177,86.23,https://www.eci.gov.in/eci-backend/public/all_files/AE-2024-statistical-report-SK/12-AC-Wise-Voters-Information.xlsx
+AE,Sikkim,2024,3,MANEYBUNG-DENTAM,8257,8146,0,16403,139,6850,6762,0,675,14287,87.1,https://www.eci.gov.in/eci-backend/public/all_files/AE-2024-statistical-report-SK/12-AC-Wise-Voters-Information.xlsx
+AE,Sikkim,2024,4,GYALSHING-BARNYAK,6940,6743,0,13683,67,5650,5502,0,563,11715,85.62,https://www.eci.gov.in/eci-backend/public/all_files/AE-2024-statistical-report-SK/12-AC-Wise-Voters-Information.xlsx
+AE,Sikkim,2024,5,RINCHENPONG (BL),8062,7962,0,16024,42,6812,6586,0,615,14013,87.45,https://www.eci.gov.in/eci-backend/public/all_files/AE-2024-statistical-report-SK/12-AC-Wise-Voters-Information.xlsx
+AE,Sikkim,2024,6,DARAMDIN (BL),8193,8211,0,16404,123,6504,6577,0,885,13966,85.14,https://www.eci.gov.in/eci-backend/public/all_files/AE-2024-statistical-report-SK/12-AC-Wise-Voters-Information.xlsx
+AE,Sikkim,2024,7,SORENG-CHAKUNG,8321,8419,0,16740,77,6835,6910,0,838,14583,87.11,https://www.eci.gov.in/eci-backend/public/all_files/AE-2024-statistical-report-SK/12-AC-Wise-Voters-Information.xlsx
+AE,Sikkim,2024,8,SALGHARI-ZOOM (SC),5921,5773,0,11694,11,4873,4523,0,297,9693,82.89,https://www.eci.gov.in/eci-backend/public/all_files/AE-2024-statistical-report-SK/12-AC-Wise-Voters-Information.xlsx
+AE,Sikkim,2024,9,BARFUNG (BL),8205,7775,0,15980,77,6746,6357,0,484,13587,85.03,https://www.eci.gov.in/eci-backend/public/all_files/AE-2024-statistical-report-SK/12-AC-Wise-Voters-Information.xlsx
+AE,Sikkim,2024,10,POKLOK-KAMRANG,8406,8464,0,16870,70,7005,6986,0,689,14680,87.02,https://www.eci.gov.in/eci-backend/public/all_files/AE-2024-statistical-report-SK/12-AC-Wise-Voters-Information.xlsx
+AE,Sikkim,2024,11,NAMCHI-SINGHITHANG,6403,6848,0,13251,74,4909,5489,0,723,11121,83.93,https://www.eci.gov.in/eci-backend/public/all_files/AE-2024-statistical-report-SK/12-AC-Wise-Voters-Information.xlsx
+AE,Sikkim,2024,12,MELLI,8007,8022,0,16029,98,6479,6549,0,689,13717,85.58,https://www.eci.gov.in/eci-backend/public/all_files/AE-2024-statistical-report-SK/12-AC-Wise-Voters-Information.xlsx
+AE,Sikkim,2024,13,NAMTHANG-RATEYPANI,8265,8190,0,16455,143,6814,6716,0,644,14174,86.14,https://www.eci.gov.in/eci-backend/public/all_files/AE-2024-statistical-report-SK/12-AC-Wise-Voters-Information.xlsx
+AE,Sikkim,2024,14,TEMI-NAMPHING,7715,7750,0,15465,94,6165,6347,0,606,13118,84.82,https://www.eci.gov.in/eci-backend/public/all_files/AE-2024-statistical-report-SK/12-AC-Wise-Voters-Information.xlsx
+AE,Sikkim,2024,15,RANGANG-YANGANG,7724,7537,0,15261,93,6315,6119,0,467,12901,84.54,https://www.eci.gov.in/eci-backend/public/all_files/AE-2024-statistical-report-SK/12-AC-Wise-Voters-Information.xlsx
+AE,Sikkim,2024,16,TUMEN-LINGI (BL),8445,8322,0,16767,93,6893,6813,0,682,14388,85.81,https://www.eci.gov.in/eci-backend/public/all_files/AE-2024-statistical-report-SK/12-AC-Wise-Voters-Information.xlsx
+AE,Sikkim,2024,17,KHAMDONG-SINGTAM,7283,7145,0,14428,47,5715,5637,0,427,11779,81.64,https://www.eci.gov.in/eci-backend/public/all_files/AE-2024-statistical-report-SK/12-AC-Wise-Voters-Information.xlsx
+AE,Sikkim,2024,18,WEST PENDAM (SC),8049,7831,0,15880,66,6370,6294,0,298,12962,81.62,https://www.eci.gov.in/eci-backend/public/all_files/AE-2024-statistical-report-SK/12-AC-Wise-Voters-Information.xlsx
+AE,Sikkim,2024,19,RHENOCK,9125,9231,0,18356,146,7311,7556,0,879,15746,85.78,https://www.eci.gov.in/eci-backend/public/all_files/AE-2024-statistical-report-SK/12-AC-Wise-Voters-Information.xlsx
+AE,Sikkim,2024,20,CHUJACHEN,9340,9408,1,18749,178,7215,7386,1,955,15557,82.98,https://www.eci.gov.in/eci-backend/public/all_files/AE-2024-statistical-report-SK/12-AC-Wise-Voters-Information.xlsx
+AE,Sikkim,2024,21,GNATHANG-MACHONG (BL),6410,6555,0,12965,98,4796,5263,0,900,10959,84.53,https://www.eci.gov.in/eci-backend/public/all_files/AE-2024-statistical-report-SK/12-AC-Wise-Voters-Information.xlsx
+AE,Sikkim,2024,22,NAMCHEYBUNG,8112,8285,0,16397,87,6341,6534,0,698,13573,82.78,https://www.eci.gov.in/eci-backend/public/all_files/AE-2024-statistical-report-SK/12-AC-Wise-Voters-Information.xlsx
+AE,Sikkim,2024,23,SHYARI (BL),8159,8037,0,16196,80,6096,6248,0,555,12899,79.64,https://www.eci.gov.in/eci-backend/public/all_files/AE-2024-statistical-report-SK/12-AC-Wise-Voters-Information.xlsx
+AE,Sikkim,2024,24,MARTAM-RUMTEK (BL),8736,9108,0,17844,81,7020,7325,0,764,15109,84.67,https://www.eci.gov.in/eci-backend/public/all_files/AE-2024-statistical-report-SK/12-AC-Wise-Voters-Information.xlsx
+AE,Sikkim,2024,25,UPPER TADONG,6045,6182,1,12228,26,4171,4590,0,398,9159,74.9,https://www.eci.gov.in/eci-backend/public/all_files/AE-2024-statistical-report-SK/12-AC-Wise-Voters-Information.xlsx
+AE,Sikkim,2024,26,ARITHANG,6502,6100,0,12602,13,4433,4076,0,237,8746,69.4,https://www.eci.gov.in/eci-backend/public/all_files/AE-2024-statistical-report-SK/12-AC-Wise-Voters-Information.xlsx
+AE,Sikkim,2024,27,GANGTOK (BL),6177,5704,0,11881,24,3945,3604,0,225,7774,65.43,https://www.eci.gov.in/eci-backend/public/all_files/AE-2024-statistical-report-SK/12-AC-Wise-Voters-Information.xlsx
+AE,Sikkim,2024,28,UPPER BURTUK,8059,8177,0,16236,83,5905,6100,0,619,12624,77.75,https://www.eci.gov.in/eci-backend/public/all_files/AE-2024-statistical-report-SK/12-AC-Wise-Voters-Information.xlsx
+AE,Sikkim,2024,29,KABI LUNGCHUK (BL),6286,6923,0,13209,84,4753,5522,0,719,10994,83.23,https://www.eci.gov.in/eci-backend/public/all_files/AE-2024-statistical-report-SK/12-AC-Wise-Voters-Information.xlsx
+AE,Sikkim,2024,30,DJONGU (BL),4999,5523,1,10523,84,4068,4633,1,579,9281,88.2,https://www.eci.gov.in/eci-backend/public/all_files/AE-2024-statistical-report-SK/12-AC-Wise-Voters-Information.xlsx
+AE,Sikkim,2024,31,LACHEN MANGAN (BL),4009,4395,0,8404,85,3153,3586,0,432,7171,85.33,https://www.eci.gov.in/eci-backend/public/all_files/AE-2024-statistical-report-SK/12-AC-Wise-Voters-Information.xlsx
+AE,Sikkim,2024,32,SANGHA,3924,150,0,4074,0,2992,125,0,92,3209,78.77,https://www.eci.gov.in/eci-backend/public/all_files/AE-2024-statistical-report-SK/12-AC-Wise-Voters-Information.xlsx

@@ -1,0 +1,14 @@
+arena,state,year,seat_no,seat_name,el_m,el_f,el_tg,el_total,svc,vt_m,vt_f,vt_tg,vt_postal,vt_total,poll_pct,source_file
+GE,Punjab,2024,1,Gurdaspur,870817,756758,36,1627611,22407,549247,520993,14,10774,1081028,66.42,https://www.eci.gov.in/eci-backend/public/all_files/GE-2024-statistical-report/13-PC-Wise-Voters-Turn-Out.xls
+GE,Punjab,2024,2,Amritsar,851513,765966,63,1617542,6279,487193,416114,19,2499,905825,56.00,https://www.eci.gov.in/eci-backend/public/all_files/GE-2024-statistical-report/13-PC-Wise-Voters-Turn-Out.xls
+GE,Punjab,2024,3,Khadoor Sahib,888196,791772,67,1680035,12238,540199,503054,14,6006,1049273,62.46,https://www.eci.gov.in/eci-backend/public/all_files/GE-2024-statistical-report/13-PC-Wise-Voters-Turn-Out.xls
+GE,Punjab,2024,4,Jalandhar (SC),861405,794419,44,1655868,1863,507489,480090,23,1714,989316,59.75,https://www.eci.gov.in/eci-backend/public/all_files/GE-2024-statistical-report/13-PC-Wise-Voters-Turn-Out.xls
+GE,Punjab,2024,5,Hoshiarpur (SC),846758,771384,44,1618186,16360,467845,474952,13,6306,949116,58.65,https://www.eci.gov.in/eci-backend/public/all_files/GE-2024-statistical-report/13-PC-Wise-Voters-Turn-Out.xls
+GE,Punjab,2024,6,Anandpur Sahib,912163,828379,64,1740606,8395,550539,523137,33,3741,1077450,61.90,https://www.eci.gov.in/eci-backend/public/all_files/GE-2024-statistical-report/13-PC-Wise-Voters-Turn-Out.xls
+GE,Punjab,2024,7,Ludhiana,939148,821474,134,1760756,2142,580724,476459,36,2459,1059678,60.18,https://www.eci.gov.in/eci-backend/public/all_files/GE-2024-statistical-report/13-PC-Wise-Voters-Turn-Out.xls
+GE,Punjab,2024,8,Fatehgarh Sahib (SC),827814,729355,32,1557201,4634,527901,443109,21,3535,974566,62.58,https://www.eci.gov.in/eci-backend/public/all_files/GE-2024-statistical-report/13-PC-Wise-Voters-Turn-Out.xls
+GE,Punjab,2024,9,Faridkot (SC),847823,751957,81,1599861,5828,545265,464420,26,4832,1014543,63.41,https://www.eci.gov.in/eci-backend/public/all_files/GE-2024-statistical-report/13-PC-Wise-Voters-Turn-Out.xls
+GE,Punjab,2024,10,Firozpur,885391,789540,48,1674979,4971,604893,514331,17,8135,1127376,67.31,https://www.eci.gov.in/eci-backend/public/all_files/GE-2024-statistical-report/13-PC-Wise-Voters-Turn-Out.xls
+GE,Punjab,2024,11,Bathinda,877751,781378,34,1659163,7975,615531,529714,19,6456,1151720,69.42,https://www.eci.gov.in/eci-backend/public/all_files/GE-2024-statistical-report/13-PC-Wise-Voters-Turn-Out.xls
+GE,Punjab,2024,12,Sangrur,831022,732740,46,1563808,7207,548273,457759,19,4655,1010706,64.63,https://www.eci.gov.in/eci-backend/public/all_files/GE-2024-statistical-report/13-PC-Wise-Voters-Turn-Out.xls
+GE,Punjab,2024,13,Patiala,949230,862270,80,1811580,5156,616744,532293,28,3187,1152252,63.60,https://www.eci.gov.in/eci-backend/public/all_files/GE-2024-statistical-report/13-PC-Wise-Voters-Turn-Out.xls

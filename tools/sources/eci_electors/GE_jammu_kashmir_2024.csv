@@ -1,0 +1,6 @@
+arena,state,year,seat_no,seat_name,el_m,el_f,el_tg,el_total,svc,vt_m,vt_f,vt_tg,vt_postal,vt_total,poll_pct,source_file
+GE,Jammu & Kashmir,2024,1,BARAMULLA,882449,862042,34,1744525,6660,547576,479502,6,7638,1034722,59.31,https://www.eci.gov.in/eci-backend/public/all_files/GE-2024-statistical-report/13-PC-Wise-Voters-Turn-Out.xls
+GE,Jammu & Kashmir,2024,2,SRINAGAR,876909,871830,64,1748803,993,383261,289657,24,3466,676408,38.68,https://www.eci.gov.in/eci-backend/public/all_files/GE-2024-statistical-report/13-PC-Wise-Voters-Turn-Out.xls
+GE,Jammu & Kashmir,2024,3,ANANTNAG-RAJOURI,946443,903047,27,1849517,12941,540228,477286,6,8900,1026420,55.50,https://www.eci.gov.in/eci-backend/public/all_files/GE-2024-statistical-report/13-PC-Wise-Voters-Turn-Out.xls
+GE,Jammu & Kashmir,2024,4,UDHAMPUR,862594,778239,13,1640846,17651,569850,538322,5,7314,1115491,67.98,https://www.eci.gov.in/eci-backend/public/all_files/GE-2024-statistical-report/13-PC-Wise-Voters-Turn-Out.xls
+GE,Jammu & Kashmir,2024,5,JAMMU,958120,860509,28,1818657,37822,661017,625116,11,23681,1309825,72.02,https://www.eci.gov.in/eci-backend/public/all_files/GE-2024-statistical-report/13-PC-Wise-Voters-Turn-Out.xls

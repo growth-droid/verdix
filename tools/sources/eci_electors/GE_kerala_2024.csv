@@ -1,0 +1,21 @@
+arena,state,year,seat_no,seat_name,el_m,el_f,el_tg,el_total,svc,vt_m,vt_f,vt_tg,vt_postal,vt_total,poll_pct,source_file
+GE,Kerala,2024,1,Kasaragod,704664,750852,14,1455530,3300,513550,591001,5,12665,1117221,76.76,https://www.eci.gov.in/eci-backend/public/all_files/GE-2024-statistical-report/13-PC-Wise-Voters-Turn-Out.xls
+GE,Kerala,2024,2,Kannur,650710,712364,6,1363080,4712,485059,563723,3,17386,1066171,78.22,https://www.eci.gov.in/eci-backend/public/all_files/GE-2024-statistical-report/13-PC-Wise-Voters-Turn-Out.xls
+GE,Kerala,2024,3,Vadakara,684423,740347,22,1424792,2909,507285,607508,4,14459,1129256,79.26,https://www.eci.gov.in/eci-backend/public/all_files/GE-2024-statistical-report/13-PC-Wise-Voters-Turn-Out.xls
+GE,Kerala,2024,4,Wayanad,723037,741420,15,1464472,2049,520776,554927,3,10753,1086459,74.19,https://www.eci.gov.in/eci-backend/public/all_files/GE-2024-statistical-report/13-PC-Wise-Voters-Turn-Out.xls
+GE,Kerala,2024,5,Kozhikode,693866,738616,26,1432508,2877,515873,563763,12,13329,1092977,76.30,https://www.eci.gov.in/eci-backend/public/all_files/GE-2024-statistical-report/13-PC-Wise-Voters-Turn-Out.xls
+GE,Kerala,2024,6,Malappuram,746743,733959,12,1480714,793,519394,560273,4,7724,1087395,73.44,https://www.eci.gov.in/eci-backend/public/all_files/GE-2024-statistical-report/13-PC-Wise-Voters-Turn-Out.xls
+GE,Kerala,2024,7,Ponnani,729681,741552,27,1471260,456,467732,552185,15,6684,1026616,69.78,https://www.eci.gov.in/eci-backend/public/all_files/GE-2024-statistical-report/13-PC-Wise-Voters-Turn-Out.xls
+GE,Kerala,2024,8,Palakkad,684909,715992,13,1400914,2771,495471,532676,9,10790,1038946,74.16,https://www.eci.gov.in/eci-backend/public/all_files/GE-2024-statistical-report/13-PC-Wise-Voters-Turn-Out.xls
+GE,Kerala,2024,9,Alathur (SC),650999,689172,12,1340183,2687,476034,505527,5,12193,993759,74.15,https://www.eci.gov.in/eci-backend/public/all_files/GE-2024-statistical-report/13-PC-Wise-Voters-Turn-Out.xls
+GE,Kerala,2024,10,Thrissur,708974,774789,20,1483783,728,508866,572309,6,11393,1092574,73.63,https://www.eci.gov.in/eci-backend/public/all_files/GE-2024-statistical-report/13-PC-Wise-Voters-Turn-Out.xls
+GE,Kerala,2024,11,Chalakudy,634996,676240,21,1311257,728,460353,482431,8,10728,953520,72.72,https://www.eci.gov.in/eci-backend/public/all_files/GE-2024-statistical-report/13-PC-Wise-Voters-Turn-Out.xls
+GE,Kerala,2024,12,Ernakulam,641291,683451,15,1324757,710,450518,453580,4,6933,911035,68.77,https://www.eci.gov.in/eci-backend/public/all_files/GE-2024-statistical-report/13-PC-Wise-Voters-Turn-Out.xls
+GE,Kerala,2024,13,Idukki,616010,635153,9,1251172,1015,425576,406332,6,9372,841286,67.24,https://www.eci.gov.in/eci-backend/public/all_files/GE-2024-statistical-report/13-PC-Wise-Voters-Turn-Out.xls
+GE,Kerala,2024,14,Kottayam,608713,647410,15,1256138,1315,418309,404970,6,14605,837890,66.70,https://www.eci.gov.in/eci-backend/public/all_files/GE-2024-statistical-report/13-PC-Wise-Voters-Turn-Out.xls
+GE,Kerala,2024,15,Alappuzha,680390,726290,9,1406689,6606,509003,541880,2,18064,1068949,75.99,https://www.eci.gov.in/eci-backend/public/all_files/GE-2024-statistical-report/13-PC-Wise-Voters-Turn-Out.xls
+GE,Kerala,2024,16,Mavelikkara (SC),637319,701831,9,1339159,7279,417515,461468,3,19125,898111,67.07,https://www.eci.gov.in/eci-backend/public/all_files/GE-2024-statistical-report/13-PC-Wise-Voters-Turn-Out.xls
+GE,Kerala,2024,17,Pathanamthitta,687355,746592,9,1433956,4256,442760,462982,6,15817,921565,64.27,https://www.eci.gov.in/eci-backend/public/all_files/GE-2024-statistical-report/13-PC-Wise-Voters-Turn-Out.xls
+GE,Kerala,2024,18,Kollam,635694,695160,19,1330873,4225,424148,479933,7,14172,918260,69.00,https://www.eci.gov.in/eci-backend/public/all_files/GE-2024-statistical-report/13-PC-Wise-Voters-Turn-Out.xls
+GE,Kerala,2024,19,Attingal,657673,743406,35,1401114,4307,449212,521292,13,16400,986917,70.44,https://www.eci.gov.in/eci-backend/public/all_files/GE-2024-statistical-report/13-PC-Wise-Voters-Turn-Out.xls
+GE,Kerala,2024,20,Thiruvananthapuram,693061,741537,59,1434657,4126,467090,483755,29,13477,964351,67.22,https://www.eci.gov.in/eci-backend/public/all_files/GE-2024-statistical-report/13-PC-Wise-Voters-Turn-Out.xls

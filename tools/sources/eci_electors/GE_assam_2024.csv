@@ -1,0 +1,15 @@
+arena,state,year,seat_no,seat_name,el_m,el_f,el_tg,el_total,svc,vt_m,vt_f,vt_tg,vt_postal,vt_total,poll_pct,source_file
+GE,Assam,2024,1,Kokrajhar (ST),750857,743540,7,1494404,9833,615168,625137,1,14193,1254499,83.95,https://www.eci.gov.in/eci-backend/public/all_files/GE-2024-statistical-report/13-PC-Wise-Voters-Turn-Out.xls
+GE,Assam,2024,2,Dhubri,1365321,1298641,25,2663987,3160,1253081,1196954,5,8740,2458780,92.30,https://www.eci.gov.in/eci-backend/public/all_files/GE-2024-statistical-report/13-PC-Wise-Voters-Turn-Out.xls
+GE,Assam,2024,3,Barpeta,1007761,971269,21,1979051,12204,850460,826164,9,13418,1690051,85.40,https://www.eci.gov.in/eci-backend/public/all_files/GE-2024-statistical-report/13-PC-Wise-Voters-Turn-Out.xls
+GE,Assam,2024,4,Darrang-Udalguri,1113643,1100840,33,2214516,5202,913392,898364,8,8880,1820644,82.21,https://www.eci.gov.in/eci-backend/public/all_files/GE-2024-statistical-report/13-PC-Wise-Voters-Turn-Out.xls
+GE,Assam,2024,5,Guwahati,1003991,1035716,58,2039765,2919,789748,806677,7,6023,1602455,78.56,https://www.eci.gov.in/eci-backend/public/all_files/GE-2024-statistical-report/13-PC-Wise-Voters-Turn-Out.xls
+GE,Assam,2024,6,Diphu (ST),449575,452456,19,902050,1018,338459,343977,5,4935,687376,76.20,https://www.eci.gov.in/eci-backend/public/all_files/GE-2024-statistical-report/13-PC-Wise-Voters-Turn-Out.xls
+GE,Assam,2024,7,Karimganj,725446,689062,12,1414520,2372,584655,555694,0,7258,1147607,81.13,https://www.eci.gov.in/eci-backend/public/all_files/GE-2024-statistical-report/13-PC-Wise-Voters-Turn-Out.xls
+GE,Assam,2024,8,Silchar (SC),688748,685787,24,1374559,4981,541441,541165,6,8336,1090948,79.37,https://www.eci.gov.in/eci-backend/public/all_files/GE-2024-statistical-report/13-PC-Wise-Voters-Turn-Out.xls
+GE,Assam,2024,9,Nagaon,918217,902724,82,1821023,3819,771964,772153,9,6502,1550628,85.15,https://www.eci.gov.in/eci-backend/public/all_files/GE-2024-statistical-report/13-PC-Wise-Voters-Turn-Out.xls
+GE,Assam,2024,10,Kaziranga,1028420,1025352,33,2053805,3679,802309,824013,6,9308,1635636,79.64,https://www.eci.gov.in/eci-backend/public/all_files/GE-2024-statistical-report/13-PC-Wise-Voters-Turn-Out.xls
+GE,Assam,2024,11,Sonitpur,817734,821225,33,1638992,5192,629405,652547,7,8597,1290556,78.74,https://www.eci.gov.in/eci-backend/public/all_files/GE-2024-statistical-report/13-PC-Wise-Voters-Turn-Out.xls
+GE,Assam,2024,12,Lakhimpur,789517,790966,17,1580500,3266,594959,610495,2,8783,1214239,76.83,https://www.eci.gov.in/eci-backend/public/all_files/GE-2024-statistical-report/13-PC-Wise-Voters-Turn-Out.xls
+GE,Assam,2024,13,Dibrugarh,812311,849652,35,1661998,2410,623386,650333,8,4737,1278464,76.92,https://www.eci.gov.in/eci-backend/public/all_files/GE-2024-statistical-report/13-PC-Wise-Voters-Turn-Out.xls
+GE,Assam,2024,14,Jorhat,854583,878356,5,1732944,5823,677316,702369,2,16596,1396283,80.57,https://www.eci.gov.in/eci-backend/public/all_files/GE-2024-statistical-report/13-PC-Wise-Voters-Turn-Out.xls

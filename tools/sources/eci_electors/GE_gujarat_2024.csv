@@ -1,0 +1,27 @@
+arena,state,year,seat_no,seat_name,el_m,el_f,el_tg,el_total,svc,vt_m,vt_f,vt_tg,vt_postal,vt_total,poll_pct,source_file
+GE,Gujarat,2024,1,Kachchh (SC),1001224,942382,27,1943633,497,599289,491951,8,4758,1096006,56.39,https://www.eci.gov.in/eci-backend/public/all_files/GE-2024-statistical-report/13-PC-Wise-Voters-Turn-Out.xls
+GE,Gujarat,2024,2,Banaskantha,1014732,948563,17,1963312,1388,741360,624492,8,12268,1378128,70.19,https://www.eci.gov.in/eci-backend/public/all_files/GE-2024-statistical-report/13-PC-Wise-Voters-Turn-Out.xls
+GE,Gujarat,2024,3,Patan,1039422,982318,32,2021772,1856,644978,537963,10,12603,1195554,59.13,https://www.eci.gov.in/eci-backend/public/all_files/GE-2024-statistical-report/13-PC-Wise-Voters-Turn-Out.xls
+GE,Gujarat,2024,4,Mahesana,912842,859148,58,1772048,1431,578728,481200,9,19324,1079261,60.90,https://www.eci.gov.in/eci-backend/public/all_files/GE-2024-statistical-report/13-PC-Wise-Voters-Turn-Out.xls
+GE,Gujarat,2024,5,Sabarkantha,1009351,971379,67,1980797,4448,673366,582881,39,15204,1271490,64.19,https://www.eci.gov.in/eci-backend/public/all_files/GE-2024-statistical-report/13-PC-Wise-Voters-Turn-Out.xls
+GE,Gujarat,2024,6,Gandhinagar,1121493,1061832,77,2183402,666,705958,598866,16,18705,1323545,60.62,https://www.eci.gov.in/eci-backend/public/all_files/GE-2024-statistical-report/13-PC-Wise-Voters-Turn-Out.xls
+GE,Gujarat,2024,7,Ahmedabad East,1068564,971582,117,2040263,2101,628137,487159,17,15443,1130756,55.42,https://www.eci.gov.in/eci-backend/public/all_files/GE-2024-statistical-report/13-PC-Wise-Voters-Turn-Out.xls
+GE,Gujarat,2024,8,Ahmedabad West (SC),890852,836720,73,1727645,658,526675,430866,30,10232,967803,56.02,https://www.eci.gov.in/eci-backend/public/all_files/GE-2024-statistical-report/13-PC-Wise-Voters-Turn-Out.xls
+GE,Gujarat,2024,9,Surendranagar,1058159,976810,32,2035001,1582,632127,488046,6,13211,1133390,55.69,https://www.eci.gov.in/eci-backend/public/all_files/GE-2024-statistical-report/13-PC-Wise-Voters-Turn-Out.xls
+GE,Gujarat,2024,10,Rajkot,1094070,1018620,36,2112726,453,705589,555183,6,14088,1274866,60.34,https://www.eci.gov.in/eci-backend/public/all_files/GE-2024-statistical-report/13-PC-Wise-Voters-Turn-Out.xls
+GE,Gujarat,2024,11,Porbandar,913428,856141,25,1769594,1382,521888,394660,10,13798,930356,52.57,https://www.eci.gov.in/eci-backend/public/all_files/GE-2024-statistical-report/13-PC-Wise-Voters-Turn-Out.xls
+GE,Gujarat,2024,12,Jamnagar,932789,886134,36,1818959,1095,587414,460995,13,3677,1052099,57.84,https://www.eci.gov.in/eci-backend/public/all_files/GE-2024-statistical-report/13-PC-Wise-Voters-Turn-Out.xls
+GE,Gujarat,2024,13,Junagadh,919785,876722,25,1796532,1422,575101,482344,9,12168,1069622,59.54,https://www.eci.gov.in/eci-backend/public/all_files/GE-2024-statistical-report/13-PC-Wise-Voters-Turn-Out.xls
+GE,Gujarat,2024,14,Amreli,896212,837129,26,1733367,557,484240,387123,10,5721,877094,50.60,https://www.eci.gov.in/eci-backend/public/all_files/GE-2024-statistical-report/13-PC-Wise-Voters-Turn-Out.xls
+GE,Gujarat,2024,15,Bhavnagar,995380,922974,40,1918394,1494,570888,462735,13,17545,1051181,54.79,https://www.eci.gov.in/eci-backend/public/all_files/GE-2024-statistical-report/13-PC-Wise-Voters-Turn-Out.xls
+GE,Gujarat,2024,16,Anand,908442,872136,131,1780709,527,623620,534087,56,13221,1170984,65.76,https://www.eci.gov.in/eci-backend/public/all_files/GE-2024-statistical-report/13-PC-Wise-Voters-Turn-Out.xls
+GE,Gujarat,2024,17,Kheda,1025815,982364,102,2008281,877,649782,516800,37,12422,1179041,58.71,https://www.eci.gov.in/eci-backend/public/all_files/GE-2024-statistical-report/13-PC-Wise-Voters-Turn-Out.xls
+GE,Gujarat,2024,18,Panchmahal,967574,930633,27,1898234,1491,592313,523884,13,16725,1132935,59.68,https://www.eci.gov.in/eci-backend/public/all_files/GE-2024-statistical-report/13-PC-Wise-Voters-Turn-Out.xls
+GE,Gujarat,2024,19,Dahod (ST),928025,948203,19,1876247,1111,571610,540636,3,6955,1119204,59.65,https://www.eci.gov.in/eci-backend/public/all_files/GE-2024-statistical-report/13-PC-Wise-Voters-Turn-Out.xls
+GE,Gujarat,2024,20,Vadodara,995588,954305,230,1950123,550,638919,561804,62,12911,1213696,62.24,https://www.eci.gov.in/eci-backend/public/all_files/GE-2024-statistical-report/13-PC-Wise-Voters-Turn-Out.xls
+GE,Gujarat,2024,21,Chhota Udaipur (ST),932362,890054,21,1822437,729,668609,591240,5,9536,1269390,69.65,https://www.eci.gov.in/eci-backend/public/all_files/GE-2024-statistical-report/13-PC-Wise-Voters-Turn-Out.xls
+GE,Gujarat,2024,22,Bharuch,877707,845880,83,1723670,317,628064,563923,13,7601,1199601,69.60,https://www.eci.gov.in/eci-backend/public/all_files/GE-2024-statistical-report/13-PC-Wise-Voters-Turn-Out.xls
+GE,Gujarat,2024,23,Bardoli (ST),1041490,1007279,19,2048788,380,696902,630769,5,15957,1343633,65.58,https://www.eci.gov.in/eci-backend/public/all_files/GE-2024-statistical-report/13-PC-Wise-Voters-Turn-Out.xls
+GE,Gujarat,2024,24,Surat,954646,831563,78,1786287,56,,,,,,,https://www.eci.gov.in/eci-backend/public/all_files/GE-2024-statistical-report/37-pc_level_elector_data20241225123432.xls
+GE,Gujarat,2024,25,Navsari,1197438,1026249,117,2223804,254,719925,606579,39,12801,1339344,60.23,https://www.eci.gov.in/eci-backend/public/all_files/GE-2024-statistical-report/13-PC-Wise-Voters-Turn-Out.xls
+GE,Gujarat,2024,26,Valsad (ST),945740,914448,19,1860207,233,699982,652437,12,10577,1363008,73.27,https://www.eci.gov.in/eci-backend/public/all_files/GE-2024-statistical-report/13-PC-Wise-Voters-Turn-Out.xls

@@ -24,3 +24,6 @@ _*.mjs
 _*.png
 _*.log
 *.local
+
+# python bytecode (tools/)
+__pycache__/

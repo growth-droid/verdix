@@ -1,0 +1,11 @@
+arena,state,year,seat_no,seat_name,el_m,el_f,el_tg,el_total,svc,vt_m,vt_f,vt_tg,vt_postal,vt_total,poll_pct,source_file
+GE,Haryana,2024,1,AMBALA (SC),1062599,940835,76,2003510,6802,723642,620885,6,3561,1348094,67.29,https://www.eci.gov.in/eci-backend/public/all_files/GE-2024-statistical-report/13-PC-Wise-Voters-Turn-Out.xls
+GE,Haryana,2024,2,KURUKSHETRA,946102,853696,24,1799822,5522,636544,565857,12,4548,1206961,67.06,https://www.eci.gov.in/eci-backend/public/all_files/GE-2024-statistical-report/13-PC-Wise-Voters-Turn-Out.xls
+GE,Haryana,2024,3,SIRSA (SC),1026726,914550,43,1941319,3630,729134,622794,21,4409,1356358,69.87,https://www.eci.gov.in/eci-backend/public/all_files/GE-2024-statistical-report/13-PC-Wise-Voters-Turn-Out.xls
+GE,Haryana,2024,4,HISAR,963668,835860,11,1799539,8817,636650,532137,3,6276,1175066,65.30,https://www.eci.gov.in/eci-backend/public/all_files/GE-2024-statistical-report/13-PC-Wise-Voters-Turn-Out.xls
+GE,Haryana,2024,5,KARNAL,1112816,996848,38,2109702,5473,721760,619418,19,5459,1346656,63.83,https://www.eci.gov.in/eci-backend/public/all_files/GE-2024-statistical-report/13-PC-Wise-Voters-Turn-Out.xls
+GE,Haryana,2024,6,SONIPAT,953328,823636,44,1777008,10384,610142,510357,8,6547,1127054,63.42,https://www.eci.gov.in/eci-backend/public/all_files/GE-2024-statistical-report/13-PC-Wise-Voters-Turn-Out.xls
+GE,Haryana,2024,7,ROHTAK,1022698,890909,21,1913628,23784,668801,572398,2,12842,1254043,65.53,https://www.eci.gov.in/eci-backend/public/all_files/GE-2024-statistical-report/13-PC-Wise-Voters-Turn-Out.xls
+GE,Haryana,2024,8,BHIWANI-MAHENDRAGARH,973429,848322,13,1821764,28735,627648,544905,1,11883,1184437,65.02,https://www.eci.gov.in/eci-backend/public/all_files/GE-2024-statistical-report/13-PC-Wise-Voters-Turn-Out.xls
+GE,Haryana,2024,9,GURGAON,1372532,1212372,78,2584982,11571,858510,737734,7,6982,1603233,62.02,https://www.eci.gov.in/eci-backend/public/all_files/GE-2024-statistical-report/13-PC-Wise-Voters-Turn-Out.xls
+GE,Haryana,2024,10,FARIDABAD,1324705,1111813,119,2436637,6425,814496,655871,6,3355,1473728,60.48,https://www.eci.gov.in/eci-backend/public/all_files/GE-2024-statistical-report/13-PC-Wise-Voters-Turn-Out.xls

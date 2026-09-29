@@ -1,0 +1,15 @@
+arena,state,year,seat_no,seat_name,el_m,el_f,el_tg,el_total,svc,vt_m,vt_f,vt_tg,vt_postal,vt_total,poll_pct,source_file
+GE,Jharkhand,2024,1,Rajmahal (ST),852167,853531,10,1705708,1037,584123,622548,4,11945,1218620,71.44,https://www.eci.gov.in/eci-backend/public/all_files/GE-2024-statistical-report/13-PC-Wise-Voters-Turn-Out.xls
+GE,Jharkhand,2024,2,Dumka (ST),800126,792060,6,1592192,1131,572058,603252,3,9838,1185151,74.44,https://www.eci.gov.in/eci-backend/public/all_files/GE-2024-statistical-report/13-PC-Wise-Voters-Turn-Out.xls
+GE,Jharkhand,2024,3,Godda,1052544,977883,17,2030444,2290,682778,708853,11,11299,1402941,69.10,https://www.eci.gov.in/eci-backend/public/all_files/GE-2024-statistical-report/13-PC-Wise-Voters-Turn-Out.xls
+GE,Jharkhand,2024,4,Chatra,864657,828039,2,1692698,2772,512868,563517,0,12911,1089296,64.35,https://www.eci.gov.in/eci-backend/public/all_files/GE-2024-statistical-report/13-PC-Wise-Voters-Turn-Out.xls
+GE,Jharkhand,2024,5,Kodarma,1142511,1065311,23,2207845,2527,617159,745849,3,10080,1373091,62.19,https://www.eci.gov.in/eci-backend/public/all_files/GE-2024-statistical-report/13-PC-Wise-Voters-Turn-Out.xls
+GE,Jharkhand,2024,6,Giridih,962472,904283,8,1866763,2103,624275,629265,7,11999,1265546,67.79,https://www.eci.gov.in/eci-backend/public/all_files/GE-2024-statistical-report/13-PC-Wise-Voters-Turn-Out.xls
+GE,Jharkhand,2024,7,Dhanbad,1201348,1088926,80,2290354,5117,739654,678588,25,13690,1431957,62.52,https://www.eci.gov.in/eci-backend/public/all_files/GE-2024-statistical-report/13-PC-Wise-Voters-Turn-Out.xls
+GE,Jharkhand,2024,8,Ranchi,1117341,1085118,69,2202528,5197,728930,707142,22,16102,1452196,65.93,https://www.eci.gov.in/eci-backend/public/all_files/GE-2024-statistical-report/13-PC-Wise-Voters-Turn-Out.xls
+GE,Jharkhand,2024,9,Jamshedpur,939374,931881,133,1871388,2110,636273,628937,56,13970,1279236,68.36,https://www.eci.gov.in/eci-backend/public/all_files/GE-2024-statistical-report/13-PC-Wise-Voters-Turn-Out.xls
+GE,Jharkhand,2024,10,Singhbhum (ST),713440,735998,33,1449471,1909,488828,514633,7,8291,1011759,69.80,https://www.eci.gov.in/eci-backend/public/all_files/GE-2024-statistical-report/13-PC-Wise-Voters-Turn-Out.xls
+GE,Jharkhand,2024,11,Khunti (ST),653670,675749,4,1329423,3285,451128,476292,3,12824,940247,70.73,https://www.eci.gov.in/eci-backend/public/all_files/GE-2024-statistical-report/13-PC-Wise-Voters-Turn-Out.xls
+GE,Jharkhand,2024,12,Lohardaga (ST),720501,727720,4,1448225,6923,458485,499182,1,13994,971662,67.09,https://www.eci.gov.in/eci-backend/public/all_files/GE-2024-statistical-report/13-PC-Wise-Voters-Turn-Out.xls
+GE,Jharkhand,2024,13,Palamu (SC),1167828,1080253,1,2248082,5048,677291,696445,1,18298,1392035,61.92,https://www.eci.gov.in/eci-backend/public/all_files/GE-2024-statistical-report/13-PC-Wise-Voters-Turn-Out.xls
+GE,Jharkhand,2024,14,Hazaribagh,1000509,942231,31,1942771,3397,611815,637260,18,16362,1265455,65.14,https://www.eci.gov.in/eci-backend/public/all_files/GE-2024-statistical-report/13-PC-Wise-Voters-Turn-Out.xls

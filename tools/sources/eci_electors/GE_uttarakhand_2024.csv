@@ -1,0 +1,6 @@
+arena,state,year,seat_no,seat_name,el_m,el_f,el_tg,el_total,svc,vt_m,vt_f,vt_tg,vt_postal,vt_total,poll_pct,source_file
+GE,Uttarakhand,2024,1,Tehri Garhwal,828282,762182,62,1590526,12862,427268,420978,14,18514,866774,54.50,https://www.eci.gov.in/eci-backend/public/all_files/GE-2024-statistical-report/13-PC-Wise-Voters-Turn-Out.xls
+GE,Uttarakhand,2024,2,Garhwal,733724,670493,16,1404233,34845,337666,380057,8,28479,746210,53.14,https://www.eci.gov.in/eci-backend/public/all_files/GE-2024-statistical-report/13-PC-Wise-Voters-Turn-Out.xls
+GE,Uttarakhand,2024,3,Almora (SC),712648,655779,5,1368432,29105,304933,347966,2,22113,675014,49.33,https://www.eci.gov.in/eci-backend/public/all_files/GE-2024-statistical-report/13-PC-Wise-Voters-Turn-Out.xls
+GE,Uttarakhand,2024,4,Nainital-Udhamsingh Nagar,1057189,969194,55,2026438,10629,655771,603394,19,12482,1271666,62.75,https://www.eci.gov.in/eci-backend/public/all_files/GE-2024-statistical-report/13-PC-Wise-Voters-Turn-Out.xls
+GE,Uttarakhand,2024,5,Haridwar,1076290,965023,159,2041472,5746,690361,603168,44,10944,1304517,63.90,https://www.eci.gov.in/eci-backend/public/all_files/GE-2024-statistical-report/13-PC-Wise-Voters-Turn-Out.xls
