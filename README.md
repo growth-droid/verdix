@@ -98,10 +98,10 @@ injected script is refused by the browser), **HSTS**, clickjacking and MIME-snif
 `noindex`, and a guard that **403s any direct request** to `/data/*` or `/geo/*` that isn't the app's
 own same-origin fetch — blocking curl, bots and hotlinking.
 
-**Access is currently OPEN** (no sign-in). Invite-only Google sign-in is built and one flag away:
-set `AUTH_ENABLED = true` in `src/lib/config.ts` and re-add the Firebase domains to the Caddyfile
-CSP. Be aware of the ceiling: while access is open, anything the browser renders can be read by a
-determined person with dev-tools — real per-row protection needs auth on, or a server-side API.
+**Access is INVITE-ONLY** — Google sign-in against a Firestore allow-list, managed by admins at
+`/admin`. The master switch is `AUTH_ENABLED` in `src/lib/config.ts` (set back to `false` to open the
+app, and the Caddyfile's Google/Firebase CSP entries can then go). The Fly domain must be listed under
+Firebase → Authentication → Authorized domains for sign-in to work.
 
 *(`netlify.toml` and `netlify/` are leftovers from the previous host and are no longer used.)*
 
@@ -113,6 +113,15 @@ determined person with dev-tools — real per-row protection needs auth on, or a
   the six 2004-cycle assemblies) and recent by-elections, from ECI-derived candidate CSVs. It is
   **additive**: `src/lib/data.ts` merges it at load, so regenerating the main extracts can't wipe it.
   2004 sits on the pre-2008 delimitation, so no swing/flip/history ever joins across 2004↔2009.
+- **Electorate** (`public/data/electors_eci/`, `public/data/electors/`): official ECI statistical
+  reports (`tools/build_electors_eci.py`, parsed CSVs committed under `tools/sources/eci_electors/`)
+  override the database totals (`tools/build_electors.py`). Men / women / third gender for AE
+  2017–2026 and Lok Sabha 2014–2024.
+- **Census 2011 per seat** (`public/data/census/`): `tools/build_census_overlay.py` places every
+  constituency polygon in its 2011 census district(s) (output committed as
+  `tools/sources/census2011/seat_district_overlay.csv`); `tools/build_census.py` checks that against
+  the official delimitation orders and joins the official district tables (population, SC/ST,
+  literacy, work, religion, household amenities). District level for now.
 - Boundaries in `public/geo/`, map-label fonts in `public/glyphs/`. Remaining gaps are reported by
   `tools/audit_datagaps.py` (2004 turnout is absent from the source; GE-2024 seat-level turnout).
 

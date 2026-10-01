@@ -1,0 +1,137 @@
+====================================================================================================
+Madhya Pradesh (app: Madhya Pradesh)  pages 226-252
+  district headings: 48 (crosswalk 48)
+  CHECK headings all in crosswalk: True 
+  CHECK crosswalk keys all used: True 
+  CHECK ACs contiguous 1..230: True (parsed 230)
+  CHECK every AC under a district heading: True 
+  CHECK name agreement vs app Madhya Pradesh 2013: 199/230 = 86.5%
+     MISMATCH ac   3  order='Sabalgarh'                    app='SABALAGADH'                   verdict=spelling variant (Sabalgarh/Sabalagadh)
+     MISMATCH ac   4  order='Joura'                        app='JAURA'                        verdict=spelling variant (app AE 2023 spells JOURA, as the order)
+     MISMATCH ac   5  order='Sumawali'                     app='SUMAOLI'                      verdict=spelling variant (Sumawali/Sumaoli)
+     MISMATCH ac  18  order='Bhitarwar'                    app='BHITRWAR'                     verdict=spelling variant (Bhitarwar/Bhitrwar)
+     MISMATCH ac  19  order='Dabra (SC)'                   app='DABARA'                       verdict=spelling variant (Dabra/Dabara)
+     MISMATCH ac  30  order='Chachoura'                    app='CHACHODA'                     verdict=spelling variant (Chachoura/Chachoda, r/d transliteration)
+     MISMATCH ac  40  order='Naryoli (SC)'                 app='NARYAWALI'                    verdict=spelling variant (Naryoli/Naryawali)
+     MISMATCH ac  59  order='Gunnaor (SC)'                 app='GUNNOUR'                      verdict=spelling variant (Gunnaor/Gunnour)
+     MISMATCH ac  80  order='Singrauli'                    app='SINGAROULI'                   verdict=spelling variant (Singrauli/Singarouli)
+     MISMATCH ac  82  order='Dhauhani (ST)'                app='DHOUHANI'                     verdict=spelling variant (app AE 2023 spells DHAUHANI, as the order)
+     MISMATCH ac  86  order='Kotma'                        app='KOTAMA'                       verdict=spelling variant (Kotma/Kotama)
+     MISMATCH ac  88  order='Pushprajgarh (ST)'            app='PUSPRAJGARH'                  verdict=spelling variant (Pushprajgarh/Pusprajgarh)
+     MISMATCH ac  90  order='Manpur (ST)'                  app='MANAPUR'                      verdict=spelling variant (Manpur/Manapur)
+     MISMATCH ac  91  order='Barwara (ST)'                 app='BADWARA'                      verdict=spelling variant (app AE 2023 spells BARWARA, as the order)
+     MISMATCH ac  93  order='Murwara'                      app='MUDWARA'                      verdict=spelling variant (app AE 2023 spells MURWARA, as the order)
+     MISMATCH ac  97  order='Jabalpur Purba (SC)'          app='JABALPUR EAST'                verdict=translation variant (Purba = East)
+     MISMATCH ac  98  order='Jabalpur Uttar'               app='JABALPUR NORTH'               verdict=translation variant (Uttar = North)
+     MISMATCH ac 100  order='Jabalpur Paschim'             app='JABALPUR WEST'                verdict=translation variant (Paschim = West)
+     MISMATCH ac 117  order='Lakhnadon (ST)'               app='LAKHANADON'                   verdict=spelling variant (Lakhnadon/Lakhanadon)
+     MISMATCH ac 125  order='Saunsar'                      app='SAUSAR'                       verdict=spelling variant (Saunsar/Sausar)
+     MISMATCH ac 127  order='Parasia (SC)'                 app='PARASIYA'                     verdict=spelling variant (Parasia/Parasiya)
+     MISMATCH ac 132  order='Ghoradongri (ST)'             app='GHODADONGRI'                  verdict=spelling variant (Ghoradongri/Ghodadongri)
+     MISMATCH ac 152  order='Bhopal Dakshin-Paschim'       app='BHOPAL DAKSHINA-PASHCHIM'     verdict=spelling variant (Dakshin-Paschim/Dakshina-Pashchim)
+     MISMATCH ac 174  order='Bagali (ST)'                  app='BAGLI'                        verdict=spelling variant (Bagali/Bagli)
+     MISMATCH ac 182  order='Badwah'                       app='BADWAHA'                      verdict=spelling variant (Badwah/Badwaha; later app years BARWAH)
+     MISMATCH ac 187  order='Sendhawa (ST)'                app='SENDHWA (S.T.)'               verdict=spelling variant (Sendhawa/Sendhwa)
+     MISMATCH ac 190  order='Badwani (ST)'                 app='BARWANI (S.T.)'               verdict=spelling variant (Badwani/Barwani)
+     MISMATCH ac 212  order='Nagada-Khachrod'              app='NAGADA - KHACHAROD'           verdict=spelling variant (Khachrod/Khacharod)
+     MISMATCH ac 216  order='Ujjain Uttar'                 app='UJJAIN NORTH'                 verdict=translation variant (Uttar = North)
+     MISMATCH ac 217  order='Ujjain Dakshin'               app='UJJAIN SOUTH'                 verdict=translation variant (Dakshin = South)
+     MISMATCH ac 223  order='Alot (SC)'                    app='ALOTE'                        verdict=spelling variant (Alot/Alote)
+  CHECK every mismatch judged: True 
+  CHECK no row shift (no order name equals the app name of a DIFFERENT seat number): True 
+  INFO name agreement vs app Madhya Pradesh 2013: 199/230
+  INFO name agreement vs app Madhya Pradesh 2018: 199/230
+  INFO name agreement vs app Madhya Pradesh 2023: 202/230
+  INFO reservation (order vs app 2013 r-flag) differences: 1 [(104, 'ST', 'SC')]
+  CHECK every crosswalk code is a real 2011 code in MADHYA PRADESH: True 
+  CHECK every 2011 district of the state covered: True (50 codes) 
+  CHECK continuing codes unique: True 
+====================================================================================================
+Maharashtra (app: Maharashtra)  pages 253-279
+  district headings: 35 (crosswalk 35)
+  CHECK headings all in crosswalk: True 
+  CHECK crosswalk keys all used: True 
+  CHECK ACs contiguous 1..288: True (parsed 288)
+  CHECK every AC under a district heading: True 
+  CHECK name agreement vs app Maharashtra 2009: 284/288 = 98.6%
+     MISMATCH ac  32  order='Murtizapur (SC)'              app='MURTIJAPUR'                   verdict=spelling variant (Murtizapur/Murtijapur)
+     MISMATCH ac  36  order='Dhamangaon Railway'           app='DHAMAMGAON RAILWAY'           verdict=spelling variant - app typo DHAMAMGAON
+     MISMATCH ac 126  order='Deolali (SC)'                 app='DEVLALI'                      verdict=spelling variant (app AE 2024 spells DEOLALI, as the order)
+     MISMATCH ac 208  order='Vadgaon Sheri'                app='VADGAOL SHERI'                verdict=spelling variant - app typo VADGAOL
+  CHECK every mismatch judged: True 
+  CHECK no row shift (no order name equals the app name of a DIFFERENT seat number): True 
+  INFO name agreement vs app Maharashtra 2009: 284/288
+  INFO name agreement vs app Maharashtra 2014: 284/288
+  INFO name agreement vs app Maharashtra 2019: 284/288
+  INFO name agreement vs app Maharashtra 2024: 284/288
+  INFO reservation (order vs app 2009 r-flag) differences: 0 
+  CHECK every crosswalk code is a real 2011 code in MAHARASHTRA: True 
+  CHECK every 2011 district of the state covered: True (35 codes) 
+  CHECK continuing codes unique: True 
+====================================================================================================
+Meghalaya (app: Meghalaya)  pages 294-301
+  district headings: 7 (crosswalk 7)
+  CHECK headings all in crosswalk: True 
+  CHECK crosswalk keys all used: True 
+  CHECK ACs contiguous 1..60: True (parsed 60)
+  CHECK every AC under a district heading: True 
+  CHECK name agreement vs app Meghalaya 2013: 60/60 = 100.0%
+  CHECK every mismatch judged: True 
+  CHECK no row shift (no order name equals the app name of a DIFFERENT seat number): True 
+  INFO name agreement vs app Meghalaya 2013: 60/60
+  INFO name agreement vs app Meghalaya 2018: 60/60
+  INFO name agreement vs app Meghalaya 2023: 59/59
+  INFO reservation (order vs app 2013 r-flag) differences: 0 
+  CHECK every crosswalk code is a real 2011 code in MEGHALAYA: True 
+  CHECK every 2011 district of the state covered: True (7 codes) 
+  CHECK continuing codes unique: True 
+====================================================================================================
+Mizoram (app: Mizoram)  pages 302-310
+  district headings: 8 (crosswalk 8)
+  CHECK headings all in crosswalk: True 
+  CHECK crosswalk keys all used: True 
+  CHECK ACs contiguous 1..40: True (parsed 40)
+  CHECK every AC under a district heading: True 
+  CHECK name agreement vs app Mizoram 2013: 40/40 = 100.0%
+  CHECK every mismatch judged: True 
+  CHECK no row shift (no order name equals the app name of a DIFFERENT seat number): True 
+  INFO name agreement vs app Mizoram 2013: 40/40
+  INFO name agreement vs app Mizoram 2018: 40/40
+  INFO name agreement vs app Mizoram 2023: 40/40
+  INFO reservation (order vs app 2013 r-flag) differences: 0 
+  CHECK every crosswalk code is a real 2011 code in MIZORAM: True 
+  CHECK every 2011 district of the state covered: True (8 codes) 
+  CHECK continuing codes unique: True 
+     extent mentions district: ac 6 (Serlui (ST), heading KOLASIB): [('', 'Aizawl')]
+     extent mentions district: ac 27 (Tuikum (ST), heading SERCHHIP): [('Aizawl', '')]
+     extent mentions district: ac 28 (Hrangturzo (ST), heading SERCHHIP): [('', 'Champhai')]
+====================================================================================================
+Orissa (app: Odisha)  pages 319-335
+  district headings: 30 (crosswalk 30)
+  CHECK headings all in crosswalk: True 
+  CHECK crosswalk keys all used: True 
+  CHECK ACs contiguous 1..147: True (parsed 147)
+  CHECK every AC under a district heading: True 
+  CHECK name agreement vs app Odisha 2009: 141/147 = 95.9%
+     MISMATCH ac  13  order='RAJGANGPUR (ST)'              app='RAJGANGAPUR'                  verdict=spelling variant (Rajgangpur/Rajgangapur)
+     MISMATCH ac  50  order='BARACHANA'                    app='BARCHANA'                     verdict=spelling variant (Barachana/Barchana)
+     MISMATCH ac  73  order='UMERKOTE (ST)'                app='UMARKOTE'                     verdict=spelling variant (app AE 2024 spells UMERKOTE, as the order)
+     MISMATCH ac 103  order='BALIKUDA-ERASAMA'             app='BALIKUDA-ERSAMA'              verdict=spelling variant (Erasama/Ersama)
+     MISMATCH ac 108  order='BRAHMAGIRI'                   app='BRAMHAGIRI'                   verdict=spelling variant (Brahmagiri/Bramhagiri)
+     MISMATCH ac 125  order='KABISURYANAGAR'               app='KABISURYANGAR'                verdict=spelling variant - app drops an A (Kabisuryangar)
+  CHECK every mismatch judged: True 
+  CHECK no row shift (no order name equals the app name of a DIFFERENT seat number): True 
+  INFO name agreement vs app Odisha 2009: 141/147
+  INFO name agreement vs app Odisha 2014: 141/147
+  INFO name agreement vs app Odisha 2019: 140/146
+  INFO name agreement vs app Odisha 2024: 130/147
+  INFO reservation (order vs app 2009 r-flag) differences: 0 
+  CHECK every crosswalk code is a real 2011 code in ODISHA: True 
+  CHECK every 2011 district of the state covered: True (30 codes) 
+  CHECK continuing codes unique: True 
+====================================================================================================
+SUMMARY Madhya Pradesh: 230/230 ACs, name agreement 86.5%, 48 district headings
+SUMMARY Maharashtra: 288/288 ACs, name agreement 98.6%, 35 district headings
+SUMMARY Meghalaya: 60/60 ACs, name agreement 100.0%, 7 district headings
+SUMMARY Mizoram: 40/40 ACs, name agreement 100.0%, 8 district headings
+SUMMARY Odisha: 147/147 ACs, name agreement 95.9%, 30 district headings

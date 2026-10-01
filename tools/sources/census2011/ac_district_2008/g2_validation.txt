@@ -1,0 +1,235 @@
+====================================================================================================
+Gujarat  (Schedule IX, PDF index 115-147, app comparison AE 2012)
+OK   Gujarat: AC count = 182 | 182
+OK   Gujarat: AC numbers exactly 1..182 in order | ok
+OK   Gujarat: every AC has a district heading | all
+OK   Gujarat: every AC has extent text | all
+OK   Gujarat: reserved seats = Schedule II (SC 13, ST 27) | SC=13 ST=27
+OK   Gujarat: district headings unique | 25
+OK   Gujarat:   heading '01-DISTRICT : KACHCHH'            p116 ACs   1-6   ( 6)
+OK   Gujarat:   heading '02-DISTRICT BANASKANTHA'          p117 ACs   7-15  ( 9)
+OK   Gujarat:   heading '03-DISTRICT : PATAN'              p119 ACs  16-19  ( 4)
+OK   Gujarat:   heading '04-DISTRICT : MAHESANA'           p120 ACs  20-26  ( 7)
+OK   Gujarat:   heading '05-DISTRICT : SABARKANTHA'        p121 ACs  27-33  ( 7)
+OK   Gujarat:   heading '06-DISTRICT : GANDHINAGAR'        p122 ACs  34-38  ( 5)
+OK   Gujarat:   heading '07-DISTRICT : AHMEDABAD'          p123 ACs  39-59  (21)
+OK   Gujarat:   heading '08-DISTRICT : SURENDRANAGAR'      p125 ACs  60-64  ( 5)
+OK   Gujarat:   heading '09-DISTRICT : RAJKOT'             p125 ACs  65-75  (11)
+OK   Gujarat:   heading '10-DISTRICT : JAMNAGAR'           p127 ACs  76-82  ( 7)
+OK   Gujarat:   heading '11-DISTRICT : PORBANDAR'          p128 ACs  83-84  ( 2)
+OK   Gujarat:   heading '12-DISTRICT : JUNAGADH'           p129 ACs  85-93  ( 9)
+OK   Gujarat:   heading '13-DISTRICT : AMRELI'             p130 ACs  94-98  ( 5)
+OK   Gujarat:   heading '14-DISTRICT : BHAVNAGAR'          p131 ACs  99-107 ( 9)
+OK   Gujarat:   heading '15-DISTRICT : ANAND'              p133 ACs 108-114 ( 7)
+OK   Gujarat:   heading '16-DISTRICT : KHEDA'              p134 ACs 115-121 ( 7)
+OK   Gujarat:   heading '17-DISTRICT :PANCHMAHALS'         p135 ACs 122-128 ( 7)
+OK   Gujarat:   heading '18-DISTRICT : DAHOD'              p137 ACs 129-134 ( 6)
+OK   Gujarat:   heading '19-DISTRICT : VADODARA'           p139 ACs 135-147 (13)
+OK   Gujarat:   heading '20-DISTRICT : NARMADA'            p141 ACs 148-149 ( 2)
+OK   Gujarat:   heading '21-DISTRICT : BHARUCH'            p141 ACs 150-154 ( 5)
+OK   Gujarat:   heading '22-DISTRICT : SURAT'              p142 ACs 155-172 (18)
+OK   Gujarat:   heading '23-DISTRICT : DANGS'              p144 ACs 173-173 ( 1)
+OK   Gujarat:   heading '24-DISTRICT : NAVSARI'            p145 ACs 174-177 ( 4)
+OK   Gujarat:   heading '25-DISTRICT: VALSAD'              p146 ACs 178-182 ( 5)
+INFO Gujarat: name agreement with app AE 2012 = 173/182 (95.1%)
+      25  order 'Mahesana'                 app 'MEHSANA'                ratio 0.80  -> spelling variant
+      34  order 'Dahegam'                  app 'DEHGAM'                 ratio 0.77  -> spelling variant
+      65  order 'Morbi'                    app 'MORVI'                  ratio 0.80  -> spelling variant
+      76  order 'Kalavad (SC)'             app 'KALAWAD'                ratio 0.86  -> spelling variant
+     117  order 'Mehmedabad'               app 'MEHEMDABAD'             ratio 0.90  -> spelling variant
+     120  order 'Kapadvanj'                app 'KAPADWANJ'              ratio 0.89  -> spelling variant
+     142  order 'Sayajigunj'               app 'SAYAJIGANJ'             ratio 0.90  -> spelling variant
+     168  order 'Choryasi'                 app 'CHORASI'                ratio 0.93  -> spelling variant
+     177  order 'Bansda (ST)'              app 'VANSDA'                 ratio 0.83  -> spelling variant
+OK   Gujarat: every app-name mismatch is a spelling variant (no row shift) | yes
+OK   Gujarat: reservation agrees with app AE 2012 for every AC | yes
+OK   Gujarat: lineage rows = order district headings (same set) | 25 districts
+OK   Gujarat: every lineage code is a real Census 2011 district of the state | yes
+OK   Gujarat: every Census 2011 district (26) appears as continuing or carved | yes
+OK   Gujarat: continuing codes are 1:1 | 25
+INFO Gujarat: extent taluk/tehsil phrases not matched to a 2011 sub-district (info only): none
+INFO Gujarat: BANASKANTHA extents also touch ['470 Patan'] (cross-district villages, see AC notes)
+INFO Gujarat: RAJKOT extents also touch ['475 Surendranagar', '477 Jamnagar', '480 Amreli'] (cross-district villages, see AC notes)
+INFO Gujarat: JAMNAGAR extents also touch ['476 Rajkot'] (cross-district villages, see AC notes)
+INFO Gujarat: JUNAGADH extents also touch ['480 Amreli'] (cross-district villages, see AC notes)
+INFO Gujarat: BHAVNAGAR extents also touch ['480 Amreli'] (cross-district villages, see AC notes)
+INFO Gujarat: PANCHMAHALS extents also touch ['485 Dohad'] (cross-district villages, see AC notes)
+INFO Gujarat: VADODARA extents also touch ['487 Narmada'] (cross-district villages, see AC notes)
+OK   Gujarat: SURAT carved codes confirmed by extents | touched ['492', '493']
+INFO Gujarat: ACs whose extent names a taluk of a 2011 district outside their heading lineage: [(7, 'Vav', 'BANASKANTHA', ['470 Patan']), (66, 'Tankara', 'RAJKOT', ['477 Jamnagar']), (72, 'Jasdan', 'RAJKOT', ['475 Surendranagar']), (74, 'Jetpur', 'RAJKOT', ['480 Amreli']), (76, 'Kalavad', 'JAMNAGAR', ['476 Rajkot']), (87, 'Visavadar', 'JUNAGADH', ['480 Amreli']), (99, 'Mahuva', 'BHAVNAGAR', ['480 Amreli']), (125, 'Morva Hadaf', 'PANCHMAHALS', ['485 Dohad']), (139, 'Sankheda', 'VADODARA', ['487 Narmada'])]
+wrote gujarat_acs.csv (182 rows), gujarat_districts.csv (25 rows)
+====================================================================================================
+Haryana  (Schedule X, PDF index 148-157, app comparison AE 2009)
+OK   Haryana: AC count = 90 | 90
+OK   Haryana: AC numbers exactly 1..90 in order | ok
+OK   Haryana: every AC has a district heading | all
+OK   Haryana: every AC has extent text | all
+OK   Haryana: reserved seats = Schedule II (SC 17, ST 0) | SC=17 ST=0
+OK   Haryana: district headings unique | 19
+OK   Haryana:   heading '1-DISTRICT: PANCHKULA'            p149 ACs   1-2   ( 2)
+OK   Haryana:   heading '2-DISTRICT: AMBALA'               p149 ACs   3-6   ( 4)
+OK   Haryana:   heading '3-DISTRICT: YAMUNANAGAR'          p149 ACs   7-10  ( 4)
+OK   Haryana:   heading '4-DISTRICT: KURUKSHETRA'          p150 ACs  11-14  ( 4)
+OK   Haryana:   heading '5-DISTRICT: KAITHAL'              p150 ACs  15-18  ( 4)
+OK   Haryana:   heading '6-DISTRICT: KARNAL'               p150 ACs  19-23  ( 5)
+OK   Haryana:   heading '7-DISTRICT: PANIPAT'              p151 ACs  24-27  ( 4)
+OK   Haryana:   heading '8-DISTRICT: SONIPAT'              p151 ACs  28-33  ( 6)
+OK   Haryana:   heading '9-DISTRICT: JIND'                 p152 ACs  34-38  ( 5)
+OK   Haryana:   heading '10-DISTRICT: FATEHABAD'           p152 ACs  39-41  ( 3)
+OK   Haryana:   heading '11-DISTRICT: SIRSA'               p153 ACs  42-46  ( 5)
+OK   Haryana:   heading '12-DISTRICT : HISAR'              p153 ACs  47-53  ( 7)
+OK   Haryana:   heading '13-DISTRICT: BHIWANI'             p154 ACs  54-59  ( 6)
+OK   Haryana:   heading '14-DISTRICT: ROHTAK'              p154 ACs  60-63  ( 4)
+OK   Haryana:   heading '15-DISTRICT: JHAJJAR'             p154 ACs  64-67  ( 4)
+OK   Haryana:   heading '16-DISTRICT: MAHENDRAGARH'        p155 ACs  68-71  ( 4)
+OK   Haryana:   heading '17-DISTRICT: REWARI'              p155 ACs  72-74  ( 3)
+OK   Haryana:   heading '18-DISTRICT: GURGAON'             p155 ACs  75-81  ( 7)
+OK   Haryana:   heading '19-DISTRICT: FARIDABAD'           p156 ACs  82-90  ( 9)
+INFO Haryana: name agreement with app AE 2009 = 89/90 (98.9%)
+      88  order 'Ballabgarh'               app 'BALLABHGARH'            ratio 0.95  -> spelling variant
+OK   Haryana: every app-name mismatch is a spelling variant (no row shift) | yes
+OK   Haryana: reservation agrees with app AE 2009 for every AC | yes
+OK   Haryana: lineage rows = order district headings (same set) | 19 districts
+OK   Haryana: every lineage code is a real Census 2011 district of the state | yes
+OK   Haryana: every Census 2011 district (21) appears as continuing or carved | yes
+OK   Haryana: continuing codes are 1:1 | 19
+INFO Haryana: extent taluk/tehsil phrases not matched to a 2011 sub-district (info only): none
+OK   Haryana: GURGAON carved codes confirmed by extents | touched ['086', '087']
+OK   Haryana: FARIDABAD carved codes confirmed by extents | touched ['088', '089']
+INFO Haryana: ACs whose extent names a taluk of a 2011 district outside their heading lineage: none
+wrote haryana_acs.csv (90 rows), haryana_districts.csv (19 rows)
+====================================================================================================
+Himachal Pradesh  (Schedule XI, PDF index 158-164, app comparison AE 2012)
+OK   Himachal Pradesh: AC count = 68 | 68
+OK   Himachal Pradesh: AC numbers exactly 1..68 in order | ok
+OK   Himachal Pradesh: every AC has a district heading | all
+OK   Himachal Pradesh: every AC has extent text | all
+OK   Himachal Pradesh: reserved seats = Schedule II (SC 17, ST 3) | SC=17 ST=3
+OK   Himachal Pradesh: district headings unique | 12
+OK   Himachal Pradesh:   heading '1-DISTRICT : CHAMBA'              p159 ACs   1-5   ( 5)
+OK   Himachal Pradesh:   heading '2-DISTRICT : KANGRA'              p159 ACs   6-20  (15)
+OK   Himachal Pradesh:   heading '3-DISTRICT : LAHAUL & SPITI'      p160 ACs  21-21  ( 1)
+OK   Himachal Pradesh:   heading '4-DISTRICT : KULLU'               p160 ACs  22-25  ( 4)
+OK   Himachal Pradesh:   heading '5-DISTRICT : MANDI'               p161 ACs  26-35  (10)
+OK   Himachal Pradesh:   heading '6-DISTRICT : HAMIRPUR'            p162 ACs  36-40  ( 5)
+OK   Himachal Pradesh:   heading '7-DISTRICT : UNA'                 p162 ACs  41-45  ( 5)
+OK   Himachal Pradesh:   heading '8-DISTRICT : BILASPUR'            p162 ACs  46-49  ( 4)
+OK   Himachal Pradesh:   heading '9-DISTRICT : SOLAN'               p163 ACs  50-54  ( 5)
+OK   Himachal Pradesh:   heading '10-DISTRICT : SIRMOUR'            p163 ACs  55-59  ( 5)
+OK   Himachal Pradesh:   heading '11-DISTRICT : SHIMLA'             p164 ACs  60-67  ( 8)
+OK   Himachal Pradesh:   heading '12-DISTRICT : KINNAUR'            p164 ACs  68-68  ( 1)
+INFO Himachal Pradesh: name agreement with app AE 2012 = 68/68 (100.0%)
+OK   Himachal Pradesh: every app-name mismatch is a spelling variant (no row shift) | yes
+OK   Himachal Pradesh: reservation agrees with app AE 2012 for every AC | yes
+OK   Himachal Pradesh: lineage rows = order district headings (same set) | 12 districts
+OK   Himachal Pradesh: every lineage code is a real Census 2011 district of the state | yes
+OK   Himachal Pradesh: every Census 2011 district (12) appears as continuing or carved | yes
+OK   Himachal Pradesh: continuing codes are 1:1 | 12
+INFO Himachal Pradesh: extent taluk/tehsil phrases not matched to a 2011 sub-district (info only): {'Sunni': 1}
+INFO Himachal Pradesh: ACs whose extent names a taluk of a 2011 district outside their heading lineage: none
+wrote himachal_pradesh_acs.csv (68 rows), himachal_pradesh_districts.csv (12 rows)
+====================================================================================================
+Karnataka  (Schedule XIV, PDF index 175-208, app comparison AE 2013)
+OK   Karnataka: AC count = 224 | 224
+OK   Karnataka: AC numbers exactly 1..224 in order | ok
+OK   Karnataka: every AC has a district heading | all
+OK   Karnataka: every AC has extent text | all
+OK   Karnataka: reserved seats = Schedule II (SC 36, ST 15) | SC=36 ST=15
+OK   Karnataka: district headings unique | 27
+OK   Karnataka:   heading '1-DISTRICT : BELGAUM'             p176 ACs   1-18  (18)
+OK   Karnataka:   heading '2-DISTRICT : BAGALKOT'            p179 ACs  19-25  ( 7)
+OK   Karnataka:   heading '3-DISTRICT : BIJAPUR'             p180 ACs  26-33  ( 8)
+OK   Karnataka:   heading '4-DISTRICT : GULBARGA'            p182 ACs  34-46  (13)
+OK   Karnataka:   heading '5-DISTRICT : BIDAR'               p183 ACs  47-52  ( 6)
+OK   Karnataka:   heading '6-DISTRICT : RAICHUR'             p184 ACs  53-59  ( 7)
+OK   Karnataka:   heading '7-DISTRICT : KOPPAL'              p185 ACs  60-64  ( 5)
+OK   Karnataka:   heading '8-DISTRICT : GADAG'               p186 ACs  65-68  ( 4)
+OK   Karnataka:   heading '9-DISTRICT : DHARWAD'             p187 ACs  69-75  ( 7)
+OK   Karnataka:   heading '10-DISTRICT : UTTARA KANNADA'     p188 ACs  76-81  ( 6)
+OK   Karnataka:   heading '11-DISTRICT : HAVERI'             p188 ACs  82-87  ( 6)
+OK   Karnataka:   heading '12-DISTRICT : BELLARY'            p189 ACs  88-96  ( 9)
+OK   Karnataka:   heading '13-DISTRICT : CHITRADURGA'        p190 ACs  97-102 ( 6)
+OK   Karnataka:   heading '14-DISTRICT: DAVANAGERE'          p191 ACs 103-110 ( 8)
+OK   Karnataka:   heading '15-DISTRICT : SHIMOGA'            p192 ACs 111-117 ( 7)
+OK   Karnataka:   heading '16-DISTRICT : UDUPI'              p193 ACs 118-122 ( 5)
+OK   Karnataka:   heading '17-DISTRICT : CHICKMAGALUR'       p194 ACs 123-127 ( 5)
+OK   Karnataka:   heading '18-DISTRICT : TUMKUR'             p194 ACs 128-138 (11)
+OK   Karnataka:   heading '19-DISTRICT : KOLAR'              p196 ACs 139-149 (11)
+OK   Karnataka:   heading '20-DISTRICT : BANGALORE'          p197 ACs 150-177 (28)
+OK   Karnataka:   heading '21-DISTRICT : BANGALORE RURAL'    p200 ACs 178-185 ( 8)
+OK   Karnataka:   heading '22-DISTRICT : MANDYA'             p201 ACs 186-192 ( 7)
+OK   Karnataka:   heading '23-DISTRICT : HASSAN'             p202 ACs 193-199 ( 7)
+OK   Karnataka:   heading '24-DISTRICT : DAKSHINA KANNADA'   p203 ACs 200-207 ( 8)
+OK   Karnataka:   heading '25-DISTRICT : KODAGU'             p204 ACs 208-209 ( 2)
+OK   Karnataka:   heading '26-DISTRICT : MYSORE'             p204 ACs 210-220 (11)
+OK   Karnataka:   heading '27-DISTRICT : CHAMARAJANAGAR'     p205 ACs 221-224 ( 4)
+INFO Karnataka: name agreement with app AE 2013 = 220/224 (98.2%)
+      35  order 'Jewargi'                  app 'JEVARGI'                ratio 0.86  -> spelling variant
+     128  order 'Chikkanayakanahalli'      app 'CHIKNAYAKANHALLI'       ratio 0.91  -> spelling variant
+     190  order 'Srirangapatna'            app 'SHRIRANGAPATTANA'       ratio 0.90  -> spelling variant
+     210  order 'Piriyapatna'              app 'PERIYAPATNA'            ratio 0.91  -> spelling variant
+OK   Karnataka: every app-name mismatch is a spelling variant (no row shift) | yes
+OK   Karnataka: reservation agrees with app AE 2013 for every AC | yes
+OK   Karnataka: lineage rows = order district headings (same set) | 27 districts
+OK   Karnataka: every lineage code is a real Census 2011 district of the state | yes
+OK   Karnataka: every Census 2011 district (30) appears as continuing or carved | yes
+OK   Karnataka: continuing codes are 1:1 | 27
+INFO Karnataka: extent taluk/tehsil phrases not matched to a 2011 sub-district (info only): none
+OK   Karnataka: GULBARGA carved codes confirmed by extents | touched ['579', '580']
+OK   Karnataka: KOLAR carved codes confirmed by extents | touched ['581', '582']
+OK   Karnataka: BANGALORE RURAL carved codes confirmed by extents | touched ['583', '584']
+INFO Karnataka: ACs whose extent names a taluk of a 2011 district outside their heading lineage: none
+wrote karnataka_acs.csv (224 rows), karnataka_districts.csv (27 rows)
+====================================================================================================
+Kerala  (Schedule XV, PDF index 209-225, app comparison AE 2011)
+OK   Kerala: AC count = 140 | 140
+OK   Kerala: AC numbers exactly 1..140 in order | ok
+OK   Kerala: every AC has a district heading | all
+OK   Kerala: every AC has extent text | all
+OK   Kerala: reserved seats = Schedule II (SC 14, ST 2) | SC=14 ST=2
+OK   Kerala: district headings unique | 14
+OK   Kerala:   heading '1-District : Kasaragod'           p210 ACs   1-5   ( 5)
+OK   Kerala:   heading '2-District : Kannur'              p210 ACs   6-16  (11)
+OK   Kerala:   heading '3-District : Wayanad'             p211 ACs  17-19  ( 3)
+OK   Kerala:   heading '4-District : Kozhikode'           p211 ACs  20-32  (13)
+OK   Kerala:   heading '5-District : Malappuram'          p212 ACs  33-48  (16)
+OK   Kerala:   heading '6-District : Palakkad'            p214 ACs  49-60  (12)
+OK   Kerala:   heading '7-District : Thrissur'            p215 ACs  61-73  (13)
+OK   Kerala:   heading '8-District : Ernakulam'           p216 ACs  74-87  (14)
+OK   Kerala:   heading '9-District : Idukki'              p217 ACs  88-92  ( 5)
+OK   Kerala:   heading '10-District : Kottayam'           p218 ACs  93-101 ( 9)
+OK   Kerala:   heading '11-District : Alappuzha'          p219 ACs 102-110 ( 9)
+OK   Kerala:   heading '12-District : Pathanamthitta'     p220 ACs 111-115 ( 5)
+OK   Kerala:   heading '13-District : Kollam'             p221 ACs 116-126 (11)
+OK   Kerala:   heading '14-District : Thiruvananthapuram' p222 ACs 127-140 (14)
+INFO Kerala: name agreement with app AE 2011 = 125/140 (89.3%)
+      32  order 'Thiruvambadi'             app 'THIRUVAMBADY'           ratio 0.92  -> spelling variant
+      34  order 'Ernad'                    app 'ERANAD'                 ratio 0.91  -> spelling variant
+      42  order 'Vallikunnu'               app 'VALLIKKUNNU'            ratio 0.95  -> spelling variant
+      52  order 'Ottappalam'               app 'OTTAPALAM'              ratio 0.95  -> spelling variant
+      54  order 'Mannarkkad'               app 'MANNARKAD'              ratio 0.95  -> spelling variant
+      59  order 'Nemmara'                  app 'NENMARA'                ratio 0.86  -> spelling variant
+      70  order 'Irinjalakuda'             app 'IRINJALAKKUDA'          ratio 0.96  -> spelling variant
+      71  order 'Pudukkad'                 app 'PUTHUKKAD'              ratio 0.82  -> spelling variant
+      72  order 'Chalakudy'                app 'CHALAKKUDY'             ratio 0.95  -> spelling variant
+      79  order 'Vypeen'                   app 'VYPEN'                  ratio 0.91  -> spelling variant
+      82  order 'Ernakulam'                app 'ERANAKULAM'             ratio 0.95  -> spelling variant
+     105  order 'Ambalappuzha'             app 'AMBALAPUZHA'            ratio 0.96  -> spelling variant
+     109  order 'Mavelikkara (SC)'         app 'MAVELIKARA'             ratio 0.95  -> spelling variant
+     126  order 'Chathannoor'              app 'CHATHANNUR'             ratio 0.86  -> spelling variant
+     132  order 'Kazhakoottam'             app 'KAZHAKKOOTTAM'          ratio 0.96  -> spelling variant
+OK   Kerala: every app-name mismatch is a spelling variant (no row shift) | yes
+OK   Kerala: reservation agrees with app AE 2011 for every AC | yes
+OK   Kerala: lineage rows = order district headings (same set) | 14 districts
+OK   Kerala: every lineage code is a real Census 2011 district of the state | yes
+OK   Kerala: every Census 2011 district (14) appears as continuing or carved | yes
+OK   Kerala: continuing codes are 1:1 | 14
+INFO Kerala: extent taluk/tehsil phrases not matched to a 2011 sub-district (info only): none
+INFO Kerala: ACs whose extent names a taluk of a 2011 district outside their heading lineage: none
+wrote kerala_acs.csv (140 rows), kerala_districts.csv (14 rows)
+====================================================================================================
+SUMMARY Gujarat           ACs 182/182  app-name agreement 95.1%  ALL CHECKS OK
+SUMMARY Haryana           ACs  90/ 90  app-name agreement 98.9%  ALL CHECKS OK
+SUMMARY Himachal Pradesh  ACs  68/ 68  app-name agreement 100.0%  ALL CHECKS OK
+SUMMARY Karnataka         ACs 224/224  app-name agreement 98.2%  ALL CHECKS OK
+SUMMARY Kerala            ACs 140/140  app-name agreement 89.3%  ALL CHECKS OK

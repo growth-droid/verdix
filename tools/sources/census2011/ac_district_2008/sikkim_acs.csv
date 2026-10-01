@@ -1,0 +1,33 @@
+state,ac_no,ac_name,district_2008,source,page,note
+Sikkim,1,Yoksam-Tashiding,WEST,"ECI Delimitation of Parliamentary and Assembly Constituencies Order 2008 (English), Schedule XXV Table A",367,reserved=BL
+Sikkim,2,Yangthang,WEST,"ECI Delimitation of Parliamentary and Assembly Constituencies Order 2008 (English), Schedule XXV Table A",367,
+Sikkim,3,Maneybung-Dentam,WEST,"ECI Delimitation of Parliamentary and Assembly Constituencies Order 2008 (English), Schedule XXV Table A",367,
+Sikkim,4,Gyalshing-Barnyak,WEST,"ECI Delimitation of Parliamentary and Assembly Constituencies Order 2008 (English), Schedule XXV Table A",367,
+Sikkim,5,Rinchenpong,WEST,"ECI Delimitation of Parliamentary and Assembly Constituencies Order 2008 (English), Schedule XXV Table A",367,reserved=BL
+Sikkim,6,Daramdin,WEST,"ECI Delimitation of Parliamentary and Assembly Constituencies Order 2008 (English), Schedule XXV Table A",367,reserved=BL
+Sikkim,7,Soreng-Chakung,WEST,"ECI Delimitation of Parliamentary and Assembly Constituencies Order 2008 (English), Schedule XXV Table A",367,
+Sikkim,8,Salghari-Zoom,WEST,"ECI Delimitation of Parliamentary and Assembly Constituencies Order 2008 (English), Schedule XXV Table A",368,reserved=SC; also_in_district_2008=SOUTH; extent = Nayabazar of Soreng Sub-Division in District West + Jorethang (NTA) and Salghari Revenue Block of Namchi Sub-Division in District South - the AC straddles West and South
+Sikkim,9,Barfung,SOUTH,"ECI Delimitation of Parliamentary and Assembly Constituencies Order 2008 (English), Schedule XXV Table A",368,reserved=BL
+Sikkim,10,Poklok-Kamrang,SOUTH,"ECI Delimitation of Parliamentary and Assembly Constituencies Order 2008 (English), Schedule XXV Table A",368,
+Sikkim,11,Namchi-Singhithang,SOUTH,"ECI Delimitation of Parliamentary and Assembly Constituencies Order 2008 (English), Schedule XXV Table A",368,
+Sikkim,12,Melli,SOUTH,"ECI Delimitation of Parliamentary and Assembly Constituencies Order 2008 (English), Schedule XXV Table A",368,
+Sikkim,13,Namthang-Rateypani,SOUTH,"ECI Delimitation of Parliamentary and Assembly Constituencies Order 2008 (English), Schedule XXV Table A",368,
+Sikkim,14,Temi-Namphing,SOUTH,"ECI Delimitation of Parliamentary and Assembly Constituencies Order 2008 (English), Schedule XXV Table A",368,
+Sikkim,15,Rangang-Yangang,SOUTH,"ECI Delimitation of Parliamentary and Assembly Constituencies Order 2008 (English), Schedule XXV Table A",368,
+Sikkim,16,Tumen-Lingi,SOUTH,"ECI Delimitation of Parliamentary and Assembly Constituencies Order 2008 (English), Schedule XXV Table A",368,"reserved=BL; also_in_district_2008=EAST; extent = Paiyong, Lingmo, Pepthang of Rabong Sub-Division in District South + Rakdong, Tintek, Kambal, Samdong, Raley-Khese, Tumen, Patuk, Singbel of Gangtok Sub-Division in District East - the AC straddles South and East"
+Sikkim,17,Khamdong-Singtam,EAST,"ECI Delimitation of Parliamentary and Assembly Constituencies Order 2008 (English), Schedule XXV Table A",369,
+Sikkim,18,West Pendam,EAST,"ECI Delimitation of Parliamentary and Assembly Constituencies Order 2008 (English), Schedule XXV Table A",369,reserved=SC
+Sikkim,19,Rhenock,EAST,"ECI Delimitation of Parliamentary and Assembly Constituencies Order 2008 (English), Schedule XXV Table A",369,
+Sikkim,20,Chujachen,EAST,"ECI Delimitation of Parliamentary and Assembly Constituencies Order 2008 (English), Schedule XXV Table A",369,
+Sikkim,21,Gnathang-Machong,EAST,"ECI Delimitation of Parliamentary and Assembly Constituencies Order 2008 (English), Schedule XXV Table A",369,reserved=BL
+Sikkim,22,Namcheybung,EAST,"ECI Delimitation of Parliamentary and Assembly Constituencies Order 2008 (English), Schedule XXV Table A",369,
+Sikkim,23,Shyari,EAST,"ECI Delimitation of Parliamentary and Assembly Constituencies Order 2008 (English), Schedule XXV Table A",369,reserved=BL
+Sikkim,24,Martam-Rumtek,EAST,"ECI Delimitation of Parliamentary and Assembly Constituencies Order 2008 (English), Schedule XXV Table A",369,reserved=BL
+Sikkim,25,Upper Tadong,EAST,"ECI Delimitation of Parliamentary and Assembly Constituencies Order 2008 (English), Schedule XXV Table A",369,
+Sikkim,26,Arithang,EAST,"ECI Delimitation of Parliamentary and Assembly Constituencies Order 2008 (English), Schedule XXV Table A",370,
+Sikkim,27,Gangtok,EAST,"ECI Delimitation of Parliamentary and Assembly Constituencies Order 2008 (English), Schedule XXV Table A",370,reserved=BL
+Sikkim,28,Upper Burtuk,EAST,"ECI Delimitation of Parliamentary and Assembly Constituencies Order 2008 (English), Schedule XXV Table A",370,
+Sikkim,29,Kabi Lungchuk,NORTH,"ECI Delimitation of Parliamentary and Assembly Constituencies Order 2008 (English), Schedule XXV Table A",370,"reserved=BL; also_in_district_2008=EAST; extent = Mangan Sub-Division blocks of District North + Lingdok, Nampong, Navey, Shotak, Penlong, Upper Chandmari, Kyongnosla, Pangthang and Gangtok Forest Blocks of Gangtok Sub-Division in District East - the AC straddles North and East"
+Sikkim,30,Djongu,NORTH,"ECI Delimitation of Parliamentary and Assembly Constituencies Order 2008 (English), Schedule XXV Table A",370,reserved=BL
+Sikkim,31,Lachen Mangan,NORTH,"ECI Delimitation of Parliamentary and Assembly Constituencies Order 2008 (English), Schedule XXV Table A",370,reserved=BL
+Sikkim,32,Sangha,,"ECI Delimitation Order 2008, Schedule II footnote ** (RP Act 1950 s.7(1A))",7,"reserved=Sangha; NON-TERRITORIAL seat for the Sanghas (monasteries) of the whole state - not listed in Table A, has no district; never veto/place it by polygon"

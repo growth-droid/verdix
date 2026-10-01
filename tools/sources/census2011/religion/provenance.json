@@ -1,0 +1,65 @@
+{
+ "dataset": "Census of India 2011, Table C-01: Population by religious community (district level, Total/Rural/Urban, persons/males/females)",
+ "producer": "Office of the Registrar General & Census Commissioner, India (ORGI), Ministry of Home Affairs, Government of India",
+ "fetched": "2026-09-29, plain public HTTPS GETs (curl), no login, no API key, no custom headers",
+ "files": {
+  "raw_nada/": "38 files downloaded unmodified from the ORGI Census Digital Library (NADA). DDW00 = India + state rows only; DDW01..DDW35 = one per state/UT with state, district, sub-district and town rows; plus the India-level C-01 Annexure and Appendix (sect/religion detail). Exact URL, NADA catalog page, idno, bytes and sha256 per file: sources_manifest.csv",
+  "raw_datagov/": "36 files downloaded unmodified from the file URLs that data.gov.in's 'Population by Religious Community, 2011 - <STATE>' resources point to (https://censusindia.gov.in/datagov/C-01_Religion_Released_Religion_tables/DDW{SS}C_01_MDDS-2011.xls). Different re-save of the same table (flattened one-row header, saved by NIC Dec 2015); every number and every row key is identical to raw_nada (checked by the build script). Kept because data.gov.in publishes this table under GODL-India.",
+  "religion_district_2011.csv": "Tidy output as specified: 640 districts x {Total, Rural, Urban} = 1,920 rows; persons only.",
+  "religion_district_2011_full.csv": "Same 1,920 rows with persons/males/females (_p/_m/_f) for all 9 categories, plus source_file.",
+  "religion_state_2011.csv": "India (00) + 35 states/UTs x TRU = 108 rows, from DDW00C-01 (persons/males/females).",
+  "validation_report.json": "Every check run by build_religion_district_2011.py (all pass).",
+  "build_religion_district_2011.py": "Rebuilds all outputs from raw_nada + raw_datagov, offline."
+ },
+ "primary_source": {
+  "catalog_search": "https://censusindia.gov.in/nada/index.php/api/catalog/search?sk=PC11_C01&ps=300",
+  "india_catalog_page": "https://censusindia.gov.in/nada/index.php/catalog/11361",
+  "india_file_url": "https://censusindia.gov.in/nada/index.php/catalog/11361/download/14474/DDW00C-01%20MDDS.XLS",
+  "state_catalog_pages": "https://censusindia.gov.in/nada/index.php/catalog/11362 ... /11396 (idno PC11_C01-{SS})",
+  "state_file_url_pattern": "https://censusindia.gov.in/nada/index.php/catalog/{catalog_id}/download/{file_id}/DDW{SS}C-01%20MDDS.XLS (exact per-file URLs in sources_manifest.csv)",
+  "annexure": "https://censusindia.gov.in/nada/index.php/catalog/11397/download/14510/DDW00C-01%20Annexure%20MDDS.xlsx",
+  "appendix": "https://censusindia.gov.in/nada/index.php/catalog/11398/download/14511/DDW00C-01%20Appendix%20MDDS.xlsx",
+  "nada_citation_verbatim": "Office of the Registrar General & Census Commissioner, India. Population Census 2011. Table C-01: Population by religious community, India - 2011",
+  "old_path_status": "https://censusindia.gov.in/2011census/C-01.html and .../2011census/C-01/DDW00C-01%20MDDS.XLS return HTTP 404; http://www.censusindia.gov.in times out (port 80). The old 2011census/ tree is retired; NADA is the current official home."
+ },
+ "secondary_official_source": {
+  "data_gov_in_catalog": "https://www.data.gov.in/catalog/population-religious-community-india-and-states",
+  "example_resource": "https://www.data.gov.in/resource/population-religious-community-2011-kerala",
+  "resource_metadata_seen": "title 'Population by Religious Community, 2011 - KERALA'; field_ministry_department 'Ministry of Home Affairs||Department of Home||Registrar General and Census Commissioner, India'; field_reference_url https://censusindia.gov.in/census.website/data/census-tables; field_datafile_url https://censusindia.gov.in/datagov/C-01_Religion_Released_Religion_tables/DDW32C_01_MDDS-2011.xls",
+  "file_url_pattern": "https://censusindia.gov.in/datagov/C-01_Religion_Released_Religion_tables/DDW{SS}C_01_MDDS-2011.xls (SS = 00..35; all 36 returned HTTP 200)"
+ },
+ "licence": {
+  "summary": "Use under GODL-India via data.gov.in, which publishes this exact table (numbers verified identical). GODL-India allows commercial use with attribution. The ORGI website's own wording is less permissive (see below), so cite data.gov.in/GODL as the licence basis and credit ORGI as the source.",
+  "data_gov_in_footer_verbatim": "The content published on data.gov.in is owned by the respective Ministry/State/Department/Organization and licensed under the Government Open Data License - India",
+  "godl_india_url": "https://www.data.gov.in/Godl (text read from the official mirror https://smartcities.data.gov.in/government-open-data-license-india because the data.gov.in page renders the text via JavaScript)",
+  "godl_india_clause_3_verbatim": "all users are provided a worldwide, royalty-free, non-exclusive license to use, adapt, publish (either in original, or in adapted and/or derivative forms), translate, display, add value, and create derivative works (including products and services), for all lawful commercial and non-commercial purposes, and for the duration of existence of such rights over the data or information.",
+  "godl_india_clause_4a_verbatim": "Attribution: The user must acknowledge the provider, source, and license of data by explicitly publishing the attribution statement, including the DOI (Digital Object Identifier), or the URL (Uniform Resource Locator), or the URI (Uniform Resource Identifier) of the data concerned.",
+  "godl_other_terms": "4c Non-endorsement (do not suggest the provider endorses the product); 4d No warranty.",
+  "censusindia_website_policy_verbatim": "Copyright policy: The material displayed on this portal may be reproduced free of charge after taking proper permission by sending a mail to us. However, the material must be reproduced accurately and must not be used in a derogatory manner or in a misleading context. Wherever the material is being published or released to others, the source should be prominently acknowledged.",
+  "censusindia_website_policy_url": "https://censusindia.gov.in/census.website/en/node/286",
+  "censusindia_terms_verbatim": "Information in the website is for the benefit of the users. Material featured on this website if used, has to be reproduced accurately and should not be used in a derogatory manner or in a misleading context. Wherever the material is being published or issued to others, the source must be prominently acknowledged.",
+  "censusindia_terms_url": "https://censusindia.gov.in/census.website/en/node/288",
+  "nada_footer_verbatim": "ORGI Digital Library, All Rights Reserved.",
+  "suggested_attribution": "Source: Office of the Registrar General & Census Commissioner, India - Census of India 2011, Table C-01 'Population by religious community' (district level), via Open Government Data Platform India, https://www.data.gov.in/catalog/population-religious-community-india-and-states, licensed under the Government Open Data License - India (GODL). Aggregated to constituencies by Verdix; not endorsed by ORGI."
+ },
+ "code_scheme": {
+  "state_code": "2-digit Census 2011 (MDDS) state code, '01' J&K ... '35' A&N Islands, kept zero-padded as text. 35 states/UTs as of 2011.",
+  "district_code": "3-digit Census 2011 (MDDS) district code, '001'..'640', nationally unique and contiguous, kept zero-padded as text. District code alone is a unique key; state_code is redundant but consistent.",
+  "tru": "'Total' | 'Rural' | 'Urban' (title case; the raw files use Total/Rural/Urban too).",
+  "join_to_pca": "Join on district_code (and tru). The official PCA file DDW_PCA0000_2011_Indiastatedist.xlsx uses the same codes: columns State (2-digit), District (3-digit), TRU. Verified: all 1,920 district x TRU rows match 1:1, total population equal in every row, state codes equal, district names equal after normalising case/punctuation.",
+  "join_to_boundaries": "datameet 2011_Dist shapefile (already in ../boundaries/datameet_2011_dist): join int(district_code) = censuscode. Verified 640/640 match; ST_CEN_CD equals int(state_code) for all 640. Do NOT use DT_CEN_CD (a within-state serial, e.g. Adilabad = 1). The shapefile has one extra polygon, censuscode 0 'Data Not Available' (J&K, ST_CEN_CD 99), with no census data. 20 names are spelt differently (e.g. 'Khargone (West Nimar)' vs 'West Nimar', 'North Twenty Four Parganas' vs 'North 24 Parganas'), so never join on name."
+ },
+ "quirks": [
+  "District rows are identified as district_code != '000' AND subdistrict_code == '00000' AND town_code == '000000'. The state files also contain state-level town rows (district '000', town code set: e.g. Srinagar, Anantnag in J&K; DMC(U), NDMC, Delhi Cantt in Delhi; Devaprayag in Uttarakhand; 4 towns in Manipur; Siliguri in WB; GHMC in AP) for towns that span districts. These are NOT districts and are excluded.",
+  "Tripura's four district names have no 'District - ' prefix in the raw file (West Tripura, South Tripura, Dhalai, North Tripura); every other name is 'District - <name>'. The prefix is stripped in the outputs.",
+  "DDW13 (Nagaland) labels one header 'Other religions and persuasions (incl.Unclassified Sect.) - 2011'; the column order is the same as every other file.",
+  "Nine fully urban districts have Rural rows of all zeros: 094 New Delhi, 095 Central (Delhi), 342 Kolkata, 518 Mumbai Suburban, 519 Mumbai, 536 Hyderabad, 603 Chennai, 634 Yanam, 636 Mahe.",
+  "Geography is as of Census 2011 (640 districts). For present-day seats: state 28 ANDHRA PRADESH includes today's Telangana (districts 532 Adilabad to 541 Khammam); state 01 JAMMU & KASHMIR includes today's Ladakh UT (003 Leh(Ladakh), 004 Kargil); 25 DAMAN & DIU and 26 DADRA & NAGAR HAVELI are separate (merged into one UT in 2020); many districts have since been split. The seat -> 2011-district crosswalk has to handle this.",
+  "State names are the 2011 Census spellings in upper case (e.g. 'JAMMU & KASHMIR', 'NCT OF DELHI', 'ANDAMAN & NICOBAR ISLANDS', 'ODISHA'). Map them to app state names by state_code, not by name.",
+  "'other_religions' = 'Other religions and persuasions (incl. Unclassified Sect.)'; what it contains is listed in raw_nada/DDW00C-01 Appendix MDDS.xlsx, and the sects folded into the six major religions are in the Annexure."
+ ],
+ "external_join_checks": {
+  "pca_file": {"url": "https://censusindia.gov.in/nada/index.php/catalog/6191/download/9268/DDW_PCA0000_2011_Indiastatedist.xlsx", "catalog": "https://censusindia.gov.in/nada/index.php/catalog/6191 (PC11_PCA-SD)", "sha256": "7a8f70d46c43b5dd30eefe920f251752f69f6af8589594c21ac06499074646f5", "stored": "not stored here (the pca/ task owns it); fetched to scratchpad for this check only", "result": "1920/1920 district x TRU rows matched on (district_code, tru); 0 population mismatches (total vs TOT_P); state codes equal; 0 name differences after normalisation"},
+  "boundaries_file": {"path": "../boundaries/datameet_2011_dist/2011_Dist.dbf (read only)", "sha256": "2c7b03578fdf41a4c4e29941a564fa90bf0b0e4f865f5e54481ef7ac8494eb7d", "result": "640/640 matched on censuscode; 1 unmatched polygon (censuscode 0, 'Data Not Available'); ST_CEN_CD = state_code for all 640"}
+ }
+}

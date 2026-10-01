@@ -1,0 +1,84 @@
+{
+ "dataset": "Census of India 2011 - Primary Census Abstract, district level, Total/Rural/Urban",
+ "retrieved_utc": "2026-09-29T13:41:43Z",
+ "method": "plain HTTPS GET (curl, no credentials/cookies/API keys)",
+ "files": [
+  {
+   "path": "DDW_PCA0000_2011_Indiastatedist.xlsx",
+   "role": "raw, unmodified (primary source)",
+   "source_url": "https://censusindia.gov.in/nada/index.php/catalog/6191/download/9268/DDW_PCA0000_2011_Indiastatedist.xlsx",
+   "catalog": "https://censusindia.gov.in/nada/index.php/catalog/6191 (PC11_PCA-SD)",
+   "sha256": "7a8f70d46c43b5dd30eefe920f251752f69f6af8589594c21ac06499074646f5",
+   "bytes": 1376414,
+   "note": "re-downloaded twice, byte-identical. Sheet1 = 2,028 rows: India x3, 35 states x3, 640 districts x3 (Total/Rural/Urban), 85 numeric fields; Sheet2/Sheet3 empty."
+  },
+  {
+   "path": "DDW_PCA0000_2011_Indiastatedist.nada_metadata.json",
+   "role": "raw NADA DDI metadata for the table (column labels, geographic units, citation)",
+   "source_url": "https://censusindia.gov.in/nada/index.php/metadata/export/6191/json",
+   "sha256": "c1674fbed1bb831dd11ec568b167e2d817f7eee5421888b9fa48dd11e97d62df"
+  },
+  {
+   "path": "crosscheck/pca_state_distt_st.xls",
+   "role": "raw, unmodified; independent official PCA for Scheduled Tribes (India/state/district) used to cross-check P_ST",
+   "source_url": "https://censusindia.gov.in/nada/index.php/catalog/5049/download/8126",
+   "catalog": "https://censusindia.gov.in/nada/index.php/catalog/5049 (PC11_PCA-ST)",
+   "sha256": "800f7464a6e78bb2d24b94ef9f76bbbd043a4a95218d2421bf951f49beeb9717"
+  },
+  {
+   "path": "crosscheck/DDW_PCA1401_2011_MDDS with UI.xlsx",
+   "role": "raw, unmodified; PCA town/village/sub-district for Senapati (Manipur) - gives the Mao-Maram, Paomata, Purul sub-district figures",
+   "source_url": "https://censusindia.gov.in/nada/index.php/catalog/6463/download/9540",
+   "catalog": "https://censusindia.gov.in/nada/index.php/catalog/6463 (PC11_PCA-TV-1401)",
+   "sha256": "d1d3d49a40dfb8da25c344db797b2114bfdd41e8b51bb1e53479f17cd0bda130"
+  },
+  {
+   "path": "pca_district_2011.csv",
+   "role": "derived tidy table (1,920 rows = 640 districts x Total/Rural/Urban; all 85 PCA fields with original column names)",
+   "built_by": "build_pca_district_2011.py",
+   "sha256": "1f1e748504be588731a5a1bd5b5ce685007cb07340a8bf571ff564976d57013e"
+  },
+  {
+   "path": "pca_district_2011.validation.json",
+   "role": "output of the 37 validation checks (all pass)"
+  },
+  {
+   "path": "build_pca_district_2011.py",
+   "role": "reproducible build + validation script"
+  }
+ ],
+ "licence": {
+  "publisher": "Office of the Registrar General & Census Commissioner, India (ORGI), Ministry of Home Affairs, Government of India",
+  "censusindia_gov_in_copyright_policy": {
+   "url": "https://censusindia.gov.in/census.website/en/node/286",
+   "text_quoted_2026-09-29": "The material displayed on this portal may be reproduced free of charge after taking proper permission by sending a mail to us. However, the material must be reproduced accurately and must not be used in a derogatory manner or in a misleading context. Wherever the material is being published or released to others, the source should be prominently acknowledged."
+  },
+  "censusindia_gov_in_terms_and_conditions": {
+   "url": "https://censusindia.gov.in/census.website/en/node/288",
+   "text_quoted_2026-09-29": "Material featured on this website if used, has to be reproduced accurately and should not be used in a derogatory manner or in a misleading context. Wherever the material is being published or issued to others, the source must be prominently acknowledged."
+  },
+  "nada_catalog_footer": "ORGI Digital Library, All Rights Reserved.",
+  "data_gov_in": {
+   "catalog_url": "https://www.data.gov.in/catalog/primary-census-abstract-2011-india-and-states-0",
+   "statement_on_page_2026-09-29": "The content published on data.gov.in is owned by the respective Ministry/State/Department/Organization and licensed under the Government Open Data License - India",
+   "released_under": "National Data Sharing and Accessibility Policy (NDSAP); contributor Ministry of Home Affairs / Registrar General and Census Commissioner, India",
+   "licence_url": "https://www.data.gov.in/Godl",
+   "note": "The same ORGI Census 2011 PCA series (catalog described as State/District level) is published on data.gov.in under GODL-India (worldwide, royalty-free, commercial and non-commercial use with attribution). The file in this folder was NOT downloaded from data.gov.in (its downloads sit behind a name/e-mail form); it came from censusindia.gov.in NADA."
+  },
+  "recommended_attribution": "Source: Office of the Registrar General & Census Commissioner, India. Population Census 2011, Table PCA SD: Primary census abstract (PCA) data, India & States/UTs - State and district level (https://censusindia.gov.in/nada/index.php/catalog/6191). Also published on data.gov.in under the Government Open Data License - India.",
+  "caution": "censusindia.gov.in's own copyright policy asks for permission by e-mail before reproduction; the GODL-India licence on data.gov.in covers the same ORGI data without that step. For commercial use, cite GODL-India via data.gov.in and/or send ORGI the courtesy e-mail."
+ },
+ "codes": {
+  "state_code": "2-digit Census 2011 state code as text ('01' J&K ... '35' A&N). 35 States/UTs as of 2011.",
+  "district_code": "3-digit Census 2011 district code as text, '001'..'640', UNIQUE across India (nested contiguously within states, e.g. Karnataka 29 = 555..584, Bangalore = 572). Join key for the 2011 district boundary file.",
+  "2011_geography_quirks": [
+   "ANDHRA PRADESH (28) = undivided AP; its first 10 districts 532-541 (Adilabad, Nizamabad, Karimnagar, Medak, Hyderabad, Rangareddy, Mahbubnagar, Nalgonda, Warangal, Khammam) are today's Telangana; 542-554 are residual AP",
+   "JAMMU & KASHMIR (01) includes Leh(Ladakh) 003 and Kargil 004",
+   "DAMAN & DIU (25) and DADRA & NAGAR HAVELI (26) are separate UTs",
+   "640 districts of 2011; many have since been split/renamed - seats must map to their 2011 parent district",
+   "State names are upper-case as in the source ('NCT OF DELHI', 'ANDAMAN & NICOBAR ISLANDS'); district names are the census spellings (whitespace collapsed only)",
+   "Duplicate district names across states: Aurangabad (BR 235 / MH 515), Bijapur (CG 417 / KA 557), Bilaspur (HP 030 / CG 406), Hamirpur (HP 028 / UP 168), Pratapgarh (RJ 131 / UP 173), Raigarh (CG 403 / MH 520) - always join on code or (state, name)"
+  ]
+ },
+ "senapati_note": "Senapati (Manipur, 272) includes ORGI's ESTIMATED population for Mao-Maram, Paomata and Purul sub-districts (TOT_P 285,404; P_ST 264,682; P_LIT 140,295; P_06 37,103; all rural). India/Manipur totals in this file include them (TOT_P 1,210,854,977). The commonly quoted ST 104,281,034 and literates 763,498,517 are the figures EXCLUDING these three sub-districts; this file gives 104,545,716 and 763,638,812. Both reconcile exactly."
+}

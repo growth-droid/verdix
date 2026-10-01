@@ -1,0 +1,26 @@
+check,expected,got,ok
+district rows (Total),640,640,True
+district rows (Rural/Urban),640/640,640/640,True
+unique district codes 001-640,640,640,True
+HH0101 total households == HL-07 total households (all rows),0,0,True
+HH2206 total households == HL-07 total households (all rows),0,0,True
+HH2507 total households == HL-07 total households (all rows),0,0,True
+HH2808 total households == HL-07 total households (all rows),0,0,True
+HH3410 total households == HL-07 total households (all rows),0,0,True
+HH4012 total households == HL-07 total households (all rows),0,0,True
+"sum of 640 districts == India row, all count columns x T/R/U",0 mismatches,0 mismatches,True
+"sum of districts == each State/UT row, all count columns x T/R/U",0 mismatches,0 mismatches,True
+"district Rural + Urban == Total, all count columns",0 mismatches,0 mismatches,True
+India households (sum of districts),"246,740,228","246,740,228",True
+India pct_electricity_lighting (from districts) vs published,67.2,67.251,True
+India pct_lpg_png_cooking (from districts) vs published,28.5,28.542,True
+India pct_latrine_within_premises (from districts) vs published,46.9,46.919,True
+India pct_banking_services (from districts) vs published,58.7,58.695,True
+India pct_tv (from districts) vs published,47.2,47.217,True
+India pct_telephone_any (from districts) vs published,63.2,63.182,True
+India pct_none_of_assets (from districts) vs published,17.8,17.822,True
+India pct_tap_water (from districts) vs published,43.5,43.538,True
+India pct_computer_laptop (from districts) vs published,9.5,9.470,True
+India pct_two_wheeler (from districts) vs published,21.0,21.019,True
+India pct_car_jeep_van (from districts) vs published,4.7,4.651,True
+"HL-14 (HLPCA) district % vs ours, 15 sample districts, 720 values; tolerance = 1-dec rounding (0.05 per summed component)",max diff <= 0.15,max diff 0.12 (474 Urban pct_telephone_any: HL-14 83.5 vs ours 83.38),True

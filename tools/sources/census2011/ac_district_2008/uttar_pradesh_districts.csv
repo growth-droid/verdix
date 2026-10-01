@@ -1,0 +1,71 @@
+state,district_2008,continuing_2011_code,carved_2011_codes,note
+Uttar Pradesh,SAHARANPUR,132,,2011: 132 Saharanpur; ACs in order: 7
+Uttar Pradesh,MUZAFFARNAGAR,133,,"2011: 133 Muzaffarnagar; ACs in order: 9; Shamli (Prabuddh Nagar) carved Sep 2011 - after Census 2011, not a census district"
+Uttar Pradesh,BIJNOR,134,,2011: 134 Bijnor; ACs in order: 8
+Uttar Pradesh,MORADABAD,135,,"2011: 135 Moradabad; ACs in order: 9; Sambhal (Bhim Nagar) carved Sep 2011 - after Census 2011, not a census district"
+Uttar Pradesh,RAMPUR,136,,2011: 136 Rampur; ACs in order: 5
+Uttar Pradesh,JYOTIBA PHULE NAGAR,137,,2011: 137 Jyotiba Phule Nagar; ACs in order: 4; renamed Amroha (2012)
+Uttar Pradesh,MEERUT,138,,2011: 138 Meerut; ACs in order: 7
+Uttar Pradesh,BAGHPAT,139,,2011: 139 Baghpat; ACs in order: 3
+Uttar Pradesh,GHAZIABAD,140,,"2011: 140 Ghaziabad; ACs in order: 8; Hapur (Panchsheel Nagar) carved Sep 2011 - after Census 2011, not a census district"
+Uttar Pradesh,GAUTAM BUDDHA NAGAR,141,,2011: 141 Gautam Buddha Nagar; ACs in order: 3
+Uttar Pradesh,BULANDSHAHAR,142,,2011: 142 Bulandshahr; ACs in order: 7; Census 2011 spelling Bulandshahr
+Uttar Pradesh,ALIGARH,143,,"2011: 143 Aligarh; ACs in order: 7; order heading misprinted ""DISTRIC : ALIGARH"""
+Uttar Pradesh,MAHAMAYA NAGAR,144,,2011: 144 Mahamaya Nagar; ACs in order: 3; renamed Hathras (2012)
+Uttar Pradesh,MATHURA,145,,2011: 145 Mathura; ACs in order: 5
+Uttar Pradesh,AGRA,146,,2011: 146 Agra; ACs in order: 9
+Uttar Pradesh,FIROZABAD,147,,2011: 147 Firozabad; ACs in order: 5
+Uttar Pradesh,ETAH,201,202,"2011: 201 Etah; carved: 202 Kanshiram Nagar; ACs in order: 7; Kanshiram Nagar (now Kasganj, 202) carved 17-Apr-2008 from Etah (Kasganj, Patiyali, Sahawar tehsils) - after this order, before Census 2011"
+Uttar Pradesh,MAINPURI,148,,2011: 148 Mainpuri; ACs in order: 4
+Uttar Pradesh,BUDAUN,149,,2011: 149 Budaun; ACs in order: 7
+Uttar Pradesh,BAREILLY,150,,2011: 150 Bareilly; ACs in order: 9
+Uttar Pradesh,PILIBHIT,151,,2011: 151 Pilibhit; ACs in order: 4
+Uttar Pradesh,SHAHJAHANPUR,152,,2011: 152 Shahjahanpur; ACs in order: 6
+Uttar Pradesh,KHERI,153,,2011: 153 Kheri; ACs in order: 8
+Uttar Pradesh,SITAPUR,154,,2011: 154 Sitapur; ACs in order: 9
+Uttar Pradesh,HARDOI,155,,2011: 155 Hardoi; ACs in order: 8
+Uttar Pradesh,UNNAO,156,,2011: 156 Unnao; ACs in order: 6
+Uttar Pradesh,LUCKNOW,157,,2011: 157 Lucknow; ACs in order: 9
+Uttar Pradesh,RAE BARELI,158,,2011: 158 Rae Bareli; ACs in order: 7; CSM Nagar (Amethi) carved Jul 2010 partly from Rae Bareli is NOT a Census 2011 district
+Uttar Pradesh,SULTANPUR,179,,2011: 179 Sultanpur; ACs in order: 8; CSM Nagar (Amethi) carved Jul 2010 partly from Sultanpur is NOT a Census 2011 district
+Uttar Pradesh,FARRUKHABAD,159,,2011: 159 Farrukhabad; ACs in order: 4
+Uttar Pradesh,KANNAUJ,160,,2011: 160 Kannauj; ACs in order: 3
+Uttar Pradesh,ETAWAH,161,,2011: 161 Etawah; ACs in order: 3
+Uttar Pradesh,AURAIYA,162,,2011: 162 Auraiya; ACs in order: 3
+Uttar Pradesh,KANPUR DEHAT,163,,2011: 163 Kanpur Dehat; ACs in order: 4
+Uttar Pradesh,KANPUR NAGAR,164,,2011: 164 Kanpur Nagar; ACs in order: 10
+Uttar Pradesh,JALAUN,165,,2011: 165 Jalaun; ACs in order: 3
+Uttar Pradesh,JHANSI,166,,2011: 166 Jhansi; ACs in order: 4
+Uttar Pradesh,LALITPUR,167,,2011: 167 Lalitpur; ACs in order: 2
+Uttar Pradesh,HAMIRPUR,168,,2011: 168 Hamirpur; ACs in order: 2
+Uttar Pradesh,MAHOBA,169,,2011: 169 Mahoba; ACs in order: 2
+Uttar Pradesh,BANDA,170,,2011: 170 Banda; ACs in order: 4
+Uttar Pradesh,CHITRAKOOT,171,,2011: 171 Chitrakoot; ACs in order: 2
+Uttar Pradesh,FATEHPUR,172,,2011: 172 Fatehpur; ACs in order: 6
+Uttar Pradesh,PRATAPGARH,173,,2011: 173 Pratapgarh; ACs in order: 7
+Uttar Pradesh,KAUSHAMBI,174,,2011: 174 Kaushambi; ACs in order: 3
+Uttar Pradesh,ALLAHABAD,175,,2011: 175 Allahabad; ACs in order: 12; renamed Prayagraj (2018)
+Uttar Pradesh,BARABANKI,176,177,"2011: 176 Bara Banki; carved: 177 Faizabad; ACs in order: 7; Census 2011 spelling Bara Banki. 177 Faizabad is NOT a new district - it is listed because of a TERRITORY TRANSFER: the order puts AC 271 Rudauli (""1-Rudauli Tehsil"" + 5 PCs of Ram Sanehi Ghat tehsil) under Barabanki, but Census 2011 has Rudauli sub-district (00902) inside Faizabad (177); the polygon overlay agrees (271 = 88% in 177)"
+Uttar Pradesh,FAIZABAD,177,,"2011: 177 Faizabad; ACs in order: 4; renamed Ayodhya (2018); in Census 2011 it also contains Rudauli tehsil, which the order counts under Barabanki (AC 271)"
+Uttar Pradesh,AMBEDKAR NAGAR,178,,2011: 178 Ambedkar Nagar; ACs in order: 5
+Uttar Pradesh,BAHRAICH,180,,2011: 180 Bahraich; ACs in order: 7
+Uttar Pradesh,SHRAWASTI,181,,2011: 181 Shrawasti; ACs in order: 2
+Uttar Pradesh,BALRAMPUR,182,,2011: 182 Balrampur; ACs in order: 4
+Uttar Pradesh,GONDA,183,,2011: 183 Gonda; ACs in order: 7
+Uttar Pradesh,SIDDHARTHNAGAR,184,,2011: 184 Siddharthnagar; ACs in order: 5
+Uttar Pradesh,BASTI,185,,2011: 185 Basti; ACs in order: 5
+Uttar Pradesh,SANT KABIR NAGAR,186,,2011: 186 Sant Kabir Nagar; ACs in order: 3
+Uttar Pradesh,MAHARAJGANJ,187,,2011: 187 Mahrajganj; ACs in order: 5; Census 2011 spelling Mahrajganj
+Uttar Pradesh,GORAKHPUR,188,,2011: 188 Gorakhpur; ACs in order: 9
+Uttar Pradesh,KUSHI NAGAR,189,,2011: 189 Kushinagar; ACs in order: 7; Census 2011 spelling Kushinagar
+Uttar Pradesh,DEORIA,190,,2011: 190 Deoria; ACs in order: 7
+Uttar Pradesh,AZAMGARH,191,,2011: 191 Azamgarh; ACs in order: 10
+Uttar Pradesh,MAU,192,,2011: 192 Mau; ACs in order: 4
+Uttar Pradesh,BALLIA,193,,2011: 193 Ballia; ACs in order: 7
+Uttar Pradesh,JAUNPUR,194,,2011: 194 Jaunpur; ACs in order: 9
+Uttar Pradesh,GHAZIPUR,195,,2011: 195 Ghazipur; ACs in order: 7
+Uttar Pradesh,CHANDAULI,196,,"2011: 196 Chandauli; ACs in order: 4; order heading misprinted ""DISTRIC : CHANDAULI"""
+Uttar Pradesh,VARANASI,197,,2011: 197 Varanasi; ACs in order: 8
+Uttar Pradesh,SANT RAVIDAS NAGAR,198,,2011: 198 Sant Ravidas Nagar (Bhadohi); ACs in order: 3; Census 2011: Sant Ravidas Nagar (Bhadohi)
+Uttar Pradesh,MIRZAPUR,199,,2011: 199 Mirzapur; ACs in order: 5
+Uttar Pradesh,SONBHADRA,200,,2011: 200 Sonbhadra; ACs in order: 4

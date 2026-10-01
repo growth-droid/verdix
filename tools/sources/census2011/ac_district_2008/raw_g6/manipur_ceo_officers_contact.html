@@ -1,0 +1,1224 @@
+
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <title>CEO, Manipur |  Officers Contact</title>
+<meta charset="utf-8" /><meta name="description" content="Official Website of Chief Electoral Officer Manipur" /><meta name="keywords" content="HTML, CSS, JavaScript" /><meta name="viewport" content="width=device-width, initial-scale=1" /><link rel="shortcut icon" href="images/ico/favicon.ico" /><link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/ico/apple-touch-icon-144-precomposed.png" /><link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/ico/apple-touch-icon-114-precomposed.png" /><link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/ico/apple-touch-icon-72-precomposed.png" /><link rel="apple-touch-icon-precomposed" href="images/ico/apple-touch-icon-57-precomposed.png" />
+    <link href="/Content/font-awesome.min.css" rel="stylesheet" nonce="s7L3Tj4eAek+hoItT+kJTg==" />
+     <script src="/Scripts/jquery-3.7.1.min.js" nonce="s7L3Tj4eAek+hoItT+kJTg=="></script>
+    <link href="/Content/bootstrap.min.css" rel="stylesheet" nonce="s7L3Tj4eAek+hoItT+kJTg==" />
+    <script src="/Scripts/bootstrap.bundle.min.js" nonce="s7L3Tj4eAek+hoItT+kJTg=="></script>
+    <link src="/Content/bootstrap-table.min.css" rel="stylesheet" nonce="s7L3Tj4eAek+hoItT+kJTg==" />
+    <script src="/Scripts/bootstrap-table.min.js" nonce="s7L3Tj4eAek+hoItT+kJTg=="></script>
+    <script src="/Scripts/MicrosoftAjax.js" nonce="s7L3Tj4eAek+hoItT+kJTg=="></script>
+    <script src="/Scripts/jquery.webticker.min.js" nonce="s7L3Tj4eAek+hoItT+kJTg=="></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans:wght@400;700&family=Poppins:wght@400;700&display=swap" nonce="s7L3Tj4eAek+hoItT+kJTg==" />
+
+    <link href="Content/all.min.css" rel="stylesheet" />
+    <link href="/Content/default.css" id="dynamicStylesheet" rel="stylesheet" nonce="s7L3Tj4eAek+hoItT+kJTg==" />
+    
+
+    <script type="text/javascript" nonce="s7L3Tj4eAek+hoItT+kJTg==">
+
+        $(document).ready(function () {
+            $('#linkIncrease').click(function () {
+                modifyFontSize('increase');
+            });
+
+            $('#linkDecrease').click(function () {
+                modifyFontSize('decrease');
+            });
+
+            $('#linkReset').click(function () {
+                modifyFontSize('reset');
+            })
+
+            function modifyFontSize(flag) {
+                var divElement = $("p,li,h2,h3");
+                var currentFontSize = parseInt(divElement.css('font-size'));
+
+                if (flag == 'increase' && currentFontSize < 30)
+                    currentFontSize += 2;
+                else if (flag == 'decrease' && currentFontSize > 6)
+                    currentFontSize -= 2;
+                else
+                    currentFontSize = 18;
+
+                divElement.css('font-size', currentFontSize);
+            }
+        });
+    </script>
+    <style nonce="s7L3Tj4eAek+hoItT+kJTg==">
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', 'Open Sans', 'Poppins', sans-serif;
+        }
+
+        .carousel {
+            background: #EEE;
+        }
+
+        .carousel-cell {
+            width: 50%; /* half-width */
+            height: 150px;
+            margin-right: 10px;
+        }
+
+        .carousel-image {
+            display: block;
+            height: 200px;
+            /* set min-width, allow images to set cell width */
+            min-width: 150px;
+            max-width: 100%;
+            margin-right: 10px;
+            /* vertically center */
+            top: 50%;
+            transform: translateY(-50%);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            border-radius: 12px;
+        }
+
+        .carousel-image-p {
+            display: block;
+            height: 300px;
+            /* set min-width, allow images to set cell width */
+            min-width: 150px;
+            max-width: 100%;
+            margin-right: 10px;
+            /* vertically center */
+            top: 50%;
+            transform: translateY(-50%)
+        }
+
+        .carousel.is-fullscreen .carousel-image {
+            height: auto;
+            max-height: 100%;
+        }
+
+        .carousel-cell:before {
+            display: block;
+            text-align: center;
+            content: counter(carousel-cell);
+            line-height: 200px;
+            font-size: 80px;
+            color: white;
+        }
+
+        .static-banner {
+            background-color: rgba(0, 0, 0, 0.7);
+            color: #fff;
+            padding: 10px 20px;
+            font-size: 1.2rem;
+            border-radius: 8px;
+        }
+
+        .static-banner1 {
+            left: 10px;
+            top: 10px;
+        }
+
+        .static-banner2 {
+            right: 10px;
+            bottom: 10px;
+        }
+
+        .sticky {
+            position: fixed;
+            top: 0;
+            width: 100%;
+        }
+
+        .blink {
+            animation: blinker 1.5s linear infinite;
+            color: red;
+            font-family: sans-serif;
+        }
+
+        @keyframes blinker {
+            50% {
+                opacity: 0;
+            }
+        }
+              
+             .loading-wrap {
+    display: none !important; 
+    visibility: hidden;       
+    opacity: 0;              
+    height: 0;              
+}
+
+        .card {
+            border-radius: 12px;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+            .card:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            }
+
+        .card-header img {
+            width: 100%;
+            object-fit: cover;
+            border-bottom: 2px solid #007bff;
+        }
+
+        .card-footer .btn {
+            width: 100%; /* Ensures buttons are easy to tap on mobile */
+        }
+          :root {
+            --primary-color: #1a4f8c;
+            --primary-hover: #0d3a6b;
+            --accent-color: #e63946;
+            --light-bg: #f8f9fa;
+            --border-radius: 8px;
+            --transition: all 0.3s ease;
+        }
+        
+        .navigation-container {
+            background-color: var(--light-bg);
+            border-radius: var(--border-radius);
+            padding: 1.5rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            height: 100%;
+        }
+        
+        .navigation-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid var(--primary-color);
+        }
+        
+        .navigation-header i {
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            margin-right: 0.75rem;
+        }
+        
+        .navigation-header h2 {
+            color: var(--primary-color);
+            font-weight: 600;
+            margin: 0;
+            font-size: 1.4rem;
+        }
+        
+        .navig-menu {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .navig-item {
+            margin-bottom: 0.75rem;
+            transition: var(--transition);
+        }
+        
+        .navig-item:hover {
+            transform: translateX(5px);
+        }
+        
+        .navig-link {
+            display: flex;
+            align-items: center;
+            padding: 0.75rem 1rem;
+            background-color: white;
+            color: var(--primary-color);
+            text-decoration: none;
+            border-radius: var(--border-radius);
+            border: 1px solid #e0e0e0;
+            transition: var(--transition);
+            font-weight: 500;
+            position: relative;
+        }
+        
+        .navig-link:hover, .navig-link:focus {
+            background-color: var(--primary-color);
+            color: white;
+            border-color: var(--primary-color);
+            box-shadow: 0 4px 8px rgba(26, 79, 140, 0.2);
+        }
+        
+        .navig-link i {
+            margin-right: 0.75rem;
+            font-size: 1.1rem;
+            width: 20px;
+            text-align: center;
+        }
+        
+        .external-link::after {
+            content: "\f35d";
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            margin-left: auto;
+            font-size: 0.85rem;
+            opacity: 0.7;
+        }
+        
+        .navig-link:hover.external-link::after {
+            opacity: 1;
+        }
+        
+        .badge {
+            position: absolute;
+            right: 1rem;
+            background-color: var(--accent-color);
+            color: white;
+            font-size: 0.7rem;
+            padding: 0.25rem 0.5rem;
+        }
+        
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+        }
+        
+        @media (max-width: 768px) {
+            .navigation-container {
+                padding: 1rem;
+            }
+            
+            .navig-link {
+                padding: 0.6rem 0.8rem;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+<title>
+
+</title></head>
+<body>
+    <form name="aspnetForm" method="post" action="./officers_contact" id="aspnetForm">
+<div>
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="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" />
+</div>
+
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="F305FEB3" />
+	<input type="hidden" name="__VIEWSTATEENCRYPTED" id="__VIEWSTATEENCRYPTED" value="" />
+</div>
+        <div class="container maincontainer">
+     <nav class="navbar navbar-expand-sm" role="navigation" aria-label="Main navigation">
+  <div class="container-fluid d-flex flex-column px-3 bg-white">
+
+        <!-- Accessibility Links Row (Always on Top) -->
+       <div class="w-100 d-flex flex-wrap justify-content-end align-items-center gap-2 py-2 skiplink order-0">
+            <div class=" d-none d-sm-block"><a class="text-decoration-none fw-bold text-primary " href="#main" aria-label="Skip to main content">
+                Skip to Main Content
+            </a>
+            <span class="text-muted">|</span>
+             <a class="text-decoration-none fw-bold text-primary" aria-label="Screen Reader Access" href="screenreader.aspx">
+                Screen Reader Access
+            </a>
+            <span class="text-muted">|</span>
+                </div>
+            <!-- Font size buttons -->
+            <div class="d-flex gap-1">
+                <a id="linkIncrease" class="btn btn-outline-primary btn-sm px-2" href="#" role="button" aria-label="Increase text size">A+</a>
+                <a id="linkReset" class="btn btn-outline-primary btn-sm px-2" href="#" role="button" aria-label="Reset text size">A</a>
+                <a id="linkDecrease" class="btn btn-outline-primary btn-sm px-2" href="#" role="button" aria-label="Decrease text size">A-</a>
+            </div>
+
+            <span class="text-muted">|</span>
+
+            <!-- Theme buttons -->
+            <div class="d-flex gap-1">
+                <a href="#" id="defaultStyleBtn" class="btn btn-primary btn-sm text-white px-2" role="button" aria-label="Switch to default color scheme">A</a>
+                <a href="#" id="alternateStyleBtn" class="btn btn-dark btn-sm text-white px-2" role="button" aria-label="Switch to alternate color scheme">A</a>
+            </div>
+        </div>
+<!-- Header Row -->
+<div class="d-flex flex-column flex-sm-row justify-content-between align-items-start align-items-sm-center gap-2 w-100">
+
+<!-- Left: Logo + Toggler (in one line) -->
+ <div class="d-flex align-items-center justify-content-between w-100 w-sm-auto">
+     <!-- Logo -->
+     <a id="nav-ico" class="navbar-brand me-2" href="/" aria-label="Home"></a>
+
+     <!-- Toggler for mobile only -->
+     <button class="navbar-toggler d-sm-none" type="button" data-bs-toggle="collapse"
+         data-bs-target="#ceo-navbar-collapse" aria-controls="ceo-navbar-collapse"
+         aria-expanded="false" aria-label="Toggle navigation">
+         <span class="navbar-toggler-icon"></span>
+     </button>
+ </div>
+
+    <!-- Right: Contact Info + Social Icons (always side by side on sm and up) -->
+    <div class="d-flex flex-wrap flex-sm-nowrap align-items-center justify-content-end gap-3">
+
+        <!-- Contact Info -->
+        <div class="ceofont text-center">
+            <i class="fas fa-phone-square me-1"></i>
+            Toll Free: <strong>1950</strong>
+        </div>
+
+        <!-- Social Icons -->
+        <div class="d-flex gap-2">
+            <a href="https://www.facebook.com/CEO-Manipur-226796207750787/?fref=ts"
+                target="_blank" class="text-dark" data-bs-toggle="tooltip"
+                title="Visit Our Facebook Page" aria-label="Visit our Facebook page">
+                <i class="fab fa-facebook-square fa-lg"></i>
+            </a>
+            <a href="https://www.youtube.com/channel/UCQPi9QKARKtKlSe3l6ozi-g"
+                target="_blank" class="text-danger" data-bs-toggle="tooltip"
+                title="Visit Our YouTube Channel" aria-label="Visit our YouTube channel">
+                <i class="fab fa-youtube fa-lg"></i>
+            </a>
+            <a href="https://twitter.com/CeoManipur"
+                target="_blank" class="text-info" data-bs-toggle="tooltip"
+                title="Visit Our Twitter Page" aria-label="Visit our Twitter page">
+                <i class="fab fa-twitter-square fa-lg"></i>
+            </a>
+            <a href="https://www.instagram.com/the_ceo_manipur/"
+                target="_blank" class="text-danger" data-bs-toggle="tooltip"
+                title="Visit our Instagram Page" aria-label="Visit our Instagram page">
+                <i class="fab fa-instagram fa-lg"></i>
+            </a>
+        </div>
+    </div>
+
+</div>
+
+
+
+        <!-- NAVBAR COLLAPSE MENU -->
+<div class="collapse navbar-collapse w-100 justify-content-end order-3" id="ceo-navbar-collapse">
+
+  <!-- Desktop Menu Links -->
+  <ul class="navbar-nav ms-auto mb-2 mb-sm-0">
+    <li class="nav-item">
+      <a id="ctl00_HyperLink3" class="nav-link" href="index.aspx">Home</a>
+    </li>
+    <li class="nav-item">
+      <a id="ctl00_HyperLink8" class="nav-link" href="ceogallery.aspx">Gallery</a>
+    </li>
+    <li class="nav-item">
+      <a id="ctl00_HyperLink13" class="nav-link" href="FAQ.aspx">FAQ</a>
+    </li>
+    <li class="nav-item">
+      <a id="ctl00_HyperLink20" class="nav-link" href="Feedback.aspx">Feedback</a>
+    </li>
+    <li class="nav-item">
+      <a id="ctl00_HyperLink14" class="nav-link" href="ContactUs.aspx">Contact Us</a>
+    </li>
+    <li class="nav-item">
+      <a id="ctl00_HyperLink23" class="nav-link" href="AboutUs.aspx">About Us</a>
+    </li>
+    <li class="nav-item">
+      <a id="ctl00_HyperLink16" class="nav-link" href="rti.aspx">RTI</a>
+    </li>
+  </ul>
+
+  <!-- Mobile Only Menu Links -->
+  <div class="menulnk pt-2 d-block d-sm-none">
+    <ul class="list-unstyled mb-0">
+      <li>
+        <a id="ctl00_HyperLink18" class="btn btn-primary w-100 mb-2" href="ACMap/ACSMap.aspx">Assembly Constitution Map</a>
+      </li>
+      <li>
+        <a id="ctl00_HyperLink19" class="btn btn-primary w-100 mb-2" href="affidavit.aspx">Affidavit of Candidate</a>
+      </li>
+      <li>
+        <a id="ctl00_HyperLink21" class="btn btn-primary w-100 mb-2" href="candidates.aspx">Candidate</a>
+      </li>
+      <li>
+        <a id="ctl00_HyperLink29" title="Opens in a new tab to download" class="btn btn-primary w-100 mb-2" href="Documents/Model_Code_Conduct.pdf" target="_blank">Code of Conduct</a>
+      </li>
+      <li>
+        <a id="ctl00_HyperLink30" class="btn btn-primary w-100 mb-2" href="officers_contact.aspx">DEOs/EROs/AEROs</a>
+      </li>
+      <li>
+        <a id="ctl00_HyperLink31" class="btn btn-primary w-100 mb-2" href="resources/election_res.aspx">Instruction &amp; Handbook</a>
+      </li>
+      <li>
+        <a id="ctl00_HyperLink32" class="btn btn-primary w-100 mb-2" href="expenditures.aspx">Expenditure</a>
+      </li>
+      <li>
+        <a id="ctl00_HyperLink33" class="btn btn-primary w-100 mb-2" href="https://www.eci.gov.in/evm-faqs" target="_blank">EVM</a>
+      </li>
+      <li>
+        <a id="ctl00_HyperLink34" class="btn btn-primary w-100 mb-2" href="forms.aspx">Forms</a>
+      </li>
+      <li>
+        <a id="ctl00_HyperLink35" class="btn btn-primary w-100 mb-2" href="ceogallery.aspx">Photo Gallery</a>
+      </li>
+      <li>
+        <a id="ctl00_HyperLink36" class="btn btn-primary w-100 mb-2" href="pollingstation.aspx">PS Station Information</a>
+      </li>
+      <li>
+        <a id="ctl00_HyperLink37" class="btn btn-primary w-100 mb-2" href="result_sheet_form20.aspx">Result Sheets</a>
+      </li>
+      <li>
+        <a id="ctl00_HyperLink38" class="btn btn-primary w-100 mb-2" href="rti.aspx">RTI</a>
+      </li>
+      <li>
+        <a id="ctl00_HyperLink39" class="btn btn-primary w-100" href="StatisticalReports.aspx">Statistical Report</a>
+      </li>
+    </ul>
+  </div>
+
+</div>
+
+
+       
+    </div>
+</nav>
+
+            <div class="row wlink text-center g-2">
+    <div class="col-6 col-lg-2  p-0">
+        <a href="https://voters.eci.gov.in/home/track"
+           class="d-block p-2 sub-menu-head"
+           title="External Website that opens in a new window"
+           target="_blank">
+            Application Status
+        </a>
+    </div>
+    <div class="col-6 col-lg-2 p-0">
+        <a href="https://electoralsearch.eci.gov.in/"
+           class="d-block p-2 sub-menu-head1"
+           title="External Website that opens in a new window"
+           target="_blank">
+            Elector Search
+        </a>
+    </div>
+    <div class="col-6 col-lg-2 p-0">
+        <a href="eroll.aspx" class="d-block p-2 sub-menu-head">
+            Electoral Roll
+        </a>
+    </div>
+    <div class="col-6 col-lg-2 p-0">
+        <a href="https://voters.eci.gov.in/"
+           class="d-block p-2 sub-menu-head1"
+           title="External Website that opens in a new window"
+           target="_blank">
+            Online Registration
+        </a>
+    </div>
+    <div class="col-6 col-lg-2 p-0">
+        <a id="ctl00_HyperLink15" class="d-block p-2 sub-menu-head" href="ceogallery.aspx">
+            Photo Gallery
+        </a>
+    </div>
+    <div class="col-6 col-lg-2 p-0">
+        <a href="https://svp.eci.gov.in/"
+           class="d-block p-2 sub-menu-head1"
+           title="External Website that opens in a new window"
+           target="_blank">
+            Service Voter
+        </a>
+    </div>
+</div>
+            
+
+
+
+            <div class="breadcrumbs p-2 ">
+                <div class="wrapper">
+                    
+    <a href="index.aspx"><i class="fa fa-home"></i>Home</a>    Officers Contact
+
+                </div>
+            </div>
+            <div id="subcontainer" class="row">
+               
+                 <div class="col-lg-3 col-md-3 d-none d-sm-block">
+                <nav class="navigation-container" aria-labelledby="navig-heading">
+
+                    
+                    <ul class="navig-menu" role="menubar">
+                        <li class="navig-item" role="none">
+                            <a class="navig-link" role="menuitem" href="ACMap/ACSMap.aspx">
+                                <i class="fas fa-map-marked-alt"></i>
+                                Assembly Constitution Map
+                            </a>
+                        </li>
+                        
+                        <li class="navig-item" role="none">
+                            <a class="navig-link" role="menuitem" href="affidavit.aspx">
+                                <i class="fas fa-file-signature"></i>
+                                Affidavit of Candidate
+                            </a>
+                        </li>
+                        
+                        <li class="navig-item" role="none">
+                            <a class="navig-link" role="menuitem" href="candidates.aspx">
+                                <i class="fas fa-user-tie"></i>
+                                Candidate Information
+                            </a>
+                        </li>
+                        
+                        <li class="navig-item" role="none">
+                            <a class="navig-link external-link" role="menuitem" href="Documents/Model_Code_Conduct.pdf" target="_blank">
+                                <i class="fas fa-gavel"></i>
+                                Code of Conduct
+                                <span class="badge">PDF</span>
+                                <span class="sr-only">Opens in a new tab</span>
+                            </a>
+                        </li>
+                        
+                        <li class="navig-item" role="none">
+                            <a class="navig-link" role="menuitem" href="officers_contact.aspx">
+                                <i class="fas fa-address-book"></i>
+                                DEOs/EROs/AEROs
+                            </a>
+                        </li>
+                        
+                        <li class="navig-item" role="none">
+                            <a class="navig-link" role="menuitem" href="resources/election_res.aspx">
+                                <i class="fas fa-book"></i>
+                                Instructions & Handbook
+                            </a>
+                        </li>
+                        
+                        <li class="navig-item" role="none">
+                            <a class="navig-link" role="menuitem" href="expenditures.aspx">
+                                <i class="fas fa-chart-line"></i>
+                                Expenditure Tracking
+                            </a>
+                        </li>
+                        
+                        <li class="navig-item" role="none">
+                            <a class="navig-link external-link" role="menuitem" href="https://www.eci.gov.in/evm-faqs" target="_blank">
+                                <i class="fas fa-vote-yea"></i>
+                                EVM Information
+                                <span class="sr-only">Opens in a new tab</span>
+                            </a>
+                        </li>
+                        
+                        <li class="navig-item" role="none">
+                            <a class="navig-link" role="menuitem" href="forms.aspx">
+                                <i class="fas fa-file-alt"></i>
+                                Election Forms
+                            </a>
+                        </li>
+                        
+                        <li class="navig-item" role="none">
+                            <a class="navig-link" role="menuitem" href="ceogallery.aspx">
+                                <i class="fas fa-images"></i>
+                                Photo Gallery
+                            </a>
+                        </li>
+                        
+                        <li class="navig-item" role="none">
+                            <a class="navig-link" role="menuitem" href="pollingstation.aspx">
+                                <i class="fas fa-poll-h"></i>
+                                Polling Station Information
+                            </a>
+                        </li>
+                        
+                        <li class="navig-item" role="none">
+                            <a class="navig-link" role="menuitem" href="result_sheet_form20.aspx">
+                                <i class="fas fa-clipboard-list"></i>
+                                Result Sheets
+                            </a>
+                        </li>
+                        
+                        <li class="navig-item" role="none">
+                            <a class="navig-link" role="menuitem" href="rti.aspx">
+                                <i class="fas fa-info-circle"></i>
+                                RTI Information
+                            </a>
+                        </li>
+                        
+                        <li class="navig-item" role="none">
+                            <a class="navig-link" role="menuitem" href="StatisticalReports.aspx">
+                                <i class="fas fa-chart-bar"></i>
+                                Statistical Reports
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+                <div class="col-sm-9 pe-3">
+                    
+    <h3 style="color: #008080">Who's Who of Election Officials</h3>
+
+    <ul class="nav nav-tabs">
+            <li class="nav-item">
+                <a class="nav-link active" data-bs-toggle="tab" href="#DEO">District Election Officers (DEOs)</a></li>
+
+             <li class="nav-item">
+                 <a class="nav-link" data-bs-toggle="tab" href="#ERO">Electoral Registration Officers (ERO)</a></li>
+             <li class="nav-item">
+                 <a class="nav-link" data-bs-toggle="tab" href="#AERO">Asstt. ERO (AERO)</a></li>
+             
+        </ul>
+    <div class="tab-content">
+        <div class="tab-pane container active" id="DEO" style="height:20%">
+            <div class="card">
+                <div class="card-header">
+                    District Election Officers (DEOs)
+                </div>
+                <div class="card-body">
+              <div class="table-responsive mt-3" aria-label="District Election Officers Contact Information">
+    <table class="table table-striped table-bordered align-middle text-nowrap">
+        <thead class="table-primary text-center">
+            <tr>
+                <th scope="col">Sl No.</th>
+                <th scope="col">District Names</th>
+                <th scope="col">District Election Officers' Names</th>
+                <th scope="col">Telephone Number</th>
+                <th scope="col">Email ID</th>
+            </tr>
+        </thead>
+        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Imphal East</td>
+                                <td>Dr. Nivedita Lairenlakpam, IAS DC/DEO</td>
+                                <td>0385-2458387</td>
+                                <td>deoimphaleast[dot]mn[at]gov[dot]in</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Imphal West</td>
+                                <td>Shri Mayanglambam Rajkumar, IAS DC/DEO</td>
+                                <td>0385-2414615</td>
+                                <td>deoimphalwest[dot]mn[at]gov[dot]in</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Bishnupur</td>
+                                <td>Smt Pooja Elangbam, IAS DC/DEO</td>
+                                <td>03879-222212</td>
+                                <td>deobishnupur[dot]mn[at]gov[dot]in</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>Thoubal</td>
+                                <td>Smt Yumnam Robita, IAS, DC/DEO</td>
+                                <td>03848-222662</td>
+                                <td>deothoubal[dot]mn[at]gov[dot]in</td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>Chandel</td>
+                                <td>Shri Hemant Kumar, IAS DC/DEO</td>
+                                <td>03872-232221</td>
+                                <td>deochandel[dot]mn[at]gov[dot]in</td>
+                            </tr>
+                            <tr>
+                                <td>6</td>
+                                <td>Ukhrul</td>
+                                <td>Shri Uppuluri Chaitanya, IAS DC/DEO</td>
+                                <td>0385-2458387</td>
+                                <td>deoukhrul[dot]mn[at]gov[dot]in</td>
+                            </tr>
+                            <tr>
+                                <td>7</td>
+                                <td>Senapati</td>
+                                <td>Shri Dharun Kumar S, IAS DC/DEO</td>
+                                <td>0385-2451188</td>
+                                <td>deosenapati[dot]mn[at]gov[dot]in</td>
+                            </tr>
+                            <tr>
+                                <td>8</td>
+                                <td>Tamenglong</td>
+                                <td>Dr. L Angshim Dangshawa, IAS DC/DEO</td>
+                                <td>03877-222003</td>
+                                <td>deotamenglong[dot]mn[at]gov[dot]in</td>
+                            </tr>
+                            <tr>
+                                <td>9</td>
+                                <td>Churachandpur</td>
+                                <td>Shri Krishna Kumar, IAS DC/DEO</td>
+                                <td>03879-222212</td>
+                                <td>deochurachandpur[dot]mn[at]gov[dot]in</td>
+                            </tr>
+                            <tr>
+                                <td>10</td>
+                                <td>Jiribam</td>
+                                <td>Shri Arvind Hanglem, IAS  DC/DEO</td>
+                                <td>-</td>
+                                <td>deojiribam[dot]mn[at]gov[dot]in</td>
+                            </tr>
+                            <tr>
+                                <td>11</td>
+                                <td>Kangpokpi</td>
+                                <td>Shri Mahesh Hiralal Chaudhari, IAS DC/DEO</td>
+                                <td>03880-263401</td>
+                                <td>deo-kangpokpi[at]manipur[dot]gov[dot]in</td>
+                            </tr>
+                            <tr>
+    <td>12</td>
+    <td>Kakching</td>
+    <td>Smt Angeline Renita, IAS DC/DEO</td>
+    <td></td>
+    <td>deo-kakching[dot]mn[at]manipur[dot]gov[dot]in</td>
+</tr>
+                            <tr>
+    <td>13</td>
+    <td>Tengnoupal</td>
+    <td>Shri Saurabh Yadav, IAS DC/DEO</td>
+    <td></td>
+    <td>deo-tengnoupal[dot]mn[at]manipur[dot]gov[dot]in</td>
+</tr>
+                            <tr>
+    <td>14</td>
+    <td>Kamjong</td>
+    <td>Shri Luckyson Ngamsha kashung, IAS DC/DEO</td>
+    <td></td>
+    <td>deo-kamjong[dot]mn[at]manipur[dot]gov[dot]in</td>
+</tr>
+                            <tr>
+    <td>15</td>
+    <td>Noney</td>
+    <td>Shri Vidyamari Sridhar, IAS DC/DEO</td>
+    <td></td>
+    <td>deo-noney[dot]mn[at]manipur[dot]gov[dot]in</td>
+</tr>
+                            <tr>
+    <td>16</td>
+    <td>Pherzawl</td>
+    <td>Smt Mannuamching, IAS DC/DEO</td>
+    <td></td>
+    <td>deo-pherzawl[dot]mn[at]manipur[dot]gov[dot]in</td>
+</tr>
+                        </tbody>
+                    </table>
+                  </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="tab-pane container fade" id="ERO" style="height:20%">
+            <div class="card" id="Div2" role="tablist" aria-multiselectable="true">
+                <div class="card">
+                    <div class="card-header">
+                        Electoral Registration Officers (ERO)
+                    </div>
+                    <div class="card-body">
+                        <div>
+	<table class="table table-striped table-hover" cellspacing="0" border="0" id="ctl00_ContentPlaceHolder1_GridView1" style="border-collapse:collapse;">
+		<thead>
+			<tr>
+				<th scope="col">District</th><th scope="col">AC Name</th><th scope="col">Name</th><th scope="col">Designation</th><th scope="col">Email</th>
+			</tr>
+		</thead><tbody>
+			<tr>
+				<td>Imphal East</td><td>1 - Khundrakpam</td><td>Khwairakpam Lenin Singh                           </td><td>Sub-Divisional Officer, Sawombung                                                                   </td><td>ero-khndkpam[at]manipur[dot]gov[dot]in                       </td>
+			</tr><tr>
+				<td>Imphal East</td><td>2 - Heingang</td><td>Elangbam Amuthoi Khanganba                        </td><td>Block Development Officer, Heingang CD Block                                                        </td><td>ero-heingang[at]manipur[dot]gov[dot]in                       </td>
+			</tr><tr>
+				<td>Imphal East</td><td>3 - Khurai</td><td>Yendrembam Sher Singh                             </td><td>Assistant Commissioner (I) to Deputy Commissioner, Imphal East                                      </td><td>ero-khurai[at]manipur[dot]gov[dot]in                         </td>
+			</tr><tr>
+				<td>Imphal East</td><td>4 - Khetrigao</td><td>Karam Uma Devi                                    </td><td>Block Development Officer, Kshetrigao CD Block                                                      </td><td>ero-khetrgao[at]manipur[dot]gov[dot]in                       </td>
+			</tr><tr>
+				<td>Imphal East</td><td>5 - Thongju</td><td>Dr. R.K. Dayananda                                </td><td>Additional Deputy Commissioner (I), Imphal East                                                     </td><td>ero-thongju[at]manipur[dot]gov[dot]in                        </td>
+			</tr><tr>
+				<td>Imphal East</td><td>6 - Keirao</td><td>Laishram Roshan Singh                             </td><td>Sub-Divisional Officer, Keirao Bitra                                                                </td><td>ero-keirao[at]manipur[dot]gov[dot]in                         </td>
+			</tr><tr>
+				<td>Imphal East</td><td>7 - Andro</td><td>N. Suran Singh                                    </td><td>Assistant Commissioner (II) to Deputy Commissioner, Imphal East                                     </td><td>ero-andro[at]manipur[dot]gov[dot]in                          </td>
+			</tr><tr>
+				<td>Imphal East</td><td>8 - Lamlai</td><td>Sagolsem Indrajit Singh                           </td><td>Block Development Officer, Sawombung CD Block                                                       </td><td>ero-lamlai[at]manipur[dot]gov[dot]in                         </td>
+			</tr><tr>
+				<td>Imphal West</td><td>9 - Thangmeiband</td><td>Yumnam Dhanendra Singh                            </td><td>Sub-Divisional Officer, Lamphel                                                                     </td><td>ero-thgmband[at]manipur[dot]gov[dot]in                       </td>
+			</tr><tr>
+				<td>Imphal West</td><td>10 - Uripok</td><td>Bhagyashree Laishram                              </td><td>Additional Deputy Commissioner (I), Imphal West                                                     </td><td>ero-uripok[at]manipur[dot]gov[dot]in                         </td>
+			</tr><tr>
+				<td>Imphal West</td><td>11 - Sagolband</td><td>K Jadumani Singh                                  </td><td>Additional Deputy Commissioner (II), Imphal West                                                    </td><td>ero-saglband[at]manipur[dot]gov[dot]in                       </td>
+			</tr><tr>
+				<td>Imphal West</td><td>12 - Keisamthong</td><td>Sagolsem Snehprabha                               </td><td>Assistant Commissioner (I) to Deputy Commissioner, Imphal Wes                                       </td><td>ero-ksmthong[at]manipur[dot]gov[dot]in                       </td>
+			</tr><tr>
+				<td>Imphal West</td><td>13 - Singjamei</td><td>Scindia Laipubam                                  </td><td>Assistant Commissioner (II) to Deputy Commissioner, Imphal West                                     </td><td>ero-sngjmei[at]manipur[dot]gov[dot]in                        </td>
+			</tr><tr>
+				<td>Imphal East</td><td>14 - Yaiskul</td><td>Dr. N. Johnson Meitei                             </td><td>Additional Deputy Commissioner (II), Imphal East                                                    </td><td>ero-yaiskul[at]manipur[dot]gov[dot]in                        </td>
+			</tr><tr>
+				<td>Imphal East</td><td>15 - Wangkhei</td><td>Sapam Jotin Singh                                 </td><td>Sub Divisional Officer, Porompat                                                                    </td><td>ero-wangkhei[at]manipur[dot]gov[dot]in                       </td>
+			</tr><tr>
+				<td>Imphal West</td><td>16 - Sekmai</td><td>Lukhram Herojit Singh                             </td><td>Block Development Officer, Imphal West - I CD Block                                                 </td><td>ero-sekmai[at]manipur[dot]gov[dot]in                         </td>
+			</tr><tr>
+				<td>Imphal West</td><td>17 - Lamsang</td><td>Madan Gopal Laishram                              </td><td>Sub-Divisional Officer, Lamsang                                                                     </td><td>ero-lamsang[at]manipur[dot]gov[dot]in                        </td>
+			</tr><tr>
+				<td>Imphal West</td><td>18 - Konthoujam</td><td>Samukcham Jemmy                                   </td><td>Block Development Officer, Patsoi CD Block                                                          </td><td>ero-knthjam[at]manipur[dot]gov[dot]in                        </td>
+			</tr><tr>
+				<td>Imphal West</td><td>19 - Patsoi</td><td>Yumkhaibam Sovashini Devi                         </td><td>Sub-Divisional Officer, Patsoi                                                                      </td><td>ero-patsoi[at]manipur[dot]gov[dot]in                         </td>
+			</tr><tr>
+				<td>Imphal West</td><td>20 - Langthabal</td><td>Sagolsem Snehprabha                               </td><td>Assistant Commissioner (III) to Deputy Commissioner, Imphal West                                    </td><td>ero-lngthbal[at]manipur[dot]gov[dot]in                       </td>
+			</tr><tr>
+				<td>Imphal West</td><td>21 - Naoria Pakhanglakpa</td><td>Scindia Laipubam                                  </td><td>Block Development Officer, Hiyangthang CD Block                                                     </td><td>ero-naoriya[at]manipur[dot]gov[dot]in                        </td>
+			</tr><tr>
+				<td>Imphal West</td><td>22 - Wangoi</td><td>Maibam Suranjoy Singh                             </td><td>Sub-Divisional Officer, Wangoi                                                                      </td><td>ero-wangoi[at]manipur[dot]gov[dot]in                         </td>
+			</tr><tr>
+				<td>Imphal West</td><td>23 - Mayang Imphal</td><td>Sonia Haobijam                                    </td><td>Block Development Officer, Imphal West - II CD Block                                                </td><td>ero-myngimph[at]manipur[dot]gov[dot]in                       </td>
+			</tr><tr>
+				<td>Bishnupur</td><td>24 - Nambol</td><td>Tongbram Shyamkumar Singh                         </td><td>Sub-Divisional Officer, Nambol                                                                      </td><td>ero-nambol[at]manipur[dot]gov[dot]in                         </td>
+			</tr><tr>
+				<td>Bishnupur</td><td>25 - Oinam</td><td>Tongbram Shyamkumar Singh                         </td><td>Block Development Officer, Nambol CD Block                                                          </td><td>ero-oinam[at]manipur[dot]gov[dot]in                          </td>
+			</tr><tr>
+				<td>Bishnupur</td><td>26 - Bishenpur</td><td>Naorem Pritam Singh                               </td><td>Sub-Divisional Officer, Bishnupur                                                                   </td><td>ero-bisnpur[at]manipur[dot]gov[dot]in                        </td>
+			</tr><tr>
+				<td>Bishnupur</td><td>27 - Moirang</td><td>Chirom Somorendro Singh                           </td><td>Sub-Divisional Officer, Moirang                                                                     </td><td>ero-moirang[at]manipur[dot]gov[dot]in                        </td>
+			</tr><tr>
+				<td>Bishnupur</td><td>28 - Thanga</td><td>Hemam Ricky Singh                                 </td><td>Block Development Officer, Moirang                                                                  </td><td>ero-thanga[at]manipur[dot]gov[dot]in                         </td>
+			</tr><tr>
+				<td>Bishnupur</td><td>29 - Kumbi</td><td>Naorem Pritam Singh                               </td><td>Block Development Officer, Bishnupur CD Block                                                       </td><td>ero-kumbi[at]manipur[dot]gov[dot]in                          </td>
+			</tr><tr>
+				<td>Thoubal</td><td>30 - Lilong</td><td>Moirangthem Priyaroshni Devi                      </td><td>Sub-Divisional Officer, Lilong                                                                      </td><td>ero-lilong[at]manipur[dot]gov[dot]in                         </td>
+			</tr><tr>
+				<td>Thoubal</td><td>31 - Thoubal</td><td>Robert Meinam                                     </td><td>Block Development Officer, Thoubal CD Block                                                         </td><td>ero-thoubal[at]manipur[dot]gov[dot]in                        </td>
+			</tr><tr>
+				<td>Thoubal</td><td>32 - Wangkhem</td><td>H. Kiromani Singh                                 </td><td>Block Development Officer, Lilong CD Block                                                          </td><td>ero-wangkhem[at]manipur[dot]gov[dot]in                       </td>
+			</tr><tr>
+				<td>Thoubal</td><td>33 - Heirok</td><td>Aribam Amarjit Sharma                             </td><td>Additional Deputy Commissioner, Thoubal                                                             </td><td>ero-heirok[at]manipur[dot]gov[dot]in                         </td>
+			</tr><tr>
+				<td>Thoubal</td><td>34 - Wangjing Tentha</td><td>Seema Sanjenbam                                   </td><td>Block Development Officer, Wangjing Tentha CD Block                                                 </td><td>ero-wangtent[at]manipur[dot]gov[dot]in                       </td>
+			</tr><tr>
+				<td>Thoubal</td><td>35 - Khangabok</td><td>Surma Thiyam                                      </td><td>Block Development Officer, Thoubal CD Block                                                         </td><td>ero-khngbok[at]manipur[dot]gov[dot]in                        </td>
+			</tr><tr>
+				<td>Thoubal</td><td>36 - Wabgai</td><td>Kh. Goverdhon Singh                               </td><td>Block Development Officer, Kakching CD Block                                                        </td><td>ero-wabgai[at]manipur[dot]gov[dot]in                         </td>
+			</tr><tr>
+				<td>Thoubal</td><td>37 - Kakching</td><td>Kherdananda Potsangbam                            </td><td>Sub-Divisional Officer, Kakching                                                                    </td><td>ero-kakching[at]manipur[dot]gov[dot]in                       </td>
+			</tr><tr>
+				<td>Thoubal</td><td>38 - Hiyanglam</td><td>Phurailatpam Bhavananda Sharma                    </td><td>Additional Deputy Commissioner, Kakching                                                            </td><td>ero-hiyang[at]manipur[dot]gov[dot]in                         </td>
+			</tr><tr>
+				<td>Thoubal</td><td>39 - Sugnoo</td><td>Arvind Khwairakpam Tompok Singh                   </td><td>Sub-Divisional Officer, Waikhong                                                                    </td><td>ero-sugnoo[at]manipur[dot]gov[dot]in                         </td>
+			</tr><tr>
+				<td>Jiribam</td><td>40 - Jiribam</td><td>Laishram Tarajeet Singh                           </td><td>Sub Divisional Officer, Jiribam                                                                     </td><td>ero-jiribam[at]manipur[dot]gov[dot]in                        </td>
+			</tr><tr>
+				<td>Chandel</td><td>41 - Chandel</td><td>Md. Firoj Khan                                    </td><td>Additional Deputy Commissioner, Chandel                                                             </td><td>ero-chandel[at]manipur[dot]gov[dot]in                        </td>
+			</tr><tr>
+				<td>Chandel</td><td>42 - Tengnoupal</td><td>Md. Asghar Arzad                                  </td><td>Additional Deputy Commissioner, Moreh                                                               </td><td>ero-tengnou[at]manipur[dot]gov[dot]in                        </td>
+			</tr><tr>
+				<td>Ukhrul</td><td>43 - Phungyar</td><td>H.L. Jain                                         </td><td>Additional Deputy Commissioner, Kamjong                                                             </td><td>ero-phungyar[at]manipur[dot]gov[dot]in                       </td>
+			</tr><tr>
+				<td>Ukhrul</td><td>44 - Ukhrul</td><td>Polly Makan                                       </td><td>Additional Deputy Commissioner, Ukhrul                                                              </td><td>ero-ukhrul[at]manipur[dot]gov[dot]in                         </td>
+			</tr><tr>
+				<td>Ukhrul</td><td>45 - Chingai</td><td>P Duna Duo                                        </td><td>Additional Deputy Commissioner, Jessami                                                             </td><td>ero-chingai[at]manipur[dot]gov[dot]in                        </td>
+			</tr><tr>
+				<td>Kangpokpi</td><td>46 - Saikul</td><td>Kaigoulal Kipgen                                  </td><td>Sub Divisional Officer, Saikul                                                                      </td><td>ero-saikul[at]manipur[dot]gov[dot]in                         </td>
+			</tr><tr>
+				<td>Senapati</td><td>47 - Karong</td><td>S. Lunguiba Thangal                               </td><td>Sub Divisional Officer, Purul                                                                       </td><td>ero-karong[at]manipur[dot]gov[dot]in                         </td>
+			</tr><tr>
+				<td>Senapati</td><td>48 - Mao</td><td>Rang David Kung                                   </td><td>Additional Deputy Commissioner, Mao                                                                 </td><td>ero-mao[at]manipur[dot]gov[dot]in                            </td>
+			</tr><tr>
+				<td>Senapati</td><td>49 - Tadubi</td><td>P F Lophro                                        </td><td>Sub Divisional Officer, Tadubi                                                                      </td><td>ero-tadubi[at]manipur[dot]gov[dot]in                         </td>
+			</tr><tr>
+				<td>Kangpokpi</td><td>50 - Kangpokpi</td><td>Lamminlal Simte                                   </td><td>Additional Deputy Commissioner, Kangpokpi                                                           </td><td>ero-kpkpi[at]manipur[dot]gov[dot]in                          </td>
+			</tr><tr>
+				<td>Kangpokpi</td><td>51 - Saitu</td><td>Paotingsei Kipgen                                 </td><td>Sub Divisional Officer, Saitu Gamphazol                                                             </td><td>ero-saitu[at]manipur[dot]gov[dot]in                          </td>
+			</tr><tr>
+				<td>Tamenglong</td><td>52 - Tamei</td><td>Renee Newmai                                      </td><td>Sub Divisional Officer, Tamei                                                                       </td><td>ero-tamei[at]manipur[dot]gov[dot]in                          </td>
+			</tr><tr>
+				<td>Tamenglong</td><td>53 - Tamenglong</td><td>D Meidingbui                                      </td><td>Sub Divisional Officer, Tamenglong                                                                  </td><td>ero-tmglong[at]manipur[dot]gov[dot]in                        </td>
+			</tr><tr>
+				<td>Tamenglong</td><td>54 - Nungba</td><td>Md. Ziaur Rahman                                  </td><td>Sub Divisional Officer, Noney                                                                       </td><td>ero-nungba[at]manipur[dot]gov[dot]in                         </td>
+			</tr><tr>
+				<td>Churachandpur</td><td>55 - Tipaimukh</td><td>Zosanglur Joute                                   </td><td>Additional Deputy Commissioner, Pherzawl                                                            </td><td>ero-tipaimuk[at]manipur[dot]gov[dot]in                       </td>
+			</tr><tr>
+				<td>Churachandpur</td><td>56 - Thanlon</td><td>Lalthanzam Fimate                                 </td><td>Sub Divisional Officer, Thanlon                                                                     </td><td>ero-thanlon[at]manipur[dot]gov[dot]in                        </td>
+			</tr><tr>
+				<td>Churachandpur</td><td>57 - Henglep</td><td>Seiminthang Lenthang                              </td><td>Additional Deputy Commissioner, Churachandpur                                                       </td><td>ero-henglep[at]manipur[dot]gov[dot]in                        </td>
+			</tr><tr>
+				<td>Churachandpur</td><td>58 - Churachandpur</td><td>Thienlaljoy Gangte                                </td><td>Sub Divisional Officer, Churachandpur                                                               </td><td>ero-ccpur[at]manipur[dot]gov[dot]in                          </td>
+			</tr><tr>
+				<td>Churachandpur</td><td>59 - Saikot</td><td>Jangminlen Lupho                                  </td><td>Sub Divisional Officer, Tuibong                                                                     </td><td>ero-saikot[at]manipur[dot]gov[dot]in                         </td>
+			</tr><tr>
+				<td>Churachandpur</td><td>60 - Singhat</td><td>SAMUEL TONGMINLEN LHUNGDIM                        </td><td>Sub Divisional Officer, Singhat                                                                     </td><td>ero-singhat[at]manipur[dot]gov[dot]in                        </td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="AERO" class="tab-pane container fade"  style="height:20%">
+            <div class="card" id="Div9" role="tablist" aria-multiselectable="true">
+                <div class="card">
+                    <div class="card-header">
+                        Asstt. Electoral Registration Officers (AERO)
+                    </div>
+                    <div class="card-body">
+                        <div>
+	<table class="table table-striped table-hover" cellspacing="0" border="0" id="ctl00_ContentPlaceHolder1_GridView2" style="border-collapse:collapse;">
+		<thead>
+			<tr>
+				<th scope="col">District</th><th scope="col">AC Name</th><th scope="col">Name</th><th scope="col">Designation</th><th scope="col">Email</th>
+			</tr>
+		</thead><tbody>
+			<tr>
+				<td>Imphal East</td><td>1 - Khundrakpam</td><td>Boinao Singh Oinam                                </td><td>SDC Sagolmang                                                                                       </td><td>                                                  </td>
+			</tr><tr>
+				<td>Imphal East</td><td>2 - Heingang</td><td>Ningthoujam Ratankumar Singh                      </td><td>SDC Heingang                                                                                        </td><td>                                                  </td>
+			</tr><tr>
+				<td>Imphal East</td><td>3 - Khurai</td><td>Laishram Ratan Singh                              </td><td>Jr. BDO Heingang CD Block                                                                           </td><td>                                                  </td>
+			</tr><tr>
+				<td>Imphal East</td><td>4 - Khetrigao</td><td>Ngangom Sheema Devi                               </td><td>Jr BDO Kshetrigao CD Block                                                                          </td><td>                                                  </td>
+			</tr><tr>
+				<td>Imphal East</td><td>5 - Thongju</td><td>James Konsam                                      </td><td>SDC Bashikhong                                                                                      </td><td>                                                  </td>
+			</tr><tr>
+				<td>Imphal East</td><td>6 - Keirao</td><td>Sorokhaibam Sitaranjit Singh                      </td><td>SDC Keirao Bitra                                                                                    </td><td>                                                  </td>
+			</tr><tr>
+				<td>Imphal East</td><td>7 - Andro</td><td>Irom Nirmal Singh                                 </td><td>SDC Tulihal                                                                                         </td><td>                                                  </td>
+			</tr><tr>
+				<td>Imphal East</td><td>8 - Lamlai</td><td>SAPAM NIRVA DEVI                                  </td><td>SDC Sawombung                                                                                       </td><td>                                                  </td>
+			</tr><tr>
+				<td>Imphal West</td><td>9 - Thangmeiband</td><td>Thangjam Harideva Singh                           </td><td>SDC Central, Lamphel                                                                                </td><td>                                                  </td>
+			</tr><tr>
+				<td>Imphal West</td><td>10 - Uripok</td><td>Dwinata Elangbam                                  </td><td>Jr.BDO, Patsoi CD Block                                                                             </td><td>                                                  </td>
+			</tr><tr>
+				<td>Imphal West</td><td>11 - Sagolband</td><td>Ranjit Maisnam                                    </td><td>SDC Central, Lamphel                                                                                </td><td>                                                  </td>
+			</tr><tr>
+				<td>Imphal West</td><td>12 - Keisamthong</td><td>Salam Bimoljit Singh                              </td><td>SDC (HQ), Lamphel                                                                                   </td><td>                                                  </td>
+			</tr><tr>
+				<td>Imphal West</td><td>13 - Singjamei</td><td>Nonganba Konjengbam                               </td><td>Sub-Registrar (HQ) Imphal West                                                                      </td><td>                                                  </td>
+			</tr><tr>
+				<td>Imphal East</td><td>14 - Yaiskul</td><td>Thangjam Harideva Singh                           </td><td>SDC (HQ), Porompat                                                                                  </td><td>                                                  </td>
+			</tr><tr>
+				<td>Imphal East</td><td>15 - Wangkhei</td><td>S Premananda Singh                                </td><td>SDC Porompat                                                                                        </td><td>                                                  </td>
+			</tr><tr>
+				<td>Imphal West</td><td>16 - Sekmai</td><td>Sujata Thokchom                                   </td><td>SDC Sekmai                                                                                          </td><td>                                                  </td>
+			</tr><tr>
+				<td>Imphal West</td><td>17 - Lamsang</td><td>Ningombam Rabichandra Meitei                      </td><td>SDC Lamsang                                                                                         </td><td>                                                  </td>
+			</tr><tr>
+				<td>Imphal West</td><td>18 - Konthoujam</td><td>Rajkumar Roshan Singh                             </td><td>SDC Konthoujam                                                                                      </td><td>                                                  </td>
+			</tr><tr>
+				<td>Imphal West</td><td>19 - Patsoi</td><td>Kshetrimayum Renu Devi                            </td><td>SDC Patsoi                                                                                          </td><td>                                                  </td>
+			</tr><tr>
+				<td>Imphal West</td><td>20 - Langthabal</td><td>Laishram Dineshwor Meitei                         </td><td>SDC Lilong Chajing                                                                                  </td><td>                                                  </td>
+			</tr><tr>
+				<td>Imphal West</td><td>21 - Naoria Pakhanglakpa</td><td>Hidangmayum Diana devi                            </td><td>SDC Hiyangthang                                                                                     </td><td>                                                  </td>
+			</tr><tr>
+				<td>Imphal West</td><td>22 - Wangoi</td><td>CHARAN KUMAR ASHEM                                </td><td>SDC Wangoi                                                                                          </td><td>                                                  </td>
+			</tr><tr>
+				<td>Imphal West</td><td>23 - Mayang Imphal</td><td>AMIT SAGOLSEM                                     </td><td>SDC Mayang Imphal                                                                                   </td><td>                                                  </td>
+			</tr><tr>
+				<td>Bishnupur</td><td>24 - Nambol</td><td>Thoidingjam Shambhunath                           </td><td>SDC Nambol                                                                                          </td><td>                                                  </td>
+			</tr><tr>
+				<td>Bishnupur</td><td>25 - Oinam</td><td>Akoijam Punshiba Meetei                           </td><td>SDC Oinam                                                                                           </td><td>                                                  </td>
+			</tr><tr>
+				<td>Bishnupur</td><td>26 - Bishenpur</td><td>Pukhrambam Rakeshchand Singh                      </td><td>SDC Bishenpur                                                                                       </td><td>                                                  </td>
+			</tr><tr>
+				<td>Bishnupur</td><td>27 - Moirang</td><td>Boinao Singh Oinam                                </td><td>SDC Moirang                                                                                         </td><td>                                                  </td>
+			</tr><tr>
+				<td>Bishnupur</td><td>28 - Thanga</td><td>Yumlembam Sanathoi                                </td><td>SDC (HQ), Moirang                                                                                   </td><td>                                                  </td>
+			</tr><tr>
+				<td>Bishnupur</td><td>29 - Kumbi</td><td>Mairembam Saileshraj Singh                        </td><td>SDC Kumbi                                                                                           </td><td>                                                  </td>
+			</tr><tr>
+				<td>Thoubal</td><td>30 - Lilong</td><td>Chanam Rakesh Meetei                              </td><td>SDC Lilong                                                                                          </td><td>                                                  </td>
+			</tr><tr>
+				<td>Thoubal</td><td>31 - Thoubal</td><td>Ningthoujam Anjila Devi                           </td><td>SDC HQ DC Office Thoubal                                                                            </td><td>                                                  </td>
+			</tr><tr>
+				<td>Thoubal</td><td>32 - Wangkhem</td><td>Ningthoujam Tomcha Singh                          </td><td>SDC Yairipok                                                                                        </td><td>                                                  </td>
+			</tr><tr>
+				<td>Thoubal</td><td>33 - Heirok</td><td>Ningthoujam Manithoi Meitei                       </td><td>SDC Heirok                                                                                          </td><td>                                                  </td>
+			</tr><tr>
+				<td>Thoubal</td><td>34 - Wangjing Tentha</td><td>N. Shyamo Singh                                   </td><td>SDC Khongjom                                                                                        </td><td>                                                  </td>
+			</tr><tr>
+				<td>Thoubal</td><td>35 - Khangabok</td><td>Sarangthem Vivek,                                 </td><td>SDC Thoubal                                                                                         </td><td>                                                  </td>
+			</tr><tr>
+				<td>Thoubal</td><td>36 - Wabgai</td><td>David Laitonjam                                   </td><td>SDC Hiyanglam                                                                                       </td><td>                                                  </td>
+			</tr><tr>
+				<td>Thoubal</td><td>37 - Kakching</td><td>Hijam George                                      </td><td>SDC Kakching                                                                                        </td><td>                                                  </td>
+			</tr><tr>
+				<td>Thoubal</td><td>38 - Hiyanglam</td><td>Y Jivan Singh                                     </td><td>SDC Waikhong                                                                                        </td><td>                                                  </td>
+			</tr><tr>
+				<td>Thoubal</td><td>39 - Sugnoo</td><td>M. Gunamani Singh                                 </td><td>SDC Sugnoo                                                                                          </td><td>                                                  </td>
+			</tr><tr>
+				<td>Jiribam</td><td>40 - Jiribam</td><td>Moirangthem Devananda Singh                       </td><td>SDC Borobekra                                                                                       </td><td>                                                  </td>
+			</tr><tr>
+				<td>Jiribam</td><td>40 - Jiribam</td><td>Md. Abdul Kalam                                   </td><td>SDC(HQ), Jiribam                                                                                    </td><td>                                                  </td>
+			</tr><tr>
+				<td>Chandel</td><td>41 - Chandel</td><td>Md. Gayasuddin Khan                               </td><td>SDO Khengjoy                                                                                        </td><td>                                                  </td>
+			</tr><tr>
+				<td>Chandel</td><td>41 - Chandel</td><td>Reikimdaar Khaling                                </td><td>SDO Chandel                                                                                         </td><td>                                                  </td>
+			</tr><tr>
+				<td>Chandel</td><td>41 - Chandel</td><td>Md Tajuddin                                       </td><td>SDO Chakpikarong                                                                                    </td><td>                                                  </td>
+			</tr><tr>
+				<td>Chandel</td><td>42 - Tengnoupal</td><td>Md. Nazmul Huda Khan                              </td><td>SDO Machi                                                                                           </td><td>                                                  </td>
+			</tr><tr>
+				<td>Chandel</td><td>42 - Tengnoupal</td><td>Md. Nazmul Huda Khan                              </td><td>SDO Tengnoupal                                                                                      </td><td>                                                  </td>
+			</tr><tr>
+				<td>Chandel</td><td>42 - Tengnoupal</td><td>Ejaj Hassan                                       </td><td>SDO Moreh                                                                                           </td><td>                                                  </td>
+			</tr><tr>
+				<td>Ukhrul</td><td>43 - Phungyar</td><td>Nimmi Khamrang Azingwungshi                       </td><td>SDO, Phungyar                                                                                       </td><td>                                                  </td>
+			</tr><tr>
+				<td>Ukhrul</td><td>43 - Phungyar</td><td>A. Rohini Kumar                                   </td><td>SDO Kasom Khullen                                                                                   </td><td>                                                  </td>
+			</tr><tr>
+				<td>Ukhrul</td><td>43 - Phungyar</td><td>HL Jain                                           </td><td>SDO Kamjong                                                                                         </td><td>                                                  </td>
+			</tr><tr>
+				<td>Ukhrul</td><td>43 - Phungyar</td><td>Subinson Sapam                                    </td><td>SDO, Sahamphung                                                                                     </td><td>                                                  </td>
+			</tr><tr>
+				<td>Ukhrul</td><td>44 - Ukhrul</td><td>Dinringam Kamei                                   </td><td>SDO Ukhrul                                                                                          </td><td>                                                  </td>
+			</tr><tr>
+				<td>Ukhrul</td><td>45 - Chingai</td><td>Roland Ningshen                                   </td><td>SDO Lungchong Maiphei                                                                               </td><td>                                                  </td>
+			</tr><tr>
+				<td>Ukhrul</td><td>45 - Chingai</td><td>Ngamreiwung Luithui                               </td><td>SDO Chingai                                                                                         </td><td>                                                  </td>
+			</tr><tr>
+				<td>Ukhrul</td><td>45 - Chingai</td><td>P Duna Duo                                        </td><td>SDO Jessami                                                                                         </td><td>                                                  </td>
+			</tr><tr>
+				<td>Kangpokpi</td><td>46 - Saikul</td><td>LM Len Singsit                                    </td><td>SDO Island                                                                                          </td><td>                                                  </td>
+			</tr><tr>
+				<td>Senapati</td><td>47 - Karong</td><td>James Pani                                        </td><td>SDO Phaibung                                                                                        </td><td>                                                  </td>
+			</tr><tr>
+				<td>Senapati</td><td>48 - Mao</td><td>Sheveine                                          </td><td>SDO Paomata                                                                                         </td><td>                                                  </td>
+			</tr><tr>
+				<td>Senapati</td><td>48 - Mao</td><td>Rang David Kung                                   </td><td>SDO Song Song                                                                                       </td><td>                                                  </td>
+			</tr><tr>
+				<td>Senapati</td><td>49 - Tadubi</td><td>S. Plim Reikhenamai                               </td><td>SDO, Willong                                                                                        </td><td>                                                  </td>
+			</tr><tr>
+				<td>Kangpokpi</td><td>50 - Kangpokpi</td><td>Kaikhoseh Kipgen                                  </td><td>SDC Kangpokpi                                                                                       </td><td>                                                  </td>
+			</tr><tr>
+				<td>Kangpokpi</td><td>51 - Saitu</td><td>Md. Hefajuddin                                    </td><td>SDO Kangchup Geljang                                                                                </td><td>                                                  </td>
+			</tr><tr>
+				<td>Kangpokpi</td><td>51 - Saitu</td><td>Md. Hefajuddin                                    </td><td>SDO Bungte Chiru                                                                                    </td><td>                                                  </td>
+			</tr><tr>
+				<td>Tamenglong</td><td>52 - Tamei</td><td>Paul Nangsha                                      </td><td>SDO Tousem                                                                                          </td><td>                                                  </td>
+			</tr><tr>
+				<td>Tamenglong</td><td>52 - Tamei</td><td>Laishram Leibakchao                               </td><td>SDC Tamei                                                                                           </td><td>                                                  </td>
+			</tr><tr>
+				<td>Tamenglong</td><td>53 - Tamenglong</td><td>James Pani                                        </td><td>SDO, Haochong                                                                                       </td><td>                                                  </td>
+			</tr><tr>
+				<td>Tamenglong</td><td>54 - Nungba</td><td>Namlalung Gangmei                                 </td><td>SDO, Nungba                                                                                         </td><td>                                                  </td>
+			</tr><tr>
+				<td>Tamenglong</td><td>54 - Nungba</td><td>M. Pourallung Kabui                               </td><td>SDO Khoupum                                                                                         </td><td>                                                  </td>
+			</tr><tr>
+				<td>Churachandpur</td><td>55 - Tipaimukh</td><td>Zosanglur Joute                                   </td><td>SDO Tipaimukh                                                                                       </td><td>                                                  </td>
+			</tr><tr>
+				<td>Churachandpur</td><td>55 - Tipaimukh</td><td>Lalthanzam Fimate                                 </td><td>SDO Vangai Range                                                                                    </td><td>                                                  </td>
+			</tr><tr>
+				<td>Churachandpur</td><td>56 - Thanlon</td><td>Lalthanzam Fimate                                 </td><td>SDO Thanlon                                                                                         </td><td>                                                  </td>
+			</tr><tr>
+				<td>Churachandpur</td><td>56 - Thanlon</td><td>S.Khaikhopau Ngaihte                              </td><td>SDO Mualnuam                                                                                        </td><td>                                                  </td>
+			</tr><tr>
+				<td>Churachandpur</td><td>57 - Henglep</td><td>Mangminthang Gangte                               </td><td>SDO Henglep                                                                                         </td><td>                                                  </td>
+			</tr><tr>
+				<td>Churachandpur</td><td>57 - Henglep</td><td>Mangminthang Gangte                               </td><td>SDO Kangvai                                                                                         </td><td>                                                  </td>
+			</tr><tr>
+				<td>Churachandpur</td><td>58 - Churachandpur</td><td>Alfred Jamlallun Khaute                           </td><td>BDO Lanva                                                                                           </td><td>                                                  </td>
+			</tr><tr>
+				<td>Churachandpur</td><td>59 - Saikot</td><td>Kimkhanching                                      </td><td>SDC Tuibong                                                                                         </td><td>                                                  </td>
+			</tr><tr>
+				<td>Churachandpur</td><td>59 - Saikot</td><td>Alfred Jamlallun Khaute                           </td><td>SDO, Saikot                                                                                         </td><td>                                                  </td>
+			</tr><tr>
+				<td>Churachandpur</td><td>59 - Saikot</td><td>Mangte Jonathan Kom                               </td><td>SDO, Samulamlan                                                                                     </td><td>                                                  </td>
+			</tr><tr>
+				<td>Churachandpur</td><td>60 - Singhat</td><td>SAMUEL TONGMINLEN LHUNGDIM                        </td><td>SDO Singhat                                                                                         </td><td>                                                  </td>
+			</tr><tr>
+				<td>Churachandpur</td><td>60 - Singhat</td><td>Derick Khawbung                                   </td><td>SDO Sangaikot                                                                                       </td><td>                                                  </td>
+			</tr><tr>
+				<td>Churachandpur</td><td>60 - Singhat</td><td>Solomon Lalneilien Fimate                         </td><td>SDO, Suangdoh                                                                                       </td><td>                                                  </td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+                        
+
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            $('#ContentPlaceHolder1_GridView1').DataTable();
+        });
+    </script>
+
+                </div>
+            </div>
+        </div>
+                 <footer class="text-center text-white footbg" >
+    <!-- Section: Social Media -->
+    <section class="d-flex justify-content-center justify-content-lg-between p-3 border-bottom">
+        <div class="me-5 d-none d-lg-block">
+            <span>Get connected with us on social networks:</span>
+        </div>
+
+        <div>
+            <a href="https://www.facebook.com/CEO-Manipur-226796207750787/?fref=ts" 
+               class="me-3 text-light" 
+               data-bs-toggle="tooltip" 
+               data-bs-placement="bottom" 
+               title="Visit Our Facebook Page" 
+               target="_blank" 
+               aria-label="Facebook (opens in new window)"><i class="fab fa-facebook-f fa-lg"></i></a>
+            <a href="https://twitter.com/CeoManipur" 
+               class="me-3 text-light" 
+               data-bs-toggle="tooltip" 
+               data-bs-placement="bottom" 
+               title="Visit Our Twitter Page" 
+               target="_blank" 
+               aria-label="Twitter (opens in new window)"><i class="fab fa-twitter fa-lg"></i></a>
+
+            <a href="https://www.youtube.com/channel/UCQPi9QKARKtKlSe3l6ozi-g" 
+               class="me-3 text-light" 
+               data-bs-toggle="tooltip" 
+               data-bs-placement="bottom" 
+               title="Visit Our YouTube Channel" 
+               target="_blank" 
+               aria-label="YouTube (opens in new window)"><i class="fab fa-youtube fa-lg"></i></a>
+
+            <a href="https://www.instagram.com/the_ceo_manipur/" 
+               class="me-3 text-light" 
+               data-bs-toggle="tooltip" 
+               data-bs-placement="bottom" 
+               title="Visit Our Instagram Page" 
+               target="_blank" 
+               aria-label="Instagram (opens in new window)"><i class="fab fa-instagram fa-lg"></i></a>
+        </div>
+    </section>
+    <!-- End Section: Social Media -->
+
+    <!-- Navigation Links -->
+    <ul class="nav justify-content-center p-3">
+        <li class="nav-item">
+            <a id="ctl00_HyperLink22" class="nav-link px-2 text-light" href="index.aspx">Home</a>
+        </li>
+        <li class="nav-item">
+            <a id="ctl00_HyperLink24" class="nav-link px-2 text-light" href="ceogallery.aspx">Gallery</a>
+        </li>
+        <li class="nav-item">
+            <a id="ctl00_HyperLink25" class="nav-link px-2 text-light" href="FAQ.aspx">FAQ</a>
+        </li>
+        <li class="nav-item">
+            <a id="ctl00_HyperLink26" class="nav-link px-2 text-light" href="Feedback.aspx">Feedback</a>
+        </li>
+        <li class="nav-item">
+            <a id="ctl00_HyperLink27" class="nav-link px-2 text-light" href="ContactUs.aspx">Contact Us</a>
+        </li>
+        <li class="nav-item">
+            <a id="ctl00_HyperLink28" class="nav-link px-2 text-light" href="AboutUs.aspx">About Us</a>
+        </li>
+         <li class="nav-item">
+     <a id="ctl00_HyperLink17" class="nav-link px-2 text-light" href="rti.aspx">About Us</a>
+ </li>
+    </ul>
+
+    <!-- Copyright Section -->
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+            © Copyright Chief Electoral Officer Manipur.
+    </div>
+
+    <!-- Tooltip Initialization -->
+    <script  nonce="s7L3Tj4eAek+hoItT+kJTg==" >
+        document.addEventListener('DOMContentLoaded', function () {
+            const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
+            [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl));
+        });
+    </script>
+</footer>
+    </form>
+</body>
+</html>

@@ -1,0 +1,13 @@
+state,ac_no,district_2011_code,reason
+Jammu & Kashmir,17,011,"Extent in the 1995 order (2008 annexure) is Tehsil Ganderbal = 2011 district Ganderbal; the overlay put 89% in Srinagar (parent), which the district-level veto cannot catch (DataMeet's Srinagar/Ganderbal shapes are flagged unreliable)"
+Jammu & Kashmir,55,017,"Extent is all of Tehsil Ramban = 2011 district Ramban; the overlay put 52% in Doda (parent), which the district-level veto cannot catch"
+Jharkhand,77,358:0.6;346:0.4,"1976 extent = Bishrampur police station (Palamu) + Majhiaon police station (Garhwa); weights from the 2011 sub-district populations Bishrampur 104,983 / Majhiaon 70,935. The overlay put 100% in Garhwa"
+Assam,51,322:0.75;321:0.25,"Jalukbari = Guwahati city wards (Kamrup Metropolitan) + North Guwahati circle (split 28,400 Kamrup Metro / 48,227 Kamrup in 2011) + rural Kamrup mouzas; APPROXIMATE split. The overlay put 100% in Kamrup"
+West Bengal,149,342,"Census 2011 Kolkata district (342) = all 141 Kolkata M. Corp. wards (4,496,694 people = the corporation's population; ward-level PCA PC11_PCA-TV-1916). The 2008 order files the post-1984 KMC wards under the South 24 Parganas REVENUE district and DataMeet draws Kolkata as the old core, so both order and map say S24P. Kasba = KMC wards 66,67,91,92,107,108 only"
+West Bengal,150,342,"Jadavpur = KMC wards 96,99,101-106,109,110 only (2008 order) - all in Census 2011 Kolkata district; see AC 149"
+West Bengal,152,342,"Tollyganj = KMC wards 94,95,97,98,100,111-114 only (2008 order) - all in Census 2011 Kolkata district; see AC 149"
+West Bengal,154,342,"Behala Paschim = KMC wards 118,119,125-132 only (2008 order) - all in Census 2011 Kolkata district; see AC 149"
+West Bengal,153,342:0.78;343:0.22,"Behala Purba = KMC wards 115-117,120-124 (245,475 people, ward PCA) + Joka-I and Joka-II GPs of Thakurpukur Mahestola block (S24P). The GPs are not census units: estimated 59k (2 of the block's 6 GPs, block 176,203) to 76k (2011 electors / the elector-per-person ratio of the all-KMC seats). APPROXIMATE"
+West Bengal,157,342:0.618;343:0.382,"Metiaburuz = KMC wards 136-141 (183,395) + Maheshtala (M) wards 1-7,9,10 (113,202), both from the official ward-level PCA - exact"
+Madhya Pradesh,78,462:0.85;463:0.15,"Sihawal = Sihawal tehsil (Sidhi, 268,934) + Devsar Gird-I R.I. circle of Devsar tehsil (Singrauli since 2008). The overlay's 46% Singrauli is map bleed; Sidhi district's four seats average ~3 lakh people, which leaves the circle a modest share. APPROXIMATE"
+Madhya Pradesh,82,462:0.8;463:0.2,"Dhauhani = Kusmi + Majhauli tehsils (Sidhi, 245,136) + Dhauhani R.I. circle of Devsar tehsil (Singrauli). Same reasoning as AC 78. APPROXIMATE"

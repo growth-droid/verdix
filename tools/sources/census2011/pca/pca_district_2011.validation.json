@@ -1,0 +1,234 @@
+{
+ "source": ".\\DDW_PCA0000_2011_Indiastatedist.xlsx",
+ "checks": [
+  {
+   "check": "row levels only India/STATE/DISTRICT",
+   "ok": true,
+   "expected": null,
+   "got": "['DISTRICT', 'India', 'STATE']"
+  },
+  {
+   "check": "district count (unique codes)",
+   "ok": true,
+   "expected": "640",
+   "got": "640"
+  },
+  {
+   "check": "district rows = 640 x Total/Rural/Urban",
+   "ok": true,
+   "expected": "1920",
+   "got": "1920"
+  },
+  {
+   "check": "district codes contiguous 001..640",
+   "ok": true,
+   "expected": "1..640",
+   "got": "1..640"
+  },
+  {
+   "check": "state rows = 35 x 3",
+   "ok": true,
+   "expected": "105",
+   "got": "105"
+  },
+  {
+   "check": "each district code belongs to exactly one state",
+   "ok": true,
+   "expected": "1",
+   "got": "1"
+  },
+  {
+   "check": "district Total = Rural + Urban (all 85 fields)",
+   "ok": true,
+   "expected": "0",
+   "got": "0"
+  },
+  {
+   "check": "state Total = Rural + Urban (all fields)",
+   "ok": true,
+   "expected": "0",
+   "got": "0"
+  },
+  {
+   "check": "India Total = Rural + Urban (all fields)",
+   "ok": true,
+   "expected": "0",
+   "got": "0"
+  },
+  {
+   "check": "every state row = sum of its districts (35 states x 3 TRU x 85 fields)",
+   "ok": true,
+   "expected": "0",
+   "got": "0 mismatching cells"
+  },
+  {
+   "check": "India row = sum of 640 districts (3 TRU x 85 fields)",
+   "ok": true,
+   "expected": "0",
+   "got": "0 mismatching cells"
+  },
+  {
+   "check": "India row = sum of 35 states",
+   "ok": true,
+   "expected": "0",
+   "got": "0 mismatching cells"
+  },
+  {
+   "check": "district identity TOT_P = TOT_M + TOT_F",
+   "ok": true,
+   "expected": "0",
+   "got": "0"
+  },
+  {
+   "check": "district identity P_06 = M_06 + F_06",
+   "ok": true,
+   "expected": "0",
+   "got": "0"
+  },
+  {
+   "check": "district identity P_SC = M_SC + F_SC",
+   "ok": true,
+   "expected": "0",
+   "got": "0"
+  },
+  {
+   "check": "district identity P_ST = M_ST + F_ST",
+   "ok": true,
+   "expected": "0",
+   "got": "0"
+  },
+  {
+   "check": "district identity P_LIT + P_ILL = TOT_P",
+   "ok": true,
+   "expected": "0",
+   "got": "0"
+  },
+  {
+   "check": "district identity TOT_WORK_P = MAINWORK_P + MARGWORK_P",
+   "ok": true,
+   "expected": "0",
+   "got": "0"
+  },
+  {
+   "check": "district identity MAINWORK_P = MAIN_CL+AL+HH+OT",
+   "ok": true,
+   "expected": "0",
+   "got": "0"
+  },
+  {
+   "check": "district identity MARGWORK_P = MARG_CL+AL+HH+OT",
+   "ok": true,
+   "expected": "0",
+   "got": "0"
+  },
+  {
+   "check": "district identity MARGWORK_P = MARGWORK_3_6_P + MARGWORK_0_3_P",
+   "ok": true,
+   "expected": "0",
+   "got": "0"
+  },
+  {
+   "check": "district identity TOT_WORK_P + NON_WORK_P = TOT_P",
+   "ok": true,
+   "expected": "0",
+   "got": "0"
+  },
+  {
+   "check": "India TOT_P vs reference",
+   "ok": true,
+   "expected": "1210854977",
+   "got": "1210854977"
+  },
+  {
+   "check": "India TOT_M vs reference",
+   "ok": true,
+   "expected": "623270258",
+   "got": "623270258"
+  },
+  {
+   "check": "India TOT_F vs reference",
+   "ok": true,
+   "expected": "587584719",
+   "got": "587584719"
+  },
+  {
+   "check": "India P_SC vs reference",
+   "ok": true,
+   "expected": "201378372",
+   "got": "201378372"
+  },
+  {
+   "check": "India Rural TOT_P vs reference",
+   "ok": true,
+   "expected": "833748852",
+   "got": "833748852"
+  },
+  {
+   "check": "India Urban TOT_P vs reference",
+   "ok": true,
+   "expected": "377106125",
+   "got": "377106125"
+  },
+  {
+   "check": "Senapati TV file has the 3 sub-districts",
+   "ok": true,
+   "expected": "3",
+   "got": "3"
+  },
+  {
+   "check": "India P_ST as published in PCA SD file (incl. 3 Senapati sub-districts)",
+   "ok": true,
+   "expected": "104545716",
+   "got": "104545716"
+  },
+  {
+   "check": "India P_ST minus Mao-Maram+Paomata+Purul = reference 104,281,034",
+   "ok": true,
+   "expected": "104281034",
+   "got": "104545716 - 264682 = 104281034"
+  },
+  {
+   "check": "India P_LIT as published in PCA SD file (incl. 3 Senapati sub-districts)",
+   "ok": true,
+   "expected": "763638812",
+   "got": "763638812"
+  },
+  {
+   "check": "India P_LIT minus Mao-Maram+Paomata+Purul = reference 763,498,517",
+   "ok": true,
+   "expected": "763498517",
+   "got": "763638812 - 140295 = 763498517"
+  },
+  {
+   "check": "3 Senapati sub-districts TOT_P (1,210,854,977 - 1,210,569,573)",
+   "ok": true,
+   "expected": "285404",
+   "got": "285404"
+  },
+  {
+   "check": "Senapati district row identical in PCA SD and PCA TV-1401 (all fields)",
+   "ok": true,
+   "expected": "identical",
+   "got": "identical"
+  },
+  {
+   "check": "P_ST equals TOT_P of separate official PCA(ST) district file for every district x TRU",
+   "ok": true,
+   "expected": "0",
+   "got": "0 mismatches; ST file covers 585 districts"
+  },
+  {
+   "check": "tidy CSV rows",
+   "ok": true,
+   "expected": "1920",
+   "got": "1920"
+  }
+ ],
+ "senapati_3_subdistricts": {
+  "TOT_P": 285404,
+  "P_ST": 264682,
+  "P_LIT": 140295,
+  "P_06": 37103,
+  "No_HH": 47411
+ }
+}

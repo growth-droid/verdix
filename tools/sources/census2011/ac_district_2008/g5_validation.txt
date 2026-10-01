@@ -1,0 +1,224 @@
+INFO | Uttar Pradesh: name continuation line attached to AC 3 (p458) | Nagar
+INFO | Uttar Pradesh: name continuation line attached to AC 6 (p458) | Maniharan (SC)
+INFO | Uttar Pradesh: name continuation line attached to AC 27 (p461) | Rural
+INFO | Uttar Pradesh: name continuation line attached to AC 28 (p461) | Nagar
+INFO | Uttar Pradesh: name continuation line attached to AC 159 (p476) | Mallanwan
+INFO | Uttar Pradesh: name continuation line attached to AC 176 (p477) | (SC)
+INFO | Uttar Pradesh: name continuation line attached to AC 339 (p493) | Karkhana
+INFO | Uttar Pradesh: name continuation line attached to AC 355 (p495) | Gohna (SC)
+INFO | Uttar Pradesh: name continuation line attached to AC 357 (p495) | (SC)
+INFO | Uttar Pradesh: name continuation line attached to AC 368 (p496) | Badshahpur
+INFO | Uttar Pradesh: name continuation line attached to AC 369 (p496) | (SC)
+OK   | Uttar Pradesh: AC count = 403 | got 403
+OK   | Uttar Pradesh: AC numbers contiguous 1..403 | first=[1] last=[403]
+OK   | Uttar Pradesh: each district heading is one contiguous block | 70 headings
+INFO | Uttar Pradesh: ACs per district_2008 | SAHARANPUR=7; MUZAFFARNAGAR=9; BIJNOR=8; MORADABAD=9; RAMPUR=5; JYOTIBA PHULE NAGAR=4; MEERUT=7; BAGHPAT=3; GHAZIABAD=8; GAUTAM BUDDHA NAGAR=3; BULANDSHAHAR=7; ALIGARH=7; MAHAMAYA NAGAR=3; MATHURA=5; AGRA=9; FIROZABAD=5; ETAH=7; MAINPURI=4; BUDAUN=7; BAREILLY=9; PILIBHIT=4; SHAHJAHANPUR=6; KHERI=8; SITAPUR=9; HARDOI=8; UNNAO=6; LUCKNOW=9; RAE BARELI=7; SULTANPUR=8; FARRUKHABAD=4; KANNAUJ=3; ETAWAH=3; AURAIYA=3; KANPUR DEHAT=4; KANPUR NAGAR=10; JALAUN=3; JHANSI=4; LALITPUR=2; HAMIRPUR=2; MAHOBA=2; BANDA=4; CHITRAKOOT=2; FATEHPUR=6; PRATAPGARH=7; KAUSHAMBI=3; ALLAHABAD=12; BARABANKI=7; FAIZABAD=4; AMBEDKAR NAGAR=5; BAHRAICH=7; SHRAWASTI=2; BALRAMPUR=4; GONDA=7; SIDDHARTHNAGAR=5; BASTI=5; SANT KABIR NAGAR=3; MAHARAJGANJ=5; GORAKHPUR=9; KUSHI NAGAR=7; DEORIA=7; AZAMGARH=10; MAU=4; BALLIA=7; JAUNPUR=9; GHAZIPUR=7; CHANDAULI=4; VARANASI=8; SANT RAVIDAS NAGAR=3; MIRZAPUR=5; SONBHADRA=4
+INFO | Uttar Pradesh: name agreement vs app Uttar Pradesh 2012 (normalised) | 367/403 = 91.1%
+INFO | Uttar Pradesh: name mismatch AC 28 | order='Moradabad Nagar' app='MORADABAD' ratio=0.78 -> spelling (Moradabad Nagar vs Moradabad)
+INFO | Uttar Pradesh: name mismatch AC 34 | order='Suar' app='SUAR TANDA' ratio=0.62 -> spelling (order prints Suar; ECI results name Suar Tanda - extent is Suar tehsil incl. Tanda KC)
+INFO | Uttar Pradesh: name mismatch AC 47 | order='Meerut Cantt' app='MEERUT CANTONMENT' ratio=0.81 -> spelling
+INFO | Uttar Pradesh: name mismatch AC 50 | order='Chhaprauli' app='CHAPRAULI' ratio=0.95 -> spelling
+INFO | Uttar Pradesh: name mismatch AC 58 | order='Dhaulana' app='DHOLANA' ratio=0.80 -> spelling
+INFO | Uttar Pradesh: name mismatch AC 60 | order='Garhmukteshwar' app='GARMUKHTESHWAR' ratio=0.93 -> spelling
+INFO | Uttar Pradesh: name mismatch AC 83 | order='Goverdhan' app='GOVARDHAN' ratio=0.89 -> spelling
+INFO | Uttar Pradesh: name mismatch AC 87 | order='Agra Cantt' app='AGRA CANTONMENT' ratio=0.78 -> spelling
+INFO | Uttar Pradesh: name mismatch AC 102 | order='Patiyali' app='PATIALI' ratio=0.93 -> spelling
+INFO | Uttar Pradesh: name mismatch AC 124 | order='Bareilly' app='BAREILLY CITY' ratio=0.80 -> spelling (Bareilly vs Bareilly City)
+INFO | Uttar Pradesh: name mismatch AC 125 | order='Bareilly Cantt' app='BAREILLY CANTONMENT' ratio=0.84 -> spelling
+INFO | Uttar Pradesh: name mismatch AC 141 | order='Dhaurahra' app='DHAUREHRA' ratio=0.89 -> spelling
+INFO | Uttar Pradesh: name mismatch AC 144 | order='Mohammdi' app='MOHAMMADI' ratio=0.94 -> spelling
+INFO | Uttar Pradesh: name mismatch AC 151 | order='Mahmoodabad' app='MAHMUDABAD' ratio=0.86 -> spelling
+INFO | Uttar Pradesh: name mismatch AC 154 | order='Sawayazpur' app='SAWAIJPUR' ratio=0.74 -> spelling
+INFO | Uttar Pradesh: name mismatch AC 159 | order='Bilgram-Mallanwan' app='BILGRAM - MALANWAN' ratio=0.97 -> spelling
+INFO | Uttar Pradesh: name mismatch AC 162 | order='Bangermau' app='BANGARMAU' ratio=0.89 -> spelling
+INFO | Uttar Pradesh: name mismatch AC 175 | order='Lucknow Cantt' app='LUCKNOW CANTONMENT' ratio=0.83 -> spelling
+INFO | Uttar Pradesh: name mismatch AC 209 | order='Bilhaur' app='BILAUR' ratio=0.92 -> spelling
+INFO | Uttar Pradesh: name mismatch AC 213 | order='Sishamau' app='SISAMAU' ratio=0.93 -> spelling
+INFO | Uttar Pradesh: name mismatch AC 216 | order='Kanpur Cantt' app='KANPUR CANTONMENT' ratio=0.81 -> spelling
+INFO | Uttar Pradesh: name mismatch AC 219 | order='Madhaugarh' app='MADHOGARH' ratio=0.84 -> spelling
+INFO | Uttar Pradesh: name mismatch AC 247 | order='Vishwanath Ganj' app='BISHWAVNATHGANJ' ratio=0.90 -> spelling
+INFO | Uttar Pradesh: name mismatch AC 285 | order='Mahasi' app='MAHSI' ratio=0.91 -> spelling
+INFO | Uttar Pradesh: name mismatch AC 306 | order='Domariyaganj' app='DOMARIAGANJ' ratio=0.96 -> spelling
+INFO | Uttar Pradesh: name mismatch AC 308 | order='Kaptanganj' app='CAPTAINGANJ' ratio=0.86 -> spelling
+INFO | Uttar Pradesh: name mismatch AC 311 | order='Mahadewa' app='MAHADEVA' ratio=0.88 -> spelling
+INFO | Uttar Pradesh: name mismatch AC 312 | order='Menhdawal' app='MEHNDAWAL' ratio=0.89 -> spelling
+INFO | Uttar Pradesh: name mismatch AC 319 | order='Paniyra' app='PANIARA' ratio=0.86 -> spelling
+INFO | Uttar Pradesh: name mismatch AC 343 | order='Atrauliya' app='ATRAULIA' ratio=0.94 -> spelling
+INFO | Uttar Pradesh: name mismatch AC 355 | order='Muhammadabad-Gohna' app='MOHAMMADABAD GOHNA' ratio=0.94 -> spelling
+INFO | Uttar Pradesh: name mismatch AC 358 | order='Rasara' app='RASRA' ratio=0.91 -> spelling
+INFO | Uttar Pradesh: name mismatch AC 370 | order='Mariyahu' app='MARIAHU' ratio=0.93 -> spelling
+INFO | Uttar Pradesh: name mismatch AC 373 | order='Jakhanian' app='JAKHANIA' ratio=0.94 -> spelling
+INFO | Uttar Pradesh: name mismatch AC 390 | order='Varanasi Cantt' app='VARANASI CANTONMENT' ratio=0.84 -> spelling
+INFO | Uttar Pradesh: name mismatch AC 403 | order='Duddhi' app='DUDHI' ratio=0.91 -> spelling
+OK   | Uttar Pradesh: every app seat number exists in the order | []
+OK   | Uttar Pradesh: no suspected row shift among name mismatches | []
+INFO | Uttar Pradesh: reservation (SC/ST) order vs app differences | [(402, 'ST', 'GEN'), (403, 'ST', 'SC')]
+OK   | Uttar Pradesh: every district heading has a lineage row | missing=[] extra=[]
+OK   | Uttar Pradesh: every lineage code is a real Census-2011 district of UTTAR PRADESH | []
+OK   | Uttar Pradesh: every Census-2011 district (71) appears as continuing or carved | []
+OK   | Uttar Pradesh: continuing codes unique
+INFO | Uttar Pradesh: AC-polygon dist_2008 attribute vs order heading (spelling-insensitive) disagreements | none
+INFO | Uttar Pradesh: overlay largest-share district outside continuing+carved codes (would be vetoed): 1 | [(287, 'Payagpur', 'BAHRAICH', 'overlay top 181 (0.62)')]
+INFO | Uttar Pradesh: ACs with >=5% overlay share outside continuing+carved codes: 12 | [(29, np.float64(0.15)), (55, np.float64(0.41)), (56, np.float64(0.13)), (119, np.float64(0.13)), (121, np.float64(0.14)), (130, np.float64(0.14)), (211, np.float64(0.22)), (214, np.float64(0.26)), (275, np.float64(0.16)), (286, np.float64(0.35)), (287, np.float64(0.62)), (346, np.float64(0.12))]
+OK   | Uttar Pradesh: no unexplained tehsil/CD-block transfer out of a heading continuing+carved districts | none
+INFO | Uttarakhand: name continuation line attached to AC 20 (p508) | (SC)
+INFO | Uttarakhand: name continuation line attached to AC 28 (p509) | (SC)
+INFO | Uttarakhand: name continuation line attached to AC 69 (p513) | (ST)
+OK   | Uttarakhand: AC count = 70 | got 70
+OK   | Uttarakhand: AC numbers contiguous 1..70 | first=[1] last=[70]
+OK   | Uttarakhand: each district heading is one contiguous block | 13 headings
+INFO | Uttarakhand: ACs per district_2008 | UTTARKASHI=3; CHAMOLI=3; RUDRYAPRAYAG=2; TEHRI GARHWAL=6; DEHRADUN=10; HARDWAR=11; GARHWAL=6; PITHORAGARH=4; BAGESHWAR=2; ALMORA=6; CHAMPAWAT=2; NAINITAL=6; UDHAMSINGH NAGAR=9
+INFO | Uttarakhand: name agreement vs app Uttarakhand 2012 (normalised) | 69/70 = 98.6%
+INFO | Uttarakhand: name mismatch AC 33 | order='Manglaur' app='MANGLORE' ratio=0.75 -> spelling
+OK   | Uttarakhand: every app seat number exists in the order | []
+OK   | Uttarakhand: no suspected row shift among name mismatches | []
+INFO | Uttarakhand: reservation (SC/ST) order vs app differences | none
+OK   | Uttarakhand: every district heading has a lineage row | missing=[] extra=[]
+OK   | Uttarakhand: every lineage code is a real Census-2011 district of UTTARAKHAND | []
+OK   | Uttarakhand: every Census-2011 district (13) appears as continuing or carved | []
+OK   | Uttarakhand: continuing codes unique
+INFO | Uttarakhand: AC-polygon dist_2008 attribute vs order heading (spelling-insensitive) disagreements | none
+INFO | Uttarakhand: overlay largest-share district outside continuing+carved codes (would be vetoed): 0
+INFO | Uttarakhand: ACs with >=5% overlay share outside continuing+carved codes: 3 | [(8, np.float64(0.24)), (25, np.float64(0.34)), (55, np.float64(0.14))]
+OK   | Uttarakhand: no unexplained tehsil/CD-block transfer out of a heading continuing+carved districts | none
+INFO | West Bengal: name continuation line attached to AC 2 (p516) | (SC)
+INFO | West Bengal: name continuation line attached to AC 3 (p516) | UTTAR (SC)
+INFO | West Bengal: name continuation line attached to AC 4 (p516) | DAKSHIN
+INFO | West Bengal: name continuation line attached to AC 25 (p518) | NAXALBARI (SC)
+INFO | West Bengal: name continuation line attached to AC 41 (p519) | (SC)
+INFO | West Bengal: name continuation line attached to AC 46 (p519) | PUR
+INFO | West Bengal: name continuation line attached to AC 83 (p522) | UTTAR
+INFO | West Bengal: name continuation line attached to AC 85 (p522) | DAKSHIN
+INFO | West Bengal: name continuation line attached to AC 87 (p523) | PASCHIM
+INFO | West Bengal: name continuation line attached to AC 88 (p523) | (SC)
+INFO | West Bengal: name continuation line attached to AC 89 (p523) | UTTAR PURBA (SC)
+INFO | West Bengal: name continuation line attached to AC 90 (p523) | DAKSHIN (SC)
+INFO | West Bengal: name continuation line attached to AC 95 (p523) | (SC)
+INFO | West Bengal: name continuation line attached to AC 96 (p523) | DAKSHIN (SC)
+INFO | West Bengal: name continuation line attached to AC 98 (p524) | (SC)
+INFO | West Bengal: name continuation line attached to AC 115 (p525) | TOWN
+INFO | West Bengal: name continuation line attached to AC 117 (p525) | GOPALPUR
+INFO | West Bengal: name continuation line attached to AC 123 (p525) | (ST)
+INFO | West Bengal: name continuation line attached to AC 124 (p525) | DAKSHIN
+INFO | West Bengal: name continuation line attached to AC 135 (p526) | (SC)
+INFO | West Bengal: name continuation line attached to AC 137 (p527) | PURBA (SC)
+INFO | West Bengal: name continuation line attached to AC 138 (p527) | PASCHIM (SC)
+INFO | West Bengal: name continuation line attached to AC 140 (p527) | PASCHIM
+INFO | West Bengal: name continuation line attached to AC 141 (p527) | PURBA (SC)
+INFO | West Bengal: name continuation line attached to AC 142 (p527) | PASCHIM
+INFO | West Bengal: name continuation line attached to AC 143 (p527) | HARBOUR
+INFO | West Bengal: name continuation line attached to AC 147 (p527) | DAKSHIN
+INFO | West Bengal: name continuation line attached to AC 151 (p528) | UTTAR
+INFO | West Bengal: name continuation line attached to AC 154 (p528) | PASCHIM
+INFO | West Bengal: name continuation line attached to AC 168 (p529) | BELGACHHIA
+INFO | West Bengal: name continuation line attached to AC 171 (p529) | MADHYA
+INFO | West Bengal: name continuation line attached to AC 173 (p529) | DAKSHIN
+INFO | West Bengal: name continuation line attached to AC 177 (p529) | (SC)
+INFO | West Bengal: name continuation line attached to AC 178 (p529) | DAKSHIN
+INFO | West Bengal: name continuation line attached to AC 182 (p530) | UDAYNARAYANPUR
+INFO | West Bengal: name continuation line attached to AC 183 (p530) | JAGATBALLAVPUR
+INFO | West Bengal: name continuation line attached to AC 204 (p532) | PURBA
+INFO | West Bengal: name continuation line attached to AC 205 (p532) | PASCHIM
+INFO | West Bengal: name continuation line attached to AC 224 (p533) | SADAR
+INFO | West Bengal: name continuation line attached to AC 232 (p534) | (SC)
+INFO | West Bengal: name continuation line attached to AC 246 (p535) | (SC)
+INFO | West Bengal: name continuation line attached to AC 259 (p536) | (SC)
+INFO | West Bengal: name continuation line attached to AC 260 (p536) | DAKSHIN
+INFO | West Bengal: name continuation line attached to AC 266 (p536) | UTTAR (SC)
+INFO | West Bengal: name continuation line attached to AC 268 (p536) | DAKSHIN
+INFO | West Bengal: name continuation line attached to AC 269 (p536) | UTTAR
+INFO | West Bengal: name continuation line attached to AC 276 (p537) | PURBA
+INFO | West Bengal: name continuation line attached to AC 277 (p537) | PASCHIM
+INFO | West Bengal: name continuation line attached to AC 280 (p537) | DAKSHIN
+OK   | West Bengal: AC count = 294 | got 294
+OK   | West Bengal: AC numbers contiguous 1..294 | first=[1] last=[294]
+OK   | West Bengal: each district heading is one contiguous block | 19 headings
+INFO | West Bengal: ACs per district_2008 | COOCHBEHAR=9; JALPAIGURI=12; DARJEELING=6; UTTAR DINAJPUR=9; DAKSHIN DINAJPUR=6; MALDAHA=12; MURSHIDABAD=22; NADIA=17; NORTH 24 PARGANAS=33; SOUTH 24 PARGANAS=31; KOLKATA=11; HOWRAH=16; HOOGHLY=18; PURBO MEDINIPUR=16; PASCHIM MEDINIPUR=19; PURULIA=9; BANKURA=12; BARDHAMAN=25; BIRBHUM=11
+INFO | West Bengal: name agreement vs app West Bengal 2011 (normalised) | 277/294 = 94.2%
+INFO | West Bengal: name mismatch AC 19 | order='ABGRAM-FULBARI' app='DABGRAM-PHULBARI' ratio=0.86 -> spelling
+INFO | West Bengal: name mismatch AC 49 | order='MANIKCHAK' app='MANICKCHAK' ratio=0.95 -> spelling
+INFO | West Bengal: name mismatch AC 54 | order='BAISNABNAGAR' app='BAISHNAB NAGAR' ratio=0.96 -> spelling
+INFO | West Bengal: name mismatch AC 62 | order='BHAGAWANGOLA' app='BHAGABANGOLA' ratio=0.92 -> spelling
+INFO | West Bengal: name mismatch AC 74 | order='NOWDA' app='NAODA' ratio=0.80 -> spelling
+INFO | West Bengal: name mismatch AC 94 | order='BAGDA' app='BAGDAH' ratio=0.91 -> spelling
+INFO | West Bengal: name mismatch AC 95 | order='BANGAON UTTAR' app='BONGAON UTTAR' ratio=0.92 -> spelling
+INFO | West Bengal: name mismatch AC 96 | order='BANGAON DAKSHIN' app='BONGAON DAKSHIN' ratio=0.93 -> spelling
+INFO | West Bengal: name mismatch AC 136 | order='JAYNAGAR' app='JAQYNAGAR' ratio=0.94 -> spelling
+INFO | West Bengal: name mismatch AC 145 | order='SATGACHHIA' app='SATGACHIA' ratio=0.95 -> spelling
+INFO | West Bengal: name mismatch AC 148 | order='BHANGAR' app='BHANGORE' ratio=0.80 -> spelling
+INFO | West Bengal: name mismatch AC 152 | order='TOLLYGANJ' app='TOLLYGUNJ' ratio=0.89 -> spelling
+INFO | West Bengal: name mismatch AC 168 | order='KASHIPUR-BELGACHHIA' app='KASHIPUR-BELGACHIA' ratio=0.97 -> spelling
+INFO | West Bengal: name mismatch AC 189 | order='CHANDANNAGAR' app='CHANDANNAGORE' ratio=0.88 -> spelling
+INFO | West Bengal: name mismatch AC 249 | order='RANIBANDH' app='RANIBUNDH' ratio=0.89 -> spelling
+INFO | West Bengal: name mismatch AC 283 | order='BARABANI' app='BARBANI' ratio=0.93 -> spelling
+INFO | West Bengal: name mismatch AC 288 | order='LABPUR' app='LABHPUR' ratio=0.92 -> spelling
+OK   | West Bengal: every app seat number exists in the order | []
+OK   | West Bengal: no suspected row shift among name mismatches | []
+INFO | West Bengal: reservation (SC/ST) order vs app differences | none
+OK   | West Bengal: every district heading has a lineage row | missing=[] extra=[]
+OK   | West Bengal: every lineage code is a real Census-2011 district of WEST BENGAL | []
+OK   | West Bengal: every Census-2011 district (19) appears as continuing or carved | []
+OK   | West Bengal: continuing codes unique
+INFO | West Bengal: AC-polygon dist_2008 attribute vs order heading (spelling-insensitive) disagreements | none
+INFO | West Bengal: overlay largest-share district outside continuing+carved codes (would be vetoed): 2 | [(116, 'BIDHANNAGAR', 'NORTH 24 PARGANAS', 'overlay top 343 (1.00)'), (127, 'GOSABA', 'SOUTH 24 PARGANAS', 'overlay top 337 (1.00)')]
+INFO | West Bengal: ACs with >=5% overlay share outside continuing+carved codes: 8 | [(42, np.float64(0.16)), (52, np.float64(0.21)), (105, np.float64(0.15)), (107, np.float64(0.1)), (116, np.float64(1.0)), (127, np.float64(1.0)), (162, np.float64(0.15)), (166, np.float64(0.23))]
+OK   | West Bengal: no unexplained tehsil/CD-block transfer out of a heading continuing+carved districts | none
+INFO | West Bengal: transfer-scan hits reviewed by hand as false positives | ['PURBO MEDINIPUR NANDA: fragment of "CDB Nanda Kumar" (Purba Medinipur), fuzzy-matched to Nawda (Murshidabad)']
+INFO | Delhi: name continuation line attached to AC 10 (p545) | (SC)
+INFO | Delhi: name continuation line attached to AC 12 (p545) | (SC)
+OK   | Delhi: AC count = 70 | got 70
+OK   | Delhi: AC numbers contiguous 1..70 | first=[1] last=[70]
+INFO | Delhi: Table A has no district headings | district_2008 left blank for all 70 ACs
+INFO | Delhi: ACs per district_2008 | (none)=70
+INFO | Delhi: name agreement vs app Delhi 2013 (normalised) | 70/70 = 100.0%
+OK   | Delhi: every app seat number exists in the order | []
+OK   | Delhi: no suspected row shift among name mismatches | []
+INFO | Delhi: reservation (SC/ST) order vs app differences | none
+OK   | Delhi: every lineage code is a real Census-2011 district of NCT OF DELHI | []
+OK   | Delhi: every Census-2011 district (9) appears as continuing or carved | []
+OK   | Delhi: continuing codes unique
+INFO | Delhi: overlay cross-check skipped | no headings in order
+OK   | Puducherry: AC count = 30 | got 30
+OK   | Puducherry: AC numbers contiguous 1..30 | first=[1] last=[30]
+OK   | Puducherry: each district heading is one contiguous block | 4 headings
+INFO | Puducherry: ACs per district_2008 | PUDUCHERRY REGION=23; KARAIKAL REGION=5; MAHE REGION=1; YANAM REGION=1
+INFO | Puducherry: name agreement vs app Puducherry 2011 (normalised) | 29/30 = 96.7%
+INFO | Puducherry: name mismatch AC 10 | order='Kamraj Nagar' app='KAMARAJ NAGAR' ratio=0.96 -> spelling
+OK   | Puducherry: every app seat number exists in the order | []
+OK   | Puducherry: no suspected row shift among name mismatches | []
+INFO | Puducherry: reservation (SC/ST) order vs app differences | none
+OK   | Puducherry: every district heading has a lineage row | missing=[] extra=[]
+OK   | Puducherry: every lineage code is a real Census-2011 district of PUDUCHERRY | []
+OK   | Puducherry: every Census-2011 district (4) appears as continuing or carved | []
+OK   | Puducherry: continuing codes unique
+INFO | Puducherry: AC-polygon dist_2008 attribute vs order heading (spelling-insensitive) disagreements | none
+INFO | Puducherry: overlay largest-share district outside continuing+carved codes (would be vetoed): 0
+INFO | Puducherry: ACs with >=5% overlay share outside continuing+carved codes: 4 | [(8, np.float64(0.11)), (13, np.float64(0.13)), (29, np.float64(0.13)), (30, np.float64(0.13))]
+INFO | Jammu & Kashmir: name continuation line attached to AC 78 (p570) | (SC)
+OK   | Jammu & Kashmir: AC count = 87 | got 87
+OK   | Jammu & Kashmir: AC numbers contiguous 1..87 | first=[1] last=[87]
+OK   | Jammu & Kashmir: each district heading is one contiguous block | 14 headings
+INFO | Jammu & Kashmir: ACs per district_2008 | KUPWARA=5; BARAMULLA=10; SRINAGAR=10; BUDGAM=5; PULWAMA=6; ANANTNAG=10; LEH=2; KARGIL=2; DODA=6; UDHAMPUR=6; KATHUA=5; JAMMU=13; RAJOURI=4; POONCH=3
+INFO | Jammu & Kashmir: name agreement vs app J&K+Ladakh 2014 (normalised) | 77/87 = 88.5%
+INFO | Jammu & Kashmir: name mismatch AC 20 | order='Idgah' app='EIDGAH' ratio=0.91 -> spelling
+INFO | Jammu & Kashmir: name mismatch AC 25 | order='Batamaloo' app='BATMALOO' ratio=0.94 -> spelling
+INFO | Jammu & Kashmir: name mismatch AC 27 | order='Badgam' app='BUDGAM' ratio=0.83 -> spelling
+INFO | Jammu & Kashmir: name mismatch AC 30 | order='Chrar-I-Sharief' app='CHRAR' ratio=0.56 -> spelling (Chrar-i-Sharief, short form Chrar)
+INFO | Jammu & Kashmir: name mismatch AC 39 | order='Home-shalibugh' app='HOM SHALI BUGH' ratio=0.96 -> spelling
+INFO | Jammu & Kashmir: name mismatch AC 42 | order='Doru' app='DOORU' ratio=0.89 -> spelling
+INFO | Jammu & Kashmir: name mismatch AC 47 | order='Nobra' app='NUBRA' ratio=0.80 -> spelling
+INFO | Jammu & Kashmir: name mismatch AC 75 | order='R. S. Pura' app='RANBIR SINGH PURA' ratio=0.57 -> spelling (R. S. Pura is the abbreviation of Ranbir Singh Pura)
+INFO | Jammu & Kashmir: name mismatch AC 76 | order='Suehetgarh' app='SUCHET GARH' ratio=0.90 -> spelling
+INFO | Jammu & Kashmir: name mismatch AC 81 | order='Nowshara' app='NOWSHERA' ratio=0.88 -> spelling
+OK   | Jammu & Kashmir: every app seat number exists in the order | []
+OK   | Jammu & Kashmir: no suspected row shift among name mismatches | []
+INFO | Jammu & Kashmir: reservation (SC/ST) order vs app differences | [(16, 'ST', 'GEN'), (17, 'ST', 'GEN'), (42, 'ST', 'GEN'), (56, 'ST', 'GEN'), (62, 'SC', 'GEN'), (69, 'SC', 'GEN'), (72, 'SC', 'GEN'), (73, 'SC', 'GEN'), (81, 'SC', 'GEN'), (85, 'ST', 'GEN'), (86, 'ST', 'GEN'), (87, 'ST', 'GEN')]
+OK   | Jammu & Kashmir: every district heading has a lineage row | missing=[] extra=[]
+OK   | Jammu & Kashmir: every lineage code is a real Census-2011 district of JAMMU & KASHMIR | []
+OK   | Jammu & Kashmir: every Census-2011 district (22) appears as continuing or carved | []
+OK   | Jammu & Kashmir: continuing codes unique
+INFO | Jammu & Kashmir: AC-polygon dist_2008 attribute vs order heading (spelling-insensitive) disagreements | none
+INFO | Jammu & Kashmir: overlay largest-share district outside continuing+carved codes (would be vetoed): 3 | [(6, 'Uri', 'BARAMULLA', 'overlay top 005 (0.87)'), (28, 'Beerwah', 'BUDGAM', 'overlay top 008 (0.65)'), (34, 'Rajpora', 'PULWAMA', 'overlay top 002 (0.39)')]
+INFO | Jammu & Kashmir: ACs with >=5% overlay share outside continuing+carved codes: 22 | [(5, np.float64(0.15)), (6, np.float64(0.87)), (17, np.float64(0.11)), (23, np.float64(0.34)), (24, np.float64(0.11)), (27, np.float64(0.48)), (28, np.float64(0.65)), (31, np.float64(0.17)), (32, np.float64(0.37)), (33, np.float64(0.28)), (34, np.float64(0.39)), (35, np.float64(0.22)), (38, np.float64(0.11)), (42, np.float64(0.18)), (46, np.float64(0.11)), (52, np.float64(0.11)), (53, np.float64(0.11)), (56, np.float64(0.15)), (63, np.float64(0.17)), (70, np.float64(0.12)), (78, np.float64(0.15)), (79, np.float64(0.2))]
+OK   | Jammu & Kashmir: no unexplained tehsil/CD-block transfer out of a heading continuing+carved districts | none
+INFO | Jammu & Kashmir: transfer-scan hits reviewed by hand as false positives | ['SRINAGAR BADGAM: AC 23 Amirakadal extent EXCLUDES patches in Tehsil Badgam', 'SRINAGAR CHADOORA: AC 23 Amirakadal extent EXCLUDES patches in Tehsil Chadoora']

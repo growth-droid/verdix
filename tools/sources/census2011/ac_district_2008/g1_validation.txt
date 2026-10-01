@@ -1,0 +1,109 @@
+INFO | Andhra Pradesh (undivided) page idx 26: name-column threshold 229 (default 200)
+INFO | Andhra Pradesh (undivided) page idx 27: name-column threshold 229 (default 200)
+INFO | Andhra Pradesh (undivided) page idx 28: name-column threshold 229 (default 200)
+== Andhra Pradesh (undivided) (Schedule III, PDF idx 8-29): parsed 294 ACs; stray name-column rows before first AC: none
+OK   | Andhra Pradesh (undivided): AC numbers contiguous 1..294 (got 294, last 294)
+OK   | Andhra Pradesh (undivided): 23 district headings, all in lineage table (missing=[], unused=[])
+INFO | Andhra Pradesh (undivided): name-column continuation rows joined into the previous AC name: ['17:(Urban)', '18:(Rural)', '49:Nagar', '71:Cantt. (SC)', '96:(SC)', '99:(Station) (SC)', '102:(ST)', '107:(SC)', '119:(ST)', '131:(SC)', '140:East', '141:South', '142:North', '143:West', '152:(SC)', '161:am', '163:(SC)', '165:(SC)', '169:City', '170:Rural', '172:am (ST)', '185:(SC)', '187:(SC)', '199:Central', '221:m (SC)', '226:du (SC)', '290:(SC)']
+== Arunachal Pradesh (Schedule IV, PDF idx 33-41): parsed 60 ACs; stray name-column rows before first AC: none
+OK   | Arunachal Pradesh: AC numbers contiguous 1..60 (got 60, last 60)
+OK   | Arunachal Pradesh: 11 district headings, all in lineage table (missing=[], unused=[])
+INFO | Arunachal Pradesh: name-column continuation rows joined into the previous AC name: ['6:BURAGAON (ST)', '9:(ST)', '12:(ST)', '17:(ST)', '30:(ST)', '31:(ST)', '34:YINGKIONG (ST)', '37:(ST)', '38:(ST)', '40:GEKU (ST)', '49:DIYUM', '52:SOUTH (ST)', '53:NORTH (ST)', '55:(ST)', '56:(ST)', '57:BOGAPANI (ST)', '59:PUMAO (ST)', '60:WAKKA (ST)']
+== Bihar (Schedule VI, PDF idx 74-94): parsed 243 ACs; stray name-column rows before first AC: none
+OK   | Bihar: AC numbers contiguous 1..243 (got 243, last 243)
+OK   | Bihar: 38 district headings, all in lineage table (missing=[], unused=[])
+INFO | Bihar: name-column continuation rows joined into the previous AC name: ['59:(SC)', '72:(SC)', '74:(SC)', '76:Bakhtiarpur', '78:Asthan (SC)', '82:Rural', '108:pur', '127:(SC)', '131:(SC)', '137:nagar', '141:Bariarpur', '145:Kamal', '169:Sheikhpura', '189:(SC)', '218:(SC)', '222:(SC)', '227:(SC)', '228:(SC)', '229:(SC)']
+== Chhattisgarh (Schedule VII, PDF idx 97-108): parsed 90 ACs; stray name-column rows before first AC: none
+OK   | Chhattisgarh: AC numbers contiguous 1..90 (got 90, last 90)
+OK   | Chhattisgarh: 16 district headings, all in lineage table (missing=[], unused=[])
+INFO | Chhattisgarh: name-column continuation rows joined into the previous AC name: none
+INFO | Goa page idx 112: name-column threshold 205 (default 192)
+INFO | Goa page idx 113: name-column threshold 205 (default 192)
+INFO | Goa page idx 114: name-column threshold 214 (default 192)
+== Goa (Schedule VIII, PDF idx 110-114): parsed 40 ACs; stray name-column rows before first AC: none
+OK   | Goa: AC numbers contiguous 1..40 (got 40, last 40)
+OK   | Goa: 2 district headings, all in lineage table (missing=[], unused=[])
+INFO | Goa: name-column continuation rows joined into the previous AC name: none
+OK   | Telangana: rows 119 expected 119, numbers contiguous 1..119
+OK   | Telangana: app seats_ae 2009 has 119 seats (n 1..119)
+INFO | Telangana: name agreement vs app 2009 = 106/119 (89.1%); mismatches 13
+       MISMATCH Telangana AC 3: order 'Bellampalli' vs app 'BELLAMPALLY' -> spelling variant (same-number app name is the closest match, sim 0.91)
+       MISMATCH Telangana AC 46: order 'Kukatpalle' vs app 'KUKATPALLY' -> spelling variant (same-number app name is the closest match, sim 0.90)
+       MISMATCH Telangana AC 50: order 'Maheswaram' vs app 'MAHESHWARAM' -> spelling variant (same-number app name is the closest match, sim 0.95)
+       MISMATCH Telangana AC 63: order 'Nampally' vs app 'NAMPALLI' -> spelling variant (same-number app name is the closest match, sim 0.88)
+       MISMATCH Telangana AC 69: order 'Bahadurpura' vs app 'BAHDURPURA' -> spelling variant (same-number app name is the closest match, sim 0.95)
+       MISMATCH Telangana AC 70: order 'Secunderabad' vs app 'SECUNDRABAD' -> spelling variant (same-number app name is the closest match, sim 0.96)
+       MISMATCH Telangana AC 88: order 'Miryalaguda' vs app 'MIRYALGUDA' -> spelling variant (same-number app name is the closest match, sim 0.95)
+       MISMATCH Telangana AC 96: order 'Thungathurthi' vs app 'THUNGATHURTHY' -> spelling variant (same-number app name is the closest match, sim 0.92)
+       MISMATCH Telangana AC 98: order 'Jangaon' vs app 'JANGOAN' -> spelling variant (same-number app name is the closest match, sim 0.86)
+       MISMATCH Telangana AC 107: order 'Waradhanapet' vs app 'WARDHANAPET' -> spelling variant (same-number app name is the closest match, sim 0.96)
+       MISMATCH Telangana AC 114: order 'Madhira' vs app 'MADIRA' -> spelling variant (same-number app name is the closest match, sim 0.92)
+       MISMATCH Telangana AC 116: order 'Sathupalle' vs app 'SATHUPALLI' -> spelling variant (same-number app name is the closest match, sim 0.90)
+       MISMATCH Telangana AC 119: order 'Bhadrachalam' vs app 'BHADRACHELAM' -> spelling variant (same-number app name is the closest match, sim 0.92)
+OK   | Telangana: reservation (GEN/SC/ST) equal to app 2009 for every AC; differences=[(32, 'GEN', 'SC')] [AC 32: order prints "32. Husnabad" with no (SC) tag (PDF p.11) and the 2009 winner is Aligireddy Praveen Reddy - a GENERAL seat; the app flags it SC in every year (app-side data issue)]
+OK   | Telangana: all 10 district codes used are real Census-2011 codes of ANDHRA PRADESH; bad=none
+INFO | Telangana: uses 2011 codes 532;533;534;535;536;537;538;539;540;541
+OK   | Andhra Pradesh: rows 175 expected 175, numbers contiguous 120..294
+OK   | Andhra Pradesh: app seats_ae 2009 has 175 seats (n 120..294)
+INFO | Andhra Pradesh: name agreement vs app 2009 = 167/175 (95.4%); mismatches 8
+       MISMATCH Andhra Pradesh AC 134: order 'Cheepurupalli' vs app 'CHEEPURUPALLE' -> spelling variant (same-number app name is the closest match, sim 0.92)
+       MISMATCH Andhra Pradesh AC 139: order 'Bhimili' vs app 'BHIMLI' -> spelling variant (same-number app name is the closest match, sim 0.92)
+       MISMATCH Andhra Pradesh AC 151: order 'Yelamanchili' vs app 'ELAMANCHILI' -> spelling variant (same-number app name is the closest match, sim 0.96)
+       MISMATCH Andhra Pradesh AC 170: order 'Rajahmundry Rural' vs app 'RAJAMUNDRY RURAL' -> spelling variant (same-number app name is the closest match, sim 0.97)
+       MISMATCH Andhra Pradesh AC 198: order 'Vijayawada West' vs app 'VIJAYWADA WEST' -> spelling variant (same-number app name is the closest match, sim 0.96)
+       MISMATCH Andhra Pradesh AC 207: order 'Ponnuru' vs app 'PONNUR' -> spelling variant (same-number app name is the closest match, sim 0.92)
+       MISMATCH Andhra Pradesh AC 217: order 'Sattenapalle' vs app 'SATTENPALLI' -> spelling variant (same-number app name is the closest match, sim 0.87)
+       MISMATCH Andhra Pradesh AC 219: order 'Gurajala' vs app 'GURUZALA' -> spelling variant (same-number app name is the closest match, sim 0.75)
+OK   | Andhra Pradesh: reservation (GEN/SC/ST) equal to app 2009 for every AC; differences=none
+OK   | Andhra Pradesh: all 13 district codes used are real Census-2011 codes of ANDHRA PRADESH; bad=none
+INFO | Andhra Pradesh: uses 2011 codes 542;543;544;545;546;547;548;549;550;551;552;553;554
+OK   | Arunachal Pradesh: rows 60 expected 60, numbers contiguous 1..60
+OK   | Arunachal Pradesh: app seats_ae 2009 has 60 seats (n 1..60)
+INFO | Arunachal Pradesh: name agreement vs app 2009 = 56/60 (93.3%); mismatches 4
+       MISMATCH Arunachal Pradesh AC 12: order 'PAKKE-KASANG' vs app 'PAKKE KESSANG' -> spelling variant (same-number app name is the closest match, sim 0.87)
+       MISMATCH Arunachal Pradesh AC 26: order 'DAMPORIJO' vs app 'DUMPORIJO' -> auto-test flags: closer app name at n=24 'DAPORIJO' (sim 0.94 vs 0.89); JUDGED: spelling variant - order DAMPORIJO = app DUMPORIJO; the closer app name DAPORIJO is a different seat (AC 24), which itself matches the order exactly at n=24
+       MISMATCH Arunachal Pradesh AC 49: order 'BORDUMSA-DIYUM' vs app 'BORDUMSA - DIYUN' -> spelling variant (same-number app name is the closest match, sim 0.92)
+       MISMATCH Arunachal Pradesh AC 60: order 'PONGCHAO-WAKKA' vs app 'PONGCHAU WAKKA' -> spelling variant (same-number app name is the closest match, sim 0.92)
+OK   | Arunachal Pradesh: reservation (GEN/SC/ST) equal to app 2009 for every AC; differences=none
+OK   | Arunachal Pradesh: all 16 district codes used are real Census-2011 codes of ARUNACHAL PRADESH; bad=none
+OK   | Arunachal Pradesh: every Census-2011 district (16) appears as continuing or carved; uncovered=[], listed twice=[]
+OK   | Bihar: rows 243 expected 243, numbers contiguous 1..243
+OK   | Bihar: app seats_ae 2010 has 243 seats (n 1..243)
+INFO | Bihar: name agreement vs app 2010 = 229/243 (94.2%); mismatches 14
+       MISMATCH Bihar AC 29: order 'Runnisaidpur' vs app 'RUNISAIDPUR' -> spelling variant (same-number app name is the closest match, sim 0.96)
+       MISMATCH Bihar AC 42: order 'Pipra' vs app 'PIPRA (SUPAUL)' -> auto-test flags: closer app name at n=17 'PIPRA' (sim 1.00 vs 0.62); JUDGED: spelling variant - app adds the disambiguator "(SUPAUL)"; the other Pipra is AC 17 (Purvi Champaran), which matches the order exactly at n=17
+       MISMATCH Bihar AC 44: order 'Triveniganj' vs app 'TRIBENIGANJ' -> spelling variant (same-number app name is the closest match, sim 0.91)
+       MISMATCH Bihar AC 74: order 'Sonbarsha' vs app 'SONBARSA' -> spelling variant (same-number app name is the closest match, sim 0.94)
+       MISMATCH Bihar AC 91: order 'Bochahan' vs app 'BOCHAHA' -> spelling variant (same-number app name is the closest match, sim 0.93)
+       MISMATCH Bihar AC 103: order 'Bhore' vs app 'BHOREY' -> spelling variant (same-number app name is the closest match, sim 0.91)
+       MISMATCH Bihar AC 109: order 'Daraunda' vs app 'DARAUNDHA' -> spelling variant (same-number app name is the closest match, sim 0.94)
+       MISMATCH Bihar AC 111: order 'Goriakothi' vs app 'GORIYAKOTHI' -> spelling variant (same-number app name is the closest match, sim 0.95)
+       MISMATCH Bihar AC 138: order 'Bibhutipur' vs app 'BIBHUTPUR' -> spelling variant (same-number app name is the closest match, sim 0.95)
+       MISMATCH Bihar AC 160: order 'Dhoraiya' vs app 'DHURAIYA' -> spelling variant (same-number app name is the closest match, sim 0.88)
+       MISMATCH Bihar AC 183: order 'Kumhrar' vs app 'KUMHRARH' -> spelling variant (same-number app name is the closest match, sim 0.93)
+       MISMATCH Bihar AC 185: order 'Fatuha' vs app 'FATWAH' -> spelling variant (same-number app name is the closest match, sim 0.67)
+       MISMATCH Bihar AC 199: order 'Brahampur' vs app 'BARHAMPUR' -> spelling variant (same-number app name is the closest match, sim 0.89)
+       MISMATCH Bihar AC 216: order 'Jehanabad' vs app 'JAHANABAD' -> spelling variant (same-number app name is the closest match, sim 0.89)
+OK   | Bihar: reservation (GEN/SC/ST) equal to app 2010 for every AC; differences=none
+OK   | Bihar: all 38 district codes used are real Census-2011 codes of BIHAR; bad=none
+OK   | Bihar: every Census-2011 district (38) appears as continuing or carved; uncovered=[], listed twice=[]
+OK   | Chhattisgarh: rows 90 expected 90, numbers contiguous 1..90
+OK   | Chhattisgarh: app seats_ae 2013 has 90 seats (n 1..90)
+INFO | Chhattisgarh: name agreement vs app 2013 = 83/90 (92.2%); mismatches 7
+       MISMATCH Chhattisgarh AC 48: order 'Raipur Rural' vs app 'RAIPUR CITY GRAMIN' -> auto-test flags: closer app name at n=84 'NARAINPUR' (sim 0.60 vs 0.59); JUDGED: translation variant - Gramin = Rural (app "Raipur City Gramin" = order "Raipur Rural"); neighbours 47 and 49 match exactly
+       MISMATCH Chhattisgarh AC 60: order 'Dondi Lohara' vs app 'DONDI LAHARA' -> spelling variant (same-number app name is the closest match, sim 0.91)
+       MISMATCH Chhattisgarh AC 63: order 'Durg-Rural' vs app 'DURG GRAMIN' -> spelling variant (same-number app name is the closest match, sim 0.63)
+       MISMATCH Chhattisgarh AC 70: order 'Nawagarh' vs app 'NAVAGARH' -> spelling variant (same-number app name is the closest match, sim 0.88)
+       MISMATCH Chhattisgarh AC 78: order 'Mohla-Manpur' vs app 'MOHALA-MANPUR' -> spelling variant (same-number app name is the closest match, sim 0.96)
+       MISMATCH Chhattisgarh AC 84: order 'Narayanpur' vs app 'NARAINPUR' -> spelling variant (same-number app name is the closest match, sim 0.84)
+       MISMATCH Chhattisgarh AC 88: order 'Dantewada' vs app 'DANTEWARA' -> spelling variant (same-number app name is the closest match, sim 0.89)
+OK   | Chhattisgarh: reservation (GEN/SC/ST) equal to app 2013 for every AC; differences=none
+OK   | Chhattisgarh: all 18 district codes used are real Census-2011 codes of CHHATTISGARH; bad=none
+OK   | Chhattisgarh: every Census-2011 district (18) appears as continuing or carved; uncovered=[], listed twice=[]
+OK   | Goa: rows 40 expected 40, numbers contiguous 1..40
+OK   | Goa: app seats_ae 2012 has 40 seats (n 1..40)
+INFO | Goa: name agreement vs app 2012 = 40/40 (100.0%); mismatches 0
+OK   | Goa: reservation (GEN/SC/ST) equal to app 2012 for every AC; differences=none
+OK   | Goa: all 2 district codes used are real Census-2011 codes of GOA; bad=none
+OK   | Goa: every Census-2011 district (2) appears as continuing or carved; uncovered=[], listed twice=[]
+OK   | undivided AP: every Census-2011 AP district (23) covered by telangana+andhra_pradesh files; uncovered=[]

@@ -1,0 +1,191 @@
+OK   | Punjab: AC count = 117 seats | got 117
+OK   | Punjab: AC numbers contiguous 1..117, no duplicates
+OK   | Punjab: every AC has a district (Sikkim 32 Sangha excepted)
+OK   | Punjab: app 2012 has 117 seats | got 117
+INFO | Punjab: exact name agreement vs app 2012 (normalised: upper, no (SC)/(ST)/(BL), letters only) | 117/117 = 100.00%
+OK   | Punjab: every name difference judged a spelling variant
+OK   | Punjab: row-shift test - no mismatch matches a neighbouring app seat better than its own
+INFO | Punjab: reservation vs app r-field (Sangha counted as GEN, as the app stores it) | 0 differ 
+OK   | Punjab: lineage table covers exactly the order headings (17)
+OK   | Punjab: every lineage code is a real Census-2011 district of PUNJAB
+OK   | Punjab: every Census-2011 district (20) appears as continuing or carved
+OK   | Punjab: no Census-2011 code is the continuing code of two order districts
+INFO | Punjab: GURDASPUR -> 035 Gurdaspur (10 ACs)
+INFO | Punjab: AMRITSAR -> 049 Amritsar + carved 050 Tarn Taran (15 ACs)
+INFO | Punjab: KAPURTHALA -> 036 Kapurthala (4 ACs)
+INFO | Punjab: JALANDHAR -> 037 Jalandhar (9 ACs)
+INFO | Punjab: HOSHIARPUR -> 038 Hoshiarpur (7 ACs)
+INFO | Punjab: NAWAN SHAHR -> 039 Shahid Bhagat Singh Nagar (3 ACs)
+INFO | Punjab: RUPNAGAR -> 051 Rupnagar + carved 052 Sahibzada Ajit Singh Nagar (5 ACs)
+INFO | Punjab: FATEHGARH SAHIB -> 040 Fatehgarh Sahib (3 ACs)
+INFO | Punjab: LUDHIANA -> 041 Ludhiana (14 ACs)
+INFO | Punjab: MOGA -> 042 Moga (4 ACs)
+INFO | Punjab: FIROZPUR -> 043 Firozpur (8 ACs)
+INFO | Punjab: MUKTSAR -> 044 Muktsar (4 ACs)
+INFO | Punjab: FARIDKOT -> 045 Faridkot (3 ACs)
+INFO | Punjab: BATHINDA -> 046 Bathinda (6 ACs)
+INFO | Punjab: MANSA -> 047 Mansa (3 ACs)
+INFO | Punjab: SANGRUR -> 053 Sangrur + carved 054 Barnala (10 ACs)
+INFO | Punjab: PATIALA -> 048 Patiala + carved 052 Sahibzada Ajit Singh Nagar (9 ACs)
+INFO | Punjab: polygon-overlay pieces (share>=5%) the official list would veto | 5: ['33 Kartarpur -> 036 Kapurthala share 0.1186', '54 Bassi Pathana -> 051 Rupnagar share 0.1136', '69 Raikot -> 054 Barnala share 0.146', '75 Zira -> 042 Moga share 0.1031', '110 Patiala Rural -> 040 Fatehgarh Sahib share 0.114']
+OK   | Rajasthan: AC count = 200 seats | got 200
+OK   | Rajasthan: AC numbers contiguous 1..200, no duplicates
+OK   | Rajasthan: every AC has a district (Sikkim 32 Sangha excepted)
+OK   | Rajasthan: app 2013 has 200 seats | got 200
+INFO | Rajasthan: exact name agreement vs app 2013 (normalised: upper, no (SC)/(ST)/(BL), letters only) | 194/200 = 97.00%
+INFO | Rajasthan: name differs | 2 Ganganagar | app SRI GANGANAGAR | sim 0.87 | honorific prefix: app SRI GANGANAGAR = order Ganganagar
+INFO | Rajasthan: name differs | 3 Karanpur | app SRI KARANPUR | sim 0.84 | honorific prefix: app SRI KARANPUR = order Karanpur
+INFO | Rajasthan: name differs | 38 Neema Ka Thana | app NEEM KA THANA | sim 0.96 | spelling: Neema Ka Thana / Neem Ka Thana
+INFO | Rajasthan: name differs | 106 Ladnun | app LADNU | sim 0.91 | spelling: Ladnun / Ladnu
+INFO | Rajasthan: name differs | 167 Kapasan | app KAPASIN | sim 0.86 | spelling: Kapasan / Kapasin
+INFO | Rajasthan: name differs | 179 Sahara | app SAHADA | sim 0.83 | spelling: Sahara / Sahada (r/d transliteration)
+OK   | Rajasthan: every name difference judged a spelling variant
+OK   | Rajasthan: row-shift test - no mismatch matches a neighbouring app seat better than its own
+INFO | Rajasthan: reservation vs app r-field (Sangha counted as GEN, as the app stores it) | 0 differ 
+OK   | Rajasthan: lineage table covers exactly the order headings (32)
+OK   | Rajasthan: every lineage code is a real Census-2011 district of RAJASTHAN
+OK   | Rajasthan: every Census-2011 district (33) appears as continuing or carved
+OK   | Rajasthan: no Census-2011 code is the continuing code of two order districts
+INFO | Rajasthan: GANGANAGAR -> 099 Ganganagar (6 ACs)
+INFO | Rajasthan: HANUMANGARH -> 100 Hanumangarh (5 ACs)
+INFO | Rajasthan: BIKANER -> 101 Bikaner (7 ACs)
+INFO | Rajasthan: CHURU -> 102 Churu (6 ACs)
+INFO | Rajasthan: JHUNJHUNU -> 103 Jhunjhunun (7 ACs)
+INFO | Rajasthan: SIKAR -> 111 Sikar (8 ACs)
+INFO | Rajasthan: JAIPUR -> 110 Jaipur (19 ACs)
+INFO | Rajasthan: ALWAR -> 104 Alwar (11 ACs)
+INFO | Rajasthan: BHARATPUR -> 105 Bharatpur (7 ACs)
+INFO | Rajasthan: DHOLPUR -> 106 Dhaulpur (4 ACs)
+INFO | Rajasthan: KARAULI -> 107 Karauli (4 ACs)
+INFO | Rajasthan: DAUSA -> 109 Dausa (5 ACs)
+INFO | Rajasthan: SAWAI MADHOPUR -> 108 Sawai Madhopur (4 ACs)
+INFO | Rajasthan: TONK -> 120 Tonk (4 ACs)
+INFO | Rajasthan: AJMER -> 119 Ajmer (8 ACs)
+INFO | Rajasthan: NAGAUR -> 112 Nagaur (10 ACs)
+INFO | Rajasthan: PALI -> 118 Pali (6 ACs)
+INFO | Rajasthan: JODHPUR -> 113 Jodhpur (10 ACs)
+INFO | Rajasthan: JAISALMER -> 114 Jaisalmer (2 ACs)
+INFO | Rajasthan: BARMER -> 115 Barmer (7 ACs)
+INFO | Rajasthan: JALORE -> 116 Jalor (5 ACs)
+INFO | Rajasthan: SIROHI -> 117 Sirohi (3 ACs)
+INFO | Rajasthan: UDAIPUR -> 130 Udaipur + carved 131 Pratapgarh (9 ACs)
+INFO | Rajasthan: DUNGARPUR -> 124 Dungarpur (4 ACs)
+INFO | Rajasthan: BANSWARA -> 125 Banswara + carved 131 Pratapgarh (5 ACs)
+INFO | Rajasthan: CHITTORGARH -> 126 Chittaurgarh + carved 131 Pratapgarh (6 ACs)
+INFO | Rajasthan: RAJSAMAND -> 123 Rajsamand (4 ACs)
+INFO | Rajasthan: BHILWARA -> 122 Bhilwara (7 ACs)
+INFO | Rajasthan: BUNDI -> 121 Bundi (3 ACs)
+INFO | Rajasthan: KOTA -> 127 Kota (6 ACs)
+INFO | Rajasthan: BARAN -> 128 Baran (4 ACs)
+INFO | Rajasthan: JHALAWAR -> 129 Jhalawar (4 ACs)
+INFO | Rajasthan: polygon-overlay pieces (share>=5%) the official list would veto | 7: ['1 Sadulshahar -> 100 Hanumangarh share 0.1323', '9 Pilibanga -> 099 Ganganagar share 0.1286', '81 Todabhim -> 108 Sawai Madhopur share 0.1747', '82 Hindaun -> 108 Sawai Madhopur share 0.1617', '86 Mahuwa -> 107 Karauli share 0.1424', '90 Gangapur -> 107 Karauli share 0.4606', '189 Kota North -> 121 Bundi share 0.2318']
+OK   | Sikkim: AC count = 32 seats | got 32
+OK   | Sikkim: AC numbers contiguous 1..32, no duplicates
+OK   | Sikkim: every AC has a district (Sikkim 32 Sangha excepted)
+OK   | Sikkim: app 2009 has 32 seats | got 32
+INFO | Sikkim: exact name agreement vs app 2009 (normalised: upper, no (SC)/(ST)/(BL), letters only) | 29/32 = 90.62%
+INFO | Sikkim: name differs | 7 Soreng-Chakung | app SOREONG-CHAKUNG | sim 0.96 | spelling: Soreng / Soreong
+INFO | Sikkim: name differs | 8 Salghari-Zoom | app SALGHARI-ZOO | sim 0.96 | truncation in app: Salghari-Zoom / SALGHARI-ZOO
+INFO | Sikkim: name differs | 18 West Pendam | app WEST PENDA | sim 0.95 | truncation in app: West Pendam / WEST PENDA
+OK   | Sikkim: every name difference judged a spelling variant
+OK   | Sikkim: row-shift test - no mismatch matches a neighbouring app seat better than its own
+INFO | Sikkim: reservation vs app r-field (Sangha counted as GEN, as the app stores it) | 0 differ 
+OK   | Sikkim: lineage table covers exactly the order headings (4)
+OK   | Sikkim: every lineage code is a real Census-2011 district of SIKKIM
+OK   | Sikkim: every Census-2011 district (4) appears as continuing or carved
+OK   | Sikkim: no Census-2011 code is the continuing code of two order districts
+INFO | Sikkim: WEST -> 242 West District (8 ACs)
+INFO | Sikkim: SOUTH -> 243 South District (8 ACs)
+INFO | Sikkim: EAST -> 244 East District (12 ACs)
+INFO | Sikkim: NORTH -> 241 North District (3 ACs)
+INFO | Sikkim: polygon-overlay pieces (share>=5%) the official list would veto | 4: ['9 Barfung -> 242 West District share 0.1015', '17 Khamdong-Singtam -> 243 South District share 0.1049', '18 West Pendam -> 243 South District share 0.1074', '19 Rhenock -> 327 ? share 0.1142']
+OK   | Tamil Nadu: AC count = 234 seats | got 234
+OK   | Tamil Nadu: AC numbers contiguous 1..234, no duplicates
+OK   | Tamil Nadu: every AC has a district (Sikkim 32 Sangha excepted)
+OK   | Tamil Nadu: app 2011 has 234 seats | got 234
+INFO | Tamil Nadu: exact name agreement vs app 2011 (normalised: upper, no (SC)/(ST)/(BL), letters only) | 204/234 = 87.18%
+INFO | Tamil Nadu: name differs | 1 Gummidipoondi | app GUMMIDIPUNDI | sim 0.88 | Tamil transliteration variant (same seat)
+INFO | Tamil Nadu: name differs | 10 Tiruvottiyur | app THIRUVOTTIYUR | sim 0.96 | Tamil transliteration variant (same seat)
+INFO | Tamil Nadu: name differs | 24 Thiyagarayanagar | app THEAYAGARAYA NAGAR | sim 0.91 | Tamil transliteration variant (same seat)
+INFO | Tamil Nadu: name differs | 35 Madurantakam | app MADURANTHAKAM | sim 0.96 | Tamil transliteration variant (same seat)
+INFO | Tamil Nadu: name differs | 38 Arakkonam | app ARAKONAM | sim 0.94 | Tamil transliteration variant (same seat)
+INFO | Tamil Nadu: name differs | 39 Sholingur | app SHOLINGHUR | sim 0.95 | Tamil transliteration variant (same seat)
+INFO | Tamil Nadu: name differs | 46 Gudiyattam | app GUDIYATHAM | sim 0.90 | Tamil transliteration variant (same seat)
+INFO | Tamil Nadu: name differs | 47 Vaniyambadi | app VANIAYAMBADI | sim 0.96 | Tamil transliteration variant (same seat)
+INFO | Tamil Nadu: name differs | 57 Palacodu | app PALACODE | sim 0.88 | Tamil transliteration variant (same seat)
+INFO | Tamil Nadu: name differs | 74 Viluppuram | app VILLUPURAM | sim 0.90 | Tamil transliteration variant (same seat)
+INFO | Tamil Nadu: name differs | 77 Ulundurpettai | app ULUNDURPET | sim 0.87 | Tamil transliteration variant (same seat)
+INFO | Tamil Nadu: name differs | 78 Rishivandiyam | app RISHIVANDIAM | sim 0.96 | Tamil transliteration variant (same seat)
+INFO | Tamil Nadu: name differs | 86 Edappadi | app EDAPADI | sim 0.93 | Tamil transliteration variant (same seat)
+INFO | Tamil Nadu: name differs | 93 Senthamangalam | app SENDAMANGALAM | sim 0.89 | Tamil transliteration variant (same seat)
+INFO | Tamil Nadu: name differs | 96 Tiruchengodu | app TIRUCHENGODE | sim 0.92 | Tamil transliteration variant (same seat)
+INFO | Tamil Nadu: name differs | 100 Modakkurichi | app MODAKURICHI | sim 0.96 | Tamil transliteration variant (same seat)
+INFO | Tamil Nadu: name differs | 111 Mettuppalayam | app METTUPALAYAM | sim 0.96 | Tamil transliteration variant (same seat)
+INFO | Tamil Nadu: name differs | 125 Udumalaipettai | app UDUMALPET | sim 0.78 | Tamil transliteration variant (same seat)
+INFO | Tamil Nadu: name differs | 130 Nilakkottai | app NILAKOTTAI | sim 0.95 | Tamil transliteration variant (same seat)
+INFO | Tamil Nadu: name differs | 140 Tiruchirappalli (West) | app TIRUCHIRAPALLI (WEST) | sim 0.97 | Tamil transliteration variant (same seat)
+INFO | Tamil Nadu: name differs | 141 Tiruchirappalli (East) | app TIRUCHIRAPALLI (EAST) | sim 0.97 | Tamil transliteration variant (same seat)
+INFO | Tamil Nadu: name differs | 142 Thiruverumbur | app THIRUVERAMBUR | sim 0.92 | Tamil transliteration variant (same seat)
+INFO | Tamil Nadu: name differs | 160 Sirkazhi | app SIRKALI | sim 0.80 | Tamil transliteration variant (same seat)
+INFO | Tamil Nadu: name differs | 166 Thiruthuraipoondi | app THIRUTHURAIPUNDI | sim 0.91 | Tamil transliteration variant (same seat)
+INFO | Tamil Nadu: name differs | 170 Thiruvidaimarudur | app THIRUVIDAMARUDUR | sim 0.97 | Tamil transliteration variant (same seat)
+INFO | Tamil Nadu: name differs | 175 Orathanadu | app ORATHANAD | sim 0.95 | Tamil transliteration variant (same seat)
+INFO | Tamil Nadu: name differs | 183 Aranthangi | app ARANTANGI | sim 0.95 | Tamil transliteration variant (same seat)
+INFO | Tamil Nadu: name differs | 207 Aruppukkottai | app ARUPPUKOTTAI | sim 0.96 | Tamil transliteration variant (same seat)
+INFO | Tamil Nadu: name differs | 212 Mudhukulathur | app MUDUKULATHUR | sim 0.96 | Tamil transliteration variant (same seat)
+INFO | Tamil Nadu: name differs | 226 Palayamkottai | app PALAYAMCOTTAI | sim 0.92 | Tamil transliteration variant (same seat)
+OK   | Tamil Nadu: every name difference judged a spelling variant
+OK   | Tamil Nadu: row-shift test - no mismatch matches a neighbouring app seat better than its own
+INFO | Tamil Nadu: reservation vs app r-field (Sangha counted as GEN, as the app stores it) | 0 differ 
+OK   | Tamil Nadu: lineage table covers exactly the order headings (30)
+OK   | Tamil Nadu: every lineage code is a real Census-2011 district of TAMIL NADU
+OK   | Tamil Nadu: every Census-2011 district (32) appears as continuing or carved
+OK   | Tamil Nadu: no Census-2011 code is the continuing code of two order districts
+INFO | Tamil Nadu: THIRUVALLUR -> 602 Thiruvallur (10 ACs)
+INFO | Tamil Nadu: CHENNAI -> 603 Chennai (16 ACs)
+INFO | Tamil Nadu: KANCHEEPURAM -> 604 Kancheepuram (11 ACs)
+INFO | Tamil Nadu: VELLORE -> 605 Vellore (13 ACs)
+INFO | Tamil Nadu: KRISHNAGIRI -> 631 Krishnagiri (6 ACs)
+INFO | Tamil Nadu: DHARMAPURI -> 630 Dharmapuri (5 ACs)
+INFO | Tamil Nadu: TIRUVANNAMALAI -> 606 Tiruvannamalai (8 ACs)
+INFO | Tamil Nadu: VILUPPURAM -> 607 Viluppuram (11 ACs)
+INFO | Tamil Nadu: SALEM -> 608 Salem (11 ACs)
+INFO | Tamil Nadu: NAMAKKAL -> 609 Namakkal (6 ACs)
+INFO | Tamil Nadu: ERODE -> 610 Erode + carved 633 Tiruppur (10 ACs)
+INFO | Tamil Nadu: THE NILGIRIS -> 611 The Nilgiris (3 ACs)
+INFO | Tamil Nadu: COIMBATORE -> 632 Coimbatore + carved 633 Tiruppur (16 ACs)
+INFO | Tamil Nadu: DINDIGUL -> 612 Dindigul (7 ACs)
+INFO | Tamil Nadu: KARUR -> 613 Karur (4 ACs)
+INFO | Tamil Nadu: TIRUCHIRAPPALLI -> 614 Tiruchirappalli (9 ACs)
+INFO | Tamil Nadu: PERAMBALUR -> 615 Perambalur + carved 616 Ariyalur (4 ACs)
+INFO | Tamil Nadu: CUDDALORE -> 617 Cuddalore (9 ACs)
+INFO | Tamil Nadu: NAGAPATTINAM -> 618 Nagapattinam (6 ACs)
+INFO | Tamil Nadu: THIRUVARUR -> 619 Thiruvarur (4 ACs)
+INFO | Tamil Nadu: THANJAVUR -> 620 Thanjavur (8 ACs)
+INFO | Tamil Nadu: PUDUKKOTTAI -> 621 Pudukkottai (6 ACs)
+INFO | Tamil Nadu: SIVAGANGA -> 622 Sivaganga (4 ACs)
+INFO | Tamil Nadu: MADURAI -> 623 Madurai (10 ACs)
+INFO | Tamil Nadu: THENI -> 624 Theni (4 ACs)
+INFO | Tamil Nadu: VIRUDHUNAGAR -> 625 Virudhunagar (7 ACs)
+INFO | Tamil Nadu: RAMANATHAPURAM -> 626 Ramanathapuram (4 ACs)
+INFO | Tamil Nadu: THOOTHUKKUDI -> 627 Thoothukkudi (6 ACs)
+INFO | Tamil Nadu: TIRUNELVELI -> 628 Tirunelveli (10 ACs)
+INFO | Tamil Nadu: KANNIYAKUMARI -> 629 Kanniyakumari (6 ACs)
+INFO | Tamil Nadu: polygon-overlay pieces (share>=5%) the official list would veto | 11: ['5 Poonamallee -> 604 Kancheepuram share 0.3115', '6 Avadi -> 604 Kancheepuram share 0.5661', '11 Dr.Radhakrishnan Nagar -> 602 Thiruvallur share 0.1151', '12 Perambur -> 602 Thiruvallur share 0.6528', '13 Kolathur -> 602 Thiruvallur share 0.4695', '14 Villivakkam -> 602 Thiruvallur share 0.5656', '21 Anna Nagar -> 602 Thiruvallur share 0.1964', '22 Virugampakkam -> 602 Thiruvallur share 1.0', '24 Thiyagarayanagar -> 602 Thiruvallur share 0.1607', '26 Velachery -> 604 Kancheepuram share 0.6643', '211 Ramanathapuram -> 625 Virudhunagar share 0.1625']
+OK   | Tripura: AC count = 60 seats | got 60
+OK   | Tripura: AC numbers contiguous 1..60, no duplicates
+OK   | Tripura: every AC has a district (Sikkim 32 Sangha excepted)
+OK   | Tripura: app 2013 has 60 seats | got 60
+INFO | Tripura: exact name agreement vs app 2013 (normalised: upper, no (SC)/(ST)/(BL), letters only) | 60/60 = 100.00%
+OK   | Tripura: every name difference judged a spelling variant
+OK   | Tripura: row-shift test - no mismatch matches a neighbouring app seat better than its own
+INFO | Tripura: reservation vs app r-field (Sangha counted as GEN, as the app stores it) | 0 differ 
+OK   | Tripura: lineage table covers exactly the order headings (4)
+OK   | Tripura: every lineage code is a real Census-2011 district of TRIPURA
+OK   | Tripura: every Census-2011 district (4) appears as continuing or carved
+OK   | Tripura: no Census-2011 code is the continuing code of two order districts
+INFO | Tripura: WEST TRIPURA -> 289 West Tripura (29 ACs)
+INFO | Tripura: SOUTH TRIPURA -> 290 South Tripura (14 ACs)
+INFO | Tripura: DHALAI -> 291 Dhalai (6 ACs)
+INFO | Tripura: NORTH TRIPURA -> 292 North Tripura (11 ACs)
+INFO | Tripura: polygon-overlay pieces (share>=5%) the official list would veto | 0: []

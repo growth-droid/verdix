@@ -1,0 +1,260 @@
+{
+ "fetched_by": "plain public HTTPS GET (curl); no login, no cookies, no API keys",
+ "files": [
+  {
+   "file": "raw_g6/SOURCES_g6.meta.json",
+   "bytes": 5589,
+   "sha256": "8981bda51edf3bb563c14d58fefbe9f52e8711de3699d0fcf1fb570bff21d61e"
+  },
+  {
+   "file": "raw_g6/assam_ceo_ae2021_final_ps_electors_phasewise.pdf",
+   "bytes": 125051,
+   "sha256": "03e840556e0721cf05984eec18178be53a0493b3960c04b97ac7e5399299d942",
+   "url": "https://ceoassam.nic.in/assembly/pdf/2021/Final_PS_Electors_Phase_wise.pdf",
+   "kind": "official",
+   "fetched": "2026-10-01",
+   "description": "CEO Assam, General Election to Assam Legislative Assembly 2021: 'Total Polling Station and General Electors - PHASE wise' (5 pages; columns S.No, Name of Revenue District, Name of the Election District, AC No & Name, Total PS, General Electors). Linked as 'Total numbers of Polling Station and Elector details in Phase wise' from https://ceoassam.nic.in/assembly/2021/assembly-election-2021.html. PRIMARY source of district_2008 for the 126 pre-2023 (1976-order) ACs."
+  },
+  {
+   "file": "raw_g6/assam_ceo_ae2021_page.html",
+   "bytes": 13659,
+   "sha256": "76e01625dc33aa8a7cf5932d6a67e6e73eb8cff9c110ba6ab05f7762dff8a44f",
+   "url": "https://ceoassam.nic.in/assembly/2021/assembly-election-2021.html",
+   "kind": "official",
+   "fetched": "2026-10-01",
+   "description": "CEO Assam AE-2021 page (provenance of the PDF above; links are in its inline JS 'sections' array)."
+  },
+  {
+   "file": "raw_g6/dpaco_1976_archiveorg_djvu.txt",
+   "bytes": 1079323,
+   "sha256": "cda5f99609bd9ce6bbb94f64b9127c3cd49bc698a2da3a11b653850802f2ae4d",
+   "url": "https://archive.org/download/1976-dpaco/1976%20DPACO%20%28Schedule%20XVII%29_djvu.txt",
+   "pdf_url": "https://archive.org/download/1976-dpaco/1976%20DPACO%20%28Schedule%20XVII%29.pdf",
+   "kind": "official (archived copy)",
+   "fetched": "2026-10-01",
+   "description": "OCR text (Internet Archive, tesseract) of 'The Delimitation of Parliamentary and Assembly Constituencies Order, 1976' as printed by the Election Commission of India (uploaded 2024-05-11; item description says it was retrieved from the ECI's 'Archive Delimitation Orders' page). The governing order for these four states: Assam = Schedule IV, Bihar (incl. the 81 Jharkhand ACs, Bihar Nos. 147-164 and 262-324) = Schedule V, Manipur = Schedule XIV, Nagaland = Schedule XVI. Source of ac_name, the 1976 district headings and every AC's extent (used to document cross-district territory)."
+  },
+  {
+   "file": "raw_g6/dpaco_1976_archiveorg_metadata.json",
+   "bytes": 7679,
+   "sha256": "ab46cb9366ecfc12e6f68c71283b91e11767e7b65b0d59e6c5681c9254b3b09c",
+   "url": "https://archive.org/metadata/1976-dpaco",
+   "kind": "metadata",
+   "fetched": "2026-10-01",
+   "description": "Internet Archive metadata of the item above (creator, provenance, file list with checksums)."
+  },
+  {
+   "file": "raw_g6/jharkhand_ceo_acpclist.html",
+   "bytes": 144534,
+   "sha256": "94424b1851886aedd7230e047c3ac6a64c545037ea18fbf332f92b72a3c065a2",
+   "url": "https://ceo.jharkhand.gov.in/ACPCList.html",
+   "kind": "official",
+   "fetched": "2026-10-01",
+   "description": "CEO Jharkhand 'AC & PC LIST - JHARKHAND' (Details of AC): division / No. & Name of District / No. & Name of ACs / parts, plus a PC-wise half. PRIMARY source of district_2008 for Jharkhand's 81 ACs (24 districts = the 24 Census-2011 districts)."
+  },
+  {
+   "file": "raw_g6/manipur_ceo_officers_contact.html",
+   "bytes": 134106,
+   "sha256": "a26466d6281b0799c7519ef4cd1e0c65ae1d891e98a54f9bf894c49570f0c54a",
+   "url": "https://ceomanipur.nic.in/officers_contact.aspx",
+   "kind": "official",
+   "fetched": "2026-10-01",
+   "description": "CEO Manipur 'Who's Who of Election Officials': table of Electoral Registration Officers with columns District | AC Name ('N - Name') | ERO | Designation | Email. PRIMARY source of district_2008 for Manipur's 60 ACs (unchanged since the 1976 order)."
+  },
+  {
+   "file": "raw_g6/nagaland_ceo_polling_stations_page.html",
+   "bytes": 49530,
+   "sha256": "e4667270e3afbfde015e8c0629298eb8a0dd6d15cf06080fdd268707ad4d9767",
+   "url": "https://ceo.nagaland.gov.in/polling-stations",
+   "kind": "official",
+   "fetched": "2026-10-01",
+   "description": "CEO Nagaland 'Assembly Constituencies and Polling Stations' page listing one PDF per election district (16 files)."
+  },
+  {
+   "file": "raw_g6/wikipedia_crosscheck_assam.csv",
+   "bytes": 1871,
+   "sha256": "04ee253a97e8b0913cbe53974e2896f5320528634849636ced0f7f2511667987",
+   "url": "https://en.wikipedia.org/w/index.php?title=List_of_constituencies_of_the_Assam_Legislative_Assembly&oldid=1157435585",
+   "kind": "cross-check (CC BY-SA 4.0; 3 fact columns only, no text reproduced)",
+   "fetched": "2026-10-01",
+   "description": "Wikipedia revision 1157435585 (2023-05-28 (last revision before the 2023 delimitation, i.e. the 126 old ACs)): AC number, reservation, district - used ONLY to cross-check, never as a value source."
+  },
+  {
+   "file": "raw_g6/wikipedia_crosscheck_jharkhand.csv",
+   "bytes": 1231,
+   "sha256": "8e6c05443c0e838b0ff8dba0233859c9055a8161da043ef32d0ef7269e23c362",
+   "url": "https://en.wikipedia.org/w/index.php?title=List_of_constituencies_of_the_Jharkhand_Legislative_Assembly&oldid=1365778452",
+   "kind": "cross-check (CC BY-SA 4.0; 3 fact columns only, no text reproduced)",
+   "fetched": "2026-10-01",
+   "description": "Wikipedia revision 1365778452 (2026-07-24): AC number, reservation, district - used ONLY to cross-check, never as a value source."
+  },
+  {
+   "file": "raw_g6/wikipedia_crosscheck_manipur.csv",
+   "bytes": 995,
+   "sha256": "901291281383071db4e8ab89c54d115a81c5678199d1570679b854d9a1466148",
+   "url": "https://en.wikipedia.org/w/index.php?title=List_of_constituencies_of_the_Manipur_Legislative_Assembly&oldid=1369628552",
+   "kind": "cross-check (CC BY-SA 4.0; 3 fact columns only, no text reproduced)",
+   "fetched": "2026-10-01",
+   "description": "Wikipedia revision 1369628552 (2026-08-16): AC number, reservation, district - used ONLY to cross-check, never as a value source."
+  },
+  {
+   "file": "raw_g6/wikipedia_crosscheck_nagaland.csv",
+   "bytes": 930,
+   "sha256": "3e4ea5ea561ce74a6bf1fd40a263beebaf58d191c0f0726c3f605da5688e3c9f",
+   "url": "https://en.wikipedia.org/w/index.php?title=List_of_constituencies_of_the_Nagaland_Legislative_Assembly&oldid=1374474149",
+   "kind": "cross-check (CC BY-SA 4.0; 3 fact columns only, no text reproduced)",
+   "fetched": "2026-10-01",
+   "description": "Wikipedia revision 1374474149 (2026-09-12): AC number, reservation, district - used ONLY to cross-check, never as a value source."
+  },
+  {
+   "file": "raw_g6/nagaland_ceo_ps/1. Dimapur.pdf",
+   "bytes": 237519,
+   "sha256": "7666d8b532530da6ae332d42b9162dd4ba4a8cef8e19ce7e138b5a10d60b8790",
+   "kind": "official",
+   "fetched": "2026-10-01",
+   "description": "CEO Nagaland polling-station list of one election district; each AC block is headed 'List of Polling Stations for N - NAME Assembly Constituency comprised within the NAGALAND Parliamentary Constituency'. PRIMARY source of district_2008 for Nagaland's 60 ACs. NB '7. Zunheboto.pdf' carries 9 appended pages (11-19) repeating ACs 49-58 of other districts; those repeats are ignored.",
+   "url": "https://ceo.nagaland.gov.in/media/polling_stations/1.%20Dimapur.pdf"
+  },
+  {
+   "file": "raw_g6/nagaland_ceo_ps/10. Longleng.pdf",
+   "bytes": 16860,
+   "sha256": "f91ce42c8cc3b6ef3e9cd613f811bd40f9ff26823c4238f3c7aa14ee94a3b9ac",
+   "kind": "official",
+   "fetched": "2026-10-01",
+   "description": "CEO Nagaland polling-station list of one election district; each AC block is headed 'List of Polling Stations for N - NAME Assembly Constituency comprised within the NAGALAND Parliamentary Constituency'. PRIMARY source of district_2008 for Nagaland's 60 ACs. NB '7. Zunheboto.pdf' carries 9 appended pages (11-19) repeating ACs 49-58 of other districts; those repeats are ignored.",
+   "url": "https://ceo.nagaland.gov.in/media/polling_stations/10.%20Longleng.pdf"
+  },
+  {
+   "file": "raw_g6/nagaland_ceo_ps/11. Tuensang.pdf",
+   "bytes": 76713,
+   "sha256": "4c8a7d50140272f5a5ec2eddc2f75df1125e0516928863e3cf86d0a52023e2b0",
+   "kind": "official",
+   "fetched": "2026-10-01",
+   "description": "CEO Nagaland polling-station list of one election district; each AC block is headed 'List of Polling Stations for N - NAME Assembly Constituency comprised within the NAGALAND Parliamentary Constituency'. PRIMARY source of district_2008 for Nagaland's 60 ACs. NB '7. Zunheboto.pdf' carries 9 appended pages (11-19) repeating ACs 49-58 of other districts; those repeats are ignored.",
+   "url": "https://ceo.nagaland.gov.in/media/polling_stations/11.%20Tuensang.pdf"
+  },
+  {
+   "file": "raw_g6/nagaland_ceo_ps/12. Kiphire.pdf",
+   "bytes": 76808,
+   "sha256": "91bed73c6e634dbf7f8f91022f0b759ac7ad718716c7b659194c2752cf9ccfbf",
+   "kind": "official",
+   "fetched": "2026-10-01",
+   "description": "CEO Nagaland polling-station list of one election district; each AC block is headed 'List of Polling Stations for N - NAME Assembly Constituency comprised within the NAGALAND Parliamentary Constituency'. PRIMARY source of district_2008 for Nagaland's 60 ACs. NB '7. Zunheboto.pdf' carries 9 appended pages (11-19) repeating ACs 49-58 of other districts; those repeats are ignored.",
+   "url": "https://ceo.nagaland.gov.in/media/polling_stations/12.%20Kiphire.pdf"
+  },
+  {
+   "file": "raw_g6/nagaland_ceo_ps/13. Noklak.pdf",
+   "bytes": 67122,
+   "sha256": "ccf77f2cd937d33a1077de61a73e8063bc6e726b3c6a09c1de978b53420fc169",
+   "kind": "official",
+   "fetched": "2026-10-01",
+   "description": "CEO Nagaland polling-station list of one election district; each AC block is headed 'List of Polling Stations for N - NAME Assembly Constituency comprised within the NAGALAND Parliamentary Constituency'. PRIMARY source of district_2008 for Nagaland's 60 ACs. NB '7. Zunheboto.pdf' carries 9 appended pages (11-19) repeating ACs 49-58 of other districts; those repeats are ignored.",
+   "url": "https://ceo.nagaland.gov.in/media/polling_stations/13.%20Noklak.pdf"
+  },
+  {
+   "file": "raw_g6/nagaland_ceo_ps/14. Tseminyu.pdf",
+   "bytes": 9903,
+   "sha256": "9abe162c7b2116d5bf279a83c388267f1c5d75d27e443037c57d86e2a703b518",
+   "kind": "official",
+   "fetched": "2026-10-01",
+   "description": "CEO Nagaland polling-station list of one election district; each AC block is headed 'List of Polling Stations for N - NAME Assembly Constituency comprised within the NAGALAND Parliamentary Constituency'. PRIMARY source of district_2008 for Nagaland's 60 ACs. NB '7. Zunheboto.pdf' carries 9 appended pages (11-19) repeating ACs 49-58 of other districts; those repeats are ignored.",
+   "url": "https://ceo.nagaland.gov.in/media/polling_stations/14.%20Tseminyu.pdf"
+  },
+  {
+   "file": "raw_g6/nagaland_ceo_ps/15. Chumoukedima.pdf",
+   "bytes": 89320,
+   "sha256": "43d834f7a906ab0dae12bcffd9a5f1bbf706db8fcd3d04346a3ccae40fa3e7e4",
+   "kind": "official",
+   "fetched": "2026-10-01",
+   "description": "CEO Nagaland polling-station list of one election district; each AC block is headed 'List of Polling Stations for N - NAME Assembly Constituency comprised within the NAGALAND Parliamentary Constituency'. PRIMARY source of district_2008 for Nagaland's 60 ACs. NB '7. Zunheboto.pdf' carries 9 appended pages (11-19) repeating ACs 49-58 of other districts; those repeats are ignored.",
+   "url": "https://ceo.nagaland.gov.in/media/polling_stations/15.%20Chumoukedima.pdf"
+  },
+  {
+   "file": "raw_g6/nagaland_ceo_ps/16. Shamator.pdf",
+   "bytes": 8215,
+   "sha256": "3227c3fb95d64d3ab95cf181a263779e6609bc69aa41c2b9bbf8e3837554c807",
+   "kind": "official",
+   "fetched": "2026-10-01",
+   "description": "CEO Nagaland polling-station list of one election district; each AC block is headed 'List of Polling Stations for N - NAME Assembly Constituency comprised within the NAGALAND Parliamentary Constituency'. PRIMARY source of district_2008 for Nagaland's 60 ACs. NB '7. Zunheboto.pdf' carries 9 appended pages (11-19) repeating ACs 49-58 of other districts; those repeats are ignored.",
+   "url": "https://ceo.nagaland.gov.in/media/polling_stations/16.%20Shamator.pdf"
+  },
+  {
+   "file": "raw_g6/nagaland_ceo_ps/2. Peren.pdf",
+   "bytes": 173181,
+   "sha256": "878ba324cb0a333b55cfb0cfe772622ee5497732205513e95c1729091ed6f5d7",
+   "kind": "official",
+   "fetched": "2026-10-01",
+   "description": "CEO Nagaland polling-station list of one election district; each AC block is headed 'List of Polling Stations for N - NAME Assembly Constituency comprised within the NAGALAND Parliamentary Constituency'. PRIMARY source of district_2008 for Nagaland's 60 ACs. NB '7. Zunheboto.pdf' carries 9 appended pages (11-19) repeating ACs 49-58 of other districts; those repeats are ignored.",
+   "url": "https://ceo.nagaland.gov.in/media/polling_stations/2.%20Peren.pdf"
+  },
+  {
+   "file": "raw_g6/nagaland_ceo_ps/3. Kohima.pdf",
+   "bytes": 274765,
+   "sha256": "4670bb93868bafffb23b968ad6a080d59e5973e8fe85843b0d0effeaa16618bb",
+   "kind": "official",
+   "fetched": "2026-10-01",
+   "description": "CEO Nagaland polling-station list of one election district; each AC block is headed 'List of Polling Stations for N - NAME Assembly Constituency comprised within the NAGALAND Parliamentary Constituency'. PRIMARY source of district_2008 for Nagaland's 60 ACs. NB '7. Zunheboto.pdf' carries 9 appended pages (11-19) repeating ACs 49-58 of other districts; those repeats are ignored.",
+   "url": "https://ceo.nagaland.gov.in/media/polling_stations/3.%20Kohima.pdf"
+  },
+  {
+   "file": "raw_g6/nagaland_ceo_ps/4. Pughoboto.pdf",
+   "bytes": 25974,
+   "sha256": "1c1b2cdf22a3267acef3d8561d1d1f93b44934a598320913b2b75c3ed7471dc0",
+   "kind": "official",
+   "fetched": "2026-10-01",
+   "description": "CEO Nagaland polling-station list of one election district; each AC block is headed 'List of Polling Stations for N - NAME Assembly Constituency comprised within the NAGALAND Parliamentary Constituency'. PRIMARY source of district_2008 for Nagaland's 60 ACs. NB '7. Zunheboto.pdf' carries 9 appended pages (11-19) repeating ACs 49-58 of other districts; those repeats are ignored.",
+   "url": "https://ceo.nagaland.gov.in/media/polling_stations/4.%20Pughoboto.pdf"
+  },
+  {
+   "file": "raw_g6/nagaland_ceo_ps/5. Phek.pdf",
+   "bytes": 123386,
+   "sha256": "72ad3f4788327cc4ac543f08b6cb7a98ff9d256b4d266457ad0645932d9d0e07",
+   "kind": "official",
+   "fetched": "2026-10-01",
+   "description": "CEO Nagaland polling-station list of one election district; each AC block is headed 'List of Polling Stations for N - NAME Assembly Constituency comprised within the NAGALAND Parliamentary Constituency'. PRIMARY source of district_2008 for Nagaland's 60 ACs. NB '7. Zunheboto.pdf' carries 9 appended pages (11-19) repeating ACs 49-58 of other districts; those repeats are ignored.",
+   "url": "https://ceo.nagaland.gov.in/media/polling_stations/5.%20Phek.pdf"
+  },
+  {
+   "file": "raw_g6/nagaland_ceo_ps/6. Mokokchung.pdf",
+   "bytes": 217817,
+   "sha256": "e543653054bab34ee0eaaddebc0943257efa4b096aea22c15661f8b42674dbae",
+   "kind": "official",
+   "fetched": "2026-10-01",
+   "description": "CEO Nagaland polling-station list of one election district; each AC block is headed 'List of Polling Stations for N - NAME Assembly Constituency comprised within the NAGALAND Parliamentary Constituency'. PRIMARY source of district_2008 for Nagaland's 60 ACs. NB '7. Zunheboto.pdf' carries 9 appended pages (11-19) repeating ACs 49-58 of other districts; those repeats are ignored.",
+   "url": "https://ceo.nagaland.gov.in/media/polling_stations/6.%20Mokokchung.pdf"
+  },
+  {
+   "file": "raw_g6/nagaland_ceo_ps/7. Zunheboto.pdf",
+   "bytes": 252368,
+   "sha256": "c132eab65e899942aed29e1cb0ca031d70632d6951511294aaaafbbe1ebcd7b8",
+   "kind": "official",
+   "fetched": "2026-10-01",
+   "description": "CEO Nagaland polling-station list of one election district; each AC block is headed 'List of Polling Stations for N - NAME Assembly Constituency comprised within the NAGALAND Parliamentary Constituency'. PRIMARY source of district_2008 for Nagaland's 60 ACs. NB '7. Zunheboto.pdf' carries 9 appended pages (11-19) repeating ACs 49-58 of other districts; those repeats are ignored.",
+   "url": "https://ceo.nagaland.gov.in/media/polling_stations/7.%20Zunheboto.pdf"
+  },
+  {
+   "file": "raw_g6/nagaland_ceo_ps/8. Wokha.pdf",
+   "bytes": 121098,
+   "sha256": "6b612192bd61177558dd8072524e7bd7212d5783e7fa5431c8088be341b4b15d",
+   "kind": "official",
+   "fetched": "2026-10-01",
+   "description": "CEO Nagaland polling-station list of one election district; each AC block is headed 'List of Polling Stations for N - NAME Assembly Constituency comprised within the NAGALAND Parliamentary Constituency'. PRIMARY source of district_2008 for Nagaland's 60 ACs. NB '7. Zunheboto.pdf' carries 9 appended pages (11-19) repeating ACs 49-58 of other districts; those repeats are ignored.",
+   "url": "https://ceo.nagaland.gov.in/media/polling_stations/8.%20Wokha.pdf"
+  },
+  {
+   "file": "raw_g6/nagaland_ceo_ps/9. Mon.pdf",
+   "bytes": 96908,
+   "sha256": "d796759f170a3e6ccc0f82a428a927043a48f301c85a96c47ba979bb967eb2e1",
+   "kind": "official",
+   "fetched": "2026-10-01",
+   "description": "CEO Nagaland polling-station list of one election district; each AC block is headed 'List of Polling Stations for N - NAME Assembly Constituency comprised within the NAGALAND Parliamentary Constituency'. PRIMARY source of district_2008 for Nagaland's 60 ACs. NB '7. Zunheboto.pdf' carries 9 appended pages (11-19) repeating ACs 49-58 of other districts; those repeats are ignored.",
+   "url": "https://ceo.nagaland.gov.in/media/polling_stations/9.%20Mon.pdf"
+  },
+  {
+   "file": "../ac_district_lists/raw/eci_delimitation_order_2008_english.pdf",
+   "bytes": 1340728,
+   "sha256": "9e1ac49aa952febc8e4f57ed23abd28218a21887f355f8dad1502ab5c0d65e69",
+   "note": "shared raw (fetched by ac_district_lists); reading aid only"
+  }
+ ]
+}

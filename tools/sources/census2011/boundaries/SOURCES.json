@@ -1,0 +1,70 @@
+{
+  "retrieved": "2026-09-29",
+  "method": "Plain anonymous HTTP GET (curl). No logins, cookies, tokens or API keys.",
+  "shrug": "NOT used. No SHRUG (devdatalab) file or SHRUG-derived file was downloaded. The ramSeraph census-2011 release also hosts shrug-* assets; those were deliberately NOT fetched. SubDistricts_2011.parquet is a different asset from that release, sourced from NIC BharatMaps (its attribute schema - OBJECTID, Subdt_LGD, Dist_LGD, Tot_pop, Pop_den, Shape_Length - is the ArcGIS/BharatMaps schema, not SHRUG's pc11_* ids).",
+  "files": [
+    {
+      "path": "datameet_2011_dist/2011_Dist.shp|.shx|.dbf|.prj|.sbn|.sbx",
+      "source_url": "https://raw.githubusercontent.com/datameet/maps/master/Districts/Census_2011/2011_Dist.<ext>",
+      "repo_page": "https://github.com/datameet/maps/tree/master/Districts/Census_2011",
+      "pinned_commit_for_folder": "5ea90379e67dece749b01448ca438161a3534b79 (2014-05-22, last change to Districts/Census_2011); repo master b3fbbde595310b397a55d718e0958ce249a4fa1f",
+      "sha256": {
+        "2011_Dist.shp": "3636e627a519f67b4615b6a97df48c2b279e8c7b2566d3bfbc3eda1d06e33206",
+        "2011_Dist.shx": "12b6028dfac9e3f20686b3d0a44f9d3989acfdb3f3cda853881d1cf2d8579eab",
+        "2011_Dist.dbf": "2c7b03578fdf41a4c4e29941a564fa90bf0b0e4f865f5e54481ef7ac8494eb7d",
+        "2011_Dist.prj": "a02a27b1d1982c8516d83398e85a3c8b1aef1713c13ef4d84d7bde17430c07c4",
+        "2011_Dist.sbn": "5f9fc6f63f7f3afbb00213e9ec5d9e0f5614acb5ec4b09fb7d8e226ac9a131be",
+        "2011_Dist.sbx": "4cfa7e863894118bf929e9eb4b4d97652481ce0f58359f2bb27848a1ae76abcd"
+      },
+      "licence": "Creative Commons Attribution 2.5 India (CC BY 2.5 IN) - stated in Districts/README.md (saved here as README.datameet-Districts.md) and on http://projects.datameet.org/maps/districts/. Repo root README: datasets CC BY 4.0 'unless explicitly stated' (the Districts README is the explicit statement); repo LICENSE file = MIT (code). Commercial use allowed with attribution.",
+      "attribution": "District boundaries: DataMeet India community, Community Created Maps of India (https://github.com/datameet/maps), CC BY 2.5 IN.",
+      "upstream_per_datameet": "Taluk boundaries from GeoCommons + Bhuvan geoserver; India outline from datameet PC-2014 shapefile; names/extent from the Census of India 2011 Administrative Atlas."
+    },
+    {
+      "path": "datameet_2011_dist/LICENSE.datameet-maps.txt, README.datameet-maps.md, README.datameet-Districts.md",
+      "source_url": "https://raw.githubusercontent.com/datameet/maps/master/LICENSE ; .../master/README.md ; .../master/Districts/README.md",
+      "note": "Licence evidence, saved verbatim."
+    },
+    {
+      "path": "subdistricts/SubDistricts_2011.parquet",
+      "source_url": "https://github.com/ramSeraph/indian_admin_boundaries/releases/download/census-2011/SubDistricts_2011.parquet",
+      "release_page": "https://github.com/ramSeraph/indian_admin_boundaries/releases/tag/census-2011 (asset updated 2026-03-08T22:40:05Z)",
+      "sha256": "585d917222d857b99c832d707b6305abf05d8d7cb2df02c627e18565f45fb069",
+      "mirror_of": "https://mapservice.gov.in/gismapservice/rest/services/BharatMapService/Population_Density/MapServer/1 (NIC BharatMaps). That official endpoint answers {\"error\":{\"code\":499,\"message\":\"Token Required\"}} to an anonymous request, so it was NOT queried further (no tokens used).",
+      "licence": "Mirror author: CC0 1.0 with a request to attribute DataMeet and the original government source (DATA_LICENSE.ramSeraph-indianopenmaps.md, saved verbatim). The UPSTREAM government layer carries no stated open licence (token-gated service; the mirror itself files its tiles under 'not-so-open'). Treat as GREY for commercial redistribution until the owner accepts the NDSAP/Geospatial-Guidelines-2021 reasoning; fine for internal derivation (e.g. area weights).",
+      "validated": "5,966 parts / 5,912 distinct non-blank codes (+6 blank-code parts: PoK/Aksai Chin/Kachchh remnants, pop 0). After dissolve by code: 5,907 of 5,922 official 2011 sub-district codes (5,943 of 5,958 sub-district x district rows) have a polygon; 15 codes (pop 3,413,682) have none; 5 of the matches are inferred re-codings of miscoded parts (flagged). 26 of the 30 official 'Area not under any Sub-district' (99999) remainders (pop 26,798,454: West Bengal municipalities, Tripura, Bangalore BBMP...) have no polygon of their own - their land is inside neighbouring sub-district polygons (sub-districts cover 99.6% of district area). See subdistricts_2011_match.csv. stcode11/dtcode11 in this file are CURRENT (2019+) state/district codes (38=Ladakh, 36=Telangana, 7xx=new districts), NOT 2011 - only sdtcode11 is a 2011 key."
+    },
+    {
+      "path": "subdistricts/DATA_LICENSE.ramSeraph-indianopenmaps.md, subdistricts/RELEASE_NOTES.ramSeraph-census-2011.md",
+      "source_url": "https://raw.githubusercontent.com/ramSeraph/indianopenmaps/main/DATA_LICENSE.md ; https://api.github.com/repos/ramSeraph/indian_admin_boundaries/releases/tags/census-2011 (body)",
+      "note": "Licence + provenance evidence, saved verbatim."
+    },
+    {
+      "path": "subdistricts/2011-IndiaStateDistSbDist-0000.xlsx",
+      "source_url": "https://censusindia.gov.in/nada/index.php/catalog/42558/download/46184/2011-IndiaStateDistSbDist-0000.xlsx",
+      "catalog_page": "https://censusindia.gov.in/nada/index.php/catalog/42558 ('Basic Population Figures of India/State/District/Sub-District/Village - 2011', ORGI, PCA)",
+      "sha256": "7dabc0b33e6459e8bbbe6475970c7bc86a3a0fa157d483719c367e879e7480dd",
+      "licence": "Census of India / ORGI (Government of India). The NADA catalog page footer reads '(c) ORGI Digital Library, All Rights Reserved'; no NDSAP/GODL statement on that page. Citation requested: 'Office of the Registrar General & Census Commissioner, India. Primary Census Abstract. Table Basic Population Figures of India/State/District/Sub-District/Village - 2011'.",
+      "validated": "India row TOT_P 1,210,854,977 = reference; P_SC 201,378,372 = reference. NOTE this file's India P_ST = 104,545,716 and P_LIT = 763,638,812, which differ from the task reference (104,281,034 / 763,498,517). 640 district rows; 5,988 sub-district Total rows = 5,958 real sub-district x district rows (5,922 distinct codes; 34 codes span 2 districts) + 30 'Area not under any Sub-district' (code 99999) district remainders."
+    },
+    {
+      "path": "districts_2011.geojson",
+      "derived_from": "datameet_2011_dist/2011_Dist.* via build_boundaries.py",
+      "sha256_at_build": "3733219e8979c9c559c0e42171e5c0f998defe79dec2ff69c075e840b57c054a",
+      "licence": "CC BY 2.5 IN (inherits datameet); attribution as above."
+    },
+    {
+      "path": "subdistricts/subdistricts_2011.geojson",
+      "derived_from": "subdistricts/SubDistricts_2011.parquet + subdistricts/2011-IndiaStateDistSbDist-0000.xlsx via build_boundaries.py",
+      "licence": "Inherits the GREY status of SubDistricts_2011.parquet (see above)."
+    }
+  ],
+  "checked_and_not_used": [
+    {"what": "datameet/maps", "url": "https://github.com/datameet/maps", "finding": "No sub-district layer anywhere in the repo tree (Country, States, Districts/Census_2001|2011, assembly-constituencies, parliamentary-constituencies, divisions, Survey-of-India index maps)."},
+    {"what": "datameet/taluk_boundaries INDIA_ADMIN_3_2739", "url": "https://github.com/datameet/taluk_boundaries", "finding": "2,739 taluks, fields OID_/TALUK/STATE/DISTRICT only - no census codes, pre-2011 names (Uttaranchal, Gilghit), no licence file."},
+    {"what": "datameet/India_Official_Boundaries_2019 India_Subdistrict_NN", "url": "https://github.com/datameet/India_Official_Boundaries_2019", "finding": "Has stcode11/dtcode11/sdtcode11 + LGD codes, 'Source: National Informatics Centre', 2019 vintage; NO licence stated (GitHub reports none). Same NIC lineage as the parquet (the same 20 sub-district codes are missing from both). Used only for QA in scratch; not saved here."},
+    {"what": "geoBoundaries gbOpen IND ADM3", "url": "https://www.geoboundaries.org/api/current/gbOpen/IND/ADM3/", "finding": "ODbL 1.0, 6,824 features, boundaryYear 2018, source 'Pathways Data Pvt. Ltd., lgdirectory.gov.in'; attributes are shapeName/shapeID only - no census codes, so not joinable to PCA except by fuzzy name. Upstream geonode.pathwaysdata.com no longer resolves (NXDOMAIN)."},
+    {"what": "NIC BharatMaps official REST services", "url": "https://mapservice.gov.in/gismapservice/rest/services/BharatMapService/Population_Density/MapServer/1", "finding": "HTTP 200 but JSON error 499 'Token Required' for anonymous requests - not usable under the no-token rule."},
+    {"what": "ramSeraph Districts_2011.parquet (same release, BharatMaps MapServer/0)", "url": "https://github.com/ramSeraph/indian_admin_boundaries/releases/download/census-2011/Districts_2011.parquet", "finding": "Downloaded to scratch for QA only (IoU comparison, PCA cross-check: TOT_P equals the official PCA for 639/640 districts; Senapati differs 193,744 vs 479,148). Not saved here - GREY licence; re-download from the URL if a better J&K / Manipur geometry is wanted."}
+  ]
+}

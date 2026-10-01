@@ -1,0 +1,643 @@
+censuscode,district_code,district,state_code,st_cen_cd,dt_cen_cd,state,census_2011,pca_name,pca_state,area_km2_approx,pca_tot_p,name_similarity_vs_pca,iou_vs_bharatmaps,share_inside_same_code_bharatmaps,share_of_bharatmaps_covered,largest_overlap_bharatmaps_code,geometry_flag,valid_in_source
+532,532,Adilabad,28,28,1,Andhra Pradesh,True,Adilabad,ANDHRA PRADESH,16126.0,2741239,1.0,0.9701,0.9867,0.9829,532,ok,True
+146,146,Agra,09,9,15,Uttar Pradesh,True,Agra,UTTAR PRADESH,4042.0,4418797,1.0,0.9603,0.9822,0.9773,146,ok,True
+474,474,Ahmadabad,24,24,7,Gujarat,True,Ahmadabad,GUJARAT,8055.8,7214225,1.0,0.9562,0.9824,0.9729,474,ok,True
+522,522,Ahmadnagar,27,27,26,Maharashtra,True,Ahmadnagar,MAHARASHTRA,17144.6,4543159,1.0,0.9837,0.9931,0.9904,522,ok,True
+283,283,Aizawl,15,15,3,Mizoram,True,Aizawl,MIZORAM,3748.8,400309,1.0,0.9171,0.9294,0.9858,283,ok,True
+119,119,Ajmer,08,8,21,Rajasthan,True,Ajmer,RAJASTHAN,8557.3,2583052,1.0,0.9788,0.9875,0.991,119,ok,True
+501,501,Akola,27,27,5,Maharashtra,True,Akola,MAHARASHTRA,5434.2,1813906,1.0,0.971,0.9873,0.9833,501,ok,True
+598,598,Alappuzha,32,32,11,Kerala,True,Alappuzha,KERALA,1430.0,2127789,1.0,0.9597,0.9774,0.9814,598,ok,True
+143,143,Aligarh,09,9,12,Uttar Pradesh,True,Aligarh,UTTAR PRADESH,3757.9,3673889,1.0,0.9219,0.9552,0.9635,143,ok,True
+465,465,Alirajpur,23,23,48,Madhya Pradesh,True,Alirajpur,MADHYA PRADESH,3356.9,728999,1.0,0.9821,0.9902,0.9917,465,ok,True
+175,175,Allahabad,09,9,44,Uttar Pradesh,True,Allahabad ,UTTAR PRADESH,5239.4,5954391,1.0,0.9404,0.9931,0.9465,175,ok,True
+64,064,Almora,05,5,9,Uttarakhand,True,"Almora
+",UTTARAKHAND,3114.9,622506,1.0,0.963,0.9877,0.9747,64,ok,True
+104,104,Alwar,08,8,6,Rajasthan,True,Alwar,RAJASTHAN,8339.4,3674179,1.0,0.9612,0.9856,0.9749,104,ok,True
+70,070,Ambala,06,6,2,Haryana,True,Ambala,HARYANA,1517.5,1128350,1.0,0.9155,0.9537,0.9582,70,ok,True
+178,178,Ambedkar Nagar,09,9,47,Uttar Pradesh,True,Ambedkar Nagar,UTTAR PRADESH,2324.8,2397888,1.0,0.9514,0.9778,0.9724,178,ok,True
+503,503,Amravati,27,27,7,Maharashtra,True,Amravati,MAHARASHTRA,12268.6,2888445,1.0,0.9897,0.995,0.9946,503,ok,True
+480,480,Amreli,24,24,13,Gujarat,True,Amreli,GUJARAT,7949.7,1514190,1.0,0.9209,0.9277,0.9921,480,ok,True
+49,049,Amritsar,03,3,15,Punjab,True,Amritsar ,PUNJAB,2667.9,2490656,1.0,0.9701,0.9879,0.9818,49,ok,True
+482,482,Anand,24,24,15,Gujarat,True,Anand  ,GUJARAT,2930.8,2092745,1.0,0.8915,0.9887,0.9007,482,ok,True
+553,553,Anantapur,28,28,22,Andhra Pradesh,True,Anantapur,ANDHRA PRADESH,19338.3,4081148,1.0,0.9847,0.9898,0.9948,553,ok,True
+14,014,Anantnag,01,1,14,Jammu & Kashmir,True,Anantnag,JAMMU & KASHMIR,3152.8,1078692,1.0,0.7336,0.7948,0.905,14,check,True
+260,260,Anjaw,12,12,16,Arunanchal Pradesh,True,Anjaw,ARUNACHAL PRADESH,6537.6,21167,1.0,0.9856,0.9926,0.9929,260,ok,True
+384,384,Anugul,21,21,15,Odisha,True,Anugul  ,ODISHA,6389.9,1273821,1.0,0.9788,0.9911,0.9875,384,ok,True
+461,461,Anuppur,23,23,44,Madhya Pradesh,True,Anuppur,MADHYA PRADESH,3799.9,749237,1.0,0.9717,0.9838,0.9875,461,ok,True
+209,209,Araria,10,10,7,Bihar,True,Araria,BIHAR,2817.6,2811569,1.0,0.959,0.9778,0.9803,209,ok,True
+616,616,Ariyalur,33,33,15,Tamil Nadu,True,Ariyalur  ,TAMIL NADU,1963.9,754894,1.0,0.9749,0.9841,0.9905,616,ok,True
+459,459,Ashoknagar,23,23,42,Madhya Pradesh,True,Ashoknagar,MADHYA PRADESH,4747.3,845071,1.0,0.9872,0.9946,0.9925,459,ok,True
+162,162,Auraiya,09,9,31,Uttar Pradesh,True,Auraiya,UTTAR PRADESH,2014.9,1379545,1.0,0.9549,0.9797,0.9741,162,ok,True
+235,235,Aurangabad,10,10,33,Bihar,True,Aurangabad,BIHAR,3291.2,2540073,1.0,0.9686,0.9879,0.9801,235,ok,True
+515,515,Aurangabad,27,27,19,Maharashtra,True,Aurangabad,MAHARASHTRA,10168.3,3701282,1.0,0.9654,0.9849,0.9799,515,ok,True
+191,191,Azamgarh,09,9,60,Uttar Pradesh,True,Azamgarh,UTTAR PRADESH,4288.4,4613913,1.0,0.9663,0.9765,0.9894,191,ok,True
+2,002,Badgam,01,1,2,Jammu & Kashmir,True,Badgam,JAMMU & KASHMIR,1288.0,753745,1.0,0.6865,0.824,0.8044,2,check,True
+556,556,Bagalkot,29,29,2,Karnataka,True,Bagalkot ,KARNATAKA,6608.0,1889752,1.0,0.9847,0.9909,0.9936,556,ok,True
+63,063,Bageshwar,05,5,8,Uttarakhand,True,Bageshwar,UTTARAKHAND,2290.6,259898,1.0,0.9521,0.9653,0.9858,63,ok,True
+139,139,Baghpat,09,9,8,Uttar Pradesh,True,Baghpat,UTTAR PRADESH,1333.5,1303048,1.0,0.939,0.9664,0.9707,139,ok,True
+180,180,Bahraich,09,9,49,Uttar Pradesh,True,Bahraich,UTTAR PRADESH,4342.5,3487731,1.0,0.8482,0.9837,0.8603,180,ok,True
+324,324,Baksa,18,18,25,Assam,True,Baksa,ASSAM,2380.5,950075,1.0,0.8665,0.9402,0.9171,324,ok,True
+457,457,Balaghat,23,23,40,Madhya Pradesh,True,Balaghat,MADHYA PRADESH,9286.7,1701698,1.0,0.9901,0.9952,0.9948,457,ok,True
+393,393,Balangir,21,21,24,Odisha,True,Balangir,ODISHA,6596.8,1648997,1.0,0.9844,0.9899,0.9944,393,ok,True
+377,377,Baleshwar,21,21,8,Odisha,True,Baleshwar,ODISHA,3895.2,2320529,1.0,0.9502,0.9649,0.9842,377,ok,True
+193,193,Ballia,09,9,62,Uttar Pradesh,True,Ballia,UTTAR PRADESH,3016.9,3239774,1.0,0.972,0.9838,0.9878,193,ok,True
+182,182,Balrampur,09,9,51,Uttar Pradesh,True,Balrampur,UTTAR PRADESH,3336.8,2148665,1.0,0.9559,0.9806,0.9744,182,ok,True
+469,469,Banas Kantha,24,24,2,Gujarat,True,Banas Kantha,GUJARAT,10705.8,3120506,1.0,0.9657,0.9861,0.9791,469,ok,True
+170,170,Banda,09,9,39,Uttar Pradesh,True,Banda,UTTAR PRADESH,4551.7,1799410,1.0,0.9549,0.9684,0.9857,170,ok,True
+9,009,Bandipore,01,1,9,Jammu & Kashmir,True,Bandipore,JAMMU & KASHMIR,2303.5,392232,1.0,0.6219,0.7591,0.7749,9,check,True
+583,583,Bangalore Rural,29,29,29,Karnataka,True,Bangalore Rural,KARNATAKA,2319.9,990923,1.0,0.9597,0.9778,0.9811,583,ok,True
+572,572,Bangalore,29,29,18,Karnataka,True,Bangalore,KARNATAKA,2196.0,9621551,1.0,0.9697,0.9876,0.9816,572,ok,True
+225,225,Banka,10,10,23,Bihar,True,Banka,BIHAR,3113.2,2034763,1.0,0.9634,0.9706,0.9924,225,ok,True
+339,339,Bankura,19,19,13,West Bengal,True,Bankura ,WEST BENGAL,6981.0,3596674,1.0,0.9852,0.9884,0.9967,339,ok,True
+125,125,Banswara,08,8,27,Rajasthan,True,Banswara,RAJASTHAN,4526.8,1797485,1.0,0.9783,0.9867,0.9914,125,ok,True
+176,176,Bara Banki,09,9,45,Uttar Pradesh,True,Bara Banki,UTTAR PRADESH,3808.0,3260699,1.0,0.9487,0.9804,0.967,176,ok,True
+370,370,Bargarh,21,21,1,Odisha,True,Bargarh,ODISHA,5823.1,1481255,1.0,0.9783,0.9934,0.9847,370,ok,True
+8,008,Baramula,01,1,8,Jammu & Kashmir,True,Baramula,JAMMU & KASHMIR,1777.8,1008039,1.0,0.4319,0.6797,0.5423,8,unreliable,True
+128,128,Baran,08,8,30,Rajasthan,True,Baran,RAJASTHAN,6850.0,1222755,1.0,0.9542,0.9887,0.9648,128,ok,True
+335,335,Barddhaman,19,19,9,West Bengal,True,Barddhaman ,WEST BENGAL,7057.9,7717563,1.0,0.9772,0.9879,0.989,335,ok,True
+150,150,Bareilly,09,9,19,Uttar Pradesh,True,Bareilly,UTTAR PRADESH,3799.0,4448359,1.0,0.8907,0.9841,0.9037,150,ok,True
+115,115,Barmer,08,8,17,Rajasthan,True,Barmer,RAJASTHAN,28540.9,2603751,1.0,0.9941,0.9965,0.9975,115,ok,True
+54,054,Barnala,03,3,20,Punjab,True,Barnala,PUNJAB,1490.3,595527,1.0,0.9355,0.9469,0.9873,54,ok,True
+303,303,Barpeta,18,18,4,Assam,True,Barpeta,ASSAM,2320.1,1693622,1.0,0.8879,0.934,0.9474,303,ok,True
+441,441,Barwani,23,23,24,Madhya Pradesh,True,Barwani ,MADHYA PRADESH,5462.8,1385881,1.0,0.9855,0.9921,0.9934,441,ok,True
+414,414,Bastar,22,22,15,Chhattisgarh,True,Bastar,CHHATTISGARH,10400.5,1413199,1.0,0.9888,0.9927,0.996,414,ok,True
+185,185,Basti,09,9,54,Uttar Pradesh,True,Basti,UTTAR PRADESH,2894.6,2464464,1.0,0.9371,0.9511,0.9845,185,ok,True
+46,046,Bathinda,03,3,12,Punjab,True,Bathinda,PUNJAB,3380.8,1388525,1.0,0.9768,0.9862,0.9903,46,ok,True
+391,391,Bauda,21,21,22,Odisha,True,Baudh,ODISHA,3132.2,441162,0.8,0.9631,0.9792,0.9832,391,ok,True
+222,222,Begusarai,10,10,20,Bihar,True,Begusarai,BIHAR,1944.5,2970541,1.0,0.9563,0.9739,0.9815,222,ok,True
+555,555,Belgaum,29,29,1,Karnataka,True,Belgaum,KARNATAKA,13473.3,4779661,1.0,0.9885,0.995,0.9934,555,ok,True
+565,565,Bellary,29,29,11,Karnataka,True,Bellary,KARNATAKA,8493.0,2452595,1.0,0.9874,0.9948,0.9926,565,ok,True
+447,447,Betul,23,23,30,Madhya Pradesh,True,Betul,MADHYA PRADESH,10114.4,1575362,1.0,0.9853,0.9922,0.993,447,ok,True
+378,378,Bhadrak,21,21,9,Odisha,True,Bhadrak,ODISHA,2491.8,1506337,1.0,0.9674,0.9914,0.9756,378,ok,True
+224,224,Bhagalpur,10,10,22,Bihar,True,Bhagalpur,BIHAR,2553.1,3037766,1.0,0.9679,0.9861,0.9813,224,ok,True
+506,506,Bhandara,27,27,10,Maharashtra,True,Bhandara,MAHARASHTRA,3878.3,1200334,1.0,0.9337,0.9863,0.9459,506,ok,True
+105,105,Bharatpur,08,8,7,Rajasthan,True,Bharatpur,RAJASTHAN,5075.6,2548462,1.0,0.964,0.9823,0.981,105,ok,True
+488,488,Bharuch,24,24,21,Gujarat,True,Bharuch,GUJARAT,5305.6,1551019,1.0,0.8005,0.9897,0.8073,488,ok,True
+481,481,Bhavnagar,24,24,14,Gujarat,True,Bhavnagar,GUJARAT,8413.3,2880365,1.0,0.8481,0.9926,0.8535,481,ok,True
+122,122,Bhilwara,08,8,24,Rajasthan,True,Bhilwara,RAJASTHAN,10507.9,2408523,1.0,0.9857,0.9937,0.9919,122,ok,True
+420,420,Bhind,23,23,3,Madhya Pradesh,True,Bhind,MADHYA PRADESH,4485.9,1703005,1.0,0.9828,0.9909,0.9917,420,ok,True
+81,081,Bhiwani,06,6,13,Haryana,True,Bhiwani,HARYANA,4641.0,1634445,1.0,0.9638,0.9888,0.9745,81,ok,True
+231,231,Bhojpur,10,10,29,Bihar,True,Bhojpur,BIHAR,2380.6,2728407,1.0,0.9608,0.9913,0.969,231,ok,True
+444,444,Bhopal,23,23,27,Madhya Pradesh,True,Bhopal,MADHYA PRADESH,2736.3,2371061,1.0,0.933,0.973,0.9578,444,ok,True
+523,523,Bid,27,27,27,Maharashtra,True,Bid,MAHARASHTRA,11104.3,2585049,1.0,0.9462,0.953,0.9926,523,ok,True
+558,558,Bidar,29,29,4,Karnataka,True,Bidar,KARNATAKA,5476.2,1703300,1.0,0.9835,0.9915,0.9919,558,ok,True
+417,417,Bijapur,22,22,18,Chhattisgarh,True,Bijapur,CHHATTISGARH,8829.5,255230,1.0,0.9823,0.9922,0.9899,417,ok,True
+557,557,Bijapur,29,29,3,Karnataka,True,Bijapur,KARNATAKA,10567.7,2177331,1.0,0.9909,0.9948,0.9961,557,ok,True
+134,134,Bijnor,09,9,3,Uttar Pradesh,True,Bijnor,UTTAR PRADESH,4333.5,3682713,1.0,0.9227,0.9914,0.9301,134,ok,True
+101,101,Bikaner,08,8,3,Rajasthan,True,Bikaner,RAJASTHAN,30338.8,2363937,1.0,0.9859,0.9935,0.9923,101,ok,True
+406,406,Bilaspur,22,22,7,Chhattisgarh,True,Bilaspur,CHHATTISGARH,8377.7,2663629,1.0,0.982,0.9897,0.9922,406,ok,True
+30,030,Bilaspur,02,2,8,Himachal Pradesh,True,Bilaspur,HIMACHAL PRADESH,1171.7,381956,1.0,0.968,0.9828,0.9847,30,ok,True
+334,334,Birbhum,19,19,8,West Bengal,True,Birbhum,WEST BENGAL,4566.7,3502404,1.0,0.9687,0.9839,0.9843,334,ok,True
+275,275,Bishnupur,14,14,4,Manipur,True,Bishnupur,MANIPUR,482.5,237399,1.0,0.8213,0.8918,0.9123,275,ok,True
+355,355,Bokaro,20,20,10,Jharkhand,True,Bokaro,JHARKHAND,2808.7,2062330,1.0,0.9065,0.9663,0.9361,355,ok,True
+319,319,Bongaigaon,18,18,20,Assam,True,Bongaigaon,ASSAM,1056.7,738804,1.0,0.8007,0.9044,0.8747,319,ok,True
+149,149,Budaun,09,9,18,Uttar Pradesh,True,Budaun,UTTAR PRADESH,5096.9,3681896,1.0,0.9467,0.9804,0.9649,149,ok,True
+142,142,Bulandshahr,09,9,11,Uttar Pradesh,True,Bulandshahr ,UTTAR PRADESH,3573.4,3499171,1.0,0.9106,0.948,0.9584,142,ok,True
+500,500,Buldana,27,27,4,Maharashtra,True,Buldana,MAHARASHTRA,9800.9,2586258,1.0,0.9878,0.9932,0.9945,500,ok,True
+121,121,Bundi,08,8,23,Rajasthan,True,Bundi,RAJASTHAN,5605.8,1110906,1.0,0.9159,0.9708,0.9418,121,ok,True
+467,467,Burhanpur,23,23,50,Madhya Pradesh,True,Burhanpur,MADHYA PRADESH,3217.0,757847,1.0,0.9769,0.993,0.9837,467,ok,True
+232,232,Buxar,10,10,30,Bihar,True,Buxar,BIHAR,1715.0,1706352,1.0,0.9537,0.9642,0.9887,232,ok,True
+316,316,Cachar,18,18,17,Assam,True,Cachar,ASSAM,3800.9,1736617,1.0,0.9779,0.9887,0.989,316,ok,True
+95,095,Central,07,7,6,NCT of Delhi,True,Central,NCT OF DELHI,15.2,582320,1.0,0.5364,0.8886,0.575,95,check,True
+23,023,Chamba,02,2,1,Himachal Pradesh,True,Chamba,HIMACHAL PRADESH,6492.7,519080,1.0,0.9723,0.9894,0.9826,23,ok,True
+57,057,Chamoli,05,5,2,Uttarakhand,True,Chamoli,UTTARAKHAND,7863.1,391605,1.0,0.9871,0.9916,0.9954,57,ok,True
+65,065,Champawat,05,5,10,Uttarakhand,True,Champawat,UTTARAKHAND,1655.8,259648,1.0,0.9006,0.982,0.9158,65,ok,True
+284,284,Champhai,15,15,4,Mizoram,True,Champhai,MIZORAM,3366.1,125745,1.0,0.9614,0.9739,0.9869,284,ok,True
+578,578,Chamrajnagar,29,29,24,Karnataka,True,Chamarajanagar,KARNATAKA,5702.9,1020791,0.923,0.9832,0.9897,0.9934,578,ok,True
+196,196,Chandauli,09,9,65,Uttar Pradesh,True,Chandauli,UTTAR PRADESH,2543.3,1952756,1.0,0.9632,0.9846,0.9779,196,ok,True
+280,280,Chandel,14,14,9,Manipur,True,Chandel,MANIPUR,3198.0,144182,1.0,0.9409,0.9815,0.958,280,ok,True
+55,055,Chandigarh,04,4,1,Chandigarh,True,Chandigarh,CHANDIGARH,118.7,1055450,1.0,0.9228,0.9448,0.9754,55,ok,True
+509,509,Chandrapur,27,27,13,Maharashtra,True,Chandrapur,MAHARASHTRA,11362.0,2204307,1.0,0.9815,0.9929,0.9884,509,ok,True
+253,253,Changlang,12,12,9,Arunanchal Pradesh,True,Changlang,ARUNACHAL PRADESH,5059.2,148226,1.0,0.9683,0.983,0.9849,253,ok,True
+347,347,Chatra,20,20,2,Jharkhand,True,Chatra,JHARKHAND,3769.5,1042886,1.0,0.9611,0.9762,0.9841,347,ok,True
+603,603,Chennai,33,33,2,Tamil Nadu,True,Chennai,TAMIL NADU,129.3,4646732,1.0,0.6959,0.9701,0.7112,603,check,True
+425,425,Chhatarpur,23,23,8,Madhya Pradesh,True,Chhatarpur,MADHYA PRADESH,8713.0,1762375,1.0,0.9801,0.9899,0.99,425,ok,True
+455,455,Chhindwara,23,23,38,Madhya Pradesh,True,Chhindwara,MADHYA PRADESH,11861.4,2090922,1.0,0.9898,0.9953,0.9944,455,ok,True
+582,582,Chikkaballapura,29,29,28,Karnataka,True,Chikkaballapura,KARNATAKA,4243.9,1255104,1.0,0.9807,0.9931,0.9874,582,ok,True
+570,570,Chikmagalur,29,29,16,Karnataka,True,Chikmagalur,KARNATAKA,7256.9,1137961,1.0,0.9914,0.9949,0.9964,570,ok,True
+320,320,Chirang,18,18,21,Assam,True,Chirang,ASSAM,1737.7,482162,1.0,0.8153,0.949,0.8527,320,ok,True
+566,566,Chitradurga,29,29,12,Karnataka,True,Chitradurga,KARNATAKA,8499.8,1659456,1.0,0.9892,0.9938,0.9954,566,ok,True
+171,171,Chitrakoot,09,9,40,Uttar Pradesh,True,Chitrakoot,UTTAR PRADESH,3095.3,991730,1.0,0.9445,0.9889,0.9547,171,ok,True
+126,126,Chittaurgarh,08,8,28,Rajasthan,True,Chittaurgarh,RAJASTHAN,7678.8,1544338,1.0,0.9294,0.9729,0.954,126,ok,True
+554,554,Chittoor,28,28,23,Andhra Pradesh,True,Chittoor,ANDHRA PRADESH,15265.2,4174064,1.0,0.974,0.9813,0.9924,554,ok,True
+274,274,Churachandpur,14,14,3,Manipur,True,Churachandpur,MANIPUR,4599.0,274143,1.0,0.9725,0.986,0.9861,274,ok,True
+102,102,Churu,08,8,4,Rajasthan,True,Churu,RAJASTHAN,13948.0,2039547,1.0,0.988,0.9933,0.9946,102,ok,True
+632,632,Coimbatore,33,33,31,Tamil Nadu,True,Coimbatore,TAMIL NADU,4683.7,3458045,1.0,0.9717,0.9909,0.9804,632,ok,True
+617,617,Cuddalore,33,33,16,Tamil Nadu,True,Cuddalore,TAMIL NADU,3724.4,2605914,1.0,0.9791,0.9911,0.9877,617,ok,False
+551,551,Y.s.r.,28,28,20,Andhra Pradesh,True,Y.S.R.,ANDHRA PRADESH,15244.4,2882469,1.0,0.9766,0.9943,0.9821,551,ok,True
+381,381,Cuttack,21,21,12,Odisha,True,Cuttack,ODISHA,3960.7,2624470,1.0,0.948,0.963,0.9838,381,ok,True
+496,496,Dadra & Nagar Haveli,26,26,1,Dadara & Nagar Havelli,True,Dadra & Nagar Haveli,DADRA & NAGAR HAVELI,496.0,343709,1.0,0.9009,0.9489,0.9468,496,ok,True
+416,416,Dakshin Bastar Dantewada,22,22,17,Chhattisgarh,True,Dakshin Bastar Dantewada,CHHATTISGARH,8921.3,533638,1.0,0.9789,0.9907,0.988,416,ok,True
+331,331,Dakshin Dinajpur,19,19,5,West Bengal,True,Dakshin Dinajpur,WEST BENGAL,2177.7,1676276,1.0,0.9212,0.9742,0.9443,331,ok,True
+575,575,Dakshina Kannada,29,29,21,Karnataka,True,Dakshina Kannada,KARNATAKA,4617.7,2089649,1.0,0.9246,0.9895,0.9337,575,ok,True
+495,495,Daman,25,25,2,Daman & Diu,True,Daman,DAMAN & DIU,73.9,191173,1.0,0.8069,0.8295,0.9673,495,ok,True
+428,428,Damoh,23,23,11,Madhya Pradesh,True,Damoh,MADHYA PRADESH,7385.1,1264219,1.0,0.9858,0.9895,0.9962,428,ok,True
+215,215,Darbhanga,10,10,13,Bihar,True,Darbhanga,BIHAR,2295.7,3937385,1.0,0.8693,0.9751,0.889,215,ok,True
+327,327,Darjiling,19,19,1,West Bengal,True,Darjiling ,WEST BENGAL,3204.8,1846823,1.0,0.9472,0.9614,0.9846,327,ok,True
+325,325,Darrang,18,18,26,Assam,True,Darrang,ASSAM,1618.7,928500,1.0,0.866,0.9199,0.9366,325,ok,True
+,,Data Not Available,,,,Jammu & Kashmir,False,,,86038.0,,,,,,,,True
+422,422,Datia,23,23,5,Madhya Pradesh,True,Datia,MADHYA PRADESH,1894.1,786754,1.0,0.693,0.99,0.6979,422,check,True
+567,567,Davanagere,29,29,13,Karnataka,True,Davanagere,KARNATAKA,5981.8,1945497,1.0,0.9881,0.9921,0.996,567,ok,True
+373,373,Debagarh,21,21,4,Odisha,True,Debagarh,ODISHA,2823.3,312520,1.0,0.9302,0.9866,0.9421,373,ok,True
+60,060,Dehradun,05,5,5,Uttarakhand,True,Dehradun,UTTARAKHAND,3080.9,1696694,1.0,0.9514,0.9797,0.9705,60,ok,True
+350,350,Deoghar,20,20,5,Jharkhand,True,Deoghar,JHARKHAND,2447.0,1492073,1.0,0.9591,0.9887,0.9698,350,ok,True
+190,190,Deoria,09,9,59,Uttar Pradesh,True,Deoria,UTTAR PRADESH,2564.6,3100946,1.0,0.9685,0.9805,0.9875,190,ok,True
+437,437,Dewas,23,23,20,Madhya Pradesh,True,Dewas,MADHYA PRADESH,6998.5,1563715,1.0,0.9677,0.9869,0.9803,437,ok,True
+291,291,Dhalai,16,16,3,Tripura,True,Dhalai,TRIPURA,2264.8,378230,1.0,0.9331,0.9659,0.9649,291,ok,True
+412,412,Dhamtari,22,22,13,Chhattisgarh,True,Dhamtari ,CHHATTISGARH,4078.8,799781,1.0,0.9807,0.9937,0.9868,412,ok,True
+354,354,Dhanbad,20,20,9,Jharkhand,True,Dhanbad,JHARKHAND,2139.1,2684487,1.0,0.9442,0.9512,0.9922,354,ok,True
+438,438,Dhar,23,23,21,Madhya Pradesh,True,Dhar,MADHYA PRADESH,8190.1,2185793,1.0,0.9897,0.9952,0.9945,438,ok,True
+630,630,Dharmapuri,33,33,29,Tamil Nadu,True,Dharmapuri,TAMIL NADU,4545.6,1506843,1.0,0.9665,0.9804,0.9855,630,ok,True
+562,562,Dharwad,29,29,8,Karnataka,True,Dharwad,KARNATAKA,4300.3,1847023,1.0,0.9868,0.9914,0.9953,562,ok,True
+106,106,Dhaulpur,08,8,8,Rajasthan,True,Dhaulpur,RAJASTHAN,3039.8,1206516,1.0,0.9829,0.9922,0.9906,106,ok,True
+308,308,Dhemaji,18,18,9,Assam,True,Dhemaji,ASSAM,2616.5,686133,1.0,0.885,0.9168,0.9623,308,ok,True
+383,383,Dhenkanal,21,21,14,Odisha,True,Dhenkanal,ODISHA,4492.5,1192811,1.0,0.9846,0.9908,0.9937,383,ok,True
+301,301,Dhubri,18,18,2,Assam,True,Dhubri,ASSAM,2306.7,1949258,1.0,0.8899,0.9302,0.9535,301,ok,True
+498,498,Dhule,27,27,2,Maharashtra,True,Dhule,MAHARASHTRA,7221.1,2050862,1.0,0.9885,0.9945,0.994,498,ok,True
+257,257,Dibang Valley,12,12,13,Arunanchal Pradesh,True,Dibang Valley,ARUNACHAL PRADESH,7438.5,8004,1.0,0.7628,0.9934,0.7667,257,check,True
+310,310,Dibrugarh,18,18,11,Assam,True,Dibrugarh,ASSAM,3408.8,1326335,1.0,0.9677,0.9812,0.9859,310,ok,True
+612,612,Dindigul,33,33,11,Tamil Nadu,True,Dindigul,TAMIL NADU,6109.3,2159775,1.0,0.9841,0.9901,0.9938,612,ok,True
+453,453,Dindori,23,23,36,Madhya Pradesh,True,Dindori ,MADHYA PRADESH,5730.2,704524,1.0,0.9741,0.9909,0.9828,453,ok,True
+494,494,Diu,25,25,1,Daman & Diu,True,Diu,DAMAN & DIU,35.8,52074,1.0,0.772,0.8101,0.9426,494,check,True
+16,016,Doda,01,1,16,Jammu & Kashmir,True,Doda,JAMMU & KASHMIR,2085.2,409936,1.0,0.7509,0.9198,0.8035,16,check,True
+485,485,Dohad,24,24,18,Gujarat,True,Dohad  ,GUJARAT,3612.6,2127086,1.0,0.9626,0.9895,0.9725,485,ok,True
+362,362,Dumka,20,20,17,Jharkhand,True,Dumka,JHARKHAND,3783.5,1321442,1.0,0.9731,0.9863,0.9865,362,ok,True
+124,124,Dungarpur,08,8,26,Rajasthan,True,Dungarpur,RAJASTHAN,3803.6,1388552,1.0,0.9819,0.9915,0.9902,124,ok,True
+409,409,Durg,22,22,10,Chhattisgarh,True,Durg,CHHATTISGARH,8642.2,3343872,1.0,0.978,0.985,0.9928,409,ok,True
+265,265,Dimapur,13,13,5,Nagaland,True,Dimapur ,NAGALAND,814.7,378811,1.0,0.7883,0.9806,0.8008,265,check,True
+93,093,East,07,7,4,NCT of Delhi,True,East,NCT OF DELHI,65.5,1709346,1.0,0.7712,0.839,0.9052,93,check,True
+244,244,East,11,11,4,Sikkim,True,East District,SIKKIM,946.3,283583,0.5,0.9423,0.9784,0.9623,244,ok,True
+294,294,East Garo Hills,17,17,2,Meghalaya,True,East Garo Hills,MEGHALAYA,2943.2,317917,1.0,0.9063,0.9333,0.969,294,ok,True
+545,545,East Godavari,28,28,14,Andhra Pradesh,True,East Godavari,ANDHRA PRADESH,10904.2,5154296,1.0,0.956,0.976,0.9789,545,ok,True
+247,247,East Kameng,12,12,3,Arunanchal Pradesh,True,East Kameng,ARUNACHAL PRADESH,6026.9,78690,1.0,0.9442,0.992,0.9514,247,ok,True
+298,298,East Khasi Hills,17,17,6,Meghalaya,True,East Khasi Hills,MEGHALAYA,2816.7,825922,1.0,0.9786,0.9894,0.989,298,ok,True
+466,466,East Nimar,23,23,49,Madhya Pradesh,True,Khandwa (East Nimar),MADHYA PRADESH,7483.9,1310061,0.72,0.9796,0.9916,0.9877,466,ok,True
+251,251,East Siang,12,12,7,Arunanchal Pradesh,True,East Siang,ARUNACHAL PRADESH,3754.6,99214,1.0,0.9728,0.9842,0.9883,251,ok,True
+595,595,Ernakulam,32,32,8,Kerala,True,Ernakulam,KERALA,2425.9,3282388,1.0,0.7796,0.9925,0.7842,595,check,True
+610,610,Erode,33,33,9,Tamil Nadu,True,Erode,TAMIL NADU,5799.2,2251744,1.0,0.945,0.9907,0.9534,610,ok,True
+201,201,Etah,09,9,70,Uttar Pradesh,True,Etah,UTTAR PRADESH,2522.7,1774480,1.0,0.9393,0.9514,0.9866,201,ok,True
+161,161,Etawah,09,9,30,Uttar Pradesh,True,Etawah,UTTAR PRADESH,2334.7,1581810,1.0,0.9555,0.9776,0.9769,161,ok,True
+177,177,Faizabad,09,9,46,Uttar Pradesh,True,Faizabad,UTTAR PRADESH,2747.0,2470996,1.0,0.9264,0.9535,0.9702,177,ok,True
+88,088,Faridabad,06,6,20,Haryana,True,Faridabad,HARYANA,844.1,1809733,1.0,0.8659,0.8866,0.9738,88,ok,True
+45,045,Faridkot,03,3,11,Punjab,True,Faridkot,PUNJAB,1455.5,617508,1.0,0.9635,0.9901,0.973,45,ok,True
+159,159,Farrukhabad,09,9,28,Uttar Pradesh,True,Farrukhabad,UTTAR PRADESH,2193.5,1885204,1.0,0.9698,0.9838,0.9855,159,ok,True
+78,078,Fatehabad,06,6,10,Haryana,True,Fatehabad,HARYANA,2412.5,942011,1.0,0.9388,0.9934,0.9447,78,ok,True
+40,040,Fatehgarh Sahib,03,3,6,Punjab,True,Fatehgarh Sahib,PUNJAB,1146.6,600163,1.0,0.8106,0.9009,0.89,40,ok,True
+172,172,Fatehpur,09,9,41,Uttar Pradesh,True,Fatehpur,UTTAR PRADESH,4192.5,2632733,1.0,0.9649,0.9814,0.9828,172,ok,True
+147,147,Firozabad,09,9,16,Uttar Pradesh,True,Firozabad,UTTAR PRADESH,2412.4,2498156,1.0,0.9171,0.9602,0.9534,147,ok,True
+43,043,Firozpur,03,3,9,Punjab,True,Firozpur,PUNJAB,5221.4,2029074,1.0,0.9517,0.9793,0.9712,43,ok,True
+561,561,Gadag,29,29,7,Karnataka,True,Gadag,KARNATAKA,4671.2,1064570,1.0,0.987,0.9948,0.992,561,ok,True
+389,389,Gajapati,21,21,20,Odisha,True,Gajapati,ODISHA,4078.8,577817,1.0,0.9434,0.9789,0.963,389,ok,True
+11,011,Ganderbal,01,1,11,Jammu & Kashmir,True,Ganderbal,JAMMU & KASHMIR,1072.5,297446,1.0,0.4742,0.7675,0.5537,11,unreliable,True
+473,473,Gandhinagar,24,24,6,Gujarat,True,Gandhinagar,GUJARAT,2147.1,1391753,1.0,0.9471,0.973,0.9726,473,ok,True
+99,099,Ganganagar,08,8,1,Rajasthan,True,Ganganagar ,RAJASTHAN,10721.8,1969168,1.0,0.9461,0.9826,0.9623,99,ok,True
+388,388,Ganjam,21,21,19,Odisha,True,Ganjam,ODISHA,8522.0,3529031,1.0,0.9708,0.9797,0.9908,388,ok,True
+508,508,Garhchiroli,27,27,12,Maharashtra,True,Gadchiroli,MAHARASHTRA,14523.6,1072942,0.857,0.9832,0.9942,0.9888,508,ok,True
+346,346,Garhwa,20,20,1,Jharkhand,True,Garhwa ,JHARKHAND,4120.8,1322784,1.0,0.9804,0.988,0.9922,346,ok,True
+61,061,Garhwal,05,5,6,Uttarakhand,True,Garhwal,UTTARAKHAND,5479.3,687271,1.0,0.9502,0.9583,0.9912,61,ok,True
+141,141,Gautam Buddha Nagar,09,9,10,Uttar Pradesh,True,Gautam Buddha Nagar,UTTAR PRADESH,1414.4,1648115,1.0,0.8536,0.9226,0.9195,141,ok,True
+236,236,Gaya,10,10,34,Bihar,True,Gaya,BIHAR,4984.2,4391418,1.0,0.9715,0.9862,0.9849,236,ok,True
+140,140,Ghaziabad,09,9,9,Uttar Pradesh,True,Ghaziabad,UTTAR PRADESH,1984.7,4681645,1.0,0.8817,0.9492,0.9254,140,ok,True
+195,195,Ghazipur,09,9,64,Uttar Pradesh,True,Ghazipur,UTTAR PRADESH,3396.3,3620268,1.0,0.9796,0.9895,0.9899,195,ok,True
+349,349,Giridih,20,20,4,Jharkhand,True,Giridih,JHARKHAND,5027.4,2445474,1.0,0.9642,0.9781,0.9855,349,ok,True
+302,302,Goalpara,18,18,3,Assam,True,Goalpara,ASSAM,2019.4,1008183,1.0,0.9339,0.958,0.9737,302,ok,True
+351,351,Godda,20,20,6,Jharkhand,True,Godda,JHARKHAND,2247.7,1313551,1.0,0.964,0.987,0.9764,351,ok,True
+313,313,Golaghat,18,18,14,Assam,True,Golaghat,ASSAM,3379.2,1066888,1.0,0.9233,0.9827,0.9386,313,ok,True
+183,183,Gonda,09,9,52,Uttar Pradesh,True,Gonda,UTTAR PRADESH,4052.0,3433919,1.0,0.9557,0.9707,0.9841,183,ok,True
+507,507,Gondiya,27,27,11,Maharashtra,True,Gondiya,MAHARASHTRA,5499.2,1322507,1.0,0.9534,0.9606,0.9922,507,ok,True
+217,217,Gopalganj,10,10,15,Bihar,True,Gopalganj,BIHAR,2047.0,2562012,1.0,0.9689,0.9843,0.984,217,ok,True
+188,188,Gorakhpur,09,9,57,Uttar Pradesh,True,Gorakhpur,UTTAR PRADESH,3375.6,4440895,1.0,0.9579,0.9738,0.9832,188,ok,True
+579,579,Gulbarga,29,29,25,Karnataka,True,Gulbarga,KARNATAKA,11027.3,2566326,1.0,0.9875,0.9931,0.9943,579,ok,True
+366,366,Gumla,20,20,21,Jharkhand,True,Gumla,JHARKHAND,5379.7,1025213,1.0,0.9822,0.9912,0.9908,366,ok,True
+458,458,Guna,23,23,41,Madhya Pradesh,True,Guna,MADHYA PRADESH,6330.2,1241519,1.0,0.9768,0.9945,0.9821,458,ok,True
+548,548,Guntur,28,28,17,Andhra Pradesh,True,Guntur,ANDHRA PRADESH,11496.5,4887813,1.0,0.9454,0.9707,0.9731,548,ok,True
+35,035,Gurdaspur,03,3,1,Punjab,True,Gurdaspur,PUNJAB,3630.0,2298323,1.0,0.9576,0.9698,0.987,35,ok,True
+86,086,Gurgaon,06,6,18,Haryana,True,Gurgaon,HARYANA,1241.8,1514432,1.0,0.9582,0.9835,0.9738,86,ok,True
+421,421,Gwalior,23,23,4,Madhya Pradesh,True,Gwalior,MADHYA PRADESH,5240.7,2032036,1.0,0.8688,0.8715,0.9965,421,ok,True
+318,318,Hailakandi,18,18,19,Assam,True,Hailakandi,ASSAM,1337.9,659296,1.0,0.9676,0.9825,0.9846,318,ok,True
+28,028,Hamirpur,02,2,6,Himachal Pradesh,True,Hamirpur,HIMACHAL PRADESH,1126.9,454768,1.0,0.9737,0.9832,0.9901,28,ok,True
+168,168,Hamirpur,09,9,37,Uttar Pradesh,True,Hamirpur,UTTAR PRADESH,4279.5,1104285,1.0,0.8953,0.9043,0.989,168,ok,True
+100,100,Hanumangarh,08,8,2,Rajasthan,True,Hanumangarh,RAJASTHAN,9965.7,1774692,1.0,0.9446,0.9604,0.9828,100,ok,True
+341,341,Haora,19,19,15,West Bengal,True,Haora ,WEST BENGAL,1454.0,4850029,1.0,0.9459,0.9762,0.9683,341,ok,True
+448,448,Harda,23,23,31,Madhya Pradesh,True,Harda ,MADHYA PRADESH,3333.4,570465,1.0,0.9688,0.9869,0.9814,448,ok,True
+155,155,Hardoi,09,9,24,Uttar Pradesh,True,Hardoi,UTTAR PRADESH,6033.9,4092845,1.0,0.9832,0.9897,0.9933,155,ok,True
+68,068,Hardwar,05,5,13,Uttarakhand,True,Hardwar,UTTARAKHAND,2396.6,1890422,1.0,0.9184,0.9378,0.978,68,ok,True
+574,574,Hassan,29,29,20,Karnataka,True,Hassan,KARNATAKA,6854.0,1776421,1.0,0.9858,0.9929,0.9928,574,ok,True
+144,144,Mahamaya Nagar,09,9,13,Uttar Pradesh,True,Mahamaya Nagar,UTTAR PRADESH,1775.4,1564708,1.0,0.8975,0.9497,0.9423,144,ok,True
+564,564,Haveri,29,29,10,Karnataka,True,Haveri,KARNATAKA,4838.4,1597668,1.0,0.9873,0.995,0.9923,564,ok,True
+360,360,Hazaribagh,20,20,15,Jharkhand,True,Hazaribagh,JHARKHAND,3617.9,1734495,1.0,0.7471,0.9499,0.7778,360,check,True
+512,512,Hingoli,27,27,16,Maharashtra,True,Hingoli,MAHARASHTRA,4714.9,1177345,1.0,0.9206,0.9792,0.939,512,ok,True
+80,080,Hisar,06,6,12,Haryana,True,Hisar,HARYANA,4215.8,1743931,1.0,0.9408,0.9549,0.9845,80,ok,True
+449,449,Hoshangabad,23,23,32,Madhya Pradesh,True,Hoshangabad,MADHYA PRADESH,6743.2,1241350,1.0,0.9754,0.9857,0.9894,449,ok,True
+38,038,Hoshiarpur,03,3,4,Punjab,True,Hoshiarpur,PUNJAB,3377.0,1586625,1.0,0.9787,0.9915,0.987,38,ok,True
+338,338,Hugli,19,19,12,West Bengal,True,Hugli ,WEST BENGAL,3159.3,5519145,1.0,0.954,0.9754,0.9775,338,ok,True
+536,536,Hyderabad,28,28,5,Andhra Pradesh,True,Hyderabad,ANDHRA PRADESH,179.0,3943323,1.0,0.7003,0.8547,0.795,536,check,True
+596,596,Idukki,32,32,9,Kerala,True,Idukki ,KERALA,5038.9,1108974,1.0,0.8518,0.8604,0.9884,596,ok,True
+278,278,Imphal East,14,14,7,Manipur,True,Imphal East,MANIPUR,924.6,456113,1.0,0.3065,0.4322,0.5131,277,unreliable,True
+277,277,Imphal West,14,14,6,Manipur,True,Imphal West,MANIPUR,301.8,517992,1.0,0.0,0.0,0.0,278,unreliable,True
+439,439,Indore,23,23,22,Madhya Pradesh,True,Indore,MADHYA PRADESH,3933.6,3276697,1.0,0.9789,0.9887,0.99,439,ok,True
+451,451,Jabalpur,23,23,34,Madhya Pradesh,True,Jabalpur,MADHYA PRADESH,5131.1,2463289,1.0,0.9744,0.986,0.9881,451,ok,True
+380,380,Jagatsinghapur,21,21,11,Odisha,True,Jagatsinghapur ,ODISHA,1747.3,1136971,1.0,0.9467,0.9709,0.9744,380,ok,True
+299,299,Jaintia Hills,17,17,7,Meghalaya,True,Jaintia Hills,MEGHALAYA,3813.2,395124,1.0,0.9791,0.9912,0.9877,299,ok,True
+110,110,Jaipur,08,8,12,Rajasthan,True,Jaipur,RAJASTHAN,11310.2,6626178,1.0,0.9704,0.9795,0.9905,110,ok,True
+114,114,Jaisalmer,08,8,16,Rajasthan,True,Jaisalmer,RAJASTHAN,38595.8,669919,1.0,0.99,0.9949,0.995,114,ok,True
+382,382,Jajapur,21,21,13,Odisha,True,Jajapur  ,ODISHA,2910.2,1827192,1.0,0.9726,0.9863,0.986,382,ok,True
+37,037,Jalandhar,03,3,3,Punjab,True,Jalandhar,PUNJAB,2613.9,2193590,1.0,0.9436,0.9774,0.9646,37,ok,True
+165,165,Jalaun,09,9,34,Uttar Pradesh,True,Jalaun ,UTTAR PRADESH,4590.6,1689974,1.0,0.9825,0.9903,0.992,165,ok,True
+499,499,Jalgaon,27,27,3,Maharashtra,True,Jalgaon,MAHARASHTRA,11830.8,4229917,1.0,0.9852,0.9917,0.9934,499,ok,True
+514,514,Jalna,27,27,18,Maharashtra,True,Jalna,MAHARASHTRA,7810.8,1959046,1.0,0.9676,0.9775,0.9896,514,ok,True
+116,116,Jalor,08,8,18,Rajasthan,True,Jalor,RAJASTHAN,10778.6,1828730,1.0,0.9852,0.9888,0.9964,116,ok,True
+328,328,Jalpaiguri,19,19,2,West Bengal,True,Jalpaiguri ,WEST BENGAL,6247.2,3872846,1.0,0.9526,0.97,0.9815,328,ok,True
+21,021,Jammu,01,1,21,Jammu & Kashmir,True,Jammu,JAMMU & KASHMIR,2013.3,1529958,1.0,0.7532,0.9207,0.8054,21,check,True
+477,477,Jamnagar,24,24,10,Gujarat,True,Jamnagar,GUJARAT,10954.3,2160119,1.0,0.7591,0.9928,0.7633,477,check,True
+363,363,Jamtara,20,20,18,Jharkhand,True,Jamtara,JHARKHAND,1809.1,791042,1.0,0.9291,0.967,0.9595,363,ok,True
+238,238,Jamui,10,10,36,Bihar,True,Jamui,BIHAR,3060.6,1760405,1.0,0.9467,0.9811,0.9643,238,ok,True
+405,405,Janjgir-champa,22,22,6,Chhattisgarh,True,Janjgir - Champa,CHHATTISGARH,3886.8,1619707,1.0,0.9772,0.9878,0.9892,405,ok,True
+402,402,Jashpur,22,22,3,Chhattisgarh,True,Jashpur ,CHHATTISGARH,5832.0,851669,1.0,0.9756,0.9915,0.9838,402,ok,True
+194,194,Jaunpur,09,9,63,Uttar Pradesh,True,Jaunpur,UTTAR PRADESH,4049.1,4494204,1.0,0.9817,0.991,0.9905,194,ok,True
+464,464,Jhabua,23,23,47,Madhya Pradesh,True,Jhabua,MADHYA PRADESH,3452.6,1025048,1.0,0.9816,0.9917,0.9897,464,ok,True
+83,083,Jhajjar,06,6,15,Haryana,True,Jhajjar,HARYANA,1945.0,958405,1.0,0.906,0.9222,0.981,83,ok,True
+129,129,Jhalawar,08,8,31,Rajasthan,True,Jhalawar,RAJASTHAN,6284.2,1411129,1.0,0.9435,0.9775,0.9644,129,ok,True
+166,166,Jhansi,09,9,35,Uttar Pradesh,True,Jhansi,UTTAR PRADESH,5088.1,1998603,1.0,0.9608,0.9779,0.9821,166,ok,True
+371,371,Jharsuguda,21,21,2,Odisha,True,Jharsuguda,ODISHA,2125.8,579505,1.0,0.9498,0.9659,0.9828,371,ok,True
+103,103,Jhunjhunun,08,8,5,Rajasthan,True,Jhunjhunun,RAJASTHAN,5945.3,2137045,1.0,0.9799,0.9893,0.9904,103,ok,True
+113,113,Jodhpur,08,8,15,Rajasthan,True,Jodhpur,RAJASTHAN,22959.5,3687165,1.0,0.9766,0.9841,0.9922,113,ok,True
+312,312,Jorhat,18,18,13,Assam,True,Jorhat,ASSAM,3010.0,1092256,1.0,0.9196,0.9321,0.9857,312,ok,True
+479,479,Junagadh,24,24,12,Gujarat,True,Junagadh,GUJARAT,8317.9,2743082,1.0,0.93,0.9955,0.9339,479,ok,True
+137,137,Jyotiba Phule Nagar,09,9,6,Uttar Pradesh,True,Jyotiba Phule Nagar,UTTAR PRADESH,2280.9,1840221,1.0,0.8807,0.9135,0.9609,137,ok,True
+468,468,Kachchh,24,24,1,Gujarat,True,Kachchh,GUJARAT,42322.9,2092371,1.0,0.9136,0.9951,0.9177,468,ok,True
+233,233,Kaimur (bhabua),10,10,31,Bihar,True,Kaimur (Bhabua),BIHAR,3360.9,1626384,1.0,0.9779,0.9921,0.9856,233,ok,True
+73,073,Kaithal,06,6,5,Haryana,True,Kaithal,HARYANA,2307.9,1074304,1.0,0.9098,0.9523,0.9533,73,ok,True
+395,395,Kalahandi,21,21,26,Odisha,True,Kalahandi,ODISHA,7939.6,1576869,1.0,0.987,0.9936,0.9932,395,ok,True
+321,321,Kamrup,18,18,22,Assam,True,Kamrup,ASSAM,2918.4,1517542,1.0,0.8381,0.9428,0.883,321,ok,True
+322,322,Kamrup Metropolitan,18,18,23,Assam,True,Kamrup Metropolitan,ASSAM,1212.6,1253938,1.0,0.6543,0.7203,0.8772,322,check,True
+604,604,Kancheepuram,33,33,3,Tamil Nadu,True,Kancheepuram,TAMIL NADU,4652.5,3998252,1.0,0.946,0.9568,0.9882,604,ok,True
+390,390,Kandhamal,21,21,21,Odisha,True,Kandhamal,ODISHA,8086.8,733110,1.0,0.9844,0.9906,0.9937,390,ok,True
+24,024,Kangra,02,2,2,Himachal Pradesh,True,Kangra,HIMACHAL PRADESH,5734.7,1510075,1.0,0.9797,0.9918,0.9878,24,ok,True
+413,413,Uttar Bastar Kanker,22,22,14,Chhattisgarh,True,Uttar Bastar Kanker,CHHATTISGARH,6835.1,748941,1.0,0.912,0.9812,0.9282,413,ok,True
+160,160,Kannauj,09,9,29,Uttar Pradesh,True,Kannauj,UTTAR PRADESH,2083.0,1656616,1.0,0.9634,0.985,0.9777,160,ok,True
+629,629,Kanniyakumari,33,33,28,Tamil Nadu,True,Kanniyakumari,TAMIL NADU,1700.6,1870374,1.0,0.9751,0.9854,0.9895,629,ok,True
+589,589,Kannur,32,32,2,Kerala,True,Kannur,KERALA,2966.3,2523003,1.0,0.9797,0.9894,0.9901,589,ok,True
+163,163,Kanpur Dehat,09,9,32,Uttar Pradesh,True,Kanpur Dehat,UTTAR PRADESH,3225.7,1796184,1.0,0.9583,0.9703,0.9872,163,ok,True
+164,164,Kanpur Nagar,09,9,33,Uttar Pradesh,True,Kanpur Nagar,UTTAR PRADESH,2890.5,4581268,1.0,0.9238,0.9805,0.9411,164,ok,True
+202,202,Kansiram Nagar,09,9,71,Uttar Pradesh,True,Kanshiram Nagar,UTTAR PRADESH,1973.6,1436719,0.963,0.9478,0.9715,0.975,202,ok,True
+36,036,Kapurthala,03,3,2,Punjab,True,Kapurthala ,PUNJAB,1666.5,815168,1.0,0.9338,0.957,0.9747,36,ok,True
+314,314,Karbi Anglong,18,18,15,Assam,True,Karbi Anglong,ASSAM,10464.5,956313,1.0,0.9714,0.9844,0.9867,314,ok,True
+4,004,Kargil,01,1,4,Jammu & Kashmir,True,Kargil,JAMMU & KASHMIR,14929.1,140802,1.0,0.7613,0.8338,0.8975,4,check,True
+317,317,Karimganj,18,18,18,Assam,True,Karimganj,ASSAM,1877.0,1228686,1.0,0.9421,0.9627,0.9777,317,ok,True
+534,534,Karimnagar,28,28,3,Andhra Pradesh,True,Karimnagar,ANDHRA PRADESH,11960.5,3776269,1.0,0.9632,0.979,0.9835,534,ok,True
+74,074,Karnal,06,6,6,Haryana,True,Karnal,HARYANA,2648.6,1505324,1.0,0.9058,0.9173,0.9864,74,ok,True
+613,613,Karur,33,33,12,Tamil Nadu,True,Karur ,TAMIL NADU,2912.5,1064493,1.0,0.9756,0.9891,0.9862,613,ok,True
+588,588,Kasaragod,32,32,1,Kerala,True,Kasaragod,KERALA,1976.6,1307375,1.0,0.967,0.9869,0.9796,588,ok,True
+7,007,Kathua,01,1,7,Jammu & Kashmir,True,Kathua,JAMMU & KASHMIR,2363.6,616435,1.0,0.8932,0.9681,0.9203,7,ok,True
+212,212,Katihar,10,10,10,Bihar,True,Katihar,BIHAR,3070.3,3071029,1.0,0.9596,0.9763,0.9826,212,ok,True
+450,450,Katni,23,23,33,Madhya Pradesh,True,Katni ,MADHYA PRADESH,5085.3,1292042,1.0,0.9662,0.9837,0.982,450,ok,True
+174,174,Kaushambi,09,9,43,Uttar Pradesh,True,Kaushambi,UTTAR PRADESH,2037.7,1599596,1.0,0.855,0.8675,0.9834,174,ok,True
+379,379,Kendrapara,21,21,10,Odisha,True,Kendrapara ,ODISHA,2488.5,1440361,1.0,0.9357,0.9836,0.9505,379,ok,True
+375,375,Kendujhar,21,21,6,Odisha,True,Kendujhar,ODISHA,8343.3,1801733,1.0,0.9889,0.9951,0.9938,375,ok,True
+223,223,Khagaria,10,10,21,Bihar,True,Khagaria,BIHAR,1495.4,1666886,1.0,0.9681,0.9851,0.9825,223,ok,True
+541,541,Khammam,28,28,10,Andhra Pradesh,True,Khammam,ANDHRA PRADESH,16164.1,2797370,1.0,0.9704,0.9819,0.988,541,ok,True
+483,483,Kheda,24,24,16,Gujarat,True,Kheda,GUJARAT,4015.0,2299885,1.0,0.9698,0.9794,0.99,483,ok,True
+153,153,Kheri,09,9,22,Uttar Pradesh,True,Kheri,UTTAR PRADESH,7738.5,4021243,1.0,0.9686,0.9827,0.9854,153,ok,True
+386,386,Khordha,21,21,17,Odisha,True,Khordha ,ODISHA,2762.7,2251673,1.0,0.922,0.984,0.936,386,ok,True
+365,365,Khunti,20,20,20,Jharkhand,True,Khunti,JHARKHAND,2719.3,531885,1.0,0.8847,0.9252,0.9529,365,ok,True
+34,034,Kinnaur,02,2,12,Himachal Pradesh,True,Kinnaur,HIMACHAL PRADESH,6484.8,84121,1.0,0.9676,0.9758,0.9913,34,ok,True
+269,269,Kiphire,13,13,9,Nagaland,True,Kiphire,NAGALAND,1153.6,74004,1.0,0.9493,0.9808,0.9673,269,ok,True
+210,210,Kishanganj,10,10,8,Bihar,True,Kishanganj,BIHAR,1940.9,1690400,1.0,0.9154,0.9677,0.9443,210,ok,True
+18,018,Kishtwar,01,1,18,Jammu & Kashmir,True,Kishtwar,JAMMU & KASHMIR,8637.4,230696,1.0,0.8333,0.8965,0.922,18,ok,True
+329,329,Koch Bihar,19,19,3,West Bengal,True,Koch Bihar ,WEST BENGAL,3420.8,2819086,1.0,0.9207,0.9553,0.9621,329,ok,True
+576,576,Kodagu,29,29,22,Karnataka,True,Kodagu,KARNATAKA,4136.6,554519,1.0,0.9797,0.9895,0.99,576,ok,True
+348,348,Kodarma,20,20,3,Jharkhand,True,Kodarma,JHARKHAND,2525.8,716259,1.0,0.6256,0.637,0.9722,348,check,True
+270,270,Kohima,13,13,10,Nagaland,True,Kohima,NAGALAND,1483.8,267988,1.0,0.7951,0.8288,0.9513,270,check,True
+300,300,Kokrajhar,18,18,1,Assam,True,Kokrajhar,ASSAM,3188.3,887142,1.0,0.8825,0.9309,0.9443,300,ok,True
+581,581,Kolar,29,29,27,Karnataka,True,Kolar,KARNATAKA,4010.0,1536401,1.0,0.979,0.9885,0.9903,581,ok,True
+282,282,Kolasib,15,15,2,Mizoram,True,Kolasib,MIZORAM,1353.1,83955,1.0,0.8355,0.9856,0.8458,282,ok,True
+530,530,Kolhapur,27,27,34,Maharashtra,True,Kolhapur,MAHARASHTRA,7713.8,3876001,1.0,0.9815,0.9923,0.989,530,ok,True
+342,342,Kolkata,19,19,16,West Bengal,True,Kolkata,WEST BENGAL,91.8,4496694,1.0,0.7555,0.8948,0.8292,342,check,True
+600,600,Kollam,32,32,13,Kerala,True,Kollam,KERALA,2503.1,2635375,1.0,0.9754,0.9869,0.9882,600,ok,True
+560,560,Koppal,29,29,6,Karnataka,True,Koppal,KARNATAKA,5601.1,1389920,1.0,0.989,0.9946,0.9944,560,ok,True
+398,398,Koraput,21,21,29,Odisha,True,Koraput,ODISHA,8748.1,1379647,1.0,0.9378,0.9487,0.9879,398,ok,True
+404,404,Korba,22,22,5,Chhattisgarh,True,Korba ,CHHATTISGARH,6614.6,1206640,1.0,0.9829,0.9931,0.9897,404,ok,True
+400,400,Koriya,22,22,1,Chhattisgarh,True,Koriya,CHHATTISGARH,6669.2,658917,1.0,0.9857,0.9907,0.9949,400,ok,True
+127,127,Kota,08,8,29,Rajasthan,True,Kota,RAJASTHAN,5534.3,1951014,1.0,0.8614,0.8925,0.9612,127,ok,True
+597,597,Kottayam,32,32,10,Kerala,True,Kottayam,KERALA,2224.8,1974551,1.0,0.9795,0.9883,0.991,597,ok,True
+591,591,Kozhikode,32,32,4,Kerala,True,Kozhikode,KERALA,2346.0,3086293,1.0,0.9866,0.9943,0.9922,591,ok,True
+547,547,Krishna,28,28,16,Andhra Pradesh,True,Krishna,ANDHRA PRADESH,8606.9,4517398,1.0,0.9342,0.9772,0.955,547,ok,True
+631,631,Krishnagiri,33,33,30,Tamil Nadu,True,Krishnagiri,TAMIL NADU,5174.5,1879809,1.0,0.9773,0.987,0.99,631,ok,True
+15,015,Kulgam,01,1,15,Jammu & Kashmir,True,Kulgam,JAMMU & KASHMIR,1332.5,424483,1.0,0.7207,0.7894,0.8922,15,check,True
+26,026,Kullu,02,2,4,Himachal Pradesh,True,Kullu,HIMACHAL PRADESH,5527.9,437903,1.0,0.9828,0.9898,0.9929,26,ok,True
+1,001,Kupwara,01,1,1,Jammu & Kashmir,True,Kupwara,JAMMU & KASHMIR,2013.4,870354,1.0,0.6036,0.9562,0.6208,1,check,True
+552,552,Kurnool,28,28,21,Andhra Pradesh,True,Kurnool,ANDHRA PRADESH,17924.4,4053463,1.0,0.9792,0.9852,0.9939,552,ok,True
+72,072,Kurukshetra,06,6,4,Haryana,True,Kurukshetra,HARYANA,1575.0,964655,1.0,0.8747,0.9659,0.9026,72,ok,True
+256,256,Kurung Kumey,12,12,12,Arunanchal Pradesh,True,Kurung Kumey,ARUNACHAL PRADESH,6811.3,92076,1.0,0.9379,0.9478,0.989,256,ok,True
+189,189,Kushinagar,09,9,58,Uttar Pradesh,True,Kushinagar,UTTAR PRADESH,2897.0,3564544,1.0,0.9795,0.9879,0.9913,189,ok,True
+25,025,Lahul & Spiti,02,2,3,Himachal Pradesh,True,Lahul & Spiti,HIMACHAL PRADESH,13873.8,31564,1.0,0.9828,0.9939,0.9888,25,ok,True
+307,307,Lakhimpur,18,18,8,Assam,True,Lakhimpur,ASSAM,2895.9,1042137,1.0,0.9181,0.9762,0.9392,307,ok,True
+227,227,Lakhisarai,10,10,25,Bihar,True,Lakhisarai,BIHAR,1271.1,1000912,1.0,0.8944,0.926,0.9633,227,ok,True
+167,167,Lalitpur,09,9,36,Uttar Pradesh,True,Lalitpur,UTTAR PRADESH,5070.2,1221592,1.0,0.9868,0.9931,0.9936,167,ok,True
+359,359,Latehar,20,20,14,Jharkhand,True,Latehar,JHARKHAND,4276.4,726978,1.0,0.9798,0.9935,0.9861,359,ok,True
+524,524,Latur,27,27,28,Maharashtra,True,Latur,MAHARASHTRA,6787.6,2454196,1.0,0.9242,0.9924,0.9308,524,ok,True
+287,287,Lawangtlai,15,15,7,Mizoram,True,Lawngtlai,MIZORAM,2006.4,117894,0.947,0.7679,0.9808,0.7796,287,check,True
+3,003,Leh (ladakh),01,1,3,Jammu & Kashmir,True,Leh(Ladakh),JAMMU & KASHMIR,80482.0,133487,1.0,0.5055,0.9898,0.5081,3,check,True
+356,356,Lohardaga,20,20,11,Jharkhand,True,Lohardaga,JHARKHAND,1503.9,461790,1.0,0.9817,0.9922,0.9893,356,ok,True
+259,259,Lohit,12,12,15,Arunanchal Pradesh,True,Lohit,ARUNACHAL PRADESH,3909.4,145726,1.0,0.958,0.9686,0.9887,259,ok,True
+268,268,Longleng,13,13,8,Nagaland,True,Longleng,NAGALAND,566.7,50484,1.0,0.9282,0.9538,0.972,268,ok,True
+258,258,Lower Dibang Valley,12,12,14,Arunanchal Pradesh,True,Lower Dibang Valley,ARUNACHAL PRADESH,5710.2,54080,1.0,0.5959,0.6073,0.9695,258,check,True
+255,255,Lower Subansiri,12,12,11,Arunanchal Pradesh,True,Lower Subansiri,ARUNACHAL PRADESH,2488.7,83030,1.0,0.8568,0.9758,0.8754,255,ok,True
+157,157,Lucknow,09,9,26,Uttar Pradesh,True,Lucknow,UTTAR PRADESH,2549.3,4589838,1.0,0.9816,0.989,0.9925,157,ok,True
+41,041,Ludhiana,03,3,7,Punjab,True,Ludhiana,PUNJAB,3596.3,3498739,1.0,0.9361,0.9813,0.953,41,ok,True
+286,286,Lunglei,15,15,6,Mizoram,True,Lunglei,MIZORAM,4537.8,161428,1.0,0.9781,0.9892,0.9886,286,ok,True
+213,213,Madhepura,10,10,11,Bihar,True,Madhepura,BIHAR,1843.2,2001762,1.0,0.9419,0.9604,0.98,213,ok,True
+207,207,Madhubani,10,10,5,Bihar,True,Madhubani,BIHAR,3452.4,4487379,1.0,0.9594,0.9882,0.9705,207,ok,True
+623,623,Madurai,33,33,22,Tamil Nadu,True,Madurai,TAMIL NADU,3719.6,3038252,1.0,0.9755,0.9893,0.9859,623,ok,True
+187,187,Maharajganj,09,9,56,Uttar Pradesh,True,Mahrajganj,UTTAR PRADESH,2910.0,2684703,0.952,0.9583,0.9865,0.9711,187,ok,True
+411,411,Mahasamund,22,22,12,Chhattisgarh,True,Mahasamund,CHHATTISGARH,4755.3,1032754,1.0,0.9702,0.9875,0.9822,411,ok,True
+538,538,Mahbubnagar,28,28,7,Andhra Pradesh,True,Mahbubnagar,ANDHRA PRADESH,18488.1,4053028,1.0,0.9754,0.989,0.9861,538,ok,True
+636,636,Mahe,34,34,3,Puducherry,True,Mahe,PUDUCHERRY,9.9,41816,1.0,0.7018,0.7876,0.8656,636,check,True
+84,084,Mahendragarh,06,6,16,Haryana,True,Mahendragarh,HARYANA,1936.9,922088,1.0,0.9389,0.9694,0.9676,84,ok,True
+471,471,Mahesana,24,24,4,Gujarat,True,Mahesana,GUJARAT,4434.6,2035064,1.0,0.9553,0.9747,0.9797,471,ok,True
+169,169,Mahoba,09,9,38,Uttar Pradesh,True,Mahoba,UTTAR PRADESH,2884.1,875958,1.0,0.8597,0.9888,0.8682,169,ok,True
+148,148,Mainpuri,09,9,17,Uttar Pradesh,True,Mainpuri,UTTAR PRADESH,2710.4,1868529,1.0,0.9546,0.9837,0.9699,148,ok,True
+592,592,Malappuram,32,32,5,Kerala,True,Malappuram,KERALA,3587.0,4112920,1.0,0.9854,0.9914,0.9938,592,ok,True
+332,332,Maldah,19,19,6,West Bengal,True,Maldah ,WEST BENGAL,3613.7,3988845,1.0,0.9331,0.9642,0.9665,332,ok,True
+399,399,Malkangiri,21,21,30,Odisha,True,Malkangiri  ,ODISHA,5851.5,613192,1.0,0.9668,0.9774,0.9889,399,ok,True
+281,281,Mamit,15,15,1,Mizoram,True,Mamit,MIZORAM,3048.2,86364,1.0,0.9657,0.9864,0.9787,281,ok,True
+27,027,Mandi,02,2,5,Himachal Pradesh,True,Mandi,HIMACHAL PRADESH,3967.1,999777,1.0,0.9862,0.9924,0.9937,27,ok,True
+454,454,Mandla,23,23,37,Madhya Pradesh,True,Mandla,MADHYA PRADESH,7581.9,1054905,1.0,0.979,0.9871,0.9918,454,ok,True
+433,433,Mandsaur,23,23,16,Madhya Pradesh,True,Mandsaur,MADHYA PRADESH,5666.3,1340411,1.0,0.9355,0.9592,0.9743,433,ok,True
+573,573,Mandya,29,29,19,Karnataka,True,Mandya,KARNATAKA,4977.4,1805769,1.0,0.9859,0.9944,0.9913,573,ok,True
+47,047,Mansa,03,3,13,Punjab,True,Mansa,PUNJAB,2218.6,769751,1.0,0.9669,0.9795,0.9869,47,ok,True
+304,304,Marigaon,18,18,5,Assam,True,Morigaon,ASSAM,1552.3,957423,0.875,0.9011,0.9372,0.9589,304,ok,True
+145,145,Mathura,09,9,14,Uttar Pradesh,True,Mathura,UTTAR PRADESH,3367.1,2547184,1.0,0.9705,0.9833,0.9868,145,ok,True
+192,192,Mau,09,9,61,Uttar Pradesh,True,Mau,UTTAR PRADESH,1701.1,2205968,1.0,0.935,0.9782,0.9549,192,ok,True
+376,376,Mayurbhanj,21,21,7,Odisha,True,Mayurbhanj,ODISHA,10474.9,2519738,1.0,0.9902,0.994,0.9962,376,ok,True
+535,535,Medak,28,28,4,Andhra Pradesh,True,Medak,ANDHRA PRADESH,9814.5,3033288,1.0,0.9766,0.9856,0.9908,535,ok,True
+138,138,Meerut,09,9,7,Uttar Pradesh,True,Meerut,UTTAR PRADESH,2622.3,3443689,1.0,0.9169,0.9531,0.9603,138,ok,True
+87,087,Mewat,06,6,19,Haryana,True,Mewat ,HARYANA,1472.6,1089263,1.0,0.9139,0.9674,0.943,87,ok,True
+199,199,Mirzapur,09,9,68,Uttar Pradesh,True,Mirzapur,UTTAR PRADESH,4532.0,2496970,1.0,0.9545,0.9663,0.9874,199,ok,True
+42,042,Moga,03,3,8,Punjab,True,Moga,PUNJAB,2354.2,995746,1.0,0.9357,0.9437,0.9911,42,ok,True
+262,262,Mokokchung,13,13,2,Nagaland,True,Mokokchung,NAGALAND,1612.4,194622,1.0,0.9668,0.9832,0.983,262,ok,True
+261,261,Mon,13,13,1,Nagaland,True,Mon,NAGALAND,1848.8,250260,1.0,0.8362,0.9844,0.8474,261,ok,True
+135,135,Moradabad,09,9,4,Uttar Pradesh,True,Moradabad,UTTAR PRADESH,3638.5,4772006,1.0,0.9025,0.9673,0.9309,135,ok,True
+419,419,Morena,23,23,2,Madhya Pradesh,True,Morena,MADHYA PRADESH,5005.5,1965970,1.0,0.9851,0.9927,0.9923,419,ok,True
+44,044,Muktsar,03,3,10,Punjab,True,Muktsar,PUNJAB,2613.2,901896,1.0,0.966,0.9897,0.9758,44,ok,True
+519,519,Mumbai,27,27,23,Maharashtra,True,Mumbai,MAHARASHTRA,150.1,3085411,1.0,0.4009,0.409,0.9532,519,unreliable,True
+518,518,Mumbai Suburban,27,27,22,Maharashtra,True,Mumbai Suburban,MAHARASHTRA,455.0,9356962,1.0,0.9413,0.9494,0.991,518,ok,True
+226,226,Munger,10,10,24,Bihar,True,Munger,BIHAR,1436.7,1367765,1.0,0.9494,0.9674,0.9808,226,ok,True
+333,333,Murshidabad,19,19,7,West Bengal,True,Murshidabad ,WEST BENGAL,5361.1,7103807,1.0,0.9478,0.9846,0.9621,333,ok,True
+133,133,Muzaffarnagar,09,9,2,Uttar Pradesh,True,Muzaffarnagar,UTTAR PRADESH,4067.8,4143512,1.0,0.9544,0.9705,0.9829,133,ok,True
+216,216,Muzaffarpur,10,10,14,Bihar,True,Muzaffarpur,BIHAR,3195.4,4801062,1.0,0.9682,0.9833,0.9844,216,ok,True
+577,577,Mysore,29,29,23,Karnataka,True,Mysore,KARNATAKA,6346.4,3001127,1.0,0.9836,0.9917,0.9917,577,ok,True
+397,397,Nabarangapur,21,21,28,Odisha,True,Nabarangapur ,ODISHA,5325.8,1220946,1.0,0.9586,0.9935,0.9647,397,ok,True
+336,336,Nadia,19,19,10,West Bengal,True,Nadia ,WEST BENGAL,3936.9,5167600,1.0,0.9517,0.9742,0.9763,336,ok,True
+305,305,Nagaon,18,18,6,Assam,True,Nagaon,ASSAM,4010.8,2823768,1.0,0.9422,0.975,0.9655,305,ok,True
+112,112,Nagaur,08,8,14,Rajasthan,True,Nagaur,RAJASTHAN,17728.2,3307743,1.0,0.9777,0.9927,0.9848,112,ok,True
+505,505,Nagpur,27,27,9,Maharashtra,True,Nagpur,MAHARASHTRA,9973.7,4653570,1.0,0.9881,0.9924,0.9956,505,ok,True
+66,066,Nainital,05,5,11,Uttarakhand,True,Nainital,UTTARAKHAND,4155.1,954605,1.0,0.9496,0.9565,0.9925,66,ok,True
+229,229,Nalanda,10,10,27,Bihar,True,Nalanda,BIHAR,2343.4,2877653,1.0,0.9328,0.9695,0.9609,229,ok,True
+323,323,Nalbari,18,18,24,Assam,True,Nalbari,ASSAM,1035.9,771639,1.0,0.9135,0.9617,0.948,323,ok,True
+539,539,Nalgonda,28,28,8,Andhra Pradesh,True,Nalgonda,ANDHRA PRADESH,14168.6,3488809,1.0,0.9735,0.9914,0.9817,539,ok,True
+609,609,Namakkal,33,33,8,Tamil Nadu,True,Namakkal   ,TAMIL NADU,3427.5,1726601,1.0,0.9762,0.9898,0.9861,609,ok,True
+511,511,Nanded,27,27,15,Maharashtra,True,Nanded,MAHARASHTRA,10652.3,3361292,1.0,0.9726,0.9833,0.989,511,ok,True
+497,497,Nandurbar,27,27,1,Maharashtra,True,Nandurbar,MAHARASHTRA,5930.5,1648295,1.0,0.9737,0.9919,0.9815,497,ok,True
+415,415,Narayanpur,22,22,16,Chhattisgarh,True,Narayanpur,CHHATTISGARH,4294.7,139820,1.0,0.8575,0.882,0.9686,415,ok,True
+487,487,Narmada,24,24,20,Gujarat,True,Narmada,GUJARAT,2837.9,590297,1.0,0.9702,0.9836,0.9861,487,ok,True
+452,452,Narsimhapur,23,23,35,Madhya Pradesh,True,Narsimhapur,MADHYA PRADESH,5168.1,1091854,1.0,0.982,0.9901,0.9917,452,ok,True
+516,516,Nashik,27,27,20,Maharashtra,True,Nashik,MAHARASHTRA,15637.7,6107187,1.0,0.9896,0.9932,0.9963,516,ok,True
+490,490,Navsari,24,24,23,Gujarat,True,Navsari  ,GUJARAT,2237.2,1329672,1.0,0.9648,0.9773,0.9869,490,ok,True
+237,237,Nawada,10,10,35,Bihar,True,Nawada,BIHAR,2492.3,2219146,1.0,0.949,0.976,0.9717,237,ok,True
+385,385,Nayagarh,21,21,16,Odisha,True,Nayagarh  ,ODISHA,3908.8,962789,1.0,0.9829,0.9921,0.9906,385,ok,True
+432,432,Neemuch,23,23,15,Madhya Pradesh,True,Neemuch ,MADHYA PRADESH,4179.8,826067,1.0,0.8714,0.9477,0.9154,432,ok,True
+550,550,Sri Potti Sriramulu Nellore,28,28,19,Andhra Pradesh,True,Sri Potti Sriramulu Nellore,ANDHRA PRADESH,13200.8,2963557,1.0,0.9691,0.9877,0.9809,550,ok,True
+94,094,New Delhi,07,7,5,NCT of Delhi,True,New Delhi,NCT OF DELHI,38.6,142004,1.0,0.767,0.8366,0.9021,94,check,True
+533,533,Nizamabad,28,28,2,Andhra Pradesh,True,Nizamabad,ANDHRA PRADESH,7953.6,2551335,1.0,0.9758,0.9907,0.9849,533,ok,True
+91,091,North,07,7,2,NCT of Delhi,True,North,NCT OF DELHI,69.3,887978,1.0,0.6938,0.8244,0.8142,91,check,True
+241,241,North,11,11,1,Sikkim,True,North  District,SIKKIM,4277.5,43709,0.556,0.9779,0.9844,0.9932,241,ok,True
+337,337,North 24 Parganas,19,19,11,West Bengal,True,North Twenty Four Parganas,WEST BENGAL,5829.7,10009781,0.722,0.6387,0.6594,0.953,337,check,True
+315,315,Dima Hasao,18,18,16,Assam,True,Dima Hasao,ASSAM,4926.1,214102,1.0,0.9788,0.9871,0.9915,315,ok,True
+92,092,North East,07,7,3,NCT of Delhi,True,North East,NCT OF DELHI,62.8,2241624,1.0,0.701,0.7606,0.8995,92,check,True
+585,585,North Goa,30,30,1,Goa,True,North Goa,GOA,1690.1,818008,1.0,0.9565,0.9946,0.9615,585,ok,True
+292,292,North Tripura,16,16,4,Tripura,True,North Tripura,TRIPURA,2054.4,693947,1.0,0.9489,0.9735,0.974,292,ok,True
+90,090,North West,07,7,1,NCT of Delhi,True,North West,NCT OF DELHI,444.7,3656539,1.0,0.9193,0.9566,0.9593,90,ok,True
+394,394,Nuapada,21,21,25,Odisha,True,Nuapada,ODISHA,3883.1,610382,1.0,0.9821,0.9896,0.9923,394,ok,True
+525,525,Osmanabad,27,27,29,Maharashtra,True,Osmanabad,MAHARASHTRA,7606.2,1657576,1.0,0.9794,0.9903,0.9889,525,ok,True
+353,353,Pakur,20,20,8,Jharkhand,True,Pakur,JHARKHAND,1821.9,900422,1.0,0.9637,0.9813,0.9817,353,ok,True
+593,593,Palakkad,32,32,6,Kerala,True,Palakkad,KERALA,4516.0,2809934,1.0,0.9792,0.9886,0.9904,593,ok,True
+358,358,Palamu,20,20,13,Jharkhand,True,Palamu,JHARKHAND,4437.2,1939869,1.0,0.9757,0.9848,0.9906,358,ok,True
+118,118,Pali,08,8,20,Rajasthan,True,Pali,RAJASTHAN,12407.8,2037573,1.0,0.9852,0.9936,0.9915,118,ok,True
+89,089,Palwal,06,6,21,Haryana,True,Palwal ,HARYANA,1328.4,1042708,1.0,0.8762,0.9415,0.9266,89,ok,True
+484,484,Panch Mahals,24,24,17,Gujarat,True,Panch Mahals,GUJARAT,5322.9,2390776,1.0,0.9672,0.9779,0.9888,484,ok,True
+69,069,Panchkula,06,6,1,Haryana,True,Panchkula,HARYANA,851.6,561293,1.0,0.8906,0.9687,0.917,69,ok,True
+75,075,Panipat,06,6,7,Haryana,True,Panipat,HARYANA,1230.9,1205437,1.0,0.9372,0.9834,0.9522,75,ok,True
+426,426,Panna,23,23,9,Madhya Pradesh,True,Panna,MADHYA PRADESH,7128.4,1016520,1.0,0.9802,0.9903,0.9897,426,ok,True
+248,248,Papum Pare,12,12,4,Arunanchal Pradesh,True,Papum Pare,ARUNACHAL PRADESH,3795.5,176573,1.0,0.9765,0.9873,0.9889,248,ok,True
+513,513,Parbhani,27,27,17,Maharashtra,True,Parbhani,MAHARASHTRA,6371.4,1836086,1.0,0.9408,0.9534,0.9861,513,ok,True
+203,203,Pashchim Champaran,10,10,1,Bihar,True,Pashchim Champaran,BIHAR,5268.8,3935042,1.0,0.9846,0.9909,0.9936,203,ok,True
+344,344,Pashchim Medinipur,19,19,18,West Bengal,True,Paschim Medinipur,WEST BENGAL,9421.5,5913457,0.97,0.987,0.993,0.9939,344,ok,True
+368,368,Pashchimi Singhbhum,20,20,23,Jharkhand,True,Pashchimi Singhbhum,JHARKHAND,7248.7,1502338,1.0,0.9882,0.995,0.9931,368,ok,True
+470,470,Patan,24,24,3,Gujarat,True,Patan  ,GUJARAT,5675.1,1343734,1.0,0.9566,0.9892,0.9667,470,ok,True
+599,599,Pathanamthitta,32,32,12,Kerala,True,Pathanamthitta,KERALA,2661.3,1197412,1.0,0.9613,0.9813,0.9791,599,ok,True
+48,048,Patiala,03,3,14,Punjab,True,Patiala,PUNJAB,3340.5,1895686,1.0,0.9061,0.9442,0.9574,48,ok,True
+230,230,Patna,10,10,28,Bihar,True,Patna,BIHAR,3216.9,5838465,1.0,0.9374,0.969,0.9664,230,ok,True
+615,615,Perambalur,33,33,14,Tamil Nadu,True,Perambalur  ,TAMIL NADU,1764.7,565223,1.0,0.9682,0.9816,0.9861,615,ok,True
+271,271,Peren,13,13,11,Nagaland,True,Peren,NAGALAND,1749.8,95219,1.0,0.9162,0.9334,0.9802,271,ok,True
+266,266,Phek,13,13,6,Nagaland,True,Phek,NAGALAND,2060.3,163418,1.0,0.9036,0.9115,0.9905,266,ok,True
+151,151,Pilibhit,09,9,20,Uttar Pradesh,True,Pilibhit,UTTAR PRADESH,3605.9,2031007,1.0,0.8242,0.9248,0.8834,151,ok,True
+62,062,Pithoragarh,05,5,7,Uttarakhand,True,Pithoragarh,UTTARAKHAND,7268.3,483439,1.0,0.9787,0.9875,0.991,62,ok,True
+478,478,Porbandar,24,24,11,Gujarat,True,Porbandar ,GUJARAT,2299.2,585449,1.0,0.972,0.9911,0.9806,478,ok,True
+549,549,Prakasam,28,28,18,Andhra Pradesh,True,Prakasam,ANDHRA PRADESH,17815.2,3397448,1.0,0.9695,0.9818,0.9873,549,ok,True
+131,131,Pratapgarh,08,8,33,Rajasthan,True,Pratapgarh,RAJASTHAN,4326.9,867848,1.0,0.8612,0.9377,0.9135,131,ok,True
+173,173,Pratapgarh,09,9,42,Uttar Pradesh,True,Pratapgarh,UTTAR PRADESH,3728.5,3209141,1.0,0.9718,0.9856,0.9858,173,ok,True
+621,621,Pudukkottai,33,33,20,Tamil Nadu,True,Pudukkottai,TAMIL NADU,4687.2,1618345,1.0,0.9761,0.9881,0.9878,621,ok,True
+12,012,Pulwama,01,1,12,Jammu & Kashmir,True,Pulwama,JAMMU & KASHMIR,614.8,560440,1.0,0.6377,0.9627,0.6539,12,check,True
+5,005,Punch,01,1,5,Jammu & Kashmir,True,Punch,JAMMU & KASHMIR,2403.7,476835,1.0,0.4822,0.8857,0.5142,5,unreliable,True
+521,521,Pune,27,27,25,Maharashtra,True,Pune,MAHARASHTRA,15740.2,9429408,1.0,0.991,0.9954,0.9956,521,ok,True
+204,204,Purba Champaran,10,10,2,Bihar,True,Purba Champaran,BIHAR,3995.1,5099371,1.0,0.9782,0.9878,0.9901,204,ok,True
+345,345,Purba Medinipur,19,19,19,West Bengal,True,Purba Medinipur,WEST BENGAL,4064.6,5095875,1.0,0.9247,0.9679,0.954,345,ok,True
+357,357,Purbi Singhbhum,20,20,12,Jharkhand,True,Purbi Singhbhum,JHARKHAND,3586.2,2293919,1.0,0.9843,0.9912,0.993,357,ok,True
+387,387,Puri,21,21,18,Odisha,True,Puri,ODISHA,3571.0,1698730,1.0,0.9589,0.9714,0.9868,387,ok,True
+211,211,Purnia,10,10,9,Bihar,True,Purnia,BIHAR,3254.6,3264619,1.0,0.9593,0.9763,0.9821,211,ok,True
+340,340,Puruliya,19,19,14,West Bengal,True,Puruliya,WEST BENGAL,6271.8,2930115,1.0,0.9622,0.981,0.9804,340,ok,True
+158,158,Rae Bareli,09,9,27,Uttar Pradesh,True,Rae Bareli,UTTAR PRADESH,4637.3,3405559,1.0,0.9709,0.9834,0.9871,158,ok,True
+559,559,Raichur,29,29,5,Karnataka,True,Raichur,KARNATAKA,8498.4,1928812,1.0,0.9906,0.9949,0.9957,559,ok,True
+403,403,Raigarh,22,22,4,Chhattisgarh,True,Raigarh,CHHATTISGARH,7118.9,1493984,1.0,0.9731,0.9832,0.9895,403,ok,True
+520,520,Raigarh,27,27,24,Maharashtra,True,Raigarh,MAHARASHTRA,7195.0,2634200,1.0,0.9696,0.9742,0.9951,520,ok,True
+410,410,Raipur,22,22,11,Chhattisgarh,True,Raipur,CHHATTISGARH,12506.3,4063872,1.0,0.9831,0.9902,0.9928,410,ok,True
+446,446,Raisen,23,23,29,Madhya Pradesh,True,Raisen,MADHYA PRADESH,8537.8,1331597,1.0,0.9762,0.9867,0.9891,446,ok,True
+6,006,Rajouri,01,1,6,Jammu & Kashmir,True,Rajouri,JAMMU & KASHMIR,1934.5,642415,1.0,0.7455,0.9674,0.7647,6,check,True
+442,442,Rajgarh,23,23,25,Madhya Pradesh,True,Rajgarh,MADHYA PRADESH,6154.5,1545814,1.0,0.9742,0.9903,0.9836,442,ok,True
+476,476,Rajkot,24,24,9,Gujarat,True,Rajkot,GUJARAT,11251.8,3804558,1.0,0.9796,0.9903,0.9891,476,ok,True
+408,408,Rajnandgaon,22,22,9,Chhattisgarh,True,Rajnandgaon,CHHATTISGARH,8094.8,1537133,1.0,0.9793,0.9905,0.9886,408,ok,True
+123,123,Rajsamand,08,8,25,Rajasthan,True,Rajsamand,RAJASTHAN,4823.2,1156597,1.0,0.9239,0.9441,0.9774,123,ok,True
+584,584,Ramanagara,29,29,30,Karnataka,True,Ramanagara,KARNATAKA,3537.9,1082636,1.0,0.9803,0.9896,0.9905,584,ok,True
+626,626,Ramanathapuram,33,33,25,Tamil Nadu,True,Ramanathapuram,TAMIL NADU,3973.0,1353445,1.0,0.9029,0.9852,0.9153,626,ok,True
+17,017,Ramban,01,1,17,Jammu & Kashmir,True,Ramban,JAMMU & KASHMIR,1115.1,283713,1.0,0.7401,0.8842,0.8196,17,check,True
+361,361,Ramgarh,20,20,16,Jharkhand,True,Ramgarh,JHARKHAND,1359.3,949443,1.0,0.8585,0.938,0.9101,361,ok,True
+136,136,Rampur,09,9,5,Uttar Pradesh,True,Rampur,UTTAR PRADESH,2581.7,2335819,1.0,0.8686,0.8925,0.9701,136,ok,True
+364,364,Ranchi,20,20,19,Jharkhand,True,Ranchi,JHARKHAND,4956.3,2914253,1.0,0.9216,0.9665,0.952,364,ok,True
+537,537,Rangareddy,28,28,6,Andhra Pradesh,True,Rangareddy,ANDHRA PRADESH,7593.8,5296741,1.0,0.9514,0.9716,0.9787,537,ok,True
+434,434,Ratlam,23,23,17,Madhya Pradesh,True,Ratlam,MADHYA PRADESH,4847.9,1455069,1.0,0.9786,0.9925,0.9859,434,ok,True
+528,528,Ratnagiri,27,27,32,Maharashtra,True,Ratnagiri,MAHARASHTRA,8307.4,1615069,1.0,0.981,0.9924,0.9885,528,ok,True
+396,396,Rayagada,21,21,27,Odisha,True,Rayagada  ,ODISHA,7403.0,967911,1.0,0.9764,0.9857,0.9904,396,ok,True
+20,020,Reasi,01,1,20,Jammu & Kashmir,True,Reasi,JAMMU & KASHMIR,2290.2,314667,1.0,0.7979,0.857,0.9204,20,check,True
+430,430,Rewa,23,23,13,Madhya Pradesh,True,Rewa,MADHYA PRADESH,6336.0,2365106,1.0,0.9849,0.9914,0.9934,430,ok,True
+85,085,Rewari,06,6,17,Haryana,True,Rewari,HARYANA,1497.8,900332,1.0,0.9221,0.9817,0.9382,85,ok,True
+297,297,Ri Bhoi,17,17,5,Meghalaya,True,Ribhoi,MEGHALAYA,2430.3,258840,1.0,0.963,0.9764,0.9859,297,ok,True
+82,082,Rohtak,06,6,14,Haryana,True,Rohtak,HARYANA,1726.6,1061204,1.0,0.9374,0.9554,0.9802,82,ok,True
+234,234,Rohtas,10,10,32,Bihar,True,Rohtas,BIHAR,3879.5,2959918,1.0,0.9797,0.9873,0.9922,234,ok,True
+58,058,Rudraprayag,05,5,3,Uttarakhand,True,Rudraprayag,UTTARAKHAND,1843.5,242285,1.0,0.904,0.9883,0.9137,58,ok,True
+51,051,Rupnagar,03,3,17,Punjab,True,Rupnagar,PUNJAB,1388.2,684627,1.0,0.9245,0.9575,0.9641,51,ok,True
+472,472,Sabar Kantha,24,24,5,Gujarat,True,Sabar Kantha,GUJARAT,7460.3,2428589,1.0,0.9746,0.9853,0.989,472,ok,True
+427,427,Sagar,23,23,10,Madhya Pradesh,True,Sagar,MADHYA PRADESH,10299.9,2378458,1.0,0.9863,0.9939,0.9923,427,ok,True
+132,132,Saharanpur,09,9,1,Uttar Pradesh,True,Saharanpur,UTTAR PRADESH,3737.6,3466382,1.0,0.9755,0.9868,0.9884,132,ok,True
+214,214,Saharsa,10,10,12,Bihar,True,Saharsa,BIHAR,1693.5,1900661,1.0,0.9518,0.9701,0.9806,214,ok,True
+352,352,Sahibganj,20,20,7,Jharkhand,True,Sahibganj,JHARKHAND,2202.2,1150567,1.0,0.9459,0.9722,0.9722,352,ok,True
+52,052,Sahibzada Ajit Singh Nagar,03,3,18,Punjab,True,Sahibzada Ajit Singh Nagar,PUNJAB,1111.2,994628,1.0,0.8714,0.9237,0.939,52,ok,True
+288,288,Saiha,15,15,8,Mizoram,True,Saiha,MIZORAM,1982.4,56574,1.0,0.7147,0.725,0.9805,288,check,True
+608,608,Salem,33,33,7,Tamil Nadu,True,Salem,TAMIL NADU,5250.4,3482056,1.0,0.9673,0.9852,0.9816,608,ok,True
+221,221,Samastipur,10,10,19,Bihar,True,Samastipur,BIHAR,2913.7,4261566,1.0,0.8783,0.9006,0.9726,221,ok,True
+22,022,Samba,01,1,22,Jammu & Kashmir,True,Samba,JAMMU & KASHMIR,985.0,318898,1.0,0.7559,0.8452,0.8774,22,check,True
+372,372,Sambalpur,21,21,3,Odisha,True,Sambalpur,ODISHA,6759.4,1041099,1.0,0.9558,0.9715,0.9835,372,ok,True
+531,531,Sangli,27,27,35,Maharashtra,True,Sangli,MAHARASHTRA,8610.7,2822143,1.0,0.979,0.9919,0.9868,531,ok,True
+53,053,Sangrur,03,3,19,Punjab,True,Sangrur,PUNJAB,3611.2,1655169,1.0,0.9646,0.9843,0.9797,53,ok,True
+186,186,Sant Kabir Nagar,09,9,55,Uttar Pradesh,True,Sant Kabir Nagar,UTTAR PRADESH,1605.4,1715183,1.0,0.8996,0.9598,0.9349,186,ok,True
+198,198,Sant Ravi Das Nagar(bhadohi),09,9,67,Uttar Pradesh,True,Sant Ravidas Nagar (Bhadohi),UTTAR PRADESH,1012.5,1578213,1.0,0.9652,0.9856,0.979,198,ok,True
+369,369,Saraikela-kharsawan,20,20,24,Jharkhand,True,Saraikela-Kharsawan,JHARKHAND,2659.7,1065056,1.0,0.9682,0.9862,0.9816,369,ok,True
+219,219,Saran (chhapra),10,10,17,Bihar,True,Saran,BIHAR,2652.8,3951862,0.588,0.9502,0.9816,0.9674,219,ok,True
+527,527,Satara,27,27,31,Maharashtra,True,Satara,MAHARASHTRA,10564.8,3003741,1.0,0.989,0.993,0.9959,527,ok,True
+429,429,Satna,23,23,12,Madhya Pradesh,True,Satna,MADHYA PRADESH,7530.9,2228935,1.0,0.9772,0.9899,0.9871,429,ok,True
+445,445,Sehore,23,23,28,Madhya Pradesh,True,Sehore,MADHYA PRADESH,6599.5,1311332,1.0,0.9434,0.9709,0.9709,445,ok,True
+272,272,Senapati,14,14,1,Manipur,True,Senapati,MANIPUR,3497.7,479148,1.0,0.8879,0.924,0.9578,272,ok,True
+456,456,Seoni,23,23,39,Madhya Pradesh,True,Seoni,MADHYA PRADESH,8794.9,1379131,1.0,0.9889,0.9949,0.9939,456,ok,True
+285,285,Serchhip,15,15,5,Mizoram,True,Serchhip,MIZORAM,1156.8,64937,1.0,0.9566,0.9775,0.9781,285,ok,True
+460,460,Shahdol,23,23,43,Madhya Pradesh,True,Shahdol,MADHYA PRADESH,5711.4,1066063,1.0,0.9785,0.9886,0.9897,460,ok,True
+39,039,Shahid Bhagat Singh Nagar,03,3,5,Punjab,True,Shahid Bhagat Singh Nagar ,PUNJAB,1305.1,612310,1.0,0.9546,0.9631,0.9908,39,ok,True
+152,152,Shahjahanpur,09,9,21,Uttar Pradesh,True,Shahjahanpur,UTTAR PRADESH,4670.7,3006538,1.0,0.8881,0.9065,0.9776,152,ok,True
+436,436,Shajapur,23,23,19,Madhya Pradesh,True,Shajapur,MADHYA PRADESH,6328.7,1512681,1.0,0.9645,0.9739,0.9902,436,ok,True
+228,228,Sheikhpura,10,10,26,Bihar,True,Sheikhpura,BIHAR,641.4,636342,1.0,0.8363,0.9475,0.8769,228,ok,True
+205,205,Sheohar,10,10,3,Bihar,True,Sheohar,BIHAR,289.3,656246,1.0,0.6234,0.9727,0.6345,205,check,True
+418,418,Sheopur,23,23,1,Madhya Pradesh,True,Sheopur ,MADHYA PRADESH,6571.6,687861,1.0,0.9757,0.9925,0.983,418,ok,True
+33,033,Shimla,02,2,11,Himachal Pradesh,True,Shimla,HIMACHAL PRADESH,5155.9,814010,1.0,0.982,0.9895,0.9924,33,ok,True
+568,568,Shimoga,29,29,14,Karnataka,True,Shimoga,KARNATAKA,8494.9,1752753,1.0,0.9865,0.9951,0.9912,568,ok,True
+423,423,Shivpuri,23,23,6,Madhya Pradesh,True,Shivpuri,MADHYA PRADESH,10517.4,1726050,1.0,0.9744,0.9785,0.9957,423,ok,True
+181,181,Shrawasti,09,9,50,Uttar Pradesh,True,Shrawasti,UTTAR PRADESH,2514.4,1117361,1.0,0.7505,0.7592,0.9848,181,check,True
+13,013,Shupiyan,01,1,13,Jammu & Kashmir,True,Shupiyan,JAMMU & KASHMIR,546.0,266215,1.0,0.6714,0.7766,0.8322,13,check,True
+311,311,Sivasagar,18,18,12,Assam,True,Sivasagar,ASSAM,2645.2,1151050,1.0,0.9702,0.986,0.9837,311,ok,True
+184,184,Siddharth Nagar,09,9,53,Uttar Pradesh,True,Siddharthnagar,UTTAR PRADESH,2843.1,2559297,1.0,0.9533,0.9872,0.9652,184,ok,True
+462,462,Sidhi,23,23,45,Madhya Pradesh,True,Sidhi,MADHYA PRADESH,4796.5,1127033,1.0,0.9825,0.9912,0.9911,462,ok,True
+111,111,Sikar,08,8,13,Rajasthan,True,Sikar,RAJASTHAN,7724.5,2677333,1.0,0.98,0.9912,0.9886,111,ok,True
+367,367,Simdega,20,20,22,Jharkhand,True,Simdega,JHARKHAND,3801.4,599578,1.0,0.9804,0.9881,0.9921,367,ok,True
+529,529,Sindhudurg,27,27,33,Maharashtra,True,Sindhudurg,MAHARASHTRA,5100.7,849651,1.0,0.9766,0.9904,0.9859,529,ok,True
+463,463,Singrauli,23,23,46,Madhya Pradesh,True,Singrauli,MADHYA PRADESH,5805.4,1178273,1.0,0.9829,0.9884,0.9944,463,ok,True
+32,032,Sirmaur,02,2,10,Himachal Pradesh,True,Sirmaur,HIMACHAL PRADESH,2821.8,529855,1.0,0.9818,0.994,0.9877,32,ok,True
+117,117,Sirohi,08,8,19,Rajasthan,True,Sirohi,RAJASTHAN,5182.0,1036346,1.0,0.9658,0.9799,0.9853,117,ok,True
+79,079,Sirsa,06,6,11,Haryana,True,Sirsa,HARYANA,4254.3,1295189,1.0,0.9821,0.9948,0.9871,79,ok,True
+206,206,Sitamarhi,10,10,4,Bihar,True,Sitamarhi,BIHAR,2340.1,3423574,1.0,0.9175,0.9286,0.9872,206,ok,True
+154,154,Sitapur,09,9,23,Uttar Pradesh,True,Sitapur,UTTAR PRADESH,5802.2,4483992,1.0,0.9798,0.9864,0.9932,154,ok,True
+622,622,Sivaganga,33,33,21,Tamil Nadu,True,Sivaganga,TAMIL NADU,4280.6,1339101,1.0,0.9352,0.9487,0.985,622,ok,True
+218,218,Siwan,10,10,16,Bihar,True,Siwan,BIHAR,2232.0,3330464,1.0,0.9692,0.9826,0.9862,218,ok,True
+31,031,Solan,02,2,9,Himachal Pradesh,True,Solan,HIMACHAL PRADESH,1965.4,580320,1.0,0.9669,0.9774,0.989,31,ok,True
+526,526,Solapur,27,27,30,Maharashtra,True,Solapur,MAHARASHTRA,14986.3,4317756,1.0,0.9842,0.9908,0.9933,526,ok,True
+392,392,Subarnapur,21,21,23,Odisha,True,Subarnapur,ODISHA,2368.3,610183,1.0,0.9684,0.9855,0.9825,392,ok,True
+200,200,Sonbhadra,09,9,69,Uttar Pradesh,True,Sonbhadra,UTTAR PRADESH,6811.4,1862559,1.0,0.968,0.9928,0.9749,200,ok,True
+76,076,Sonipat,06,6,8,Haryana,True,Sonipat,HARYANA,2165.7,1450001,1.0,0.9362,0.972,0.9622,76,ok,True
+306,306,Sonitpur,18,18,7,Assam,True,Sonitpur,ASSAM,5219.2,1924110,1.0,0.9722,0.9887,0.9831,306,ok,True
+98,098,South,07,7,9,NCT of Delhi,True,South,NCT OF DELHI,254.7,2731929,1.0,0.8548,0.9414,0.9029,98,ok,True
+243,243,South,11,11,3,Sikkim,True,South District,SIKKIM,733.9,146850,0.556,0.9257,0.9642,0.9587,243,ok,True
+343,343,South 24 Parganas,19,19,17,West Bengal,True,South Twenty Four Parganas,WEST BENGAL,5601.9,8161961,0.722,0.808,0.9174,0.8714,343,ok,True
+295,295,South Garo Hills,17,17,3,Meghalaya,True,South Garo Hills,MEGHALAYA,1930.8,142334,1.0,0.9746,0.9872,0.987,295,ok,True
+586,586,South Goa,30,30,2,Goa,True,South Goa,GOA,1960.4,640537,1.0,0.9625,0.9842,0.9776,586,ok,True
+290,290,South Tripura,16,16,2,Tripura,True,South Tripura ,TRIPURA,3158.4,876001,1.0,0.9487,0.9694,0.978,290,ok,True
+97,097,South West,07,7,8,NCT of Delhi,True,South West,NCT OF DELHI,436.1,2292958,1.0,0.8744,0.8982,0.9705,97,ok,True
+542,542,Srikakulam,28,28,11,Andhra Pradesh,True,Srikakulam,ANDHRA PRADESH,6355.7,2703114,1.0,0.8897,0.9071,0.9789,542,ok,True
+10,010,Srinagar,01,1,10,Jammu & Kashmir,True,Srinagar,JAMMU & KASHMIR,1069.2,1236829,1.0,0.329,0.3404,0.9077,11,unreliable,True
+179,179,Sultanpur,09,9,48,Uttar Pradesh,True,Sultanpur,UTTAR PRADESH,4434.4,3797117,1.0,0.9747,0.9887,0.9857,179,ok,True
+374,374,Sundargarh,21,21,5,Odisha,True,Sundargarh,ODISHA,9764.9,2093437,1.0,0.9834,0.9929,0.9904,374,ok,True
+208,208,Supaul,10,10,6,Bihar,True,Supaul,BIHAR,2407.7,2229076,1.0,0.9309,0.9685,0.96,208,ok,True
+492,492,Surat,24,24,25,Gujarat,True,Surat,GUJARAT,4353.9,6081322,1.0,0.9616,0.9806,0.9802,492,ok,True
+475,475,Surendranagar,24,24,8,Gujarat,True,Surendranagar,GUJARAT,10552.2,1756268,1.0,0.9611,0.9756,0.9848,475,ok,True
+401,401,Surguja,22,22,2,Chhattisgarh,True,Surguja,CHHATTISGARH,15802.5,2359886,1.0,0.9856,0.9926,0.9929,401,ok,True
+273,273,Tamenglong,14,14,2,Manipur,True,Tamenglong ,MANIPUR,4211.6,140651,1.0,0.92,0.9782,0.9392,273,ok,True
+50,050,Tarn Taran,03,3,16,Punjab,True,Tarn Taran,PUNJAB,2400.6,1119627,1.0,0.9675,0.9883,0.9787,50,ok,True
+245,245,Tawang,12,12,1,Arunanchal Pradesh,True,Tawang,ARUNACHAL PRADESH,2366.6,49977,1.0,0.9782,0.9889,0.9891,245,ok,True
+59,059,Tehri Garhwal,05,5,4,Uttarakhand,True,Tehri Garhwal,UTTARAKHAND,3882.8,618931,1.0,0.9727,0.9912,0.9812,59,ok,True
+517,517,Thane,27,27,21,Maharashtra,True,Thane,MAHARASHTRA,9571.8,11060148,1.0,0.9762,0.989,0.987,517,ok,True
+620,620,Thanjavur,33,33,19,Tamil Nadu,True,Thanjavur,TAMIL NADU,3415.2,2405890,1.0,0.9629,0.9841,0.9782,620,ok,True
+489,489,The Dangs,24,24,22,Gujarat,True,The Dangs,GUJARAT,1772.5,228291,1.0,0.9797,0.9894,0.9901,489,ok,True
+611,611,The Nilgiris,33,33,10,Tamil Nadu,True,The Nilgiris,TAMIL NADU,2570.2,735394,1.0,0.9756,0.9893,0.986,611,ok,True
+624,624,Theni,33,33,23,Tamil Nadu,True,Theni  ,TAMIL NADU,2871.7,1245899,1.0,0.9835,0.9938,0.9896,624,ok,True
+602,602,Thiruvallur,33,33,1,Tamil Nadu,True,Thiruvallur,TAMIL NADU,3277.3,3728104,1.0,0.9003,0.9673,0.9285,602,ok,True
+601,601,Thiruvananthapuram,32,32,14,Kerala,True,Thiruvananthapuram,KERALA,2193.4,3301427,1.0,0.9821,0.9891,0.9928,601,ok,True
+619,619,Thiruvarur,33,33,18,Tamil Nadu,True,Thiruvarur,TAMIL NADU,2287.1,1264277,1.0,0.9005,0.9151,0.9826,619,ok,True
+627,627,Thoothukkudi,33,33,26,Tamil Nadu,True,Thoothukkudi,TAMIL NADU,4662.2,1750176,1.0,0.9745,0.9864,0.9878,627,ok,True
+276,276,Thoubal,14,14,5,Manipur,True,Thoubal,MANIPUR,716.6,422168,1.0,0.7297,0.7781,0.9215,276,check,True
+594,594,Thrissur,32,32,7,Kerala,True,Thrissur,KERALA,3045.8,3121200,1.0,0.9822,0.9923,0.9897,594,ok,True
+424,424,Tikamgarh,23,23,7,Madhya Pradesh,True,Tikamgarh,MADHYA PRADESH,5089.0,1445166,1.0,0.974,0.9837,0.9899,424,ok,True
+309,309,Tinsukia,18,18,10,Assam,True,Tinsukia,ASSAM,3809.4,1327929,1.0,0.9607,0.982,0.9779,309,ok,True
+254,254,Tirap,12,12,10,Arunanchal Pradesh,True,Tirap,ARUNACHAL PRADESH,2038.9,111975,1.0,0.9685,0.9824,0.9855,254,ok,True
+614,614,Tiruchirappalli,33,33,13,Tamil Nadu,True,Tiruchirappalli,TAMIL NADU,4538.7,2722290,1.0,0.975,0.9856,0.9891,614,ok,True
+628,628,Tirunelveli,33,33,27,Tamil Nadu,True,Tirunelveli ,TAMIL NADU,6843.9,3077233,1.0,0.9858,0.9928,0.9929,628,ok,True
+633,633,Tiruppur,33,33,32,Tamil Nadu,True,Tiruppur,TAMIL NADU,5237.1,2479052,1.0,0.9316,0.9434,0.9868,633,ok,True
+606,606,Tiruvannamalai,33,33,5,Tamil Nadu,True,Tiruvannamalai,TAMIL NADU,6223.8,2464875,1.0,0.9823,0.9913,0.9908,606,ok,True
+120,120,Tonk,08,8,22,Rajasthan,True,Tonk,RAJASTHAN,7280.4,1421326,1.0,0.9614,0.9771,0.9835,120,ok,True
+267,267,Tuensang,13,13,7,Nagaland,True,Tuensang,NAGALAND,2479.4,196596,1.0,0.8479,0.8604,0.9831,267,ok,True
+571,571,Tumkur,29,29,17,Karnataka,True,Tumkur,KARNATAKA,10679.2,2678980,1.0,0.9851,0.9917,0.9933,571,ok,True
+130,130,Udaipur,08,8,32,Rajasthan,True,Udaipur,RAJASTHAN,11970.9,3068420,1.0,0.9252,0.9528,0.9697,130,ok,True
+326,326,Udalguri,18,18,27,Assam,True,Udalguri,ASSAM,2048.7,831668,1.0,0.8757,0.9279,0.9396,326,ok,True
+19,019,Udhampur,01,1,19,Jammu & Kashmir,True,Udhampur,JAMMU & KASHMIR,2406.0,554985,1.0,0.8158,0.8677,0.9317,19,ok,True
+67,067,Udham Singh Nagar,05,5,12,Uttarakhand,True,Udham Singh Nagar,UTTARAKHAND,2762.9,1648902,1.0,0.8174,0.8862,0.9132,67,ok,True
+569,569,Udupi,29,29,15,Karnataka,True,Udupi,KARNATAKA,3889.9,1177361,1.0,0.8914,0.908,0.9799,569,ok,True
+435,435,Ujjain,23,23,18,Madhya Pradesh,True,Ujjain,MADHYA PRADESH,6120.4,1986864,1.0,0.9735,0.9872,0.986,435,ok,True
+279,279,Ukhrul,14,14,8,Manipur,True,Ukhrul,MANIPUR,4475.0,183998,1.0,0.9765,0.9889,0.9873,279,ok,True
+431,431,Umaria,23,23,14,Madhya Pradesh,True,Umaria,MADHYA PRADESH,4609.3,644758,1.0,0.9791,0.9871,0.9918,431,ok,True
+29,029,Una,02,2,7,Himachal Pradesh,True,Una,HIMACHAL PRADESH,1545.2,521173,1.0,0.9764,0.9891,0.987,29,ok,True
+156,156,Unnao,09,9,25,Uttar Pradesh,True,Unnao,UTTAR PRADESH,4616.2,3108367,1.0,0.9647,0.979,0.9851,156,ok,True
+252,252,Upper Siang,12,12,8,Arunanchal Pradesh,True,Upper Siang,ARUNACHAL PRADESH,6791.8,35320,1.0,0.9865,0.9939,0.9925,252,ok,True
+249,249,Upper Subansiri,12,12,5,Arunanchal Pradesh,True,Upper Subansiri,ARUNACHAL PRADESH,6440.6,83448,1.0,0.9844,0.9911,0.9932,249,ok,True
+330,330,Uttar Dinajpur,19,19,4,West Bengal,True,Uttar Dinajpur,WEST BENGAL,3239.7,3007134,1.0,0.9096,0.9344,0.9717,330,ok,True
+563,563,Uttara Kannada,29,29,9,Karnataka,True,Uttara Kannada,KARNATAKA,10251.1,1437169,1.0,0.978,0.9929,0.9849,563,ok,True
+56,056,Uttarkashi,05,5,1,Uttarakhand,True,Uttarkashi,UTTARAKHAND,8081.0,330086,1.0,0.9701,0.982,0.9876,56,ok,True
+486,486,Vadodara,24,24,19,Gujarat,True,Vadodara,GUJARAT,7554.2,4165626,1.0,0.9768,0.9903,0.9862,486,ok,True
+220,220,Vaishali,10,10,18,Bihar,True,Vaishali,BIHAR,2012.5,3495021,1.0,0.9439,0.9675,0.9748,220,ok,True
+491,491,Valsad,24,24,24,Gujarat,True,Valsad,GUJARAT,3015.4,1705678,1.0,0.9556,0.9677,0.9871,491,ok,True
+197,197,Varanasi,09,9,66,Uttar Pradesh,True,Varanasi,UTTAR PRADESH,1556.1,3676841,1.0,0.9633,0.9761,0.9865,197,ok,True
+605,605,Vellore,33,33,4,Tamil Nadu,True,Vellore,TAMIL NADU,6107.2,3936331,1.0,0.9787,0.9895,0.989,605,ok,True
+443,443,Vidisha,23,23,26,Madhya Pradesh,True,Vidisha,MADHYA PRADESH,7339.9,1458875,1.0,0.9832,0.9912,0.9919,443,ok,True
+607,607,Viluppuram,33,33,6,Tamil Nadu,True,Viluppuram,TAMIL NADU,7231.2,3458873,1.0,0.9824,0.9914,0.9908,607,ok,True
+625,625,Virudunagar,33,33,24,Tamil Nadu,True,Virudhunagar,TAMIL NADU,4413.9,1942288,0.957,0.9469,0.9569,0.989,625,ok,True
+544,544,Visakhapatnam,28,28,13,Andhra Pradesh,True,Visakhapatnam,ANDHRA PRADESH,11495.6,4290589,1.0,0.9617,0.9877,0.9734,544,ok,True
+543,543,Vizianagaram,28,28,12,Andhra Pradesh,True,Vizianagaram,ANDHRA PRADESH,5623.6,2344474,1.0,0.8447,0.9638,0.8724,543,ok,True
+540,540,Warangal,28,28,9,Andhra Pradesh,True,Warangal,ANDHRA PRADESH,12876.1,3512576,1.0,0.9706,0.9892,0.981,540,ok,True
+504,504,Wardha,27,27,8,Maharashtra,True,Wardha,MAHARASHTRA,6341.3,1300774,1.0,0.9865,0.9931,0.9933,504,ok,True
+502,502,Washim,27,27,6,Maharashtra,True,Washim,MAHARASHTRA,5222.8,1197160,1.0,0.9664,0.9776,0.9883,502,ok,True
+590,590,Wayanad,32,32,3,Kerala,True,Wayanad,KERALA,2143.0,817420,1.0,0.9832,0.9928,0.9903,590,ok,True
+96,096,West,07,7,7,NCT of Delhi,True,West,NCT OF DELHI,122.6,2543243,1.0,0.8029,0.9347,0.8506,96,ok,True
+242,242,West,11,11,2,Sikkim,True,West District,SIKKIM,1204.8,136435,0.5,0.9652,0.9777,0.987,242,ok,True
+293,293,West Garo Hills,17,17,1,Meghalaya,True,West Garo Hills,MEGHALAYA,3359.9,643291,1.0,0.9257,0.973,0.9502,293,ok,True
+546,546,West Godavari,28,28,15,Andhra Pradesh,True,West Godavari,ANDHRA PRADESH,7812.6,3936966,1.0,0.9596,0.977,0.9818,546,ok,True
+246,246,West Kameng,12,12,2,Arunanchal Pradesh,True,West Kameng,ARUNACHAL PRADESH,5286.8,83947,1.0,0.9411,0.948,0.9924,246,ok,True
+296,296,West Khasi Hills,17,17,4,Meghalaya,True,West Khasi Hills,MEGHALAYA,5249.5,383461,1.0,0.9828,0.9916,0.9911,296,ok,True
+440,440,West Nimar,23,23,23,Madhya Pradesh,True,Khargone (West Nimar),MADHYA PRADESH,8096.9,1873046,0.692,0.9771,0.9862,0.9907,440,ok,True
+250,250,West Siang,12,12,6,Arunanchal Pradesh,True,West Siang,ARUNACHAL PRADESH,7969.2,112274,1.0,0.9839,0.9921,0.9916,250,ok,True
+289,289,West Tripura,16,16,1,Tripura,True,West Tripura ,TRIPURA,3010.6,1725739,1.0,0.9452,0.9698,0.9739,289,ok,True
+264,264,Wokha,13,13,4,Nagaland,True,Wokha,NAGALAND,1632.9,166343,1.0,0.9235,0.9387,0.9827,264,ok,True
+580,580,Yadgir,29,29,26,Karnataka,True,Yadgir,KARNATAKA,5313.7,1174271,1.0,0.9795,0.9887,0.9906,580,ok,True
+510,510,Yavatmal,27,27,14,Maharashtra,True,Yavatmal,MAHARASHTRA,13600.7,2772348,1.0,0.9843,0.994,0.9902,510,ok,True
+263,263,Zunheboto,13,13,3,Nagaland,True,Zunheboto,NAGALAND,1265.3,140757,1.0,0.7819,0.9846,0.7915,263,check,True
+407,407,Kabeerdham,22,22,8,Chhattisgarh,True,Kabeerdham,CHHATTISGARH,4240.4,822526,1.0,0.9804,0.9874,0.9928,407,ok,True
+71,071,Yamunanagar,06,6,3,Haryana,True,Yamunanagar,HARYANA,1743.7,1214205,1.0,0.9563,0.9737,0.9816,71,ok,True
+77,077,Jind,06,6,9,Haryana,True,Jind,HARYANA,2718.2,1334152,1.0,0.9292,0.9734,0.9534,77,ok,True
+109,109,Dausa,08,8,11,Rajasthan,True,Dausa,RAJASTHAN,3491.7,1634409,1.0,0.9275,0.954,0.9709,109,ok,True
+107,107,Karauli,08,8,9,Rajasthan,True,Karauli,RAJASTHAN,4959.6,1458248,1.0,0.9718,0.9938,0.9777,107,ok,True
+108,108,Sawai Madhopur,08,8,10,Rajasthan,True,Sawai Madhopur,RAJASTHAN,5058.0,1335551,1.0,0.9523,0.974,0.9771,108,ok,True
+240,240,Arwal,10,10,38,Bihar,True,Arwal,BIHAR,668.0,700843,1.0,0.8895,0.9233,0.9605,240,ok,True
+239,239,Jehanabad,10,10,37,Bihar,True,Jehanabad ,BIHAR,934.2,1125313,1.0,0.8881,0.9452,0.9363,239,ok,True
+618,618,Nagappattinam,33,33,17,Tamil Nadu,True,Nagapattinam  ,TAMIL NADU,2502.4,1616450,0.96,0.94,0.9847,0.9539,618,ok,True
+637,637,Karaikal,34,34,4,Puducherry,True,Karaikal,PUDUCHERRY,154.2,200222,1.0,0.9015,0.9694,0.9279,637,ok,True
+635,635,Puducherry,34,34,2,Puducherry,True,Puducherry,PUDUCHERRY,301.9,950289,1.0,0.8696,0.9281,0.9324,635,ok,True
+634,634,Yanam,34,34,1,Puducherry,True,Yanam,PUDUCHERRY,38.0,55626,1.0,0.6486,0.7187,0.8693,634,check,True
+493,493,Tapi,24,24,26,Gujarat,True,Tapi,GUJARAT,3170.4,807022,1.0,0.9574,0.9761,0.9805,493,ok,True
+638,638,Nicobar,35,35,1,Andaman & Nicobar Island,True,Nicobars,ANDAMAN & NICOBAR ISLANDS,1711.5,36842,0.933,0.7626,0.8599,0.8709,638,check,True
+640,640,South Andaman,35,35,3,Andaman & Nicobar Island,True,South Andaman,ANDAMAN & NICOBAR ISLANDS,2447.2,238142,1.0,0.913,0.9366,0.9731,640,ok,True
+639,639,North & Middle Andaman,35,35,2,Andaman & Nicobar Island,True,North  & Middle Andaman,ANDAMAN & NICOBAR ISLANDS,3386.6,105597,1.0,0.938,0.9576,0.9786,639,ok,True
+587,587,Lakshadweep,31,31,1,Lakshadweep,True,Lakshadweep,LAKSHADWEEP,667.2,64473,1.0,0.0366,0.0369,0.82,587,unreliable,True

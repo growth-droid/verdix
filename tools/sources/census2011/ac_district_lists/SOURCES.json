@@ -1,0 +1,104 @@
+{
+ "fetched_by": "plain public HTTPS GET (curl / python urllib); no login, no cookies, no API keys",
+ "files": [
+  {
+   "file": "raw/jk_delimitation_final_order_2022_JK_gazette_english.pdf",
+   "url": "https://ceojk.nic.in/pdf/Delimitation/English%20Final%20JK.pdf",
+   "kind": "official",
+   "bytes": 410151,
+   "sha256": "df1f7efa849a195ee272bfdfd6989861f5455f44591a4820b4855a915e20f41a",
+   "fetched": "2026-09-29",
+   "description": "Delimitation Commission (J&K) Order No.2, notification No.282/J&K/2022(Vol.IV) dated 05-05-2022, as published in the J&K Official Gazette Extraordinary Vol.135 No.5-2 (English). Linked from https://ceojk.nic.in/DELIMI_FINAL.htm. PRIMARY source for J&K AC names, districts (Table-A) and PC membership (Table-B)."
+  },
+  {
+   "file": "raw/jk_delimitation_final_order_2022_GoI_gazette.pdf",
+   "url": "https://ceojk.nic.in/pdf/Delimitation/GoI%20gazette%20notification%20delimitation.pdf",
+   "kind": "official",
+   "bytes": 1600315,
+   "sha256": "2e67b9ce065ec90d8c3cc012d43097ed3659b54e7886dc62ddf25c65ce65b3cc",
+   "fetched": "2026-09-29",
+   "description": "Same Order as published in the Gazette of India Extraordinary Part II Sec 3(iii) No.17 dated 05-05-2022 (Hindi + English). Kept as the Government of India copy; its English Table-A district headings were checked to match (20 districts)."
+  },
+  {
+   "file": "raw/jk_ceo_final_publication_data_2024.pdf",
+   "url": "https://ceojk.nic.in/pdf/Assembly_Elections_2024/Final_Publication_Data_2024.pdf",
+   "kind": "official",
+   "bytes": 633390,
+   "sha256": "de13a81b34bd081be927d2ccf6319d59e6019bbcfb5cbcf168c137db7f5563c1",
+   "fetched": "2026-09-29",
+   "description": "CEO J&K, AC-wise electors in final roll w.r.t. 01-07-2024 (AE 2024). Used only as a name cross-check (spelling variants recorded in note)."
+  },
+  {
+   "file": "raw/ceojk_DELIMI_FINAL.htm",
+   "url": "https://ceojk.nic.in/DELIMI_FINAL.htm",
+   "kind": "official",
+   "bytes": 11817,
+   "sha256": "88a055c40141582a03bdafc60647d6be6da5d68536a1802b239ab7fdddd1df30",
+   "fetched": "2026-09-29",
+   "description": "CEO J&K page that links the delimitation final order PDFs (provenance)."
+  },
+  {
+   "file": "raw/assam_eci_final_order_and_notification_2023.pdf",
+   "url": "https://ceoassam.nic.in/Final_Order_and_Notification.pdf",
+   "kind": "official",
+   "bytes": 6925403,
+   "sha256": "dce6860c5e2a8706ce446194b99289e923ebc2c2d046838a10456e6e19f7c6d9",
+   "fetched": "2026-09-29",
+   "description": "ECI Order No.2, notification No.282/AS/2023(DEL)/Vol.V dated 11-08-2023 (Gazette of India Extraordinary Part II Sec 3(iii) + State of Assam Gazette), scanned; pages 51-82 are the English text. Linked from the CEO Assam home page as \"ECI's Final Notification regarding Delimitation Constituencies in the State of Assam\". Server Last-Modified 11-08-2023. PRIMARY source for Assam AC names, 2023 district headings (Table-A) and PC membership (Table-B)."
+  },
+  {
+   "file": "raw/assam_final_order_ocr_p51-82.json",
+   "url": "(derived)",
+   "kind": "derived",
+   "bytes": 299934,
+   "sha256": "db1dcea6dca61f1b21978b2f695e5a9d71ffc0e6cea4ffdbbd9e1c71546c0e8a",
+   "fetched": "2026-09-29",
+   "description": "RapidOCR text of pages 51-82 of the Assam order (the PDF has no text layer). Names that differ from ECI/CEO spellings were checked by eye against the page images - the gazette itself prints e.g. \"Dibrugrah\", \"Barkhola\", \"Ram Krishana Nagar\"."
+  },
+  {
+   "file": "raw/assam_eci_final_paper1_2023.pdf",
+   "url": "https://www.eci.gov.in/Documents/Delimitation/FINALPAPER1Toppage.pdf",
+   "kind": "official",
+   "bytes": 224100,
+   "sha256": "71239be6542855b328c86093ac64725cf2a1bdc16f13921ab8f9eb3ea0ccacb9",
+   "fetched": "2026-09-29",
+   "description": "ECI Final Paper-1 (Assam delimitation, Aug-2023): states the Commission worked with all 31 districts. Used to validate the 31 district headings."
+  },
+  {
+   "file": "raw/assam_ceo_ac_wise_ps_electors_2026.pdf",
+   "url": "https://ceoassam.nic.in/assembly/2026/pdf/AC_wise_PS_&_Electors_Details_2026.pdf",
+   "kind": "official",
+   "bytes": 212535,
+   "sha256": "ab5585a5a3557454f17f2478b5995f3fa3af9f7202ad8838e029caed8c6a7b52",
+   "fetched": "2026-09-29",
+   "description": "CEO Assam, \"Assembly Constituency wise Final Electors and Polling Stations\", final publication 23-03-2026 (AE 2026). Source of district_current (35 districts) and of the ECI/CEO operational AC spellings."
+  },
+  {
+   "file": "raw/eci_delimitation_order_2008_english.pdf",
+   "url": "https://www.eci.gov.in/Documents/Delimitation/DelimitationofParliamentaryAssemblyConstituenciesOrder-2008(English).pdf",
+   "kind": "official",
+   "bytes": 1340728,
+   "sha256": "9e1ac49aa952febc8e4f57ed23abd28218a21887f355f8dad1502ab5c0d65e69",
+   "fetched": "2026-09-29",
+   "description": "Delimitation of Parliamentary and Assembly Constituencies Order, 2008 (ECI consolidated English text). Gujarat Table-A pp.122-123 (Ahmedabad), 141-142 (Surat), Table-B p.146-147; Madhya Pradesh Table-A pp.246-247 (Indore), Table-B p.252 (printed page numbers; PDF pages +1)."
+  },
+  {
+   "file": "raw/wikipedia_crosscheck_jk.csv",
+   "url": "https://en.wikipedia.org/wiki/List_of_constituencies_of_the_Jammu_and_Kashmir_Legislative_Assembly",
+   "kind": "crosscheck",
+   "bytes": 3246,
+   "sha256": "6def75ccb3d9f70d7664ab43774401bf3200c328e042ae5d933a7562e763003f",
+   "fetched": "2026-09-29",
+   "description": "Facts-only cross-check extract (revision id inside the file). CC BY-SA 4.0. Never used as a value source."
+  },
+  {
+   "file": "raw/wikipedia_crosscheck_assam.csv",
+   "url": "https://en.wikipedia.org/wiki/List_of_constituencies_of_the_Assam_Legislative_Assembly",
+   "kind": "crosscheck",
+   "bytes": 4372,
+   "sha256": "9dd7423d702ea941d4e3b2b38c09cef1e7630ab26ee4cde9606eda3add35beaa",
+   "fetched": "2026-09-29",
+   "description": "Facts-only cross-check extract (revision id inside the file). CC BY-SA 4.0. Never used as a value source."
+  }
+ ]
+}

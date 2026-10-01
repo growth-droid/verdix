@@ -1,0 +1,40 @@
+check,ok,expected,got
+J&K: Table-A AC count,True,90,90
+J&K: AC numbers are exactly 1..90,True,1..90,ok
+J&K: districts in Table-A,True,20,20
+J&K: district headings identical in the Gazette of India copy,True,"['Kupwara', 'Baramulla', 'Bandipora', 'Ganderbal', 'Srinagar', 'Budgam', 'Pulwama', 'Shopian', 'Kulgam', 'Anantnag', 'Kishtwar', 'Doda', 'Ramban', 'Reasi', 'Udhampur', 'Kathua', 'Samba', 'Jammu', 'Rajouri', 'Poonch']","['Kupwara', 'Baramulla', 'Bandipora', 'Ganderbal', 'Srinagar', 'Budgam', 'Pulwama', 'Shopian', 'Kulgam', 'Anantnag', 'Kishtwar', 'Doda', 'Ramban', 'Reasi', 'Udhampur', 'Kathua', 'Samba', 'Jammu', 'Rajouri', 'Poonch']"
+"J&K: reserved seats SC/ST (Order No.1: 7 SC, 9 ST)",True,SC=7 ST=9,SC=7 ST=9
+J&K: every AC in exactly one PC in Table-B,True,all 90 once,all 90 once
+J&K: ACs per PC (Table-B),True,5 PCs x 18,"{1: 18, 2: 18, 3: 18, 4: 18, 5: 18}"
+J&K: no glyph-spacing artefacts left in names,True,none,none
+J&K: Table-A vs Table-B name agreement,True,<=1 known (87 Thannamandi/Thanamandi),"[(87, 'Thannamandi (ST)', 'Thanamandi (ST)')]"
+"Jammu & Kashmir: INFO app seats_ae 2024 reservation flag vs order (app, order) - app-side data issue, not ours",True,0 differences expected,"5 differ: [(55, 'SC', 'GEN'), (61, 'SC', 'GEN'), (68, 'SC', 'GEN'), (75, 'SC', 'GEN'), (78, 'SC', 'GEN')]"
+J&K: CEO J&K 2024 roll parsed,True,90,90
+J&K: Table-A vs CEO J&K 2024 roll names (info),True,listed in note,"[(15, 'BANDIPORE'), (30, 'CHAH-I-SHARIEF'), (51, 'BHADERWAH')]"
+J&K: Table-A vs app ECI-results names (info),True,listed in note,"[(23, 'CHANAPORA'), (30, 'CHARARI SHARIEF'), (74, 'RS PORA–JAMMU SOUTH'), (87, 'THANAMANDI')]"
+J&K: district agrees with Wikipedia cross-check,True,90/90,90/90
+J&K: PC agrees with Wikipedia cross-check,True,90/90,90/90
+Assam: Table-A AC count (2023 order),True,126,126
+Assam: AC numbers are exactly 1..126,True,1..126,ok
+Assam: districts in 2023 order (ECI Final Paper-1 says 31),True,31,31
+"Assam: reserved seats (Order: 9 SC, 19 ST)",True,SC=9 ST=19,SC=9 ST=19
+Assam: PCs in Table-B,True,14,14
+Assam: Table-B serial numbers OCRed agree with row order,True,agree,"[(10, '10'), (12, '12'), (13, '13'), (14, '14')]"
+Assam: every AC in exactly one PC in Table-B,True,all 126 once,all 126 once
+Assam: Table-B PC order = app GE-2024 PC numbering,True,14/14,14/14
+"Assam: PC reservation (Order: 1 SC, 2 ST)",True,SC=1 ST=2,SC=1 ST=2
+Assam: CEO 2026 list parsed,True,1..126,126
+Assam: districts in CEO 2026 list (35 after Aug-2023 restorations),True,35,35
+Assam: every CEO-2026 district has a Census-2011 parent,True,none unmapped,none
+Assam: 2026 district consistent with 2023-order district (via lineage),True,126/126,126/126
+"Assam: INFO app seats_ae 2026 reservation flag vs order (app, order) - app-side data issue, not ours",True,0 differences expected,"21 differ: [(1, 'SC', 'GEN'), (11, 'SC', 'GEN'), (16, 'ST', 'GEN'), (17, 'ST', 'GEN'), (18, 'ST', 'GEN'), (20, 'ST', 'GEN'), (29, 'ST', 'GEN'), (30, 'ST', 'SC'), (31, 'ST', 'GEN'), (35, 'SC', 'GEN'), (36, 'ST', 'GEN'), (48, 'SC', 'GEN'), (62, 'ST', 'GEN'), (63, 'ST', 'GEN'), (67, 'SC', 'GEN'), (69, 'ST', 'GEN'), (79, 'SC', 'GEN'), (82, 'SC', 'GEN'), (97, 'SC', 'GEN'), (99, 'ST', 'GEN'), (114, 'ST', 'GEN')]"
+Assam: order vs ECI/CEO-2026 name differences (info; typos in gazette e.g. Dibrugrah),True,listed in note,"[(12, 'Jaleshwar', 'Jaleswar'), (15, 'Dudhnai (ST)', 'Dudhnoi (ST)'), (21, 'Bhowanipur-Sorbhog', 'Bhawanipur-Sorbhog'), (79, 'Sissibargaon', 'Sissiborgaon'), (88, 'Dibrugrah', 'Dibrugarh'), (109, 'Howarghat (ST)', 'Howraghat (ST)'), (117, 'Barkhola', 'Borkhola'), (126, 'Ram Krishana Nagar (SC)', 'Ram Krishna Nagar (SC)')]"
+Assam: app names not matching order or CEO-2026 (info),True,listed in note,"[(31, 'RANGIYA'), (44, 'GORESHWAR'), (47, 'MAJBAT'), (56, 'RUPOHIHAT'), (69, 'NADAUR'), (75, 'NAOBOICHA')]"
+Assam: district agrees with Wikipedia cross-check,True,126/126,126/126
+Assam: PC agrees with Wikipedia cross-check,True,126/126,126/126
+GJ/MP: counts Ahmedabad 12 + Surat 8 + Indore 4,True,12+8+4,"{('Gujarat', 'Ahmedabad'): 12, ('Gujarat', 'Surat'): 8, ('Madhya Pradesh', 'Indore'): 4}"
+GJ/MP: each AC number+name found verbatim in 2008 order Table-A,True,24/24,24/24
+GJ/MP: each AC sits under the expected district heading,True,24/24,24/24
+GJ/MP: PC membership verified in 2008 order Table-B,True,24/24,24/24
+GJ/MP: names equal app ECI-results names (GJ 2022 / MP 2023),True,24/24,24/24
+district_2011 values all exist in Census 2011 district list (../hlo/hlo_district_2011.csv),True,all found,50 found

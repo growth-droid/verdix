@@ -2,6 +2,7 @@
 // Extracts come from tools/build_extracts.py (bq_export → public/data). Short keys:
 // s=state(current) y=year n=seat-no j=normalized-seat-no(continuity domain) c=seat-name
 // r=reservation p=party a=alliance w=winner v=winner-share q/qn=runner-up m=margin% t=turnout%
+import type { CensusFile } from './census'
 
 export type Seat = {
   s: string; y: number; n: number; j: number; c: string; r: string | null
@@ -143,6 +144,11 @@ export const loadElectors = (state: string) =>
     }
     return out
   })
+
+// Census 2011 profile per seat — lazy per state, built by tools/build_census.py. Shape + blending
+// rules live in lib/census.ts. A state with no file (or a failed fetch) just hides the section.
+export const loadCensus = (state: string) =>
+  getJSON<CensusFile>(`/data/census/${candSlug(state)}.json`).catch(() => null)
 
 export const loadCandidates = (state: string) =>
   Promise.all([

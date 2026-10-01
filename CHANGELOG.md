@@ -6,14 +6,34 @@ For engineering detail: **[CLAUDE.md](CLAUDE.md)** = current state + condensed h
 **[CONVENTIONS.md](CONVENTIONS.md)** = the rules and gotchas · **[README.md](README.md)** = what it
 is and how to run it.
 
-> **Where the product stands (2026-09-29):** 2004–2026 coverage, 8 modules in a left-hand rail,
+> **Where the product stands (2026-10-01):** 2004–2026 coverage, 8 modules in a left-hand rail,
 > light + dark themes, mobile-ready, live on Fly.io at https://verdix-elections.fly.dev behind
 > **Google sign-in** (invite-only; admins manage users at `/admin`). Every seat briefing now carries
-> its electorate and gender split. Entries below this line are history — several describe things
+> its electorate, gender split and a Census 2011 profile. Entries below this line are history — several describe things
 > that were later changed or removed (the Story deck, the Grid view, dark-only, Netlify hosting,
 > open access).
 
 ---
+
+## 2026-10-01 — Who lives there: Census 2011 for every seat
+- **A new "The people · Census 2011" section in every constituency briefing.** For every assembly
+  and Lok Sabha seat it shows the share of Scheduled Castes and Scheduled Tribes, how urban the area
+  is, literacy (and how women compare with men), the sex ratio, how many people work in farming, a
+  religion breakdown, and how households live — electricity, cooking gas, a toilet at home, tap water,
+  a bank account, a phone, a two-wheeler — each one next to the state figure.
+- **It points out what is different.** A few plain sentences flag where the area stands apart from
+  its state, e.g. "Scheduled Tribes are 13.9% of the population in this seat's districts — 2.6× the
+  Andhra Pradesh figure of 5.3%."
+- **District level for now.** The Census does not publish figures by constituency, so each seat shows
+  its district's profile (or a blend, for a seat that spans two or three districts — Lok Sabha seats
+  are weighted by each assembly segment's voters). Every seat in the same district therefore shows the
+  same numbers; the briefing says which district it is. Seat-by-seat figures are the next step.
+- **Official and checked.** Everything comes from the Census of India's own district tables, which
+  add up exactly to the national totals (121.09 crore people). Seats were placed in districts using
+  the official 2008 delimitation order, which also caught a handful of map errors (e.g. Bidhannagar
+  had been placed in South 24 Parganas; it is in North 24 Parganas).
+- Covers every election from 2009 to 2026. The 2004 elections were fought on older boundaries and
+  have no census profile.
 
 ## 2026-09-29 — Who can vote, and who turned out: men and women in every seat
 - **A new "The electorate" section in every constituency briefing** (click any seat, anywhere).

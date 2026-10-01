@@ -1,0 +1,91 @@
+Census of India 2011 - Houselisting & Housing Census (HLO) - district-level household amenities & assets
+=======================================================================================================
+Fetched: 2026-09-29, plain public HTTPS GET requests only (no login, no cookies sent, no API keys).
+
+PUBLISHER / SOURCE (official)
+  Office of the Registrar General & Census Commissioner, India (ORGI), Ministry of Home Affairs, GoI.
+  ORGI Digital Library (NADA catalogue): https://censusindia.gov.in/nada/index.php/catalog
+  Series "Houselisting and Housing Census data", tag Census-2011. Per-file catalog + download URLs,
+  byte sizes and sha256 hashes are in SOURCES.csv (231 files, all saved unmodified under raw/).
+
+  Legacy paths tried and dead on 2026-09-29: https://censusindia.gov.in/2011census/hlo/HLO_Tables.html (404),
+  .../hlo/hlo_highlights.html (404), http://www.censusindia.gov.in/... (connection refused).
+
+TABLES USED (NADA idno -> raw file stem; 1 India file + 35 State/UT files each; state files carry
+State, District, Sub-district and Town rows; universe = households excluding institutional households)
+  HL-01  PC11_HL01-SS  DDW-HH0101-SS00.xls  households by condition of census house
+  HL-06  PC11_HL06-SS  DDW-HH2206-SS00.xls  main source of drinking water x location (within/near/away)
+  HL-07  PC11_HL07-SS  DDW-HH2507-SS00.xls  main source of lighting
+  HL-08  PC11_HL08-SS  DDW-HH2808-SS00.xls  type of latrine facility (incl. open defecation)
+  HL-10  PC11_HL10-SS  DDW-HH3410-SS00.xls  separate kitchen x type of fuel used for cooking
+  HL-12  PC11_HL12-SS  DDW-HH4012-SS00.xls  households availing banking services + specified assets
+  (The "HH-n" number printed inside each 2011 sheet = NADA "HL-n". In the 2011 release lighting is
+   HH-7, cooking fuel HH-10, banking & assets HH-12, the % summary HH-14; the HH-12/HH-14/HH-17/HH-18
+   numbers in the original brief do not match the 2011 numbering.)
+  HL-14  PC11_HL14-SS-DDD  raw/hl14_sample/HLPCA-SSDDD-2011_H14_census.xlsx  (15-district sample only)
+         "Percentage of households to total households by amenities and assets" - an independent ORGI
+         product, 1 file per district (640 exist), rows down to VILLAGE/TOWN/WARD level, percentages
+         only (1 decimal, no counts). Used here only to cross-check. Relevant for the later AC-level build:
+         URL pattern https://censusindia.gov.in/nada/index.php/catalog/{id}/related-materials, ids for
+         all 640 districts discoverable via
+         https://censusindia.gov.in/nada/index.php/api/catalog/search?sk=%22amenities%20and%20assets%22&ps=2000
+         (~0.05-1 MB each, est. ~250 MB for all 640).
+
+LICENCE / TERMS (quoted; copies of the pages are saved under licence/)
+  1) ORGI website Terms & Conditions (https://censusindia.gov.in/census.website/en/node/288):
+     "Information in the website is for the benefit of the users. Material featured on this website if
+      used, has to be reproduced accurately and should not be used in a derogatory manner or in a
+      misleading context. Wherever the material is being published or issued to others, the source must
+      be prominently acknowledged. However, the permission/ authorization to reproduce any material which
+      is identified as being copyright of a third party, must be obtained from the concerned department /
+      copyright holders."
+  2) ORGI Website Policy -> Copyright policy (https://censusindia.gov.in/census.website/en/node/286):
+     "The material displayed on this portal may be reproduced free of charge after taking proper
+      permission by sending a mail to us. However, the material must be reproduced accurately and must
+      not be used in a derogatory manner or in a misleading context. Wherever the material is being
+      published or released to others, the source should be prominently acknowledged."
+     Footer: "(c)2025 Office of the Registrar General India, All Rights Reserved."
+     NOTE: the two ORGI pages are not fully consistent - the Copyright policy asks for permission "by
+     sending a mail to us"; the T&C only require accurate reproduction + prominent acknowledgement.
+  3) ORGI's 2011 HLO tables are also published on the Open Government Data Platform data.gov.in
+     (group "Houselisting and Housing Census Data", ministry "Ministry of Home Affairs || Registrar
+     General and Census Commissioner, India"; e.g. "Households by type of structure of the Census
+     houses occupied, 2011", described as "at States/UTs and District level"; only that one page was
+     inspected - the six tables used here were not individually located on data.gov.in, because its
+     search is JavaScript/API-driven). data.gov.in's footer states: "The content
+     published on data.gov.in is owned by the respective Ministry/State/Department/Organization and
+     licensed under the Government Open Data License - India". GODL-India s.3 (gazette-notified
+     13 Feb 2017, text saved in licence/godl_india_smartcities.data.gov.in.html) grants "a worldwide,
+     royalty-free, non-exclusive license to use, adapt, publish ... and create derivative works
+     (including products and services), for all lawful commercial and non-commercial purposes",
+     subject to s.4: attribution (provider, source, licence + URL), non-endorsement, no warranty.
+     (data.gov.in pages were fetched only to read the licence/metadata; data files were NOT taken
+      from data.gov.in. Example page saved: licence/datagovin_resource_households-type-structure-census-houses-occupied-2011.html)
+
+  Suggested attribution in the app:
+    "Source: Census of India 2011, Houselisting & Housing Census tables HL-01/06/07/08/10/12,
+     Office of the Registrar General & Census Commissioner, India (censusindia.gov.in); also published
+     on data.gov.in under the Government Open Data License - India."
+  Conservative option for commercial use: send ORGI the courtesy permission e-mail the Copyright policy asks for.
+
+     Oddity to be aware of: every data.gov.in page fetched on 2026-09-29 carried the banner "This is a
+     sandbox environment created for testing and demonstration purposes only." (site-wide footer text).
+
+NOT USED: SHRUG or any SHRUG-derived file (CC BY-NC-SA). No mirrors (GitHub/Kaggle) were used.
+
+DERIVED FILES (built by build_hlo_district.py from raw/ only)
+  hlo_district_2011.csv        640 districts x Total/Rural/Urban = 1920 rows; % of households (2 dp)
+  hlo_district_2011_counts.csv same keys; household counts (numerators) - use these for weighted
+                               aggregation (district -> AC/PC), never average the percentages
+  hlo_state_india_2011.csv     India + 35 States/UTs x T/R/U, same % columns
+  hlo_validation.csv           all checks (all pass)
+  Denominator = total_households = households excluding institutional households (HL tables; India
+  246,740,228). This is NOT the PCA "No_HH" figure (which differs), so do not mix denominators.
+  Column definitions: tap_water = tap from treated + un-treated source; telephone_any = landline only +
+  mobile only + both; mobile_any = mobile only + both; computer_laptop = with + without internet;
+  two_wheeler = scooter/motorcycle/moped; car_jeep_van as published; none_of_assets = none of radio,
+  TV, computer/laptop, telephone/mobile, bicycle, two-wheeler, car; open_defecation = no latrine in
+  premises and alternative source "Open"; house_good / house_dilapidated = condition of the census
+  house (all uses) occupied by the household.
+  12 rows have 0 households (no urban area: Lahul & Spiti, Kinnaur, Nicobars; no rural area: New Delhi,
+  Central Delhi, Kolkata, Mumbai, Mumbai Suburban, Hyderabad, Chennai, Yanam, Mahe) - their % cells are empty.

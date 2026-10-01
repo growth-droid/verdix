@@ -1,7 +1,8 @@
 import { useEffect, useMemo, useState, type CSSProperties, type ReactNode } from 'react'
 import { createPortal } from 'react-dom'
 import { useNavigate } from 'react-router-dom'
-import { loadElectors, type ElectorFile, type ElectorRec, type Seat } from '../lib/data'
+import { loadCensus, loadElectors, type ElectorFile, type ElectorRec, type Seat } from '../lib/data'
+import { censusFor, censusReads, type CensusFile, type Religion, type Amenity } from '../lib/census'
 import { seatHistories, seatKey } from '../lib/analysis'
 import { comparable } from '../lib/joins'
 import { colorFor, readable } from '../lib/colors'
@@ -10,6 +11,21 @@ import { useFilters, useTheme } from '../store'
 import { Chart, Dot } from './ui'
 
 const tc = (s: string | null) => (s ? s.toLowerCase().replace(/(^|[\s(\-./])([a-z])/g, (_, a: string, b: string) => a + b.toUpperCase()) : null)
+
+// Census colours are deliberately NEUTRAL data-viz hues — never party colours, and never the
+// saffron/green shorthand that would read as a political claim about a community.
+const REL: Record<Religion, { label: string; c: string }> = {
+  hindu: { label: 'Hindu', c: '#818cf8' }, muslim: { label: 'Muslim', c: '#2dd4bf' },
+  christian: { label: 'Christian', c: '#f472b6' }, sikh: { label: 'Sikh', c: '#fb923c' },
+  buddhist: { label: 'Buddhist', c: '#facc15' }, jain: { label: 'Jain', c: '#a3e635' },
+  other: { label: 'Other', c: '#94a3b8' }, none: { label: 'Not stated', c: '#71717a' },
+}
+const AMEN: { k: Amenity; label: string }[] = [
+  { k: 'elec', label: 'Electricity' }, { k: 'lpg', label: 'LPG / PNG cooking' },
+  { k: 'latrine', label: 'Toilet at home' }, { k: 'tap', label: 'Tap water' },
+  { k: 'bank', label: 'Banking' }, { k: 'phone', label: 'Phone / mobile' },
+  { k: 'twowheeler', label: 'Two-wheeler' }, { k: 'noasset', label: 'None of these assets' },
+]   // 8 tiles = two clean rows of four; TV / car / computer are in the data but add little here
 
 /**
  * Full-screen constituency / parliament briefing — a consultant-grade strategic read of a single
@@ -79,6 +95,19 @@ export default function SeatDrawer({ seat, all, arena, onClose }:
       prevYear: prev?.e ? prevH!.y : null,
     }
   }, [electors, arena, seat.y, seat.n, seat.s, hist])
+
+  // ── the people (Census 2011) — lazy per state, same pattern as the electorate ──
+  const [census, setCensus] = useState<CensusFile | null>(null)
+  useEffect(() => {
+    let live = true
+    setCensus(null)
+    loadCensus(seat.s).then(f => { if (live) setCensus(f) }).catch(() => {})
+    return () => { live = false }
+  }, [seat.s])
+  const CEN = useMemo(() => {
+    const c = censusFor(census, arena, seat)
+    return c ? { ...c, reads: censusReads(c, seat.s) } : null
+  }, [census, arena, seat])
 
   useEffect(() => {
     const k = (e: KeyboardEvent) => { if (e.key === 'Escape') onClose() }
@@ -354,12 +383,118 @@ export default function SeatDrawer({ seat, all, arena, onClose }:
             </Section>
           )}
 
+          {/* the people — Census 2011, district level (see lib/census.ts) */}
+          {CEN && (() => {
+            const r = CEN.rates, s = CEN.state, ds = CEN.districts, d0 = ds[0]
+            // "X district" only when it IS one district — a 92/8 blend shows blended figures, so it says so
+            const single = ds.length === 1
+            const f1 = (v: number | null | undefined) => (v == null ? '–' : v.toFixed(1) + '%')
+            const st = (v: number | null | undefined, unit = '%') => (v == null ? '' : `state ${unit === '%' ? v.toFixed(1) + '%' : Math.round(v)}`)
+            const people = (n: number) => (n >= 1e7 ? `${(n / 1e7).toFixed(2)} crore` : `${(n / 1e5).toFixed(1)} lakh`)
+            const shares = ds.map(d => `${d.name} ${Math.round(d.share * 100)}%`).join(' · ')
+            const title = single
+              ? `${d0.name} district · ${people(d0.pop)} people`
+              : arena === 'GE' ? `Spans ${ds.length} districts · mostly ${d0.name}` : `Mostly ${d0.name} district · part ${ds.slice(1).map(d => d.name).join(', ')}`
+            const farm = r.work ? r.work.cl + r.work.al : null
+            const farmS = s.work ? s.work.cl + s.work.al : null
+            const bar = (items: { k: string; label: string; v: number; c: string }[]) => (
+              <>
+                <div style={{ display: 'flex', height: 10, borderRadius: 999, overflow: 'hidden', background: C.panel2 }}
+                  aria-label={items.map(i => `${i.label} ${i.v.toFixed(1)}%`).join(', ')}>
+                  {items.map(i => <div key={i.k} style={{ width: `${i.v}%`, background: i.c }} />)}
+                </div>
+                <div className="flex flex-wrap gap-x-3.5 gap-y-1" style={{ fontSize: 11, color: C.sub, marginTop: 6 }}>
+                  {items.filter(i => i.v >= 0.5).map(i => (
+                    <span key={i.k} className="flex items-center gap-1.5">
+                      <span style={{ width: 8, height: 8, borderRadius: 2, background: i.c }} />{i.label} <b className="font-num" style={{ color: C.text, fontWeight: 600 }}>{i.v.toFixed(1)}%</b>
+                    </span>
+                  ))}
+                </div>
+              </>
+            )
+            const sub = (label: string) => <div style={{ fontSize: 10, letterSpacing: '.5px', textTransform: 'uppercase', color: C.faint, marginBottom: 7 }}>{label}</div>
+            // A census tile: the state comparison sits on its OWN line under the number. Beside it (as
+            // <Metric sub> does) it wrapped mid-phrase in a two-column tile at 390px ("state" / "29.6%").
+            const Stat = ({ label, value, cmp }: { label: string; value: ReactNode; cmp?: string }) => (
+              <div style={{ background: C.panel2, border: `1px solid ${C.line}`, borderRadius: 12, padding: '10px 12px' }}>
+                <div style={{ fontSize: 9.5, letterSpacing: '.5px', textTransform: 'uppercase', color: C.sub }}>{label}</div>
+                <div className="font-num" style={{ fontSize: 19, fontWeight: 800, color: C.text, lineHeight: 1.15, marginTop: 2 }}>{value}</div>
+                {cmp ? <div className="font-num" style={{ fontSize: 11, color: C.sub, marginTop: 2, whiteSpace: 'nowrap' }}>{cmp}</div> : null}
+              </div>
+            )
+            const rel = r.rel ? (Object.keys(REL) as Religion[]).map(k => ({ k, label: REL[k].label, v: r.rel?.[k] ?? 0, c: REL[k].c })).filter(i => i.v > 0).sort((a, b) => b.v - a.v) : null
+            const amen = r.amen ? AMEN.filter(a => r.amen?.[a.k] != null) : []
+            return (
+              <Section eyebrow="The people · Census 2011" title={title}>
+                <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5">
+                  <Stat label="Scheduled Castes" value={f1(r.sc)} cmp={st(s.sc)} />
+                  <Stat label="Scheduled Tribes" value={f1(r.st)} cmp={st(s.st)} />
+                  <Stat label="Urban" value={f1(r.urban)} cmp={st(s.urban)} />
+                  <Stat label="Literacy" value={f1(r.lit)} cmp={st(s.lit)} />
+                  <Stat label="Women literate" value={f1(r.litF)} cmp={r.litM != null ? `men ${r.litM.toFixed(1)}%` : ''} />
+                  <Stat label="Women per 1,000 men" value={r.sexRatio != null ? Math.round(r.sexRatio) : '–'} cmp={st(s.sexRatio, '')} />
+                  <Stat label="Girls per 1,000 boys" value={r.childSexRatio != null ? Math.round(r.childSexRatio) : '–'} cmp={st(s.childSexRatio, '')} />
+                  <Stat label="Workers in farming" value={f1(farm)} cmp={st(farmS)} />
+                </div>
+
+                {rel && rel.length > 0 && (
+                  <div style={{ marginTop: 14 }}>
+                    {sub('Religion')}
+                    {bar(rel)}
+                  </div>
+                )}
+
+                {r.work && (
+                  <div style={{ marginTop: 14 }}>
+                    {sub(`How people work${r.workRate != null ? ` · ${r.workRate.toFixed(1)}% of people are workers` : ''}`)}
+                    {bar([
+                      // muted earth tones: the brighter greens/ambers/oranges are BJD, AGP and SHS party colours
+                      { k: 'cl', label: 'Cultivators', v: r.work.cl, c: '#6b8f71' },
+                      { k: 'al', label: 'Farm labourers', v: r.work.al, c: '#c4a35a' },
+                      { k: 'hi', label: 'Household industry', v: r.work.hi, c: '#b08968' },
+                      { k: 'ot', label: 'Other work', v: r.work.ot, c: '#8aa9c9' },
+                    ])}
+                  </div>
+                )}
+
+                {amen.length > 0 && (
+                  <div style={{ marginTop: 14, paddingTop: 12, borderTop: `1px solid ${C.line}` }}>
+                    {sub('How households live · share of households')}
+                    <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5">
+                      {amen.map(a => <Stat key={a.k} label={a.label} value={f1(r.amen?.[a.k])} cmp={st(s.amen?.[a.k])} />)}
+                    </div>
+                  </div>
+                )}
+
+                {CEN.reads.length > 0 && (
+                  <ul style={{ display: 'flex', flexDirection: 'column', gap: 6, marginTop: 14 }}>
+                    {CEN.reads.map((t, i) => (
+                      <li key={i} className="flex gap-2.5" style={{ fontSize: 12.5, color: C.sub, lineHeight: 1.45 }}>
+                        <span aria-hidden style={{ color: readable('#c99a2e', mode), flex: 'none' }}>▸</span><span>{t}</span>
+                      </li>
+                    ))}
+                  </ul>
+                )}
+
+                <div style={{ fontSize: 10.5, color: C.faint, marginTop: 11, lineHeight: 1.5 }}>
+                  Source: Census of India 2011 (Office of the Registrar General &amp; Census Commissioner), the latest
+                  published census; district map © DataMeet, CC BY 2.5 IN. District level —{' '}
+                  {single
+                    ? `every seat in ${d0.name} district shows this same profile.`
+                    : arena === 'GE'
+                      ? `blended across this seat's assembly segments, weighted by each segment's electorate (${shares}).`
+                      : `blended by how much of the seat lies in each district (${shares}).`}
+                </div>
+              </Section>
+            )
+          })()}
+
           {/* executive read */}
           <Section eyebrow="Executive read">
             <ul style={{ display: 'flex', flexDirection: 'column', gap: 7 }}>
               {reads.map((r, i) => (
                 <li key={i} className="flex gap-2.5" style={{ fontSize: 13, color: C.sub, lineHeight: 1.45 }}>
-                  <span style={{ color: '#c99a2e', flex: 'none', marginTop: 1 }}>▸</span><span>{r}</span>
+                  <span aria-hidden style={{ color: readable('#c99a2e', mode), flex: 'none', marginTop: 1 }}>▸</span><span>{r}</span>
                 </li>
               ))}
             </ul>

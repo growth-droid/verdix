@@ -1,0 +1,102 @@
+AC -> district -> Census-2011 district lists for ACs with no usable polygon
+===========================================================================
+Built 2026-09-29 by build_ac_district_lists.py (re-runnable offline from raw/). Plain public HTTPS GETs only
+(curl / python urllib): no login, no cookies we did not receive, no API keys. NO SHRUG data or SHRUG-derived
+file is used anywhere here.
+
+OUTPUT FILES (columns: state, ac_no, ac_name, district_current, district_2011, pc_no, pc_name, source_url, note)
+  jk_2022_ac_district.csv        90 rows  - J&K after the 2022 delimitation (used for AE 2024, LS 2024)
+  assam_2023_ac_district.csv     126 rows - Assam after the 2023 delimitation (used for LS 2024, AE 2026)
+  gj_mp_noshape_ac_district.csv  24 rows  - Gujarat 45-56 (Ahmedabad) + 160-167 (Surat), MP 205-208 (Indore);
+                                            post-2008 numbering; PCs filled too (from the same 2008 order)
+  census2011_district_codes.csv  every district_2011 value -> Census 2011 state + district code (the codes used
+                                 by ../hlo and ../pca), so a builder can join on code instead of spelling
+  validation.csv                 39 checks, all passing (2 are INFO rows that list app-side reservation-flag errors) (counts, 1..N completeness, reservations, PC coverage,
+                                 cross-source agreement). Re-run the script to regenerate.
+
+COLUMN RULES
+  ac_name           Spelling exactly as gazetted in the governing delimitation order's Table-A (J&K 2022 order;
+                    ECI Assam 2023 order; ECI DPACO 2008), with the "(SC)/(ST)" reservation marker moved to note
+                    ("reserved=SC"), en-dashes normalised to "-". Where ECI/CEO operational lists or the app's own
+                    ECI-results names spell it differently, the variant is recorded in note - JOIN ON (state, ac_no),
+                    not on name. The Assam gazette itself prints several typos (Dibrugrah, Barkhola, Howarghat,
+                    Sissibargaon, Ram Krishana Nagar); ECI/CEO 2026 spellings are in note.
+  district_current  J&K: the district heading in the 2022 order (still the 20 districts today).
+                    Assam: the district in CEO Assam's 23-03-2026 final roll list (35 districts) with CEO short labels
+                    expanded (Kamrup Metro -> Kamrup Metropolitan, Sibsagar -> Sivasagar, South Salmara ->
+                    South Salmara-Mankachar). The 2023 order used 31 districts (Bajali, Tamulpur, Hojai, Biswanath had
+                    been merged back into their parents on 31-12-2022 and were re-created on 25-08-2023, each
+                    defined as a set of the NEW ACs); whenever the 2023 heading differs, note says so.
+                    GJ/MP: district heading in the 2008 order (unchanged since).
+  district_2011     The Census 2011 district (Census spelling, e.g. Baramula, Badgam, Bandipore, Shupiyan, Punch,
+                    Ahmadabad) that the current district is, or was carved from:
+                      Bajali<-Barpeta, Tamulpur<-Baksa, Hojai<-Nagaon, Biswanath<-Sonitpur, Charaideo<-Sivasagar,
+                      Majuli<-Jorhat, West Karbi Anglong<-Karbi Anglong, South Salmara-Mankachar<-Dhubri,
+                      Sribhumi = Karimganj renamed (Nov-2024).
+                    No district in these lists was carved from TWO 2011 parents, so no row has a split parent.
+  pc_no/pc_name     From the same order's Table-B. J&K PCs 1-5 (18 ACs each); Assam PCs 1-14 in Table-B order
+                    (matches the app's 2024 GE numbering). Reservation of PCs: Assam 1 Kokrajhar ST, 6 Diphu ST,
+                    8 Silchar SC; Gujarat 8 Ahmedabad West SC; J&K none.
+
+CAVEATS (honest limits)
+  * district_2011 is by DISTRICT LINEAGE, not a spatial or village-level join (these ACs have no polygon). It is
+    exact for J&K (no district created since 2007; the order's territorial units are as on 15-06-2020), for the
+    GJ/MP city seats (wholly inside Ahmedabad City taluka / Surat City taluka / Indore tehsil municipal wards), and
+    for Assam districts whose outer boundary is unchanged. In Assam's Bodoland (BTR) belt, 2011 revenue circles
+    straddled districts (e.g. Census 2011 lists Goreswar, Rangia, Tihu, Bajali, Sarupeta circles as "(Pt)" in both
+    Baksa and Kamrup/Nalbari/Barpeta). If any village moved between districts between 2011 and the 01-01-2023
+    freeze, an AC near those borders could hold a sliver of a neighbouring 2011 district; a village-level crosswalk
+    (option 2) is needed to quantify that.
+  * The Assam order is a scanned PDF. It was OCR'd (RapidOCR, raw/assam_final_order_ocr_p51-82.json) and every
+    name that disagrees with ECI/CEO spellings was checked by eye against the page image; the OCR reproduces the
+    gazette's own spellings. AC numbers, 126/126 completeness, 9 SC / 19 ST, 31 districts and 14 PCs (1 SC / 2 ST)
+    all validate against the order's own stated totals.
+  * Found in passing (app data, not changed here): the app's public/data/seats_ae.json reservation flag `r`
+    disagrees with the orders for 5 J&K-2024 ACs (55, 61, 68, 75, 78 flagged SC; all GEN) and 21 Assam-2026 ACs
+    (e.g. 1 Gossaigaon SC, 30 Hajo-Sualkuchi ST instead of SC), and seats_ge.json flags Assam-2024 PCs 1 Kokrajhar SC,
+    3 Barpeta ST, 5 Guwahati ST (official: 1 Kokrajhar ST, 6 Diphu ST, 8 Silchar SC). It looks like the
+    PRE-delimitation reservation carried over by seat number (confirmed for the Assam PCs: the app's own 2009/2014
+    rows have PC1 Karimganj SC, PC3 Autonomous District ST, PC5 Kokrajhar ST; not traced for the ACs). The order's reservation is in note ("reserved=").
+  * J&K CEO 2024 roll prints "CHAH-I-SHARIEF" (AC 30) and "BHADERWAH" (AC 51); the order prints Chrar-i-Sharief and
+    Bhadarwah. The order's Table-A prints "Thannamandi" (AC 87) but its Table-B prints "Thanamandi". All recorded.
+
+SOURCES (exact URLs; sha256 + byte counts in SOURCES.json; all fetched 2026-09-29, copies in raw/)
+  J&K (primary)  Delimitation Commission Order No.2, No.282/J&K/2022(Vol.IV), 05-05-2022 - J&K Official Gazette
+                 https://ceojk.nic.in/pdf/Delimitation/English%20Final%20JK.pdf
+                 GoI Gazette copy: https://ceojk.nic.in/pdf/Delimitation/GoI%20gazette%20notification%20delimitation.pdf
+                 (both linked from https://ceojk.nic.in/DELIMI_FINAL.htm)
+  J&K (check)    CEO J&K AC-wise final roll 2024: https://ceojk.nic.in/pdf/Assembly_Elections_2024/Final_Publication_Data_2024.pdf
+  Assam (prim.)  ECI Order No.2, No.282/AS/2023(DEL)/Vol.V, 11-08-2023 (Gazette of India + State of Assam Gazette)
+                 https://ceoassam.nic.in/Final_Order_and_Notification.pdf
+                 (the ECI's own copy https://www.eci.gov.in/Documents/Delimitation/DELIMITATIONASSAM_UPDATED.pdf is
+                 49.4 MB and the server delivered ~8 KB/s - two attempts timed out at 2.4 MB, so the CEO Assam copy of
+                 the same notification was used)
+                 ECI Final Paper-1: https://www.eci.gov.in/Documents/Delimitation/FINALPAPER1Toppage.pdf
+  Assam (current districts)  CEO Assam final roll 23-03-2026:
+                 https://ceoassam.nic.in/assembly/2026/pdf/AC_wise_PS_&_Electors_Details_2026.pdf
+  GJ / MP        ECI, Delimitation of Parliamentary and Assembly Constituencies Order, 2008:
+                 https://www.eci.gov.in/Documents/Delimitation/DelimitationofParliamentaryAssemblyConstituenciesOrder-2008(English).pdf
+  Census 2011 district names + codes: ../hlo/hlo_district_2011.csv (ORGI; licence in ../hlo/LICENCE_AND_SOURCES.txt)
+  Cross-check only (facts, never a value source): Wikipedia "List of constituencies of the Jammu and Kashmir
+                 Legislative Assembly" (rev 1318723909) and "... of the Assam Legislative Assembly" (rev 1354578406),
+                 CC BY-SA 4.0 -> raw/wikipedia_crosscheck_*.csv (4 fact columns only). Agreement: J&K district 90/90,
+                 PC 90/90; Assam district 126/126, PC 126/126.
+                 Lineage of post-2011 Assam districts cross-checked against Wikipedia summaries and news reports of
+                 the 25-08-2023 cabinet decision (e.g. https://aninews.in/news/national/politics/assam-restores-district-status-of-hojai-biswanath-tamulpur-and-bajali20230825235623/).
+
+LICENCE / TERMS
+  * All three delimitation orders are notifications published in the Gazette of India (Extraordinary) and the
+    State/UT gazettes. Under the Copyright Act, 1957, s.52(1)(q)(i), reproduction or publication of "any matter
+    which has been published in any Official Gazette except an Act of a Legislature" is not infringement.
+  * The values extracted here are facts (constituency numbers, names, district and PC membership), which are not
+    copyright-protected in themselves.
+  * CEO Assam site footer: "(c) Copyright 2022 All Rights Reserved ... Content Managed by Office of the Chief
+    Electoral Officer, Assam"; its disclaimer page says the site "is brought to you by the Office of the Chief
+    Electoral Officer, Government of Assam". Only facts (AC -> district) are taken from its 2026 roll list.
+  * ECI (eci.gov.in) is a JavaScript single-page site; its copyright-policy page could not be retrieved as text
+    (https://www.eci.gov.in/copyright-policy returns an empty app shell to a plain GET), so no ECI policy wording
+    is quoted here. Attribution used: "Source: Election Commission of India / Delimitation Commission of India".
+  * Census 2011 codes: Office of the Registrar General & Census Commissioner, India (see ../hlo licence file).
+  * Wikipedia: CC BY-SA 4.0; used only to cross-check facts; no text reproduced.
+  Suggested attribution in the app: "Constituency-district mapping: Delimitation Commission (J&K, 2022) and
+  Election Commission of India delimitation orders (2008, Assam 2023); CEO Assam. Demographics: Census of India 2011."

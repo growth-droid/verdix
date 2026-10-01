@@ -1,0 +1,3267 @@
+{
+ "cross_district_allowed": [
+  [
+   "Assam",
+   8,
+   [
+    316
+   ]
+  ],
+  [
+   "Assam",
+   24,
+   [
+    300
+   ]
+  ],
+  [
+   "Assam",
+   25,
+   [
+    300
+   ]
+  ],
+  [
+   "Assam",
+   26,
+   [
+    300
+   ]
+  ],
+  [
+   "Assam",
+   27,
+   [
+    300
+   ]
+  ],
+  [
+   "Assam",
+   28,
+   [
+    301
+   ]
+  ],
+  [
+   "Assam",
+   29,
+   [
+    301
+   ]
+  ],
+  [
+   "Assam",
+   31,
+   [
+    300,
+    319
+   ]
+  ],
+  [
+   "Assam",
+   32,
+   [
+    320
+   ]
+  ],
+  [
+   "Assam",
+   33,
+   [
+    319
+   ]
+  ],
+  [
+   "Assam",
+   34,
+   [
+    320
+   ]
+  ],
+  [
+   "Assam",
+   39,
+   [
+    301
+   ]
+  ],
+  [
+   "Assam",
+   40,
+   [
+    324
+   ]
+  ],
+  [
+   "Assam",
+   41,
+   [
+    324
+   ]
+  ],
+  [
+   "Assam",
+   42,
+   [
+    323,
+    324
+   ]
+  ],
+  [
+   "Assam",
+   50,
+   [
+    322
+   ]
+  ],
+  [
+   "Assam",
+   51,
+   [
+    321
+   ]
+  ],
+  [
+   "Assam",
+   54,
+   [
+    321
+   ]
+  ],
+  [
+   "Assam",
+   56,
+   [
+    324
+   ]
+  ],
+  [
+   "Assam",
+   57,
+   [
+    324
+   ]
+  ],
+  [
+   "Assam",
+   62,
+   [
+    323
+   ]
+  ],
+  [
+   "Assam",
+   63,
+   [
+    303
+   ]
+  ],
+  [
+   "Assam",
+   65,
+   [
+    326
+   ]
+  ],
+  [
+   "Assam",
+   68,
+   [
+    326
+   ]
+  ],
+  [
+   "Assam",
+   70,
+   [
+    325
+   ]
+  ],
+  [
+   "Assam",
+   80,
+   [
+    305
+   ]
+  ],
+  [
+   "Assam",
+   83,
+   [
+    304
+   ]
+  ],
+  [
+   "Assam",
+   84,
+   [
+    304
+   ]
+  ],
+  [
+   "Assam",
+   97,
+   [
+    313
+   ]
+  ],
+  [
+   "Assam",
+   112,
+   [
+    308
+   ]
+  ],
+  [
+   "Assam",
+   113,
+   [
+    307
+   ]
+  ],
+  [
+   "Assam",
+   121,
+   [
+    309
+   ]
+  ],
+  [
+   "Bihar",
+   30,
+   [
+    205,
+    206
+   ]
+  ],
+  [
+   "Jharkhand",
+   2,
+   [
+    351
+   ]
+  ],
+  [
+   "Jharkhand",
+   3,
+   [
+    351
+   ]
+  ],
+  [
+   "Jharkhand",
+   4,
+   [
+    362
+   ]
+  ],
+  [
+   "Jharkhand",
+   5,
+   [
+    352
+   ]
+  ],
+  [
+   "Jharkhand",
+   12,
+   [
+    350
+   ]
+  ],
+  [
+   "Jharkhand",
+   14,
+   [
+    363
+   ]
+  ],
+  [
+   "Jharkhand",
+   16,
+   [
+    362
+   ]
+  ],
+  [
+   "Jharkhand",
+   20,
+   [
+    348
+   ]
+  ],
+  [
+   "Jharkhand",
+   22,
+   [
+    360
+   ]
+  ],
+  [
+   "Jharkhand",
+   24,
+   [
+    361
+   ]
+  ],
+  [
+   "Jharkhand",
+   33,
+   [
+    355
+   ]
+  ],
+  [
+   "Jharkhand",
+   57,
+   [
+    368
+   ]
+  ],
+  [
+   "Jharkhand",
+   58,
+   [
+    365
+   ]
+  ],
+  [
+   "Jharkhand",
+   59,
+   [
+    367
+   ]
+  ],
+  [
+   "Jharkhand",
+   69,
+   [
+    356
+   ]
+  ],
+  [
+   "Jharkhand",
+   70,
+   [
+    366
+   ]
+  ],
+  [
+   "Jharkhand",
+   76,
+   [
+    346
+   ]
+  ],
+  [
+   "Jharkhand",
+   77,
+   [
+    346
+   ]
+  ],
+  [
+   "Mizoram",
+   6,
+   [
+    283
+   ]
+  ],
+  [
+   "Mizoram",
+   27,
+   [
+    283
+   ]
+  ],
+  [
+   "Mizoram",
+   28,
+   [
+    284
+   ]
+  ],
+  [
+   "Sikkim",
+   8,
+   [
+    243
+   ]
+  ],
+  [
+   "Sikkim",
+   16,
+   [
+    244
+   ]
+  ],
+  [
+   "Sikkim",
+   29,
+   [
+    244
+   ]
+  ],
+  [
+   "Arunachal Pradesh",
+   25,
+   [
+    255
+   ]
+  ]
+ ],
+ "cross_state_removed": [
+  [
+   [
+    "DELHI",
+    68
+   ],
+   "Gokalpur (SC)",
+   [
+    [
+     "Ghaziabad",
+     0.13
+    ]
+   ]
+  ]
+ ],
+ "vetoed": [
+  [
+   [
+    "ANDHRA PRADESH",
+    59
+   ],
+   "Amberpet",
+   [
+    [
+     "Rangareddy",
+     0.61
+    ]
+   ]
+  ],
+  [
+   [
+    "ANDHRA PRADESH",
+    61
+   ],
+   "Jubilee Hills",
+   [
+    [
+     "Rangareddy",
+     0.21
+    ]
+   ]
+  ],
+  [
+   [
+    "ANDHRA PRADESH",
+    62
+   ],
+   "Sanathnagar",
+   [
+    [
+     "Rangareddy",
+     0.38
+    ]
+   ]
+  ],
+  [
+   [
+    "ANDHRA PRADESH",
+    64
+   ],
+   "Karwan",
+   [
+    [
+     "Rangareddy",
+     0.19
+    ]
+   ]
+  ],
+  [
+   [
+    "ANDHRA PRADESH",
+    66
+   ],
+   "Charminar",
+   [
+    [
+     "Rangareddy",
+     0.2
+    ]
+   ]
+  ],
+  [
+   [
+    "ANDHRA PRADESH",
+    67
+   ],
+   "Chandrayangutta",
+   [
+    [
+     "Rangareddy",
+     0.14
+    ]
+   ]
+  ],
+  [
+   [
+    "ANDHRA PRADESH",
+    70
+   ],
+   "Secunderabad",
+   [
+    [
+     "Rangareddy",
+     0.12
+    ]
+   ]
+  ],
+  [
+   [
+    "ANDHRA PRADESH",
+    71
+   ],
+   "Secunderabad Cantt. (SC",
+   [
+    [
+     "Rangareddy",
+     0.13
+    ]
+   ]
+  ],
+  [
+   [
+    "ANDHRA PRADESH",
+    132
+   ],
+   "Salur (ST)",
+   [
+    [
+     "Koraput",
+     0.18
+    ]
+   ]
+  ],
+  [
+   [
+    "ANDHRA PRADESH",
+    134
+   ],
+   "Cheepurupalle",
+   [
+    [
+     "Srikakulam",
+     0.71
+    ]
+   ]
+  ],
+  [
+   [
+    "ANDHRA PRADESH",
+    176
+   ],
+   "Palacole",
+   [
+    [
+     "East Godavari",
+     0.11
+    ]
+   ]
+  ],
+  [
+   [
+    "ANDHRA PRADESH",
+    198
+   ],
+   "Vijayawada West",
+   [
+    [
+     "Guntur",
+     0.33
+    ]
+   ]
+  ],
+  [
+   [
+    "ANDHRA PRADESH",
+    200
+   ],
+   "Vijayawada East",
+   [
+    [
+     "Guntur",
+     0.19
+    ]
+   ]
+  ],
+  [
+   [
+    "ANDHRA PRADESH",
+    211
+   ],
+   "Bapatla",
+   [
+    [
+     "Prakasam",
+     0.1
+    ]
+   ]
+  ],
+  [
+   [
+    "ASSAM",
+    53
+   ],
+   "Gauhati East",
+   [
+    [
+     "Kamrup",
+     0.22
+    ]
+   ]
+  ],
+  [
+   [
+    "ASSAM",
+    93
+   ],
+   "Bokakhat",
+   [
+    [
+     "Jorhat",
+     0.12
+    ]
+   ]
+  ],
+  [
+   [
+    "BIHAR",
+    22
+   ],
+   "Sheohar",
+   [
+    [
+     "Sitamarhi",
+     0.35
+    ]
+   ]
+  ],
+  [
+   [
+    "BIHAR",
+    78
+   ],
+   "Kusheshwar Asthan (SC)",
+   [
+    [
+     "Samastipur",
+     0.81
+    ]
+   ]
+  ],
+  [
+   [
+    "BIHAR",
+    169
+   ],
+   "Sheikhpura",
+   [
+    [
+     "Lakhisarai",
+     0.12
+    ]
+   ]
+  ],
+  [
+   [
+    "BIHAR",
+    180
+   ],
+   "Bakhtiarpur",
+   [
+    [
+     "Vaishali",
+     0.12
+    ]
+   ]
+  ],
+  [
+   [
+    "BIHAR",
+    216
+   ],
+   "Jehanabad",
+   [
+    [
+     "Arwal",
+     0.14
+    ]
+   ]
+  ],
+  [
+   [
+    "CHHATTISGARH",
+    79
+   ],
+   "Antagarh (ST)",
+   [
+    [
+     "Narayanpur",
+     0.11
+    ]
+   ]
+  ],
+  [
+   [
+    "GUJARAT",
+    92
+   ],
+   "Kodinar (SC)",
+   [
+    [
+     "Amreli",
+     0.68
+    ]
+   ]
+  ],
+  [
+   [
+    "GUJARAT",
+    129
+   ],
+   "Fatepura (ST)",
+   [
+    [
+     "Panch Mahals",
+     0.1
+    ]
+   ]
+  ],
+  [
+   [
+    "HARYANA",
+    3
+   ],
+   "Naraingarh",
+   [
+    [
+     "Panchkula",
+     0.18
+    ]
+   ]
+  ],
+  [
+   [
+    "HARYANA",
+    13
+   ],
+   "Thanesar",
+   [
+    [
+     "Karnal",
+     0.28
+    ]
+   ]
+  ],
+  [
+   [
+    "JAMMU & KASHMIR",
+    5
+   ],
+   "LANGATE",
+   [
+    [
+     "Baramula",
+     0.15
+    ]
+   ]
+  ],
+  [
+   [
+    "JAMMU & KASHMIR",
+    6
+   ],
+   "URI",
+   [
+    [
+     "Punch",
+     0.87
+    ]
+   ]
+  ],
+  [
+   [
+    "JAMMU & KASHMIR",
+    23
+   ],
+   "AMIRA KADA",
+   [
+    [
+     "Baramula",
+     0.34
+    ]
+   ]
+  ],
+  [
+   [
+    "JAMMU & KASHMIR",
+    24
+   ],
+   "SONAWAR",
+   [
+    [
+     "Badgam",
+     0.11
+    ]
+   ]
+  ],
+  [
+   [
+    "JAMMU & KASHMIR",
+    27
+   ],
+   "BADGAM",
+   [
+    [
+     "Baramula",
+     0.48
+    ]
+   ]
+  ],
+  [
+   [
+    "JAMMU & KASHMIR",
+    28
+   ],
+   "BEERWAH",
+   [
+    [
+     "Baramula",
+     0.65
+    ]
+   ]
+  ],
+  [
+   [
+    "JAMMU & KASHMIR",
+    31
+   ],
+   "TRAL",
+   [
+    [
+     "Anantnag",
+     0.17
+    ]
+   ]
+  ],
+  [
+   [
+    "JAMMU & KASHMIR",
+    32
+   ],
+   "PAMPORE",
+   [
+    [
+     "Srinagar",
+     0.27
+    ],
+    [
+     "Badgam",
+     0.1
+    ]
+   ]
+  ],
+  [
+   [
+    "JAMMU & KASHMIR",
+    33
+   ],
+   "PULWAMA",
+   [
+    [
+     "Badgam",
+     0.28
+    ]
+   ]
+  ],
+  [
+   [
+    "JAMMU & KASHMIR",
+    34
+   ],
+   "RAJPORA",
+   [
+    [
+     "Badgam",
+     0.39
+    ]
+   ]
+  ],
+  [
+   [
+    "JAMMU & KASHMIR",
+    35
+   ],
+   "WACHI",
+   [
+    [
+     "Kulgam",
+     0.22
+    ]
+   ]
+  ],
+  [
+   [
+    "JAMMU & KASHMIR",
+    38
+   ],
+   "KULGAM",
+   [
+    [
+     "Shupiyan",
+     0.11
+    ]
+   ]
+  ],
+  [
+   [
+    "JAMMU & KASHMIR",
+    42
+   ],
+   "DORU",
+   [
+    [
+     "Ramban",
+     0.18
+    ]
+   ]
+  ],
+  [
+   [
+    "JAMMU & KASHMIR",
+    46
+   ],
+   "PAHALGAM",
+   [
+    [
+     "Ganderbal",
+     0.11
+    ]
+   ]
+  ],
+  [
+   [
+    "JAMMU & KASHMIR",
+    52
+   ],
+   "INDERWAL",
+   [
+    [
+     "Anantnag",
+     0.11
+    ]
+   ]
+  ],
+  [
+   [
+    "JAMMU & KASHMIR",
+    53
+   ],
+   "DODA",
+   [
+    [
+     "Udhampur",
+     0.11
+    ]
+   ]
+  ],
+  [
+   [
+    "JAMMU & KASHMIR",
+    56
+   ],
+   "BANIHAL",
+   [
+    [
+     "Kulgam",
+     0.15
+    ]
+   ]
+  ],
+  [
+   [
+    "JAMMU & KASHMIR",
+    63
+   ],
+   "BANI",
+   [
+    [
+     "Udhampur",
+     0.17
+    ]
+   ]
+  ],
+  [
+   [
+    "JAMMU & KASHMIR",
+    70
+   ],
+   "NAGROTA",
+   [
+    [
+     "Reasi",
+     0.12
+    ]
+   ]
+  ],
+  [
+   [
+    "JAMMU & KASHMIR",
+    78
+   ],
+   "RAIPUR DOMANA",
+   [
+    [
+     "Reasi",
+     0.15
+    ]
+   ]
+  ],
+  [
+   [
+    "JAMMU & KASHMIR",
+    79
+   ],
+   "AKHNOOR",
+   [
+    [
+     "Reasi",
+     0.2
+    ]
+   ]
+  ],
+  [
+   [
+    "JHARKHAND",
+    21
+   ],
+   "BARHI",
+   [
+    [
+     "Kodarma",
+     0.57
+    ]
+   ]
+  ],
+  [
+   [
+    "KARNATAKA",
+    201
+   ],
+   "Moodabidri",
+   [
+    [
+     "Udupi",
+     0.61
+    ]
+   ]
+  ],
+  [
+   [
+    "KERALA",
+    87
+   ],
+   "Kothamangalam",
+   [
+    [
+     "Idukki",
+     0.7
+    ]
+   ]
+  ],
+  [
+   [
+    "MADHYA PRADESH",
+    21
+   ],
+   "Bhander (SC)",
+   [
+    [
+     "Gwalior",
+     0.59
+    ]
+   ]
+  ],
+  [
+   [
+    "MADHYA PRADESH",
+    94
+   ],
+   "Bahoriband",
+   [
+    [
+     "Jabalpur",
+     0.4
+    ]
+   ]
+  ],
+  [
+   [
+    "MAHARASHTRA",
+    62
+   ],
+   "Sakoli",
+   [
+    [
+     "Gondiya",
+     0.15
+    ]
+   ]
+  ],
+  [
+   [
+    "MAHARASHTRA",
+    178
+   ],
+   "Dharavi (SC)",
+   [
+    [
+     "Mumbai Suburban",
+     0.14
+    ]
+   ]
+  ],
+  [
+   [
+    "MAHARASHTRA",
+    179
+   ],
+   "Sion Koliwada",
+   [
+    [
+     "Mumbai Suburban",
+     0.21
+    ]
+   ]
+  ],
+  [
+   [
+    "MAHARASHTRA",
+    234
+   ],
+   "Latur Rural",
+   [
+    [
+     "Bid",
+     0.28
+    ]
+   ]
+  ],
+  [
+   [
+    "MANIPUR",
+    1
+   ],
+   "Khundrakpam",
+   [
+    [
+     "Senapati",
+     0.12
+    ]
+   ]
+  ],
+  [
+   [
+    "MANIPUR",
+    6
+   ],
+   "Keirao",
+   [
+    [
+     "Thoubal",
+     0.3
+    ]
+   ]
+  ],
+  [
+   [
+    "MANIPUR",
+    7
+   ],
+   "Andro",
+   [
+    [
+     "Senapati",
+     0.41
+    ]
+   ]
+  ],
+  [
+   [
+    "MANIPUR",
+    24
+   ],
+   "Nambol",
+   [
+    [
+     "Imphal East",
+     0.61
+    ]
+   ]
+  ],
+  [
+   [
+    "MANIPUR",
+    29
+   ],
+   "Kumbi",
+   [
+    [
+     "Churachandpur",
+     0.1
+    ]
+   ]
+  ],
+  [
+   [
+    "MANIPUR",
+    32
+   ],
+   "Wangkhem",
+   [
+    [
+     "Imphal East",
+     0.29
+    ],
+    [
+     "Senapati",
+     0.29
+    ]
+   ]
+  ],
+  [
+   [
+    "MIZORAM",
+    4
+   ],
+   "Tuirial (ST)",
+   [
+    [
+     "Aizawl",
+     0.27
+    ]
+   ]
+  ],
+  [
+   [
+    "NAGALAND",
+    3
+   ],
+   "Dimapur-III",
+   [
+    [
+     "Peren",
+     0.13
+    ]
+   ]
+  ],
+  [
+   [
+    "NAGALAND",
+    4
+   ],
+   "Ghaspani-I",
+   [
+    [
+     "Peren",
+     0.11
+    ]
+   ]
+  ],
+  [
+   [
+    "NAGALAND",
+    5
+   ],
+   "Ghaspani-II",
+   [
+    [
+     "Kohima",
+     0.2
+    ]
+   ]
+  ],
+  [
+   [
+    "NAGALAND",
+    51
+   ],
+   "Noksen",
+   [
+    [
+     "Longleng",
+     0.3
+    ]
+   ]
+  ],
+  [
+   [
+    "ORISSA",
+    75
+   ],
+   "NABARANGPUR (ST)",
+   [
+    [
+     "Koraput",
+     0.14
+    ]
+   ]
+  ],
+  [
+   [
+    "ORISSA",
+    113
+   ],
+   "BHUBANESWAR(UTTAR)",
+   [
+    [
+     "Cuttack",
+     0.85
+    ]
+   ]
+  ],
+  [
+   [
+    "ORISSA",
+    114
+   ],
+   "EKAMRA-BHUBANESHWAR",
+   [
+    [
+     "Cuttack",
+     0.36
+    ]
+   ]
+  ],
+  [
+   [
+    "PUDUCHERRY",
+    8
+   ],
+   "Indira Nagar",
+   [
+    [
+     "Viluppuram",
+     0.11
+    ]
+   ]
+  ],
+  [
+   [
+    "PUDUCHERRY",
+    13
+   ],
+   "Muthialpet",
+   [
+    [
+     "Viluppuram",
+     0.13
+    ]
+   ]
+  ],
+  [
+   [
+    "PUDUCHERRY",
+    29
+   ],
+   "Mahe",
+   [
+    [
+     "Kannur",
+     0.13
+    ]
+   ]
+  ],
+  [
+   [
+    "PUDUCHERRY",
+    30
+   ],
+   "Yanam",
+   [
+    [
+     "East Godavari",
+     0.13
+    ]
+   ]
+  ],
+  [
+   [
+    "PUNJAB",
+    33
+   ],
+   "Kartarpur (SC)",
+   [
+    [
+     "Kapurthala",
+     0.12
+    ]
+   ]
+  ],
+  [
+   [
+    "PUNJAB",
+    54
+   ],
+   "Bassi Pathana (SC)",
+   [
+    [
+     "Rupnagar",
+     0.11
+    ]
+   ]
+  ],
+  [
+   [
+    "PUNJAB",
+    69
+   ],
+   "Raikot (SC)",
+   [
+    [
+     "Barnala",
+     0.15
+    ]
+   ]
+  ],
+  [
+   [
+    "PUNJAB",
+    75
+   ],
+   "Zira",
+   [
+    [
+     "Moga",
+     0.1
+    ]
+   ]
+  ],
+  [
+   [
+    "PUNJAB",
+    110
+   ],
+   "Patiala Rural",
+   [
+    [
+     "Fatehgarh Sahib",
+     0.11
+    ]
+   ]
+  ],
+  [
+   [
+    "RAJASTHAN",
+    1
+   ],
+   "Sadulshahar",
+   [
+    [
+     "Hanumangarh",
+     0.13
+    ]
+   ]
+  ],
+  [
+   [
+    "RAJASTHAN",
+    9
+   ],
+   "Pilibanga (SC)",
+   [
+    [
+     "Ganganagar",
+     0.13
+    ]
+   ]
+  ],
+  [
+   [
+    "RAJASTHAN",
+    81
+   ],
+   "Todabhim(ST)",
+   [
+    [
+     "Sawai Madhopur",
+     0.17
+    ]
+   ]
+  ],
+  [
+   [
+    "RAJASTHAN",
+    82
+   ],
+   "Hindaun (SC)",
+   [
+    [
+     "Sawai Madhopur",
+     0.16
+    ]
+   ]
+  ],
+  [
+   [
+    "RAJASTHAN",
+    86
+   ],
+   "Mahuwa",
+   [
+    [
+     "Karauli",
+     0.14
+    ]
+   ]
+  ],
+  [
+   [
+    "RAJASTHAN",
+    90
+   ],
+   "Gangapur",
+   [
+    [
+     "Karauli",
+     0.46
+    ]
+   ]
+  ],
+  [
+   [
+    "RAJASTHAN",
+    189
+   ],
+   "Kota North",
+   [
+    [
+     "Bundi",
+     0.23
+    ]
+   ]
+  ],
+  [
+   [
+    "SIKKIM",
+    9
+   ],
+   "Barfung(BL)",
+   [
+    [
+     "West District",
+     0.1
+    ]
+   ]
+  ],
+  [
+   [
+    "SIKKIM",
+    17
+   ],
+   "Khamdong-Singtam",
+   [
+    [
+     "South District",
+     0.1
+    ]
+   ]
+  ],
+  [
+   [
+    "SIKKIM",
+    18
+   ],
+   "West Pendam(SC)",
+   [
+    [
+     "South District",
+     0.11
+    ]
+   ]
+  ],
+  [
+   [
+    "SIKKIM",
+    19
+   ],
+   "Rhenock",
+   [
+    [
+     "Darjiling",
+     0.11
+    ]
+   ]
+  ],
+  [
+   [
+    "TAMIL NADU",
+    5
+   ],
+   "Poonamallee (SC)",
+   [
+    [
+     "Kancheepuram",
+     0.31
+    ]
+   ]
+  ],
+  [
+   [
+    "TAMIL NADU",
+    6
+   ],
+   "Avadi",
+   [
+    [
+     "Kancheepuram",
+     0.57
+    ]
+   ]
+  ],
+  [
+   [
+    "TAMIL NADU",
+    11
+   ],
+   "Dr.Radhakrishnan Naga",
+   [
+    [
+     "Thiruvallur",
+     0.12
+    ]
+   ]
+  ],
+  [
+   [
+    "TAMIL NADU",
+    12
+   ],
+   "Perambur",
+   [
+    [
+     "Thiruvallur",
+     0.65
+    ]
+   ]
+  ],
+  [
+   [
+    "TAMIL NADU",
+    13
+   ],
+   "Kolathur",
+   [
+    [
+     "Thiruvallur",
+     0.47
+    ]
+   ]
+  ],
+  [
+   [
+    "TAMIL NADU",
+    14
+   ],
+   "Villivakkam",
+   [
+    [
+     "Thiruvallur",
+     0.57
+    ]
+   ]
+  ],
+  [
+   [
+    "TAMIL NADU",
+    21
+   ],
+   "Anna Nagar",
+   [
+    [
+     "Thiruvallur",
+     0.2
+    ]
+   ]
+  ],
+  [
+   [
+    "TAMIL NADU",
+    24
+   ],
+   "Thiyagarayanagar",
+   [
+    [
+     "Thiruvallur",
+     0.16
+    ]
+   ]
+  ],
+  [
+   [
+    "TAMIL NADU",
+    26
+   ],
+   "Velachery",
+   [
+    [
+     "Kancheepuram",
+     0.66
+    ]
+   ]
+  ],
+  [
+   [
+    "TAMIL NADU",
+    211
+   ],
+   "Ramanathapuram",
+   [
+    [
+     "Virudhunagar",
+     0.16
+    ]
+   ]
+  ],
+  [
+   [
+    "UTTAR PRADESH",
+    29
+   ],
+   "Kundarki",
+   [
+    [
+     "Rampur",
+     0.15
+    ]
+   ]
+  ],
+  [
+   [
+    "UTTAR PRADESH",
+    55
+   ],
+   "Sahibabad",
+   [
+    [
+     "Gautam Buddha Nagar",
+     0.41
+    ]
+   ]
+  ],
+  [
+   [
+    "UTTAR PRADESH",
+    56
+   ],
+   "Ghaziabad",
+   [
+    [
+     "Gautam Buddha Nagar",
+     0.13
+    ]
+   ]
+  ],
+  [
+   [
+    "UTTAR PRADESH",
+    119
+   ],
+   "Meerganj",
+   [
+    [
+     "Rampur",
+     0.13
+    ]
+   ]
+  ],
+  [
+   [
+    "UTTAR PRADESH",
+    121
+   ],
+   "Nawabganj",
+   [
+    [
+     "Pilibhit",
+     0.14
+    ]
+   ]
+  ],
+  [
+   [
+    "UTTAR PRADESH",
+    130
+   ],
+   "Bisalpur",
+   [
+    [
+     "Shahjahanpur",
+     0.14
+    ]
+   ]
+  ],
+  [
+   [
+    "UTTAR PRADESH",
+    211
+   ],
+   "Kalyanpur",
+   [
+    [
+     "Unnao",
+     0.22
+    ]
+   ]
+  ],
+  [
+   [
+    "UTTAR PRADESH",
+    214
+   ],
+   "Arya Nagar",
+   [
+    [
+     "Unnao",
+     0.26
+    ]
+   ]
+  ],
+  [
+   [
+    "UTTAR PRADESH",
+    275
+   ],
+   "Ayodhya",
+   [
+    [
+     "Basti",
+     0.16
+    ]
+   ]
+  ],
+  [
+   [
+    "UTTAR PRADESH",
+    286
+   ],
+   "Bahraich",
+   [
+    [
+     "Shrawasti",
+     0.35
+    ]
+   ]
+  ],
+  [
+   [
+    "UTTAR PRADESH",
+    287
+   ],
+   "Payagpur",
+   [
+    [
+     "Shrawasti",
+     0.62
+    ]
+   ]
+  ],
+  [
+   [
+    "UTTAR PRADESH",
+    346
+   ],
+   "Mubarakpur",
+   [
+    [
+     "Mau",
+     0.12
+    ]
+   ]
+  ],
+  [
+   [
+    "UTTARKHAND",
+    8
+   ],
+   "Rudraprayag",
+   [
+    [
+     "Garhwal",
+     0.24
+    ]
+   ]
+  ],
+  [
+   [
+    "UTTARKHAND",
+    25
+   ],
+   "Hardwar",
+   [
+    [
+     "Dehradun",
+     0.34
+    ]
+   ]
+  ],
+  [
+   [
+    "UTTARKHAND",
+    55
+   ],
+   "Champawat",
+   [
+    [
+     "Udham Singh Nagar",
+     0.14
+    ]
+   ]
+  ],
+  [
+   [
+    "WEST BENGAL",
+    42
+   ],
+   "HARIRAMPUR",
+   [
+    [
+     "Uttar Dinajpur",
+     0.16
+    ]
+   ]
+  ],
+  [
+   [
+    "WEST BENGAL",
+    52
+   ],
+   "MOTHABARI",
+   [
+    [
+     "Sahibganj",
+     0.21
+    ]
+   ]
+  ],
+  [
+   [
+    "WEST BENGAL",
+    105
+   ],
+   "BHATPARA",
+   [
+    [
+     "Hugli",
+     0.15
+    ]
+   ]
+  ],
+  [
+   [
+    "WEST BENGAL",
+    107
+   ],
+   "NOAPARA",
+   [
+    [
+     "Hugli",
+     0.1
+    ]
+   ]
+  ],
+  [
+   [
+    "WEST BENGAL",
+    162
+   ],
+   "CHOWRANGEE",
+   [
+    [
+     "Haora",
+     0.15
+    ]
+   ]
+  ],
+  [
+   [
+    "WEST BENGAL",
+    166
+   ],
+   "SHYAMPUKUR",
+   [
+    [
+     "Haora",
+     0.23
+    ]
+   ]
+  ]
+ ],
+ "moved": [
+  [
+   [
+    "ASSAM",
+    51
+   ],
+   "Jalukbari",
+   [
+    "Kamrup"
+   ],
+   "Kamrup Metropolitan 75% + Kamrup 25% (pinned)"
+  ],
+  [
+   [
+    "JAMMU & KASHMIR",
+    17
+   ],
+   "GANDERBAL",
+   [
+    "Srinagar",
+    "Baramula"
+   ],
+   "Ganderbal 100% (pinned)"
+  ],
+  [
+   [
+    "JAMMU & KASHMIR",
+    55
+   ],
+   "RAMBAN",
+   [
+    "Doda",
+    "Ramban"
+   ],
+   "Ramban 100% (pinned)"
+  ],
+  [
+   [
+    "JHARKHAND",
+    77
+   ],
+   "BISHRAMPUR",
+   [
+    "Garhwa"
+   ],
+   "Palamu 60% + Garhwa 40% (pinned)"
+  ],
+  [
+   [
+    "MADHYA PRADESH",
+    78
+   ],
+   "Sihawal",
+   [
+    "Sidhi",
+    "Singrauli"
+   ],
+   "Sidhi 85% + Singrauli 15% (pinned)"
+  ],
+  [
+   [
+    "MADHYA PRADESH",
+    82
+   ],
+   "Dhauhani (ST)",
+   [
+    "Sidhi",
+    "Singrauli"
+   ],
+   "Sidhi 80% + Singrauli 20% (pinned)"
+  ],
+  [
+   [
+    "MANIPUR",
+    9
+   ],
+   "Thangmeiband",
+   [
+    "Imphal East"
+   ],
+   "Imphal West"
+  ],
+  [
+   [
+    "MANIPUR",
+    10
+   ],
+   "Uripok",
+   [
+    "Imphal East"
+   ],
+   "Imphal West"
+  ],
+  [
+   [
+    "MANIPUR",
+    11
+   ],
+   "Sagolband",
+   [
+    "Imphal East"
+   ],
+   "Imphal West"
+  ],
+  [
+   [
+    "MANIPUR",
+    12
+   ],
+   "Keisamthong",
+   [
+    "Imphal East"
+   ],
+   "Imphal West"
+  ],
+  [
+   [
+    "MANIPUR",
+    13
+   ],
+   "Singjamei",
+   [
+    "Imphal East"
+   ],
+   "Imphal West"
+  ],
+  [
+   [
+    "MANIPUR",
+    16
+   ],
+   "Sekmai",
+   [
+    "Imphal East"
+   ],
+   "Imphal West"
+  ],
+  [
+   [
+    "MANIPUR",
+    17
+   ],
+   "Lamsang",
+   [
+    "Imphal East"
+   ],
+   "Imphal West"
+  ],
+  [
+   [
+    "MANIPUR",
+    18
+   ],
+   "Konthoujam",
+   [
+    "Imphal East"
+   ],
+   "Imphal West"
+  ],
+  [
+   [
+    "MANIPUR",
+    19
+   ],
+   "Patsoi",
+   [
+    "Imphal East"
+   ],
+   "Imphal West"
+  ],
+  [
+   [
+    "MANIPUR",
+    20
+   ],
+   "langthabal",
+   [
+    "Imphal East"
+   ],
+   "Imphal West"
+  ],
+  [
+   [
+    "MANIPUR",
+    21
+   ],
+   "Naoriya Pakhanglak*",
+   [
+    "Imphal East"
+   ],
+   "Imphal West"
+  ],
+  [
+   [
+    "MANIPUR",
+    22
+   ],
+   "Wangoi",
+   [
+    "Thoubal",
+    "Imphal East"
+   ],
+   "Imphal West"
+  ],
+  [
+   [
+    "MANIPUR",
+    23
+   ],
+   "Mayang Imphal",
+   [
+    "Imphal East"
+   ],
+   "Imphal West"
+  ],
+  [
+   [
+    "MANIPUR",
+    40
+   ],
+   "Jiribam",
+   [
+    "Imphal West",
+    "Tamenglong"
+   ],
+   "Imphal East"
+  ],
+  [
+   [
+    "MIZORAM",
+    38
+   ],
+   "Lawngtlai East (ST)",
+   [
+    "Saiha",
+    "Lunglei"
+   ],
+   "Lawngtlai"
+  ],
+  [
+   [
+    "NAGALAND",
+    13
+   ],
+   "Pughoboto",
+   [
+    "Kohima"
+   ],
+   "Zunheboto"
+  ],
+  [
+   [
+    "NAGALAND",
+    55
+   ],
+   "Tobu",
+   [
+    "Tuensang"
+   ],
+   "Mon"
+  ],
+  [
+   [
+    "TAMIL NADU",
+    22
+   ],
+   "Virugampakkam",
+   [
+    "Thiruvallur"
+   ],
+   "Chennai"
+  ],
+  [
+   [
+    "WEST BENGAL",
+    116
+   ],
+   "BIDHANNAGAR",
+   [
+    "South Twenty Four Parganas"
+   ],
+   "North Twenty Four Parganas"
+  ],
+  [
+   [
+    "WEST BENGAL",
+    127
+   ],
+   "GOSABA (SC)",
+   [
+    "North Twenty Four Parganas"
+   ],
+   "South Twenty Four Parganas"
+  ],
+  [
+   [
+    "WEST BENGAL",
+    149
+   ],
+   "KASBA",
+   [
+    "South Twenty Four Parganas"
+   ],
+   "Kolkata 100% (pinned)"
+  ],
+  [
+   [
+    "WEST BENGAL",
+    150
+   ],
+   "JADAVPUR",
+   [
+    "South Twenty Four Parganas"
+   ],
+   "Kolkata 100% (pinned)"
+  ],
+  [
+   [
+    "WEST BENGAL",
+    152
+   ],
+   "TOLLYGANJ",
+   [
+    "South Twenty Four Parganas"
+   ],
+   "Kolkata 100% (pinned)"
+  ],
+  [
+   [
+    "WEST BENGAL",
+    153
+   ],
+   "BEHALA PURBA",
+   [
+    "South Twenty Four Parganas"
+   ],
+   "Kolkata 78% + South Twenty Four Parganas 22% (pinned)"
+  ],
+  [
+   [
+    "WEST BENGAL",
+    154
+   ],
+   "BEHALA PASCHIM",
+   [
+    "South Twenty Four Parganas"
+   ],
+   "Kolkata 100% (pinned)"
+  ],
+  [
+   [
+    "WEST BENGAL",
+    157
+   ],
+   "METIABURUZ",
+   [
+    "South Twenty Four Parganas"
+   ],
+   "Kolkata 62% + South Twenty Four Parganas 38% (pinned)"
+  ]
+ ],
+ "official_list_problems": [
+  "Delhi AC 1: district \"\" has no 2011 mapping",
+  "Delhi AC 2: district \"\" has no 2011 mapping",
+  "Delhi AC 3: district \"\" has no 2011 mapping",
+  "Delhi AC 4: district \"\" has no 2011 mapping",
+  "Delhi AC 5: district \"\" has no 2011 mapping",
+  "Delhi AC 6: district \"\" has no 2011 mapping",
+  "Delhi AC 7: district \"\" has no 2011 mapping",
+  "Delhi AC 8: district \"\" has no 2011 mapping",
+  "Delhi AC 9: district \"\" has no 2011 mapping",
+  "Delhi AC 10: district \"\" has no 2011 mapping",
+  "Delhi AC 11: district \"\" has no 2011 mapping",
+  "Delhi AC 12: district \"\" has no 2011 mapping",
+  "Delhi AC 13: district \"\" has no 2011 mapping",
+  "Delhi AC 14: district \"\" has no 2011 mapping",
+  "Delhi AC 15: district \"\" has no 2011 mapping",
+  "Delhi AC 16: district \"\" has no 2011 mapping",
+  "Delhi AC 17: district \"\" has no 2011 mapping",
+  "Delhi AC 18: district \"\" has no 2011 mapping",
+  "Delhi AC 19: district \"\" has no 2011 mapping",
+  "Delhi AC 20: district \"\" has no 2011 mapping",
+  "Delhi AC 21: district \"\" has no 2011 mapping",
+  "Delhi AC 22: district \"\" has no 2011 mapping",
+  "Delhi AC 23: district \"\" has no 2011 mapping",
+  "Delhi AC 24: district \"\" has no 2011 mapping",
+  "Delhi AC 25: district \"\" has no 2011 mapping",
+  "Delhi AC 26: district \"\" has no 2011 mapping",
+  "Delhi AC 27: district \"\" has no 2011 mapping",
+  "Delhi AC 28: district \"\" has no 2011 mapping",
+  "Delhi AC 29: district \"\" has no 2011 mapping",
+  "Delhi AC 30: district \"\" has no 2011 mapping",
+  "Delhi AC 31: district \"\" has no 2011 mapping",
+  "Delhi AC 32: district \"\" has no 2011 mapping",
+  "Delhi AC 33: district \"\" has no 2011 mapping",
+  "Delhi AC 34: district \"\" has no 2011 mapping",
+  "Delhi AC 35: district \"\" has no 2011 mapping",
+  "Delhi AC 36: district \"\" has no 2011 mapping",
+  "Delhi AC 37: district \"\" has no 2011 mapping",
+  "Delhi AC 38: district \"\" has no 2011 mapping",
+  "Delhi AC 39: district \"\" has no 2011 mapping",
+  "Delhi AC 40: district \"\" has no 2011 mapping",
+  "Delhi AC 41: district \"\" has no 2011 mapping",
+  "Delhi AC 42: district \"\" has no 2011 mapping",
+  "Delhi AC 43: district \"\" has no 2011 mapping",
+  "Delhi AC 44: district \"\" has no 2011 mapping",
+  "Delhi AC 45: district \"\" has no 2011 mapping",
+  "Delhi AC 46: district \"\" has no 2011 mapping",
+  "Delhi AC 47: district \"\" has no 2011 mapping",
+  "Delhi AC 48: district \"\" has no 2011 mapping",
+  "Delhi AC 49: district \"\" has no 2011 mapping",
+  "Delhi AC 50: district \"\" has no 2011 mapping",
+  "Delhi AC 51: district \"\" has no 2011 mapping",
+  "Delhi AC 52: district \"\" has no 2011 mapping",
+  "Delhi AC 53: district \"\" has no 2011 mapping",
+  "Delhi AC 54: district \"\" has no 2011 mapping",
+  "Delhi AC 55: district \"\" has no 2011 mapping",
+  "Delhi AC 56: district \"\" has no 2011 mapping",
+  "Delhi AC 57: district \"\" has no 2011 mapping",
+  "Delhi AC 58: district \"\" has no 2011 mapping",
+  "Delhi AC 59: district \"\" has no 2011 mapping",
+  "Delhi AC 60: district \"\" has no 2011 mapping",
+  "Delhi AC 61: district \"\" has no 2011 mapping",
+  "Delhi AC 62: district \"\" has no 2011 mapping",
+  "Delhi AC 63: district \"\" has no 2011 mapping",
+  "Delhi AC 64: district \"\" has no 2011 mapping",
+  "Delhi AC 65: district \"\" has no 2011 mapping",
+  "Delhi AC 66: district \"\" has no 2011 mapping",
+  "Delhi AC 67: district \"\" has no 2011 mapping",
+  "Delhi AC 68: district \"\" has no 2011 mapping",
+  "Delhi AC 69: district \"\" has no 2011 mapping",
+  "Delhi AC 70: district \"\" has no 2011 mapping",
+  "Sikkim AC 32: district \"\" has no 2011 mapping"
+ ],
+ "segname": [
+  "Andhra Pradesh 2024 seg 15: \"CHEEPURUPALLE\" vs AC \"CHEEPURUPALLI\"",
+  "Andhra Pradesh 2024 seg 20: \"BHIMILI\" vs AC \"BHIMLI\"",
+  "Andhra Pradesh 2024 seg 30: \"ANAKAPALLE\" vs AC \"ANAKAPALLI\"",
+  "Andhra Pradesh 2024 seg 51: \"RAJAHMUNDRY RURAL\" vs AC \"RAJAMUNDRY RURAL\"",
+  "Andhra Pradesh 2024 seg 79: \"VIJAYAWADA WEST\" vs AC \"VIJAYWADA WEST\"",
+  "Andhra Pradesh 2024 seg 98: \"SATTENAPALLE\" vs AC \"SATTENAPALLI\"",
+  "Andhra Pradesh 2024 seg 100: \"GURAJALA\" vs AC \"GURAZALA\"",
+  "Andhra Pradesh 2024 seg 151: \"TADPATRI\" vs AC \"TADIPATRI\"",
+  "Andhra Pradesh 2019 seg 15: \"CHEEPURUPALLE\" vs AC \"CHEEPURUPALLI\"",
+  "Andhra Pradesh 2019 seg 20: \"BHIMILI\" vs AC \"BHIMLI\"",
+  "Andhra Pradesh 2019 seg 30: \"ANAKAPALLE\" vs AC \"ANAKAPALLI\"",
+  "Andhra Pradesh 2019 seg 51: \"RAJAHMUNDRY RURAL\" vs AC \"RAJAMUNDRY RURAL\"",
+  "Andhra Pradesh 2019 seg 79: \"VIJAYAWADA WEST\" vs AC \"VIJAYWADA WEST\"",
+  "Andhra Pradesh 2019 seg 98: \"SATTENAPALLE\" vs AC \"SATTENAPALLI\"",
+  "Andhra Pradesh 2019 seg 100: \"GURAJALA\" vs AC \"GURAZALA\"",
+  "Andhra Pradesh 2019 seg 151: \"TADPATRI\" vs AC \"TADIPATRI\"",
+  "Andhra Pradesh 2014 seg 134: \"CHEEPURUPALLE\" vs AC \"CHEEPURUPALLI\"",
+  "Andhra Pradesh 2014 seg 146: \"V\" vs AC \"MADUGULA\"",
+  "Andhra Pradesh 2009 seg 134: \"CHEEPURUPALLE\" vs AC \"CHEEPURUPALLI\"",
+  "Andhra Pradesh 2009 seg 149: \"ANAKAPALLE\" vs AC \"ANAKAPALLI\"",
+  "Andhra Pradesh 2009 seg 217: \"SATTENPALLI\" vs AC \"SATTENAPALLI\"",
+  "Andhra Pradesh 2009 seg 219: \"GURUZALA\" vs AC \"GURAZALA\"",
+  "Andhra Pradesh 2009 seg 270: \"TADPATRI\" vs AC \"TADIPATRI\"",
+  "Arunachal Pradesh 2024 seg 9: \"CHYANGTAJO\" vs AC \"CHAYANG TAJO\"",
+  "Arunachal Pradesh 2019 seg 33: \"MECHUKHA\" vs AC \"MECHUKA\"",
+  "Arunachal Pradesh 2019 seg 49: \"BORDUMSA - DIYUM\" vs AC \"BORDUMSA - DIYUN\"",
+  "Arunachal Pradesh 2019 seg 60: \"PONGCHAO WAKKA\" vs AC \"PONGCHAU WAKKA\"",
+  "Arunachal Pradesh 2009 seg 33: \"MECHUKHA\" vs AC \"MECHUKA\"",
+  "Arunachal Pradesh 2009 seg 49: \"BORDUMSA - DIYUM\" vs AC \"BORDUMSA - DIYUN\"",
+  "Arunachal Pradesh 2009 seg 60: \"PONGCHAO WAKKA\" vs AC \"PONGCHAU WAKKA\"",
+  "Assam 2019 seg 7: \"KATLICHERA\" vs AC \"KATLICHERRA\"",
+  "Assam 2019 seg 28: \"GOSSAIGAON\" vs AC \"GOSSALGAON\"",
+  "Assam 2019 seg 57: \"RANGIA\" vs AC \"RANGIYA\"",
+  "Assam 2019 seg 70: \"MAJBAT\" vs AC \"MAZBAT\"",
+  "Assam 2019 seg 72: \"BARCHALLA\" vs AC \"BORCHALLA\"",
+  "Assam 2019 seg 77: \"BEHALI\" vs AC \"BIHALI\"",
+  "Assam 2019 seg 78: \"GOHPUR\" vs AC \"GAHPUR\"",
+  "Assam 2019 seg 80: \"MARIGAON\" vs AC \"MORIGAON\"",
+  "Assam 2019 seg 101: \"MARIANI\" vs AC \"MORIANI\"",
+  "Assam 2014 seg 7: \"KATLICHERA\" vs AC \"KATLICHERRA\"",
+  "Assam 2014 seg 28: \"GOSSAIGAON\" vs AC \"GOSSALGAON\"",
+  "Assam 2014 seg 70: \"MAJBAT\" vs AC \"MAZBAT\"",
+  "Assam 2014 seg 72: \"BARCHALLA\" vs AC \"BORCHALLA\"",
+  "Assam 2014 seg 77: \"BEHALI\" vs AC \"BIHALI\"",
+  "Assam 2014 seg 78: \"GOHPUR\" vs AC \"GAHPUR\"",
+  "Assam 2014 seg 80: \"MARIGAON\" vs AC \"MORIGAON\"",
+  "Assam 2014 seg 101: \"MARIANI\" vs AC \"MORIANI\"",
+  "Assam 2009 seg 2: \"PATHERKANDI\" vs AC \"PATHARKANDI\"",
+  "Assam 2009 seg 14: \"BORKHOLA\" vs AC \"BARKHOLA\"",
+  "Assam 2009 seg 25: \"GOLOKGANJ\" vs AC \"GOLAKGANJ\"",
+  "Assam 2009 seg 28: \"GOSSAIGAON\" vs AC \"GOSSALGAON\"",
+  "Assam 2009 seg 36: \"DUDHNOI\" vs AC \"DUDHNAI\"",
+  "Assam 2009 seg 49: \"CHHAYGAON\" vs AC \"CHAYGAON\"",
+  "Assam 2009 seg 60: \"BARKHETRI\" vs AC \"BARKHETRY\"",
+  "Assam 2009 seg 57: \"RANGIA\" vs AC \"RANGIYA\"",
+  "Assam 2009 seg 72: \"BARCHALLA\" vs AC \"BORCHALLA\"",
+  "Assam 2009 seg 77: \"BEHALI\" vs AC \"BIHALI\"",
+  "Assam 2009 seg 78: \"GOHPUR\" vs AC \"GAHPUR\"",
+  "Assam 2009 seg 86: \"NAGAON\" vs AC \"NOWGONG\"",
+  "Assam 2009 seg 84: \"BATADRABA\" vs AC \"BATADROBA\"",
+  "Assam 2009 seg 85: \"RUPAHIHAT\" vs AC \"RUPOHIHAT\"",
+  "Assam 2009 seg 101: \"MARIANI\" vs AC \"MORIANI\"",
+  "Assam 2009 seg 105: \"MAHMORA\" vs AC \"MAHMARA\"",
+  "Assam 2009 seg 108: \"SIVASAGAR\" vs AC \"SIBSAGAR\"",
+  "Assam 2009 seg 118: \"DULIJAN\" vs AC \"DULIAJAN\"",
+  "Bihar 2024 seg 20: \"CHIRAIYA\" vs AC \"CHIRAIA\"",
+  "Bihar 2024 seg 29: \"RUNNISAIDPUR\" vs AC \"RUNISAIDPUR\"",
+  "Bihar 2024 seg 44: \"TRIVENIGANJ\" vs AC \"TRIBENIGANJ\"",
+  "Bihar 2024 seg 74: \"SONBARSHA\" vs AC \"SONBARSA\"",
+  "Bihar 2024 seg 111: \"GORIAKOTHI\" vs AC \"GORIYAKOTHI\"",
+  "Bihar 2024 seg 138: \"BIBHUTIPUR\" vs AC \"BIBHUTPUR\"",
+  "Bihar 2024 seg 160: \"DHAURAIYA\" vs AC \"DHORAIYA\"",
+  "Bihar 2024 seg 167: \"SURAJGARHA\" vs AC \"SURYAGARHA\"",
+  "Bihar 2024 seg 185: \"FATUHA\" vs AC \"FATWAH\"",
+  "Bihar 2019 seg 29: \"RUNNISAIDPUR\" vs AC \"RUNISAIDPUR\"",
+  "Bihar 2019 seg 44: \"TRIVENIGANJ (SC)\" vs AC \"TRIBENIGANJ\"",
+  "Bihar 2019 seg 74: \"SONBARSHA (SC)\" vs AC \"SONBARSA\"",
+  "Bihar 2019 seg 111: \"GORIAKOTHI\" vs AC \"GORIYAKOTHI\"",
+  "Bihar 2019 seg 138: \"BIBHUTIPUR\" vs AC \"BIBHUTPUR\"",
+  "Bihar 2019 seg 160: \"DHAURAIYA (SC)\" vs AC \"DHORAIYA\"",
+  "Bihar 2019 seg 185: \"FATUHA\" vs AC \"FATWAH\"",
+  "Bihar 2019 seg 216: \"JAHANABAD\" vs AC \"JEHANABAD\"",
+  "Bihar 2019 seg 218: \"MAKHADUMAPUR (SC)\" vs AC \"MAKHDUMPUR\"",
+  "Bihar 2014 seg 29: \"RUNNISAIDPUR\" vs AC \"RUNISAIDPUR\"",
+  "Bihar 2014 seg 44: \"TRIVENIGANJ\" vs AC \"TRIBENIGANJ\"",
+  "Bihar 2014 seg 74: \"SONBARSHA\" vs AC \"SONBARSA\"",
+  "Bihar 2014 seg 111: \"GORIAKOTHI\" vs AC \"GORIYAKOTHI\"",
+  "Bihar 2014 seg 138: \"BIBHUTIPUR\" vs AC \"BIBHUTPUR\"",
+  "Bihar 2014 seg 160: \"DHAURAIYA\" vs AC \"DHORAIYA\"",
+  "Bihar 2014 seg 185: \"FATUHA\" vs AC \"FATWAH\"",
+  "Bihar 2014 seg 216: \"JAHANABAD\" vs AC \"JEHANABAD\"",
+  "Bihar 2014 seg 218: \"MAKHADUMAPUR\" vs AC \"MAKHDUMPUR\"",
+  "Bihar 2009 seg 79: \"GORA BAURAM\" vs AC \"GAURA BAURAM\"",
+  "Bihar 2009 seg 129: \"MANHAR\" vs AC \"MAHNAR\"",
+  "Bihar 2009 seg 160: \"DHURAIYA\" vs AC \"DHORAIYA\"",
+  "Bihar 2009 seg 172: \"BISHARSHARIF\" vs AC \"BIHARSHARIF\"",
+  "Bihar 2009 seg 199: \"BARHAMPUR\" vs AC \"BRAHAMPUR\"",
+  "Bihar 2009 seg 216: \"JAHANABAD\" vs AC \"JEHANABAD\"",
+  "Chhattisgarh 2024 seg 14: \"PATALGAON\" vs AC \"PATHALGAON\"",
+  "Chhattisgarh 2024 seg 37: \"JAIJEPUR\" vs AC \"JAIJAIPUR\"",
+  "Chhattisgarh 2024 seg 71: \"PANDARIA\" vs AC \"PANDARIYA\"",
+  "Chhattisgarh 2024 seg 78: \"MOHAL - MANPUR\" vs AC \"MOHALA-MANPUR\"",
+  "Chhattisgarh 2024 seg 63: \"DURG RURAL\" vs AC \"DURG GRAMIN\"",
+  "Chhattisgarh 2024 seg 48: \"RAIPUR RURAL\" vs AC \"RAIPUR CITY GRAMIN\"",
+  "Chhattisgarh 2024 seg 55: \"BINDRANAVAGARH\" vs AC \"BINDRANAWAGARH\"",
+  "Chhattisgarh 2024 seg 87: \"CHITRAKOAT\" vs AC \"CHITRAKOT\"",
+  "Chhattisgarh 2024 seg 88: \"DANTEWADA\" vs AC \"DANTEWARA\"",
+  "Chhattisgarh 2024 seg 60: \"DONDILOHARA\" vs AC \"DONDI LAHARA\"",
+  "Chhattisgarh 2019 seg 87: \"CHITRAKOAT\" vs AC \"CHITRAKOT\"",
+  "Chhattisgarh 2019 seg 88: \"DANTEWADA\" vs AC \"DANTEWARA\"",
+  "Chhattisgarh 2019 seg 60: \"DONDI LOHARA\" vs AC \"DONDI LAHARA\"",
+  "Chhattisgarh 2009 seg 21: \"KOBRA\" vs AC \"KORBA\"",
+  "Chhattisgarh 2009 seg 72: \"KAWARGHA\" vs AC \"KAWARDHA\"",
+  "Chhattisgarh 2009 seg 63: \"DURG-RURAL\" vs AC \"DURG GRAMIN\"",
+  "Chhattisgarh 2009 seg 70: \"NAWAGARH\" vs AC \"NAVAGARH\"",
+  "Chhattisgarh 2009 seg 48: \"RAIPUR RURAL\" vs AC \"RAIPUR CITY GRAMIN\"",
+  "Chhattisgarh 2009 seg 84: \"NARAYANPUR\" vs AC \"NARAINPUR\"",
+  "Delhi 2014 seg 1: \"NERELA\" vs AC \"NARELA\"",
+  "Delhi 2009 seg 1: \"NERELA\" vs AC \"NARELA\"",
+  "Gujarat 2024 seg 65: \"MORBI\" vs AC \"MORVI\"",
+  "Gujarat 2024 seg 25: \"MAHESANA\" vs AC \"MEHSANA\"",
+  "Gujarat 2024 seg 34: \"DAHEGAM\" vs AC \"DEHGAM\"",
+  "Gujarat 2024 seg 76: \"KALAVAD\" vs AC \"KALAWAD\"",
+  "Gujarat 2024 seg 117: \"MEHMEDABAD\" vs AC \"MEHEMDABAD\"",
+  "Gujarat 2024 seg 120: \"KAPADVANJ\" vs AC \"KAPADWANJ\"",
+  "Gujarat 2024 seg 142: \"SAYAJIGUNJ\" vs AC \"SAYAJIGANJ\"",
+  "Gujarat 2024 seg 168: \"CHORYASI\" vs AC \"CHORASI\"",
+  "Gujarat 2019 seg 65: \"MORBI\" vs AC \"MORVI\"",
+  "Gujarat 2019 seg 25: \"MAHESANA\" vs AC \"MEHSANA\"",
+  "Gujarat 2019 seg 34: \"DAHEGAM\" vs AC \"DEHGAM\"",
+  "Gujarat 2019 seg 76: \"KALAVAD\" vs AC \"KALAWAD\"",
+  "Gujarat 2019 seg 117: \"MEHMEDABAD\" vs AC \"MEHEMDABAD\"",
+  "Gujarat 2019 seg 120: \"KAPADVANJ\" vs AC \"KAPADWANJ\"",
+  "Gujarat 2019 seg 142: \"SAYAJIGUNJ\" vs AC \"SAYAJIGANJ\"",
+  "Gujarat 2019 seg 168: \"CHORYASI\" vs AC \"CHORASI\"",
+  "Gujarat 2014 seg 65: \"MORBI\" vs AC \"MORVI\"",
+  "Gujarat 2014 seg 19: \"SIDDHPUR\" vs AC \"SIDHPUR\"",
+  "Gujarat 2014 seg 25: \"MAHESANA\" vs AC \"MEHSANA\"",
+  "Gujarat 2014 seg 76: \"KALAVAD S\" vs AC \"KALAWAD\"",
+  "Gujarat 2014 seg 117: \"MEHMEDABAD\" vs AC \"MEHEMDABAD\"",
+  "Gujarat 2014 seg 120: \"KAPADVANJ\" vs AC \"KAPADWANJ\"",
+  "Gujarat 2014 seg 124: \"SHAHERA\" vs AC \"SHEHRA\"",
+  "Gujarat 2014 seg 134: \"DEVGADBARIA\" vs AC \"DEVGADH BARIA\"",
+  "Gujarat 2014 seg 142: \"SAYAJIGUNJ\" vs AC \"SAYAJIGANJ\"",
+  "Gujarat 2014 seg 149: \"DEDIYAPADA\" vs AC \"DEDIAPADA\"",
+  "Gujarat 2014 seg 168: \"CHORYASI\" vs AC \"CHORASI\"",
+  "Gujarat 2009 seg 65: \"MORBI\" vs AC \"MORVI\"",
+  "Gujarat 2009 seg 25: \"MAHESANA\" vs AC \"MEHSANA\"",
+  "Gujarat 2009 seg 76: \"KALAVAD\" vs AC \"KALAWAD\"",
+  "Gujarat 2009 seg 77: \"JAMNAGR RURAL\" vs AC \"JAMNAGAR RURAL\"",
+  "Gujarat 2009 seg 117: \"MEHMEDABAD\" vs AC \"MEHEMDABAD\"",
+  "Gujarat 2009 seg 120: \"KAPADVANJ\" vs AC \"KAPADWANJ\"",
+  "Gujarat 2009 seg 134: \"DEVGADBARIA\" vs AC \"DEVGADH BARIA\"",
+  "Gujarat 2009 seg 142: \"SAYAJIGUNJ\" vs AC \"SAYAJIGANJ\"",
+  "Gujarat 2009 seg 168: \"CHORYASI\" vs AC \"CHORASI\"",
+  "Haryana 2024 seg 42: \"KALAWALI\" vs AC \"KALANWALI\"",
+  "Haryana 2019 seg 42: \"KALAWALI (SC)\" vs AC \"KALANWALI\"",
+  "Haryana 2014 seg 42: \"KALAWALI\" vs AC \"KALANWALI\"",
+  "Haryana 2009 seg 42: \"KALAWALI\" vs AC \"KALANWALI\"",
+  "Himachal Pradesh 2024 seg 14: \"SULAH\" vs AC \"SULLAH\"",
+  "Himachal Pradesh 2024 seg 46: \"JHANDUTTA\" vs AC \"JHANDUTA\"",
+  "Jharkhand 2024 seg 5: \"PAKAUR\" vs AC \"PAKHUR\"",
+  "Jharkhand 2024 seg 34: \"GOMIA\" vs AC \"GOMIYA\"",
+  "Jharkhand 2024 seg 37: \"CHANDANKIYARI\" vs AC \"CHANDANKYARI\"",
+  "Jharkhand 2024 seg 45: \"GHATSILA\" vs AC \"GHATSHILA\"",
+  "Jharkhand 2024 seg 47: \"JUGSALAI\" vs AC \"JUGASHLAI\"",
+  "Jharkhand 2024 seg 53: \"MAJHGAON\" vs AC \"MAJHGANON\"",
+  "Jharkhand 2024 seg 57: \"KHARSAWAN\" vs AC \"KHARASAWAN\"",
+  "Jharkhand 2024 seg 24: \"MANDU\" vs AC \"MANDHU\"",
+  "Jharkhand 2019 seg 4: \"LITTIPARA\" vs AC \"LITIPARA\"",
+  "Jharkhand 2019 seg 5: \"PAKUR\" vs AC \"PAKHUR\"",
+  "Jharkhand 2019 seg 7: \"SHIKARIPARA\" vs AC \"SIKARIPARA\"",
+  "Jharkhand 2019 seg 34: \"GOMIA\" vs AC \"GOMIYA\"",
+  "Jharkhand 2019 seg 45: \"GHATSILA\" vs AC \"GHATSHILA\"",
+  "Jharkhand 2019 seg 47: \"JUGSALAI\" vs AC \"JUGASHLAI\"",
+  "Jharkhand 2019 seg 51: \"SARAIKELLA\" vs AC \"SERAIKELLA\"",
+  "Jharkhand 2019 seg 54: \"JAGANNATHPUR\" vs AC \"JAGANATHPUR\"",
+  "Jharkhand 2019 seg 78: \"CHATTARPUR\" vs AC \"CHHATARPUR\"",
+  "Jharkhand 2019 seg 24: \"MANDU\" vs AC \"MANDHU\"",
+  "Jharkhand 2014 seg 4: \"LITTIPARA\" vs AC \"LITIPARA\"",
+  "Jharkhand 2014 seg 5: \"PAKUR\" vs AC \"PAKHUR\"",
+  "Jharkhand 2014 seg 7: \"SHIKARIPARA\" vs AC \"SIKARIPARA\"",
+  "Jharkhand 2014 seg 34: \"GOMIA\" vs AC \"GOMIYA\"",
+  "Jharkhand 2014 seg 45: \"GHATSILA\" vs AC \"GHATSHILA\"",
+  "Jharkhand 2014 seg 47: \"JUGSALAI\" vs AC \"JUGASHLAI\"",
+  "Jharkhand 2014 seg 51: \"SARAIKELLA\" vs AC \"SERAIKELLA\"",
+  "Jharkhand 2014 seg 78: \"CHATTARPUR\" vs AC \"CHHATARPUR\"",
+  "Jharkhand 2014 seg 24: \"MANDU\" vs AC \"MANDHU\"",
+  "Jharkhand 2009 seg 7: \"SHIKARIPARA\" vs AC \"SIKARIPARA\"",
+  "Jharkhand 2009 seg 51: \"SARAIKELLA\" vs AC \"SERAIKELLA\"",
+  "Jharkhand 2009 seg 78: \"CHATTARPUR\" vs AC \"CHHATARPUR\"",
+  "Karnataka 2024 seg 10: \"YEMKANAMARDI\" vs AC \"YEMKANMARDI\"",
+  "Karnataka 2024 seg 16: \"BAILAHONGAL\" vs AC \"BAILHONGAL\"",
+  "Karnataka 2024 seg 27: \"DEVARA HIPPARGI\" vs AC \"DEVAR HIPPARGI\"",
+  "Karnataka 2024 seg 48: \"HUMNABAD\" vs AC \"HOMNABAD\"",
+  "Karnataka 2024 seg 62: \"GANGAVATHI\" vs AC \"GANGAWATI\"",
+  "Karnataka 2024 seg 92: \"SIRAGUPPA\" vs AC \"SIRUGUPPA\"",
+  "Karnataka 2024 seg 88: \"HADAGALI\" vs AC \"HADAGALLI\"",
+  "Karnataka 2024 seg 87: \"RANEBENNUR\" vs AC \"RANIBENNUR\"",
+  "Karnataka 2024 seg 75: \"KALAGHATGI\" vs AC \"KALGHATGI\"",
+  "Karnataka 2024 seg 112: \"BHADRAVATHI\" vs AC \"BHADRAVATI\"",
+  "Karnataka 2024 seg 118: \"BAINDUR\" vs AC \"BYNDOOR\"",
+  "Karnataka 2024 seg 121: \"KAUP\" vs AC \"KAPU\"",
+  "Karnataka 2024 seg 125: \"CHICKAMAGALUR\" vs AC \"CHIKMAGALUR\"",
+  "Karnataka 2024 seg 198: \"ARAKALGUD\" vs AC \"ARKALGUD\"",
+  "Karnataka 2024 seg 199: \"SAKALESHPUR\" vs AC \"SAKLESHPUR\"",
+  "Karnataka 2024 seg 205: \"BANTWAL\" vs AC \"BANTVAL\"",
+  "Karnataka 2024 seg 128: \"CHIKKNAYAKANHALLI\" vs AC \"CHIKNAYAKANHALLI\"",
+  "Karnataka 2024 seg 210: \"PIRIYAPATNA\" vs AC \"PERIYAPATNA\"",
+  "Karnataka 2024 seg 153: \"YESHWANTHAPURA\" vs AC \"YESHVANTHAPURA\"",
+  "Karnataka 2024 seg 161: \"C.V. RAMANNNAGAR\" vs AC \"C.V. RAMAN NAGAR\"",
+  "Karnataka 2024 seg 168: \"CHAMRAJAPET\" vs AC \"CHAMRAJPET\"",
+  "Karnataka 2024 seg 166: \"GOVINDARAJANAGAR\" vs AC \"GOVINDRAJ NAGAR\"",
+  "Karnataka 2024 seg 167: \"VIJAYANAGAR\" vs AC \"VIJAY NAGAR\"",
+  "Karnataka 2024 seg 144: \"SRINIVASAPUR\" vs AC \"SRINIVASPUR\"",
+  "Karnataka 2019 seg 48: \"HUMNABAD\" vs AC \"HOMNABAD\"",
+  "Karnataka 2019 seg 192: \"KRISHNARAJAPETE\" vs AC \"KRISHNARAJPET\"",
+  "Karnataka 2019 seg 212: \"HUNASURU\" vs AC \"HUNSUR\"",
+  "Karnataka 2014 seg 48: \"HUMNABAD\" vs AC \"HOMNABAD\"",
+  "Karnataka 2009 seg 210: \"PIRIYAPATNA\" vs AC \"PERIYAPATNA\"",
+  "Kerala 2024 seg 5: \"TRIKARIPUR\" vs AC \"THRIKARIPUR\"",
+  "Kerala 2024 seg 20: \"VADAKARA\" vs AC \"VATAKARA\"",
+  "Kerala 2024 seg 23: \"QUILANDY\" vs AC \"KOYILANDY\"",
+  "Kerala 2024 seg 82: \"ERANAKULAM\" vs AC \"ERNAKULAM\"",
+  "Kerala 2019 seg 5: \"TRIKARIPUR\" vs AC \"THRIKARIPUR\"",
+  "Kerala 2019 seg 20: \"VADAKARA\" vs AC \"VATAKARA\"",
+  "Kerala 2019 seg 23: \"QUILANDY\" vs AC \"KOYILANDY\"",
+  "Kerala 2019 seg 54: \"MANNARKKAD\" vs AC \"MANNARKAD\"",
+  "Kerala 2019 seg 72: \"CHALAKUDY\" vs AC \"CHALAKKUDY\"",
+  "Kerala 2019 seg 82: \"ERANAKULAM\" vs AC \"ERNAKULAM\"",
+  "Kerala 2014 seg 5: \"TRIKARIPUR\" vs AC \"THRIKARIPUR\"",
+  "Kerala 2014 seg 20: \"VADAKARA\" vs AC \"VATAKARA\"",
+  "Kerala 2014 seg 23: \"QUILANDY\" vs AC \"KOYILANDY\"",
+  "Kerala 2014 seg 82: \"ERANAKULAM\" vs AC \"ERNAKULAM\"",
+  "Kerala 2009 seg 3: \"UDUMA\" vs AC \"UDMA\"",
+  "Kerala 2009 seg 5: \"TRIKARIPUR\" vs AC \"THRIKARIPUR\"",
+  "Kerala 2009 seg 20: \"VADAKARA\" vs AC \"VATAKARA\"",
+  "Kerala 2009 seg 23: \"QUILANDY\" vs AC \"KOYILANDY\"",
+  "Kerala 2009 seg 32: \"THIRUVANMBADI\" vs AC \"THIRUVAMBADY\"",
+  "Kerala 2009 seg 34: \"ERNAD\" vs AC \"ERANAD\"",
+  "Kerala 2009 seg 51: \"SHORANUR\" vs AC \"SHORNUR\"",
+  "Kerala 2009 seg 52: \"OTTAPPALAM\" vs AC \"OTTAPALAM\"",
+  "Kerala 2009 seg 54: \"MANNARKKAD\" vs AC \"MANNARKAD\"",
+  "Kerala 2009 seg 59: \"NEMMARA\" vs AC \"NENMARA\"",
+  "Kerala 2009 seg 70: \"IRINJALAKUDA\" vs AC \"IRINJALAKKUDA\"",
+  "Kerala 2009 seg 72: \"CHALAKUDY\" vs AC \"CHALAKKUDY\"",
+  "Kerala 2009 seg 79: \"VYPEEN\" vs AC \"VYPEN\"",
+  "Kerala 2009 seg 81: \"THRIPPUNITHURA\" vs AC \"THRIPUNITHURA\"",
+  "Kerala 2009 seg 105: \"AMBALAPPUZHA\" vs AC \"AMBALAPUZHA\"",
+  "Kerala 2009 seg 109: \"MAVELIKKARA\" vs AC \"MAVELIKARA\"",
+  "Kerala 2009 seg 126: \"CHATHANNOOR\" vs AC \"CHATHANNUR\"",
+  "Kerala 2009 seg 132: \"KAZHAKOOTTAM\" vs AC \"KAZHAKKOOTTAM\"",
+  "Kerala 2009 seg 133: \"VATTIYOOUKAVU\" vs AC \"VATTIYOORKAVU\"",
+  "Madhya Pradesh 2024 seg 4: \"JAURA\" vs AC \"JOURA\"",
+  "Madhya Pradesh 2024 seg 20: \"SEONDHA\" vs AC \"SEWDA\"",
+  "Madhya Pradesh 2024 seg 18: \"BHITARWAR\" vs AC \"BHITRWAR\"",
+  "Madhya Pradesh 2024 seg 19: \"DABRA\" vs AC \"DABARA\"",
+  "Madhya Pradesh 2024 seg 57: \"HATA\" vs AC \"HATTA\"",
+  "Madhya Pradesh 2024 seg 59: \"GUNNAOR\" vs AC \"GUNNOUR\"",
+  "Madhya Pradesh 2024 seg 93: \"MUDWARA\" vs AC \"MURWARA\"",
+  "Madhya Pradesh 2024 seg 79: \"CHITARANGI\" vs AC \"CHITRANGI\"",
+  "Madhya Pradesh 2024 seg 80: \"SINGARAULI\" vs AC \"SINGAROULI\"",
+  "Madhya Pradesh 2024 seg 81: \"DEOSAR\" vs AC \"DEVSAR\"",
+  "Madhya Pradesh 2024 seg 82: \"DHOUHANI\" vs AC \"DHAUHANI\"",
+  "Madhya Pradesh 2024 seg 90: \"MANPUR\" vs AC \"MANAPUR\"",
+  "Madhya Pradesh 2024 seg 91: \"BADWARA\" vs AC \"BARWARA\"",
+  "Madhya Pradesh 2024 seg 117: \"LAKHNADON\" vs AC \"LAKHANADON\"",
+  "Madhya Pradesh 2024 seg 124: \"CHURAI\" vs AC \"CHOURAI\"",
+  "Madhya Pradesh 2024 seg 31: \"RAGHOGADH\" vs AC \"RAGHOGARH\"",
+  "Madhya Pradesh 2024 seg 182: \"BADWAHA\" vs AC \"BARWAH\"",
+  "Madhya Pradesh 2019 seg 4: \"JAURA\" vs AC \"JOURA\"",
+  "Madhya Pradesh 2019 seg 18: \"BHITARWAR\" vs AC \"BHITRWAR\"",
+  "Madhya Pradesh 2019 seg 93: \"MUDWARA\" vs AC \"MURWARA\"",
+  "Madhya Pradesh 2019 seg 82: \"DHOUHANI\" vs AC \"DHAUHANI\"",
+  "Madhya Pradesh 2019 seg 90: \"MANPUR\" vs AC \"MANAPUR\"",
+  "Madhya Pradesh 2019 seg 91: \"BADWARA\" vs AC \"BARWARA\"",
+  "Madhya Pradesh 2019 seg 182: \"BADWAHA\" vs AC \"BARWAH\"",
+  "Madhya Pradesh 2014 seg 4: \"JAURA\" vs AC \"JOURA\"",
+  "Madhya Pradesh 2014 seg 93: \"MUDWARA\" vs AC \"MURWARA\"",
+  "Madhya Pradesh 2014 seg 82: \"DHOUHANI\" vs AC \"DHAUHANI\"",
+  "Madhya Pradesh 2014 seg 91: \"BADWARA\" vs AC \"BARWARA\"",
+  "Madhya Pradesh 2014 seg 124: \"CHURAI\" vs AC \"CHOURAI\"",
+  "Madhya Pradesh 2014 seg 182: \"BADWAHA\" vs AC \"BARWAH\"",
+  "Madhya Pradesh 2009 seg 3: \"SABALGARH\" vs AC \"SABALAGADH\"",
+  "Madhya Pradesh 2009 seg 5: \"SUMAWALI\" vs AC \"SUMAOLI\"",
+  "Madhya Pradesh 2009 seg 18: \"BHITARWAR\" vs AC \"BHITRWAR\"",
+  "Madhya Pradesh 2009 seg 19: \"DABRA\" vs AC \"DABARA\"",
+  "Madhya Pradesh 2009 seg 40: \"NARYOLI\" vs AC \"NARYAWALI\"",
+  "Madhya Pradesh 2009 seg 59: \"GUNNAOR\" vs AC \"GUNNOUR\"",
+  "Madhya Pradesh 2009 seg 80: \"SINGRAULI\" vs AC \"SINGAROULI\"",
+  "Madhya Pradesh 2009 seg 86: \"KOTMA\" vs AC \"KOTAMA\"",
+  "Madhya Pradesh 2009 seg 88: \"PUSHPRAJGARH\" vs AC \"PUSPRAJGARH\"",
+  "Madhya Pradesh 2009 seg 90: \"MANPUR\" vs AC \"MANAPUR\"",
+  "Madhya Pradesh 2009 seg 97: \"JABALPUR PURBA\" vs AC \"JABALPUR EAST\"",
+  "Madhya Pradesh 2009 seg 98: \"JABALPUR UTTAR\" vs AC \"JABALPUR NORTH\"",
+  "Madhya Pradesh 2009 seg 100: \"JABALPUR PASCHIM\" vs AC \"JABALPUR WEST\"",
+  "Madhya Pradesh 2009 seg 117: \"LAKHNADON\" vs AC \"LAKHANADON\"",
+  "Madhya Pradesh 2009 seg 124: \"CHURAI\" vs AC \"CHOURAI\"",
+  "Madhya Pradesh 2009 seg 125: \"SAUNSAR\" vs AC \"SAUSAR\"",
+  "Madhya Pradesh 2009 seg 127: \"PARASIA\" vs AC \"PARASIYA\"",
+  "Madhya Pradesh 2009 seg 152: \"BHOPAL DAKSHIN- PASCHIM\" vs AC \"BHOPAL DAKSHINA-PASHCHIM\"",
+  "Madhya Pradesh 2009 seg 30: \"CHACHOURA\" vs AC \"CHACHODA\"",
+  "Madhya Pradesh 2009 seg 212: \"NAGADA-KHACHROD\" vs AC \"NAGADA - KHACHAROD\"",
+  "Madhya Pradesh 2009 seg 216: \"UJJAIN UTTAR\" vs AC \"UJJAIN NORTH\"",
+  "Madhya Pradesh 2009 seg 217: \"UJJAIN DAKSHIN\" vs AC \"UJJAIN SOUTH\"",
+  "Madhya Pradesh 2009 seg 187: \"SENDHAWA\" vs AC \"SENDHWA (S.T.)\"",
+  "Madhya Pradesh 2009 seg 190: \"BADWANI\" vs AC \"BARWANI (S.T.)\"",
+  "Madhya Pradesh 2009 seg 174: \"BAGALI\" vs AC \"BAGLI\"",
+  "Madhya Pradesh 2009 seg 182: \"BADWAH\" vs AC \"BARWAH\"",
+  "Madhya Pradesh 2009 seg 132: \"GHORADONGRI\" vs AC \"GHODADONGRI\"",
+  "Maharashtra 2024 seg 4: \"NAWAPUR\" vs AC \"NAVAPUR\"",
+  "Maharashtra 2024 seg 7: \"DHULEURBAN\" vs AC \"DHULE CITY\"",
+  "Maharashtra 2024 seg 36: \"DHAMANGAONRAILWAY\" vs AC \"DHAMAMGAON RAILWAY\"",
+  "Maharashtra 2024 seg 208: \"VADGAONSHERI\" vs AC \"VADGAOL SHERI\"",
+  "Maharashtra 2019 seg 4: \"NAWAPUR\" vs AC \"NAVAPUR\"",
+  "Maharashtra 2019 seg 8: \"SHINDKHEDA\" vs AC \"SINDKHEDA\"",
+  "Maharashtra 2019 seg 32: \"MURTIZAPUR\" vs AC \"MURTIJAPUR\"",
+  "Maharashtra 2019 seg 36: \"DHAMANGAON RAILWAY\" vs AC \"DHAMAMGAON RAILWAY\"",
+  "Maharashtra 2019 seg 65: \"GONDIA\" vs AC \"GONDIYA\"",
+  "Maharashtra 2019 seg 73: \"BRAMHAPURI\" vs AC \"BRAHMAPURI\"",
+  "Maharashtra 2019 seg 126: \"DEVLALI\" vs AC \"DEOLALI\"",
+  "Maharashtra 2019 seg 208: \"VADGAON SHERI\" vs AC \"VADGAOL SHERI\"",
+  "Maharashtra 2019 seg 253: \"SANGOLA\" vs AC \"SANGOLE\"",
+  "Maharashtra 2014 seg 4: \"NAWAPUR\" vs AC \"NAVAPUR\"",
+  "Maharashtra 2014 seg 32: \"MURTIZAPUR\" vs AC \"MURTIJAPUR\"",
+  "Maharashtra 2014 seg 126: \"DEVLALI\" vs AC \"DEOLALI\"",
+  "Maharashtra 2014 seg 208: \"VADGAON SHERI\" vs AC \"VADGAOL SHERI\"",
+  "Maharashtra 2014 seg 253: \"SANGOLA\" vs AC \"SANGOLE\"",
+  "Maharashtra 2009 seg 4: \"NAWAPUR\" vs AC \"NAVAPUR\"",
+  "Maharashtra 2009 seg 101: \"101\" vs AC \"JALNA\"",
+  "Maharashtra 2009 seg 126: \"DEVLALI\" vs AC \"DEOLALI\"",
+  "Manipur 2024 seg 4: \"KHETRIGAO\" vs AC \"KSHETRIGAO\"",
+  "Manipur 2024 seg 12: \"KEISAMTHONG\" vs AC \"KEISHAMTHONG\"",
+  "Manipur 2024 seg 21: \"NAORIA PAKHANGLAKPA\" vs AC \"NAORIYA PAKHANGLAKPA\"",
+  "Manipur 2024 seg 26: \"BISHENPUR\" vs AC \"BISHNUPUR\"",
+  "Manipur 2024 seg 39: \"SUGNOO\" vs AC \"SUGNU\"",
+  "Manipur 2019 seg 26: \"BISHENPUR\" vs AC \"BISHNUPUR\"",
+  "Meghalaya 2024 seg 45: \"TIKRIKILLA\" vs AC \"TIKRIKILA\"",
+  "Meghalaya 2019 seg 45: \"TIKRIKILLA\" vs AC \"TIKRIKILA\"",
+  "Meghalaya 2019 seg 59: \"CHOCKPOT\" vs AC \"CHOKPOT\"",
+  "Nagaland 2024 seg 6: \"TENING\" vs AC \"TENNING\"",
+  "Nagaland 2024 seg 33: \"SURUHUTO\" vs AC \"SURUHOTO\"",
+  "Nagaland 2019 seg 33: \"SURUHUTO\" vs AC \"SURUHOTO\"",
+  "Odisha 2024 seg 13: \"RAJGANGPUR\" vs AC \"RAJGANGAPUR\"",
+  "Odisha 2024 seg 19: \"DEOGARH\" vs AC \"DEBAGARH\"",
+  "Odisha 2024 seg 23: \"PATNA\" vs AC \"SWAMPATANA\"",
+  "Odisha 2024 seg 32: \"BADASAHI\" vs AC \"BETANOTI\"",
+  "Odisha 2024 seg 50: \"BARACHANA\" vs AC \"BARCHANA\"",
+  "Odisha 2024 seg 58: \"PARJANGA\" vs AC \"PORJANGA\"",
+  "Odisha 2024 seg 61: \"ANGUL\" vs AC \"ANUGUL\"",
+  "Odisha 2024 seg 65: \"SONEPUR\" vs AC \"SUBARNAPUR\"",
+  "Odisha 2024 seg 79: \"DHARAMGARH\" vs AC \"DHARMGARH\"",
+  "Odisha 2024 seg 83: \"G. UDAYAGIRI\" vs AC \"GHUMUSUR UDAYAGIRI\"",
+  "Odisha 2024 seg 90: \"BARABATI-CUTTACK\" vs AC \"CUTTACK CITY\"",
+  "Odisha 2024 seg 103: \"BALIKUDA-ERASAMA\" vs AC \"BALIKUDA-ERSAMA\"",
+  "Odisha 2024 seg 108: \"BRAHMAGIRI\" vs AC \"BRAMHAGIRI\"",
+  "Odisha 2024 seg 117: \"KHURDA\" vs AC \"KHORDA\"",
+  "Odisha 2024 seg 125: \"KABISURYANAGAR\" vs AC \"KABISURYANGAR\"",
+  "Odisha 2024 seg 128: \"ASKA\" vs AC \"ASIKA\"",
+  "Odisha 2024 seg 141: \"LAKSHMIPUR\" vs AC \"LAKHMIPUR\"",
+  "Odisha 2024 seg 143: \"JEYPORE\" vs AC \"JAYAPUR\"",
+  "Odisha 2019 seg 19: \"DEOGARH\" vs AC \"DEBAGARH\"",
+  "Odisha 2019 seg 23: \"PATNA\" vs AC \"SWAMPATANA\"",
+  "Odisha 2019 seg 32: \"BADASAHI\" vs AC \"BETANOTI\"",
+  "Odisha 2019 seg 58: \"PARJANGA\" vs AC \"PORJANGA\"",
+  "Odisha 2019 seg 61: \"ANGUL\" vs AC \"ANUGUL\"",
+  "Odisha 2019 seg 65: \"SONEPUR\" vs AC \"SUBARNAPUR\"",
+  "Odisha 2019 seg 79: \"DHARAMGARH\" vs AC \"DHARMGARH\"",
+  "Odisha 2019 seg 83: \"G. UDAYAGIRI\" vs AC \"GHUMUSUR UDAYAGIRI\"",
+  "Odisha 2019 seg 90: \"BARABATI-CUTTACK\" vs AC \"CUTTACK CITY\"",
+  "Odisha 2019 seg 117: \"KHURDA\" vs AC \"KHORDA\"",
+  "Odisha 2019 seg 128: \"ASKA\" vs AC \"ASIKA\"",
+  "Odisha 2019 seg 141: \"LAKSHMIPUR\" vs AC \"LAKHMIPUR\"",
+  "Odisha 2019 seg 143: \"JEYPORE\" vs AC \"JAYAPUR\"",
+  "Odisha 2014 seg 19: \"DEOGARH\" vs AC \"DEBAGARH\"",
+  "Odisha 2014 seg 23: \"PATNA\" vs AC \"SWAMPATANA\"",
+  "Odisha 2014 seg 32: \"BADASAHI\" vs AC \"BETANOTI\"",
+  "Odisha 2014 seg 58: \"PARJANGA\" vs AC \"PORJANGA\"",
+  "Odisha 2014 seg 61: \"ANGUL\" vs AC \"ANUGUL\"",
+  "Odisha 2014 seg 65: \"SONEPUR\" vs AC \"SUBARNAPUR\"",
+  "Odisha 2014 seg 73: \"UMARKOTE\" vs AC \"UMERKOTE\"",
+  "Odisha 2014 seg 90: \"BARABATI-CUTTACK\" vs AC \"CUTTACK CITY\"",
+  "Odisha 2014 seg 117: \"KHURDA\" vs AC \"KHORDA\"",
+  "Odisha 2014 seg 128: \"ASKA\" vs AC \"ASIKA\"",
+  "Odisha 2014 seg 141: \"LAXMIPUR\" vs AC \"LAKHMIPUR\"",
+  "Odisha 2014 seg 143: \"JEYPORE\" vs AC \"JAYAPUR\"",
+  "Odisha 2009 seg 19: \"DEOGARH\" vs AC \"DEBAGARH\"",
+  "Odisha 2009 seg 23: \"PATNA\" vs AC \"SWAMPATANA\"",
+  "Odisha 2009 seg 32: \"BADASAHI\" vs AC \"BETANOTI\"",
+  "Odisha 2009 seg 58: \"PARJANGA\" vs AC \"PORJANGA\"",
+  "Odisha 2009 seg 61: \"ANGUL\" vs AC \"ANUGUL\"",
+  "Odisha 2009 seg 65: \"SONEPUR\" vs AC \"SUBARNAPUR\"",
+  "Odisha 2009 seg 73: \"UMARKOTE\" vs AC \"UMERKOTE\"",
+  "Odisha 2009 seg 90: \"BARABATI-CUTTACK\" vs AC \"CUTTACK CITY\"",
+  "Odisha 2009 seg 117: \"KHURDA\" vs AC \"KHORDA\"",
+  "Odisha 2009 seg 128: \"ASKA\" vs AC \"ASIKA\"",
+  "Odisha 2009 seg 141: \"LAXMIPUR\" vs AC \"LAKHMIPUR\"",
+  "Odisha 2009 seg 143: \"JEYPORE\" vs AC \"JAYAPUR\"",
+  "Puducherry 2024 seg 3: \"OUSSUDU\" vs AC \"OSSUDU\"",
+  "Puducherry 2019 seg 3: \"OUSSUDU\" vs AC \"OSSUDU\"",
+  "Puducherry 2014 seg 3: \"OUSSUDU\" vs AC \"OSSUDU\"",
+  "Puducherry 2009 seg 2: \"THIRUBUVANAI\" vs AC \"THIRUBHUVANAI\"",
+  "Puducherry 2009 seg 3: \"OUSSUDU\" vs AC \"OSSUDU\"",
+  "Puducherry 2009 seg 16: \"ORLEANPETH\" vs AC \"ORLEAMPETH\"",
+  "Puducherry 2009 seg 22: \"NETTPAKKAM\" vs AC \"NETTAPAKKAM\"",
+  "Punjab 2019 seg 72: \"BAGHAPURANA\" vs AC \"BHAGHA PURANA\"",
+  "Rajasthan 2024 seg 33: \"LACHMANGARH\" vs AC \"LACHHMANGARH\"",
+  "Rajasthan 2024 seg 110: \"KHINVSAR\" vs AC \"KHINWSAR\"",
+  "Rajasthan 2024 seg 119: \"MARWAR JUNCITON\" vs AC \"MARWAR JUNCTION\"",
+  "Rajasthan 2024 seg 139: \"GUDAMALANI\" vs AC \"GUDHA MALANI\"",
+  "Rajasthan 2024 seg 155: \"VALLABNAGAR\" vs AC \"VALLABHNAGAR\"",
+  "Rajasthan 2024 seg 167: \"KAPASAN\" vs AC \"KAPASIN\"",
+  "Rajasthan 2024 seg 179: \"SAHARA\" vs AC \"SAHADA\"",
+  "Rajasthan 2019 seg 136: \"BAYTU\" vs AC \"BAYTOO\"",
+  "Rajasthan 2019 seg 157: \"DHARIYAWAD\" vs AC \"DHARIAWAD\"",
+  "Rajasthan 2019 seg 167: \"KAPASAN\" vs AC \"KAPASIN\"",
+  "Rajasthan 2019 seg 179: \"SAHARA\" vs AC \"SAHADA\"",
+  "Rajasthan 2014 seg 157: \"DHARIYAWAD\" vs AC \"DHARIAWAD\"",
+  "Rajasthan 2014 seg 167: \"KAPASAN\" vs AC \"KAPASIN\"",
+  "Rajasthan 2014 seg 179: \"SAHARA\" vs AC \"SAHADA\"",
+  "Rajasthan 2009 seg 167: \"KAPASAN\" vs AC \"KAPASIN\"",
+  "Rajasthan 2009 seg 179: \"SAHARA\" vs AC \"SAHADA\"",
+  "Sikkim 2024 seg 1: \"YUKSOM TASHIDING\" vs AC \"YOKSAM-TASHIDING\"",
+  "Sikkim 2024 seg 3: \"MANEYBONG-DENTAM\" vs AC \"MANEYBUNG-DENTAM\"",
+  "Sikkim 2024 seg 7: \"SORENG-CHAKUNG\" vs AC \"SOREONG-CHAKUNG\"",
+  "Sikkim 2019 seg 1: \"YUKSOM TASHIDING\" vs AC \"YOKSAM-TASHIDING\"",
+  "Sikkim 2019 seg 3: \"MANEYBONG-DENTAM\" vs AC \"MANEYBUNG-DENTAM\"",
+  "Tamil Nadu 2024 seg 1: \"GUMMIDIPOONDI\" vs AC \"GUMMIDIPUNDI\"",
+  "Tamil Nadu 2024 seg 11: \"DR.RADHAKRISHNAN NAGAR\" vs AC \"R.K. NAGAR\"",
+  "Tamil Nadu 2024 seg 35: \"MADURANTAKAM\" vs AC \"MADURANTHAKAM\"",
+  "Tamil Nadu 2024 seg 38: \"ARAKKONAM\" vs AC \"ARAKONAM\"",
+  "Tamil Nadu 2024 seg 46: \"GUDIYATTAM\" vs AC \"GUDIYATHAM\"",
+  "Tamil Nadu 2024 seg 47: \"VANIYAMBADI\" vs AC \"VANIAYAMBADI\"",
+  "Tamil Nadu 2024 seg 57: \"PALACODU\" vs AC \"PALACODE\"",
+  "Tamil Nadu 2024 seg 60: \"PAPPIREDDIPATTI\" vs AC \"PAPPIREDDIPPATTI\"",
+  "Tamil Nadu 2024 seg 50: \"TIRUPATTUR\" vs AC \"TIRUPPATTUR\"",
+  "Tamil Nadu 2024 seg 74: \"VILUPPURAM\" vs AC \"VILLUPURAM\"",
+  "Tamil Nadu 2024 seg 78: \"RISHIVANDIYAM\" vs AC \"RISHIVANDIAM\"",
+  "Tamil Nadu 2024 seg 86: \"EDAPPADI\" vs AC \"EDAPADI\"",
+  "Tamil Nadu 2024 seg 93: \"SENTHAMANGALAM\" vs AC \"SENDAMANGALAM\"",
+  "Tamil Nadu 2024 seg 96: \"TIRUCHENGODU\" vs AC \"TIRUCHENGODE\"",
+  "Tamil Nadu 2024 seg 100: \"MODAKKURICHI\" vs AC \"MODAKURICHI\"",
+  "Tamil Nadu 2024 seg 111: \"METTUPPALAYAM\" vs AC \"METTUPALAYAM\"",
+  "Tamil Nadu 2024 seg 125: \"UDUMALAIPETTAI\" vs AC \"UDUMALPET\"",
+  "Tamil Nadu 2024 seg 130: \"NILAKKOTTAI\" vs AC \"NILAKOTTAI\"",
+  "Tamil Nadu 2024 seg 140: \"TIRUCHIRAPPALLI (WEST)\" vs AC \"TIRUCHIRAPALLI (WEST)\"",
+  "Tamil Nadu 2024 seg 141: \"TIRUCHIRAPPALLI (EAST)\" vs AC \"TIRUCHIRAPALLI (EAST)\"",
+  "Tamil Nadu 2024 seg 142: \"THIRUVERUMBUR\" vs AC \"THIRUVERAMBUR\"",
+  "Tamil Nadu 2024 seg 178: \"GANDARVAKKOTTAI\" vs AC \"GANDHARVAKOTTAI\"",
+  "Tamil Nadu 2024 seg 152: \"VRIDDHACHALAM\" vs AC \"VIRUDHACHALAM\"",
+  "Tamil Nadu 2024 seg 160: \"SIRKAZHI\" vs AC \"SIRKALI\"",
+  "Tamil Nadu 2024 seg 170: \"THIRUVIDAIMARUDUR\" vs AC \"THIRUVIDAMARUDUR\"",
+  "Tamil Nadu 2024 seg 166: \"THIRUTHURAIPOONDI\" vs AC \"THIRUTHURAIPUNDI\"",
+  "Tamil Nadu 2024 seg 207: \"ARUPPUKKOTTAI\" vs AC \"ARUPPUKOTTAI\"",
+  "Tamil Nadu 2024 seg 183: \"ARANTHANGI\" vs AC \"ARANTANGI\"",
+  "Tamil Nadu 2024 seg 212: \"MUDHUKULATHUR\" vs AC \"MUDUKULATHUR\"",
+  "Tamil Nadu 2024 seg 226: \"PALAYAMKOTTAI\" vs AC \"PALAYAMCOTTAI\"",
+  "Tamil Nadu 2024 seg 231: \"COLACHAL\" vs AC \"COLACHEL\"",
+  "Tamil Nadu 2019 seg 1: \"GUMMIDIPOONDI\" vs AC \"GUMMIDIPUNDI\"",
+  "Tamil Nadu 2019 seg 11: \"DR.RADHAKRISHNAN NAGAR\" vs AC \"R.K. NAGAR\"",
+  "Tamil Nadu 2019 seg 35: \"MADURANTAKAM\" vs AC \"MADURANTHAKAM\"",
+  "Tamil Nadu 2019 seg 38: \"ARAKKONAM\" vs AC \"ARAKONAM\"",
+  "Tamil Nadu 2019 seg 39: \"SHOLINGUR\" vs AC \"SHOLINGHUR\"",
+  "Tamil Nadu 2019 seg 50: \"TIRUPATTUR\" vs AC \"TIRUPPATTUR\"",
+  "Tamil Nadu 2019 seg 78: \"RISHIVANDIYAM\" vs AC \"RISHIVANDIAM\"",
+  "Tamil Nadu 2019 seg 86: \"EDAPPADI\" vs AC \"EDAPADI\"",
+  "Tamil Nadu 2019 seg 93: \"SENTHAMANGALAM\" vs AC \"SENDAMANGALAM\"",
+  "Tamil Nadu 2019 seg 96: \"TIRUCHENGODU\" vs AC \"TIRUCHENGODE\"",
+  "Tamil Nadu 2019 seg 100: \"MODAKKURICHI\" vs AC \"MODAKURICHI\"",
+  "Tamil Nadu 2019 seg 111: \"METTUPPALAYAM\" vs AC \"METTUPALAYAM\"",
+  "Tamil Nadu 2019 seg 125: \"UDUMALAIPETTAI\" vs AC \"UDUMALPET\"",
+  "Tamil Nadu 2019 seg 130: \"NILAKKOTTAI\" vs AC \"NILAKOTTAI\"",
+  "Tamil Nadu 2019 seg 140: \"TIRUCHIRAPPALLI (WEST)\" vs AC \"TIRUCHIRAPALLI (WEST)\"",
+  "Tamil Nadu 2019 seg 141: \"TIRUCHIRAPPALLI (EAST)\" vs AC \"TIRUCHIRAPALLI (EAST)\"",
+  "Tamil Nadu 2019 seg 142: \"THIRUVERUMBUR\" vs AC \"THIRUVERAMBUR\"",
+  "Tamil Nadu 2019 seg 151: \"TITTAGUDI (SC)\" vs AC \"TITTAKUDI\"",
+  "Tamil Nadu 2019 seg 152: \"VRIDHACHALAM\" vs AC \"VIRUDHACHALAM\"",
+  "Tamil Nadu 2019 seg 160: \"SIRKAZHI\" vs AC \"SIRKALI\"",
+  "Tamil Nadu 2019 seg 170: \"THIRUVIDAIMARUDUR\" vs AC \"THIRUVIDAMARUDUR\"",
+  "Tamil Nadu 2019 seg 166: \"THIRUTHURAIPOONDI\" vs AC \"THIRUTHURAIPUNDI\"",
+  "Tamil Nadu 2019 seg 207: \"ARUPPUKKOTTAI\" vs AC \"ARUPPUKOTTAI\"",
+  "Tamil Nadu 2019 seg 183: \"ARANTHANGI\" vs AC \"ARANTANGI\"",
+  "Tamil Nadu 2019 seg 212: \"MUDHUKULATHUR\" vs AC \"MUDUKULATHUR\"",
+  "Tamil Nadu 2019 seg 226: \"PALAYAMKOTTAI\" vs AC \"PALAYAMCOTTAI\"",
+  "Tamil Nadu 2014 seg 1: \"GUMMIDIPOONDI\" vs AC \"GUMMIDIPUNDI\"",
+  "Tamil Nadu 2014 seg 11: \"DR\" vs AC \"R.K. NAGAR\"",
+  "Tamil Nadu 2014 seg 35: \"MADURANTAKAM\" vs AC \"MADURANTHAKAM\"",
+  "Tamil Nadu 2014 seg 38: \"ARAKKONAM\" vs AC \"ARAKONAM\"",
+  "Tamil Nadu 2014 seg 39: \"SHOLINGUR\" vs AC \"SHOLINGHUR\"",
+  "Tamil Nadu 2014 seg 46: \"GUDIYATTAM\" vs AC \"GUDIYATHAM\"",
+  "Tamil Nadu 2014 seg 47: \"VANIYAMBADI\" vs AC \"VANIAYAMBADI\"",
+  "Tamil Nadu 2014 seg 50: \"TIRUPATTUR\" vs AC \"TIRUPPATTUR\"",
+  "Tamil Nadu 2014 seg 78: \"RISHIVANDIYAM\" vs AC \"RISHIVANDIAM\"",
+  "Tamil Nadu 2014 seg 86: \"EDAPPADI\" vs AC \"EDAPADI\"",
+  "Tamil Nadu 2014 seg 93: \"SENTHAMANGALAM\" vs AC \"SENDAMANGALAM\"",
+  "Tamil Nadu 2014 seg 96: \"TIRUCHENGODU\" vs AC \"TIRUCHENGODE\"",
+  "Tamil Nadu 2014 seg 100: \"MODAKKURICHI\" vs AC \"MODAKURICHI\"",
+  "Tamil Nadu 2014 seg 111: \"METTUPPALAYAM\" vs AC \"METTUPALAYAM\"",
+  "Tamil Nadu 2014 seg 125: \"UDUMALAIPETTAI\" vs AC \"UDUMALPET\"",
+  "Tamil Nadu 2014 seg 130: \"NILAKKOTTAI\" vs AC \"NILAKOTTAI\"",
+  "Tamil Nadu 2014 seg 140: \"TIRUCHIRAPPALLI (WEST)\" vs AC \"TIRUCHIRAPALLI (WEST)\"",
+  "Tamil Nadu 2014 seg 141: \"TIRUCHIRAPPALLI (EAST)\" vs AC \"TIRUCHIRAPALLI (EAST)\"",
+  "Tamil Nadu 2014 seg 142: \"THIRUVERUMBUR\" vs AC \"THIRUVERAMBUR\"",
+  "Tamil Nadu 2014 seg 152: \"VRIDHACHALAM\" vs AC \"VIRUDHACHALAM\"",
+  "Tamil Nadu 2014 seg 160: \"SIRKAZHI\" vs AC \"SIRKALI\"",
+  "Tamil Nadu 2014 seg 170: \"THIRUVIDAIMARUDUR\" vs AC \"THIRUVIDAMARUDUR\"",
+  "Tamil Nadu 2014 seg 166: \"THIRUTHURAIPOONDI\" vs AC \"THIRUTHURAIPUNDI\"",
+  "Tamil Nadu 2014 seg 207: \"ARUPPUKKOTTAI\" vs AC \"ARUPPUKOTTAI\"",
+  "Tamil Nadu 2014 seg 183: \"ARANTHANGI\" vs AC \"ARANTANGI\"",
+  "Tamil Nadu 2014 seg 212: \"MUDHUKULATHUR\" vs AC \"MUDUKULATHUR\"",
+  "Tamil Nadu 2014 seg 226: \"PALAYAMKOTTAI\" vs AC \"PALAYAMCOTTAI\"",
+  "Tamil Nadu 2009 seg 1: \"GUMMIDIPOONDI\" vs AC \"GUMMIDIPUNDI\"",
+  "Tamil Nadu 2009 seg 10: \"TIRUVOTTIYUR\" vs AC \"THIRUVOTTIYUR\"",
+  "Tamil Nadu 2009 seg 11: \"DR\" vs AC \"R.K. NAGAR\"",
+  "Tamil Nadu 2009 seg 27: \"SHOLINGANALLUR\" vs AC \"SHOZHINGANALLUR\"",
+  "Tamil Nadu 2009 seg 35: \"MADURANTAKAM\" vs AC \"MADURANTHAKAM\"",
+  "Tamil Nadu 2009 seg 38: \"ARAKKONAM\" vs AC \"ARAKONAM\"",
+  "Tamil Nadu 2009 seg 39: \"SHOLINGUR\" vs AC \"SHOLINGHUR\"",
+  "Tamil Nadu 2009 seg 46: \"GUDIYATTAM\" vs AC \"GUDIYATHAM\"",
+  "Tamil Nadu 2009 seg 47: \"VANIYAMBADI\" vs AC \"VANIAYAMBADI\"",
+  "Tamil Nadu 2009 seg 57: \"PALACODU\" vs AC \"PALACODE\"",
+  "Tamil Nadu 2009 seg 74: \"VILUPPURAM\" vs AC \"VILLUPURAM\"",
+  "Tamil Nadu 2009 seg 76: \"THIRUKOILUR\" vs AC \"TIRUKKOYILUR\"",
+  "Tamil Nadu 2009 seg 78: \"RISHIVANDIYAM\" vs AC \"RISHIVANDIAM\"",
+  "Tamil Nadu 2009 seg 86: \"EDAPPADI\" vs AC \"EDAPADI\"",
+  "Tamil Nadu 2009 seg 93: \"SENTHAMANGALAM\" vs AC \"SENDAMANGALAM\"",
+  "Tamil Nadu 2009 seg 96: \"TIRUCHENGODU\" vs AC \"TIRUCHENGODE\"",
+  "Tamil Nadu 2009 seg 111: \"METTUPPALAYAM\" vs AC \"METTUPALAYAM\"",
+  "Tamil Nadu 2009 seg 125: \"UDUMALAIPETTAI\" vs AC \"UDUMALPET\"",
+  "Tamil Nadu 2009 seg 130: \"NILAKKOTTAI\" vs AC \"NILAKOTTAI\"",
+  "Tamil Nadu 2009 seg 140: \"TIRUCHIRAPPALLI (WEST)\" vs AC \"TIRUCHIRAPALLI (WEST)\"",
+  "Tamil Nadu 2009 seg 141: \"TIRUCHIRAPPALLI (EAST)\" vs AC \"TIRUCHIRAPALLI (EAST)\"",
+  "Tamil Nadu 2009 seg 142: \"THIRUVERUMBUR\" vs AC \"THIRUVERAMBUR\"",
+  "Tamil Nadu 2009 seg 178: \"GANDARVAKOTTAI\" vs AC \"GANDHARVAKOTTAI\"",
+  "Tamil Nadu 2009 seg 152: \"VRIDDHACHALAM\" vs AC \"VIRUDHACHALAM\"",
+  "Tamil Nadu 2009 seg 160: \"SIRKAZHI\" vs AC \"SIRKALI\"",
+  "Tamil Nadu 2009 seg 170: \"THIRUVIDAIMARUDUR\" vs AC \"THIRUVIDAMARUDUR\"",
+  "Tamil Nadu 2009 seg 166: \"THIRUTHURAIPOONDI\" vs AC \"THIRUTHURAIPUNDI\"",
+  "Tamil Nadu 2009 seg 175: \"ORATTANADU\" vs AC \"ORATHANAD\"",
+  "Tamil Nadu 2009 seg 200: \"BODINAYACKANUR\" vs AC \"BODINAYAKANUR\"",
+  "Tamil Nadu 2009 seg 207: \"ARUPPUKKOTTAI\" vs AC \"ARUPPUKOTTAI\"",
+  "Tamil Nadu 2009 seg 183: \"ARANTHANGI\" vs AC \"ARANTANGI\"",
+  "Tamil Nadu 2009 seg 212: \"MUDHUKULATHUR\" vs AC \"MUDUKULATHUR\"",
+  "Tamil Nadu 2009 seg 226: \"PALAYAMKOTTAI\" vs AC \"PALAYAMCOTTAI\"",
+  "Telangana 2024 seg 3: \"BELLAMPALLI\" vs AC \"BELLAMPALLE\"",
+  "Telangana 2024 seg 38: \"ZAHEERABAD\" vs AC \"ZAHIRABAD\"",
+  "Telangana 2024 seg 46: \"KUKATPALLY\" vs AC \"KUKATPALLE\"",
+  "Telangana 2024 seg 49: \"LAL BAHADUR NAGAR\" vs AC \"L. B. NAGAR\"",
+  "Telangana 2019 seg 38: \"ZAHEERABAD (SC)\" vs AC \"ZAHIRABAD\"",
+  "Telangana 2019 seg 46: \"KUKATPALLY\" vs AC \"KUKATPALLE\"",
+  "Telangana 2019 seg 49: \"LAL BAHADUR NAGAR\" vs AC \"L. B. NAGAR\"",
+  "Telangana 2014 seg 3: \"BELLAMPALLI\" vs AC \"BELLAMPALLE\"",
+  "Telangana 2014 seg 46: \"KUKATPALLY\" vs AC \"KUKATPALLE\"",
+  "Telangana 2014 seg 49: \"LAL BAHADUR NAGAR\" vs AC \"L. B. NAGAR\"",
+  "Telangana 2014 seg 63: \"NAMPALLI\" vs AC \"NAMPALLY\"",
+  "Telangana 2014 seg 50: \"MAHESHWARAM\" vs AC \"MAHESWARAM\"",
+  "Telangana 2014 seg 55: \"VIKARABAD\" vs AC \"VICARABAD\"",
+  "Telangana 2014 seg 88: \"MIRYALGUDA\" vs AC \"MIRYALAGUDA\"",
+  "Telangana 2014 seg 96: \"THUNGATHURTHY\" vs AC \"THUNGATHURTHI\"",
+  "Telangana 2014 seg 107: \"WARDHANAPET\" vs AC \"WARADHANAPET\"",
+  "Telangana 2014 seg 116: \"SATHUPALLI\" vs AC \"SATHUPALLE\"",
+  "Telangana 2009 seg 3: \"BELLAMPALLY\" vs AC \"BELLAMPALLE\"",
+  "Telangana 2009 seg 46: \"KUKATPALLY\" vs AC \"KUKATPALLE\"",
+  "Telangana 2009 seg 49: \"LAL BAHADUR NAGAR\" vs AC \"L. B. NAGAR\"",
+  "Telangana 2009 seg 63: \"NAMPALLI\" vs AC \"NAMPALLY\"",
+  "Telangana 2009 seg 70: \"SECUNDRABAD\" vs AC \"SECUNDERABAD\"",
+  "Telangana 2009 seg 69: \"BAHDURPURA\" vs AC \"BAHADURPURA\"",
+  "Telangana 2009 seg 50: \"MAHESHWARAM\" vs AC \"MAHESWARAM\"",
+  "Telangana 2009 seg 88: \"MIRYALGUDA\" vs AC \"MIRYALAGUDA\"",
+  "Telangana 2009 seg 96: \"THUNGATHURTHY\" vs AC \"THUNGATHURTHI\"",
+  "Telangana 2009 seg 107: \"WARDHANAPET\" vs AC \"WARADHANAPET\"",
+  "Telangana 2009 seg 119: \"BHADRACHELAM\" vs AC \"BHADRACHALAM\"",
+  "Telangana 2009 seg 114: \"MADIRA\" vs AC \"MADHIRA\"",
+  "Telangana 2009 seg 116: \"SATHUPALLI\" vs AC \"SATHUPALLE\"",
+  "Tripura 2024 seg 27: \"KALYANPUR-PRAMODNAGAR\" vs AC \"KALYANPUR-PRAMODENAGAR\"",
+  "Tripura 2024 seg 48: \"KARAMCHARA\" vs AC \"KARAMCHHARA\"",
+  "Tripura 2024 seg 49: \"CHAWMANU\" vs AC \"CHHAWMANU\"",
+  "Tripura 2024 seg 50: \"PABIACHARA\" vs AC \"PABIACHHARA\"",
+  "Tripura 2024 seg 53: \"KAILASHAHAR\" vs AC \"KAILASAHAR\"",
+  "Tripura 2024 seg 59: \"PECHARTHAL\" vs AC \"PENCHARTHAL\"",
+  "Tripura 2019 seg 8: \"TOWN BARDOWALI\" vs AC \"TOWN BORDOWALI\"",
+  "Tripura 2019 seg 31: \"RADHAKISHORPUR\" vs AC \"RADHAKISHOREPUR\"",
+  "Tripura 2019 seg 33: \"KAKRABAN-SHALGARA\" vs AC \"KAKRABAN-SALGARAH\"",
+  "Tripura 2019 seg 48: \"KARMACHARA\" vs AC \"KARAMCHHARA\"",
+  "Tripura 2019 seg 49: \"CHAWAMANU\" vs AC \"CHHAWMANU\"",
+  "Tripura 2019 seg 53: \"KAILASHAHAR\" vs AC \"KAILASAHAR\"",
+  "Tripura 2014 seg 33: \"KAKRABAN-SALGARH\" vs AC \"KAKRABAN-SALGARAH\"",
+  "Tripura 2014 seg 48: \"KARMACHARA\" vs AC \"KARAMCHHARA\"",
+  "Tripura 2014 seg 49: \"CHAWAMANU\" vs AC \"CHHAWMANU\"",
+  "Tripura 2014 seg 53: \"KAILASHAHAR\" vs AC \"KAILASAHAR\"",
+  "Tripura 2009 seg 33: \"KAKRABAN-SALGARH\" vs AC \"KAKRABAN-SALGARAH\"",
+  "Tripura 2009 seg 48: \"KARMACHHARA\" vs AC \"KARAMCHHARA\"",
+  "Tripura 2009 seg 49: \"CHAWAMANU\" vs AC \"CHHAWMANU\"",
+  "Tripura 2009 seg 53: \"KAILASHAHAR\" vs AC \"KAILASAHAR\"",
+  "Uttar Pradesh 2024 seg 60: \"GARHMUKTESHWAR\" vs AC \"GARMUKHTESHWAR\"",
+  "Uttar Pradesh 2024 seg 47: \"MEERUT CANTT.\" vs AC \"MEERUT CANTONMENT\"",
+  "Uttar Pradesh 2024 seg 50: \"CHHAPRAULI\" vs AC \"CHAPRAULI\"",
+  "Uttar Pradesh 2024 seg 83: \"GOVERDHAN\" vs AC \"GOVARDHAN\"",
+  "Uttar Pradesh 2024 seg 87: \"AGRA CANTT.\" vs AC \"AGRA CANTONMENT\"",
+  "Uttar Pradesh 2024 seg 109: \"KISHANI\" vs AC \"KISHNI\"",
+  "Uttar Pradesh 2024 seg 102: \"PATIYALI\" vs AC \"PATIALI\"",
+  "Uttar Pradesh 2024 seg 125: \"BAREILLY CANTT.\" vs AC \"BAREILLY CANTONMENT\"",
+  "Uttar Pradesh 2024 seg 141: \"DHAURAHRA\" vs AC \"DHAUREHRA\"",
+  "Uttar Pradesh 2024 seg 144: \"MOHAMMDI\" vs AC \"MOHAMMADI\"",
+  "Uttar Pradesh 2024 seg 151: \"MAHMOODABAD\" vs AC \"MAHMUDABAD\"",
+  "Uttar Pradesh 2024 seg 159: \"BILGRAM-MALLANWAN\" vs AC \"BILGRAM - MALANWAN\"",
+  "Uttar Pradesh 2024 seg 209: \"BILHAUR\" vs AC \"BILAUR\"",
+  "Uttar Pradesh 2024 seg 162: \"BANGERMAU\" vs AC \"BANGARMAU\"",
+  "Uttar Pradesh 2024 seg 175: \"LUCKNOW CANTT.\" vs AC \"LUCKNOW CANTONMENT\"",
+  "Uttar Pradesh 2024 seg 247: \"VISHWANATH GANJ\" vs AC \"BISHWAVNATHGANJ\"",
+  "Uttar Pradesh 2024 seg 213: \"SISHAMAU\" vs AC \"SISAMAU\"",
+  "Uttar Pradesh 2024 seg 216: \"KANPUR CANTT.\" vs AC \"KANPUR CANTONMENT\"",
+  "Uttar Pradesh 2024 seg 219: \"MADHAUGARH\" vs AC \"MADHOGARH\"",
+  "Uttar Pradesh 2024 seg 285: \"MAHASI\" vs AC \"MAHSI\"",
+  "Uttar Pradesh 2024 seg 306: \"DOOMARIYAGANJ\" vs AC \"DOMARIAGANJ\"",
+  "Uttar Pradesh 2024 seg 308: \"KAPTANGANJ\" vs AC \"CAPTAINGANJ\"",
+  "Uttar Pradesh 2024 seg 311: \"MAHADEWA\" vs AC \"MAHADEVA\"",
+  "Uttar Pradesh 2024 seg 312: \"MENHDAWAL\" vs AC \"MEHNDAWAL\"",
+  "Uttar Pradesh 2024 seg 319: \"PANIYRA\" vs AC \"PANIARA\"",
+  "Uttar Pradesh 2024 seg 343: \"ATRAULIYA\" vs AC \"ATRAULIA\"",
+  "Uttar Pradesh 2024 seg 355: \"MUHAMMADABAD- GOHNA (SC)\" vs AC \"MOHAMMADABAD GOHNA\"",
+  "Uttar Pradesh 2024 seg 358: \"RASARA\" vs AC \"RASRA\"",
+  "Uttar Pradesh 2024 seg 370: \"MARIYAHU\" vs AC \"MARIAHU\"",
+  "Uttar Pradesh 2024 seg 390: \"VARANASI CANTT.\" vs AC \"VARANASI CANTONMENT\"",
+  "Uttar Pradesh 2024 seg 403: \"DUDDHI\" vs AC \"DUDHI\"",
+  "Uttar Pradesh 2019 seg 60: \"GARHMUKTESHWAR\" vs AC \"GARMUKHTESHWAR\"",
+  "Uttar Pradesh 2019 seg 47: \"MEERUT CANTT.\" vs AC \"MEERUT CANTONMENT\"",
+  "Uttar Pradesh 2019 seg 50: \"CHHAPRAULI\" vs AC \"CHAPRAULI\"",
+  "Uttar Pradesh 2019 seg 56: \"GAZIABAD\" vs AC \"GHAZIABAD\"",
+  "Uttar Pradesh 2019 seg 83: \"GOVERDHAN\" vs AC \"GOVARDHAN\"",
+  "Uttar Pradesh 2019 seg 87: \"AGRA CANTT.\" vs AC \"AGRA CANTONMENT\"",
+  "Uttar Pradesh 2019 seg 109: \"KISHANI (SC)\" vs AC \"KISHNI\"",
+  "Uttar Pradesh 2019 seg 102: \"PATIYALI\" vs AC \"PATIALI\"",
+  "Uttar Pradesh 2019 seg 125: \"BAREILLY CANTT.\" vs AC \"BAREILLY CANTONMENT\"",
+  "Uttar Pradesh 2019 seg 141: \"DHAURAHRA\" vs AC \"DHAUREHRA\"",
+  "Uttar Pradesh 2019 seg 144: \"MOHAMMDI\" vs AC \"MOHAMMADI\"",
+  "Uttar Pradesh 2019 seg 151: \"MAHMOODABAD\" vs AC \"MAHMUDABAD\"",
+  "Uttar Pradesh 2019 seg 159: \"BILGRAM-MALLAWAN\" vs AC \"BILGRAM - MALANWAN\"",
+  "Uttar Pradesh 2019 seg 209: \"BILHAUR\" vs AC \"BILAUR\"",
+  "Uttar Pradesh 2019 seg 162: \"BANGERMAU\" vs AC \"BANGARMAU\"",
+  "Uttar Pradesh 2019 seg 175: \"175-LUCKNOW CANTT.\" vs AC \"LUCKNOW CANTONMENT\"",
+  "Uttar Pradesh 2019 seg 247: \"VISHWANATHGANJ\" vs AC \"BISHWAVNATHGANJ\"",
+  "Uttar Pradesh 2019 seg 213: \"SISHAMAU\" vs AC \"SISAMAU\"",
+  "Uttar Pradesh 2019 seg 216: \"KANPUR CANTT.\" vs AC \"KANPUR CANTONMENT\"",
+  "Uttar Pradesh 2019 seg 219: \"MADHAUGARH\" vs AC \"MADHOGARH\"",
+  "Uttar Pradesh 2019 seg 285: \"MAHASI\" vs AC \"MAHSI\"",
+  "Uttar Pradesh 2019 seg 306: \"DOOMARIYAGANJ\" vs AC \"DOMARIAGANJ\"",
+  "Uttar Pradesh 2019 seg 308: \"KAPTANGANJ\" vs AC \"CAPTAINGANJ\"",
+  "Uttar Pradesh 2019 seg 311: \"MAHADEWA S.C\" vs AC \"MAHADEVA\"",
+  "Uttar Pradesh 2019 seg 312: \"MENHDAWAL\" vs AC \"MEHNDAWAL\"",
+  "Uttar Pradesh 2019 seg 319: \"PANIYARA\" vs AC \"PANIARA\"",
+  "Uttar Pradesh 2019 seg 343: \"ATRAULIYA\" vs AC \"ATRAULIA\"",
+  "Uttar Pradesh 2019 seg 355: \"MUHAMMADABAD- GOHNA (SC)\" vs AC \"MOHAMMADABAD GOHNA\"",
+  "Uttar Pradesh 2019 seg 358: \"RASARA\" vs AC \"RASRA\"",
+  "Uttar Pradesh 2019 seg 370: \"MARIYAHU\" vs AC \"MARIAHU\"",
+  "Uttar Pradesh 2019 seg 390: \"VARANASI CANTT.\" vs AC \"VARANASI CANTONMENT\"",
+  "Uttar Pradesh 2019 seg 403: \"DUDDHI\" vs AC \"DUDHI\"",
+  "Uttar Pradesh 2014 seg 60: \"GARHMUKTESHWAR\" vs AC \"GARMUKHTESHWAR\"",
+  "Uttar Pradesh 2014 seg 47: \"MEERUT CANTT\" vs AC \"MEERUT CANTONMENT\"",
+  "Uttar Pradesh 2014 seg 50: \"CHHAPRAULI\" vs AC \"CHAPRAULI\"",
+  "Uttar Pradesh 2014 seg 83: \"GOVERDHAN\" vs AC \"GOVARDHAN\"",
+  "Uttar Pradesh 2014 seg 87: \"AGRA CANTT\" vs AC \"AGRA CANTONMENT\"",
+  "Uttar Pradesh 2014 seg 109: \"KISHANI\" vs AC \"KISHNI\"",
+  "Uttar Pradesh 2014 seg 102: \"PATIYALI\" vs AC \"PATIALI\"",
+  "Uttar Pradesh 2014 seg 125: \"BAREILLY CANTT\" vs AC \"BAREILLY CANTONMENT\"",
+  "Uttar Pradesh 2014 seg 141: \"DHAURAHRA\" vs AC \"DHAUREHRA\"",
+  "Uttar Pradesh 2014 seg 144: \"MOHAMMDI\" vs AC \"MOHAMMADI\"",
+  "Uttar Pradesh 2014 seg 151: \"MAHMOODABAD\" vs AC \"MAHMUDABAD\"",
+  "Uttar Pradesh 2014 seg 159: \"BILGRAM-MALLANWAN\" vs AC \"BILGRAM - MALANWAN\"",
+  "Uttar Pradesh 2014 seg 209: \"BILHAUR\" vs AC \"BILAUR\"",
+  "Uttar Pradesh 2014 seg 162: \"BANGERMAU\" vs AC \"BANGARMAU\"",
+  "Uttar Pradesh 2014 seg 175: \"LUCKNOW CANTT\" vs AC \"LUCKNOW CANTONMENT\"",
+  "Uttar Pradesh 2014 seg 247: \"VISHWANATHGANJ\" vs AC \"BISHWAVNATHGANJ\"",
+  "Uttar Pradesh 2014 seg 213: \"SISHAMAU\" vs AC \"SISAMAU\"",
+  "Uttar Pradesh 2014 seg 216: \"KANPUR CANTT\" vs AC \"KANPUR CANTONMENT\"",
+  "Uttar Pradesh 2014 seg 219: \"MADHAUGARH\" vs AC \"MADHOGARH\"",
+  "Uttar Pradesh 2014 seg 285: \"MAHASI\" vs AC \"MAHSI\"",
+  "Uttar Pradesh 2014 seg 306: \"DOOMARIYAGANJ\" vs AC \"DOMARIAGANJ\"",
+  "Uttar Pradesh 2014 seg 308: \"KAPTANGANJ\" vs AC \"CAPTAINGANJ\"",
+  "Uttar Pradesh 2014 seg 311: \"MAHADEWA\" vs AC \"MAHADEVA\"",
+  "Uttar Pradesh 2014 seg 312: \"MENHDAWAL\" vs AC \"MEHNDAWAL\"",
+  "Uttar Pradesh 2014 seg 319: \"PANIYARA\" vs AC \"PANIARA\"",
+  "Uttar Pradesh 2014 seg 343: \"ATRAULIYA\" vs AC \"ATRAULIA\"",
+  "Uttar Pradesh 2014 seg 355: \"MUHAMMADABAD- GOHNA\" vs AC \"MOHAMMADABAD GOHNA\"",
+  "Uttar Pradesh 2014 seg 358: \"RASARA\" vs AC \"RASRA\"",
+  "Uttar Pradesh 2014 seg 370: \"MARIYAHU\" vs AC \"MARIAHU\"",
+  "Uttar Pradesh 2014 seg 390: \"VARANASI CANTT\" vs AC \"VARANASI CANTONMENT\"",
+  "Uttar Pradesh 2014 seg 403: \"DUDDHI\" vs AC \"DUDHI\"",
+  "Uttar Pradesh 2009 seg 26: \"THKURDWARA\" vs AC \"THAKURDWARA\"",
+  "Uttar Pradesh 2009 seg 60: \"GARHMUKTESHWAR\" vs AC \"GARMUKHTESHWAR\"",
+  "Uttar Pradesh 2009 seg 47: \"MEERUT CANTT\" vs AC \"MEERUT CANTONMENT\"",
+  "Uttar Pradesh 2009 seg 50: \"CHHAPRAULI\" vs AC \"CHAPRAULI\"",
+  "Uttar Pradesh 2009 seg 83: \"GOVERDHAN\" vs AC \"GOVARDHAN\"",
+  "Uttar Pradesh 2009 seg 87: \"AGRA CANTT\" vs AC \"AGRA CANTONMENT\"",
+  "Uttar Pradesh 2009 seg 91: \"FATEHPUR SIKARI\" vs AC \"FATEHPUR SIKRI\"",
+  "Uttar Pradesh 2009 seg 109: \"KISHANI\" vs AC \"KISHNI\"",
+  "Uttar Pradesh 2009 seg 102: \"PATIYALI\" vs AC \"PATIALI\"",
+  "Uttar Pradesh 2009 seg 115: \"BUDAUN\" vs AC \"BADAUN\"",
+  "Uttar Pradesh 2009 seg 125: \"BARELLY CANTT\" vs AC \"BAREILLY CANTONMENT\"",
+  "Uttar Pradesh 2009 seg 141: \"DHAURAHRA\" vs AC \"DHAUREHRA\"",
+  "Uttar Pradesh 2009 seg 144: \"MOHAMMDI\" vs AC \"MOHAMMADI\"",
+  "Uttar Pradesh 2009 seg 151: \"MAHMOODABAD\" vs AC \"MAHMUDABAD\"",
+  "Uttar Pradesh 2009 seg 159: \"BILGRAM-MALLANWAN\" vs AC \"BILGRAM - MALANWAN\"",
+  "Uttar Pradesh 2009 seg 209: \"BILHAUR\" vs AC \"BILAUR\"",
+  "Uttar Pradesh 2009 seg 175: \"LUCKNOW CANTT\" vs AC \"LUCKNOW CANTONMENT\"",
+  "Uttar Pradesh 2009 seg 213: \"SISHAMAU\" vs AC \"SISAMAU\"",
+  "Uttar Pradesh 2009 seg 216: \"KANPUR CANTT\" vs AC \"KANPUR CANTONMENT\"",
+  "Uttar Pradesh 2009 seg 219: \"MADHAUGARH\" vs AC \"MADHOGARH\"",
+  "Uttar Pradesh 2009 seg 239: \"BINKDI\" vs AC \"BINDKI\"",
+  "Uttar Pradesh 2009 seg 260: \"KARCHHANA\" vs AC \"KARACHHANA\"",
+  "Uttar Pradesh 2009 seg 306: \"DUMARIYAGANJ\" vs AC \"DOMARIAGANJ\"",
+  "Uttar Pradesh 2009 seg 308: \"KAPTANGANJ\" vs AC \"CAPTAINGANJ\"",
+  "Uttar Pradesh 2009 seg 311: \"MAHADEWA\" vs AC \"MAHADEVA\"",
+  "Uttar Pradesh 2009 seg 312: \"MENHDAWAL\" vs AC \"MEHNDAWAL\"",
+  "Uttar Pradesh 2009 seg 325: \"KHAJNI\" vs AC \"KHAJANI\"",
+  "Uttar Pradesh 2009 seg 319: \"PANIYARA\" vs AC \"PANIARA\"",
+  "Uttar Pradesh 2009 seg 343: \"ATRAULIYA\" vs AC \"ATRAULIA\"",
+  "Uttar Pradesh 2009 seg 355: \"MUHAMMADABAD- GOHNA\" vs AC \"MOHAMMADABAD GOHNA\"",
+  "Uttar Pradesh 2009 seg 358: \"RASARA\" vs AC \"RASRA\"",
+  "Uttar Pradesh 2009 seg 359: \"SIKANDARPUR\" vs AC \"SIKANDERPUR\"",
+  "Uttar Pradesh 2009 seg 362: \"BANSDEEH\" vs AC \"BANSDIH\"",
+  "Uttar Pradesh 2009 seg 370: \"MARIYAHU\" vs AC \"MARIAHU\"",
+  "Uttar Pradesh 2009 seg 390: \"VARANASI CANTT\" vs AC \"VARANASI CANTONMENT\"",
+  "Uttar Pradesh 2009 seg 403: \"DUDDHI\" vs AC \"DUDHI\"",
+  "Uttarakhand 2024 seg 9: \"GHANSALI (S.C.)\" vs AC \"GHANSHALI\"",
+  "Uttarakhand 2024 seg 21: \"DEHRADUN CANTONMENT\" vs AC \"DEHRADUN CANTT.\"",
+  "Uttarakhand 2024 seg 6: \"KARANPRAYAG\" vs AC \"KARNPRAYAG\"",
+  "Uttarakhand 2024 seg 10: \"DEVPRAYAG\" vs AC \"DEOPRAYAG\"",
+  "Uttarakhand 2024 seg 56: \"LALKUAN\" vs AC \"LALKUWA\"",
+  "Uttarakhand 2024 seg 18: \"DHARMPUR\" vs AC \"DHARAMPUR\"",
+  "Uttarakhand 2024 seg 25: \"HARIDWAR\" vs AC \"HARDWAR\"",
+  "Uttarakhand 2024 seg 35: \"HARIDWAR RURAL\" vs AC \"HARDWAR RURAL\"",
+  "Uttarakhand 2019 seg 9: \"GHANSALI (S.C.)\" vs AC \"GHANSHALI\"",
+  "Uttarakhand 2019 seg 21: \"DEHRADUN CANTONMENT\" vs AC \"DEHRADUN CANTT.\"",
+  "Uttarakhand 2019 seg 6: \"KARANPRAYAG\" vs AC \"KARNPRAYAG\"",
+  "Uttarakhand 2019 seg 10: \"DEVPRAYAG\" vs AC \"DEOPRAYAG\"",
+  "Uttarakhand 2019 seg 56: \"LALKUAN\" vs AC \"LALKUWA\"",
+  "Uttarakhand 2019 seg 18: \"DHARMPUR\" vs AC \"DHARAMPUR\"",
+  "Uttarakhand 2019 seg 25: \"HARIDWAR\" vs AC \"HARDWAR\"",
+  "Uttarakhand 2019 seg 35: \"HARIDWAR RURAL\" vs AC \"HARDWAR RURAL\"",
+  "West Bengal 2024 seg 19: \"DABGRAM-FULBARI\" vs AC \"DABGRAM-PHULBARI\"",
+  "West Bengal 2024 seg 49: \"MANIKCHAK\" vs AC \"MANICKCHAK\"",
+  "West Bengal 2024 seg 54: \"BAISNABNAGAR\" vs AC \"BAISHNAB NAGAR\"",
+  "West Bengal 2024 seg 136: \"JOYNAGAR\" vs AC \"JAYNAGAR\"",
+  "West Bengal 2024 seg 145: \"SATGACHHIA\" vs AC \"SATGACHIA\"",
+  "West Bengal 2024 seg 148: \"BHANGAR\" vs AC \"BHANGORE\"",
+  "West Bengal 2024 seg 152: \"TOLLYGANJ\" vs AC \"TOLLYGUNJ\"",
+  "West Bengal 2024 seg 167: \"MANIKTOLA\" vs AC \"MANIKTALA\"",
+  "West Bengal 2024 seg 168: \"KASHIPUR-BELGACHHIA\" vs AC \"KASHIPUR-BELGACHIA\"",
+  "West Bengal 2024 seg 189: \"CHANDANNAGAR\" vs AC \"CHANDANNAGORE\"",
+  "West Bengal 2024 seg 208: \"MAHISHADAL\" vs AC \"MAHISADAL\"",
+  "West Bengal 2024 seg 249: \"RANIBANDH\" vs AC \"RANIBUNDH\"",
+  "West Bengal 2024 seg 260: \"BURDWAN DAKSHIN\" vs AC \"BARDHAMAN DAKSHIN\"",
+  "West Bengal 2024 seg 266: \"BURDWAN UTTAR\" vs AC \"BARDHAMAN UTTAR\"",
+  "West Bengal 2024 seg 283: \"BARABANI\" vs AC \"BARBANI\"",
+  "West Bengal 2024 seg 272: \"MONGALKOTE\" vs AC \"MANGALKOT\"",
+  "West Bengal 2019 seg 19: \"DABGRAM-FULBARI\" vs AC \"DABGRAM-PHULBARI\"",
+  "West Bengal 2019 seg 74: \"NOWDA\" vs AC \"NAODA\"",
+  "West Bengal 2019 seg 62: \"BHAGAWANGOLA\" vs AC \"BHAGABANGOLA\"",
+  "West Bengal 2019 seg 95: \"BONGAON UTTAR\" vs AC \"BANGAON UTTAR\"",
+  "West Bengal 2019 seg 96: \"BONGAON DAKSHIN\" vs AC \"BANGAON DAKSHIN\"",
+  "West Bengal 2019 seg 152: \"TOLLYGUNGE\" vs AC \"TOLLYGUNJ\"",
+  "West Bengal 2019 seg 189: \"CHANDANNAGAR\" vs AC \"CHANDANNAGORE\"",
+  "West Bengal 2019 seg 249: \"RANIBANDH\" vs AC \"RANIBUNDH\"",
+  "West Bengal 2019 seg 256: \"KOTULPUR\" vs AC \"KATULPUR\"",
+  "West Bengal 2019 seg 257: \"INDAS\" vs AC \"INDUS\"",
+  "West Bengal 2019 seg 288: \"LABPUR\" vs AC \"LABHPUR\"",
+  "West Bengal 2014 seg 19: \"DABGRAM-FULBARI\" vs AC \"DABGRAM-PHULBARI\"",
+  "West Bengal 2014 seg 74: \"NOWDA\" vs AC \"NAODA\"",
+  "West Bengal 2014 seg 62: \"BHAGAWANGOLA\" vs AC \"BHAGABANGOLA\"",
+  "West Bengal 2014 seg 95: \"BONGAON UTTAR\" vs AC \"BANGAON UTTAR\"",
+  "West Bengal 2014 seg 96: \"BONGAON DAKSHIN\" vs AC \"BANGAON DAKSHIN\"",
+  "West Bengal 2014 seg 152: \"TOLLYGUNGE\" vs AC \"TOLLYGUNJ\"",
+  "West Bengal 2014 seg 249: \"RANIBANDH\" vs AC \"RANIBUNDH\"",
+  "West Bengal 2014 seg 256: \"KOTULPUR\" vs AC \"KATULPUR\"",
+  "West Bengal 2014 seg 257: \"INDAS\" vs AC \"INDUS\"",
+  "West Bengal 2014 seg 288: \"LABPUR\" vs AC \"LABHPUR\"",
+  "West Bengal 2009 seg 49: \"MANIKCHAK\" vs AC \"MANICKCHAK\"",
+  "West Bengal 2009 seg 54: \"BAISNABNAGAR\" vs AC \"BAISHNAB NAGAR\"",
+  "West Bengal 2009 seg 136: \"JOYNAGAR\" vs AC \"JAYNAGAR\"",
+  "West Bengal 2009 seg 145: \"SATGACHHIA\" vs AC \"SATGACHIA\"",
+  "West Bengal 2009 seg 148: \"BHANGAR\" vs AC \"BHANGORE\"",
+  "West Bengal 2009 seg 152: \"TOLLYGANJ\" vs AC \"TOLLYGUNJ\"",
+  "West Bengal 2009 seg 167: \"MANIKTOLA\" vs AC \"MANIKTALA\"",
+  "West Bengal 2009 seg 168: \"KASHIPUR-BELGACHHIA\" vs AC \"KASHIPUR-BELGACHIA\"",
+  "West Bengal 2009 seg 189: \"CHANDANNAGAR\" vs AC \"CHANDANNAGORE\"",
+  "West Bengal 2009 seg 208: \"MAHISHADAL\" vs AC \"MAHISADAL\"",
+  "West Bengal 2009 seg 249: \"RANIBANDH\" vs AC \"RANIBUNDH\"",
+  "West Bengal 2009 seg 260: \"BURDWAN DAKSHIN\" vs AC \"BARDHAMAN DAKSHIN\"",
+  "West Bengal 2009 seg 266: \"BURDWAN UTTAR\" vs AC \"BARDHAMAN UTTAR\"",
+  "West Bengal 2009 seg 280: \"ASNSOL DAKSHIN\" vs AC \"ASANSOL DAKSHIN\"",
+  "West Bengal 2009 seg 283: \"BARABANI\" vs AC \"BARBANI\""
+ ],
+ "name": [
+  "Assam 2026 AC 31: app \"RANGIYA\" vs order \"Rangia\"",
+  "Assam 2026 AC 44: app \"GORESHWAR\" vs order \"Goreswar\"",
+  "Assam 2026 AC 47: app \"MAJBAT\" vs order \"Mazbat\"",
+  "Assam 2026 AC 56: app \"RUPOHIHAT\" vs order \"Rupahihat\"",
+  "Assam 2026 AC 69: app \"NADAUR\" vs order \"Naduar\"",
+  "Assam 2026 AC 75: app \"NAOBOICHA\" vs order \"Nowboicha\"",
+  "Assam 2026 AC 79: app \"SISSIBORGAON\" vs order \"Sissibargaon\"",
+  "Assam 2026 AC 88: app \"DIBRUGARH\" vs order \"Dibrugrah\"",
+  "Assam 2026 AC 109: app \"HOWRAGHAT\" vs order \"Howarghat\"",
+  "Assam 2026 AC 117: app \"BORKHOLA\" vs order \"Barkhola\"",
+  "Assam 2026 AC 126: app \"RAM KRISHNA NAGAR\" vs order \"Ram Krishana Nagar\"",
+  "Jammu & Kashmir 2024 AC 23: app \"CHANAPORA\" vs order \"Channapora\"",
+  "Jammu & Kashmir 2024 AC 30: app \"CHARARI SHARIEF\" vs order \"Chrar-i-Sharief\"",
+  "Jammu & Kashmir 2024 AC 74: app \"RS PORA–JAMMU SOUTH\" vs order \"R.S. Pura-Jammu South\"",
+  "Jammu & Kashmir 2024 AC 87: app \"THANAMANDI\" vs order \"Thannamandi\""
+ ],
+ "seg": [
+  "Manipur 2024 PC 1 segment 61 INNER MANIPUR: no assembly placement",
+  "Manipur 2024 PC 2 segment 62 OUTER MANIPUR: no assembly placement",
+  "Sikkim 2014 PC 1 segment 32 SANGHA: no assembly placement"
+ ],
+ "missing": [
+  "Sikkim 2009 AC 32 SANGHA: no polygon and no official list",
+  "Sikkim 2014 AC 32 SANGHA: no polygon and no official list",
+  "Sikkim 2019 AC 32 SANGHA: no polygon and no official list",
+  "Sikkim 2024 AC 32 SANGHA: no polygon and no official list"
+ ]
+}

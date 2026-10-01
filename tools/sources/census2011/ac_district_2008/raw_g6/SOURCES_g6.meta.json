@@ -1,0 +1,74 @@
+{
+ "assam_ceo_ae2021_final_ps_electors_phasewise.pdf": {
+  "url": "https://ceoassam.nic.in/assembly/pdf/2021/Final_PS_Electors_Phase_wise.pdf",
+  "kind": "official",
+  "fetched": "2026-10-01",
+  "description": "CEO Assam, General Election to Assam Legislative Assembly 2021: 'Total Polling Station and General Electors - PHASE wise' (5 pages; columns S.No, Name of Revenue District, Name of the Election District, AC No & Name, Total PS, General Electors). Linked as 'Total numbers of Polling Station and Elector details in Phase wise' from https://ceoassam.nic.in/assembly/2021/assembly-election-2021.html. PRIMARY source of district_2008 for the 126 pre-2023 (1976-order) ACs."
+ },
+ "assam_ceo_ae2021_page.html": {
+  "url": "https://ceoassam.nic.in/assembly/2021/assembly-election-2021.html",
+  "kind": "official",
+  "fetched": "2026-10-01",
+  "description": "CEO Assam AE-2021 page (provenance of the PDF above; links are in its inline JS 'sections' array)."
+ },
+ "manipur_ceo_officers_contact.html": {
+  "url": "https://ceomanipur.nic.in/officers_contact.aspx",
+  "kind": "official",
+  "fetched": "2026-10-01",
+  "description": "CEO Manipur 'Who's Who of Election Officials': table of Electoral Registration Officers with columns District | AC Name ('N - Name') | ERO | Designation | Email. PRIMARY source of district_2008 for Manipur's 60 ACs (unchanged since the 1976 order)."
+ },
+ "nagaland_ceo_polling_stations_page.html": {
+  "url": "https://ceo.nagaland.gov.in/polling-stations",
+  "kind": "official",
+  "fetched": "2026-10-01",
+  "description": "CEO Nagaland 'Assembly Constituencies and Polling Stations' page listing one PDF per election district (16 files)."
+ },
+ "nagaland_ceo_ps/*": {
+  "kind": "official",
+  "fetched": "2026-10-01",
+  "description": "CEO Nagaland polling-station list of one election district; each AC block is headed 'List of Polling Stations for N - NAME Assembly Constituency comprised within the NAGALAND Parliamentary Constituency'. PRIMARY source of district_2008 for Nagaland's 60 ACs. NB '7. Zunheboto.pdf' carries 9 appended pages (11-19) repeating ACs 49-58 of other districts; those repeats are ignored."
+ },
+ "jharkhand_ceo_acpclist.html": {
+  "url": "https://ceo.jharkhand.gov.in/ACPCList.html",
+  "kind": "official",
+  "fetched": "2026-10-01",
+  "description": "CEO Jharkhand 'AC & PC LIST - JHARKHAND' (Details of AC): division / No. & Name of District / No. & Name of ACs / parts, plus a PC-wise half. PRIMARY source of district_2008 for Jharkhand's 81 ACs (24 districts = the 24 Census-2011 districts)."
+ },
+ "dpaco_1976_archiveorg_djvu.txt": {
+  "url": "https://archive.org/download/1976-dpaco/1976%20DPACO%20%28Schedule%20XVII%29_djvu.txt",
+  "pdf_url": "https://archive.org/download/1976-dpaco/1976%20DPACO%20%28Schedule%20XVII%29.pdf",
+  "kind": "official (archived copy)",
+  "fetched": "2026-10-01",
+  "description": "OCR text (Internet Archive, tesseract) of 'The Delimitation of Parliamentary and Assembly Constituencies Order, 1976' as printed by the Election Commission of India (uploaded 2024-05-11; item description says it was retrieved from the ECI's 'Archive Delimitation Orders' page). The governing order for these four states: Assam = Schedule IV, Bihar (incl. the 81 Jharkhand ACs, Bihar Nos. 147-164 and 262-324) = Schedule V, Manipur = Schedule XIV, Nagaland = Schedule XVI. Source of ac_name, the 1976 district headings and every AC's extent (used to document cross-district territory)."
+ },
+ "dpaco_1976_archiveorg_metadata.json": {
+  "url": "https://archive.org/metadata/1976-dpaco",
+  "kind": "metadata",
+  "fetched": "2026-10-01",
+  "description": "Internet Archive metadata of the item above (creator, provenance, file list with checksums)."
+ },
+ "wikipedia_crosscheck_assam.csv": {
+  "url": "https://en.wikipedia.org/w/index.php?title=List_of_constituencies_of_the_Assam_Legislative_Assembly&oldid=1157435585",
+  "kind": "cross-check (CC BY-SA 4.0; 3 fact columns only, no text reproduced)",
+  "fetched": "2026-10-01",
+  "description": "Wikipedia revision 1157435585 (2023-05-28 (last revision before the 2023 delimitation, i.e. the 126 old ACs)): AC number, reservation, district - used ONLY to cross-check, never as a value source."
+ },
+ "wikipedia_crosscheck_manipur.csv": {
+  "url": "https://en.wikipedia.org/w/index.php?title=List_of_constituencies_of_the_Manipur_Legislative_Assembly&oldid=1369628552",
+  "kind": "cross-check (CC BY-SA 4.0; 3 fact columns only, no text reproduced)",
+  "fetched": "2026-10-01",
+  "description": "Wikipedia revision 1369628552 (2026-08-16): AC number, reservation, district - used ONLY to cross-check, never as a value source."
+ },
+ "wikipedia_crosscheck_nagaland.csv": {
+  "url": "https://en.wikipedia.org/w/index.php?title=List_of_constituencies_of_the_Nagaland_Legislative_Assembly&oldid=1374474149",
+  "kind": "cross-check (CC BY-SA 4.0; 3 fact columns only, no text reproduced)",
+  "fetched": "2026-10-01",
+  "description": "Wikipedia revision 1374474149 (2026-09-12): AC number, reservation, district - used ONLY to cross-check, never as a value source."
+ },
+ "wikipedia_crosscheck_jharkhand.csv": {
+  "url": "https://en.wikipedia.org/w/index.php?title=List_of_constituencies_of_the_Jharkhand_Legislative_Assembly&oldid=1365778452",
+  "kind": "cross-check (CC BY-SA 4.0; 3 fact columns only, no text reproduced)",
+  "fetched": "2026-10-01",
+  "description": "Wikipedia revision 1365778452 (2026-07-24): AC number, reservation, district - used ONLY to cross-check, never as a value source."
+ }
+}

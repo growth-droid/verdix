@@ -1,0 +1,41 @@
+state,ac_no,ac_name,district_2008,source,page,note
+Mizoram,1,Hachhek (ST),MAMIT,"ECI Delimitation of Parliamentary and Assembly Constituencies Order 2008 (English), Table A",302,reserved=ST
+Mizoram,2,Dampa (ST),MAMIT,"ECI Delimitation of Parliamentary and Assembly Constituencies Order 2008 (English), Table A",302,reserved=ST
+Mizoram,3,Mamit (ST),MAMIT,"ECI Delimitation of Parliamentary and Assembly Constituencies Order 2008 (English), Table A",302,reserved=ST
+Mizoram,4,Tuirial (ST),KOLASIB,"ECI Delimitation of Parliamentary and Assembly Constituencies Order 2008 (English), Table A",302,reserved=ST
+Mizoram,5,Kolasib (ST),KOLASIB,"ECI Delimitation of Parliamentary and Assembly Constituencies Order 2008 (English), Table A",303,reserved=ST
+Mizoram,6,Serlui (ST),KOLASIB,"ECI Delimitation of Parliamentary and Assembly Constituencies Order 2008 (English), Table A",303,"reserved=ST; ALSO_DISTRICT=AIZAWL(283): extent includes villages Saiphai and Saipum ""under Sakawrdai Sub-Division (Civil) in Thingdawl R. D. Block under Aizawl District"""
+Mizoram,7,Tuivawl (ST),AIZAWL,"ECI Delimitation of Parliamentary and Assembly Constituencies Order 2008 (English), Table A",303,reserved=ST
+Mizoram,8,Chalfilh (ST),AIZAWL,"ECI Delimitation of Parliamentary and Assembly Constituencies Order 2008 (English), Table A",303,reserved=ST
+Mizoram,9,Tawi (ST),AIZAWL,"ECI Delimitation of Parliamentary and Assembly Constituencies Order 2008 (English), Table A",303,reserved=ST
+Mizoram,10,Aizawl North-I (ST),AIZAWL,"ECI Delimitation of Parliamentary and Assembly Constituencies Order 2008 (English), Table A",303,reserved=ST
+Mizoram,11,Aizawl North-II (ST),AIZAWL,"ECI Delimitation of Parliamentary and Assembly Constituencies Order 2008 (English), Table A",303,reserved=ST
+Mizoram,12,Aizawl North-III (ST),AIZAWL,"ECI Delimitation of Parliamentary and Assembly Constituencies Order 2008 (English), Table A",304,reserved=ST
+Mizoram,13,Aizawl East-I,AIZAWL,"ECI Delimitation of Parliamentary and Assembly Constituencies Order 2008 (English), Table A",304,
+Mizoram,14,Aizawl East-II (ST),AIZAWL,"ECI Delimitation of Parliamentary and Assembly Constituencies Order 2008 (English), Table A",304,reserved=ST
+Mizoram,15,Aizawl West-I (ST),AIZAWL,"ECI Delimitation of Parliamentary and Assembly Constituencies Order 2008 (English), Table A",304,reserved=ST
+Mizoram,16,Aizawl West-II (ST),AIZAWL,"ECI Delimitation of Parliamentary and Assembly Constituencies Order 2008 (English), Table A",304,reserved=ST
+Mizoram,17,Aizawl West-III (ST),AIZAWL,"ECI Delimitation of Parliamentary and Assembly Constituencies Order 2008 (English), Table A",304,reserved=ST
+Mizoram,18,Aizawl South-I (ST),AIZAWL,"ECI Delimitation of Parliamentary and Assembly Constituencies Order 2008 (English), Table A",304,reserved=ST
+Mizoram,19,Aizawl South-II (ST),AIZAWL,"ECI Delimitation of Parliamentary and Assembly Constituencies Order 2008 (English), Table A",304,reserved=ST
+Mizoram,20,Aizawl South-III (ST),AIZAWL,"ECI Delimitation of Parliamentary and Assembly Constituencies Order 2008 (English), Table A",304,reserved=ST
+Mizoram,21,Lengteng (ST),CHAMPHAI,"ECI Delimitation of Parliamentary and Assembly Constituencies Order 2008 (English), Table A",305,reserved=ST
+Mizoram,22,Tuichang (ST),CHAMPHAI,"ECI Delimitation of Parliamentary and Assembly Constituencies Order 2008 (English), Table A",305,reserved=ST
+Mizoram,23,Champhai North (ST),CHAMPHAI,"ECI Delimitation of Parliamentary and Assembly Constituencies Order 2008 (English), Table A",305,reserved=ST
+Mizoram,24,Champhai South (ST),CHAMPHAI,"ECI Delimitation of Parliamentary and Assembly Constituencies Order 2008 (English), Table A",305,reserved=ST
+Mizoram,25,East Tuipui (ST),CHAMPHAI,"ECI Delimitation of Parliamentary and Assembly Constituencies Order 2008 (English), Table A",305,reserved=ST
+Mizoram,26,Serchhip (ST),SERCHHIP,"ECI Delimitation of Parliamentary and Assembly Constituencies Order 2008 (English), Table A",306,reserved=ST
+Mizoram,27,Tuikum (ST),SERCHHIP,"ECI Delimitation of Parliamentary and Assembly Constituencies Order 2008 (English), Table A",306,"reserved=ST; ALSO_DISTRICT=AIZAWL(283): extent includes Tlungvel, Darlawng and Phulmawi ""in Thingsulthliah R. D. Block of District Aizawl"""
+Mizoram,28,Hrangturzo (ST),SERCHHIP,"ECI Delimitation of Parliamentary and Assembly Constituencies Order 2008 (English), Table A",306,"reserved=ST; ALSO_DISTRICT=CHAMPHAI(284): extent includes village Biate ""in E. Lungdar R. D. Block of Champhai District"""
+Mizoram,29,South Tuipui (ST),LUNGLEI,"ECI Delimitation of Parliamentary and Assembly Constituencies Order 2008 (English), Table A",306,reserved=ST
+Mizoram,30,Lunglei North (ST),LUNGLEI,"ECI Delimitation of Parliamentary and Assembly Constituencies Order 2008 (English), Table A",306,reserved=ST
+Mizoram,31,Lunglei East (ST),LUNGLEI,"ECI Delimitation of Parliamentary and Assembly Constituencies Order 2008 (English), Table A",306,reserved=ST
+Mizoram,32,Lunglei West (ST),LUNGLEI,"ECI Delimitation of Parliamentary and Assembly Constituencies Order 2008 (English), Table A",307,reserved=ST
+Mizoram,33,Lunglei South (ST),LUNGLEI,"ECI Delimitation of Parliamentary and Assembly Constituencies Order 2008 (English), Table A",307,reserved=ST
+Mizoram,34,Thorang (ST),LUNGLEI,"ECI Delimitation of Parliamentary and Assembly Constituencies Order 2008 (English), Table A",307,reserved=ST
+Mizoram,35,West Tuipui (ST),LUNGLEI,"ECI Delimitation of Parliamentary and Assembly Constituencies Order 2008 (English), Table A",307,reserved=ST
+Mizoram,36,Tuichawng (ST),LAWNGTLAI,"ECI Delimitation of Parliamentary and Assembly Constituencies Order 2008 (English), Table A",307,reserved=ST
+Mizoram,37,Lawngtlai West (ST),LAWNGTLAI,"ECI Delimitation of Parliamentary and Assembly Constituencies Order 2008 (English), Table A",308,reserved=ST
+Mizoram,38,Lawngtlai East (ST),LAWNGTLAI,"ECI Delimitation of Parliamentary and Assembly Constituencies Order 2008 (English), Table A",308,reserved=ST
+Mizoram,39,Saiha (ST),SAIHA,"ECI Delimitation of Parliamentary and Assembly Constituencies Order 2008 (English), Table A",308,reserved=ST
+Mizoram,40,Palak (ST),SAIHA,"ECI Delimitation of Parliamentary and Assembly Constituencies Order 2008 (English), Table A",309,reserved=ST

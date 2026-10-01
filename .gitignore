@@ -27,3 +27,15 @@ _*.log
 
 # python bytecode (tools/)
 __pycache__/
+
+# census 2011 raw downloads — re-fetchable from the official URLs + sha256 recorded in each folder's
+# SOURCES / manifest file; only the tidy CSVs, manifests and build scripts are committed
+tools/sources/census2011/hlo/raw/
+tools/sources/census2011/religion/raw_nada/
+tools/sources/census2011/religion/raw_datagov/
+tools/sources/census2011/boundaries/datameet_2011_dist/
+# sub-district shapes: NIC-derived, licence unclear — research only, never shipped
+tools/sources/census2011/boundaries/subdistricts/
+tools/sources/census2011/ac_district_lists/raw/**
+!tools/sources/census2011/ac_district_lists/raw/eci_delimitation_order_2008_english.pdf
+!tools/sources/census2011/ac_district_lists/raw/assam_final_order_ocr_p51-82.json
