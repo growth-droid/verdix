@@ -1,0 +1,91 @@
+n,name,extent,class
+1,Kalka,Kalka Tehsil; KCs Morni & Raipur Rani of Panchkula Tehsil.,B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+2,Panchkula,KC Panchkula & Panchkula (Municipal Council) of Panchkula Tehsil.,B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+3,Naraingarh,Naraingarh Tehsil; PCs Pilkhani & Khudda Kalan of Ambala Cantt. KC of Ambala Tehsil.,B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+4,Ambala Cantt.,"PCs Panjokhara & Mandhaur of Ambala City KC, PCs Babyal, Kardhan & Bara of Ambala Cantt. KC, Ambala Sadar (Municipal Council) & Ambala Cantt. (CB) of Ambala Tehsil.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+5,Ambala City,"PCs Ghel, Sonda, Manakpur, Suba Akbarpur, Patti Mehar & Jalbera of Ambala City KC, Ambala City (Municipal Council), Naggal KC, PCs Balana, Sullar & Bhano Kheri of Balana KC of Ambala Tehsil.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+6,Mulana (SC),"Barara Tehsil; PCs Dhanaura, Tharwa, Durana, Barauli & Mohri of Balana KC, PC Mohra of Ambala Cantt. KC & Saha KC of Ambala Tehsil.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+7,Sadhaura (SC),"KCs Sadhaura, Bilaspur, PCs Pabni Kalan, Mussimbal & Mehlanwali of Jagadhri KC, PC Khera of Yamunanagar KC, PCs Bhambholi, Mustafabad, Chhappar Mansurpur, Jagdhauli, Kalawar, Talakaur, Ambli & Hangoli of Mustafabad KC of Jagadhri Tehsil.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+8,Jagadhri,Chhachhrauli Tehsil; PCs Jagadhri & Arnauli of Jagadhri KC & Jagadhri (Municipal Council) of Jagadhri Tehsil.,B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+9,Yamunanagar,"PCs Yamunanagar, Balachaur & Tejli of Yamunanagar KC, Yamunanagar (Municpal Council), PCs Buria Jagir, Kanalsi, Sabapur & Kharwan of Jagadhri KC of Jagadhri Tehsil.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+10,Radaur,"KC Radaur, PCs Hafizpur, Jhinwarheri, Uncha Chandana, Saran & Rapoli of Mustafabad KC, PCs Naharpur, Tigri, Khurdi, Damla, Aurangabad, Pansra & Sasauli of Yamunanagar KC of Jagadhri Tehsil.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+11,Ladwa,"PCs Pipli, Umri, Jhinwarheri, Mathana, Sirsama, Untheri, Morthala, Kanipla, Ishargarh & Deeg of Thanesar-I KC, KCs Babain, Ladwa & Ladwa (Municipal Committee) of Thanesar Tehsil.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+12,Shahbad (SC),"Shahbad Tehsil; PCs Thol, Ajrawar & Shanti Nagar Urf Kurdi of Ismailabad KC of Pehowa Tehsil & KC Durala of Thanesar Tehsil.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+13,Thanesar,"PCs Darrakalan, Sirsala & Palwal of Thanesar-I KC, KC Thanesar- II & Darrakalan MC of Thanesar Tehsil.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+14,Pehowa,"PCs Ismailabad, Jhansa, Bhusthla, Naisi, Jakhwala & Thaska Miranji of Ismailabad KC, KCs Murtzapur, Pehowa & Pehowa (Municipal Committee) of Pehowa Tehsil.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+15,Guhla (SC),Guhla Tehsil & KC Siwan of Kaithal Tehsil.,B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+16,Kalayat,"KCs Jakholi, Rajound, Kalayat, Mator & Kalayat Municipal Committee of Kaithal Tehsil.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+17,Kaithal,"PCs Patti Kaisth Seth, Patti Gadar, Khurana, Deora, Keorak-I & II, Geong, Jaswanti, Sirta, Khanoda, Kathwar, Mundhari & Nawach of Kaithal-I KC, KC Kaithal-II & Kaithal (Municipal Council) of Kaithal Tehsil.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+18,Pundri,"KCs Dhand, Pundri, Pai, PCs Barot & Teek of Kaithal-I KC & Pundri (Municipal Committee) of Kaithal Tehsil.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+19,Nilokheri(SC),Nilokheri Tehsil & KC Nissing of Karnal Tehsil.,B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+20,Indri,Indri Tehsil & KC Baragaon of Karnal Tehsil.,B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+21,Karnal,"PCs Karnal I, II & III, Kachhwa-I & II, Pundrak of Karnal-I KC & Karnal (Municipal Council + OG) of Karnal Tehsil.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+22,Gharaunda,"Gharaunda Tehsil; KC Karnal-II, PCs Gogripur, Kambohpura, Kutail & Uncha Siwana of Karnal-I KC of Karnal Tehsil.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+23,Assandh,Assandh Tehsil & KC Jundla of Karnal Tehsil.,B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+24,Panipat Rural,KC Panipat of Panipat Tehsil.,B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+25,Panipat City,Panipat (Municpal Council + OG) of Panipat Tehsil.,A_whole_subdistricts_and_towns_only
+26,Israna (SC),"KCs Madlauda-I, Madlauda-II of Panipat Tehsil & Israna Tehsil.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+27,Samalkha,Samalkha Tehsil.,A_whole_subdistricts_and_towns_only
+28,Ganaur,"Ganaur Tehsil; PCs Sandal Kalan, Shahjadpur & Kurar Ibrahimpur of Murthal KC & PC Sonipat Patti Musalmanan of Sonipat-I KC of Sonipat Tehsil.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+29,Rai,"KC Rai, PCs Malikpur, Barauli, Basodi, Dipalpur, Jainpur, Khewra, Kumaspur & Murthal of Murthal KC, PCs Nahra, Nahri & Garhibala of Sonipat-II KC of Sonipat Tehsil.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+30,Kharkhauda (SC),"Kharkhauda Tehsil; PCs Baiyanpur, Rathdhana, Kakroi, Harsana Kalan & Rohat of Sonipat-II KC of Sonipat Tehsil.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+31,Sonipat,PC Raipur of Sonipat-I KC & Sonipat (Municipal Council) of Sonipat Tehsil.,B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+32,Gohana,"KC Gohana-I & Gohana (Municipal Committee) of Gohana Tehsil; PCs Sonipat Patti Jatan, Guhna, Dubheta, Mahra, Doduwa, Chitana, Jaji, Jaun, Mohana & Pinana of Sonipat-I KC, PCs Bhatgaon Maliyan, Bhatgaon Dungran, Mehlana & Bagru of Sonipat-II KC of Sonipat Tehsil.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+33,Baroda,"KCs Baroda, Gohana-II & Mundlana of Gohana Tehsil. PCs Rajpura-I & II, Ramrai & Gobindpura of Jind KC, PCs Siwaha,",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+34,Julana,"Brah Kalan, Brah Khurd, Kharakramji & Nidana of Kandela KC, KC Kinana of Jind Tehsil & Julana Tehsil.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+35,Safidon,Safidon Tehsil.,A_whole_subdistricts_and_towns_only
+36,Jind,"PCs Jind-I & II, Intal Kalan, Jalalpur Kalan, Jajwan, Julani & Barsola of Jind KC, Jind (Municipal Council), PCs Kandela, Jhanj Kalan, Roopgarh, Khokhri, Nirjan & Lochab of Kandela KC, PCs Dalamwala & Sirirag of Alewa KC of Jind Tehsil.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+37,Uchana Kalan,"PCs Lodhar, Sudkain Kalan & Dumerkha Kalan of Dhakal KC, KCs Karsindhu, Uchana Kalan, Khatkar & Uchana (Municipal Committee) of Narwana Tehsil; PCs Alewa-I, II & III, Bighana, Durana, Dhilluwala & Pegan of Alewa KC & KC Naguran of Jind Tehsil.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+38,Narwana (SC),"KCs Narwana, Ujhana, Dhamtan Sahib & Danoda Kalan, PCs Dhakal, Hatho, Singhwal, Bhana Brahmnan & Gurthali of Dhakal KC & Narwana (Municipal Council) of Narwana Tehsil.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+39,Tohana,Tohana Tehsil & KC Nadhori of Fatehabad Tehsil.,B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+40,Fatehabad,"PCs Dhingsara-I & II, Bangram, Gilan Khera, Bodiwali-I & Bodiwali- II of Dhingsara KC, PCs Dhangar-I & II, Mohammadpur Rohi & Khajuri Jatti of Dhangar KC, KCs Badopal, Bhattu Kalan, Dhabi Kalan & Bhuna, PCs Fatehabad-I & II, Basti Bhiwan-I & II & Majra of Fatehabad KC & Fatehabad (Municipal Council) of Fatehabad Tehsil.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+41,Ratia (SC),"Ratia Tehsil; PCs Daryapur, Khariati Khera, Kukranwali & Manawali of Dhingsara KC, KC Hirjawan Kalan, PCs Bhuthan Kalan-I &II, Bhirdana-I, II & III of Dhangar KC, PCs Dhir, Ayalki-I & II, Phull & Bhodia Khera of Fatehabad KC of Fatehabad Tehsil.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+42,Kalanwali (SC),"PCs Chattargarh, Bharokhan, Nejadela Kalan, Vaidwala, Farwain, Khairekan, Panihari-I & II, Meerpur of Sirsa KC, KCs Bara Gudha, Sikanderpur, Lakkarwali, Rori, Kalanwali & Kalanwali (Municipal Committee) of Sirsa Tehsil.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+43,Dabwali,Dabwali Tehsil.,A_whole_subdistricts_and_towns_only
+44,Rania,"PCs Mangala-I & II, Bhamboor, Jhorarnali-I & II, Moujdin of Madhosinghana KC, KC Panjuana of Sirsa Tehsil & Rania Tehsil.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+45,Sirsa,"KCs Shahpur Begu & Ding, PCs Sirsa (Rural) of Sirsa KC & Sirsa (Municipal Council) of Sirsa Tehsil.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+46,Ellenabad,"PCs Madhosinghana-I & II, Mallekan-I & II of Madhosinghana KC, KCs Nathusari Kalan, Chaharwala & Jamal of Sirsa Tehsil & Ellenabad Tehsil.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+47,Adampur,Adampur Tehsil; KCs Balsamand & Bir Hisar of Hisar Tehsil.,B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+48,Uklana (SC),"PCs Hasangarh, Kharkara, Gaibipur & Bobua of Barwala KC, PCs Balak, Khedar I & II of Balak KC, KCs Landhari, Kharak, Uklana & Pabra of Hisar Tehsil.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+49,Narnaund,"Narnaund Tehsil; KCs Sisai, Khanda Kheri & Bass of Hansi Tehsil.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+50,Hansi,"KCs Mehanda, Umra & Hansi & Hansi (Municipal Council) of Hansi Tehsil.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+51,Barwala,"PCs Talwandi Rana, Mirzapur I & II, Dhansu I & II, Kharkari, Bahbalpur & Juglan of Hisar KC, Ward Nos. 13 & 14 in Hisar (Municipal Council), KC Satrod, PCs Jeora, Kheri Barki, Sarsod, Rajli I & II & Bugana of Balak KC, PCs Barwala I to VI of Barwala KC & Barwala (Municipal Committee) of Hisar Tehsil.",C_ward_or_EB_level
+52,Hisar,"PCs Hisar I to III (Rural) of Hisar KC & Ward Nos. 1 to 12, 15 to 28, 32 & 33 in Hisar Municipal Council of Hisar Tehsil.",C_ward_or_EB_level
+53,Nalwa,"KCs Arya Nagar, Chaudhariwas, Mangali & Nalwa, PC Gangwa of Hisar KC, Ward Nos. 29, 30, 31 & CCS HAU Campus & Mini Secretariat (OG) - Ward No. 34 in Hisar (Municipal Council) of Hisar Tehsil.",C_ward_or_EB_level
+54,Loharu,Siwani & Loharu Tehsils.,A_whole_subdistricts_and_towns_only
+55,Badhra,"KCs Jhojhu Kalan, Chirya, Badhra & Kadma of Dadri Tehsil.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+56,Dadri,"KCs Dadri, Sanwar, Atela Kalan & Dadri (Municipal Committee) of Dadri Tehsil.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+57,Bhiwani,"KCs Bhiwani Jonpal & Bhiwani Urban, PCs Bamla, Phulpura, Sanga, Kayla, Dharedu, Nangal & Manheru of Bamla KC of Bhiwani Tehsil.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+58,Tosham,KCs Bhiwani Lohar & Jui Kalan of Bhiwani Tehsil & Tosham Tehsil.,B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+59,Bawani Khera (SC),"PCs Kharak Khurd-I & II, Kelanga-I & II of Bamla KC, KCs Chang & Mundhal Khurd of Bhiwani Tehsil & Bawani Khera Tehsil.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+60,Meham,"Meham Tehsil; PCs Singhpura, Samargopalpur-I & II, Gharothi, Dobh, Bahu Akbarpur-I & II of Rohtak-II KC of Rohtak Tehsil.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+61,Garhi Sampla- Kiloi,"KCs Para & Bhalot, PCs Chuliana, Ismaila 9 Biswa, Ismaila 11 Biswa, Gandhra, Pakasma, Samchana, Hassangarh, Bahinsru khurd, Kheri Sampla & Sampla of Sampla KC, PCs Chiri-I & II & Titoli of Rohtak-II KC of Rohtak Tehsil.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+62,Rohtak,Ward Nos. 7 to 31 & Sector-1 Housing Board Colony (OG) - Ward No. 32 in Rohtak (Municipal Council) of Rohtak Tehsil.,C_ward_or_EB_level
+63,Kalanaur (SC),"KCs Kahnaur, Kalanaur, Rohtak-I, Kalanaur (Municipal Committee), PCs Baliana, Kheri Sadh, Kharawar of Sampla KC & Ward Nos. 1 to 6 in Rohtak (Municipal Council of Rohtak Tehsil).",C_ward_or_EB_level
+64,Bahadurgarh,"KC Bahadurgarh-I, PCs Asauda Siwan, Bahamnoli, Kanoda, Kulasi, Kheri Jasaur, Jasaur Kheri & Asauda Todran of Bahadurgarh-II KC & Bahadurgarh (Municipal Council) of Bahadurgarh Tehsil.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+65,Badli,"KCs Kasani, Machhrauli & Jhajjar-II of Jhajjar Tehsil & KC Badli of Bahadurgarh Tehsil.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+66,Jhajjar (SC),"KCs Jhajjar-I (Except Mehrana PC), Salhawas, Matanhail & Jhajjar (Municpal Committee) of Jhajjar Tehsil.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+67,Beri,"Beri Tehsil; KC Dulhera, PCs Rohad-I & II of Bahadurgarh-II KC of Bahadurgarh Tehsil & PC Mehrana of Jhajjar-I KC of Jhajjar Tehsil.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+68,Ateli,KCs Dhanunda & Kanina of Mahendragarh Tehsil & KC Ateli of Narnaul Tehsil.,B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+69,Mahendragarh,"KCs Mahendragarh, Pali, Satnali & Mahendragarh (Municipal Committee) of Mahendragarh Tehsil. KCs Narnaul, Hudina & Narnaul (Municipal Council) of Narnaul",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+70,Narnaul,Tehsil.,A_whole_subdistricts_and_towns_only
+71,Nangal Chaudhry,KCs Nizampur & Nangal Chaudhry of Narnaul Tehsil.,B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+72,Bawal (SC),"PCs Bharawas, Husainpur, Karnawas, Kamalpur, Bolni & Dhamlawas of Rewari KC, KC Khori, PCs Nandrampur Bas, Bhatsana, Jarthal & Raliawas of Dharuhera KC of Rewari Tehsil & Bawal Tehsil.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+73,Kosli,"Kosli Tehsil; KCs Jatusana & Dahina, PCs Chandanwas, Roharai, Karawara Manakpur & Mustafapur of Chillar KC of Rewari Tehsil.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+74,Rewari,"PCs Rewari, Sangwari, Qutabpur Mola, Padniawas & Hansaka of Rewari KC, Rewari (Municipal Council), PCs Chillar, Kakodia, Dhoki, Bikaner, Kishangarh, Meerpur & Gokalgarh of Chillar KC, PCs Masani, Dharuhera, Malpura, Garhi Alawalpur & Khatawali of Dharuhera KC of Rewari Tehsil.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+75,Pataudi (SC),"Pataudi Tehsil; KCs Manesar, PCs Jatola, Khandewla, Tajnagar, Khurampur, Mushedpur, Siwari & Mahchana of Farukh Nagar KC of Gurgaon Tehsil.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+76,Badshahpur,"PCs Dhankot, Wazirpur, Sarhol, Bajghera, Daultabad, Budhera & Garhi Harsaru of Gurgaon KC, KC Badshahpur, PCs Patli Hajipur, Khetawas, Sultanpur, Mubarikpur & Farukhnagar of Farukhnagar KC of Gurgaon Tehsil & PC Shikohpur of Sohna KC of Sohna Tehsil.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+77,Gurgaon,"PCs Gurgaon, Wazirabad & Sukhrali of Gurgaon KC & Gurgaon (Municipal Council) of Gurgaon Tehsil.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+78,Sohna,"PCs Sohna, Silani, Bhondsi, Garhi Bazidpur, Daula, Ghamdoj, Saramathla, Raisina, Harchandpur, Ghangola & Ulhawas of Sohna KC, Sohna (Municipal Committee) of Sohna Tehsil & Taoru Tehsil.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+79,Nuh,Nuh Tehsil.,A_whole_subdistricts_and_towns_only
+80,Ferozepur Jhirka,Ferozepur Jhirka Tehsil.,A_whole_subdistricts_and_towns_only
+81,Punahana,Punahana Tehsil.,A_whole_subdistricts_and_towns_only
+82,Hathin,"PCs Teharki, Jaindapur, Maheshpur, Aharwan, Khera Sarai & Ratipur of Palwal-I KC of Palwal Tehsil & Hathin Tehsil.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+83,Hodal (SC),Hodal Tehsil.,A_whole_subdistricts_and_towns_only
+84,Palwal,"KC Chandhat, PCs Dhatir, Allika, Ghughera & Palwal of Palwal-I KC, PCs Rundhi, Asaota & Rasulpur of Palwal-II KC & Palwal (Municipal Council) of Palwal Tehsil.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+85,Prithla,"KC Ballabgarh, PCs Chhainsa, Mohna, Jawan, Atali, Dayalpur, Panehra Khurd & Shahjahanpur of Chhainsa KC of Ballabgarh Tehsil; PCs Alawalpur, Katesra, Chhaprola, Prithla, Dudola, Asaoti, Mandkol, Baghola & Janauli of Palwal-II KC of Palwal Tehsil.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+86,Faridabad NIT,"PCs Paota, Pali, Dhoj & Sirohi of Faridabad KC, Ward Nos. 1, 2, 5, 6 & 7 in Faridabad (Municipal Corporation) of Faridabad Tehsil.",C_ward_or_EB_level
+87,Badkhal,Ward Nos. 8 & 10 to 14 in Faridabad (Municipal Corporation) of Faridabad Tehsil.,C_ward_or_EB_level
+88,Ballabgarh,"Ward Nos. 3, 4 & 22 to 25 in Faridabad (Municipal Corporation) of Faridabad Tehsil.",C_ward_or_EB_level
+89,Faridabad,Ward Nos. 9 & 17 to 21 in Faridabad (Municipal Corporation) of Faridabad Tehsil.,C_ward_or_EB_level
+90,Tigaon,"PCs Tigaon, Faridabad, Tilpat, Dadsia, Bhuapur, Rajpur Kalan, Kheri Kalan, Bhupani & Chirsi of Faridabad KC, Ward Nos. 15 & 16 in Faridabad (Municipal Corporation) of Faridabad Tehsil; PCs Korali, Manjhawali & Mandhawali of Chhainsa KC of Ballabgarh Tehsil.",C_ward_or_EB_level

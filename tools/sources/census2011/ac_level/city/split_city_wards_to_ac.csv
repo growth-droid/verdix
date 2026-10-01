@@ -1,0 +1,801 @@
+census_state,census_district,census_subdistt,census_town,census_ward,app_state,eci_ac_no,weight,basis
+27,518,99999,802794,1043,Maharashtra,176,1.0,Greater Mumbai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2009 electors
+27,518,99999,802794,1045,Maharashtra,176,1.0,Greater Mumbai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2009 electors
+27,518,99999,802794,1048,Maharashtra,167,0.115942,Greater Mumbai: ECI Delimitation Order 2008: ward 1048 (Part) split across ACs; weight = 2001 enumeration-block share 56/483; validated vs AE2009 electors
+27,518,99999,802794,1048,Maharashtra,175,0.726708,Greater Mumbai: ECI Delimitation Order 2008: ward 1048 (Part) split across ACs; weight = 2001 enumeration-block share 351/483; validated vs AE2009 electors
+27,518,99999,802794,1048,Maharashtra,176,0.15735,Greater Mumbai: ECI Delimitation Order 2008: ward 1048 (Part) split across ACs; weight = 2001 enumeration-block share 76/483; validated vs AE2009 electors
+27,518,99999,802794,1139,Maharashtra,177,1.0,Greater Mumbai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2009 electors
+27,518,99999,802794,1140,Maharashtra,177,1.0,Greater Mumbai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2009 electors
+27,518,99999,802794,1141,Maharashtra,177,1.0,Greater Mumbai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2009 electors
+27,518,99999,802794,1142,Maharashtra,177,1.0,Greater Mumbai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2009 electors
+27,518,99999,802794,1143,Maharashtra,177,1.0,Greater Mumbai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2009 electors
+27,518,99999,802794,1144,Maharashtra,177,1.0,Greater Mumbai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2009 electors
+27,518,99999,802794,1145,Maharashtra,177,1.0,Greater Mumbai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2009 electors
+27,518,99999,802794,1146,Maharashtra,177,1.0,Greater Mumbai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2009 electors
+27,518,99999,802794,1147,Maharashtra,177,1.0,Greater Mumbai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2009 electors
+27,518,99999,802794,1249,Maharashtra,167,1.0,Greater Mumbai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2009 electors
+27,518,99999,802794,1255,Maharashtra,166,0.839706,Greater Mumbai: ECI Delimitation Order 2008: ward 1255 (Part) split across ACs; weight = 2001 enumeration-block share 571/680; validated vs AE2009 electors
+27,518,99999,802794,1255,Maharashtra,167,0.160294,Greater Mumbai: ECI Delimitation Order 2008: ward 1255 (Part) split across ACs; weight = 2001 enumeration-block share 109/680; validated vs AE2009 electors
+27,518,99999,802794,1256,Maharashtra,158,1.0,Greater Mumbai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2009 electors
+27,518,99999,802794,1350,Maharashtra,167,1.0,Greater Mumbai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2009 electors
+27,518,99999,802794,1351,Maharashtra,165,1.0,Greater Mumbai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2009 electors
+27,518,99999,802794,1352,Maharashtra,164,0.372057,Greater Mumbai: ECI Delimitation Order 2008: ward 1352 (Part) split across ACs; weight = 2001 enumeration-block share 237/637; validated vs AE2009 electors
+27,518,99999,802794,1352,Maharashtra,165,0.627943,Greater Mumbai: ECI Delimitation Order 2008: ward 1352 (Part) split across ACs; weight = 2001 enumeration-block share 400/637; validated vs AE2009 electors
+27,518,99999,802794,1353,Maharashtra,164,0.620087,Greater Mumbai: ECI Delimitation Order 2008: ward 1353 (Part) split across ACs; weight = 2001 enumeration-block share 142/229; validated vs AE2009 electors
+27,518,99999,802794,1353,Maharashtra,165,0.379913,Greater Mumbai: ECI Delimitation Order 2008: ward 1353 (Part) split across ACs; weight = 2001 enumeration-block share 87/229; validated vs AE2009 electors
+27,518,99999,802794,1354,Maharashtra,162,1.0,Greater Mumbai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2009 electors
+27,518,99999,802794,1357,Maharashtra,164,1.0,Greater Mumbai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2009 electors
+27,518,99999,802794,1458,Maharashtra,163,1.0,Greater Mumbai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2009 electors
+27,518,99999,802794,1459,Maharashtra,158,1.0,Greater Mumbai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2009 electors
+27,518,99999,802794,1460,Maharashtra,163,1.0,Greater Mumbai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2009 electors
+27,518,99999,802794,1463,Maharashtra,163,1.0,Greater Mumbai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2009 electors
+27,518,99999,802794,1561,Maharashtra,162,1.0,Greater Mumbai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2009 electors
+27,518,99999,802794,1562,Maharashtra,162,1.0,Greater Mumbai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2009 electors
+27,518,99999,802794,1563,Maharashtra,160,1.0,Greater Mumbai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2009 electors
+27,518,99999,802794,1564,Maharashtra,159,1.0,Greater Mumbai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2009 electors
+27,518,99999,802794,1565,Maharashtra,161,0.102632,Greater Mumbai: ECI Delimitation Order 2008: ward 1565 (Part) split across ACs; weight = 2001 enumeration-block share 39/380; validated vs AE2009 electors
+27,518,99999,802794,1565,Maharashtra,162,0.897368,Greater Mumbai: ECI Delimitation Order 2008: ward 1565 (Part) split across ACs; weight = 2001 enumeration-block share 341/380; validated vs AE2009 electors
+27,518,99999,802794,1566,Maharashtra,152,1.0,Greater Mumbai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2009 electors
+27,518,99999,802794,1667,Maharashtra,161,1.0,Greater Mumbai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2009 electors
+27,518,99999,802794,1668,Maharashtra,154,0.325714,Greater Mumbai: ECI Delimitation Order 2008: ward 1668 (Part) split across ACs; weight = 2001 enumeration-block share 171/525; validated vs AE2009 electors
+27,518,99999,802794,1668,Maharashtra,160,0.674286,Greater Mumbai: ECI Delimitation Order 2008: ward 1668 (Part) split across ACs; weight = 2001 enumeration-block share 354/525; validated vs AE2009 electors
+27,518,99999,802794,1769,Maharashtra,152,1.0,Greater Mumbai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2009 electors
+27,518,99999,802794,1770,Maharashtra,153,1.0,Greater Mumbai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2009 electors
+27,518,99999,802794,1771,Maharashtra,152,1.0,Greater Mumbai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2009 electors
+27,518,99999,802794,1772,Maharashtra,152,0.642458,Greater Mumbai: ECI Delimitation Order 2008: ward 1772 (Part) split across ACs; weight = 2001 enumeration-block share 115/179; validated vs AE2009 electors
+27,518,99999,802794,1772,Maharashtra,153,0.357542,Greater Mumbai: ECI Delimitation Order 2008: ward 1772 (Part) split across ACs; weight = 2001 enumeration-block share 64/179; validated vs AE2009 electors
+27,518,99999,802794,1773,Maharashtra,154,1.0,Greater Mumbai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2009 electors
+27,518,99999,802794,1870,Maharashtra,153,1.0,Greater Mumbai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2009 electors
+27,518,99999,802794,1873,Maharashtra,154,1.0,Greater Mumbai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2009 electors
+27,518,99999,802794,1874,Maharashtra,153,1.0,Greater Mumbai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2009 electors
+27,518,99999,802794,1975,Maharashtra,174,0.466667,Greater Mumbai: ECI Delimitation Order 2008: ward 1975 (Part) split across ACs; weight = 2001 enumeration-block share 112/240; validated vs AE2009 electors
+27,518,99999,802794,1975,Maharashtra,175,0.533333,Greater Mumbai: ECI Delimitation Order 2008: ward 1975 (Part) split across ACs; weight = 2001 enumeration-block share 128/240; validated vs AE2009 electors
+27,518,99999,802794,1976,Maharashtra,174,1.0,Greater Mumbai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2009 electors
+27,518,99999,802794,1977,Maharashtra,173,0.064846,Greater Mumbai: ECI Delimitation Order 2008: ward 1977 (Part) split across ACs; weight = 2001 enumeration-block share 19/293; validated vs AE2009 electors
+27,518,99999,802794,1977,Maharashtra,174,0.935154,Greater Mumbai: ECI Delimitation Order 2008: ward 1977 (Part) split across ACs; weight = 2001 enumeration-block share 274/293; validated vs AE2009 electors
+27,518,99999,802794,1978,Maharashtra,168,0.740741,Greater Mumbai: ECI Delimitation Order 2008: ward 1978 (Part) split across ACs; weight = 2001 enumeration-block share 620/837; validated vs AE2009 electors
+27,518,99999,802794,1978,Maharashtra,169,0.094385,Greater Mumbai: ECI Delimitation Order 2008: ward 1978 (Part) split across ACs; weight = 2001 enumeration-block share 79/837; validated vs AE2009 electors
+27,518,99999,802794,1978,Maharashtra,175,0.164874,Greater Mumbai: ECI Delimitation Order 2008: ward 1978 (Part) split across ACs; weight = 2001 enumeration-block share 138/837; validated vs AE2009 electors
+27,518,99999,802794,2079,Maharashtra,171,1.0,Greater Mumbai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2009 electors
+27,518,99999,802794,2080,Maharashtra,171,0.487738,Greater Mumbai: ECI Delimitation Order 2008: ward 2080 (Part) split across ACs; weight = 2001 enumeration-block share 537/1101; validated vs AE2009 electors
+27,518,99999,802794,2080,Maharashtra,172,0.512262,Greater Mumbai: ECI Delimitation Order 2008: ward 2080 (Part) split across ACs; weight = 2001 enumeration-block share 564/1101; validated vs AE2009 electors
+27,518,99999,802794,2179,Maharashtra,173,0.703704,Greater Mumbai: ECI Delimitation Order 2008: ward 2179 (Part) split across ACs; weight = 2001 enumeration-block share 437/621; validated vs AE2009 electors
+27,518,99999,802794,2179,Maharashtra,174,0.296296,Greater Mumbai: ECI Delimitation Order 2008: ward 2179 (Part) split across ACs; weight = 2001 enumeration-block share 184/621; validated vs AE2009 electors
+27,518,99999,802794,2180,Maharashtra,173,1.0,Greater Mumbai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2009 electors
+27,518,99999,802794,2281,Maharashtra,170,1.0,Greater Mumbai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2009 electors
+27,518,99999,802794,2282,Maharashtra,170,1.0,Greater Mumbai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2009 electors
+27,518,99999,802794,2283,Maharashtra,169,1.0,Greater Mumbai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2009 electors
+27,518,99999,802794,2284,Maharashtra,169,0.530387,Greater Mumbai: ECI Delimitation Order 2008: ward 2284 (Part) split across ACs; weight = 2001 enumeration-block share 96/181; validated vs AE2009 electors
+27,518,99999,802794,2284,Maharashtra,170,0.469613,Greater Mumbai: ECI Delimitation Order 2008: ward 2284 (Part) split across ACs; weight = 2001 enumeration-block share 85/181; validated vs AE2009 electors
+27,518,99999,802794,2384,Maharashtra,156,0.878161,Greater Mumbai: ECI Delimitation Order 2008: ward 2384 (Part) split across ACs; weight = 2001 enumeration-block share 382/435; validated vs AE2009 electors
+27,518,99999,802794,2384,Maharashtra,157,0.011494,Greater Mumbai: ECI Delimitation Order 2008: ward 2384 (Part) split across ACs; weight = 2001 enumeration-block share 5/435; validated vs AE2009 electors
+27,518,99999,802794,2384,Maharashtra,168,0.110345,Greater Mumbai: ECI Delimitation Order 2008: ward 2384 (Part) split across ACs; weight = 2001 enumeration-block share 48/435; validated vs AE2009 electors
+27,518,99999,802794,2385,Maharashtra,156,0.327422,Greater Mumbai: ECI Delimitation Order 2008: ward 2385 (Part) split across ACs; weight = 2001 enumeration-block share 240/733; validated vs AE2009 electors
+27,518,99999,802794,2385,Maharashtra,157,0.592087,Greater Mumbai: ECI Delimitation Order 2008: ward 2385 (Part) split across ACs; weight = 2001 enumeration-block share 434/733; validated vs AE2009 electors
+27,518,99999,802794,2385,Maharashtra,166,0.080491,Greater Mumbai: ECI Delimitation Order 2008: ward 2385 (Part) split across ACs; weight = 2001 enumeration-block share 59/733; validated vs AE2009 electors
+27,518,99999,802794,2486,Maharashtra,155,1.0,Greater Mumbai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2009 electors
+27,518,99999,802794,2487,Maharashtra,155,1.0,Greater Mumbai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2009 electors
+27,518,99999,802794,2488,Maharashtra,155,1.0,Greater Mumbai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2009 electors
+27,519,99999,802794,0101,Maharashtra,187,1.0,Greater Mumbai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2009 electors
+27,519,99999,802794,0102,Maharashtra,187,1.0,Greater Mumbai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2009 electors
+27,519,99999,802794,0103,Maharashtra,187,1.0,Greater Mumbai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2009 electors
+27,519,99999,802794,0104,Maharashtra,187,1.0,Greater Mumbai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2009 electors
+27,519,99999,802794,0105,Maharashtra,187,1.0,Greater Mumbai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2009 electors
+27,519,99999,802794,0206,Maharashtra,187,1.0,Greater Mumbai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2009 electors
+27,519,99999,802794,0207,Maharashtra,187,1.0,Greater Mumbai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2009 electors
+27,519,99999,802794,0208,Maharashtra,186,1.0,Greater Mumbai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2009 electors
+27,519,99999,802794,0209,Maharashtra,186,1.0,Greater Mumbai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2009 electors
+27,519,99999,802794,0310,Maharashtra,186,1.0,Greater Mumbai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2009 electors
+27,519,99999,802794,0311,Maharashtra,186,1.0,Greater Mumbai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2009 electors
+27,519,99999,802794,0312,Maharashtra,186,1.0,Greater Mumbai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2009 electors
+27,519,99999,802794,0313,Maharashtra,187,1.0,Greater Mumbai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2009 electors
+27,519,99999,802794,0314,Maharashtra,187,1.0,Greater Mumbai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2009 electors
+27,519,99999,802794,0315,Maharashtra,187,1.0,Greater Mumbai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2009 electors
+27,519,99999,802794,0416,Maharashtra,185,1.0,Greater Mumbai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2009 electors
+27,519,99999,802794,0417,Maharashtra,186,1.0,Greater Mumbai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2009 electors
+27,519,99999,802794,0418,Maharashtra,185,1.0,Greater Mumbai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2009 electors
+27,519,99999,802794,0419,Maharashtra,185,1.0,Greater Mumbai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2009 electors
+27,519,99999,802794,0420,Maharashtra,185,1.0,Greater Mumbai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2009 electors
+27,519,99999,802794,0421,Maharashtra,185,1.0,Greater Mumbai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2009 electors
+27,519,99999,802794,0522,Maharashtra,184,1.0,Greater Mumbai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2009 electors
+27,519,99999,802794,0523,Maharashtra,184,1.0,Greater Mumbai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2009 electors
+27,519,99999,802794,0524,Maharashtra,184,1.0,Greater Mumbai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2009 electors
+27,519,99999,802794,0525,Maharashtra,186,1.0,Greater Mumbai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2009 electors
+27,519,99999,802794,0526,Maharashtra,186,1.0,Greater Mumbai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2009 electors
+27,519,99999,802794,0527,Maharashtra,184,1.0,Greater Mumbai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2009 electors
+27,519,99999,802794,0628,Maharashtra,183,1.0,Greater Mumbai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2009 electors
+27,519,99999,802794,0629,Maharashtra,180,0.069401,Greater Mumbai: ECI Delimitation Order 2008: ward 629 (Part) split across ACs; weight = 2001 enumeration-block share 22/317; validated vs AE2009 electors
+27,519,99999,802794,0629,Maharashtra,183,0.930599,Greater Mumbai: ECI Delimitation Order 2008: ward 629 (Part) split across ACs; weight = 2001 enumeration-block share 295/317; validated vs AE2009 electors
+27,519,99999,802794,0630,Maharashtra,180,1.0,Greater Mumbai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2009 electors
+27,519,99999,802794,0731,Maharashtra,180,1.0,Greater Mumbai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2009 electors
+27,519,99999,802794,0732,Maharashtra,179,0.71066,Greater Mumbai: ECI Delimitation Order 2008: ward 732 (Part) split across ACs; weight = 2001 enumeration-block share 560/788; validated vs AE2009 electors
+27,519,99999,802794,0732,Maharashtra,180,0.28934,Greater Mumbai: ECI Delimitation Order 2008: ward 732 (Part) split across ACs; weight = 2001 enumeration-block share 228/788; validated vs AE2009 electors
+27,519,99999,802794,0835,Maharashtra,181,0.632812,Greater Mumbai: ECI Delimitation Order 2008: ward 835 (Part) split across ACs; weight = 2001 enumeration-block share 81/128; validated vs AE2009 electors
+27,519,99999,802794,0835,Maharashtra,183,0.367188,Greater Mumbai: ECI Delimitation Order 2008: ward 835 (Part) split across ACs; weight = 2001 enumeration-block share 47/128; validated vs AE2009 electors
+27,519,99999,802794,0836,Maharashtra,181,0.117241,Greater Mumbai: ECI Delimitation Order 2008: ward 836 (Part) split across ACs; weight = 2001 enumeration-block share 34/290; validated vs AE2009 electors
+27,519,99999,802794,0836,Maharashtra,182,0.882759,Greater Mumbai: ECI Delimitation Order 2008: ward 836 (Part) split across ACs; weight = 2001 enumeration-block share 256/290; validated vs AE2009 electors
+27,519,99999,802794,0837,Maharashtra,182,0.860825,Greater Mumbai: ECI Delimitation Order 2008: ward 837 (Part) split across ACs; weight = 2001 enumeration-block share 167/194; validated vs AE2009 electors
+27,519,99999,802794,0837,Maharashtra,183,0.139175,Greater Mumbai: ECI Delimitation Order 2008: ward 837 (Part) split across ACs; weight = 2001 enumeration-block share 27/194; validated vs AE2009 electors
+27,519,99999,802794,0838,Maharashtra,182,1.0,Greater Mumbai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2009 electors
+27,519,99999,802794,0933,Maharashtra,178,0.719346,Greater Mumbai: ECI Delimitation Order 2008: ward 933 (Part) split across ACs; weight = 2001 enumeration-block share 528/734; validated vs AE2009 electors
+27,519,99999,802794,0933,Maharashtra,181,0.280654,Greater Mumbai: ECI Delimitation Order 2008: ward 933 (Part) split across ACs; weight = 2001 enumeration-block share 206/734; validated vs AE2009 electors
+27,519,99999,802794,0934,Maharashtra,181,1.0,Greater Mumbai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2009 electors
+27,519,99999,802794,0935,Maharashtra,180,0.239264,Greater Mumbai: ECI Delimitation Order 2008: ward 935 (Part) split across ACs; weight = 2001 enumeration-block share 39/163; validated vs AE2009 electors
+27,519,99999,802794,0935,Maharashtra,181,0.760736,Greater Mumbai: ECI Delimitation Order 2008: ward 935 (Part) split across ACs; weight = 2001 enumeration-block share 124/163; validated vs AE2009 electors
+33,603,99999,803339,0001,Tamil Nadu,12,1.0,Chennai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,603,99999,803339,0002,Tamil Nadu,12,1.0,Chennai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,603,99999,803339,0003,Tamil Nadu,11,1.0,Chennai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,603,99999,803339,0004,Tamil Nadu,11,1.0,Chennai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,603,99999,803339,0005,Tamil Nadu,11,1.0,Chennai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,603,99999,803339,0006,Tamil Nadu,11,1.0,Chennai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,603,99999,803339,0007,Tamil Nadu,11,1.0,Chennai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,603,99999,803339,0008,Tamil Nadu,11,1.0,Chennai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,603,99999,803339,0009,Tamil Nadu,17,1.0,Chennai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,603,99999,803339,0010,Tamil Nadu,11,1.0,Chennai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,603,99999,803339,0011,Tamil Nadu,11,1.0,Chennai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,603,99999,803339,0012,Tamil Nadu,17,1.0,Chennai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,603,99999,803339,0013,Tamil Nadu,17,1.0,Chennai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,603,99999,803339,0014,Tamil Nadu,11,1.0,Chennai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,603,99999,803339,0015,Tamil Nadu,17,1.0,Chennai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,603,99999,803339,0016,Tamil Nadu,17,1.0,Chennai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,603,99999,803339,0017,Tamil Nadu,17,1.0,Chennai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,603,99999,803339,0018,Tamil Nadu,17,1.0,Chennai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,603,99999,803339,0019,Tamil Nadu,17,1.0,Chennai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,603,99999,803339,0020,Tamil Nadu,17,1.0,Chennai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,603,99999,803339,0021,Tamil Nadu,17,1.0,Chennai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,603,99999,803339,0022,Tamil Nadu,17,1.0,Chennai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,603,99999,803339,0023,Tamil Nadu,18,1.0,Chennai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,603,99999,803339,0024,Tamil Nadu,18,1.0,Chennai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,603,99999,803339,0025,Tamil Nadu,18,1.0,Chennai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,603,99999,803339,0026,Tamil Nadu,18,1.0,Chennai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,603,99999,803339,0027,Tamil Nadu,18,1.0,Chennai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,603,99999,803339,0028,Tamil Nadu,18,1.0,Chennai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,603,99999,803339,0029,Tamil Nadu,18,1.0,Chennai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,603,99999,803339,0030,Tamil Nadu,18,1.0,Chennai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,603,99999,803339,0031,Tamil Nadu,17,1.0,Chennai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,603,99999,803339,0032,Tamil Nadu,12,1.0,Chennai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,603,99999,803339,0033,Tamil Nadu,12,1.0,Chennai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,603,99999,803339,0034,Tamil Nadu,12,1.0,Chennai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,603,99999,803339,0035,Tamil Nadu,12,1.0,Chennai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,603,99999,803339,0036,Tamil Nadu,12,1.0,Chennai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,603,99999,803339,0037,Tamil Nadu,15,1.0,Chennai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,603,99999,803339,0038,Tamil Nadu,15,1.0,Chennai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,603,99999,803339,0039,Tamil Nadu,15,1.0,Chennai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,603,99999,803339,0040,Tamil Nadu,15,1.0,Chennai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,603,99999,803339,0041,Tamil Nadu,15,1.0,Chennai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,603,99999,803339,0042,Tamil Nadu,16,1.0,Chennai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,603,99999,803339,0043,Tamil Nadu,18,1.0,Chennai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,603,99999,803339,0044,Tamil Nadu,18,1.0,Chennai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,603,99999,803339,0045,Tamil Nadu,16,1.0,Chennai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,603,99999,803339,0046,Tamil Nadu,16,1.0,Chennai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,603,99999,803339,0047,Tamil Nadu,16,1.0,Chennai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,603,99999,803339,0048,Tamil Nadu,18,1.0,Chennai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,603,99999,803339,0049,Tamil Nadu,18,1.0,Chennai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,603,99999,803339,0050,Tamil Nadu,13,1.0,Chennai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,603,99999,803339,0051,Tamil Nadu,13,1.0,Chennai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,603,99999,803339,0052,Tamil Nadu,13,1.0,Chennai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,603,99999,803339,0053,Tamil Nadu,13,1.0,Chennai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,603,99999,803339,0054,Tamil Nadu,13,1.0,Chennai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,603,99999,803339,0055,Tamil Nadu,14,1.0,Chennai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,603,99999,803339,0056,Tamil Nadu,14,1.0,Chennai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,603,99999,803339,0057,Tamil Nadu,14,1.0,Chennai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,603,99999,803339,0058,Tamil Nadu,14,1.0,Chennai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,603,99999,803339,0059,Tamil Nadu,15,1.0,Chennai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,603,99999,803339,0060,Tamil Nadu,15,1.0,Chennai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,603,99999,803339,0061,Tamil Nadu,16,1.0,Chennai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,603,99999,803339,0062,Tamil Nadu,13,1.0,Chennai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,603,99999,803339,0063,Tamil Nadu,14,1.0,Chennai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,603,99999,803339,0064,Tamil Nadu,14,1.0,Chennai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,603,99999,803339,0065,Tamil Nadu,22,1.0,Chennai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,603,99999,803339,0066,Tamil Nadu,21,1.0,Chennai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,603,99999,803339,0067,Tamil Nadu,21,1.0,Chennai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,603,99999,803339,0068,Tamil Nadu,21,1.0,Chennai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,603,99999,803339,0069,Tamil Nadu,21,1.0,Chennai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,603,99999,803339,0070,Tamil Nadu,21,1.0,Chennai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,603,99999,803339,0071,Tamil Nadu,16,1.0,Chennai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,603,99999,803339,0072,Tamil Nadu,16,1.0,Chennai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,603,99999,803339,0073,Tamil Nadu,21,1.0,Chennai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,603,99999,803339,0074,Tamil Nadu,21,1.0,Chennai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,603,99999,803339,0075,Tamil Nadu,21,1.0,Chennai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,603,99999,803339,0076,Tamil Nadu,20,1.0,Chennai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,603,99999,803339,0077,Tamil Nadu,20,1.0,Chennai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,603,99999,803339,0078,Tamil Nadu,20,1.0,Chennai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,603,99999,803339,0079,Tamil Nadu,19,1.0,Chennai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,603,99999,803339,0080,Tamil Nadu,18,1.0,Chennai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,603,99999,803339,0081,Tamil Nadu,19,1.0,Chennai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,603,99999,803339,0082,Tamil Nadu,19,1.0,Chennai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,603,99999,803339,0083,Tamil Nadu,19,1.0,Chennai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,603,99999,803339,0084,Tamil Nadu,19,1.0,Chennai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,603,99999,803339,0085,Tamil Nadu,19,1.0,Chennai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,603,99999,803339,0086,Tamil Nadu,19,1.0,Chennai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,603,99999,803339,0087,Tamil Nadu,19,1.0,Chennai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,603,99999,803339,0088,Tamil Nadu,19,1.0,Chennai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,603,99999,803339,0089,Tamil Nadu,19,1.0,Chennai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,603,99999,803339,0090,Tamil Nadu,19,1.0,Chennai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,603,99999,803339,0091,Tamil Nadu,19,1.0,Chennai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,603,99999,803339,0092,Tamil Nadu,19,1.0,Chennai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,603,99999,803339,0093,Tamil Nadu,19,1.0,Chennai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,603,99999,803339,0094,Tamil Nadu,25,1.0,Chennai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,603,99999,803339,0095,Tamil Nadu,19,1.0,Chennai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,603,99999,803339,0096,Tamil Nadu,25,1.0,Chennai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,603,99999,803339,0097,Tamil Nadu,15,1.0,Chennai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,603,99999,803339,0098,Tamil Nadu,15,1.0,Chennai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,603,99999,803339,0099,Tamil Nadu,15,1.0,Chennai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,603,99999,803339,0100,Tamil Nadu,16,1.0,Chennai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,603,99999,803339,0101,Tamil Nadu,16,1.0,Chennai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,603,99999,803339,0102,Tamil Nadu,16,1.0,Chennai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,603,99999,803339,0103,Tamil Nadu,16,1.0,Chennai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,603,99999,803339,0104,Tamil Nadu,16,1.0,Chennai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,603,99999,803339,0105,Tamil Nadu,16,1.0,Chennai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,603,99999,803339,0106,Tamil Nadu,16,1.0,Chennai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,603,99999,803339,0107,Tamil Nadu,20,1.0,Chennai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,603,99999,803339,0108,Tamil Nadu,20,1.0,Chennai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,603,99999,803339,0109,Tamil Nadu,20,1.0,Chennai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,603,99999,803339,0110,Tamil Nadu,20,1.0,Chennai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,603,99999,803339,0111,Tamil Nadu,19,1.0,Chennai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,603,99999,803339,0112,Tamil Nadu,20,1.0,Chennai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,603,99999,803339,0113,Tamil Nadu,20,1.0,Chennai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,603,99999,803339,0114,Tamil Nadu,20,1.0,Chennai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,603,99999,803339,0115,Tamil Nadu,25,1.0,Chennai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,603,99999,803339,0116,Tamil Nadu,25,1.0,Chennai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,603,99999,803339,0117,Tamil Nadu,24,1.0,Chennai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,603,99999,803339,0118,Tamil Nadu,20,1.0,Chennai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,603,99999,803339,0119,Tamil Nadu,20,1.0,Chennai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,603,99999,803339,0120,Tamil Nadu,24,1.0,Chennai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,603,99999,803339,0121,Tamil Nadu,24,1.0,Chennai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,603,99999,803339,0122,Tamil Nadu,24,1.0,Chennai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,603,99999,803339,0123,Tamil Nadu,24,1.0,Chennai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,603,99999,803339,0124,Tamil Nadu,24,1.0,Chennai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,603,99999,803339,0125,Tamil Nadu,24,1.0,Chennai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,603,99999,803339,0126,Tamil Nadu,24,1.0,Chennai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,603,99999,803339,0127,Tamil Nadu,24,1.0,Chennai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,603,99999,803339,0128,Tamil Nadu,22,1.0,Chennai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,603,99999,803339,0129,Tamil Nadu,22,1.0,Chennai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,603,99999,803339,0130,Tamil Nadu,22,1.0,Chennai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,603,99999,803339,0131,Tamil Nadu,22,1.0,Chennai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,603,99999,803339,0132,Tamil Nadu,23,1.0,Chennai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,603,99999,803339,0133,Tamil Nadu,23,1.0,Chennai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,603,99999,803339,0134,Tamil Nadu,23,1.0,Chennai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,603,99999,803339,0135,Tamil Nadu,23,1.0,Chennai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,603,99999,803339,0136,Tamil Nadu,23,1.0,Chennai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,603,99999,803339,0137,Tamil Nadu,24,1.0,Chennai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,603,99999,803339,0138,Tamil Nadu,23,1.0,Chennai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,603,99999,803339,0139,Tamil Nadu,23,1.0,Chennai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,603,99999,803339,0140,Tamil Nadu,23,1.0,Chennai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,603,99999,803339,0141,Tamil Nadu,23,1.0,Chennai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,603,99999,803339,0142,Tamil Nadu,25,1.0,Chennai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,603,99999,803339,0143,Tamil Nadu,25,1.0,Chennai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,603,99999,803339,0144,Tamil Nadu,25,1.0,Chennai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,603,99999,803339,0145,Tamil Nadu,25,1.0,Chennai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,603,99999,803339,0146,Tamil Nadu,25,1.0,Chennai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,603,99999,803339,0147,Tamil Nadu,25,1.0,Chennai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,603,99999,803339,0148,Tamil Nadu,25,1.0,Chennai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,603,99999,803339,0149,Tamil Nadu,25,1.0,Chennai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,603,99999,803339,0150,Tamil Nadu,25,1.0,Chennai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,603,99999,803339,0151,Tamil Nadu,26,1.0,Chennai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,603,99999,803339,0152,Tamil Nadu,26,1.0,Chennai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,603,99999,803339,0153,Tamil Nadu,26,1.0,Chennai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,603,99999,803339,0154,Tamil Nadu,26,1.0,Chennai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,603,99999,803339,0155,Tamil Nadu,26,1.0,Chennai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+19,342,99999,801742,0001,West Bengal,168,1.0,Kolkata: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+19,342,99999,801742,0002,West Bengal,168,1.0,Kolkata: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+19,342,99999,801742,0003,West Bengal,168,1.0,Kolkata: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+19,342,99999,801742,0004,West Bengal,168,1.0,Kolkata: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+19,342,99999,801742,0005,West Bengal,168,1.0,Kolkata: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+19,342,99999,801742,0006,West Bengal,168,1.0,Kolkata: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+19,342,99999,801742,0007,West Bengal,166,1.0,Kolkata: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+19,342,99999,801742,0008,West Bengal,166,1.0,Kolkata: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+19,342,99999,801742,0009,West Bengal,166,1.0,Kolkata: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+19,342,99999,801742,0010,West Bengal,166,1.0,Kolkata: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+19,342,99999,801742,0011,West Bengal,167,1.0,Kolkata: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+19,342,99999,801742,0012,West Bengal,167,1.0,Kolkata: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+19,342,99999,801742,0013,West Bengal,167,1.0,Kolkata: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+19,342,99999,801742,0014,West Bengal,167,1.0,Kolkata: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+19,342,99999,801742,0015,West Bengal,167,1.0,Kolkata: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+19,342,99999,801742,0016,West Bengal,167,1.0,Kolkata: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+19,342,99999,801742,0017,West Bengal,166,1.0,Kolkata: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+19,342,99999,801742,0018,West Bengal,166,1.0,Kolkata: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+19,342,99999,801742,0019,West Bengal,166,1.0,Kolkata: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+19,342,99999,801742,0020,West Bengal,166,1.0,Kolkata: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+19,342,99999,801742,0021,West Bengal,166,1.0,Kolkata: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+19,342,99999,801742,0022,West Bengal,165,1.0,Kolkata: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+19,342,99999,801742,0023,West Bengal,165,1.0,Kolkata: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+19,342,99999,801742,0024,West Bengal,166,1.0,Kolkata: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+19,342,99999,801742,0025,West Bengal,165,1.0,Kolkata: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+19,342,99999,801742,0026,West Bengal,166,1.0,Kolkata: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+19,342,99999,801742,0027,West Bengal,165,1.0,Kolkata: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+19,342,99999,801742,0028,West Bengal,164,1.0,Kolkata: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+19,342,99999,801742,0029,West Bengal,164,1.0,Kolkata: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+19,342,99999,801742,0030,West Bengal,164,1.0,Kolkata: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+19,342,99999,801742,0031,West Bengal,167,1.0,Kolkata: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+19,342,99999,801742,0032,West Bengal,167,1.0,Kolkata: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+19,342,99999,801742,0033,West Bengal,164,1.0,Kolkata: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+19,342,99999,801742,0034,West Bengal,164,1.0,Kolkata: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+19,342,99999,801742,0035,West Bengal,164,1.0,Kolkata: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+19,342,99999,801742,0036,West Bengal,164,1.0,Kolkata: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+19,342,99999,801742,0037,West Bengal,165,1.0,Kolkata: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+19,342,99999,801742,0038,West Bengal,165,1.0,Kolkata: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+19,342,99999,801742,0039,West Bengal,165,1.0,Kolkata: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+19,342,99999,801742,0040,West Bengal,165,1.0,Kolkata: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+19,342,99999,801742,0041,West Bengal,165,1.0,Kolkata: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+19,342,99999,801742,0042,West Bengal,165,1.0,Kolkata: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+19,342,99999,801742,0043,West Bengal,165,1.0,Kolkata: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+19,342,99999,801742,0044,West Bengal,162,1.0,Kolkata: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+19,342,99999,801742,0045,West Bengal,162,1.0,Kolkata: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+19,342,99999,801742,0046,West Bengal,162,1.0,Kolkata: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+19,342,99999,801742,0047,West Bengal,162,1.0,Kolkata: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+19,342,99999,801742,0048,West Bengal,162,1.0,Kolkata: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+19,342,99999,801742,0049,West Bengal,162,1.0,Kolkata: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+19,342,99999,801742,0050,West Bengal,162,1.0,Kolkata: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+19,342,99999,801742,0051,West Bengal,162,1.0,Kolkata: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+19,342,99999,801742,0052,West Bengal,162,1.0,Kolkata: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+19,342,99999,801742,0053,West Bengal,162,1.0,Kolkata: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+19,342,99999,801742,0054,West Bengal,163,1.0,Kolkata: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+19,342,99999,801742,0055,West Bengal,163,1.0,Kolkata: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+19,342,99999,801742,0056,West Bengal,163,1.0,Kolkata: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+19,342,99999,801742,0057,West Bengal,164,1.0,Kolkata: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+19,342,99999,801742,0058,West Bengal,163,1.0,Kolkata: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+19,342,99999,801742,0059,West Bengal,163,1.0,Kolkata: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+19,342,99999,801742,0060,West Bengal,161,1.0,Kolkata: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+19,342,99999,801742,0061,West Bengal,161,1.0,Kolkata: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+19,342,99999,801742,0062,West Bengal,162,1.0,Kolkata: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+19,342,99999,801742,0063,West Bengal,159,1.0,Kolkata: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+19,342,99999,801742,0064,West Bengal,161,1.0,Kolkata: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+19,342,99999,801742,0065,West Bengal,161,1.0,Kolkata: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+19,342,99999,801742,0066,West Bengal,149,1.0,Kolkata: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+19,342,99999,801742,0067,West Bengal,149,1.0,Kolkata: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+19,342,99999,801742,0068,West Bengal,161,1.0,Kolkata: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+19,342,99999,801742,0069,West Bengal,161,1.0,Kolkata: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+19,342,99999,801742,0070,West Bengal,159,1.0,Kolkata: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+19,342,99999,801742,0071,West Bengal,159,1.0,Kolkata: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+19,342,99999,801742,0072,West Bengal,159,1.0,Kolkata: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+19,342,99999,801742,0073,West Bengal,159,1.0,Kolkata: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+19,342,99999,801742,0074,West Bengal,159,1.0,Kolkata: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+19,342,99999,801742,0075,West Bengal,158,1.0,Kolkata: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+19,342,99999,801742,0076,West Bengal,158,1.0,Kolkata: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+19,342,99999,801742,0077,West Bengal,159,1.0,Kolkata: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+19,342,99999,801742,0078,West Bengal,158,1.0,Kolkata: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+19,342,99999,801742,0079,West Bengal,158,1.0,Kolkata: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+19,342,99999,801742,0080,West Bengal,158,1.0,Kolkata: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+19,342,99999,801742,0081,West Bengal,160,1.0,Kolkata: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+19,342,99999,801742,0082,West Bengal,159,1.0,Kolkata: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+19,342,99999,801742,0083,West Bengal,160,1.0,Kolkata: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+19,342,99999,801742,0084,West Bengal,160,1.0,Kolkata: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+19,342,99999,801742,0085,West Bengal,161,1.0,Kolkata: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+19,342,99999,801742,0086,West Bengal,160,1.0,Kolkata: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+19,342,99999,801742,0087,West Bengal,160,1.0,Kolkata: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+19,342,99999,801742,0088,West Bengal,160,1.0,Kolkata: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+19,342,99999,801742,0089,West Bengal,160,1.0,Kolkata: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+19,342,99999,801742,0090,West Bengal,160,1.0,Kolkata: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+19,342,99999,801742,0091,West Bengal,149,1.0,Kolkata: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+19,342,99999,801742,0092,West Bengal,149,1.0,Kolkata: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+19,342,99999,801742,0093,West Bengal,160,1.0,Kolkata: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+19,342,99999,801742,0094,West Bengal,152,1.0,Kolkata: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+19,342,99999,801742,0095,West Bengal,152,1.0,Kolkata: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+19,342,99999,801742,0096,West Bengal,150,1.0,Kolkata: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+19,342,99999,801742,0097,West Bengal,152,1.0,Kolkata: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+19,342,99999,801742,0098,West Bengal,152,1.0,Kolkata: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+19,342,99999,801742,0099,West Bengal,150,1.0,Kolkata: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+19,342,99999,801742,0100,West Bengal,152,1.0,Kolkata: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+19,342,99999,801742,0101,West Bengal,150,1.0,Kolkata: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+19,342,99999,801742,0102,West Bengal,150,1.0,Kolkata: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+19,342,99999,801742,0103,West Bengal,150,1.0,Kolkata: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+19,342,99999,801742,0104,West Bengal,150,1.0,Kolkata: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+19,342,99999,801742,0105,West Bengal,150,1.0,Kolkata: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+19,342,99999,801742,0106,West Bengal,150,1.0,Kolkata: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+19,342,99999,801742,0107,West Bengal,149,1.0,Kolkata: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+19,342,99999,801742,0108,West Bengal,149,1.0,Kolkata: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+19,342,99999,801742,0109,West Bengal,150,1.0,Kolkata: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+19,342,99999,801742,0110,West Bengal,150,1.0,Kolkata: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+19,342,99999,801742,0111,West Bengal,152,1.0,Kolkata: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+19,342,99999,801742,0112,West Bengal,152,1.0,Kolkata: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+19,342,99999,801742,0113,West Bengal,152,1.0,Kolkata: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+19,342,99999,801742,0114,West Bengal,152,1.0,Kolkata: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+19,342,99999,801742,0115,West Bengal,153,1.0,Kolkata: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+19,342,99999,801742,0116,West Bengal,153,1.0,Kolkata: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+19,342,99999,801742,0117,West Bengal,153,1.0,Kolkata: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+19,342,99999,801742,0118,West Bengal,154,1.0,Kolkata: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+19,342,99999,801742,0119,West Bengal,154,1.0,Kolkata: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+19,342,99999,801742,0120,West Bengal,153,1.0,Kolkata: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+19,342,99999,801742,0121,West Bengal,153,1.0,Kolkata: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+19,342,99999,801742,0122,West Bengal,153,1.0,Kolkata: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+19,342,99999,801742,0123,West Bengal,153,1.0,Kolkata: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+19,342,99999,801742,0124,West Bengal,153,1.0,Kolkata: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+19,342,99999,801742,0125,West Bengal,154,1.0,Kolkata: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+19,342,99999,801742,0126,West Bengal,154,1.0,Kolkata: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+19,342,99999,801742,0127,West Bengal,154,1.0,Kolkata: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+19,342,99999,801742,0128,West Bengal,154,1.0,Kolkata: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+19,342,99999,801742,0129,West Bengal,154,1.0,Kolkata: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+19,342,99999,801742,0130,West Bengal,154,1.0,Kolkata: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+19,342,99999,801742,0131,West Bengal,154,1.0,Kolkata: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+19,342,99999,801742,0132,West Bengal,154,1.0,Kolkata: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+19,342,99999,801742,0133,West Bengal,158,1.0,Kolkata: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+19,342,99999,801742,0134,West Bengal,158,1.0,Kolkata: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+19,342,99999,801742,0135,West Bengal,158,1.0,Kolkata: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+19,342,99999,801742,0136,West Bengal,157,1.0,Kolkata: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+19,342,99999,801742,0137,West Bengal,157,1.0,Kolkata: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+19,342,99999,801742,0138,West Bengal,157,1.0,Kolkata: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+19,342,99999,801742,0139,West Bengal,157,1.0,Kolkata: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+19,342,99999,801742,0140,West Bengal,157,1.0,Kolkata: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+19,342,99999,801742,0141,West Bengal,157,1.0,Kolkata: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+19,341,99999,801740,0001,West Bengal,170,1.0,Howrah: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+19,341,99999,801740,0002,West Bengal,170,1.0,Howrah: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+19,341,99999,801740,0003,West Bengal,170,1.0,Howrah: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+19,341,99999,801740,0004,West Bengal,170,1.0,Howrah: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+19,341,99999,801740,0005,West Bengal,170,1.0,Howrah: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+19,341,99999,801740,0006,West Bengal,170,1.0,Howrah: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+19,341,99999,801740,0007,West Bengal,170,1.0,Howrah: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+19,341,99999,801740,0008,West Bengal,172,1.0,Howrah: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+19,341,99999,801740,0009,West Bengal,172,1.0,Howrah: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+19,341,99999,801740,0010,West Bengal,170,1.0,Howrah: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+19,341,99999,801740,0011,West Bengal,170,1.0,Howrah: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+19,341,99999,801740,0012,West Bengal,170,1.0,Howrah: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+19,341,99999,801740,0013,West Bengal,170,1.0,Howrah: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+19,341,99999,801740,0014,West Bengal,170,1.0,Howrah: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+19,341,99999,801740,0015,West Bengal,170,1.0,Howrah: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+19,341,99999,801740,0016,West Bengal,170,1.0,Howrah: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+19,341,99999,801740,0017,West Bengal,171,1.0,Howrah: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+19,341,99999,801740,0018,West Bengal,171,1.0,Howrah: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+19,341,99999,801740,0019,West Bengal,171,1.0,Howrah: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+19,341,99999,801740,0020,West Bengal,171,1.0,Howrah: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+19,341,99999,801740,0021,West Bengal,172,1.0,Howrah: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+19,341,99999,801740,0022,West Bengal,172,1.0,Howrah: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+19,341,99999,801740,0023,West Bengal,172,1.0,Howrah: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+19,341,99999,801740,0024,West Bengal,171,1.0,Howrah: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+19,341,99999,801740,0025,West Bengal,171,1.0,Howrah: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+19,341,99999,801740,0026,West Bengal,171,1.0,Howrah: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+19,341,99999,801740,0027,West Bengal,171,1.0,Howrah: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+19,341,99999,801740,0028,West Bengal,171,1.0,Howrah: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+19,341,99999,801740,0029,West Bengal,171,1.0,Howrah: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+19,341,99999,801740,0030,West Bengal,171,1.0,Howrah: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+19,341,99999,801740,0031,West Bengal,171,1.0,Howrah: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+19,341,99999,801740,0032,West Bengal,171,1.0,Howrah: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+19,341,99999,801740,0033,West Bengal,171,1.0,Howrah: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+19,341,99999,801740,0034,West Bengal,171,1.0,Howrah: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+19,341,99999,801740,0035,West Bengal,173,1.0,Howrah: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+19,341,99999,801740,0036,West Bengal,171,1.0,Howrah: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+19,341,99999,801740,0037,West Bengal,171,1.0,Howrah: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+19,341,99999,801740,0038,West Bengal,173,1.0,Howrah: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+19,341,99999,801740,0039,West Bengal,173,1.0,Howrah: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+19,341,99999,801740,0040,West Bengal,173,1.0,Howrah: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+19,341,99999,801740,0041,West Bengal,173,1.0,Howrah: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+19,341,99999,801740,0042,West Bengal,171,1.0,Howrah: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+19,341,99999,801740,0043,West Bengal,172,1.0,Howrah: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+19,341,99999,801740,0044,West Bengal,173,1.0,Howrah: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+19,341,99999,801740,0045,West Bengal,173,1.0,Howrah: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+19,341,99999,801740,0046,West Bengal,173,1.0,Howrah: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+19,341,99999,801740,0047,West Bengal,172,1.0,Howrah: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+19,341,99999,801740,0048,West Bengal,172,1.0,Howrah: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+19,341,99999,801740,0049,West Bengal,172,1.0,Howrah: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+19,341,99999,801740,0050,West Bengal,172,1.0,Howrah: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+23,421,03399,802100,0001,Madhya Pradesh,15,1.0,Gwalior: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2013 electors
+23,421,03399,802100,0002,Madhya Pradesh,15,1.0,Gwalior: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2013 electors
+23,421,03399,802100,0003,Madhya Pradesh,15,1.0,Gwalior: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2013 electors
+23,421,03399,802100,0004,Madhya Pradesh,15,1.0,Gwalior: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2013 electors
+23,421,03399,802100,0005,Madhya Pradesh,15,1.0,Gwalior: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2013 electors
+23,421,03399,802100,0006,Madhya Pradesh,15,1.0,Gwalior: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2013 electors
+23,421,03399,802100,0007,Madhya Pradesh,15,1.0,Gwalior: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2013 electors
+23,421,03399,802100,0008,Madhya Pradesh,15,1.0,Gwalior: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2013 electors
+23,421,03399,802100,0009,Madhya Pradesh,15,1.0,Gwalior: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2013 electors
+23,421,03399,802100,0010,Madhya Pradesh,15,1.0,Gwalior: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2013 electors
+23,421,03399,802100,0011,Madhya Pradesh,15,1.0,Gwalior: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2013 electors
+23,421,03399,802100,0012,Madhya Pradesh,15,1.0,Gwalior: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2013 electors
+23,421,03399,802100,0013,Madhya Pradesh,15,1.0,Gwalior: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2013 electors
+23,421,03399,802100,0014,Madhya Pradesh,15,1.0,Gwalior: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2013 electors
+23,421,03399,802100,0015,Madhya Pradesh,15,1.0,Gwalior: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2013 electors
+23,421,03399,802100,0016,Madhya Pradesh,15,1.0,Gwalior: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2013 electors
+23,421,03399,802100,0017,Madhya Pradesh,15,1.0,Gwalior: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2013 electors
+23,421,03399,802100,0018,Madhya Pradesh,15,1.0,Gwalior: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2013 electors
+23,421,03399,802100,0019,Madhya Pradesh,16,1.0,Gwalior: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2013 electors
+23,421,03399,802100,0020,Madhya Pradesh,16,1.0,Gwalior: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2013 electors
+23,421,03399,802100,0021,Madhya Pradesh,16,1.0,Gwalior: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2013 electors
+23,421,03399,802100,0022,Madhya Pradesh,16,1.0,Gwalior: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2013 electors
+23,421,03399,802100,0023,Madhya Pradesh,16,1.0,Gwalior: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2013 electors
+23,421,03399,802100,0024,Madhya Pradesh,16,1.0,Gwalior: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2013 electors
+23,421,03399,802100,0025,Madhya Pradesh,16,1.0,Gwalior: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2013 electors
+23,421,03399,802100,0026,Madhya Pradesh,16,1.0,Gwalior: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2013 electors
+23,421,03399,802100,0027,Madhya Pradesh,16,1.0,Gwalior: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2013 electors
+23,421,03399,802100,0028,Madhya Pradesh,16,1.0,Gwalior: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2013 electors
+23,421,03399,802100,0029,Madhya Pradesh,16,1.0,Gwalior: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2013 electors
+23,421,03399,802100,0030,Madhya Pradesh,15,1.0,Gwalior: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2013 electors
+23,421,03399,802100,0031,Madhya Pradesh,15,1.0,Gwalior: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2013 electors
+23,421,03399,802100,0032,Madhya Pradesh,15,1.0,Gwalior: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2013 electors
+23,421,03399,802100,0033,Madhya Pradesh,15,1.0,Gwalior: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2013 electors
+23,421,03399,802100,0034,Madhya Pradesh,17,1.0,Gwalior: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2013 electors
+23,421,03399,802100,0035,Madhya Pradesh,17,1.0,Gwalior: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2013 electors
+23,421,03399,802100,0036,Madhya Pradesh,17,1.0,Gwalior: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2013 electors
+23,421,03399,802100,0037,Madhya Pradesh,16,1.0,Gwalior: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2013 electors
+23,421,03399,802100,0038,Madhya Pradesh,16,1.0,Gwalior: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2013 electors
+23,421,03399,802100,0039,Madhya Pradesh,16,1.0,Gwalior: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2013 electors
+23,421,03399,802100,0040,Madhya Pradesh,16,1.0,Gwalior: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2013 electors
+23,421,03399,802100,0041,Madhya Pradesh,16,1.0,Gwalior: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2013 electors
+23,421,03399,802100,0042,Madhya Pradesh,17,1.0,Gwalior: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2013 electors
+23,421,03399,802100,0043,Madhya Pradesh,17,1.0,Gwalior: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2013 electors
+23,421,03399,802100,0044,Madhya Pradesh,17,1.0,Gwalior: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2013 electors
+23,421,03399,802100,0045,Madhya Pradesh,17,1.0,Gwalior: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2013 electors
+23,421,03399,802100,0046,Madhya Pradesh,17,1.0,Gwalior: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2013 electors
+23,421,03399,802100,0047,Madhya Pradesh,17,1.0,Gwalior: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2013 electors
+23,421,03399,802100,0048,Madhya Pradesh,17,1.0,Gwalior: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2013 electors
+23,421,03399,802100,0049,Madhya Pradesh,17,1.0,Gwalior: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2013 electors
+23,421,03399,802100,0050,Madhya Pradesh,17,1.0,Gwalior: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2013 electors
+23,421,03399,802100,0051,Madhya Pradesh,17,1.0,Gwalior: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2013 electors
+23,421,03399,802100,0052,Madhya Pradesh,17,1.0,Gwalior: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2013 electors
+23,421,03399,802100,0053,Madhya Pradesh,17,1.0,Gwalior: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2013 electors
+23,421,03399,802100,0054,Madhya Pradesh,17,1.0,Gwalior: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2013 electors
+23,421,03399,802100,0055,Madhya Pradesh,17,1.0,Gwalior: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2013 electors
+23,421,03399,802100,0056,Madhya Pradesh,17,1.0,Gwalior: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2013 electors
+23,421,03399,802100,0057,Madhya Pradesh,17,1.0,Gwalior: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2013 electors
+23,421,03399,802100,0058,Madhya Pradesh,17,1.0,Gwalior: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2013 electors
+23,421,03399,802100,0059,Madhya Pradesh,17,1.0,Gwalior: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2013 electors
+23,421,03399,802100,0060,Madhya Pradesh,17,1.0,Gwalior: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2013 electors
+33,632,05898,803984,0001,Tamil Nadu,121,1.0,Coimbatore: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,632,05898,803984,0002,Tamil Nadu,121,1.0,Coimbatore: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,632,05898,803984,0003,Tamil Nadu,121,1.0,Coimbatore: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,632,05898,803984,0004,Tamil Nadu,121,1.0,Coimbatore: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,632,05898,803984,0005,Tamil Nadu,121,1.0,Coimbatore: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,632,05898,803984,0006,Tamil Nadu,121,1.0,Coimbatore: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,632,05898,803984,0007,Tamil Nadu,121,1.0,Coimbatore: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,632,05898,803984,0008,Tamil Nadu,121,1.0,Coimbatore: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,632,05898,803984,0009,Tamil Nadu,121,1.0,Coimbatore: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,632,05898,803984,0010,Tamil Nadu,121,1.0,Coimbatore: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,632,05898,803984,0011,Tamil Nadu,121,1.0,Coimbatore: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,632,05898,803984,0012,Tamil Nadu,121,1.0,Coimbatore: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,632,05898,803984,0013,Tamil Nadu,121,1.0,Coimbatore: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,632,05898,803984,0014,Tamil Nadu,121,1.0,Coimbatore: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,632,05898,803984,0015,Tamil Nadu,121,1.0,Coimbatore: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,632,05898,803984,0016,Tamil Nadu,121,1.0,Coimbatore: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,632,05898,803984,0017,Tamil Nadu,121,1.0,Coimbatore: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,632,05898,803984,0018,Tamil Nadu,121,1.0,Coimbatore: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,632,05898,803984,0019,Tamil Nadu,121,1.0,Coimbatore: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,632,05898,803984,0020,Tamil Nadu,121,1.0,Coimbatore: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,632,05898,803984,0021,Tamil Nadu,120,1.0,Coimbatore: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,632,05898,803984,0022,Tamil Nadu,120,1.0,Coimbatore: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,632,05898,803984,0023,Tamil Nadu,120,1.0,Coimbatore: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,632,05898,803984,0024,Tamil Nadu,120,1.0,Coimbatore: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,632,05898,803984,0025,Tamil Nadu,120,1.0,Coimbatore: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,632,05898,803984,0026,Tamil Nadu,120,1.0,Coimbatore: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,632,05898,803984,0027,Tamil Nadu,120,1.0,Coimbatore: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,632,05898,803984,0028,Tamil Nadu,120,1.0,Coimbatore: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,632,05898,803984,0029,Tamil Nadu,120,1.0,Coimbatore: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,632,05898,803984,0030,Tamil Nadu,120,1.0,Coimbatore: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,632,05898,803984,0031,Tamil Nadu,120,1.0,Coimbatore: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,632,05898,803984,0032,Tamil Nadu,120,1.0,Coimbatore: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,632,05898,803984,0033,Tamil Nadu,120,1.0,Coimbatore: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,632,05898,803984,0034,Tamil Nadu,120,1.0,Coimbatore: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,632,05898,803984,0035,Tamil Nadu,120,1.0,Coimbatore: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,632,05898,803984,0036,Tamil Nadu,120,1.0,Coimbatore: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,632,05898,803984,0037,Tamil Nadu,120,1.0,Coimbatore: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,632,05898,803984,0038,Tamil Nadu,120,1.0,Coimbatore: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,632,05898,803984,0039,Tamil Nadu,120,1.0,Coimbatore: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,632,05898,803984,0040,Tamil Nadu,120,1.0,Coimbatore: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,632,05898,803984,0041,Tamil Nadu,120,1.0,Coimbatore: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,632,05898,803984,0042,Tamil Nadu,120,1.0,Coimbatore: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,632,05898,803984,0043,Tamil Nadu,120,1.0,Coimbatore: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,632,05898,803984,0044,Tamil Nadu,120,1.0,Coimbatore: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,632,05898,803984,0045,Tamil Nadu,120,1.0,Coimbatore: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,632,05898,803984,0046,Tamil Nadu,120,1.0,Coimbatore: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,632,05898,803984,0047,Tamil Nadu,120,1.0,Coimbatore: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,632,05898,803984,0048,Tamil Nadu,119,1.0,Coimbatore: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,632,05898,803984,0049,Tamil Nadu,119,1.0,Coimbatore: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,632,05898,803984,0050,Tamil Nadu,119,1.0,Coimbatore: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,632,05898,803984,0051,Tamil Nadu,119,1.0,Coimbatore: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,632,05898,803984,0052,Tamil Nadu,119,1.0,Coimbatore: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,632,05898,803984,0053,Tamil Nadu,119,1.0,Coimbatore: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,632,05898,803984,0054,Tamil Nadu,119,1.0,Coimbatore: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,632,05898,803984,0055,Tamil Nadu,119,1.0,Coimbatore: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,632,05898,803984,0056,Tamil Nadu,119,1.0,Coimbatore: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,632,05898,803984,0057,Tamil Nadu,118,1.0,Coimbatore: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,632,05898,803984,0058,Tamil Nadu,118,1.0,Coimbatore: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,632,05898,803984,0059,Tamil Nadu,118,1.0,Coimbatore: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,632,05898,803984,0060,Tamil Nadu,118,1.0,Coimbatore: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,632,05898,803984,0061,Tamil Nadu,118,1.0,Coimbatore: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,632,05898,803984,0062,Tamil Nadu,118,1.0,Coimbatore: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,632,05898,803984,0063,Tamil Nadu,118,1.0,Coimbatore: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,632,05898,803984,0064,Tamil Nadu,118,1.0,Coimbatore: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,632,05898,803984,0065,Tamil Nadu,118,1.0,Coimbatore: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,632,05898,803984,0066,Tamil Nadu,118,1.0,Coimbatore: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,632,05898,803984,0067,Tamil Nadu,118,1.0,Coimbatore: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,632,05898,803984,0068,Tamil Nadu,118,1.0,Coimbatore: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,632,05898,803984,0069,Tamil Nadu,118,1.0,Coimbatore: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,632,05898,803984,0070,Tamil Nadu,118,1.0,Coimbatore: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,632,05898,803984,0071,Tamil Nadu,118,1.0,Coimbatore: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,632,05898,803984,0072,Tamil Nadu,118,1.0,Coimbatore: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,623,05841,803754,0001,Tamil Nadu,193,1.0,Madurai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,623,05841,803754,0002,Tamil Nadu,191,1.0,Madurai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,623,05841,803754,0003,Tamil Nadu,191,1.0,Madurai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,623,05841,803754,0004,Tamil Nadu,191,1.0,Madurai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,623,05841,803754,0005,Tamil Nadu,191,1.0,Madurai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,623,05841,803754,0006,Tamil Nadu,191,1.0,Madurai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,623,05841,803754,0007,Tamil Nadu,191,1.0,Madurai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,623,05841,803754,0008,Tamil Nadu,191,1.0,Madurai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,623,05841,803754,0009,Tamil Nadu,192,1.0,Madurai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,623,05841,803754,0010,Tamil Nadu,192,1.0,Madurai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,623,05841,803754,0011,Tamil Nadu,191,1.0,Madurai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,623,05841,803754,0012,Tamil Nadu,191,1.0,Madurai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,623,05841,803754,0013,Tamil Nadu,191,1.0,Madurai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,623,05841,803754,0014,Tamil Nadu,191,1.0,Madurai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,623,05841,803754,0015,Tamil Nadu,191,1.0,Madurai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,623,05841,803754,0016,Tamil Nadu,192,1.0,Madurai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,623,05841,803754,0017,Tamil Nadu,191,1.0,Madurai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,623,05841,803754,0018,Tamil Nadu,191,1.0,Madurai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,623,05841,803754,0019,Tamil Nadu,191,1.0,Madurai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,623,05841,803754,0020,Tamil Nadu,191,1.0,Madurai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,623,05841,803754,0021,Tamil Nadu,193,1.0,Madurai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,623,05841,803754,0022,Tamil Nadu,193,1.0,Madurai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,623,05841,803754,0023,Tamil Nadu,193,1.0,Madurai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,623,05841,803754,0024,Tamil Nadu,193,1.0,Madurai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,623,05841,803754,0025,Tamil Nadu,193,1.0,Madurai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,623,05841,803754,0026,Tamil Nadu,193,1.0,Madurai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,623,05841,803754,0027,Tamil Nadu,193,1.0,Madurai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,623,05841,803754,0028,Tamil Nadu,193,1.0,Madurai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,623,05841,803754,0029,Tamil Nadu,193,1.0,Madurai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,623,05841,803754,0030,Tamil Nadu,193,1.0,Madurai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,623,05841,803754,0031,Tamil Nadu,193,1.0,Madurai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,623,05841,803754,0032,Tamil Nadu,193,1.0,Madurai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,623,05841,803754,0033,Tamil Nadu,193,1.0,Madurai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,623,05841,803754,0034,Tamil Nadu,193,1.0,Madurai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,623,05841,803754,0035,Tamil Nadu,193,1.0,Madurai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,623,05841,803754,0036,Tamil Nadu,193,1.0,Madurai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,623,05841,803754,0037,Tamil Nadu,193,1.0,Madurai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,623,05841,803754,0038,Tamil Nadu,193,1.0,Madurai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,623,05841,803754,0039,Tamil Nadu,192,1.0,Madurai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,623,05841,803754,0040,Tamil Nadu,193,1.0,Madurai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,623,05841,803754,0041,Tamil Nadu,193,1.0,Madurai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,623,05841,803754,0042,Tamil Nadu,193,1.0,Madurai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,623,05841,803754,0043,Tamil Nadu,192,1.0,Madurai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,623,05841,803754,0044,Tamil Nadu,192,1.0,Madurai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,623,05841,803754,0045,Tamil Nadu,192,1.0,Madurai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,623,05841,803754,0046,Tamil Nadu,192,1.0,Madurai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,623,05841,803754,0047,Tamil Nadu,192,1.0,Madurai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,623,05841,803754,0048,Tamil Nadu,192,1.0,Madurai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,623,05841,803754,0049,Tamil Nadu,192,1.0,Madurai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,623,05841,803754,0050,Tamil Nadu,192,1.0,Madurai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,623,05841,803754,0051,Tamil Nadu,192,1.0,Madurai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,623,05841,803754,0052,Tamil Nadu,192,1.0,Madurai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,623,05841,803754,0053,Tamil Nadu,192,1.0,Madurai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,623,05841,803754,0054,Tamil Nadu,192,1.0,Madurai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,623,05841,803754,0055,Tamil Nadu,192,1.0,Madurai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,623,05841,803754,0056,Tamil Nadu,192,1.0,Madurai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,623,05841,803754,0057,Tamil Nadu,192,1.0,Madurai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,623,05841,803754,0058,Tamil Nadu,192,1.0,Madurai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,623,05841,803754,0059,Tamil Nadu,192,1.0,Madurai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,623,05841,803754,0060,Tamil Nadu,194,1.0,Madurai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,623,05841,803754,0061,Tamil Nadu,194,1.0,Madurai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,623,05841,803754,0062,Tamil Nadu,194,1.0,Madurai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,623,05841,803754,0063,Tamil Nadu,194,1.0,Madurai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,623,05841,803754,0064,Tamil Nadu,194,1.0,Madurai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,623,05841,803754,0065,Tamil Nadu,194,1.0,Madurai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,623,05841,803754,0066,Tamil Nadu,194,1.0,Madurai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,623,05841,803754,0067,Tamil Nadu,194,1.0,Madurai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,623,05841,803754,0068,Tamil Nadu,194,1.0,Madurai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,623,05841,803754,0069,Tamil Nadu,194,1.0,Madurai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,623,05841,803754,0070,Tamil Nadu,194,1.0,Madurai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,623,05841,803754,0071,Tamil Nadu,194,1.0,Madurai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+33,623,05841,803754,0072,Tamil Nadu,194,1.0,Madurai: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2011 electors
+29,562,99999,803083,0001,Karnataka,74,1.0,Hubli-Dharwad: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2013 electors
+29,562,99999,803083,0002,Karnataka,74,1.0,Hubli-Dharwad: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2013 electors
+29,562,99999,803083,0003,Karnataka,71,1.0,Hubli-Dharwad: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2013 electors
+29,562,99999,803083,0004,Karnataka,71,1.0,Hubli-Dharwad: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2013 electors
+29,562,99999,803083,0005,Karnataka,71,1.0,Hubli-Dharwad: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2013 electors
+29,562,99999,803083,0006,Karnataka,71,1.0,Hubli-Dharwad: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2013 electors
+29,562,99999,803083,0007,Karnataka,71,1.0,Hubli-Dharwad: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2013 electors
+29,562,99999,803083,0008,Karnataka,71,1.0,Hubli-Dharwad: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2013 electors
+29,562,99999,803083,0009,Karnataka,71,1.0,Hubli-Dharwad: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2013 electors
+29,562,99999,803083,0010,Karnataka,71,1.0,Hubli-Dharwad: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2013 electors
+29,562,99999,803083,0011,Karnataka,74,1.0,Hubli-Dharwad: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2013 electors
+29,562,99999,803083,0012,Karnataka,74,1.0,Hubli-Dharwad: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2013 electors
+29,562,99999,803083,0013,Karnataka,74,1.0,Hubli-Dharwad: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2013 electors
+29,562,99999,803083,0014,Karnataka,74,1.0,Hubli-Dharwad: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2013 electors
+29,562,99999,803083,0015,Karnataka,74,1.0,Hubli-Dharwad: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2013 electors
+29,562,99999,803083,0016,Karnataka,74,1.0,Hubli-Dharwad: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2013 electors
+29,562,99999,803083,0017,Karnataka,74,1.0,Hubli-Dharwad: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2013 electors
+29,562,99999,803083,0018,Karnataka,74,1.0,Hubli-Dharwad: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2013 electors
+29,562,99999,803083,0019,Karnataka,74,1.0,Hubli-Dharwad: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2013 electors
+29,562,99999,803083,0020,Karnataka,74,1.0,Hubli-Dharwad: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2013 electors
+29,562,99999,803083,0021,Karnataka,74,1.0,Hubli-Dharwad: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2013 electors
+29,562,99999,803083,0022,Karnataka,74,1.0,Hubli-Dharwad: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2013 electors
+29,562,99999,803083,0023,Karnataka,74,1.0,Hubli-Dharwad: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2013 electors
+29,562,99999,803083,0024,Karnataka,73,1.0,Hubli-Dharwad: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2013 electors
+29,562,99999,803083,0025,Karnataka,73,1.0,Hubli-Dharwad: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2013 electors
+29,562,99999,803083,0026,Karnataka,73,1.0,Hubli-Dharwad: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2013 electors
+29,562,99999,803083,0027,Karnataka,73,1.0,Hubli-Dharwad: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2013 electors
+29,562,99999,803083,0028,Karnataka,73,1.0,Hubli-Dharwad: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2013 electors
+29,562,99999,803083,0029,Karnataka,73,1.0,Hubli-Dharwad: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2013 electors
+29,562,99999,803083,0030,Karnataka,73,1.0,Hubli-Dharwad: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2013 electors
+29,562,99999,803083,0031,Karnataka,73,1.0,Hubli-Dharwad: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2013 electors
+29,562,99999,803083,0032,Karnataka,73,1.0,Hubli-Dharwad: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2013 electors
+29,562,99999,803083,0033,Karnataka,73,1.0,Hubli-Dharwad: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2013 electors
+29,562,99999,803083,0034,Karnataka,73,1.0,Hubli-Dharwad: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2013 electors
+29,562,99999,803083,0035,Karnataka,74,1.0,Hubli-Dharwad: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2013 electors
+29,562,99999,803083,0036,Karnataka,74,1.0,Hubli-Dharwad: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2013 electors
+29,562,99999,803083,0037,Karnataka,74,1.0,Hubli-Dharwad: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2013 electors
+29,562,99999,803083,0038,Karnataka,73,1.0,Hubli-Dharwad: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2013 electors
+29,562,99999,803083,0039,Karnataka,73,1.0,Hubli-Dharwad: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2013 electors
+29,562,99999,803083,0040,Karnataka,73,1.0,Hubli-Dharwad: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2013 electors
+29,562,99999,803083,0041,Karnataka,72,1.0,Hubli-Dharwad: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2013 electors
+29,562,99999,803083,0042,Karnataka,73,1.0,Hubli-Dharwad: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2013 electors
+29,562,99999,803083,0043,Karnataka,73,1.0,Hubli-Dharwad: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2013 electors
+29,562,99999,803083,0044,Karnataka,73,1.0,Hubli-Dharwad: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2013 electors
+29,562,99999,803083,0045,Karnataka,72,1.0,Hubli-Dharwad: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2013 electors
+29,562,99999,803083,0046,Karnataka,73,1.0,Hubli-Dharwad: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2013 electors
+29,562,99999,803083,0047,Karnataka,73,1.0,Hubli-Dharwad: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2013 electors
+29,562,99999,803083,0048,Karnataka,72,1.0,Hubli-Dharwad: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2013 electors
+29,562,99999,803083,0049,Karnataka,72,1.0,Hubli-Dharwad: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2013 electors
+29,562,99999,803083,0050,Karnataka,72,1.0,Hubli-Dharwad: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2013 electors
+29,562,99999,803083,0051,Karnataka,72,1.0,Hubli-Dharwad: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2013 electors
+29,562,99999,803083,0052,Karnataka,72,1.0,Hubli-Dharwad: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2013 electors
+29,562,99999,803083,0053,Karnataka,72,1.0,Hubli-Dharwad: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2013 electors
+29,562,99999,803083,0054,Karnataka,72,1.0,Hubli-Dharwad: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2013 electors
+29,562,99999,803083,0055,Karnataka,72,1.0,Hubli-Dharwad: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2013 electors
+29,562,99999,803083,0056,Karnataka,72,1.0,Hubli-Dharwad: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2013 electors
+29,562,99999,803083,0057,Karnataka,72,1.0,Hubli-Dharwad: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2013 electors
+29,562,99999,803083,0058,Karnataka,72,1.0,Hubli-Dharwad: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2013 electors
+29,562,99999,803083,0059,Karnataka,72,1.0,Hubli-Dharwad: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2013 electors
+29,562,99999,803083,0060,Karnataka,72,1.0,Hubli-Dharwad: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2013 electors
+29,562,99999,803083,0061,Karnataka,72,1.0,Hubli-Dharwad: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2013 electors
+29,562,99999,803083,0062,Karnataka,72,1.0,Hubli-Dharwad: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2013 electors
+29,562,99999,803083,0063,Karnataka,72,1.0,Hubli-Dharwad: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2013 electors
+29,562,99999,803083,0064,Karnataka,72,1.0,Hubli-Dharwad: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2013 electors
+29,562,99999,803083,0065,Karnataka,72,1.0,Hubli-Dharwad: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2013 electors
+29,562,99999,803083,0066,Karnataka,72,1.0,Hubli-Dharwad: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2013 electors
+29,562,99999,803083,0067,Karnataka,72,1.0,Hubli-Dharwad: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; validated vs AE2013 electors
+08,127,00667,800609,0001,Rajasthan,189,1.0,Kota: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; AE2013 electors/pop plausible but NOT discriminating (random ward-permutation p~0.16); census-2011 numbering vs Order unconfirmed; kept only over LGD whole-town collapse into AC 189
+08,127,00667,800609,0002,Rajasthan,189,1.0,Kota: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; AE2013 electors/pop plausible but NOT discriminating (random ward-permutation p~0.16); census-2011 numbering vs Order unconfirmed; kept only over LGD whole-town collapse into AC 189
+08,127,00667,800609,0003,Rajasthan,190,1.0,Kota: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; AE2013 electors/pop plausible but NOT discriminating (random ward-permutation p~0.16); census-2011 numbering vs Order unconfirmed; kept only over LGD whole-town collapse into AC 189
+08,127,00667,800609,0004,Rajasthan,190,1.0,Kota: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; AE2013 electors/pop plausible but NOT discriminating (random ward-permutation p~0.16); census-2011 numbering vs Order unconfirmed; kept only over LGD whole-town collapse into AC 189
+08,127,00667,800609,0005,Rajasthan,190,1.0,Kota: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; AE2013 electors/pop plausible but NOT discriminating (random ward-permutation p~0.16); census-2011 numbering vs Order unconfirmed; kept only over LGD whole-town collapse into AC 189
+08,127,00667,800609,0006,Rajasthan,190,1.0,Kota: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; AE2013 electors/pop plausible but NOT discriminating (random ward-permutation p~0.16); census-2011 numbering vs Order unconfirmed; kept only over LGD whole-town collapse into AC 189
+08,127,00667,800609,0007,Rajasthan,191,1.0,Kota: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; AE2013 electors/pop plausible but NOT discriminating (random ward-permutation p~0.16); census-2011 numbering vs Order unconfirmed; kept only over LGD whole-town collapse into AC 189
+08,127,00667,800609,0008,Rajasthan,191,1.0,Kota: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; AE2013 electors/pop plausible but NOT discriminating (random ward-permutation p~0.16); census-2011 numbering vs Order unconfirmed; kept only over LGD whole-town collapse into AC 189
+08,127,00667,800609,0009,Rajasthan,191,1.0,Kota: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; AE2013 electors/pop plausible but NOT discriminating (random ward-permutation p~0.16); census-2011 numbering vs Order unconfirmed; kept only over LGD whole-town collapse into AC 189
+08,127,00667,800609,0010,Rajasthan,191,1.0,Kota: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; AE2013 electors/pop plausible but NOT discriminating (random ward-permutation p~0.16); census-2011 numbering vs Order unconfirmed; kept only over LGD whole-town collapse into AC 189
+08,127,00667,800609,0011,Rajasthan,191,1.0,Kota: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; AE2013 electors/pop plausible but NOT discriminating (random ward-permutation p~0.16); census-2011 numbering vs Order unconfirmed; kept only over LGD whole-town collapse into AC 189
+08,127,00667,800609,0012,Rajasthan,189,1.0,Kota: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; AE2013 electors/pop plausible but NOT discriminating (random ward-permutation p~0.16); census-2011 numbering vs Order unconfirmed; kept only over LGD whole-town collapse into AC 189
+08,127,00667,800609,0013,Rajasthan,189,1.0,Kota: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; AE2013 electors/pop plausible but NOT discriminating (random ward-permutation p~0.16); census-2011 numbering vs Order unconfirmed; kept only over LGD whole-town collapse into AC 189
+08,127,00667,800609,0014,Rajasthan,189,1.0,Kota: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; AE2013 electors/pop plausible but NOT discriminating (random ward-permutation p~0.16); census-2011 numbering vs Order unconfirmed; kept only over LGD whole-town collapse into AC 189
+08,127,00667,800609,0015,Rajasthan,189,1.0,Kota: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; AE2013 electors/pop plausible but NOT discriminating (random ward-permutation p~0.16); census-2011 numbering vs Order unconfirmed; kept only over LGD whole-town collapse into AC 189
+08,127,00667,800609,0016,Rajasthan,189,1.0,Kota: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; AE2013 electors/pop plausible but NOT discriminating (random ward-permutation p~0.16); census-2011 numbering vs Order unconfirmed; kept only over LGD whole-town collapse into AC 189
+08,127,00667,800609,0017,Rajasthan,189,1.0,Kota: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; AE2013 electors/pop plausible but NOT discriminating (random ward-permutation p~0.16); census-2011 numbering vs Order unconfirmed; kept only over LGD whole-town collapse into AC 189
+08,127,00667,800609,0018,Rajasthan,189,1.0,Kota: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; AE2013 electors/pop plausible but NOT discriminating (random ward-permutation p~0.16); census-2011 numbering vs Order unconfirmed; kept only over LGD whole-town collapse into AC 189
+08,127,00667,800609,0019,Rajasthan,189,1.0,Kota: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; AE2013 electors/pop plausible but NOT discriminating (random ward-permutation p~0.16); census-2011 numbering vs Order unconfirmed; kept only over LGD whole-town collapse into AC 189
+08,127,00667,800609,0020,Rajasthan,189,1.0,Kota: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; AE2013 electors/pop plausible but NOT discriminating (random ward-permutation p~0.16); census-2011 numbering vs Order unconfirmed; kept only over LGD whole-town collapse into AC 189
+08,127,00667,800609,0021,Rajasthan,189,1.0,Kota: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; AE2013 electors/pop plausible but NOT discriminating (random ward-permutation p~0.16); census-2011 numbering vs Order unconfirmed; kept only over LGD whole-town collapse into AC 189
+08,127,00667,800609,0022,Rajasthan,189,1.0,Kota: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; AE2013 electors/pop plausible but NOT discriminating (random ward-permutation p~0.16); census-2011 numbering vs Order unconfirmed; kept only over LGD whole-town collapse into AC 189
+08,127,00667,800609,0023,Rajasthan,189,1.0,Kota: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; AE2013 electors/pop plausible but NOT discriminating (random ward-permutation p~0.16); census-2011 numbering vs Order unconfirmed; kept only over LGD whole-town collapse into AC 189
+08,127,00667,800609,0024,Rajasthan,189,1.0,Kota: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; AE2013 electors/pop plausible but NOT discriminating (random ward-permutation p~0.16); census-2011 numbering vs Order unconfirmed; kept only over LGD whole-town collapse into AC 189
+08,127,00667,800609,0025,Rajasthan,189,1.0,Kota: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; AE2013 electors/pop plausible but NOT discriminating (random ward-permutation p~0.16); census-2011 numbering vs Order unconfirmed; kept only over LGD whole-town collapse into AC 189
+08,127,00667,800609,0026,Rajasthan,189,1.0,Kota: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; AE2013 electors/pop plausible but NOT discriminating (random ward-permutation p~0.16); census-2011 numbering vs Order unconfirmed; kept only over LGD whole-town collapse into AC 189
+08,127,00667,800609,0027,Rajasthan,189,1.0,Kota: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; AE2013 electors/pop plausible but NOT discriminating (random ward-permutation p~0.16); census-2011 numbering vs Order unconfirmed; kept only over LGD whole-town collapse into AC 189
+08,127,00667,800609,0028,Rajasthan,189,1.0,Kota: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; AE2013 electors/pop plausible but NOT discriminating (random ward-permutation p~0.16); census-2011 numbering vs Order unconfirmed; kept only over LGD whole-town collapse into AC 189
+08,127,00667,800609,0029,Rajasthan,189,1.0,Kota: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; AE2013 electors/pop plausible but NOT discriminating (random ward-permutation p~0.16); census-2011 numbering vs Order unconfirmed; kept only over LGD whole-town collapse into AC 189
+08,127,00667,800609,0030,Rajasthan,189,1.0,Kota: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; AE2013 electors/pop plausible but NOT discriminating (random ward-permutation p~0.16); census-2011 numbering vs Order unconfirmed; kept only over LGD whole-town collapse into AC 189
+08,127,00667,800609,0031,Rajasthan,189,1.0,Kota: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; AE2013 electors/pop plausible but NOT discriminating (random ward-permutation p~0.16); census-2011 numbering vs Order unconfirmed; kept only over LGD whole-town collapse into AC 189
+08,127,00667,800609,0032,Rajasthan,189,1.0,Kota: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; AE2013 electors/pop plausible but NOT discriminating (random ward-permutation p~0.16); census-2011 numbering vs Order unconfirmed; kept only over LGD whole-town collapse into AC 189
+08,127,00667,800609,0033,Rajasthan,190,1.0,Kota: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; AE2013 electors/pop plausible but NOT discriminating (random ward-permutation p~0.16); census-2011 numbering vs Order unconfirmed; kept only over LGD whole-town collapse into AC 189
+08,127,00667,800609,0034,Rajasthan,190,1.0,Kota: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; AE2013 electors/pop plausible but NOT discriminating (random ward-permutation p~0.16); census-2011 numbering vs Order unconfirmed; kept only over LGD whole-town collapse into AC 189
+08,127,00667,800609,0035,Rajasthan,190,1.0,Kota: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; AE2013 electors/pop plausible but NOT discriminating (random ward-permutation p~0.16); census-2011 numbering vs Order unconfirmed; kept only over LGD whole-town collapse into AC 189
+08,127,00667,800609,0036,Rajasthan,190,1.0,Kota: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; AE2013 electors/pop plausible but NOT discriminating (random ward-permutation p~0.16); census-2011 numbering vs Order unconfirmed; kept only over LGD whole-town collapse into AC 189
+08,127,00667,800609,0037,Rajasthan,190,1.0,Kota: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; AE2013 electors/pop plausible but NOT discriminating (random ward-permutation p~0.16); census-2011 numbering vs Order unconfirmed; kept only over LGD whole-town collapse into AC 189
+08,127,00667,800609,0038,Rajasthan,190,1.0,Kota: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; AE2013 electors/pop plausible but NOT discriminating (random ward-permutation p~0.16); census-2011 numbering vs Order unconfirmed; kept only over LGD whole-town collapse into AC 189
+08,127,00667,800609,0039,Rajasthan,190,1.0,Kota: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; AE2013 electors/pop plausible but NOT discriminating (random ward-permutation p~0.16); census-2011 numbering vs Order unconfirmed; kept only over LGD whole-town collapse into AC 189
+08,127,00667,800609,0040,Rajasthan,190,1.0,Kota: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; AE2013 electors/pop plausible but NOT discriminating (random ward-permutation p~0.16); census-2011 numbering vs Order unconfirmed; kept only over LGD whole-town collapse into AC 189
+08,127,00667,800609,0041,Rajasthan,190,1.0,Kota: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; AE2013 electors/pop plausible but NOT discriminating (random ward-permutation p~0.16); census-2011 numbering vs Order unconfirmed; kept only over LGD whole-town collapse into AC 189
+08,127,00667,800609,0042,Rajasthan,190,1.0,Kota: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; AE2013 electors/pop plausible but NOT discriminating (random ward-permutation p~0.16); census-2011 numbering vs Order unconfirmed; kept only over LGD whole-town collapse into AC 189
+08,127,00667,800609,0043,Rajasthan,191,1.0,Kota: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; AE2013 electors/pop plausible but NOT discriminating (random ward-permutation p~0.16); census-2011 numbering vs Order unconfirmed; kept only over LGD whole-town collapse into AC 189
+08,127,00667,800609,0044,Rajasthan,191,1.0,Kota: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; AE2013 electors/pop plausible but NOT discriminating (random ward-permutation p~0.16); census-2011 numbering vs Order unconfirmed; kept only over LGD whole-town collapse into AC 189
+08,127,00667,800609,0045,Rajasthan,191,1.0,Kota: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; AE2013 electors/pop plausible but NOT discriminating (random ward-permutation p~0.16); census-2011 numbering vs Order unconfirmed; kept only over LGD whole-town collapse into AC 189
+08,127,00667,800609,0046,Rajasthan,191,1.0,Kota: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; AE2013 electors/pop plausible but NOT discriminating (random ward-permutation p~0.16); census-2011 numbering vs Order unconfirmed; kept only over LGD whole-town collapse into AC 189
+08,127,00667,800609,0047,Rajasthan,191,1.0,Kota: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; AE2013 electors/pop plausible but NOT discriminating (random ward-permutation p~0.16); census-2011 numbering vs Order unconfirmed; kept only over LGD whole-town collapse into AC 189
+08,127,00667,800609,0048,Rajasthan,191,1.0,Kota: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; AE2013 electors/pop plausible but NOT discriminating (random ward-permutation p~0.16); census-2011 numbering vs Order unconfirmed; kept only over LGD whole-town collapse into AC 189
+08,127,00667,800609,0049,Rajasthan,189,1.0,Kota: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; AE2013 electors/pop plausible but NOT discriminating (random ward-permutation p~0.16); census-2011 numbering vs Order unconfirmed; kept only over LGD whole-town collapse into AC 189
+08,127,00667,800609,0050,Rajasthan,189,1.0,Kota: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; AE2013 electors/pop plausible but NOT discriminating (random ward-permutation p~0.16); census-2011 numbering vs Order unconfirmed; kept only over LGD whole-town collapse into AC 189
+08,127,00667,800609,0051,Rajasthan,189,1.0,Kota: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; AE2013 electors/pop plausible but NOT discriminating (random ward-permutation p~0.16); census-2011 numbering vs Order unconfirmed; kept only over LGD whole-town collapse into AC 189
+08,127,00667,800609,0052,Rajasthan,189,1.0,Kota: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; AE2013 electors/pop plausible but NOT discriminating (random ward-permutation p~0.16); census-2011 numbering vs Order unconfirmed; kept only over LGD whole-town collapse into AC 189
+08,127,00667,800609,0053,Rajasthan,190,1.0,Kota: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; AE2013 electors/pop plausible but NOT discriminating (random ward-permutation p~0.16); census-2011 numbering vs Order unconfirmed; kept only over LGD whole-town collapse into AC 189
+08,127,00667,800609,0054,Rajasthan,190,1.0,Kota: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; AE2013 electors/pop plausible but NOT discriminating (random ward-permutation p~0.16); census-2011 numbering vs Order unconfirmed; kept only over LGD whole-town collapse into AC 189
+08,127,00667,800609,0055,Rajasthan,190,1.0,Kota: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; AE2013 electors/pop plausible but NOT discriminating (random ward-permutation p~0.16); census-2011 numbering vs Order unconfirmed; kept only over LGD whole-town collapse into AC 189
+08,127,00667,800609,0056,Rajasthan,190,1.0,Kota: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; AE2013 electors/pop plausible but NOT discriminating (random ward-permutation p~0.16); census-2011 numbering vs Order unconfirmed; kept only over LGD whole-town collapse into AC 189
+08,127,00667,800609,0057,Rajasthan,190,1.0,Kota: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; AE2013 electors/pop plausible but NOT discriminating (random ward-permutation p~0.16); census-2011 numbering vs Order unconfirmed; kept only over LGD whole-town collapse into AC 189
+08,127,00667,800609,0058,Rajasthan,190,1.0,Kota: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; AE2013 electors/pop plausible but NOT discriminating (random ward-permutation p~0.16); census-2011 numbering vs Order unconfirmed; kept only over LGD whole-town collapse into AC 189
+08,127,00667,800609,0059,Rajasthan,191,1.0,Kota: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; AE2013 electors/pop plausible but NOT discriminating (random ward-permutation p~0.16); census-2011 numbering vs Order unconfirmed; kept only over LGD whole-town collapse into AC 189
+08,127,00667,800609,0060,Rajasthan,190,1.0,Kota: ECI Delimitation Order 2008 ward list; exact census-2011 ward-no join; AE2013 electors/pop plausible but NOT discriminating (random ward-permutation p~0.16); census-2011 numbering vs Order unconfirmed; kept only over LGD whole-town collapse into AC 189

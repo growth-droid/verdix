@@ -1,0 +1,591 @@
+census_state,census_district,census_subdistt,census_town,census_ward,app_state,eci_ac_no,weight,basis
+07,090,00430,063866,,Delhi,1,1.0,ECI 2008 Sch.XXXI: village named in AC1 extent
+07,090,00430,063867,,Delhi,1,1.0,ECI 2008 Sch.XXXI: village named in AC1 extent
+07,090,00430,063868,,Delhi,1,1.0,ECI 2008 Sch.XXXI: village named in AC1 extent
+07,090,00430,063869,,Delhi,1,1.0,ECI 2008 Sch.XXXI: village named in AC1 extent
+07,090,00430,063870,,Delhi,1,1.0,ECI 2008 Sch.XXXI: village named in AC1 extent
+07,090,00430,063871,,Delhi,1,1.0,ECI 2008 Sch.XXXI: village named in AC1 extent
+07,090,00430,063872,,Delhi,1,1.0,ECI 2008 Sch.XXXI: village named in AC1 extent
+07,090,00430,063873,,Delhi,1,1.0,ECI 2008 Sch.XXXI: village named in AC1 extent
+07,090,00430,063874,,Delhi,1,1.0,ECI 2008 Sch.XXXI: village named in AC1 extent
+07,090,00430,063875,,Delhi,1,1.0,ECI 2008 Sch.XXXI: village named in AC1 extent
+07,090,00430,063876,,Delhi,1,1.0,ECI 2008 Sch.XXXI: village named in AC1 extent
+07,090,00430,063877,,Delhi,1,1.0,ECI 2008 Sch.XXXI: village named in AC1 extent
+07,090,00430,063878,,Delhi,1,1.0,ECI 2008 Sch.XXXI: village named in AC1 extent
+07,090,00430,063879,,Delhi,1,1.0,ECI 2008 Sch.XXXI: village named in AC1 extent
+07,090,00430,063880,,Delhi,1,1.0,ECI 2008 Sch.XXXI: village named in AC1 extent
+07,090,00430,063881,,Delhi,1,1.0,ECI 2008 Sch.XXXI: village named in AC1 extent
+07,090,00430,063882,,Delhi,1,1.0,ECI 2008 Sch.XXXI: village named in AC1 extent
+07,090,00430,063883,,Delhi,1,1.0,ECI 2008 Sch.XXXI: village named in AC1 extent
+07,090,00430,063884,,Delhi,1,1.0,ECI 2008 Sch.XXXI: village named in AC1 extent
+07,090,00430,063885,,Delhi,1,1.0,ECI 2008 Sch.XXXI: village named in AC1 extent
+07,090,00430,063886,,Delhi,7,1.0,ECI 2008 Sch.XXXI: village named in AC7 extent
+07,090,00430,063887,,Delhi,7,1.0,ECI 2008 Sch.XXXI: village named in AC7 extent
+07,090,00430,063888,,Delhi,7,1.0,ECI 2008 Sch.XXXI: village named in AC7 extent
+07,090,00430,063889,,Delhi,7,1.0,ECI 2008 Sch.XXXI: village named in AC7 extent
+07,090,00430,063890,,Delhi,7,1.0,ECI 2008 Sch.XXXI: village named in AC7 extent
+07,090,00430,063891,,Delhi,7,1.0,ECI 2008 Sch.XXXI: village named in AC7 extent
+07,090,00430,063892,,Delhi,7,1.0,ECI 2008 Sch.XXXI: village named in AC7 extent
+07,090,00430,063893,,Delhi,1,1.0,ECI 2008 Sch.XXXI: village named in AC1 extent
+07,090,00430,063894,,Delhi,1,1.0,ECI 2008 Sch.XXXI: village named in AC1 extent
+07,090,00430,063895,,Delhi,1,1.0,ECI 2008 Sch.XXXI: village named in AC1 extent
+07,090,00430,063896,,Delhi,1,1.0,ECI 2008 Sch.XXXI: village named in AC1 extent
+07,090,00430,063897,,Delhi,1,1.0,ECI 2008 Sch.XXXI: village named in AC1 extent
+07,090,00430,063898,,Delhi,1,1.0,ECI 2008 Sch.XXXI: village named in AC1 extent
+07,090,00430,063899,,Delhi,1,1.0,ECI 2008 Sch.XXXI: village named in AC1 extent
+07,090,00430,063900,,Delhi,2,1.0,ECI 2008 Sch.XXXI: village named in AC2 extent
+07,090,00430,063901,,Delhi,2,1.0,ECI 2008 Sch.XXXI: village named in AC2 extent
+07,090,00430,063902,,Delhi,1,1.0,ECI 2008 Sch.XXXI: village named in AC1 extent
+07,090,00430,063903,,Delhi,7,1.0,ECI 2008 Sch.XXXI: village named in AC7 extent
+07,090,00430,063904,,Delhi,7,1.0,ECI 2008 Sch.XXXI: village named in AC7 extent
+07,090,00430,800441,0001,Delhi,1,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 1->AC"
+07,090,00430,800441,0002,Delhi,1,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 2->AC"
+07,090,00430,800441,0017,Delhi,5,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 17->AC"
+07,090,00430,800441,0021,Delhi,6,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 21->AC"
+07,090,00430,800441,0026,Delhi,7,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 26->AC"
+07,090,00430,800441,0049,Delhi,13,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 49->AC"
+07,090,00430,063905,0002,Delhi,1,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): CT piece in MCD ward 2->AC"
+07,090,00430,063906,0002,Delhi,1,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): CT piece in MCD ward 2->AC"
+07,090,00430,063907,0004,Delhi,1,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): CT piece in MCD ward 4->AC"
+07,090,00430,063908,0004,Delhi,1,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): CT piece in MCD ward 4->AC"
+07,090,00430,063909,0004,Delhi,1,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): CT piece in MCD ward 4->AC"
+07,090,00430,063910,0003,Delhi,1,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): CT piece in MCD ward 3->AC"
+07,090,00430,063911,0007,Delhi,2,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): CT piece in MCD ward 7->AC"
+07,090,00430,063912,0007,Delhi,2,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): CT piece in MCD ward 7->AC"
+07,090,00430,063913,0005,Delhi,2,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): CT piece in MCD ward 5->AC"
+07,090,00430,063914,0018,Delhi,5,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): CT piece in MCD ward 18->AC"
+07,090,00430,063915,0018,Delhi,5,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): CT piece in MCD ward 18->AC"
+07,090,00430,063916,0003,Delhi,1,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): CT piece in MCD ward 3->AC"
+07,090,00430,063917,0026,Delhi,7,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): CT piece in MCD ward 26->AC"
+07,090,00430,063918,0026,Delhi,7,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): CT piece in MCD ward 26->AC"
+07,090,00430,063919,0003,Delhi,1,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): CT piece in MCD ward 3->AC"
+07,090,00430,063920,0027,Delhi,7,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): CT piece in MCD ward 27->AC"
+07,090,00430,063921,0027,Delhi,7,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): CT piece in MCD ward 27->AC"
+07,090,00430,063922,0028,Delhi,7,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): CT piece in MCD ward 28->AC"
+07,090,00430,063923,0028,Delhi,7,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): CT piece in MCD ward 28->AC"
+07,090,00431,063924,,Delhi,7,1.0,ECI 2008 Sch.XXXI: village named in AC7 extent
+07,090,00431,063925,,Delhi,7,1.0,ECI 2008 Sch.XXXI: village named in AC7 extent
+07,090,00431,063926,,Delhi,7,1.0,ECI 2008 Sch.XXXI: village named in AC7 extent
+07,090,00431,063927,,Delhi,7,1.0,ECI 2008 Sch.XXXI: village named in AC7 extent
+07,090,00431,063928,,Delhi,7,1.0,ECI 2008 Sch.XXXI: village named in AC7 extent
+07,090,00431,063929,,Delhi,8,1.0,ECI 2008 Sch.XXXI: village named in AC8 extent
+07,090,00431,063930,,Delhi,8,1.0,ECI 2008 Sch.XXXI: village named in AC8 extent
+07,090,00431,063931,,Delhi,8,1.0,ECI 2008 Sch.XXXI: village named in AC8 extent
+07,090,00431,063932,,Delhi,8,1.0,ECI 2008 Sch.XXXI: village named in AC8 extent
+07,090,00431,063933,,Delhi,8,1.0,ECI 2008 Sch.XXXI: village named in AC8 extent
+07,090,00431,063934,,Delhi,8,1.0,ECI 2008 Sch.XXXI: village named in AC8 extent
+07,090,00431,063935,,Delhi,8,1.0,ECI 2008 Sch.XXXI: village named in AC8 extent
+07,090,00431,800441,0015,Delhi,4,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 15->AC"
+07,090,00431,800441,0021,Delhi,6,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 21->AC"
+07,090,00431,800441,0022,Delhi,6,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 22->AC"
+07,090,00431,800441,0023,Delhi,6,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 23->AC"
+07,090,00431,800441,0024,Delhi,6,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 24->AC"
+07,090,00431,800441,0038,Delhi,10,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 38->AC"
+07,090,00431,800441,0045,Delhi,12,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 45->AC"
+07,090,00431,800441,0046,Delhi,12,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 46->AC"
+07,090,00431,800441,0047,Delhi,12,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 47->AC"
+07,090,00431,800441,0048,Delhi,12,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 48->AC"
+07,090,00431,800441,0049,Delhi,13,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 49->AC"
+07,090,00431,800441,0050,Delhi,13,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 50->AC"
+07,090,00431,800441,0051,Delhi,13,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 51->AC"
+07,090,00431,800441,0052,Delhi,13,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 52->AC"
+07,090,00431,800441,0053,Delhi,14,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 53->AC"
+07,090,00431,800441,0054,Delhi,14,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 54->AC"
+07,090,00431,800441,0055,Delhi,14,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 55->AC"
+07,090,00431,800441,0056,Delhi,14,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 56->AC"
+07,090,00431,800441,0059,Delhi,15,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 59->AC"
+07,090,00431,800441,0060,Delhi,15,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 60->AC"
+07,090,00431,800441,0061,Delhi,16,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 61->AC"
+07,090,00431,800441,0062,Delhi,16,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 62->AC"
+07,090,00431,800441,0063,Delhi,16,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 63->AC"
+07,090,00431,800441,0064,Delhi,16,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 64->AC"
+07,090,00431,800441,0065,Delhi,17,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 65->AC"
+07,090,00431,800441,0066,Delhi,17,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 66->AC"
+07,090,00431,800441,0067,Delhi,17,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 67->AC"
+07,090,00431,800441,0068,Delhi,17,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 68->AC"
+07,090,00431,800441,0073,Delhi,19,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 73->AC"
+07,090,00431,800441,0074,Delhi,19,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 74->AC"
+07,090,00431,063936,0028,Delhi,7,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): CT piece in MCD ward 28->AC"
+07,090,00431,063937,0029,Delhi,8,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): CT piece in MCD ward 29->AC"
+07,090,00431,063938,0029,Delhi,8,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): CT piece in MCD ward 29->AC"
+07,090,00431,063939,0030,Delhi,8,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): CT piece in MCD ward 30->AC"
+07,090,00431,063940,0030,Delhi,8,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): CT piece in MCD ward 30->AC"
+07,090,00431,063941,0034,Delhi,9,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): CT piece in MCD ward 34->AC"
+07,090,00431,063942,0033,Delhi,9,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): CT piece in MCD ward 33->AC"
+07,090,00431,063942,0035,Delhi,9,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): CT piece in MCD ward 35->AC"
+07,090,00431,063942,0036,Delhi,9,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): CT piece in MCD ward 36->AC"
+07,090,00431,063943,0034,Delhi,9,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): CT piece in MCD ward 34->AC"
+07,090,00431,063944,0029,Delhi,8,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): CT piece in MCD ward 29->AC"
+07,090,00431,063945,0029,Delhi,8,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): CT piece in MCD ward 29->AC"
+07,090,00431,063946,0027,Delhi,7,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): CT piece in MCD ward 27->AC"
+07,090,00431,063947,0025,Delhi,7,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): CT piece in MCD ward 25->AC"
+07,090,00431,063948,0037,Delhi,10,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): CT piece in MCD ward 37->AC"
+07,090,00431,063948,0038,Delhi,10,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): CT piece in MCD ward 38->AC"
+07,090,00431,063948,0039,Delhi,10,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): CT piece in MCD ward 39->AC"
+07,090,00431,063948,0040,Delhi,10,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): CT piece in MCD ward 40->AC"
+07,090,00431,063948,0048,Delhi,12,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): CT piece in MCD ward 48->AC"
+07,090,00432,063949,,Delhi,2,1.0,ECI 2008 Sch.XXXI: village named in AC2 extent
+07,090,00432,800441,0011,Delhi,3,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 11->AC"
+07,090,00432,800441,0012,Delhi,3,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 12->AC"
+07,090,00432,800441,0013,Delhi,4,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 13->AC"
+07,090,00432,800441,0014,Delhi,4,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 14->AC"
+07,090,00432,800441,0015,Delhi,4,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 15->AC"
+07,090,00432,800441,0016,Delhi,4,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 16->AC"
+07,090,00432,800441,0056,Delhi,14,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 56->AC"
+07,090,00432,800441,0070,Delhi,18,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 70->AC"
+07,090,00432,800441,0071,Delhi,18,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 71->AC"
+07,090,00432,800441,0072,Delhi,18,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 72->AC"
+07,090,00432,063950,0005,Delhi,2,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): CT piece in MCD ward 5->AC"
+07,090,00432,063950,0019,Delhi,5,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): CT piece in MCD ward 19->AC"
+07,090,00432,063950,0020,Delhi,5,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): CT piece in MCD ward 20->AC"
+07,091,00433,063951,,Delhi,2,1.0,ECI 2008 Sch.XXXI: village named in AC2 extent
+07,091,00433,063952,,Delhi,2,1.0,ECI 2008 Sch.XXXI: village named in AC2 extent
+07,091,00433,063953,,Delhi,2,1.0,ECI 2008 Sch.XXXI: village named in AC2 extent
+07,091,00433,063954,,Delhi,2,1.0,ECI 2008 Sch.XXXI: village named in AC2 extent
+07,091,00433,800441,0009,Delhi,3,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 9->AC"
+07,091,00433,800441,0010,Delhi,3,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 10->AC"
+07,091,00433,800441,0011,Delhi,3,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 11->AC"
+07,091,00433,800441,0012,Delhi,3,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 12->AC"
+07,091,00433,800441,0065,Delhi,17,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 65->AC"
+07,091,00433,800441,0066,Delhi,17,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 66->AC"
+07,091,00433,800441,0069,Delhi,18,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 69->AC"
+07,091,00433,800441,0070,Delhi,18,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 70->AC"
+07,091,00433,800441,0073,Delhi,19,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 73->AC"
+07,091,00433,800441,0074,Delhi,19,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 74->AC"
+07,091,00433,800441,0075,Delhi,19,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 75->AC"
+07,091,00433,800441,0076,Delhi,19,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 76->AC"
+07,091,00433,800441,0077,Delhi,20,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 77->AC"
+07,091,00433,800441,0078,Delhi,20,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 78->AC"
+07,091,00433,063955,0006,Delhi,2,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): CT piece in MCD ward 6->AC"
+07,091,00433,063956,0006,Delhi,2,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): CT piece in MCD ward 6->AC"
+07,091,00433,063957,0006,Delhi,2,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): CT piece in MCD ward 6->AC"
+07,091,00433,063957,0007,Delhi,2,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): CT piece in MCD ward 7->AC"
+07,091,00433,063957,0008,Delhi,2,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): CT piece in MCD ward 8->AC"
+07,091,00433,063958,0008,Delhi,2,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): CT piece in MCD ward 8->AC"
+07,091,00434,800441,0076,Delhi,19,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 76->AC"
+07,091,00434,800441,0077,Delhi,20,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 77->AC"
+07,091,00434,800441,0078,Delhi,20,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 78->AC"
+07,091,00434,800441,0080,Delhi,20,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 80->AC"
+07,091,00434,800441,0085,Delhi,22,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 85->AC"
+07,091,00434,800441,0088,Delhi,22,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 88->AC"
+07,091,00435,800441,0077,Delhi,20,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 77->AC"
+07,091,00435,800441,0079,Delhi,20,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 79->AC"
+07,091,00435,800441,0080,Delhi,20,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 80->AC"
+07,091,00435,800441,0085,Delhi,22,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 85->AC"
+07,091,00435,800441,0086,Delhi,22,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 86->AC"
+07,091,00435,800441,0087,Delhi,22,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 87->AC"
+07,092,00436,063959,,Delhi,70,1.0,ECI 2008 Sch.XXXI: village named in AC70 extent
+07,092,00436,063960,,Delhi,70,1.0,ECI 2008 Sch.XXXI: village named in AC70 extent
+07,092,00436,063961,,Delhi,70,1.0,ECI 2008 Sch.XXXI: village named in AC70 extent
+07,092,00436,063962,,Delhi,70,1.0,ECI 2008 Sch.XXXI: village named in AC70 extent
+07,092,00436,063963,,Delhi,70,1.0,ECI 2008 Sch.XXXI: village named in AC70 extent
+07,092,00436,063964,,Delhi,70,1.0,ECI 2008 Sch.XXXI: village named in AC70 extent
+07,092,00436,063965,,Delhi,70,1.0,ECI 2008 Sch.XXXI: village named in AC70 extent
+07,092,00436,063966,,Delhi,70,1.0,ECI 2008 Sch.XXXI: village named in AC70 extent
+07,092,00436,063967,,Delhi,66,1.0,ECI 2008 Sch.XXXI: village named in AC66 extent
+07,092,00436,800441,0233,Delhi,61,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 233->AC"
+07,092,00436,800441,0236,Delhi,61,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 236->AC"
+07,092,00436,800441,0249,Delhi,65,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 249->AC"
+07,092,00436,800441,0250,Delhi,65,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 250->AC"
+07,092,00436,800441,0251,Delhi,65,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 251->AC"
+07,092,00436,800441,0252,Delhi,65,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 252->AC"
+07,092,00436,800441,0253,Delhi,66,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 253->AC"
+07,092,00436,800441,0254,Delhi,66,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 254->AC"
+07,092,00436,800441,0255,Delhi,66,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 255->AC"
+07,092,00436,800441,0256,Delhi,66,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 256->AC"
+07,092,00436,800441,0257,Delhi,67,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 257->AC"
+07,092,00436,800441,0258,Delhi,67,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 258->AC"
+07,092,00436,063968,0272,Delhi,70,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): CT piece in MCD ward 272->AC"
+07,092,00436,063969,0267,Delhi,69,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): CT piece in MCD ward 267->AC"
+07,092,00436,063970,0261,Delhi,68,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): CT piece in MCD ward 261->AC"
+07,092,00436,063970,0265,Delhi,69,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): CT piece in MCD ward 265->AC"
+07,092,00436,063970,0266,Delhi,69,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): CT piece in MCD ward 266->AC"
+07,092,00436,063970,0271,Delhi,70,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): CT piece in MCD ward 271->AC"
+07,092,00436,063971,0270,Delhi,70,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): CT piece in MCD ward 270->AC"
+07,092,00436,063972,0261,Delhi,68,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): CT piece in MCD ward 261->AC"
+07,092,00436,063973,0266,Delhi,69,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): CT piece in MCD ward 266->AC"
+07,092,00436,063973,0267,Delhi,69,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): CT piece in MCD ward 267->AC"
+07,092,00436,063973,0268,Delhi,69,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): CT piece in MCD ward 268->AC"
+07,092,00436,063974,0256,Delhi,66,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): CT piece in MCD ward 256->AC"
+07,092,00436,063975,0270,Delhi,70,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): CT piece in MCD ward 270->AC"
+07,092,00436,063976,0269,Delhi,70,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): CT piece in MCD ward 269->AC"
+07,092,00436,063977,0270,Delhi,70,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): CT piece in MCD ward 270->AC"
+07,092,00436,063978,0256,Delhi,66,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): CT piece in MCD ward 256->AC"
+07,092,00436,063978,0261,Delhi,68,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): CT piece in MCD ward 261->AC"
+07,092,00436,063978,0268,Delhi,69,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): CT piece in MCD ward 268->AC"
+07,092,00436,063979,0246,Delhi,64,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): CT piece in MCD ward 246->AC"
+07,092,00436,063979,0256,Delhi,66,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): CT piece in MCD ward 256->AC"
+07,092,00436,063979,0258,Delhi,67,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): CT piece in MCD ward 258->AC"
+07,092,00436,063979,0261,Delhi,68,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): CT piece in MCD ward 261->AC"
+07,092,00436,063979,0262,Delhi,68,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): CT piece in MCD ward 262->AC"
+07,092,00437,800441,0236,Delhi,61,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 236->AC"
+07,092,00437,800441,0245,Delhi,64,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 245->AC"
+07,092,00437,800441,0247,Delhi,64,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 247->AC"
+07,092,00437,800441,0248,Delhi,64,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 248->AC"
+07,092,00437,800441,0258,Delhi,67,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 258->AC"
+07,092,00437,800441,0259,Delhi,67,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 259->AC"
+07,092,00437,800441,0260,Delhi,67,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 260->AC"
+07,092,00437,063980,0259,Delhi,67,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): CT piece in MCD ward 259->AC"
+07,092,00437,063980,0260,Delhi,67,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): CT piece in MCD ward 260->AC"
+07,092,00437,063981,0249,Delhi,65,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): CT piece in MCD ward 249->AC"
+07,092,00437,063981,0250,Delhi,65,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): CT piece in MCD ward 250->AC"
+07,092,00437,063981,0259,Delhi,67,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): CT piece in MCD ward 259->AC"
+07,092,00438,800441,0239,Delhi,62,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 239->AC"
+07,092,00438,800441,0240,Delhi,62,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 240->AC"
+07,092,00438,800441,0241,Delhi,63,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 241->AC"
+07,092,00438,800441,0242,Delhi,63,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 242->AC"
+07,092,00438,800441,0243,Delhi,63,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 243->AC"
+07,092,00438,800441,0244,Delhi,63,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 244->AC"
+07,092,00438,800441,0245,Delhi,64,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 245->AC"
+07,092,00438,800441,0246,Delhi,64,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 246->AC"
+07,092,00438,800441,0263,Delhi,68,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 263->AC"
+07,092,00438,800441,0264,Delhi,68,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 264->AC"
+07,092,00438,063982,0243,Delhi,63,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): CT piece in MCD ward 243->AC"
+07,092,00438,063982,0245,Delhi,64,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): CT piece in MCD ward 245->AC"
+07,092,00438,063982,0263,Delhi,68,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): CT piece in MCD ward 263->AC"
+07,092,00438,063982,0264,Delhi,68,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): CT piece in MCD ward 264->AC"
+07,093,00439,800441,0229,Delhi,60,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 229->AC"
+07,093,00439,800441,0230,Delhi,60,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 230->AC"
+07,093,00439,800441,0231,Delhi,60,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 231->AC"
+07,093,00439,800441,0232,Delhi,60,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 232->AC"
+07,093,00439,800441,0233,Delhi,61,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 233->AC"
+07,093,00439,800441,0234,Delhi,61,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 234->AC"
+07,093,00439,800441,0235,Delhi,61,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 235->AC"
+07,093,00439,800441,0236,Delhi,61,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 236->AC"
+07,093,00439,063983,0224,Delhi,58,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): CT piece in MCD ward 224->AC"
+07,093,00440,800441,0225,Delhi,59,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 225->AC"
+07,093,00440,800441,0226,Delhi,59,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 226->AC"
+07,093,00440,800441,0228,Delhi,59,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 228->AC"
+07,093,00440,800441,0237,Delhi,62,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 237->AC"
+07,093,00440,800441,0238,Delhi,62,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 238->AC"
+07,093,00440,800441,0239,Delhi,62,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 239->AC"
+07,093,00441,063984,,Delhi,57,0.5,ECI 2008 Sch.XXXI: 'Samas Pur (Part)' named in AC57 and AC58; no EB detail -> 50/50
+07,093,00441,063984,,Delhi,58,0.5,ECI 2008 Sch.XXXI: 'Samas Pur (Part)' named in AC57 and AC58; no EB detail -> 50/50
+07,093,00441,800441,0209,Delhi,55,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 209->AC"
+07,093,00441,800441,0213,Delhi,56,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 213->AC"
+07,093,00441,800441,0214,Delhi,56,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 214->AC"
+07,093,00441,800441,0217,Delhi,57,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 217->AC"
+07,093,00441,800441,0218,Delhi,57,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 218->AC"
+07,093,00441,800441,0219,Delhi,57,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 219->AC"
+07,093,00441,800441,0220,Delhi,57,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 220->AC"
+07,093,00441,800441,0221,Delhi,58,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 221->AC"
+07,093,00441,800441,0222,Delhi,58,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 222->AC"
+07,093,00441,800441,0223,Delhi,58,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 223->AC"
+07,093,00441,800441,0224,Delhi,58,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 224->AC"
+07,093,00441,800441,0227,Delhi,59,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 227->AC"
+07,093,00441,800441,0228,Delhi,59,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 228->AC"
+07,093,00441,800441,0231,Delhi,60,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 231->AC"
+07,093,00441,063985,0220,Delhi,57,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): CT piece in MCD ward 220->AC"
+07,093,00441,063986,0214,Delhi,56,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): CT piece in MCD ward 214->AC"
+07,093,00441,063986,0215,Delhi,56,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): CT piece in MCD ward 215->AC"
+07,093,00441,063986,0216,Delhi,56,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): CT piece in MCD ward 216->AC"
+07,093,00441,063987,0214,Delhi,56,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): CT piece in MCD ward 214->AC"
+07,093,00441,063987,0215,Delhi,56,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): CT piece in MCD ward 215->AC"
+07,093,00441,063988,0209,Delhi,55,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): CT piece in MCD ward 209->AC"
+07,093,00441,063988,0210,Delhi,55,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): CT piece in MCD ward 210->AC"
+07,093,00441,063988,0211,Delhi,55,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): CT piece in MCD ward 211->AC"
+07,093,00441,063988,0214,Delhi,56,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): CT piece in MCD ward 214->AC"
+07,093,00441,063989,0211,Delhi,55,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): CT piece in MCD ward 211->AC"
+07,093,00441,063989,0212,Delhi,55,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): CT piece in MCD ward 212->AC"
+07,093,00441,063990,0220,Delhi,57,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): CT piece in MCD ward 220->AC"
+07,094,00442,800441,0154,Delhi,41,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 154->AC"
+07,094,00442,800442,0001,Delhi,40,1.0,ECI 2008 Sch.XXXI: NDMC charge 1 wholly in AC40 New Delhi
+07,094,00442,800442,0004,Delhi,40,1.0,ECI 2008 Sch.XXXI: NDMC charge 4 wholly in AC40 New Delhi
+07,094,00442,800442,0005,Delhi,40,1.0,ECI 2008 Sch.XXXI: NDMC charge 5 wholly in AC40 New Delhi
+07,094,00443,800442,0003,Delhi,40,1.0,ECI 2008 Sch.XXXI: NDMC charge 3 wholly in AC40 New Delhi
+07,094,00443,800442,0005,Delhi,40,1.0,ECI 2008 Sch.XXXI: NDMC charge 5 wholly in AC40 New Delhi
+07,094,00443,800442,0009,Delhi,40,0.213558,"ECI 2008 Sch.XXXI: NDMC charge 9 EB1-17 (17/140 of ward 9) -> AC40, taken from this piece"
+07,094,00443,800442,0009,Delhi,38,0.786442,ECI 2008 Sch.XXXI: NDMC charge 9 EB18-140 -> AC38 (remainder of this piece)
+07,094,00444,800442,0002,Delhi,40,1.0,ECI 2008 Sch.XXXI: NDMC charge 2 wholly in AC40 New Delhi
+07,094,00444,800442,0003,Delhi,40,1.0,ECI 2008 Sch.XXXI: NDMC charge 3 wholly in AC40 New Delhi
+07,094,00444,800442,0004,Delhi,40,1.0,ECI 2008 Sch.XXXI: NDMC charge 4 wholly in AC40 New Delhi
+07,094,00444,800442,0005,Delhi,40,1.0,ECI 2008 Sch.XXXI: NDMC charge 5 wholly in AC40 New Delhi
+07,095,00445,800441,0079,Delhi,20,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 79->AC"
+07,095,00445,800441,0081,Delhi,21,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 81->AC"
+07,095,00445,800441,0082,Delhi,21,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 82->AC"
+07,095,00445,800441,0083,Delhi,21,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 83->AC"
+07,095,00445,800441,0084,Delhi,21,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 84->AC"
+07,095,00445,800441,0085,Delhi,22,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 85->AC"
+07,095,00445,800441,0086,Delhi,22,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 86->AC"
+07,095,00445,800441,0087,Delhi,22,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 87->AC"
+07,095,00445,800441,0153,Delhi,41,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 153->AC"
+07,095,00445,800441,0154,Delhi,41,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 154->AC"
+07,095,00446,800441,0087,Delhi,22,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 87->AC"
+07,095,00446,800441,0088,Delhi,22,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 88->AC"
+07,095,00446,800441,0089,Delhi,23,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 89->AC"
+07,095,00446,800441,0090,Delhi,23,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 90->AC"
+07,095,00446,800441,0091,Delhi,23,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 91->AC"
+07,095,00446,800442,0002,Delhi,40,1.0,ECI 2008 Sch.XXXI: NDMC charge 2 wholly in AC40 New Delhi
+07,095,00447,800441,0090,Delhi,23,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 90->AC"
+07,095,00447,800441,0091,Delhi,23,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 91->AC"
+07,095,00447,800441,0092,Delhi,23,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 92->AC"
+07,095,00447,800441,0095,Delhi,24,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 95->AC"
+07,095,00447,800441,0149,Delhi,39,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 149->AC"
+07,096,00448,800441,0074,Delhi,19,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 74->AC"
+07,096,00448,800441,0091,Delhi,23,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 91->AC"
+07,096,00448,800441,0093,Delhi,24,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 93->AC"
+07,096,00448,800441,0094,Delhi,24,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 94->AC"
+07,096,00448,800441,0095,Delhi,24,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 95->AC"
+07,096,00448,800441,0096,Delhi,24,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 96->AC"
+07,096,00448,800441,0097,Delhi,25,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 97->AC"
+07,096,00448,800441,0099,Delhi,25,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 99->AC"
+07,096,00448,800441,0100,Delhi,25,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 100->AC"
+07,096,00448,800441,0101,Delhi,26,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 101->AC"
+07,096,00448,800441,0106,Delhi,27,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 106->AC"
+07,096,00448,800441,0107,Delhi,27,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 107->AC"
+07,096,00448,800441,0108,Delhi,27,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 108->AC"
+07,096,00448,800441,0109,Delhi,28,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 109->AC"
+07,096,00448,800441,0113,Delhi,29,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 113->AC"
+07,096,00448,800441,0114,Delhi,29,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 114->AC"
+07,096,00448,800441,0115,Delhi,29,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 115->AC"
+07,096,00448,800441,0116,Delhi,29,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 116->AC"
+07,096,00448,800441,0117,Delhi,30,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 117->AC"
+07,096,00448,800441,0118,Delhi,30,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 118->AC"
+07,096,00448,800441,0119,Delhi,30,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 119->AC"
+07,096,00448,800441,0123,Delhi,31,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 123->AC"
+07,096,00448,800441,0124,Delhi,31,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 124->AC"
+07,096,00448,800441,0125,Delhi,32,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 125->AC"
+07,096,00448,800441,0126,Delhi,32,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 126->AC"
+07,096,00448,800441,0127,Delhi,32,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 127->AC"
+07,096,00448,800441,0136,Delhi,34,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 136->AC"
+07,096,00448,800441,0150,Delhi,39,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 150->AC"
+07,096,00448,063991,0121,Delhi,31,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): CT piece in MCD ward 121->AC"
+07,096,00448,063991,0122,Delhi,31,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): CT piece in MCD ward 122->AC"
+07,096,00448,063991,0124,Delhi,31,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): CT piece in MCD ward 124->AC"
+07,096,00448,063992,0122,Delhi,31,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): CT piece in MCD ward 122->AC"
+07,096,00449,800441,0097,Delhi,25,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 97->AC"
+07,096,00449,800441,0098,Delhi,25,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 98->AC"
+07,096,00449,800441,0101,Delhi,26,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 101->AC"
+07,096,00449,800441,0102,Delhi,26,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 102->AC"
+07,096,00449,800441,0105,Delhi,27,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 105->AC"
+07,096,00449,800441,0106,Delhi,27,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 106->AC"
+07,096,00449,800441,0108,Delhi,27,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 108->AC"
+07,096,00449,800441,0109,Delhi,28,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 109->AC"
+07,096,00449,800441,0110,Delhi,28,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 110->AC"
+07,096,00449,800441,0111,Delhi,28,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 111->AC"
+07,096,00449,800441,0112,Delhi,28,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 112->AC"
+07,096,00449,800441,0114,Delhi,29,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 114->AC"
+07,096,00449,800441,0117,Delhi,30,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 117->AC"
+07,096,00449,800441,0118,Delhi,30,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 118->AC"
+07,096,00450,063993,,Delhi,8,1.0,ECI 2008 Sch.XXXI: village named in AC8 extent
+07,096,00450,063994,,Delhi,8,1.0,ECI 2008 Sch.XXXI: village named in AC8 extent
+07,096,00450,800441,0041,Delhi,11,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 41->AC"
+07,096,00450,800441,0042,Delhi,11,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 42->AC"
+07,096,00450,800441,0057,Delhi,15,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 57->AC"
+07,096,00450,800441,0058,Delhi,15,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 58->AC"
+07,096,00450,800441,0059,Delhi,15,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 59->AC"
+07,096,00450,800441,0060,Delhi,15,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 60->AC"
+07,096,00450,800441,0062,Delhi,16,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 62->AC"
+07,096,00450,800441,0099,Delhi,25,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 99->AC"
+07,096,00450,800441,0103,Delhi,26,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 103->AC"
+07,096,00450,800441,0104,Delhi,26,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 104->AC"
+07,096,00450,063995,0122,Delhi,31,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): CT piece in MCD ward 122->AC"
+07,096,00450,063996,0121,Delhi,31,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): CT piece in MCD ward 121->AC"
+07,096,00450,063997,0121,Delhi,31,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): CT piece in MCD ward 121->AC"
+07,096,00450,063998,0032,Delhi,8,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): CT piece in MCD ward 32->AC"
+07,096,00450,063999,0031,Delhi,8,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): CT piece in MCD ward 31->AC"
+07,096,00450,063999,0032,Delhi,8,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): CT piece in MCD ward 32->AC"
+07,096,00450,063999,0043,Delhi,11,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): CT piece in MCD ward 43->AC"
+07,096,00450,063999,0044,Delhi,11,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): CT piece in MCD ward 44->AC"
+07,096,00450,064000,0032,Delhi,8,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): CT piece in MCD ward 32->AC"
+07,096,00450,064000,0044,Delhi,11,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): CT piece in MCD ward 44->AC"
+07,096,00450,064001,0030,Delhi,8,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): CT piece in MCD ward 30->AC"
+07,096,00450,064001,0031,Delhi,8,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): CT piece in MCD ward 31->AC"
+07,096,00450,064001,0032,Delhi,8,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): CT piece in MCD ward 32->AC"
+07,096,00450,064002,0122,Delhi,31,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): CT piece in MCD ward 122->AC"
+07,096,00450,064003,0030,Delhi,8,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): CT piece in MCD ward 30->AC"
+07,097,00451,064004,,Delhi,35,1.0,ECI 2008 Sch.XXXI: village named in AC35 extent
+07,097,00451,064005,,Delhi,35,1.0,ECI 2008 Sch.XXXI: village named in AC35 extent
+07,097,00451,064006,,Delhi,35,1.0,ECI 2008 Sch.XXXI: village named in AC35 extent
+07,097,00451,064007,,Delhi,35,1.0,ECI 2008 Sch.XXXI: village named in AC35 extent
+07,097,00451,064008,,Delhi,35,1.0,ECI 2008 Sch.XXXI: village named in AC35 extent
+07,097,00451,064009,,Delhi,34,1.0,ECI 2008 Sch.XXXI: village named in AC34 extent
+07,097,00451,064010,,Delhi,34,1.0,ECI 2008 Sch.XXXI: village named in AC34 extent
+07,097,00451,064011,,Delhi,34,1.0,ECI 2008 Sch.XXXI: village named in AC34 extent
+07,097,00451,064012,,Delhi,34,1.0,ECI 2008 Sch.XXXI: village named in AC34 extent
+07,097,00451,064013,,Delhi,34,1.0,ECI 2008 Sch.XXXI: village named in AC34 extent
+07,097,00451,064014,,Delhi,34,1.0,ECI 2008 Sch.XXXI: village named in AC34 extent
+07,097,00451,064015,,Delhi,34,1.0,ECI 2008 Sch.XXXI: village named in AC34 extent
+07,097,00451,064016,,Delhi,34,1.0,ECI 2008 Sch.XXXI: village named in AC34 extent
+07,097,00451,064017,,Delhi,34,1.0,ECI 2008 Sch.XXXI: village named in AC34 extent
+07,097,00451,064018,,Delhi,35,1.0,ECI 2008 Sch.XXXI: village named in AC35 extent
+07,097,00451,064019,,Delhi,35,1.0,ECI 2008 Sch.XXXI: village named in AC35 extent
+07,097,00451,064020,,Delhi,35,1.0,ECI 2008 Sch.XXXI: village named in AC35 extent
+07,097,00451,064021,,Delhi,35,1.0,ECI 2008 Sch.XXXI: village named in AC35 extent
+07,097,00451,064022,,Delhi,35,1.0,ECI 2008 Sch.XXXI: village named in AC35 extent
+07,097,00451,064023,,Delhi,34,1.0,ECI 2008 Sch.XXXI: village named in AC34 extent
+07,097,00451,064024,,Delhi,34,1.0,ECI 2008 Sch.XXXI: village named in AC34 extent
+07,097,00451,064025,,Delhi,34,1.0,ECI 2008 Sch.XXXI: village named in AC34 extent
+07,097,00451,064026,,Delhi,34,1.0,ECI 2008 Sch.XXXI: village named in AC34 extent
+07,097,00451,064027,,Delhi,34,1.0,ECI 2008 Sch.XXXI: village named in AC34 extent
+07,097,00451,064028,,Delhi,34,1.0,ECI 2008 Sch.XXXI: village named in AC34 extent
+07,097,00451,064029,,Delhi,34,1.0,ECI 2008 Sch.XXXI: village named in AC34 extent
+07,097,00451,064030,,Delhi,36,1.0,ECI 2008 Sch.XXXI: village named in AC36 extent
+07,097,00451,064031,,Delhi,34,1.0,ECI 2008 Sch.XXXI: village named in AC34 extent
+07,097,00451,064032,,Delhi,34,1.0,ECI 2008 Sch.XXXI: village named in AC34 extent
+07,097,00451,064033,,Delhi,34,1.0,ECI 2008 Sch.XXXI: village named in AC34 extent
+07,097,00451,064034,,Delhi,34,1.0,ECI 2008 Sch.XXXI: village named in AC34 extent
+07,097,00451,064035,,Delhi,34,1.0,ECI 2008 Sch.XXXI: village named in AC34 extent
+07,097,00451,064036,,Delhi,34,1.0,ECI 2008 Sch.XXXI: village named in AC34 extent
+07,097,00451,064037,,Delhi,34,1.0,ECI 2008 Sch.XXXI: village named in AC34 extent
+07,097,00451,064038,,Delhi,34,1.0,ECI 2008 Sch.XXXI: village named in AC34 extent
+07,097,00451,064039,,Delhi,34,1.0,ECI 2008 Sch.XXXI: village named in AC34 extent
+07,097,00451,064040,,Delhi,34,1.0,ECI 2008 Sch.XXXI: village named in AC34 extent
+07,097,00451,064041,,Delhi,35,1.0,ECI 2008 Sch.XXXI: village named in AC35 extent
+07,097,00451,064042,,Delhi,34,1.0,ECI 2008 Sch.XXXI: village named in AC34 extent
+07,097,00451,064043,,Delhi,34,1.0,ECI 2008 Sch.XXXI: village named in AC34 extent
+07,097,00451,064044,,Delhi,34,1.0,ECI 2008 Sch.XXXI: village named in AC34 extent
+07,097,00451,800441,0120,Delhi,30,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 120->AC"
+07,097,00451,800441,0127,Delhi,32,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 127->AC"
+07,097,00451,800441,0128,Delhi,32,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 128->AC"
+07,097,00451,800441,0129,Delhi,33,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 129->AC"
+07,097,00451,800441,0130,Delhi,33,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 130->AC"
+07,097,00451,800441,0131,Delhi,33,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 131->AC"
+07,097,00451,800441,0132,Delhi,33,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 132->AC"
+07,097,00451,800441,0135,Delhi,34,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 135->AC"
+07,097,00451,800441,0136,Delhi,34,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 136->AC"
+07,097,00451,800441,0137,Delhi,35,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 137->AC"
+07,097,00451,800441,0138,Delhi,35,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 138->AC"
+07,097,00451,800441,0139,Delhi,35,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 139->AC"
+07,097,00451,800441,0141,Delhi,36,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 141->AC"
+07,097,00451,800441,0142,Delhi,36,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 142->AC"
+07,097,00451,800441,0145,Delhi,37,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 145->AC"
+07,097,00451,800441,0146,Delhi,37,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 146->AC"
+07,097,00451,800441,0147,Delhi,37,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 147->AC"
+07,097,00451,800441,0148,Delhi,37,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 148->AC"
+07,097,00451,064045,0139,Delhi,35,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): CT piece in MCD ward 139->AC"
+07,097,00451,064046,0140,Delhi,35,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): CT piece in MCD ward 140->AC"
+07,097,00451,064047,0140,Delhi,35,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): CT piece in MCD ward 140->AC"
+07,097,00451,064048,0140,Delhi,35,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): CT piece in MCD ward 140->AC"
+07,097,00451,064049,0140,Delhi,35,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): CT piece in MCD ward 140->AC"
+07,097,00451,064050,0140,Delhi,35,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): CT piece in MCD ward 140->AC"
+07,097,00451,064051,0134,Delhi,34,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): CT piece in MCD ward 134->AC"
+07,097,00451,064052,0137,Delhi,35,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): CT piece in MCD ward 137->AC"
+07,097,00451,064053,0134,Delhi,34,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): CT piece in MCD ward 134->AC"
+07,097,00451,064054,0133,Delhi,34,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): CT piece in MCD ward 133->AC"
+07,097,00452,800441,0110,Delhi,28,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 110->AC"
+07,097,00452,800441,0111,Delhi,28,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 111->AC"
+07,097,00452,800441,0144,Delhi,36,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 144->AC"
+07,097,00452,800441,0149,Delhi,39,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 149->AC"
+07,097,00452,800441,0150,Delhi,39,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 150->AC"
+07,097,00452,800441,0151,Delhi,39,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 151->AC"
+07,097,00452,800441,0152,Delhi,39,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 152->AC"
+07,097,00452,800443,0001,Delhi,38,1.0,ECI 2008 Sch.XXXI: Delhi Cantt ward 1 -> AC38 Delhi Cantt
+07,097,00452,800443,0002,Delhi,38,1.0,ECI 2008 Sch.XXXI: Delhi Cantt ward 2 -> AC38 Delhi Cantt
+07,097,00452,800443,0003,Delhi,38,1.0,ECI 2008 Sch.XXXI: Delhi Cantt ward 3 -> AC38 Delhi Cantt
+07,097,00452,800443,0004,Delhi,38,1.0,ECI 2008 Sch.XXXI: Delhi Cantt ward 4 -> AC38 Delhi Cantt
+07,097,00452,800443,0005,Delhi,38,1.0,ECI 2008 Sch.XXXI: Delhi Cantt ward 5 -> AC38 Delhi Cantt
+07,097,00452,800443,0006,Delhi,38,1.0,ECI 2008 Sch.XXXI: Delhi Cantt ward 6 -> AC38 Delhi Cantt
+07,097,00452,800443,0007,Delhi,38,1.0,ECI 2008 Sch.XXXI: Delhi Cantt ward 7 -> AC38 Delhi Cantt
+07,097,00452,800443,0008,Delhi,38,1.0,ECI 2008 Sch.XXXI: Delhi Cantt ward 8 -> AC38 Delhi Cantt
+07,097,00452,064055,0165,Delhi,44,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): CT piece in MCD ward 165->AC"
+07,097,00453,800441,0136,Delhi,34,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 136->AC"
+07,097,00453,800441,0141,Delhi,36,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 141->AC"
+07,097,00453,800441,0143,Delhi,36,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 143->AC"
+07,097,00453,800441,0144,Delhi,36,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 144->AC"
+07,097,00453,800441,0163,Delhi,43,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 163->AC"
+07,097,00453,800441,0165,Delhi,44,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 165->AC"
+07,097,00453,800441,0166,Delhi,44,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 166->AC"
+07,097,00453,800441,0167,Delhi,44,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 167->AC"
+07,097,00453,800441,0168,Delhi,44,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 168->AC"
+07,097,00453,800441,0171,Delhi,45,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 171->AC"
+07,097,00453,800441,0172,Delhi,45,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 172->AC"
+07,097,00453,800443,0003,Delhi,38,1.0,ECI 2008 Sch.XXXI: Delhi Cantt ward 3 -> AC38 Delhi Cantt
+07,097,00453,800442,0007,Delhi,40,1.0,ECI 2008 Sch.XXXI: NDMC charge 7 wholly in AC40 New Delhi
+07,097,00453,800442,0008,Delhi,40,1.0,ECI 2008 Sch.XXXI: NDMC charge 8 wholly in AC40 New Delhi
+07,097,00453,800442,0009,Delhi,38,1.0,ECI 2008 Sch.XXXI: NDMC charge 9 EB18-140 -> AC38; Vasant Vihar-tehsil piece (Moti Bagh/Netaji Nagar side) wholly AC38
+07,097,00453,064056,0171,Delhi,45,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): CT piece in MCD ward 171->AC"
+07,097,00453,064057,0144,Delhi,36,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): CT piece in MCD ward 144->AC"
+07,097,00453,064058,0143,Delhi,36,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): CT piece in MCD ward 143->AC"
+07,097,00453,064059,0143,Delhi,36,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): CT piece in MCD ward 143->AC"
+07,097,00453,064060,0172,Delhi,45,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): CT piece in MCD ward 172->AC"
+07,097,00453,064061,0174,Delhi,46,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): CT piece in MCD ward 174->AC"
+07,098,00454,064062,,Delhi,46,1.0,ECI 2008 Sch.XXXI: village named in AC46 extent
+07,098,00454,064063,,Delhi,46,1.0,ECI 2008 Sch.XXXI: village named in AC46 extent
+07,098,00454,064064,,Delhi,46,1.0,ECI 2008 Sch.XXXI: village named in AC46 extent
+07,098,00454,800441,0159,Delhi,42,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 159->AC"
+07,098,00454,800441,0160,Delhi,42,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 160->AC"
+07,098,00454,800441,0161,Delhi,43,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 161->AC"
+07,098,00454,800441,0162,Delhi,43,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 162->AC"
+07,098,00454,800441,0163,Delhi,43,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 163->AC"
+07,098,00454,800441,0164,Delhi,43,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 164->AC"
+07,098,00454,800441,0169,Delhi,45,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 169->AC"
+07,098,00454,800441,0170,Delhi,45,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 170->AC"
+07,098,00454,800441,0179,Delhi,47,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 179->AC"
+07,098,00454,800441,0180,Delhi,47,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 180->AC"
+07,098,00454,800441,0181,Delhi,48,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 181->AC"
+07,098,00454,800441,0182,Delhi,48,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 182->AC"
+07,098,00454,800441,0183,Delhi,48,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 183->AC"
+07,098,00454,800441,0184,Delhi,48,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 184->AC"
+07,098,00454,800441,0185,Delhi,49,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 185->AC"
+07,098,00454,800441,0186,Delhi,49,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 186->AC"
+07,098,00454,800441,0187,Delhi,49,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 187->AC"
+07,098,00454,800441,0188,Delhi,49,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 188->AC"
+07,098,00454,800441,0189,Delhi,50,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 189->AC"
+07,098,00454,800441,0190,Delhi,50,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 190->AC"
+07,098,00454,800441,0191,Delhi,50,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 191->AC"
+07,098,00454,800441,0192,Delhi,50,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 192->AC"
+07,098,00454,800442,0007,Delhi,40,1.0,ECI 2008 Sch.XXXI: NDMC charge 7 wholly in AC40 New Delhi
+07,098,00454,064065,0175,Delhi,46,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): CT piece in MCD ward 175->AC"
+07,098,00454,064066,0175,Delhi,46,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): CT piece in MCD ward 175->AC"
+07,098,00454,064067,0176,Delhi,46,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): CT piece in MCD ward 176->AC"
+07,098,00454,064068,0175,Delhi,46,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): CT piece in MCD ward 175->AC"
+07,098,00454,064069,0176,Delhi,46,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): CT piece in MCD ward 176->AC"
+07,098,00454,064070,0176,Delhi,46,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): CT piece in MCD ward 176->AC"
+07,098,00454,064071,0176,Delhi,46,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): CT piece in MCD ward 176->AC"
+07,098,00454,064072,0174,Delhi,46,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): CT piece in MCD ward 174->AC"
+07,098,00454,064073,0174,Delhi,46,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): CT piece in MCD ward 174->AC"
+07,098,00454,064074,0173,Delhi,46,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): CT piece in MCD ward 173->AC"
+07,098,00454,064075,0173,Delhi,46,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): CT piece in MCD ward 173->AC"
+07,098,00454,064076,0177,Delhi,47,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): CT piece in MCD ward 177->AC"
+07,098,00454,064076,0178,Delhi,47,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): CT piece in MCD ward 178->AC"
+07,098,00454,064076,0179,Delhi,47,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): CT piece in MCD ward 179->AC"
+07,098,00454,064077,0173,Delhi,46,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): CT piece in MCD ward 173->AC"
+07,098,00454,064078,0173,Delhi,46,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): CT piece in MCD ward 173->AC"
+07,098,00454,064079,0178,Delhi,47,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): CT piece in MCD ward 178->AC"
+07,098,00454,064079,0179,Delhi,47,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): CT piece in MCD ward 179->AC"
+07,098,00455,800441,0153,Delhi,41,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 153->AC"
+07,098,00455,800441,0154,Delhi,41,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 154->AC"
+07,098,00455,800441,0155,Delhi,41,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 155->AC"
+07,098,00455,800441,0156,Delhi,41,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 156->AC"
+07,098,00455,800441,0157,Delhi,42,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 157->AC"
+07,098,00455,800441,0158,Delhi,42,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 158->AC"
+07,098,00455,800441,0159,Delhi,42,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 159->AC"
+07,098,00455,800441,0160,Delhi,42,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 160->AC"
+07,098,00455,800441,0164,Delhi,43,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 164->AC"
+07,098,00455,800441,0192,Delhi,50,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 192->AC"
+07,098,00455,800441,0193,Delhi,51,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 193->AC"
+07,098,00455,800441,0194,Delhi,51,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 194->AC"
+07,098,00455,800441,0205,Delhi,54,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 205->AC"
+07,098,00455,800441,0206,Delhi,54,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 206->AC"
+07,098,00455,800441,0208,Delhi,54,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 208->AC"
+07,098,00455,800442,0001,Delhi,40,1.0,ECI 2008 Sch.XXXI: NDMC charge 1 wholly in AC40 New Delhi
+07,098,00455,800442,0005,Delhi,40,1.0,ECI 2008 Sch.XXXI: NDMC charge 5 wholly in AC40 New Delhi
+07,098,00455,800442,0006,Delhi,40,1.0,ECI 2008 Sch.XXXI: NDMC charge 6 wholly in AC40 New Delhi
+07,098,00455,800442,0007,Delhi,40,1.0,ECI 2008 Sch.XXXI: NDMC charge 7 wholly in AC40 New Delhi
+07,098,00455,064080,0208,Delhi,54,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): CT piece in MCD ward 208->AC"
+07,098,00456,800441,0185,Delhi,49,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 185->AC"
+07,098,00456,800441,0188,Delhi,49,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 188->AC"
+07,098,00456,800441,0190,Delhi,50,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 190->AC"
+07,098,00456,800441,0192,Delhi,50,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 192->AC"
+07,098,00456,800441,0193,Delhi,51,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 193->AC"
+07,098,00456,800441,0194,Delhi,51,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 194->AC"
+07,098,00456,800441,0195,Delhi,51,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 195->AC"
+07,098,00456,800441,0196,Delhi,51,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 196->AC"
+07,098,00456,800441,0197,Delhi,52,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 197->AC"
+07,098,00456,800441,0199,Delhi,52,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 199->AC"
+07,098,00456,800441,0200,Delhi,52,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 200->AC"
+07,098,00456,800441,0203,Delhi,53,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 203->AC"
+07,098,00456,800441,0207,Delhi,54,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 207->AC"
+07,098,00456,800441,0208,Delhi,54,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): DMC ward 208->AC"
+07,098,00456,064081,0208,Delhi,54,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): CT piece in MCD ward 208->AC"
+07,098,00456,064082,0197,Delhi,52,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): CT piece in MCD ward 197->AC"
+07,098,00456,064082,0198,Delhi,52,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): CT piece in MCD ward 198->AC"
+07,098,00456,064083,0203,Delhi,53,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): CT piece in MCD ward 203->AC"
+07,098,00456,064083,0204,Delhi,53,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): CT piece in MCD ward 204->AC"
+07,098,00456,064084,0202,Delhi,53,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): CT piece in MCD ward 202->AC"
+07,098,00456,064085,0201,Delhi,53,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): CT piece in MCD ward 201->AC"
+07,098,00456,064085,0202,Delhi,53,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): CT piece in MCD ward 202->AC"
+07,098,00456,064085,0204,Delhi,53,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): CT piece in MCD ward 204->AC"
+07,098,00456,064086,0207,Delhi,54,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): CT piece in MCD ward 207->AC"
+07,098,00456,064087,0201,Delhi,53,1.0,"MCD ward delimitation order 7-Feb-2007 (272 wards, 4 per AC; verified vs ECI 2008 Sch.XXXI): CT piece in MCD ward 201->AC"

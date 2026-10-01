@@ -1,0 +1,544 @@
+state,lgd_pc_code,lgd_pc_name,eci_pc_no,app_pc_name,app_year_matched,method,ac_share,similarity,delimitation,n_lgd_acs,lgd_eci_pc_code,lgd_eci_pc_code_agrees,eci_pc_no_2024_by_name,app_pc_name_2024,note,lgd_state_code
+Andaman & Nicobar Islands,543,Andaman & Nicobar Islands,1,ANDAMAN & NICOBAR ISLANDS,2024,exact_name,,1.0,2008,0,1,yes,,,,35
+Andhra Pradesh,414,Araku,1,ARAKU,2024,ac_majority,1.0,1.0,2008,7,,,,,,28
+Andhra Pradesh,445,Srikakulam,2,SRIKAKULAM,2024,ac_majority,1.0,1.0,2008,7,1,no,,,,28
+Andhra Pradesh,449,Vizianagaram,3,VIZIANAGARAM,2024,ac_majority,1.0,1.0,2008,7,,,,,,28
+Andhra Pradesh,448,Visakhapatnam,4,VISAKHAPATNAM,2024,ac_majority,1.0,1.0,2008,7,4,yes,,,,28
+Andhra Pradesh,412,Anakapalle,5,ANAKAPALLI,2024,ac_majority,1.0,0.9,2008,7,6,no,,,,28
+Andhra Pradesh,424,Kakinada,6,KAKINADA,2024,ac_majority,1.0,1.0,2008,7,7,no,,,,28
+Andhra Pradesh,411,Amalapuram,7,AMALAPURAM,2024,ac_majority,1.0,1.0,2008,7,9,no,,,,28
+Andhra Pradesh,442,Rajahmundry,8,RAJAHMUNDRY,2024,ac_majority,1.0,1.0,2008,7,8,yes,,,,28
+Andhra Pradesh,437,Narsapuram,9,NARASAPURAM,2024,ac_majority,1.0,0.952,2008,7,10,no,,,,28
+Andhra Pradesh,419,Eluru,10,ELURU,2024,ac_majority,1.0,1.0,2008,7,11,no,,,,28
+Andhra Pradesh,428,Machilipatnam,11,MACHILIPATNAM,2024,ac_majority,1.0,1.0,2008,7,12,no,,,,28
+Andhra Pradesh,447,Vijayawada,12,VIJAYAWADA,2024,ac_majority,1.0,1.0,2008,7,13,no,,,,28
+Andhra Pradesh,420,Guntur,13,GUNTUR,2024,ac_majority,1.0,1.0,2008,7,15,no,,,,28
+Andhra Pradesh,436,Narasaraopet,14,NARASARAOPET,2024,ac_majority,1.0,1.0,2008,7,17,no,,,,28
+Andhra Pradesh,415,Bapatla,15,BAPATLA,2024,ac_majority,1.0,1.0,2008,7,16,no,,,,28
+Andhra Pradesh,440,Ongole,16,ONGOLE,2024,ac_majority,1.0,1.0,2008,7,18,no,,,,28
+Andhra Pradesh,435,Nandyal,17,NANDYAL,2024,ac_majority,1.0,1.0,2008,7,27,no,,,,28
+Andhra Pradesh,427,Kurnool,18,KURNOOL,2024,ac_majority,1.0,1.0,2008,7,26,no,,,,28
+Andhra Pradesh,413,Anantapur,19,ANANTAPUR,2024,ac_majority,1.0,1.0,2008,7,25,no,,,,28
+Andhra Pradesh,421,Hindupur,20,HINDUPUR,2024,ac_majority,1.0,1.0,2008,7,24,no,,,,28
+Andhra Pradesh,423,Kadapa,21,KADAPA,2024,ac_majority,1.0,1.0,2008,7,,,,,,28
+Andhra Pradesh,438,Nellore,22,NELLORE,2024,ac_majority,1.0,1.0,2008,7,19,no,,,,28
+Andhra Pradesh,446,Tirupati,23,TIRUPATI,2024,ac_majority,1.0,1.0,2008,7,20,no,,,,28
+Andhra Pradesh,443,Rajampet,24,RAJAMPET,2024,ac_majority,1.0,1.0,2008,7,22,no,,,,28
+Andhra Pradesh,418,Chittoor,25,CHITTOOR,2024,ac_majority,1.0,1.0,2008,7,21,no,,,,28
+Arunachal Pradesh,194,Arunachal West,1,ARUNACHAL WEST,2024,ac_majority,1.0,1.0,1976-deferred,33,1,yes,,,,12
+Arunachal Pradesh,193,Arunachal East,2,ARUNACHAL EAST,2024,ac_majority,1.0,1.0,1976-deferred,27,,,,,,12
+Assam,210,Karimganj,1,KARIMGANJ,2019,ac_majority,1.0,1.0,unknown,8,1,yes,7,KARIMGANJ,LGD keeps old-map AC units but groups some under the newer map PCs; eci_pc_no = majority of member ACs on the old map (GE 2009-2019 numbering); eci_pc_no_2024_by_name = same-named PC on the 2023-Assam map (membership differs),18
+Assam,215,Silchar,2,SILCHAR,2019,ac_majority,1.0,1.0,unknown,7,2,yes,8,SILCHAR,LGD keeps old-map AC units but groups some under the newer map PCs; eci_pc_no = majority of member ACs on the old map (GE 2009-2019 numbering); eci_pc_no_2024_by_name = same-named PC on the 2023-Assam map (membership differs),18
+Assam,203,Autonomous District,3,AUTONOMOUS DISTRICT,2019,ac_majority,1.0,1.0,unknown,5,3,yes,6,DIPHU,LGD keeps old-map AC units but groups some under the newer map PCs; eci_pc_no = majority of member ACs on the old map (GE 2009-2019 numbering); eci_pc_no_2024_by_name = same-named PC on the 2023-Assam map (membership differs),18
+Assam,205,Dhubri,4,DHUBRI,2019,ac_majority,0.75,1.0,unknown,12,4,yes,2,DHUBRI,LGD keeps old-map AC units but groups some under the newer map PCs; eci_pc_no = majority of member ACs on the old map (GE 2009-2019 numbering); eci_pc_no_2024_by_name = same-named PC on the 2023-Assam map (membership differs),18
+Assam,211,Kokrajhar,5,KOKRAJHAR,2019,ac_majority,1.0,1.0,unknown,9,5,yes,1,KOKRAJHAR,LGD keeps old-map AC units but groups some under the newer map PCs; eci_pc_no = majority of member ACs on the old map (GE 2009-2019 numbering); eci_pc_no_2024_by_name = same-named PC on the 2023-Assam map (membership differs),18
+Assam,204,Barpeta,6,BARPETA,2019,ac_majority,0.7,1.0,unknown,10,6,yes,3,BARPETA,LGD keeps old-map AC units but groups some under the newer map PCs; eci_pc_no = majority of member ACs on the old map (GE 2009-2019 numbering); eci_pc_no_2024_by_name = same-named PC on the 2023-Assam map (membership differs),18
+Assam,207,Gauhati,7,GAUHATI,2019,ac_majority,0.9,1.0,unknown,10,7,yes,5,GUWAHATI,LGD keeps old-map AC units but groups some under the newer map PCs; eci_pc_no = majority of member ACs on the old map (GE 2009-2019 numbering); eci_pc_no_2024_by_name = same-named PC on the 2023-Assam map (membership differs),18
+Assam,213,Mangaldoi,8,MANGALDOI,2019,ac_majority,1.0,1.0,unknown,9,8,yes,4,DARRANG–UDALGURI,LGD keeps old-map AC units but groups some under the newer map PCs; eci_pc_no = majority of member ACs on the old map (GE 2009-2019 numbering); eci_pc_no_2024_by_name = same-named PC on the 2023-Assam map (membership differs),18
+Assam,216,Sonitpur,9,TEZPUR,2019,ac_majority,1.0,0.571,unknown,9,17,no,11,SONITPUR,LGD keeps old-map AC units but groups some under the newer map PCs; eci_pc_no = majority of member ACs on the old map (GE 2009-2019 numbering); eci_pc_no_2024_by_name = same-named PC on the 2023-Assam map (membership differs),18
+Assam,214,Nagaon,10,NOWGONG,2019,ac_majority,0.6,1.0,unknown,10,15,no,9,NAGAON,LGD keeps old-map AC units but groups some under the newer map PCs; eci_pc_no = majority of member ACs on the old map (GE 2009-2019 numbering); eci_pc_no_2024_by_name = same-named PC on the 2023-Assam map (membership differs),18
+Assam,209,Kaziranga,11,KALIABOR,2019,ac_majority,0.667,0.471,unknown,9,10,no,10,KAZIRANGA,LGD keeps old-map AC units but groups some under the newer map PCs; eci_pc_no = majority of member ACs on the old map (GE 2009-2019 numbering); eci_pc_no_2024_by_name = same-named PC on the 2023-Assam map (membership differs),18
+Assam,208,Jorhat,12,JORHAT,2019,ac_majority,0.909,1.0,unknown,11,12,yes,14,JORHAT,LGD keeps old-map AC units but groups some under the newer map PCs; eci_pc_no = majority of member ACs on the old map (GE 2009-2019 numbering); eci_pc_no_2024_by_name = same-named PC on the 2023-Assam map (membership differs),18
+Assam,206,Dibrugarh,13,DIBRUGARH,2019,ac_majority,0.9,1.0,unknown,10,13,yes,13,DIBRUGARH,LGD keeps old-map AC units but groups some under the newer map PCs; eci_pc_no = majority of member ACs on the old map (GE 2009-2019 numbering); eci_pc_no_2024_by_name = same-named PC on the 2023-Assam map (membership differs),18
+Assam,212,Lakhimpur,14,LAKHIMPUR,2019,ac_majority,1.0,1.0,unknown,7,14,yes,12,LAKHIMPUR,LGD keeps old-map AC units but groups some under the newer map PCs; eci_pc_no = majority of member ACs on the old map (GE 2009-2019 numbering); eci_pc_no_2024_by_name = same-named PC on the 2023-Assam map (membership differs),18
+Bihar,191,Valmiki Nagar,1,VALMIKI NAGAR,2024,ac_majority,1.0,1.0,2008,6,,,,,,10
+Bihar,177,Paschim Champaran,2,PASCHIM CHAMPARAN,2024,ac_majority,1.0,1.0,2008,6,,,,,,10
+Bihar,181,Purvi Champaran,3,PURVI CHAMPARAN,2024,ac_majority,1.0,1.0,2008,6,,,,,,10
+Bihar,185,Sheohar,4,SHEOHAR,2024,ac_majority,1.0,1.0,2008,6,12,no,,,,10
+Bihar,186,Sitamarhi,5,SITAMARHI,2024,ac_majority,1.0,1.0,2008,6,11,no,,,,10
+Bihar,171,Madhubani,6,MADHUBANI,2024,ac_majority,1.0,1.0,2008,6,13,no,,,,10
+Bihar,165,Jhanjharpur,7,JHANJHARPUR,2024,ac_majority,1.0,1.0,2008,6,14,no,,,,10
+Bihar,188,Supaul,8,SUPAUL,2024,ac_majority,1.0,1.0,2008,6,,,,,,10
+Bihar,152,Araria,9,ARARIA,2024,ac_majority,1.0,1.0,2008,6,22,no,,,,10
+Bihar,169,Kishanganj,10,KISHANGANJ,2024,ac_majority,1.0,1.0,2008,6,23,no,,,,10
+Bihar,167,Katihar,11,KATIHAR,2024,ac_majority,1.0,1.0,2008,6,25,no,,,,10
+Bihar,180,Purnia,12,PURNIA,2024,ac_majority,1.0,1.0,2008,6,24,no,,,,10
+Bihar,170,Madhepura,13,MADHEPURA,2024,ac_majority,1.0,1.0,2008,6,21,no,,,,10
+Bihar,159,Darbhanga,14,DARBHANGA,2024,ac_majority,1.0,1.0,2008,6,15,no,,,,10
+Bihar,174,Muzaffarpur,15,MUZAFFARPUR,2024,ac_majority,1.0,1.0,2008,6,10,no,,,,10
+Bihar,190,Vaishali,16,VAISHALI,2024,ac_majority,1.0,1.0,2008,6,9,no,,,,10
+Bihar,161,Gopalganj,17,GOPALGANJ,2024,ac_majority,1.0,1.0,2008,6,4,no,,,,10
+Bihar,187,Siwan,18,SIWAN,2024,ac_majority,1.0,1.0,2008,6,5,no,,,,10
+Bihar,172,Maharajganj,19,MAHARAJGANJ,2024,ac_majority,1.0,1.0,2008,6,6,no,,,,10
+Bihar,183,Saran,20,SARAN,2024,ac_majority,1.0,1.0,2008,6,,,,,,10
+Bihar,162,Hajipur,21,HAJIPUR,2024,ac_majority,1.0,1.0,2008,6,8,no,,,,10
+Bihar,189,Ujiarpur,22,UJIARPUR,2024,ac_majority,1.0,1.0,2008,6,,,,,,10
+Bihar,182,Samastipur,23,SAMASTIPUR,2024,ac_majority,1.0,1.0,2008,6,17,no,,,,10
+Bihar,156,Begusarai,24,BEGUSARAI,2024,ac_majority,1.0,1.0,2008,7,30,no,,,,10
+Bihar,168,Khagaria,25,KHAGARIA,2024,ac_majority,1.0,1.0,2008,6,28,no,,,,10
+Bihar,157,Bhagalpur,26,BHAGALPUR,2024,ac_majority,1.0,1.0,2008,6,27,no,,,,10
+Bihar,155,Banka,27,BANKA,2024,ac_majority,1.0,1.0,2008,6,26,no,,,,10
+Bihar,173,Munger,28,MUNGER,2024,ac_majority,1.0,1.0,2008,6,29,no,,,,10
+Bihar,175,Nalanda,29,NALANDA,2024,ac_majority,1.0,1.0,2008,7,31,no,,,,10
+Bihar,179,Patna Sahib,30,PATNA SAHIB,2024,ac_majority,1.0,1.0,2008,6,32,no,,,,10
+Bihar,178,Pataliputra,31,PATALIPUTRA,2024,ac_majority,1.0,1.0,2008,6,,,,,,10
+Bihar,153,Arrah,32,ARRAH,2024,ac_majority,1.0,1.0,2008,7,33,no,,,,10
+Bihar,158,Buxar,33,BUXAR,2024,ac_majority,1.0,1.0,2008,6,34,no,,,,10
+Bihar,184,Sasaram,34,SASARAM,2024,ac_majority,1.0,1.0,2008,6,35,no,,,,10
+Bihar,166,Karakat,35,KARAKAT,2024,ac_majority,1.0,1.0,2008,6,,,,,,10
+Bihar,163,Jahanabad,36,JAHANABAD,2024,ac_majority,1.0,1.0,2008,6,38,no,,,,10
+Bihar,154,Aurangabad,37,AURANGABAD,2024,ac_majority,1.0,1.0,2008,6,37,yes,,,,10
+Bihar,160,Gaya,38,GAYA,2024,ac_majority,1.0,1.0,2008,6,40,no,,,,10
+Bihar,176,Nawada,39,NAWADA,2024,ac_majority,1.0,1.0,2008,6,39,yes,,,,10
+Bihar,164,Jamui,40,JAMUI,2024,ac_majority,1.0,1.0,2008,6,,,,,,10
+Chandigarh,24,Chandigarh,1,CHANDIGARH,2024,exact_name,,1.0,2008,1,1,yes,,,,4
+Chhattisgarh,304,Surguja,1,SARGUJA,2024,ac_majority,1.0,0.857,2008,8,1,yes,,,,22
+Chhattisgarh,301,Raigarh,2,RAIGARH,2024,ac_majority,1.0,1.0,2008,8,2,yes,,,,22
+Chhattisgarh,297,Janjgir Champa,3,JANJGIR-CHAMPA,2024,ac_majority,1.0,1.0,2008,8,3,yes,,,,22
+Chhattisgarh,299,Korba,4,KORBA,2024,ac_majority,1.0,1.0,2008,8,,,,,,22
+Chhattisgarh,295,Bilaspur,5,BILASPUR,2024,ac_majority,1.0,1.0,2008,8,4,no,,,,22
+Chhattisgarh,303,Rajnandgaon,6,RAJNANDGAON,2024,ac_majority,1.0,1.0,2008,8,11,no,,,,22
+Chhattisgarh,296,Durg,7,DURG,2024,ac_majority,1.0,1.0,2008,9,10,no,,,,22
+Chhattisgarh,302,Raipur,8,RAIPUR,2024,ac_majority,1.0,1.0,2008,9,6,no,,,,22
+Chhattisgarh,300,Mahasamund,9,MAHASAMUND,2024,ac_majority,1.0,1.0,2008,8,7,no,,,,22
+Chhattisgarh,294,Bastar,10,BASTAR,2024,ac_majority,1.0,1.0,2008,8,9,no,,,,22
+Chhattisgarh,298,Kanker,11,KANKER,2024,ac_majority,1.0,1.0,2008,8,8,no,,,,22
+Dadra & Nagar Haveli and Daman & Diu,360,Daman & Diu,1,DAMAN AND DIU,2024,exact_name,,1.0,2008,0,1,yes,,,,38
+Dadra & Nagar Haveli and Daman & Diu,361,Dadra & Nagar Haveli,2,DADRA AND NAGAR HAVELI,2024,exact_name,,1.0,2008,0,1,no,,,,38
+Delhi,40,Chandni Chowk,1,CHANDNI CHOWK,2024,ac_majority,1.0,1.0,2008,10,,,,,,7
+Delhi,43,North East Delhi,2,NORTH EAST DELHI,2024,ac_majority,1.0,1.0,2008,10,,,,,,7
+Delhi,41,East Delhi,3,EAST DELHI,2024,ac_majority,1.0,1.0,2008,10,,,,,,7
+Delhi,42,New Delhi,4,NEW DELHI,2024,ac_majority,1.0,1.0,2008,10,,,,,,7
+Delhi,44,North West Delhi,5,NORTH WEST DELHI,2024,ac_majority,1.0,1.0,2008,10,,,,,,7
+Delhi,46,West Delhi,6,WEST DELHI,2024,ac_majority,1.0,1.0,2008,10,,,,,,7
+Delhi,45,South Delhi,7,SOUTH DELHI,2024,ac_majority,1.0,1.0,2008,10,,,,,,7
+Goa,480,North Goa,1,NORTH GOA,2024,ac_majority,1.0,1.0,2008,20,1,yes,,,,30
+Goa,481,South Goa,2,SOUTH GOA,2024,ac_majority,1.0,1.0,2008,20,2,yes,,,,30
+Gujarat,347,Kachchh,1,KACHCHH,2024,ac_majority,1.0,1.0,2008,6,1,yes,,,,24
+Gujarat,338,Banaskantha,2,BANASKANTHA,2024,ac_majority,1.0,1.0,2008,7,14,no,,,,24
+Gujarat,352,Patan,3,PATAN,2024,ac_majority,1.0,1.0,2008,7,13,no,,,,24
+Gujarat,349,Mahesana,4,MAHESANA,2024,ac_majority,1.0,1.0,2008,7,12,no,,,,24
+Gujarat,355,Sabarkantha,5,SABARKANTHA,2024,ac_majority,1.0,1.0,2008,7,15,no,,,,24
+Gujarat,344,Gandhinagar,6,GANDHINAGAR,2024,ac_majority,1.0,1.0,2008,7,11,no,,,,24
+Gujarat,334,Ahmedabad East,7,AHMEDABAD EAST,2024,ac_majority,1.0,1.0,2008,7,,,,,,24
+Gujarat,335,Ahmedabad West,8,AHMEDABAD WEST,2024,ac_majority,1.0,1.0,2008,7,,,,,,24
+Gujarat,357,Surendranagar,9,SURENDRANAGAR,2024,ac_majority,1.0,1.0,2008,7,2,no,,,,24
+Gujarat,354,Rajkot,10,RAJKOT,2024,ac_majority,0.875,1.0,2008,8,4,no,,,,24
+Gujarat,353,Porbandar,11,PORBANDAR,2024,ac_majority,1.0,1.0,2008,7,5,no,,,,24
+Gujarat,345,Jamnagar,12,JAMNAGAR,2024,ac_majority,1.0,1.0,2008,7,3,no,,,,24
+Gujarat,346,Junagadh,13,JUNAGADH,2024,ac_majority,1.0,1.0,2008,7,6,no,,,,24
+Gujarat,336,Amreli,14,AMRELI,2024,ac_majority,1.0,1.0,2008,7,7,no,,,,24
+Gujarat,341,Bhavnagar,15,BHAVNAGAR,2024,ac_majority,1.0,1.0,2008,7,8,no,,,,24
+Gujarat,337,Anand,16,ANAND,2024,ac_majority,1.0,1.0,2008,7,20,no,,,,24
+Gujarat,348,Kheda,17,KHEDA,2024,ac_majority,1.0,1.0,2008,7,,,,,,24
+Gujarat,351,Panchmahal,18,PANCHMAHAL,2024,ac_majority,1.0,1.0,2008,7,,,,,,24
+Gujarat,343,Dahod,19,DAHOD,2024,ac_majority,1.0,1.0,2008,7,17,no,,,,24
+Gujarat,358,Vadodara,20,VADODARA,2024,ac_majority,1.0,1.0,2008,7,22,no,,,,24
+Gujarat,342,Chhota Udaipur,21,CHHOTA UDAIPUR,2024,ac_majority,1.0,1.0,2008,7,21,yes,,,,24
+Gujarat,340,Bharuch,22,BHARUCH,2024,ac_majority,1.0,1.0,2008,7,23,no,,,,24
+Gujarat,339,Bardoli,23,BARDOLI,2024,ac_majority,1.0,1.0,2008,7,,,,,,24
+Gujarat,356,Surat,24,SURAT,2024,ac_majority,1.0,1.0,2008,7,24,yes,,,,24
+Gujarat,350,Navsari,25,NAVSARI,2024,ac_majority,1.0,1.0,2008,7,,,,,,24
+Gujarat,359,Valsad,26,VALSAD,2024,ac_majority,1.0,1.0,2008,7,,,,,,24
+Haryana,30,Ambala,1,AMBALA,2024,ac_majority,1.0,1.0,2008,9,1,yes,,,,6
+Haryana,36,Kurukshetra,2,KURUKSHETRA,2024,ac_majority,1.0,1.0,2008,9,2,yes,,,,6
+Haryana,38,Sirsa,3,SIRSA,2024,ac_majority,1.0,1.0,2008,9,10,no,,,,6
+Haryana,34,Hisar,4,HISAR,2024,ac_majority,1.0,1.0,2008,9,9,no,,,,6
+Haryana,35,Karnal,5,KARNAL,2024,ac_majority,1.0,1.0,2008,9,3,no,,,,6
+Haryana,39,Sonipat,6,SONIPAT,2024,ac_majority,1.0,1.0,2008,9,4,no,,,,6
+Haryana,37,Rohtak,7,ROHTAK,2024,ac_majority,1.0,1.0,2008,9,5,no,,,,6
+Haryana,31,Bhiwani-Mahendragarh,8,BHIWANI-MAHENDRAGARH,2024,ac_majority,1.0,1.0,2008,9,8,yes,,,,6
+Haryana,33,Gurgaon,9,GURGAON,2024,ac_majority,1.0,1.0,2008,9,,,,,,6
+Haryana,32,Faridabad,10,FARIDABAD,2024,ac_majority,1.0,1.0,2008,9,6,no,,,,6
+Himachal Pradesh,8,Kangra,1,KANGRA,2024,ac_majority,1.0,1.0,2008,17,3,no,,,,2
+Himachal Pradesh,9,Mandi,2,MANDI,2024,ac_majority,1.0,1.0,2008,17,2,yes,,,,2
+Himachal Pradesh,7,Hamirpur,3,HAMIRPUR,2024,ac_majority,1.0,1.0,2008,17,4,no,,,,2
+Himachal Pradesh,10,Shimla,4,SHIMLA,2024,ac_majority,1.0,1.0,2008,17,1,no,,,,2
+Jammu & Kashmir,2,Baramulla,1,BARAMULLA,2019,ac_majority,0.882,1.0,unknown,17,1,yes,1,BARAMULLA,LGD keeps old-map AC units but groups some under the newer map PCs; eci_pc_no = majority of member ACs on the old map (GE 2009-2019 numbering); eci_pc_no_2024_by_name = same-named PC on the 2022-JK map (membership differs),1
+Jammu & Kashmir,5,Srinagar,2,SRINAGAR,2019,ac_majority,0.722,1.0,unknown,18,2,yes,2,SRINAGAR,LGD keeps old-map AC units but groups some under the newer map PCs; eci_pc_no = majority of member ACs on the old map (GE 2009-2019 numbering); eci_pc_no_2024_by_name = same-named PC on the 2022-JK map (membership differs),1
+Jammu & Kashmir,1,Anantnag,3,ANANTNAG,2019,ac_majority,1.0,1.0,unknown,11,3,yes,3,ANANTNAG-RAJOURI,LGD keeps old-map AC units but groups some under the newer map PCs; eci_pc_no = majority of member ACs on the old map (GE 2009-2019 numbering); eci_pc_no_2024_by_name = same-named PC on the 2022-JK map (membership differs),1
+Jammu & Kashmir,6,Udhampur,5,UDHAMPUR,2019,ac_majority,1.0,1.0,unknown,17,5,yes,4,UDHAMPUR,LGD keeps old-map AC units but groups some under the newer map PCs; eci_pc_no = majority of member ACs on the old map (GE 2009-2019 numbering); eci_pc_no_2024_by_name = same-named PC on the 2022-JK map (membership differs),1
+Jammu & Kashmir,3,Jammu,6,JAMMU,2019,ac_majority,1.0,1.0,unknown,20,6,yes,5,JAMMU,LGD keeps old-map AC units but groups some under the newer map PCs; eci_pc_no = majority of member ACs on the old map (GE 2009-2019 numbering); eci_pc_no_2024_by_name = same-named PC on the 2022-JK map (membership differs),1
+Jharkhand,270,Rajmahal,1,RAJMAHAL,2024,ac_majority,1.0,1.0,1976-deferred,6,1,yes,,,,20
+Jharkhand,261,Dumka,2,DUMKA,2024,ac_majority,1.0,1.0,1976-deferred,6,2,yes,,,,20
+Jharkhand,263,Godda,3,GODDA,2024,ac_majority,1.0,1.0,1976-deferred,6,3,yes,,,,20
+Jharkhand,259,Chatra,4,CHATRA,2024,ac_majority,1.0,1.0,1976-deferred,5,4,yes,,,,20
+Jharkhand,267,Kodarma,5,KODARMA,2024,ac_majority,1.0,1.0,1976-deferred,6,5,yes,,,,20
+Jharkhand,262,Giridih,6,GIRIDIH,2024,ac_majority,1.0,1.0,1976-deferred,6,6,yes,,,,20
+Jharkhand,260,Dhanbad,7,DHANBAD,2024,ac_majority,1.0,1.0,1976-deferred,6,7,yes,,,,20
+Jharkhand,271,Ranchi,8,RANCHI,2024,ac_majority,1.0,1.0,1976-deferred,6,8,yes,,,,20
+Jharkhand,265,Jamshedpur,9,JAMSHEDPUR,2024,ac_majority,1.0,1.0,1976-deferred,6,9,yes,,,,20
+Jharkhand,272,Singhbhum,10,SINGHBHUM,2024,ac_majority,1.0,1.0,1976-deferred,6,10,yes,,,,20
+Jharkhand,266,Khunti,11,KHUNTI,2024,ac_majority,1.0,1.0,1976-deferred,6,11,yes,,,,20
+Jharkhand,268,Lohardaga,12,LOHARDAGA,2024,ac_majority,1.0,1.0,1976-deferred,5,12,yes,,,,20
+Jharkhand,269,Palamau,13,PALAMAU,2024,ac_majority,1.0,1.0,1976-deferred,6,13,yes,,,,20
+Jharkhand,264,Hazaribagh,14,HAZARIBAGH,2024,ac_majority,1.0,1.0,1976-deferred,5,14,yes,,,,20
+Karnataka,463,Chikkodi,1,CHIKKODI,2024,ac_majority,1.0,1.0,2008,8,26,no,,,,29
+Karnataka,457,Belagavi,2,BELGAUM,2024,ac_majority,1.0,1.0,2008,8,25,no,,,,29
+Karnataka,452,Bagalkot,3,BAGALKOT,2024,ac_majority,1.0,1.0,2008,8,27,no,,,,29
+Karnataka,460,Vijayapura,4,BIJAPUR,2024,ac_majority,1.0,1.0,2008,8,28,no,,,,29
+Karnataka,468,Kalaburagi,5,GULBARGA,2024,ac_majority,1.0,1.0,2008,8,2,no,,,,29
+Karnataka,475,Raichur,6,RAICHUR,2024,ac_majority,1.0,1.0,2008,8,3,no,,,,29
+Karnataka,459,Bidar,7,BIDAR,2024,ac_majority,1.0,1.0,2008,8,1,no,,,,29
+Karnataka,472,Koppal,8,KOPPAL,2024,ac_majority,1.0,1.0,2008,8,4,no,,,,29
+Karnataka,458,Ballari,9,BELLARY,2024,ac_majority,1.0,1.0,2008,8,5,no,,,,29
+Karnataka,470,Haveri,10,HAVERI,2024,ac_majority,1.0,1.0,2008,8,,,,,,29
+Karnataka,467,Dharwad,11,DHARWAD,2024,ac_majority,1.0,1.0,2008,8,,,,,,29
+Karnataka,479,Uttara Kannada,12,UTTARA KANNADA,2024,ac_majority,1.0,1.0,2008,8,,,,,,29
+Karnataka,466,Davanagere,13,DAVANAGERE,2024,ac_majority,1.0,1.0,2008,8,6,no,,,,29
+Karnataka,476,Shivamogga,14,SHIMOGA,2024,ac_majority,1.0,1.0,2008,8,21,no,,,,29
+Karnataka,478,Udupi Chikkamagaluru,15,UDUPI CHIKMAGALUR,2024,ac_majority,1.0,1.0,2008,8,18,no,,,,29
+Karnataka,469,Hassan,16,HASSAN,2024,ac_majority,1.0,1.0,2008,8,19,no,,,,29
+Karnataka,465,Dakshina Kannada,17,DAKSHINA KANNADA,2024,ac_majority,1.0,1.0,2008,8,,,,,,29
+Karnataka,464,Chitradurga,18,CHITRADURGA,2024,ac_majority,1.0,1.0,2008,8,7,no,,,,29
+Karnataka,477,Tumakuru,19,TUMKUR,2024,ac_majority,1.0,1.0,2008,8,8,no,,,,29
+Karnataka,473,Mandya,20,MANDYA,2024,ac_majority,1.0,1.0,2008,8,14,no,,,,29
+Karnataka,474,Mysuru,21,MYSORE,2024,ac_majority,1.0,1.0,2008,8,16,no,,,,29
+Karnataka,461,Chamarajanagar,22,CHAMARAJANAGAR,2024,ac_majority,1.0,1.0,2008,8,15,no,,,,29
+Karnataka,455,Bengaluru Rural,23,BANGALORE RURAL,2024,ac_majority,1.0,1.0,2008,8,,,,,,29
+Karnataka,454,Bengaluru North,24,BANGALORE NORTH,2024,ac_majority,1.0,1.0,2008,8,12,no,,,,29
+Karnataka,453,Bengaluru Central,25,BANGALORE CENTRAL,2024,ac_majority,1.0,1.0,2008,8,,,,,,29
+Karnataka,456,Bengaluru South,26,BANGALORE SOUTH,2024,ac_majority,1.0,1.0,2008,8,,,,,,29
+Karnataka,462,Chikkballapur,27,CHIKKBALLAPUR,2024,ac_majority,1.0,1.0,2008,8,9,no,,,,29
+Karnataka,471,Kolar,28,KOLAR,2024,ac_majority,1.0,1.0,2008,8,10,no,,,,29
+Kerala,490,Kasaragod,1,KASARAGOD,2024,ac_majority,1.0,1.0,2008,7,,,,,,32
+Kerala,489,Kannur,2,KANNUR,2024,ac_majority,1.0,1.0,2008,7,,,,,,32
+Kerala,501,Vadakara,3,VATAKARA,2024,ac_majority,1.0,0.875,2008,7,,,,,,32
+Kerala,502,Wayanad,4,WAYANAD,2024,ac_majority,1.0,1.0,2008,7,,,,,,32
+Kerala,493,Kozhikode,5,KOZHIKODE,2024,ac_majority,1.0,1.0,2008,7,,,,,,32
+Kerala,494,Malappuram,6,MALAPPURAM,2024,ac_majority,1.0,1.0,2008,7,,,,,,32
+Kerala,498,Ponnani,7,PONNANI,2024,ac_majority,1.0,1.0,2008,7,,,,,,32
+Kerala,496,Palakkad,8,PALAKKAD,2024,ac_majority,1.0,1.0,2008,7,,,,,,32
+Kerala,484,Alathur,9,ALATHUR,2024,ac_majority,1.0,1.0,2008,7,,,,,,32
+Kerala,500,Thrissur,10,THRISSUR,2024,ac_majority,1.0,1.0,2008,7,9,no,,,,32
+Kerala,486,Chalakudy,11,CHALAKUDY,2024,ac_majority,1.0,1.0,2008,7,,,,,,32
+Kerala,487,Ernakulam,12,ERNAKULAM,2024,ac_majority,1.0,1.0,2008,7,,,,,,32
+Kerala,488,Idukki,13,IDUKKI,2024,ac_majority,1.0,1.0,2008,7,,,,,,32
+Kerala,492,Kottayam,14,KOTTAYAM,2024,ac_majority,1.0,1.0,2008,7,,,,,,32
+Kerala,483,Alappuzha,15,ALAPPUZHA,2024,ac_majority,1.0,1.0,2008,7,,,,,,32
+Kerala,495,Mavelikkara,16,MAVELIKKARA,2024,ac_majority,1.0,1.0,2008,7,,,,,,32
+Kerala,497,Pathanamthitta,17,PATHANAMTHITTA,2024,ac_majority,1.0,1.0,2008,7,,,,,,32
+Kerala,491,Kollam,18,KOLLAM,2024,ac_majority,1.0,1.0,2008,7,,,,,,32
+Kerala,485,Attingal,19,ATTINGAL,2024,ac_majority,1.0,1.0,2008,7,,,,,,32
+Kerala,499,Thiruvananthapuram,20,THIRUVANANTHAPURAM,2024,ac_majority,1.0,1.0,2008,7,,,,,,32
+Ladakh,4,Ladakh,1,LADAKH,2024,exact_name,,1.0,2008,0,4,no,,,,37
+Lakshadweep,482,Lakshadweep,1,LAKSHADWEEP,2024,exact_name,,1.0,2008,0,,,,,,31
+Madhya Pradesh,323,Morena,1,MORENA,2024,ac_majority,1.0,1.0,2008,8,1,yes,,,,23
+Madhya Pradesh,307,Bhind,2,BHIND,2024,ac_majority,1.0,1.0,2008,8,2,yes,,,,23
+Madhya Pradesh,314,Gwalior,3,GWALIOR,2024,ac_majority,1.0,1.0,2008,8,3,yes,,,,23
+Madhya Pradesh,313,Guna,4,GUNA,2024,ac_majority,1.0,1.0,2008,8,4,yes,,,,23
+Madhya Pradesh,327,Sagar,5,SAGAR,2024,ac_majority,1.0,1.0,2008,8,5,yes,,,,23
+Madhya Pradesh,331,Tikamgarh,6,TIKAMGARH,2024,ac_majority,1.0,1.0,2008,8,,,,,,23
+Madhya Pradesh,310,Damoh,7,DAMOH,2024,ac_majority,1.0,1.0,2008,8,7,yes,,,,23
+Madhya Pradesh,318,Khajuraho,8,KHAJURAHO,2024,ac_majority,1.0,1.0,2008,8,6,no,,,,23
+Madhya Pradesh,328,Satna,9,SATNA,2024,ac_majority,1.0,1.0,2008,7,8,no,,,,23
+Madhya Pradesh,326,Rewa,10,REWA,2024,ac_majority,1.0,1.0,2008,8,9,no,,,,23
+Madhya Pradesh,330,Sidhi,11,SIDHI,2024,ac_majority,1.0,1.0,2008,8,10,no,,,,23
+Madhya Pradesh,329,Shahdol,12,SHAHDOL,2024,ac_majority,1.0,1.0,2008,8,11,no,,,,23
+Madhya Pradesh,317,Jabalpur,13,JABALPUR,2024,ac_majority,1.0,1.0,2008,8,14,no,,,,23
+Madhya Pradesh,321,Mandla,14,MANDLA,2024,ac_majority,1.0,1.0,2008,8,13,no,,,,23
+Madhya Pradesh,305,Balaghat,15,BALAGHAT,2024,ac_majority,1.0,1.0,2008,8,12,no,,,,23
+Madhya Pradesh,309,Chhindwara,16,CHHINDWARA,2024,ac_majority,1.0,1.0,2008,7,16,yes,,,,23
+Madhya Pradesh,315,Hoshangabad,17,HOSHANGABAD,2024,ac_majority,1.0,1.0,2008,8,18,no,,,,23
+Madhya Pradesh,333,Vidisha,18,VIDISHA,2024,ac_majority,1.0,1.0,2008,8,20,no,,,,23
+Madhya Pradesh,308,Bhopal,19,BHOPAL,2024,ac_majority,1.0,1.0,2008,8,19,yes,,,,23
+Madhya Pradesh,324,Rajgarh,20,RAJGARH,2024,ac_majority,1.0,1.0,2008,8,21,no,,,,23
+Madhya Pradesh,311,Dewas,21,DEWAS,2024,ac_majority,1.0,1.0,2008,8,,,,,,23
+Madhya Pradesh,332,Ujjain,22,UJJAIN,2024,ac_majority,1.0,1.0,2008,8,27,no,,,,23
+Madhya Pradesh,322,Mandsour,23,MANDSOUR,2024,ac_majority,1.0,1.0,2008,8,29,no,,,,23
+Madhya Pradesh,325,Ratlam,24,RATLAM,2024,ac_majority,1.0,1.0,2008,8,,,,,,23
+Madhya Pradesh,312,Dhar,25,DHAR,2024,ac_majority,1.0,1.0,2008,8,25,yes,,,,23
+Madhya Pradesh,316,Indore,26,INDORE,2024,ac_majority,1.0,1.0,2008,8,26,yes,,,,23
+Madhya Pradesh,320,Khargone,27,KHARGONE,2024,ac_majority,1.0,1.0,2008,8,24,no,,,,23
+Madhya Pradesh,319,Khandwa,28,KHANDWA,2024,ac_majority,1.0,1.0,2008,8,23,no,,,,23
+Madhya Pradesh,306,Betul,29,BETUL,2024,ac_majority,1.0,1.0,2008,8,17,no,,,,23
+Maharashtra,392,Nandurbar,1,NANDURBAR,2024,ac_majority,1.0,1.0,2008,6,1,yes,,,,27
+Maharashtra,372,Dhule,2,DHULE,2024,ac_majority,1.0,1.0,2008,6,2,yes,,,,27
+Maharashtra,377,Jalgaon,3,JALGAON,2024,ac_majority,1.0,1.0,2008,6,3,yes,,,,27
+Maharashtra,401,Raver,4,RAVER,2024,ac_majority,1.0,1.0,2008,6,4,yes,,,,27
+Maharashtra,370,Buldhana,5,BULDHANA,2024,ac_majority,1.0,1.0,2008,6,5,yes,,,,27
+Maharashtra,363,Akola,6,AKOLA,2024,ac_majority,1.0,1.0,2008,6,6,yes,,,,27
+Maharashtra,364,Amravati,7,AMRAVATI,2024,ac_majority,1.0,1.0,2008,6,7,yes,,,,27
+Maharashtra,408,Wardha,8,WARDHA,2024,ac_majority,1.0,1.0,2008,6,8,yes,,,,27
+Maharashtra,399,Ramtek,9,RAMTEK,2024,ac_majority,1.0,1.0,2008,6,9,yes,,,,27
+Maharashtra,390,Nagpur,10,NAGPUR,2024,ac_majority,1.0,1.0,2008,6,10,yes,,,,27
+Maharashtra,368,Bhandara - Gondiya,11,BHANDARA - GONDIYA,2024,ac_majority,1.0,1.0,2008,6,11,yes,,,,27
+Maharashtra,374,Gadchiroli-Chimur,12,GADCHIROLI-CHIMUR,2024,ac_majority,1.0,1.0,2008,6,12,yes,,,,27
+Maharashtra,371,Chandrapur,13,CHANDRAPUR,2024,ac_majority,1.0,1.0,2008,6,13,yes,,,,27
+Maharashtra,409,Yavatmal-Washim,14,YAVATMAL-WASHIM,2024,ac_majority,1.0,1.0,2008,6,14,yes,,,,27
+Maharashtra,376,Hingoli,15,HINGOLI,2024,ac_majority,1.0,1.0,2008,6,15,yes,,,,27
+Maharashtra,391,Nanded,16,NANDED,2024,ac_majority,1.0,1.0,2008,6,16,yes,,,,27
+Maharashtra,396,Parbhani,17,PARBHANI,2024,ac_majority,1.0,1.0,2008,6,17,yes,,,,27
+Maharashtra,378,Jalna,18,JALNA,2024,ac_majority,1.0,1.0,2008,6,18,yes,,,,27
+Maharashtra,365,Aurangabad,19,AURANGABAD,2024,ac_majority,1.0,1.0,2008,6,19,yes,,,,27
+Maharashtra,373,Dindori,20,DINDORI,2024,ac_majority,1.0,1.0,2008,6,20,yes,,,,27
+Maharashtra,393,Nashik,21,NASHIK,2024,ac_majority,1.0,1.0,2008,6,21,yes,,,,27
+Maharashtra,395,Palghar,22,PALGHAR,2024,ac_majority,1.0,1.0,2008,6,22,yes,,,,27
+Maharashtra,369,Bhiwandi,23,BHIWANDI,2024,ac_majority,1.0,1.0,2008,6,23,yes,,,,27
+Maharashtra,379,Kalyan,24,KALYAN,2024,ac_majority,1.0,1.0,2008,6,24,yes,,,,27
+Maharashtra,407,Thane,25,THANE,2024,ac_majority,1.0,1.0,2008,6,25,yes,,,,27
+Maharashtra,384,Mumbai North,26,MUMBAI NORTH,2024,ac_majority,1.0,1.0,2008,6,26,yes,,,,27
+Maharashtra,387,Mumbai North-West,27,MUMBAI NORTH WEST,2024,ac_majority,1.0,1.0,2008,6,27,yes,,,,27
+Maharashtra,386,Mumbai North-East,28,MUMBAI NORTH EAST,2024,ac_majority,1.0,1.0,2008,6,28,yes,,,,27
+Maharashtra,385,Mumbai North-Central,29,MUMBAI NORTH CENTRAL,2024,ac_majority,1.0,1.0,2008,6,29,yes,,,,27
+Maharashtra,388,Mumbai South-Central,30,MUMBAI SOUTH CENTRAL,2024,ac_majority,1.0,1.0,2008,6,30,yes,,,,27
+Maharashtra,389,Mumbai-South,31,MUMBAI SOUTH,2024,ac_majority,1.0,1.0,2008,6,31,yes,,,,27
+Maharashtra,398,Raigad,32,RAIGAD,2024,ac_majority,1.0,1.0,2008,6,32,yes,,,,27
+Maharashtra,383,Maval,33,MAVAL,2024,ac_majority,1.0,1.0,2008,6,33,yes,,,,27
+Maharashtra,397,Pune,34,PUNE,2024,ac_majority,1.0,1.0,2008,6,34,yes,,,,27
+Maharashtra,366,Baramati,35,BARAMATI,2024,ac_majority,1.0,1.0,2008,6,35,yes,,,,27
+Maharashtra,405,Shirur,36,SHIRUR,2024,ac_majority,1.0,1.0,2008,6,36,yes,,,,27
+Maharashtra,362,Ahmednagar,37,AHMADNAGAR,2024,ac_majority,1.0,0.9,2008,6,37,yes,,,,27
+Maharashtra,404,Shirdi,38,SHIRDI,2024,ac_majority,1.0,1.0,2008,6,38,yes,,,,27
+Maharashtra,367,Beed,39,BEED,2024,ac_majority,1.0,1.0,2008,6,39,yes,,,,27
+Maharashtra,394,Osmanabad,40,OSMANABAD,2024,ac_majority,1.0,1.0,2008,6,40,yes,,,,27
+Maharashtra,381,Latur,41,LATUR,2024,ac_majority,1.0,1.0,2008,6,41,yes,,,,27
+Maharashtra,406,Solapur,42,SOLAPUR,2024,ac_majority,1.0,1.0,2008,6,42,yes,,,,27
+Maharashtra,382,Madha,43,MADHA,2024,ac_majority,1.0,1.0,2008,6,43,yes,,,,27
+Maharashtra,402,Sangli,44,SANGLI,2024,ac_majority,1.0,1.0,2008,6,44,yes,,,,27
+Maharashtra,403,Satara,45,SATARA,2024,ac_majority,1.0,1.0,2008,6,45,yes,,,,27
+Maharashtra,400,Ratnagiri - Sindhudurg,46,RATNAGIRI - SINDHUDURG,2024,ac_majority,1.0,1.0,2008,6,46,yes,,,,27
+Maharashtra,380,Kolhapur,47,KOLHAPUR,2024,ac_majority,1.0,1.0,2008,6,47,yes,,,,27
+Maharashtra,375,Hatkanangle,48,HATKANANGLE,2024,ac_majority,1.0,1.0,2008,6,48,yes,,,,27
+Manipur,196,Inner Manipur,1,INNER MANIPUR,2024,ac_majority,1.0,1.0,1976-deferred,32,1,yes,,,,14
+Manipur,197,Outer Manipur,2,OUTER MANIPUR,2024,ac_majority,1.0,1.0,1976-deferred,28,2,yes,,,,14
+Meghalaya,201,Shillong,1,SHILLONG,2024,ac_majority,1.0,1.0,2008,36,1,yes,,,,17
+Meghalaya,202,Tura,2,TURA,2024,ac_majority,1.0,1.0,2008,24,2,yes,,,,17
+Mizoram,198,Mizoram,1,MIZORAM,2024,ac_majority,1.0,1.0,2008,40,1,yes,,,,15
+Nagaland,195,Nagaland,1,NAGALAND,2024,ac_majority,1.0,1.0,1976-deferred,60,1,yes,,,,13
+Odisha,275,Bargarh,1,BARGARH,2024,ac_majority,1.0,1.0,2008,7,18,no,,,,21
+Odisha,293,Sundargarh,2,SUNDARGARH,2024,ac_majority,1.0,1.0,2008,7,20,no,,,,21
+Odisha,292,Sambalpur,3,SAMBALPUR,2024,ac_majority,1.0,1.0,2008,7,17,no,,,,21
+Odisha,287,Keonjhar,4,KEONJHAR,2024,ac_majority,1.0,1.0,2008,7,21,no,,,,21
+Odisha,289,Mayurbhanj,5,MAYURBHANJ,2024,ac_majority,1.0,1.0,2008,7,1,no,,,,21
+Odisha,274,Balasore,6,BALASORE,2024,ac_majority,1.0,1.0,2008,7,2,no,,,,21
+Odisha,277,Bhadrak,7,BHADRAK,2024,ac_majority,1.0,1.0,2008,7,3,no,,,,21
+Odisha,283,Jajpur,8,JAJPUR,2024,ac_majority,1.0,1.0,2008,7,4,no,,,,21
+Odisha,281,Dhenkanal,9,DHENKANAL,2024,ac_majority,1.0,1.0,2008,7,19,no,,,,21
+Odisha,279,Bolangir,10,BOLANGIR,2024,ac_majority,1.0,1.0,2008,7,16,no,,,,21
+Odisha,284,Kalahandi,11,KALAHANDI,2024,ac_majority,1.0,1.0,2008,7,14,no,,,,21
+Odisha,290,Nabarangpur,12,NABARANGPUR,2024,ac_majority,1.0,1.0,2008,7,13,no,,,,21
+Odisha,285,Kandhamal,13,KANDHAMAL,2024,ac_majority,1.0,1.0,2008,7,15,no,,,,21
+Odisha,280,Cuttack,14,CUTTACK,2024,ac_majority,1.0,1.0,2008,7,6,no,,,,21
+Odisha,286,Kendrapara,15,KENDRAPARA,2024,ac_majority,1.0,1.0,2008,7,5,no,,,,21
+Odisha,282,Jagatsinghpur,16,JAGATSINGHPUR,2024,ac_majority,1.0,1.0,2008,7,7,no,,,,21
+Odisha,291,Puri,17,PURI,2024,ac_majority,1.0,1.0,2008,7,8,no,,,,21
+Odisha,278,Bhubaneswar,18,BHUBANESWAR,2024,ac_majority,1.0,1.0,2008,7,9,no,,,,21
+Odisha,273,Aska,19,ASKA,2024,ac_majority,1.0,1.0,2008,7,10,no,,,,21
+Odisha,276,Berhampur,20,BERHAMPUR,2024,ac_majority,1.0,1.0,2008,7,11,no,,,,21
+Odisha,288,Koraput,21,KORAPUT,2024,ac_majority,1.0,1.0,2008,7,12,no,,,,21
+Puducherry,542,PUDUCHERRY,1,PUDUCHERRY,2024,ac_majority,1.0,1.0,2008,30,7,no,,,,34
+Punjab,17,Gurdaspur,1,GURDASPUR,2024,ac_majority,1.0,1.0,2008,9,1,yes,,,,3
+Punjab,11,Amritsar,2,AMRITSAR,2024,ac_majority,1.0,1.0,2008,9,2,yes,,,,3
+Punjab,20,Khadoor Sahib,3,KHADOOR SAHIB,2024,ac_majority,1.0,1.0,2008,9,,,,,,3
+Punjab,19,Jalandhar,4,JALANDHAR,2024,ac_majority,1.0,1.0,2008,9,4,yes,,,,3
+Punjab,18,Hoshiarpur,5,HOSHIARPUR,2024,ac_majority,1.0,1.0,2008,9,6,no,,,,3
+Punjab,12,Anandpur Sahib,6,ANANDPUR SAHIB,2024,ac_majority,1.0,1.0,2008,9,,,,,,3
+Punjab,21,Ludhiana,7,LUDHIANA,2024,ac_majority,1.0,1.0,2008,9,9,no,,,,3
+Punjab,15,Fatehgarh Sahib,8,FATEHGARH SAHIB,2024,ac_majority,1.0,1.0,2008,9,,,,,,3
+Punjab,14,Faridkot,9,FARIDKOT,2024,ac_majority,1.0,1.0,2008,9,12,no,,,,3
+Punjab,16,Firozpur,10,FEROZPUR,2024,ac_majority,1.0,0.875,2008,9,13,no,,,,3
+Punjab,13,Bathinda,11,BATHINDA,2024,ac_majority,1.0,1.0,2008,9,11,yes,,,,3
+Punjab,23,Sangrur,12,SANGRUR,2024,ac_majority,1.0,1.0,2008,9,10,no,,,,3
+Punjab,22,Patiala,13,PATIALA,2024,ac_majority,1.0,1.0,2008,9,8,no,,,,3
+Rajasthan,57,Ganganagar,1,GANGANAGAR,2024,ac_majority,1.0,1.0,2008,8,1,yes,,,,8
+Rajasthan,53,Bikaner,2,BIKANER,2024,ac_majority,1.0,1.0,2008,8,2,yes,,,,8
+Rajasthan,55,Churu,3,CHURU,2024,ac_majority,1.0,1.0,2008,8,3,yes,,,,8
+Rajasthan,62,Jhunjhunu,4,JHUNJHUNU,2024,ac_majority,1.0,1.0,2008,8,4,yes,,,,8
+Rajasthan,69,Sikar,5,SIKAR,2024,ac_majority,1.0,1.0,2008,8,5,yes,,,,8
+Rajasthan,59,Jaipur Rural,6,JAIPUR RURAL,2024,ac_majority,1.0,1.0,2008,8,,,,,,8
+Rajasthan,58,Jaipur,7,JAIPUR,2024,ac_majority,1.0,1.0,2008,8,6,no,,,,8
+Rajasthan,48,Alwar,8,ALWAR,2024,ac_majority,1.0,1.0,2008,8,8,yes,,,,8
+Rajasthan,51,Bharatpur,9,BHARATPUR,2024,ac_majority,1.0,1.0,2008,8,9,yes,,,,8
+Rajasthan,64,Karauli-Dholpur,10,KARAULI-DHOLPUR,2024,ac_majority,1.0,1.0,2008,8,,,,,,8
+Rajasthan,56,Dausa,11,DAUSA,2024,ac_majority,1.0,1.0,2008,8,7,no,,,,8
+Rajasthan,70,Tonk-Sawai Madhopur,12,TONK-SAWAI MADHOPUR,2024,ac_majority,1.0,1.0,2008,8,13,no,,,,8
+Rajasthan,47,Ajmer,13,AJMER,2024,ac_majority,1.0,1.0,2008,8,12,no,,,,8
+Rajasthan,66,Nagaur,14,NAGAUR,2024,ac_majority,1.0,1.0,2008,8,25,no,,,,8
+Rajasthan,67,Pali,15,PALI,2024,ac_majority,1.0,1.0,2008,8,21,no,,,,8
+Rajasthan,63,Jodhpur,16,JODHPUR,2024,ac_majority,1.0,1.0,2008,8,24,no,,,,8
+Rajasthan,50,Barmer,17,BARMER,2024,ac_majority,1.0,1.0,2008,8,23,no,,,,8
+Rajasthan,60,Jalore,18,JALORE,2024,ac_majority,1.0,1.0,2008,8,22,no,,,,8
+Rajasthan,71,Udaipur,19,UDAIPUR,2024,ac_majority,1.0,1.0,2008,8,18,no,,,,8
+Rajasthan,49,Banswara,20,BANSWARA,2024,ac_majority,1.0,1.0,2008,8,16,no,,,,8
+Rajasthan,54,Chittorgarh,21,CHITTORGARH,2024,ac_majority,1.0,1.0,2008,8,19,no,,,,8
+Rajasthan,68,Rajsamand,22,RAJSAMAND,2024,ac_majority,1.0,1.0,2008,8,,,,,,8
+Rajasthan,52,Bhilwara,23,BHILWARA,2024,ac_majority,1.0,1.0,2008,8,20,no,,,,8
+Rajasthan,65,Kota,24,KOTA,2024,ac_majority,1.0,1.0,2008,8,14,no,,,,8
+Rajasthan,61,Jhalawar-Baran,25,JHALAWAR-BARAN,2024,ac_majority,1.0,1.0,2008,8,15,no,,,,8
+Sikkim,192,Sikkim,1,SIKKIM,2024,ac_majority,1.0,1.0,2008,31,1,yes,,,,11
+Tamil Nadu,537,Tiruvallur,1,THIRUVALLUR,2024,ac_majority,1.0,1.0,2008,6,,,,,,33
+Tamil Nadu,506,Chennai North,2,CHENNAI NORTH,2024,ac_majority,1.0,1.0,2008,6,1,no,,,,33
+Tamil Nadu,507,Chennai South,3,CHENNAI SOUTH,2024,ac_majority,1.0,1.0,2008,6,3,yes,,,,33
+Tamil Nadu,505,Chennai Central,4,CHENNAI CENTRAL,2024,ac_majority,1.0,1.0,2008,6,2,no,,,,33
+Tamil Nadu,529,Sriperumbudur,5,SRIPERUMBUDUR,2024,ac_majority,1.0,1.0,2008,6,4,no,,,,33
+Tamil Nadu,515,Kancheepuram,6,KANCHEEPURAM,2024,ac_majority,1.0,1.0,2008,6,,,,,,33
+Tamil Nadu,503,Arakkonam,7,ARAKKONAM,2024,ac_majority,1.0,1.0,2008,6,6,no,,,,33
+Tamil Nadu,539,Vellore,8,VELLORE,2024,ac_majority,1.0,1.0,2008,6,7,no,,,,33
+Tamil Nadu,518,Krishnagiri,9,KRISHNAGIRI,2024,ac_majority,1.0,1.0,2008,6,14,no,,,,33
+Tamil Nadu,511,Dharmapuri,10,DHARMAPURI,2024,ac_majority,1.0,1.0,2008,6,13,no,,,,33
+Tamil Nadu,538,Tiruvannamalai,11,TIRUVANNAMALAI,2024,ac_majority,1.0,1.0,2008,6,,,,,,33
+Tamil Nadu,504,Arani,12,ARANI,2024,ac_majority,1.0,1.0,2008,6,,,,,,33
+Tamil Nadu,540,Viluppuram,13,VILUPPURAM,2024,ac_majority,1.0,1.0,2008,6,,,,,,33
+Tamil Nadu,514,Kallakurichi,14,KALLAKURICHI,2024,ac_majority,1.0,1.0,2008,6,,,,,,33
+Tamil Nadu,527,Salem,15,SALEM,2024,ac_majority,1.0,1.0,2008,6,16,no,,,,33
+Tamil Nadu,522,Namakkal,16,NAMAKKAL,2024,ac_majority,1.0,1.0,2008,6,,,,,,33
+Tamil Nadu,513,Erode,17,ERODE,2024,ac_majority,1.0,1.0,2008,6,,,,,,33
+Tamil Nadu,536,Tiruppur,18,TIRUPPUR,2024,ac_majority,1.0,1.0,2008,6,,,,,,33
+Tamil Nadu,523,Nilgiris,19,NILGIRIS,2024,ac_majority,1.0,1.0,2008,6,18,no,,,,33
+Tamil Nadu,509,Coimbatore,20,COIMBATORE,2024,ac_majority,1.0,1.0,2008,6,20,yes,,,,33
+Tamil Nadu,525,Pollachi,21,POLLACHI,2024,ac_majority,1.0,1.0,2008,6,21,yes,,,,33
+Tamil Nadu,512,Dindigul,22,DINDIGUL,2024,ac_majority,1.0,1.0,2008,6,23,no,,,,33
+Tamil Nadu,517,Karur,23,KARUR,2024,ac_majority,1.0,1.0,2008,6,26,no,,,,33
+Tamil Nadu,534,Tiruchirappalli,24,TIRUCHIRAPPALLI,2024,ac_majority,1.0,1.0,2008,6,27,no,,,,33
+Tamil Nadu,524,Perambalur,25,PERAMBALUR,2024,ac_majority,1.0,1.0,2008,6,28,no,,,,33
+Tamil Nadu,510,Cuddalore,26,CUDDALORE,2024,ac_majority,1.0,1.0,2008,6,11,no,,,,33
+Tamil Nadu,508,Chidambaram,27,CHIDAMBARAM,2024,ac_majority,1.0,1.0,2008,6,12,no,,,,33
+Tamil Nadu,520,Mayiladuthurai,28,MAYILADUTHURAI,2024,ac_majority,1.0,1.0,2008,6,29,no,,,,33
+Tamil Nadu,521,Nagapattinam,29,NAGAPATTINAM,2024,ac_majority,1.0,1.0,2008,6,30,no,,,,33
+Tamil Nadu,531,Thanjavur,30,THANJAVUR,2024,ac_majority,1.0,1.0,2008,6,31,no,,,,33
+Tamil Nadu,528,Sivaganga,31,SIVAGANGA,2024,ac_majority,1.0,1.0,2008,6,33,no,,,,33
+Tamil Nadu,519,Madurai,32,MADURAI,2024,ac_majority,1.0,1.0,2008,6,24,no,,,,33
+Tamil Nadu,532,Theni,33,THENI,2024,ac_majority,1.0,1.0,2008,6,,,,,,33
+Tamil Nadu,541,Virudhunagar,34,VIRUDHUNAGAR,2024,ac_majority,1.0,1.0,2008,6,,,,,,33
+Tamil Nadu,526,Ramanathapuram,35,RAMANATHAPURAM,2024,ac_majority,1.0,1.0,2008,6,34,no,,,,33
+Tamil Nadu,533,Thoothukkudi,36,THOOTHUKKUDI,2024,ac_majority,1.0,1.0,2008,6,,,,,,33
+Tamil Nadu,530,Tenkasi,37,TENKASI,2024,ac_majority,1.0,1.0,2008,6,37,yes,,,,33
+Tamil Nadu,535,Tirunelveli,38,TIRUNELVELI,2024,ac_majority,1.0,1.0,2008,6,36,no,,,,33
+Tamil Nadu,516,Kanniyakumari,39,KANNIYAKUMARI,2024,ac_majority,1.0,1.0,2008,6,,,,,,33
+Telangana,410,Adilabad,1,ADILABAD,2024,ac_majority,1.0,1.0,2008,7,35,no,,,,36
+Telangana,441,Peddapalle,2,PEDDAPALLE,2024,ac_majority,1.0,1.0,2008,7,36,no,,,,36
+Telangana,425,Karimnagar,3,KARIMNAGAR,2024,ac_majority,1.0,1.0,2008,7,37,no,,,,36
+Telangana,439,Nizamabad,4,NIZAMABAD,2024,ac_majority,1.0,1.0,2008,7,34,no,,,,36
+Telangana,451,Zahirabad,5,ZAHIRABAD,2024,ac_majority,1.0,1.0,2008,7,,,,,,36
+Telangana,432,Medak,6,MEDAK,2024,ac_majority,1.0,1.0,2008,7,33,no,,,,36
+Telangana,431,Malkajgiri,7,MALKAJGIRI,2024,ac_majority,1.0,1.0,2008,7,,,,,,36
+Telangana,444,Secunderabad,8,SECUNDERABAD,2024,ac_majority,1.0,1.0,2008,7,31,no,,,,36
+Telangana,422,Hyderabad,9,HYDERABAD,2024,ac_majority,1.0,1.0,2008,7,30,no,,,,36
+Telangana,417,Chevella,10,CHEVELLA,2024,ac_majority,1.0,1.0,2008,7,,,,,,36
+Telangana,430,Mahabubnagar,11,MAHBUBNAGAR,2024,ac_majority,1.0,1.0,2008,7,29,no,,,,36
+Telangana,433,Nagarkurnool,12,NAGARKURNOOL,2024,ac_majority,1.0,1.0,2008,7,28,no,,,,36
+Telangana,434,Nalgonda,13,NALGONDA,2024,ac_majority,1.0,1.0,2008,7,41,no,,,,36
+Telangana,416,Bhongir,14,BHONGIR,2024,ac_majority,1.0,1.0,2008,7,,,,,,36
+Telangana,450,Warangal,15,WARANGAL,2024,ac_majority,1.0,1.0,2008,7,39,no,,,,36
+Telangana,429,Mahabubabad,16,MAHABUBABAD,2024,ac_majority,1.0,1.0,2008,7,,,,,,36
+Telangana,426,Khammam,17,KHAMMAM,2024,ac_majority,1.0,1.0,2008,7,40,no,,,,36
+Tripura,200,Tripura West,1,TRIPURA WEST,2024,ac_majority,1.0,1.0,2008,30,1,yes,,,,16
+Tripura,199,Tripura East,2,TRIPURA EAST,2024,ac_majority,1.0,1.0,2008,30,2,yes,,,,16
+Uttar Pradesh,142,Saharanpur,1,SAHARANPUR,2024,ac_majority,1.0,1.0,2008,5,80,no,,,,9
+Uttar Pradesh,116,Kairana,2,KAIRANA,2024,ac_majority,1.0,1.0,2008,5,79,no,,,,9
+Uttar Pradesh,134,Muzaffarnagar,3,MUZAFFARNAGAR,2024,ac_majority,1.0,1.0,2008,5,78,no,,,,9
+Uttar Pradesh,91,Bijnor,4,BIJNOR,2024,ac_majority,1.0,1.0,2008,5,1,no,,,,9
+Uttar Pradesh,135,Nagina,5,NAGINA,2024,ac_majority,1.0,1.0,2008,5,,,,,,9
+Uttar Pradesh,133,Moradabad,6,MORADABAD,2024,ac_majority,1.0,1.0,2008,5,3,no,,,,9
+Uttar Pradesh,140,Rampur,7,RAMPUR,2024,ac_majority,1.0,1.0,2008,5,4,no,,,,9
+Uttar Pradesh,144,Sambhal,8,SAMBHAL,2024,ac_majority,1.0,1.0,2008,5,5,no,,,,9
+Uttar Pradesh,78,Amroha,9,AMROHA,2024,ac_majority,1.0,1.0,2008,5,2,no,,,,9
+Uttar Pradesh,129,Meerut,10,MEERUT,2024,ac_majority,1.0,1.0,2008,5,76,no,,,,9
+Uttar Pradesh,82,Baghpat,11,BAGHPAT,2024,ac_majority,1.0,1.0,2008,5,77,no,,,,9
+Uttar Pradesh,105,Ghaziabad,12,GHAZIABAD,2024,ac_majority,1.0,1.0,2008,5,,,,,,9
+Uttar Pradesh,104,Gautam Buddha Nagar,13,GAUTAM BUDDH NAGAR,2024,ac_majority,1.0,0.97,2008,5,,,,,,9
+Uttar Pradesh,92,Bulandshahr,14,BULANDSHAHR,2024,ac_majority,1.0,1.0,2008,5,74,no,,,,9
+Uttar Pradesh,74,Aligarh,15,ALIGARH,2024,ac_majority,1.0,1.0,2008,5,72,no,,,,9
+Uttar Pradesh,112,Hathras,16,HATHRAS,2024,ac_majority,1.0,1.0,2008,5,71,no,,,,9
+Uttar Pradesh,128,Mathura,17,MATHURA,2024,ac_majority,1.0,1.0,2008,5,70,no,,,,9
+Uttar Pradesh,72,Agra,18,AGRA,2024,ac_majority,1.0,1.0,2008,5,69,no,,,,9
+Uttar Pradesh,102,Fatehpur Sikri,19,FATEHPUR SIKRI,2024,ac_majority,1.0,1.0,2008,5,,,,,,9
+Uttar Pradesh,103,Firozabad,20,FIROZABAD,2024,ac_majority,1.0,1.0,2008,5,68,no,,,,9
+Uttar Pradesh,127,Mainpuri,21,MAINPURI,2024,ac_majority,1.0,1.0,2008,5,65,no,,,,9
+Uttar Pradesh,97,Etah,22,ETAH,2024,ac_majority,1.0,1.0,2008,5,67,no,,,,9
+Uttar Pradesh,81,Badaun,23,BADAUN,2024,ac_majority,1.0,1.0,2008,5,6,no,,,,9
+Uttar Pradesh,79,Aonla,24,AONLA,2024,ac_majority,1.0,1.0,2008,5,7,no,,,,9
+Uttar Pradesh,88,Bareilly,25,BAREILLY,2024,ac_majority,1.0,1.0,2008,5,8,no,,,,9
+Uttar Pradesh,137,Pilibhit,26,PILIBHIT,2024,ac_majority,1.0,1.0,2008,5,9,no,,,,9
+Uttar Pradesh,146,Shahjahanpur,27,SHAHJAHANPUR,2024,ac_majority,1.0,1.0,2008,6,10,no,,,,9
+Uttar Pradesh,121,Kheri,28,KHERI,2024,ac_majority,1.0,1.0,2008,5,11,no,,,,9
+Uttar Pradesh,95,Dhaurahra,29,DHAURAHRA,2024,ac_majority,1.0,1.0,2008,5,,,,,,9
+Uttar Pradesh,148,Sitapur,30,SITAPUR,2024,ac_majority,1.0,1.0,2008,5,13,no,,,,9
+Uttar Pradesh,111,Hardoi,31,HARDOI,2024,ac_majority,1.0,1.0,2008,5,15,no,,,,9
+Uttar Pradesh,131,Misrikh,32,MISRIKH,2024,ac_majority,1.0,1.0,2008,5,14,no,,,,9
+Uttar Pradesh,150,Unnao,33,UNNAO,2024,ac_majority,1.0,1.0,2008,6,18,no,,,,9
+Uttar Pradesh,132,Mohanlalganj,34,MOHANLALGANJ,2024,ac_majority,1.0,1.0,2008,5,17,no,,,,9
+Uttar Pradesh,124,Lucknow,35,LUCKNOW,2024,ac_majority,1.0,1.0,2008,5,16,no,,,,9
+Uttar Pradesh,139,Rae Bareli,36,RAE BARELI,2024,ac_majority,1.0,1.0,2008,5,19,no,,,,9
+Uttar Pradesh,77,Amethi,37,AMETHI,2024,ac_majority,1.0,1.0,2008,5,21,no,,,,9
+Uttar Pradesh,149,Sultanpur,38,SULTANPUR,2024,ac_majority,1.0,1.0,2008,5,22,no,,,,9
+Uttar Pradesh,138,Pratapgarh,39,PRATAPGARH,2024,ac_majority,1.0,1.0,2008,5,20,no,,,,9
+Uttar Pradesh,100,Farrukhabad,40,FARRUKHABAD,2024,ac_majority,1.0,1.0,2008,5,64,no,,,,9
+Uttar Pradesh,98,Etawah,41,ETAWAH,2024,ac_majority,1.0,1.0,2008,5,62,no,,,,9
+Uttar Pradesh,118,Kannauj,42,KANNAUJ,2024,ac_majority,1.0,1.0,2008,5,63,no,,,,9
+Uttar Pradesh,119,Kanpur,43,KANPUR,2024,ac_majority,1.0,1.0,2008,5,61,no,,,,9
+Uttar Pradesh,73,Akbarpur,44,AKBARPUR,2024,ac_majority,1.0,1.0,2008,5,23,no,,,,9
+Uttar Pradesh,113,Jalaun,45,JALAUN,2024,ac_majority,1.0,1.0,2008,5,58,no,,,,9
+Uttar Pradesh,115,Jhansi,46,JHANSI,2024,ac_majority,1.0,1.0,2008,5,57,no,,,,9
+Uttar Pradesh,110,Hamirpur,47,HAMIRPUR,2024,ac_majority,1.0,1.0,2008,5,56,no,,,,9
+Uttar Pradesh,85,Banda,48,BANDA,2024,ac_majority,1.0,1.0,2008,5,55,no,,,,9
+Uttar Pradesh,101,Fatehpur,49,FATEHPUR,2024,ac_majority,1.0,1.0,2008,6,54,no,,,,9
+Uttar Pradesh,120,Kaushambi,50,KAUSHAMBI,2024,ac_majority,1.0,1.0,2008,5,,,,,,9
+Uttar Pradesh,136,Phulpur,51,PHULPUR,2024,ac_majority,1.0,1.0,2008,5,51,yes,,,,9
+Uttar Pradesh,75,Allahabad,52,ALLAHABAD,2024,ac_majority,1.0,1.0,2008,5,52,yes,,,,9
+Uttar Pradesh,87,Barabanki,53,BARABANKI,2024,ac_majority,1.0,1.0,2008,5,25,no,,,,9
+Uttar Pradesh,99,Faizabad,54,FAIZABAD,2024,ac_majority,1.0,1.0,2008,5,24,no,,,,9
+Uttar Pradesh,76,Ambedkar Nagar,55,AMBEDKAR NAGAR,2024,ac_majority,1.0,1.0,2008,5,,,,,,9
+Uttar Pradesh,83,Bahraich,56,BAHRAICH,2024,ac_majority,1.0,1.0,2008,5,27,no,,,,9
+Uttar Pradesh,117,Kaiserganj,57,KAISERGANJ,2024,ac_majority,1.0,1.0,2008,5,26,no,,,,9
+Uttar Pradesh,147,Shrawasti,58,SHRAWASTI,2024,ac_majority,1.0,1.0,2008,5,,,,,,9
+Uttar Pradesh,108,Gonda,59,GONDA,2024,ac_majority,1.0,1.0,2008,5,29,no,,,,9
+Uttar Pradesh,96,Domariyaganj,60,DOMARIYAGANJ,2024,ac_majority,1.0,1.0,2008,5,31,no,,,,9
+Uttar Pradesh,89,Basti,61,BASTI,2024,ac_majority,1.0,1.0,2008,5,30,no,,,,9
+Uttar Pradesh,145,Sant Kabir Nagar,62,SANT KABIR NAGAR,2024,ac_majority,1.0,1.0,2008,5,,,,,,9
+Uttar Pradesh,126,Maharajganj,63,MAHARAJGANJ,2024,ac_majority,1.0,1.0,2008,5,35,no,,,,9
+Uttar Pradesh,109,Gorakhpur,64,GORAKHPUR,2024,ac_majority,1.0,1.0,2008,5,34,no,,,,9
+Uttar Pradesh,122,Kushi Nagar,65,KUSHI NAGAR,2024,ac_majority,1.0,1.0,2008,5,,,,,,9
+Uttar Pradesh,94,Deoria,66,DEORIA,2024,ac_majority,1.0,1.0,2008,5,37,no,,,,9
+Uttar Pradesh,86,Bansgaon,67,BANSGAON,2024,ac_majority,1.0,1.0,2008,5,33,no,,,,9
+Uttar Pradesh,123,Lalganj,68,LALGANJ,2024,ac_majority,1.0,1.0,2008,5,42,no,,,,9
+Uttar Pradesh,80,Azamgarh,69,AZAMGARH,2024,ac_majority,1.0,1.0,2008,5,41,no,,,,9
+Uttar Pradesh,107,Ghosi,70,GHOSI,2024,ac_majority,1.0,1.0,2008,5,40,no,,,,9
+Uttar Pradesh,143,Salempur,71,SALEMPUR,2024,ac_majority,1.0,1.0,2008,5,38,no,,,,9
+Uttar Pradesh,84,Ballia,72,BALLIA,2024,ac_majority,1.0,1.0,2008,5,39,no,,,,9
+Uttar Pradesh,114,Jaunpur,73,JAUNPUR,2024,ac_majority,1.0,1.0,2008,5,44,no,,,,9
+Uttar Pradesh,125,Machhlishahr,74,MACHHLISHAHR,2024,ac_majority,1.0,1.0,2008,5,43,no,,,,9
+Uttar Pradesh,106,Ghazipur,75,GHAZIPUR,2024,ac_majority,1.0,1.0,2008,5,46,no,,,,9
+Uttar Pradesh,93,Chandauli,76,CHANDAULI,2024,ac_majority,1.0,1.0,2008,5,47,no,,,,9
+Uttar Pradesh,151,Varanasi,77,VARANASI,2024,ac_majority,1.0,1.0,2008,5,48,no,,,,9
+Uttar Pradesh,90,Bhadohi,78,BHADOHI,2024,ac_majority,1.0,1.0,2008,5,,,,,,9
+Uttar Pradesh,130,Mirzapur,79,MIRZAPUR,2024,ac_majority,1.0,1.0,2008,5,50,no,,,,9
+Uttar Pradesh,141,Robertsganj,80,ROBERTSGANJ,2024,ac_majority,1.0,1.0,2008,5,49,no,,,,9
+Uttarakhand,29,Tehri Garhwal,1,TEHRI GARHWAL,2024,ac_majority,1.0,1.0,2008,14,1,yes,,,,5
+Uttarakhand,26,Garhwal,2,GARHWAL,2024,ac_majority,1.0,1.0,2008,14,2,yes,,,,5
+Uttarakhand,25,Almora,3,ALMORA,2024,ac_majority,1.0,1.0,2008,14,3,yes,,,,5
+Uttarakhand,28,Nainital-Udhamsingh Nagar,4,NAINITAL-UDHAMSINGH NAGAR,2024,ac_majority,1.0,1.0,2008,14,4,yes,,,,5
+Uttarakhand,27,Hardwar,5,HARDWAR,2024,ac_majority,1.0,1.0,2008,14,5,yes,,,,5
+West Bengal,232,Coochbehar,1,COOCH BEHAR,2024,ac_majority,1.0,1.0,2008,7,1,yes,,,,19
+West Bengal,217,Alipurduars,2,ALIPURDUARS,2024,ac_majority,1.0,1.0,2008,7,2,yes,,,,19
+West Bengal,240,Jalpaiguri,3,JALPAIGURI,2024,ac_majority,1.0,1.0,2008,7,3,yes,,,,19
+West Bengal,233,Darjeeling,4,DARJEELING,2024,ac_majority,1.0,1.0,2008,7,4,yes,,,,19
+West Bengal,254,Raiganj,5,RAIGANJ,2024,ac_majority,1.0,1.0,2008,7,5,yes,,,,19
+West Bengal,221,Balurghat,6,BALURGHAT,2024,ac_majority,1.0,1.0,2008,7,6,yes,,,,19
+West Bengal,249,Maldaha Uttar,7,MALDAHA UTTAR,2024,ac_majority,1.0,1.0,2008,7,,,,,,19
+West Bengal,248,Maldaha Dakshin,8,MALDAHA DAKSHIN,2024,ac_majority,1.0,1.0,2008,7,,,,,,19
+West Bengal,241,Jangipur,9,JANGIPUR,2024,ac_majority,1.0,1.0,2008,7,8,no,,,,19
+West Bengal,220,Baharampur,10,BAHARAMPUR,2024,ac_majority,1.0,1.0,2008,7,10,yes,,,,19
+West Bengal,252,Murshidabad,11,MURSHIDABAD,2024,ac_majority,1.0,1.0,2008,7,9,no,,,,19
+West Bengal,247,Krishnanagar,12,KRISHNANAGAR,2024,ac_majority,1.0,1.0,2008,7,11,no,,,,19
+West Bengal,255,Ranaghat,13,RANAGHAT,2024,ac_majority,1.0,1.0,2008,7,,,,,,19
+West Bengal,222,Bangaon,14,BANGAON,2024,ac_majority,1.0,1.0,2008,7,,,,,,19
+West Bengal,227,Barrackpur,15,BARRACKPORE,2024,ac_majority,1.0,0.857,2008,7,19,no,,,,19
+West Bengal,235,Dum Dum,16,DUM DUM,2024,ac_majority,1.0,1.0,2008,7,20,no,,,,19
+West Bengal,224,Barasat,17,BARASAT,2024,ac_majority,1.0,1.0,2008,7,13,no,,,,19
+West Bengal,228,Basirhat,18,BASIRHAT,2024,ac_majority,1.0,1.0,2008,7,14,no,,,,19
+West Bengal,242,Jaynagar,19,JOYNAGAR,2024,ac_majority,1.0,0.875,2008,7,15,no,,,,19
+West Bengal,250,Mathurapur,20,MATHURAPUR,2024,ac_majority,1.0,1.0,2008,7,,,,,,19
+West Bengal,234,Diamond Harbour,21,DIAMOND HARBOUR,2024,ac_majority,1.0,1.0,2008,7,17,no,,,,19
+West Bengal,239,Jadavpur,22,JADAVPUR,2024,ac_majority,1.0,1.0,2008,7,18,no,,,,19
+West Bengal,245,Kolkata Dakshin,23,KOLKATA DAKSHIN,2024,ac_majority,1.0,1.0,2008,7,23,yes,,,,19
+West Bengal,246,Kolkata Uttar,24,KOLKATA UTTAR,2024,ac_majority,1.0,1.0,2008,7,,,,,,19
+West Bengal,238,Howrah,25,HOWRAH,2024,ac_majority,1.0,1.0,2008,7,24,no,,,,19
+West Bengal,258,Uluberia,26,ULUBERIA,2024,ac_majority,1.0,1.0,2008,7,25,no,,,,19
+West Bengal,256,Sreerampur,27,SERAMPORE,2024,ac_majority,1.0,0.737,2008,7,26,no,,,,19
+West Bengal,237,Hooghly,28,HOOGHLY,2024,ac_majority,1.0,1.0,2008,7,27,no,,,,19
+West Bengal,218,Arambag,29,ARAMBAGH,2024,ac_majority,1.0,1.0,2008,7,28,no,,,,19
+West Bengal,257,Tamluk,30,TAMLUK,2024,ac_majority,1.0,1.0,2008,7,30,yes,,,,19
+West Bengal,244,Kanthi,31,KANTHI,2024,ac_majority,1.0,1.0,2008,7,,,,,,19
+West Bengal,236,Ghatal,32,GHATAL,2024,ac_majority,1.0,1.0,2008,7,,,,,,19
+West Bengal,243,Jhargram,33,JHARGRAM,2024,ac_majority,1.0,1.0,2008,7,33,yes,,,,19
+West Bengal,251,Medinipur,34,MEDINIPUR,2024,ac_majority,1.0,1.0,2008,7,32,no,,,,19
+West Bengal,253,Purulia,35,PURULIA,2024,ac_majority,1.0,1.0,2008,7,34,no,,,,19
+West Bengal,223,Bankura,36,BANKURA,2024,ac_majority,1.0,1.0,2008,7,35,no,,,,19
+West Bengal,230,Bishnupur,37,BISHNUPUR,2024,ac_majority,1.0,1.0,2008,7,36,no,,,,19
+West Bengal,226,Bardhaman Purba,38,BARDHAMAN PURBA,2024,ac_majority,1.0,1.0,2008,7,,,,,,19
+West Bengal,225,Bardhaman - Durgapur,39,BARDHAMAN-DURGAPUR,2024,ac_majority,1.0,1.0,2008,7,39,yes,,,,19
+West Bengal,219,Asansol,40,ASANSOL,2024,ac_majority,1.0,1.0,2008,7,38,no,,,,19
+West Bengal,231,Bolpur,41,BOLPUR,2024,ac_majority,1.0,1.0,2008,7,41,yes,,,,19
+West Bengal,229,Birbhum,42,BIRBHUM,2024,ac_majority,1.0,1.0,2008,7,42,yes,,,,19

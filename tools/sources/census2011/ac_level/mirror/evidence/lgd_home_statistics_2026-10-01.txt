@@ -1,0 +1,26 @@
+Source: https://lgdirectory.gov.in/ (home page, block "Statistical/Analytical Summary"), saved 2026-10-01
+No. of States/Union Territories (UTs)	36
+No. of Districts	784
+No. of Sub-Districts	7092
+No. of Development Blocks	7323
+No. of Villages	677673
+No. of Inhabited Village	658164
+No. of Un-inhabited Villages	18371
+No. of Forest Villages	1138
+No. of Villages (Rural)	642590
+No. of Villages (Urban)	24100
+No. of Rural Local Bodies	262836
+No. of District Panchayats	675
+No. of Block Panchayats	6769
+No. of Gram Panchayats	255392
+No. of Traditional Local Bodies	14163
+No. of District Level Councils	14
+No. of Intermediate Level Councils	47
+No. of Village Level Councils	14102
+No. of Urban Local Bodies	5051
+No. of Municipal Corporations	273
+No. of Municipalities	2006
+No. of Town Panchayats	2420
+No. of Cantonment Boards	60
+No. of Parliament Constituencies	543
+No. of Assembly Constituencies	4116

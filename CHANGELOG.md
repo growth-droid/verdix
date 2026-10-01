@@ -15,6 +15,22 @@ is and how to run it.
 
 ---
 
+## 2026-10-01 — Census figures for each seat, not just its district
+- **Most seats now show their OWN census profile** — 3,832 assembly seat-records and 415 of 543 Lok
+  Sabha seats. Instead of the whole district's numbers, each seat adds up the census villages and
+  town wards that actually lie inside it, so two seats in the same district now look different
+  (Ichchapuram: 3.7% Scheduled Castes, against 9.5% for Srikakulam district as a whole).
+- **Where the seat stands in its state.** The notes now say things like "the highest urban share of 25
+  seats in Andhra Pradesh" or "the 5th-highest Scheduled Caste share of 224 seats".
+- **Big cities placed ward by ward** from official ward lists — Bengaluru, Delhi, Mumbai, Chennai,
+  Kolkata and others. Where a city's wards were redrawn after 2011 and can't be matched, the seat
+  shows the city's average for its city part, and the briefing says how much of the seat that is.
+- **Checked against the voter rolls.** Every seat's population is compared with its number of
+  voters; any seat whose numbers don't fit keeps the district profile rather than showing a wrong
+  figure (about 500 seats, including Jammu & Kashmir 2024 and Assam 2026, which were fought on newer
+  boundaries).
+- Villages are matched to seats using the Government's Local Government Directory.
+
 ## 2026-10-01 — Who lives there: Census 2011 for every seat
 - **A new "The people · Census 2011" section in every constituency briefing.** For every assembly
   and Lok Sabha seat it shows the share of Scheduled Castes and Scheduled Tribes, how urban the area

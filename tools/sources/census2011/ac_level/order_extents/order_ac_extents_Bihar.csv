@@ -1,0 +1,243 @@
+n,name,extent,class
+1,Valmiki Nagar,"CD Blocks Piprasi, Madhubani, Thakrahan & Bhitaha; Gram Panchayats Valmiki Nagar, Laxmipur Rampurwa, Santpur Soharia, Champapur Gonauli, Naurangia Dardari, Mahuawa Katharawa, Harnatand, Balua Chhatraul, Dewaria Taruanwa, Bharachhi, Belahawa Madanpur, Bakuli Panchgwa, Binwalia Bodhser, Nayagaon Rampur, Mangalpur Ausani, Borawal Narawal, Semra Katkuiya, Yamunapur Tadwalia, Jimari Nautanawa & Dholbajwa Laxmipur of Sidhaw CD Block.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+2,Ramnagar (SC),CD Blocks Ramnagar & Gaunaha.,A_whole_subdistricts_and_towns_only
+3,Narkatiaganj,"Gram Panchayats Dhumnagar, Shikarpur, Hardi Tedha, Semari, Manwa Parsi, Chamua, Nautanwa, Dumaria, Binawalia, Maldahiya Pokhariya, Kehunia Roari, Parorahan, Purainia Harsari, Rajpur Tumkaria, Sugauli, Kundilpur, Bheriharwa, Gokhula, Kesharia, Kukura, Serahwa, Rakahi Champapur, Banwaria, Bhasurari & Narkatiaganj (NA) of Narkatiganj CD Block; Gram Panchayats Telpur, Deurawa, Bagahi Basawaria, Dhobini, Gonauli Dumra & Lakar Sisai of Lauriya CD Block.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+4,Bagaha,"CD Block Bagaha inlcluding Nagar Parishad Bagaha; Gram Panchayats Bairagi, Sonbarsha, Vairati Bariarwa, Kharhat Tribhauni, Chamawalia & Paikwalia Maryadpur of Sidhaw CD Block.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+5,Lauriya,"CD Block Yogapatti; Gram Panchayats Siswania, Kataiya, Marahiya Pakari, Mathia, Lauriya, Belwa Lakhanpur, Gobaraura, Bahuarwa, Dhobani Dharampur, Dhamaura, Daniyal Prasauna, Sathi, Singhpur Satawaria, Basantpur & Baswariya Parautola of Lauriya CD Block.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+6,Nautan,CD Blocks Bairiya & Nautan.,A_whole_subdistricts_and_towns_only
+7,Chanpatia,"CD Block Chanpatia; Gram Panchayats Chanayan Bandh, Mahana Gani, Ratanmala, Sarisawa, Barawa Semaraghat, Harpur Garawa, Dumari, Mahanwa Rampurwa, Dhokarahan, Baithania Bhanachak & Nautan Khurd of Majhaulia CD Block.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+8,Bettiah,"CD Block Bettiah; Gram Panchayats Mohaddipur, Majhaulia, Parsa, Bahuarawa, Gudara, Jaukatia, Bakharia, Rulahi, Rajabhar, Karamawa, Lal Saraiya, Ramnagar Bankat, Amawa Majhar, Majharia Sheikh, Ahawar Kuria, Madhopur, Senuwaria & Bishambharpur of Majhaulia CD Block.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+9,Sikta,"CD Blocks Mainatanr & Sikta; Gram Panchayats Barawa Barauli, Somgarh & Bhavta of Narkatiaganj CD Block.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+10,Raxaul,CD Blocks Raxaul & Adapur.,A_whole_subdistricts_and_towns_only
+11,Sugauli,CD Blocks Ramgarhwa & Sugauli.,A_whole_subdistricts_and_towns_only
+12,Narkatia,"CD Blocks Banjaria, Chhauradano (Narkatia) & Bankatwa.",A_whole_subdistricts_and_towns_only
+13,Harsidhi (SC),CD Blocks Turkaulia & Harsidhi.,A_whole_subdistricts_and_towns_only
+14,Govindganj,"CD Blocks Paharpur & Areraj; Gram Panchayats Paschimi Sangrampur, Purbi Sangrampur & Dakshani Bariyaria of Sangrampur CD Block.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+15,Kesaria,"CD Block Kesaria; Gram Panchayats Uttari Bariyaria, Paschhimi Madhubani, Uttari Madhubani, Dakshani Madhubani, Purbi Madhubani, Bhatwalia, Barwa, Bariyaria Tolarajpur, Uttari Bhawanipur, Dakshini Bhawanipur & Dumariya of Sangrampur CD Block; Gram Panchayats Dilawarpur, Rajpur, Darmaha, Raghunathpur, Medan Sirisiya & Pipra Khem of Kalyanpur CD Block.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+16,Kalyanpur,"CD Block Kotwa; Gram Panchayats Parsauni Wazid, Bakhri, Kalyanpur, Barharwa Mahanand, Siswa Shobh, Brindaban, Pakari Dixit, Siswa Kharar, Patna, Gariba, Shambhu Chak, Sitalpur, Koela Belwa, Bhuwan Chhapra, Banshghat, North Gawandra, South Gawandra & Mani Chhapra of Kalyanpur CD Block.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+17,Pipra,"CD Blocks Chakia (Pipra), Tetaria & Mehsi.",A_whole_subdistricts_and_towns_only
+18,Madhuban,"CD Blocks Madhuban, Pakridayal & Phenhara.",A_whole_subdistricts_and_towns_only
+19,Motihari,CD Block Motihari including Nagar Parishad Motihari & Lautnaha (NA) & CD Block Piprakothi.,A_whole_subdistricts_and_towns_only
+20,Chiraia,CD Blocks Chiraiya & Patahi.,A_whole_subdistricts_and_towns_only
+21,Dhaka,CD Blocks Ghorasahan & Dhaka.,A_whole_subdistricts_and_towns_only
+22,Sheohar,"CD Blocks Piprarhi, Sheohar, Dumri Katsari & Purnahiya. (#) Tariani Chowk CD Block of Shoehar District has been included in 30-Belsand AC of Sitamarhi District.",A_whole_subdistricts_and_towns_only
+23,Riga,"CD Blocks Bairgania, Suppi & Riga.",A_whole_subdistricts_and_towns_only
+24,Bathnaha (SC),"CD Blocks Majorganj & Bathnaha; Gram Panchayats Bagha, Khap Khopraha, Marpa, Kanhauli, Kachor, Bhutahi, Madhesra, Ghurghura Hanuman Nagar & Bishanpur Gonahi of Sonbarsha CD Block.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+25,Parihar,"CD Block Parihar; Gram Panchayats Sonbarsa, Purandaha Rajwara Paschimi, Purandaha Rajwara Purvi, Indarwa, Pipra Parsain, Jainagar, Madhiya, Singhwahini, Bhaluaha, Bishunpur Aadhar & Dostia of Sonbarsha CD Block.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+26,Sursand,"CD Blocks Charaut, Sursand & Pupri.",A_whole_subdistricts_and_towns_only
+27,Bajpatti,"CD Blocks Bajpatti & Bokhara; Gram Panchayats Birar, Bhadiyan, Janipur, Bahera Jahidpur, Dorpur, Majhaur, Rasulganj Urf Koili, Nanpur Uttari, Nanpur Dakshini, Dadri, Sirsi & Gauri of Nanpur CD Block.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+28,Sitamarhi,CD Block Dumra.,A_whole_subdistricts_and_towns_only
+29,Runnisaidpur,"CD Block Runnisaidpur; Gram Panchayats Gaura, Mohini, Pandaul Buzurg, Bath Asli & Kauria Raipur of Nanpur CD Block.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+30,Belsand,"CD Blocks Belsand, Parsauni of Sitamarhi District & (#) Tariani Chowk CD Block of Sheohar District.",A_whole_subdistricts_and_towns_only
+31,Harlakhi,"CD Blocks Madhwapur & Harlakhi; Gram Panchayats Karhara, Samada, Salha, Teoth, Mahamadpur, Betauna & Manpaur of Benipatti CD Block.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+32,Benipatti,"CD Block Kaluahi; Gram Panchayats Bishunpur, Basaitha, Behata, Bankata, Pali, Parsauna, Dhagjara, Barhampura, Akaur, Nagwas, Naokarhi, Parkhauli Tikuli, Anrer South, Anrer North, Paraul, Parjuar, Dhanga, Mureth, Nagdah Balain, Kapasia, Barri, Shahpur, Meghben, Benipatti, Ganguli & Kataia of Benipatti CD Block.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+33,Khajauli,"CD Blocks Basopatti & Jainagar; Gram Panchayats Nararh East, Mahua Ekdara, Datwar, Sarabe, Rasidpur, Betakakarghati & Khajauli of Khajauli CD Block.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+34,Babubarhi,"CD Blocks Babubarhi & Ladania; Gram Panchayats Suki, Kanhauli, Bhakua, Chandardih, Inarwa, Chandargobraura North & Chandargobraura South of Khajauli CD Block.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+35,Bisfi,"CD Block Bisfi; Gram Panchayats Satlakha, Rahika, Saurath, Najirpur, Jagatpur, Kakraul North, Kakraul South, Malangia, Basauli, Sapta, Ijra & Hasanpur of Madhubani CD Block.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+36,Madhubani,"CD Block Pandaul; Gram Panchayats Basuara, Bhachhi, Bhavara, Lachhminagar, Sonaur, Maksuda, Khajuri, Shambhuar, Sundarpur Bhitthi, Balia & Madhubani (M) of Madhubani CD Block.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+37,Rajnagar (SC),CD Blocks Rajnagar & Andhratharhi.,A_whole_subdistricts_and_towns_only
+38,Jhanjharpur,"CD Blocks Jhanjharpur & Lakhnaur; Gram Panchayats Pachahi, Parsad, Banki, Bhit Bhagwanpur, Mahasingh Hasauli & Parwalpur of Madhepur CD Block.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+39,Phulparas,"CD Block Ghoghardiha; Gram Panchayats Mahindwar, Dharamdiha, Goriari, Mahathour Khurd, Siswar Barhi, Phulparas & Ramnagar of Phulparas CD Block; Gram Panchayats Sunder Birajit, Matras, Tardiha, Mahisan, Madhepur East, Madhepur West, Nawada, Karhara, Dara, Doalakh, Mahpatia, Basipatti, Garhgaon, Bhakrain, Bath, Bakwa, Bhargawan, Barsham, Bheja & Rohua Sangram of Madhepur CD Block.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+40,Laukaha,"CD Blocks Laukaha & Laukahi; Gram Panchayats Bathnaha, Gohumabairia, Saini, Dhanouja, Sugapatti, Kalapatti & Siswar of Phulparas CD Block.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+41,Nirmali,"CD Blocks Nirmali, Raghopur & Saraigarh Bhaptiyahi.",A_whole_subdistricts_and_towns_only
+42,Pipra,"CD Blocks Kishanpur & Pipra; Gram Panchayats Veena, Laudh, Karhio, Amha, Hardi East, Hardi West of Supaul CD Block.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+43,Supaul,"CD Block Marauna; Gram Panchayats Gopalpur Sire, Bakaur, Ghuran, Baruari, Pipra Khurd, Ramdatt Patti, Balwa, Karnpur, Laukha, Basbitti, Goth Baruari, Ekma, Balha, Bairo, Sukhpur Solhni, Telwa, Bairiya, Chainsinghpatti, Malhni, Parsarma Parsauni & Supaul (M) of Supaul CD Block.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+44,Triveniganj (SC),CD Blocks Pratapganj & Triveniganj.,A_whole_subdistricts_and_towns_only
+45,Chhatapur,CD Blocks Basantpur & Chhatapur.,A_whole_subdistricts_and_towns_only
+46,Narpatganj,"CD Block Narpatganj; Gram Panchayats Bhargama, Jainagar, Khajuri, Kushmaul, Manullahpatti, Paikpar, Raghunathpur North, Raghunathpur South, Rampur Aadi, Shankarpur, Simarbani, Sirsiya Hanumanganj & Sirsiya Kala of Bhargama CD Block.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+47,Raniganj (SC),"CD Block Raniganj; Gram Panchayats Birnagar East, Birnagar West, Dhaneshwari, Haripur Kala, Khutha Baijnathpur, Naya Bhargama & Vishaharia of Bhargama CD Block.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+48,Forbesganj,CD Block Forbesganj.,A_whole_subdistricts_and_towns_only
+49,Araria,CD Block Araria including Nagar Parishad Araria.,A_whole_subdistricts_and_towns_only
+50,Jokihat,"CD Block Jokihat; Gram Panchayats Barahkumba, Bhikha, Nakta Khurd, Pakri, Pechaili, Ramnagar, Sohandar, Suksaina, Majlispur, Kujri & Miyanpur of Palasi CD Block.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+51,Sikti,"CD Blocks Kursakanta & Sikti; Gram Panchayats Balua Kaliyaganj, Baradbatta, Chouri, Dehti North, Dehti South, Dharamganj, Dighli, Kankhudia, Pipra Bijwar & Chahatpur of Palasi CD Block.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+52,Bahadurganj,"CD Blocks Terhagachh & Bahadurganj; Gram Panchayats Patharghatti, Ghangra & Lachhmipur of Dighalbank CD Block.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+53,Thakurganj,"CD Block Thakurganj; Gram Panchayats Singhimari, Lohagarha, Satkauwa, Dighalbank, Dhantola, Karuamani, Mangra, Jagir Padampur, Tarabari Padampur, Ikra, Dahibhat, Atgachhia & Tulshia of Dighalbank CD Block.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+54,Kishanganj,"CD Block Pothia; Gram Panchayats Motihara Toluka, Singhia Kulamani, Halamala, Taisa & Kishanganj (M) of Kishangan CD Block.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+55,Kochadhaman,"CD Block Kochadhamin; Gram Panchayats Belwa, Gachhpara, Chakla, Mehangaon, Daula & Pichhla of Kishanganj CD Block.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+56,Amour,CD Blocks Amour & Baisa.,A_whole_subdistricts_and_towns_only
+57,Baisi,CD Blocks Baisi & Dagarua.,A_whole_subdistricts_and_towns_only
+58,Kasba,"CD Blocks Kasba, Srinagar & Jalalgarh; Gram Panchayats Kohbara, Bela Rikabganj & Jhunni Istambrar of Krityanand Nagar CD Block.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+59,Banmankhi (SC),"CD Block Banmankhi; Gram Panchayats Aurahi, Barhara Kothi, Dibara Dhani, Gouripur, Latraha, Mulkiya, Nipania, Rustampur, Sukhsena East, Sukhsena West & Matihani of Barhara Kothi CD Block.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+60,Rupauli,"CD Blocks Bhawanipur & Rupauli; Gram Panchayats Aurlaha, Bhatsara, Laxmipur, Nathpur, Patraha, Arbanna Chakla, Thari & Basudeopur of Barhara Kothi CD Block.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+61,Dhamdaha,"CD Block Dhamdaha; Gram Panchayats Banbhag Chunapur, Bithnouli Khemchand East, Bithnouli Khemchand West, Ganeshpur, Gangaili, Gowasi, Kajha, Majra, Parora, Rahuwa, Sahara, Satkodariya, Gokulpur, Jagni & Pothia Rampur of Krityanand Nagar CD Block.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+62,Purnia,CD Block Purnia East including Nagar Parishad Purnia East.,A_whole_subdistricts_and_towns_only
+63,Katihar,CD Block Katihar including Nagar Parishad Katihar & CD Block Hasanganj. CD Blocks Kadwa & Dandkhora.,A_whole_subdistricts_and_towns_only
+64,Kadwa,,A_whole_subdistricts_and_towns_only
+65,Balrampur,CD Blocks Balrampur & Barsoi.,A_whole_subdistricts_and_towns_only
+66,Pranpur,CD Blocks Azamnagar & Pranpur.,A_whole_subdistricts_and_towns_only
+67,Manihari (ST),"CD Blocks Mansahi, Manihari & Amdabad.",A_whole_subdistricts_and_towns_only
+68,Barari,"CD Blocks Barari, Sameli & Kursela.",A_whole_subdistricts_and_towns_only
+69,Korha (SC),CD Blocks Falka & Korha.,A_whole_subdistricts_and_towns_only
+70,Alamnagar,"CD Blocks Puraini, Alamnagar & Chausa; Gram Panchayats Rahta Phanhan, Nayanagar, Sahjadpur, Lashkari, Manjora, Jotaili, Khara, Budhma & Gopalpur of Udakishunganj CD Block.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+71,Bihariganj,"CD Blocks Gwalpara & Bihariganj; Gram Panchayats Biriranpal, Madhuban, Rampur Khora, Kishunganj, Lakshmipur, Barahi Anadpura & Pipra Karoti of Uda Kishunganj CD Block; Gram Panchayats Haripur Kala, Digghi, Singiyon, Raghunathpur, Kolhaypatti Dumriya, Rajni, Gangapur, Dinapatti Sakhuwa, Pokhram Parmanadpur, Jorgama, Rampur & Murliganj (NA) of Murliganj CD Block.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+72,Singheshwar (SC),"CD Blocks Singheshwar, Shankarpur & Kumarkhand.",A_whole_subdistricts_and_towns_only
+73,Madhepura,"CD Blocks Ghamharia, Ghailadh, Madhepura; Gram Panchayats Belo, Nadhi, Jitapur, Bhatkhora, Tamot Parsa & Parwa Navtol of Murliganj CD Block.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+74,Sonbarsha (SC),"CD Blocks Patarghat, Sonbarsha & Banma Itahri.",A_whole_subdistricts_and_towns_only
+75,Saharsa,CD Block Kahara including Nagar Parishad Saharsa & CD Block Saur Bazar.,A_whole_subdistricts_and_towns_only
+76,Simri Bakhtiarpur,"CD Blocks Simri Bakhtiarpur & Salkhua; Gram Panchayats Ghoghepur, Jhara, Aeina, Maheshi North, Maheshi South, Rajanpur, Sirwar & Naharwar of Mahishi CD Block.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+77,Mahishi,"CD Blocks Nauhatta & Sattar Katiya; Gram Panchayats Baghwa, Birgaun, Manwar, Telwa West, Telwa East, Bhalahi, Kundah, Mahisarho, Telhar, Pastpar & Arapatti of Mahishi CD Block.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+78,Kusheshwar Asthan (SC),"CD Blocks Kusheshwar Asthan & Kusheshwar Asthan Purbi; Gram Panchayats Uchhti, Afzala, Akbarpur Baink, Sonpur Paghari, Ganaura Tarwara, Ladaho, Pokhram North & Pokhram South of Biraul CD Block.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+79,Gaura Bauram,"CD Blocks Gaura Bauram & Kiratpur; Gram Panchayats Kahua, Neuri, Bhawanipur, Rohar Mahmuda, Parri, Itwa Shivnagar, Supaul, Biraul, Sahsaram, Ramnagar, Dumri, Patania & Saho of Biraul CD Block.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+80,Benipur,"CD Block Benipur; Gram Panchayats Baghauni, Baheri East, Baheri West, Dohat Narayan, Hawidih North, Hawidih South, Hawidih Middle, Samadhpura & Inai of Baheri CD Block; Gram Panchayats Manaur Bhauram, Arga Usri, Dekuli Jagarnathpur, Kamarkala & Bairampur of Biraul CD Block.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+81,Alinagar,"CD Blocks Alinagar, Tardih & Ghanshyampur.",A_whole_subdistricts_and_towns_only
+82,Darbhanga Rural,"CD Block Manigachhi; Gram Panchayats Adalpur, Atihar, Balha, Bijuli, Chhotaipatti, Dhoi, Dularpur, Ghorghatta, Kharua, Khutwara, Loam, Muria, Nainaghat, Sonki & Bhalpatti of Darbhanga CD Block.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+83,Darbhanga,"Gram Panchayats Kabir Chak, Kansi, Ranipur, Sara Mahamad, Shisho East, Shisho West, Basudeopur, Sahbajpur & Darbhanga (M. Corp) of Darbhanga CD Block.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+84,Hayaghat,"CD Block Hayaghat; Gram Panchayats Athar North, Athar South, Baligaon, Bhachhi, Bithauli, Chakwa Bharwari, Dhanauli, Gangdah Shivram, Gujrauli Ramauli, Harhacha, Hathauri North, Hathauri South, Jorja, Mithunia, Nimaithi, Paghari, Susari Turki & Thathopur of Baheri CD Block.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+85,Bahadurpur,CD Blocks Bahadurpur & Hanuman Nagar.,A_whole_subdistricts_and_towns_only
+86,Keoti,"CD Block Keoti; Gram Panchayats Arai Birdipur, Banauli, Bharathi, Bharhulli, Hariharpur East, Hariharpur West, Harpur, Madhopur Basatwara, Kaligaon, Sadhwara, Tektar & Simri of Singhwara CD Block.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+87,Jale,"CD Block Jale; Gram Panchayats Asthua, Bhawanipur, Rajo, Katasa, Katka, Manikauli, Nista, Rampura, Sanahpur, Shankarpur, Singhwara North, Singhwara South & Bharwara of Singhwara CD Block.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+88,Gaighat,"CD Blocks Gaighat & Bandra; Gram Panchayats Katra, Sonpur, Berai South, Dhanaur, Madhepura & Shivdaspur of Katra CD Block.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+89,Aurai,"CD Block Aurai; Gram Panchayats Belpakauna, Berai North, Changel, Hathauri, Jajuar East, Jajuar West, Jajuar Middle, Katai, Khanguradih, Lakhanpur, Nagwara, Pahsaul, Bansghatta, Barri, Tehwara & Bandhapura of Katra CD Block.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+90,Minapur,"CD Block Minapur; Gram Panchayats Garha, Jhaphan, Kafen Chaudhary, Narkatiya, Narma, Patiyasa & Rampur Jaipal of Bochahan CD Block.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+91,Bochahan (SC),"Gram Panchayats Adi Gopalpur, Balthi Rasulpur, Bhootane, Deogan, Karanpur North, Karanpur South, Lohsari, Maidapur, Majhauli, Sahila Rampur, Sarfuddinpur, Unsar & Vishunpur Jagdish of Bochahan CD Block; Gram Panchayats Abdul Nagar Urf Madhopur, Baikatpur, Barajagannath, Bhikhanpur, Chhapra Megh, Dumri, Jamalabad, Jhapahan, Kanauli Vishundutta, Khabra, Manika Harikesh, Manika Vishunpur Chand, Mushahri Alias Radha Nagar, Narauli, Prahladpur, Rajwara Bhagwan, Rohua, Sahbazpur, Shekhpur, Sherpur, Susta & Taraura Gopalpur of Mushahri CD Block.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+92,Sakra (SC),CD Blocks Dholi Muraul & Sakra.,A_whole_subdistricts_and_towns_only
+93,Kurhani,CD Block Kurhani.,A_whole_subdistricts_and_towns_only
+94,Muzaffarpur,"Gram Panchayats Bhagwanpur, Madhubani, Majhauli Khetal, Patahi & Muzaffarpur (M Corp) of Musahari CD Block.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+95,Kanti,CD Blocks Marwan & Kanti.,A_whole_subdistricts_and_towns_only
+96,Baruraj,CD Block Motipur; Gram Panchayats Chochahin Chhapra & Saraiya of Paroo CD Block.,B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+97,Paroo,"CD Block Saraiya; Gram Panchayats Bhagwanpur Simra, Chintamanpur, Jagdishpur Baya, Kamalpura, Koriya Nizamat, Laloo Chhapra, Paroo North, Paroo South, Raghunathpur, Rampur Kesho Alias Malahi, Bajitpur & Mangurahiyan of Paroo CD Block.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+98,Sahebganj,"CD Block Sahebganj; Gram Panchayats Anadpur Kharauni, Bahdinpur, Baijalpur, Chakki Suhagpur, Chandkewari, Dewariya East, Dewariya West, Dharfari, Fatehabad, Gyaspur, Jafarpur, Jaimal Dumri, Kataru, Khutahin, Mohabbatpur, Mohjamma, Neknampur, Pandeh, Usti & Bishunpur Saraiya of Paroo CD Block.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+99,Baikunthpur,"CD Blocks Sidhwalia & Baikunthpur; Gram Panchayats Rampur, Salempur Purvi, Salempur Paschimi, Hasanpur, Sadaua, Pipra & Khajuriya of Barauli CD Block.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+100,Barauli,"CD Block Manjha; Gram Panchayats Mohadipur Pakaria, Dewapur, Sonbarsa, Batardeh, Sarfara, Nawada Chand, Kahla, Moghal Biraicha, Kalyanpur, Sarean Narendra, Belsand, Madhopur, Mahammadpur Nilami, Bagheji, Bishunpura, Larauli & Barauli (NA) of Barauli CD Block.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+101,Gopalganj,"CD Blocks Thawe & Gopalganj; Gram Panchayats Bairia Durg, Uchkagaon, Chhotka Sankhe, Harpur, Sakhekhas, Parsauni Khas, Nawada Parsauni, Luhsi, Jhirwa & Dahibhata of Uchkagaon CD Block.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+102,Kuchaikote,CD Blocks Pachdeuri & Kuchaikote.,A_whole_subdistricts_and_towns_only
+103,Bhore (SC),"CD Blocks Kateya, Bijaipur & Bhore.",A_whole_subdistricts_and_towns_only
+104,Hathua,"CD Blocks Phulwaria & Hathua; Gram Panchayats Jamsar, Trilokpur, Mohaicha, Balesara & Mirganj (NA) of Uchkagaon CD Block.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+105,Siwan,"CD Block Siwan including Nagar Parishad Siwan; Gram Panchayats Lakri, Pakri, Aurae, Lakri Dargah, Kailgarh Uttar, Kailgarh Dakhin, Sunderpur & Hathigai of Barharia CD Block.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+106,Ziradei,"CD Blocks Nautan, Ziradei & Mairwa.",A_whole_subdistricts_and_towns_only
+107,Darauli (SC),"CD Blocks Guthani, Darauli & Andar.",A_whole_subdistricts_and_towns_only
+108,Raghunath- pur,"CD Blocks Hussainganj & Raghunathpur; Gram Panchayats Shekpura, Piyaur, Aranda, Gayghat & Usari Bujurg of Hasanpura CD Block.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+109,Daraunda,"Duraunda CD Block [including villages Mathia, Dipni, Koror & Jagdishpur of Chherhi GP (Part)]; Siswan CD Block; Gram Panchayats Phalpura, Laheji, Mandarapali, Sahuli, Telkhthu, Hasanpura, Pakadi, Rajanpura & Harpur Kotwa of Hasanpura CD Block.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+110,Barharia,"CD Block Pachrukhi; Gram Panchayat Kunwa, Rasulpur, Padrauna Khurd, Koirigawa, Balapur, Madhopur, Barharia, Sadarpur, Tetahli, Nawalpur, Bahuara Kadir, Bahadurpur, Hardobara, Bhamopali, Rachhopali, Rampur, Bhopatpur, Sikandarpur, Bhaluara, Hariharpurlalgarh, Chaukhi Hasan & Dindayalpur of Barharia CD Block.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+111,Goriakothi,"CD Blocks Goriakothi, Lakri Nabiganj & Basantpur.",A_whole_subdistricts_and_towns_only
+112,Maharajganj,CD Blocks Bhagwanpur Hat & Maharajganj.,A_whole_subdistricts_and_towns_only
+113,Ekma,"CD Blocks Lahladpur & Ekma; Gram Panchayats Mohmmadpur, Bhajouna Nachap, Bhalua Bujurg, Mobarakpur, Matiyar, Chephul & Gobrahi of Manjhi CD Block.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+114,Manjhi,"CD Block Jalalpur; Gram Panchayats Sitalpur, Tajpur, Bareja, Madan Sath, Ghorhat, Dumari, Jaitpur, Inayatpur, Nasira, Baleshra, Daudpur, Lejuar, Bangara, Sonbarsa, Marhan, Manjhi East Part, Manjhi West Part & Kouru-Dhouru of Manjhi CD Block; Gram Panchayats Karhi, Manikpura & Lauwa Kala of Baniapur CD Block.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+115,Baniapur,"CD Blocks Baniapur (except Karhi, Manikpura & Lauwa Kala Gram Panchayats) & Mashrakh.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+116,Taraiya,"CD Blocks Panapur, Taraiya & Ishuapur.",A_whole_subdistricts_and_towns_only
+117,Marhaura,CD Blocks Nagra & Marhaura.,A_whole_subdistricts_and_towns_only
+118,Chapra,"CD Block Rivilganj; Gram Panchayats Naini, Fakuli, Karinga, Sadha, Mouna, Tenua, Barhara Mahaji & Chapra (M) of Chapra CD Block.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+119,Garkha (SC),"CD Block Garkha; Gram Panchayats Badlu Tola, Lohari, Purwi Telpa, Sherpur, Bishunupura, Khalpura Bala, Maharajganj, Chirand, Jalalpur, Bhairopur Nijamat, Dumari, Musepur, Raipur Bingawa & Kotwa Patti Rampur of Chapra CD Block.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+120,Amnour,"CD Blocks Amnour & Maker; Gram Panchayats Sobhepur, Pachrukhi, Bheldi, Pachalakh, Chandpura & Saguni of Parsa CD Block.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+121,Parsa,"CD Block Dariapur; Gram Panchayats Shankardih, Anjani, Banouta, Anyay, Baligaw, Marar, Bahar Marar & Parsouna of Parsa CD Block.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+122,Sonepur,CD Blocks Dighwara & Sonepur.,A_whole_subdistricts_and_towns_only
+123,Hajipur,CD Block Hajipur.,A_whole_subdistricts_and_towns_only
+124,Lalganj,CD Blocks Lalganj & Bhagwanpur.,A_whole_subdistricts_and_towns_only
+125,Vaishali,"CD Blocks Vaishali, Paterhi Belsar & Goraul.",A_whole_subdistricts_and_towns_only
+126,Mahua,CD Blocks Mahua & Chehara Kala.,A_whole_subdistricts_and_towns_only
+127,Raja Pakar (SC),"CD Blocks Raja Pakar, Desri & Sahdei Buzurg.",A_whole_subdistricts_and_towns_only
+128,Raghopur,CD Blocks Raghopur & Bidupur.,A_whole_subdistricts_and_towns_only
+129,Mahnar,"CD Block Mahnar; Gram Panchayats Borhan urf Rasulpur Gaus, Basantpur, Mohiuddinpur Garahi, Harprasad, Mahipura, Sohrathi, Mahisaur, Chandsarai, Dihbuchauli, Peerapur, Rasalpur Purushottam, Bishunpur Bedauliya, Saiyad Mahammad urf Salha, Khopi, Arniyan, Hazrat Jandaha, Bahsi Saidpur, Mukundpur Bhath & Loma of Jandaha CD Block.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+130,Patepur (SC),"CD Block Patepur; Gram Panchayats Mansinghpur Bijhrauli, Adalpur, Naree Khurd & Laxmipur Barbatta of Jandaha CD Block.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+131,Kalyanpur (SC),CD Blocks Kalyanpur & Pusa.,A_whole_subdistricts_and_towns_only
+132,Warisnagar,"CD Blocks Warisnagar & Khanpur; Gram Panchayats Madhurapur, Rahtauli, Dahiyar Ranna, Parsa, Bhataura & Dumra Mohan of Shivaji Nagar CD Block.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+133,Samastipur,"CD Block Samastipur & Samastipur (M+OG); Gram Panchayats Shahpur Baghauni, Bherokhara, Tajpur, Adharpur & Baghi of Tajpur CD Block.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+134,Ujiarpur,"CD Block Ujiarpur; Gram Panchayats Sultanpur Ghataho, Chakbahauddin, Mokhtiyarpur Salkhani, Panr, Harishankarpur, Kewanta, Nagargama, Pagra, Nawada, Basariya & Dalsinghsarai (NA) of Dalsinghsarai CD Block.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+135,Morwa,"CD Block Morwa; Gram Panchayats Muradpur Bangra, Gauspur Sarsauna, Kothiya, Manpura, Harishankarpur Baghauni, Madhopur Dhgharua, Kaswe Aahar, Ramapur Maheshpur, Rahimabad, Rajwa & Fatehpur of Tajpur CD Block; Gram Panchayats Sirdilpur Supaul, Hasanpur Surat, Jorpura, Shahpur Undi, Chaksalem, Darba, Imansarai & Bahadurpur Patori of Patori CD Block.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+136,Sarairanjan,CD Blocks Sarairanjan & Vidyapati Nagar.,A_whole_subdistricts_and_towns_only
+137,Mohiuddin- nagar,"CD Blocks Mohiuddinnagar & Mohanpur; Gram Panchayats Tara Dhamaun, Uttri Dhamaun, Dakshini Dhamaun, Inayatpur, Hetanpur, Rupauli, Chaksaho, Harpur Saidabad & Seora of Patori CD Block.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+138,Bibhutipur,"CD Block Bibhutipur; Gram Panchayats Bulakipur, Kamrawn, Malpur Purwaripatti, Rampur Jalalpur, Bambaiya Harlal & Ajnaul of Dalsinghsarai CD Block.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+139,Rosera (SC),"CD Block Rosera; Gram Panchayats Phulhara, Lilhaul, Singhia-I, Singhia-II, Singhia-III, Mahen, Wari, Nirpur Bhaririya, Bangarahta, Hardiya, Mahra, Keothar of Singhia CD Block; Gram Panchayats Shankarpur, Jakhar Dharampur, Ghiwahi, Dasaut, Rahiar North, Rahiar South, Ballipur, Bandhar, Karain, Raniparti & Rajaur Rambhadrapur of Shivaji Nagar CD Block. CD Blocks Hasanpur & Bithan; Gram Panchayat Kundal-I, Kundal-II,",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+140,Hasanpur,"Shalepur, Jahangirpur & Bishnupur Diha of Singhia CD Block.",A_whole_subdistricts_and_towns_only
+141,Cheria - Bariarpur,"CD Blocks Khodabandpur, Chaurahi & Cheria Bariarpur; Gram Panchayats Pahsara (West) & Maheshwara of Nawkothi CD Block.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+142,Bachhwara,"CD Blocks Bhagwanpur, Mansoorchak & Bachhwara.",A_whole_subdistricts_and_towns_only
+143,Teghra,"CD Block Teghra; Gram Panchayats Bihat-I to IV, Malhipur (North), Malhipur (South), Papraur, Garahara-I & II, Simaria-I & II, Rajwara, Amarpur, Peepra Dewas & Hajipur of Barauni CD Block.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+144,Matihani,"CD Blocks Matihani & Shamho Akha Kurha; Gram Panchayats Kaithma, Laduwara, Bhairwar, Chilmil, Dumri, Ulao, Sighaul, Pachmba, Mahmadpur Raghunathpur, Mohan Eghu, Shahpur, Bishanpur, Dhabauli, Bindpur, Puspura, Bahadarpur, Amraur Kiratpur, Rachiyahi & Barauni IOC Township (CT) of Begusarai CD Block; Gram Panchayats Keshawe, Noorpur, Mahna & Mosadpur of Barauni CD Block.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+145,Sahebpur Kamal,CD Blocks Sahebpur Kamal & Balia.,A_whole_subdistricts_and_towns_only
+146,Begusarai,"CD Block Birpur; Gram Panchayats Babhangama, Maida Babhangama, Sahuri, Neenga, Bathauli & of Barauni CD Block; Gram Panchayats Mohanpur, Chandpura, Bandwar, Suja, Sankh, Lakho, Hebatpur, Parna, Kusmaut, Kaith, Jinedpur, Neema, Panhas, Ajhaur, Khamhar, Rajaura & Begusarai (M) of Begusarai CD Block.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+147,Bakhri (SC),"CD Blocks Bakhri, Dandari & Garhpura; Gram Panchayats Pahsara (East), Nawkothi, Hasanpur Bagar, Rajakpur, Bishnupur, Samsa & Dafarpur of Naokothi CD Block.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+148,Alauli (SC),"CD Block Alauli; Gram Panchayats Baraiy, Rani Sakar-Pura, Belasimri, Olapur Gangour, Tetarabad, Jalkoura, Janhagira & Dhusmuri Bishanpur of Khagaria CD Block.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+149,Khagaria,"CD Block Mansi; Gram Panchayats Bhadas Dakshini, Bhadas Uttari, Kasimpur, Mathurapur, Bachhouta, Sanhouli, Ranko, Sansarpur, Gourashakti, Marar Dakshni, Marar Uttari, Rasounk, Uttar Marar, Rahimpur Uttari, Rahimpur Madhya, Rahimpur Dakshin, Labhganva, Kothia & Khagaria (M) of Khagaria CD Block.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+150,Beldaur,"CD Blocks Chautham, Beldaur; Gram Panchayats Banni, Jhiktiya, Samaspur, Maheshkhunt, Pakrail, Maira, Baltara, Pawra, Koela & Borna of Gogri CD Block.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+151,Parbatta,"CD Block Parbatta; Gram Panchayats Ratan, Gogri, Jamalpur North, Jamalpur South, Rampur, Muskipur, Pasraha, Basudeopur, Itahari, Sherchakla, Paikant, Deotha, Gauchhari, Madarpur & Gogri Jamalpur (NA) of Gogri CD Block.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+152,Bihpur,"CD Blocks Narayanpur, Bihpur & Kharik.",A_whole_subdistricts_and_towns_only
+153,Gopalpur,"CD Blocks Gopalpur, Naugachhia, Rangra Chowk & Ismailpur.",A_whole_subdistricts_and_towns_only
+154,Pirpainti (SC),"CD Block Pirpainti; Gram Panchayats Bansipur, Birbanna, Rampur, Krisndaspur, Mohanpur Gogatta, Antichuck, Oriap, Mathurapur, Ramjanipur, Ghogha, Ekdara, Lagma, Salempur Saini, Kurma, Kairia, Nandlalpur, Siya & Sadanandpur Baisa of Kahalgaon CD Block.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+155,Kahalgaon,"CD Blocks Goradih & Sonhoula; Gram Panchayats Parashathdih (Shankarpur Khawas), Kodwar, Janidih, Pakkisarai, Dhanora, Maishamunda, Ekchari, Bholsar, Ogree, Shyampur & Nagar Panchayat Kahalgaon of Kahalgaon CD Block.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+156,Bhagalpur,Bhagalpur (M. Corp) of Jagdishpur CD Block.,A_whole_subdistricts_and_towns_only
+157,Sultanganj,CD Blocks Sultanganj & Shahkund.,A_whole_subdistricts_and_towns_only
+158,Nathnagar,"CD Blocks Nathnagar & Sabour; Gram Panchayats Puraini North, Puraini South, Baluachak Puraini, Sanholi, Baijani, Khiribandh, Jamani, Saino, Bhawanipur Desri, Chandapur, Jagdishpur, Sonuchak-Puraini, Imampur, Shajangi & Habibipur (CT) of Jagdishpur CD Block.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+159,Amarpur,CD Blocks Shambhuganj & Amarpur.,A_whole_subdistricts_and_towns_only
+160,Dhoraiya (SC),CD Blocks Rajoun & Dhoraiya.,A_whole_subdistricts_and_towns_only
+161,Banka,CD Blocks Barahat & Banka.,A_whole_subdistricts_and_towns_only
+162,Katoria (ST),CD Blocks Katoria & Bounsi.,A_whole_subdistricts_and_towns_only
+163,Belhar,"CD Blocks Fullidumar, Belhar & Chandan.",A_whole_subdistricts_and_towns_only
+164,Tarapur,"CD Blocks Asarganj, Tarapur, Tetiha Bamber & Sangrampur; Gram Panchayats Ramankabad (West), Ramankabad (East), Majhgyan, Murade, Gangata, Dariyapur-1 & 2 & Kharagpur (NA) of Kharagpur CD Block.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+165,Munger,CD Block Sadar Munger including Nagar Parishad Munger & CD Block Bariarpur.,A_whole_subdistricts_and_towns_only
+166,Jamalpur,"CD Blocks Jamalpur & Dharhara; Gram Panchayats Teliyadih, Naki, Bahira, Agrahan, Badhouna, Gobadda, Kouriya, Baijalpur, Muderi, Rataitha & Barui of Kharagpur CD Block. 25 - DISTRICT - LAKHISARAI",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+167,Suryagarha,"CD Blocks Pipariya, Suryagarha, Chanan; Gram Panchayats Garhi Bishanpur, Khagaur & Mahisona of Lakshisarai CD Block.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+168,Lakhisarai Sheikhpura,"CD Blocks Ramgarh Chowk, Halsi & Barahiya; Gram Panchayats Amahara, Morma, Balgudar, Savikpur, Kachhiyana, Bilauri, Damodarpur & Lakhisarai (M) of Lakhisarai CD Block. CD Blocks Ghatkusumbha, Chewara and Ariari; Gram Panchayats Mahsar, Puraina, Pachna, Kaithawan, Gagari & Sheikhpura (M) of Sheikhpura CD Block.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+170,Barbigha,"CD Blocks Barbigha and Shekhopursarai; Gram Panchayats Gaway, Audhe, Pain, Lodipur, Kosra, Kusumbha, Kare, Hathiyawan, Mehus & Katari of Sheikhpura CD Block.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+171,Asthawan,"CD Blocks Asthawan, Sarmera, Bind & Katrisarai.",A_whole_subdistricts_and_towns_only
+172,Biharsharif,CD Block Rahui & Bihar (M).,A_whole_subdistricts_and_towns_only
+173,Rajgir (SC),"CD Block Giriyak; Gram Panchayat Nai Pokhar & Rajgir (NA) of Rajgir CD Block; Gram Panchayats Gorawan, Mahuri, Kul Fatehpur, Sabait, Dharhara, Nanand, Karianna, Ghostawan, Barakar, Pawadih, Gorma & Silao (NA) of Silao CD Block; Gram Panchayats Sakraul, Korai, Tungi, Muraura, Mahamadpur Nakatpura, Tiuri, Chhabilapur, Pawa, Hargawan, Singthu, Palatpura, Tetrawan, Paroha & Sarbahadi of Bihar CD Block.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+174,Islampur,CD Blocks Islampur & Ekangarsarai.,A_whole_subdistricts_and_towns_only
+175,Hilsa,"CD Blocks Hilsa, Karai Parsurai, Tharthari & Parbalpur.",A_whole_subdistricts_and_towns_only
+176,Nalanda,"CD Blocks Noorsarai & Ben; Gram Panchayats Nirpur, Bargaon & Surajpur of Silao CD Block; Gram Panchayats Biyavani, Maghra, Dumrawan, Pachauri, Ranabigha & Meghi Nagwan of Bihar CD Block; Gram Panchayats Barnausa, Meyar, Bhui, Pilkhi, Goraur, Nahub, Pathraura & Lodipur of Rajgir CD Block.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+177,Harnaut,"CD Blocks Harnaut, Chandi & Nagar Nausa.",A_whole_subdistricts_and_towns_only
+178,Mokama,"CD Blocks Ghoswari & Mokama; Gram Panchayats Raili, Lemuabad, West Pandarak, East Pandarak, Kondi, Dhobhawan, Khushhal Chak, Chak Jalal, Ajgara Bakawan, Darwe Bhadaur & Baruane Bathoi of Pandarak CD Block.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+179,Barh,"CD Blocks Athmalgola, Belchhi & Barh; Gram Panchayats Dhiwar, Parsawan, Goasa Shekhpura & Bihari Bigha of Pandarak CD Block.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+180,Bakhtiarpur,"CD Blocks Daniawan, Khusrupur & Bakhtiarpur.",A_whole_subdistricts_and_towns_only
+181,Digha,"Gram Panchayat Nakta Diyara, Ward Nos. 1, 2, 3, 6, Pataliputra Housing Colony (OG) - Ward No. 38 & Digha-Mainpura (OG) Ward No. 39, Badalpura (OG) Ward No. 40, Sabazpura (OG) Ward No. 41 & Khalilpura (OG) Ward No. 42 in Patna (MC + OG) of Patna Rural CD Block.",C_ward_or_EB_level
+182,Bankipur,"Ward Nos. 4, 5, 7 to 13 & 15 in Patna (MC) of Patna Rural CD Block.",C_ward_or_EB_level
+183,Kumhrar,Ward Nos. 14 & 16 to 22 in Patna (MC + OG) of Patna Rural CD Block.,C_ward_or_EB_level
+184,Patna Sahib,Ward Nos. 23 to 37 in Patna (MC) of Patna Rural CD Block.,C_ward_or_EB_level
+185,Fatuha,"CD Blocks Fatuha & Sampatchak; Gram Panchayats Marchi, Mahuli, Fatehpur, Sonwan, Punadih & Sabalpur of Patna Rural CD Block.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+186,Danapur,CD Block Danapur-Cum-Khagaul.,A_whole_subdistricts_and_towns_only
+187,Maner,"CD Block Maner; Gram Panchayats Anandpur, Kateshar, Sikandarpur, Parev, Daulatpur Simri, Mushepur, Shri Rampur, Bihta, Dayalpur Daulatpur, Purshottampur Painathi, Bishunpura, Raghopur, Amhara, Kanchanpur Kharagpur, Sadisopur, Painal, Bela, Neora, Makhdoompur & Shri Chandpur of Bihta CD Block.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+188,Phulwari (SC),CD Blocks Phulwari Sharif & Punpun.,A_whole_subdistricts_and_towns_only
+189,Masaurhi (SC),CD Blocks Masaurhi & Dhanarua.,A_whole_subdistricts_and_towns_only
+190,Paliganj,CD Blocks Dulhin Bazar & Paliganj.,A_whole_subdistricts_and_towns_only
+191,Bikram,"CD Blocks Naubatpur & Bikram; Gram Panchayats Koudiya, Bindaul, Kunjwa, Machchhalpur Lai, Yamunapur & Taranagar of Bihta CD Block.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+192,Sandesh,"CD Blocks Sandesh & Udwant Nagar; Gram Panchayats Sakaddi, Kulharia, Dhandiha, Bhadwar, Narbirpur, Khangaon, Gopalpur, Jalpura, Jokta & Koilwar (Nagar Panchayat) of Koilwar CD Block.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+193,Barhara,"CD Block Barhara; Gram Panchayats Ijri, Sundarpur Barja, Agarsanda, Baghipakar, Basantpur, Dhamar & Khajuria of Arrah CD Block; Gram Panchayats Khesrahiya, Mathurapur, Rajapur, Daulatpur, Chanda, Gidha, Birampur & Kayamnagar of Koilwar CD Block.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+194,Arrah,"Gram Panchayats Ganghar, Ramapur Sandiya, Pirauta, Sandia, Makhdumpur Dumra, Daulatpur, Bhakura, Jamira, Hasanpura, Gothahula, Karari, Mahuli & Arrah (M) of Arrah CD Block.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+195,Agiaon (SC),"CD Blocks Charpokhari, Garhani & Agiaon.",A_whole_subdistricts_and_towns_only
+196,Tarari,"CD Blocks Tarari & Sahar; Gram Panchayats Amai, Bachari, Bharsar, Nonar, Katar, Narayanpur, Sukhrauli & Piro (Nagar Panchayat) of Piro CD Block.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+197,Jagdishpur,"CD Block Jagdishpur; Gram Panchayats Ayar, Tar, Dhwarahi Jangal Mahal, Akrua, Kothua, Jamuaon, Jitaura Jangalmahal, Brawn, Tilath, Khannikala, Rajeyan, Amehta, Ktriyan, Lahthan, Agiaon & Nayka Tola Jangalmahal of Piro CD Block.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+198,Shahpur,CD Blocks Shahpur & Behea.,A_whole_subdistricts_and_towns_only
+199,Brahampur,"CD Blocks Simri, Chakki & Brahampur.",A_whole_subdistricts_and_towns_only
+200,Buxar,CD Blocks Buxar & Chausa.,A_whole_subdistricts_and_towns_only
+201,Dumraon,"CD Blocks Chaugain, Kesath & Nawanagar; Gram Panchayats Chilhari, Kushalpur, Bhojpur Kadim, Bhojpur Jadid, Chhatanwar, Nuaon, Sowan, Ariaon, Nandan, Lakhan Dihra & Dumraon (M) of Dumraon CD Block.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+202,Rajpur (SC),"CD Blocks Rajpur & Itarhi; Gram Panchayats Ataon, Kanjharua, Mathila, Mugaon, Kasian & Koransarai of Dumraon CD Block.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+203,Ramgarh,"CD Blocks Ramgarh, Nuaon & Durgawati.",A_whole_subdistricts_and_towns_only
+204,Mohania (SC),CD Blocks Kudra & Mohania.,A_whole_subdistricts_and_towns_only
+205,Bhabua,CD Blocks Bhabua & Rampur.,A_whole_subdistricts_and_towns_only
+206,Chainpur,"CD Blocks Chand, Chainpur, Adhaura & Bhagwanpur.",A_whole_subdistricts_and_towns_only
+207,Chenari (SC),"CD Blocks Nauhatta, Rohtas & Chenari; Gram Panchayats Alampur, Raipurchor, Karup, Konki, Kumahu, Mohammadpur, Nad, Sikraur, Sheosagar, Sonahar & Uloh of Sheosagar CD Block.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+208,Sasaram,CD Blocks Sasaram & Tilouthu.,A_whole_subdistricts_and_towns_only
+209,Kargahar,"CD Block Kochas & Kargahar; Gram Panchayats Silari, Dumari, Konar, Parari & Patarhi of Sheosagar CD Block.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+210,Dinara,"CD Blocks Dinara, Dawath & Surajpura.",A_whole_subdistricts_and_towns_only
+211,Nokha,"CD Blocks Nasriganj, Rajpur & Nokha.",A_whole_subdistricts_and_towns_only
+212,Dehri,CD Block Akorhi Gola & CD Block Dehri including Nagar Parishad Dehri Dalmia Nagar.,A_whole_subdistricts_and_towns_only
+213,Karakat,"CD Blocks Bikramganj, Karakat & Sanjhauli.",A_whole_subdistricts_and_towns_only
+214,Arwal,"CD Blocks Arwal & Kaler; Gram Panchayats Belkhara, Shahar Telpa, Keyal, Bambhai & Rampur Chay of Karpi CD Block.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+215,Kurtha,"CD Blocks Sonbhadra Banshi Suryapur & Kurtha; Gram Panchayats Chauhar, Aiyara, Purainiya Shekha, Nagwan, Kochahasa, Pariyari, Kinjar, Murarhi, Rohai, Khajuri, Narga, Dorra, Karpi & Puran of Karpi CD Block.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+216,Jehanabad,CD Blocks Ratni Faridpur & Jehanabad.,A_whole_subdistricts_and_towns_only
+217,Ghosi,"CD Blocks Modanganj, Hulasganj & Ghoshi; Gram Panchayats Damuha, Purvi Kako, Pashchimi Kako, Khalispur, Bara, Utarserthua, Saidabad Parsain & Barawan of Kako CD Block.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+218,Makhdumpur (SC),"CD Block Makhdumpur; Gram Panchayats Sulemanpur, Pinjaura, Nerthua, Badhauna, Amthua, Dedhsaiya, Maniyawan & Nonhi of Kako CD Block.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+219,Goh,"CD Blocks Haspura & Goh; Gram Panchayats Pauthu, Itar, Latta & Sihuli of Rafiganj CD Block.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+220,Obra,CD Blocks Obra & Daudnagar.,A_whole_subdistricts_and_towns_only
+221,Nabinagar,"CD Block Barun; Gram Panchayats Mahuaon, Ankorha, Sonoura, Rajpur, Chandragarh, Bariya, Simri Dhamni, Kanker, Kerka, Majhiyawan, Naoor, Belayee, Pipra, Thengo, Tol & Nabinagar (NA) of Nabinagar CD Block.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+222,Kutumba (SC),"CD Block Kutumba; Gram Panchayats Bedhna, Barandarampur, Banua & Dularey of Deo CD Block; Gram Panchayats Jaihind Tendua, Bariyawan, Sori, Rampur, Basdiha, Mungiya, Khajuri Pandoo, Tandwa, Ramnagar & Harihar Urdana of Nabinagar CD Block.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+223,Aurangabad,"CD Block Aurangabad including Nagar Panchayat Aurangabad & Jamhore (N.A.); Gram Panchayats Pawai, Kharkani, Hasauli, Deo, Basdiha, Israur, Sargawan, Bedhni, Bhawanipur, West Ketaki, East Ketaki & Eraura of Deo CD Block.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+224,Rafiganj,"CD Block Madanpur; Gram Panchayats Kajhapa, Kotwara, Bhadwa, Baligaon, Bhadukikala, Dhosila, Charkawan, Kerap, Chaubra, Gordiha, Lohra, Chew, Balar, Dugul, Arthua, Baghaura, Bhetaniya, Baur, Pogar & Rafiganj (NA) of Rafiganj CD Block.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+225,Gurua,"CD Blocks Paraiya, Guraru & Gurua.",A_whole_subdistricts_and_towns_only
+226,Sherghati,"CD Blocks Amas, Sherghati & Dobhi.",A_whole_subdistricts_and_towns_only
+227,Imamganj (SC),"CD Blocks Banke Bazar, Imamganj & Dumaria.",A_whole_subdistricts_and_towns_only
+228,Barachatti (SC),"CD Blocks Mohanpur & Barachatti; Gram Panchayats Nawan, Kurmawan, Itra, Jhikatiya, Mora Mardana, Bara, Atiya, Shekhwara, Parariya & Ilra of Bodh Gaya CD Block.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+229,Bodh Gaya (SC),"CD Blocks Tan Kuppa & Fatehpur; Gram Panchayats Mocharim, Dhanawan, Basarhi, Bakror, Moratal, Kanhaul & Gafa Khurd & Bodh Gaya (NA) of Bodh Gaya CD Block.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+230,Gaya Town,"Ward Nos. 1 to 31, Kaler (OG) - Ward No. 38 & Paharpur (CT) in Gaya (M. Corp) of Gaya Town CD Block.",C_ward_or_EB_level
+231,Tikari,CD Blocks Konch & Tekari.,A_whole_subdistricts_and_towns_only
+232,Belaganj,"CD Block Belaganj; Gram Panchayats Kesaru Dharampur, Amraha, Chakand, Madan Bigha, Rasalpur, Bara, Korma, Churi, Kujap, Kandi, Kujapi, Ghutiya, Katari, Aurwan, Kaler, Naili & Kendua of Gaya Town CD Block.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+233,Atri,"CD Blocks Khizarsarai, Neem Chak Bathani, Atri & Mohra.",A_whole_subdistricts_and_towns_only
+234,Wazirganj,CD Blocks Wazirganj & Manpur; Ward Nos. 32 to 37 in Gaya (M. Corp).,C_ward_or_EB_level
+235,Rajauli (SC),"CD Blocks Meskaur, Sirdala & Rajauli.",A_whole_subdistricts_and_towns_only
+236,Hisua,"CD Blocks Akbarpur, Hisua & Narhat.",A_whole_subdistricts_and_towns_only
+237,Nawada,CD Blocks Nardiganj & Nawada.,A_whole_subdistricts_and_towns_only
+238,Gobindpur,"CD Blocks Kowakol, Roh & Gobindpur.",A_whole_subdistricts_and_towns_only
+239,Warsaliganj,"CD Blocks Warsaliganj, Kashichak & Pakribarawan. 38 - DISTRICT "" JAMUI",A_whole_subdistricts_and_towns_only
+240,Sikandra (SC),"CD Blocks Islamnagar Aliganj & Sikandra; Gram Panchayats Harkhar, Arnamawabank, Harni, Garhi, Raipura, Khaira, Amari, Goli, Bhimain, Nim Nawada, Gopalpur & Bishanpur of Khaira CD Block.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+241,Jamui,"CD Blocks Jamui & Barhat; Gram Panchayats Mangobandar, Banpur, Jhundo, Khandaich, Jitjhingoi, Dabil, Bela, Kageshwar, Kendih & Chuan of Khaira CD Block.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+242,Jhajha,"CD Blocks Lakshmipur, Jhajha & Gidhaur.",A_whole_subdistricts_and_towns_only
+243,Chakai,CD Blocks Sono & Chakai.,A_whole_subdistricts_and_towns_only

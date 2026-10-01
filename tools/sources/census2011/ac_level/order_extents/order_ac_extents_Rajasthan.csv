@@ -1,0 +1,201 @@
+n,name,extent,class
+1,Sadulshahar,"1. Tehsil Sadulshahar 2. Tehsil Ganganagar (Partly) (I) ILRC Mirzewala (II) ILRC Hindumalkot (III) ILRC Shivpur (IV) ILRC Ram Nagar excluding area of Municipal Council, Ganganagar (V) ILRC Chunawadh (VI) ILRC Ganganagar (Partly)- (i) PC Chak Maharaj Ka",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+2,Ganganagar,Teshil Ganganagar (Partly) - (I) ILRC Ganganagar including Municipal Council Ganganagar but excluding PC Chak Maharaj Ka (II) ILRC Burjwali (III) ILRC Netewala,B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+3,Karanpur,1. Tehsil Karanpur 2. Tehsil Padampur,A_whole_subdistricts_and_towns_only
+4,Suratgarh,1. Tehsil Suratgarh 2.Tehsil Vijaynagar (Partly) - ILRC Jaitsar,B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+5,Raisinghnagar (SC),"1. Tehsil Raisinghnagar 2.Tehsil Vijaynagar (Partly) - (I) ILRC Vijaynagar including Shri Vijaynagar Municipal Board (II) ILRC Kunplee (III) ILRC 40 GB (IV) ILRC 8STB, (V) ILRC 12GB 3. Tehsil Anupgarh (Partly) - (I) ILRC Salempura (II) ILRC Banda Colony.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+6,Anupgarh (SC),1. Tehsil Gharsana 2. Tehsil Anupgarh excluding ILRC Salempura & ILRC Banda Colony,B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+7,Sangaria,1. Tehsil Sangaria 2. Tehsil Tibi,A_whole_subdistricts_and_towns_only
+8,Hanumangarh,1. Tehsil Hanumangarh (Partly) - (I) ILRC Hanumangarh including Municipal Board Hanumangarh (II) ILRC Roranwali (III) ILRC Pucca Sarnan (IV) ILRC Fatehgarh (V) ILRC Lakhuwali (VI) ILRC Norangdesar,B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+9,Pilibanga (SC),1. Tehsil Pilibanga 2. Tehsil Rawatsar (Partly) - (I) ILRC Rawatsar including Municipal Board Rawatsar (II) ILRC Khoda (III) ILRC Gandheli 3. Tehsil Hanumangarh (Partly) - (I) ILRC Dablirathan,B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+10,Nohar,"1. Tehsil Nohar (Partly) - (I) ILRC Nohar including Municipal Board Nohar (II) ILRC Deidas (III) ILRC Gorkhana (IV) ILRC Phephana (V) ILRC Meghana (VI) ILRC Jabrasar, 2. Tehsil Rawatsar (Partly) - (I) ILRC Baramsar (II) ILRC Pallu",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+11,Bhadra,1. Tehsil Bhadra 2. Tehsil Nohar (Partly) - (I) ILRC Ramgarh,B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+12,Khajuwala (SC),"1. Tehsil Khajuwala 2. Teshil Poogal, 3. Tehsil Chhatargarh, 4. Tehsil Bikaner (Partly) - (I) ILRC Kanasar (II) ILRC Bikaner (Partly) - (i) PC Chak Garbi (Rural) (ii) PC Nalbari (iii) PC Udasar",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+13,Bikaner West,"1. Tehsil Bikaner (Partly) - (I) Municipal Council Bikaner (Partly) - Ward No. 1 to 4, 14 to 19, 21, 29 to 35, 44 to 49 and 53 to 55 (II) ILRC Bikaner (Partly) - (i) PC Karmisar (Rural)",C_ward_or_EB_level
+14,Bikaner East,"1. Tehsil Bikaner (Partly) - (I) Municipal Council Bikaner (Partly) - Ward No. 5 to 13, 20, 22 to 28, 36 to 43 and 50 to 52 (II) ILRC Bikaner (Partly) - (i) PC Bikaner (Rural) (ii) PC Gangasahar (Rural)",C_ward_or_EB_level
+15,Kolayat,1. Tehsil Kolayat 2. Tehsil Bikaner (Partly) - (I) ILRC Deshnoke including Municipal Board Deshnoke,B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+16,Lunkaransar,1. Tehsil Lunkaransar 2. Tehsil Bikaner (Partly) - (I) ILRC Jamsar (II) ILRC Napasar (III) ILRC Bikaner (Partly) - (i) PC Ridmalsar Purohitan,B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+17,Dungargarh,1. Tehsil Dungargarh 2. Tehsil Nokha (Partly) - (I) ILRC Kuchor Aathooni,B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+18,Nokha,1. Tehsil Nokha excluding ILRC Kuchor Aathooni,B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+19,Sadulpur,1. Tehsil Rajgarh (Partly) - (I) ILRC Rajgarh including Municipal Board Rajgarh (II) ILRC Hamirawas Bara (III) ILRC-Ragha Chhoti (IV) ILRC-Sankhoo (V) ILRC-Chainpura Chhota (VI) ILRC- Sidhmukh,B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+20,Taranagar,1. Tehsil Taranagar 2. Tehsil Rajgarh (Partly) - (I) ILRC Dadarewa (II) ILRC-Dokwa 3. Tehsil Sardarshahar (Partly) - (I) ILRC Ratoosar,B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+21,Sardarshahar,1. Tehsil Sardarshahar excluding ILRC Ratoosar 2. Tehsil Ratangarh (Partly) - (I) ILRC Golsar,B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+22,Churu,Tehsil Churu,A_whole_subdistricts_and_towns_only
+23,Ratangarh,1. Tehsil Ratangarh excluding ILRC Golsar 2. Tehsil Sujangarh (Partly) - (I) ILRC Chhapar including Municipal Board Chhapar (II) ILRC Khuri,B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+24,Sujangarh (SC),"1. Tehsil Sujangarh (Partly) - (I) ILRC Sujangarh including Municipal Board Sujangarh, (II) ILRC Jeeli (III) ILRC Salasar (IV) ILRC Bidasar including Municipal Board Bidasar (V) ILRC Lalgarh (VI) ILRC Tendesar",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+25,Pilani (SC),1. Tehsil Chirawa (Partly) - (I) ILRC Pilani including Municipal Board Pilani and Municipal Board Vidhya Vihar (II) ILRC Chirawa including Municipal Board Chirawa (III) ILRC Mandrela (IV) ILRC Sultana (Partly) - (i) PC Ardawata (V) ILRC Surajgarh (Partly) - (i) PC Adooka (ii) PC Farat (iii) PC Sehi Kalan,B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+26,Surajgarh,1. Tehsil Buhana 2. Tehsil Chirawa (Partly) - (I) ILRC Surajgarh (Partly) - (i) Surajgarh Municipal Board (ii) PC Baloda (iii) PC Berla (iv) PC Bhaothari (v) PC Dheengariya (vi) PC Jakhod (vii) PC Kakora (viii) PC Kidwana (ix) PC Lakhoo (x) PC Lotiya (xi) PC Mahpalwas,B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+27,Jhunjhunu,1. Tehsil Jhunjhunu (Partly) - (I) ILRC Jhunjhunu including Municipal Board Jhunjhunu and Municipal Board Bagar (II) ILRC Kulod Kalan 2. Tehsil Chirawa (Partly) - ILRC Sultana (Partly) - (i) PC Chanana (ii) PC Solana (iii) PC Kishorepura (iv) PC Kithana (v) PC Sultana (vi) PC Sari,B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+28,Mandawa,1. Tehsil Jhunjhunu (Partly) - (I) ILRC Mandawa including Municipal Board Mandawa (II) ILRC Bisau including Municipal Board Bisau (III) ILRC Malsisar (IV) ILRC Rampura,B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+29,Nawalgarh,Tehsil Nawalgarh,A_whole_subdistricts_and_towns_only
+30,Udaipurwati,Tehsil Udaipurwati,A_whole_subdistricts_and_towns_only
+31,Khetri,Tehsil Khetri,A_whole_subdistricts_and_towns_only
+32,Fatehpur,Tehsil Fatehpur,A_whole_subdistricts_and_towns_only
+33,Lachhmangarh,Teshil Lachhmangarh,A_whole_subdistricts_and_towns_only
+34,Dhod (SC),"1. Tehsil Sikar (Partly) - (I) ILRC-Dhod (II) ILRC Sihot Bari (III) ILRC Sihot Chhoti (IV) ILRC Doojod (V) ILRC Dadiya (Partly) (i) PC Gothra Bhookran (ii) PC Kudan (iii) PC Raseedpura, 2. Tehsil Danta Ramgarh (Partly) - (I) ILRC Losal (Partly) - (i) Municipal Board Losal (ii) PC Bhagatpura (iii) PC Bheema (iv) PC Jana (v) PC Sangalia (vi) PC Khood",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+35,Sikar,1. Tehsil Sikar (Partly) - (I) ILRC Sikar including Municipal Council Sikar (II) ILRC Piprali (III) ILRC Dadiya (Partly) - (i) PC Dadiya (ii) PC Gothra Beri (iii) PC Tarpura (iv) PC Koleera,B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+36,Danta Ramgarh,"Tehsil Danta Ramgarh excluding Municipal Board Losal, PC Bhagatpura, PC Bheema, PC Jana, PC Sangalia and PC Khood of ILRC Losal",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+37,Khandela,Tehsil Srimadhopur (Partly) - (I) ILRC Khandela including Municipal Board Khandela (II) ILRC Jajod (III) ILRC Kanwat (IV) ILRC Reengus including Municipal Board Reengus (V) ILRC Srimadhopur (Partly) - (i) PC Bassi (ii) PC Nimera (iii) PC Ralawata,B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+38,Neema Ka Thana,Tehsil Neema Ka Thana (Partly) - (I) ILRC Neem Ka Thana including Municipal Board Neem Ka Thana (II) ILRC Patan (III) ILRC Chala (IV) ILRC Dabla,B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+39,Srimadhopur,1. Tehsil Srimadhopur (Partly) - (I) ILRC Mau (II) ILRC Ajitgarh (III) ILRC Srimadhopur (Partly) - (i) Municipal Board Srimadhopur (ii) PC Srimadhopur Rural (iii) PC Hanspur (iv) PC Kotri Shimarla (v) PC Jorawar Nagar 2. Tehsil Neem Ka Thana (Partly) - (I) ILRC Sanwalpura Tanwaran,B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+40,Kotputli,Tehsil Kotputli (Partly) - (I) ILRC Kotputli including Municipal Board Kotputli (II) ILRC Narheda (III) ILRC Paniyala (IV) ILRC Dantil,B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+41,Viratnagar,1. Tehsil Viratnagar 2. Tehsil Kotputli (Partly) - (I) ILRC Paota 3. Tehsil Shahpura (Partly) - (I) ILRC Shahpura (Partly) - (i) PC Chhapra Khurd (ii) PC Nathawala (iii) PC Rampura (iv) PC Saiwar,B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+42,Shahpura,"1. Tehsil Shahpura excluding PC Chhapra Khurd, PC Nathawala, PC Rampura & PC Saiwar of ILRC Shahpura 2. Tehsil Chomu (Partly) - (I) ILRC Khejroli (Partly) - (i) PC Amarpura (ii) PC Khejroli (iii) PC Nangal Koju (iv) PC Niwana (v) PC Tigariya (vi) PC Nangal Bharda",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+43,Chomu,1. Tehsil Chomu (Partly) - (I) ILRC Chomu including Municipal Board Chomu (II) ILRC Govindgarh (III) ILRC Kaladera (IV) ILRC Khejroli (Partly) - (i) PC Singod Kalan (ii) PC Singod Khurd (iii) PC Itawa Bhopji (iv) PC Udaipuriya,B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+44,Phulera,1. Tehsil Phulera (Partly) - (I) ILRC Sambhar including Municipal Board Sambhar and Municipal Board Phulera (II) ILRC Renwal including Municipal Board Kishangarh Renwal (III) ILRC Bhainslana (IV) ILRC Narayana (V) ILRC Karansar (Partly) - (i) PC Doongari Khurd (ii) PC Harsoli (iii) PC Kherimilak (iv) PC Ramjipura Kalan.,B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+45,Dudu (SC),1. Tehsil Mauzmabad 2. Tehsil Phagi (Partly) - (I) ILRC Phagi (II) ILRC Chouru (III) ILRC Mandor (IV) ILRC Nimera,B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+46,Jhotwara,"1. Municipal Corporation Jaipur (Partly) - Ward No. 2 and 3, 2. Rural area of tehsil Jaipur excluding PC Jamdoli and PC Sumel of ILRC Jaipur East 3. Tehsil Phulera (Partly) - (I) ILRC Jobner including Municipal Board Jobner (II) ILRC Karansar (Partly) - (i) PC Karansar (ii) PC Bhainsawa (iii) PC Doongari Kalan (iv) PC Hingoniya (v) PC Jorpura Sundariyawas",C_ward_or_EB_level
+47,Amber,"Tehsil Amber including Ward No. 53 of Municipal Corporation, Jaipur",C_ward_or_EB_level
+48,Jamwa Ramgarh (ST),Tehsil Jamwa Ramgarh,A_whole_subdistricts_and_towns_only
+49,Hawa Mahal,"Municipal Corporation, Jaipur (Partly) - Ward No. 51, 52, 54, 55, 58, 59 and 63 to 65",C_ward_or_EB_level
+50,Vidhyadhar Nagar,"Municipal Corporation, Jaipur (Partly) - Ward No. 1, 8 to 10 and 68 to 70",C_ward_or_EB_level
+51,Civil Lines,"Municipal Corporation, Jaipur (Partly) - Ward No. 4 to 7, 11, 17, 36, 37, 66 and 67",C_ward_or_EB_level
+52,Kishan Pole,"Municipal Corporation, Jaipur (Partly) - Ward No. 38 to 43, 45, 50, 56, 57 and 60 to 62",C_ward_or_EB_level
+53,Adarsh Nagar,"Municipal Corporation Jaipur (Partly) - Ward No. 29, 30, 32 to 34, 44 and 46 to 49, Tehsil Jaipur (Partly) - (I) ILRC Jaipur East (Partly) - (i) PC Sumel (ii) PC Jamdoli",C_ward_or_EB_level
+54,Malviya Nagar,"Municipal Corporation, Jaipur (Partly) - Ward No. 15, 16, 18 to 21, 25 to 27, 31 and 35",C_ward_or_EB_level
+55,Sanganer,"Municipal Corporation Jaipur (Partly) - Ward No. 12 to 14, 22 and",C_ward_or_EB_level
+56,Bagru (SC),"1. Tehsil Sanganer excluding urban area but including Municipal Board Bagru 2. Municipal Corporation, Jaipur - (Partly) Ward No. 24 and 28",C_ward_or_EB_level
+57,Bassi (ST),"1. Tehsil Bassi, 2. Tehsil Chaksu (Partly) - (I) ILRC Kotkhawada (Partly) - (i) PC Mahadeopura (ii) PC Rupaheri Kalan (iii) PC Narpatpura (iv) PC Rupaheri Khurd",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+58,Chaksu (SC),"1. Tehsil Chaksu excluding PC Mahadeopura, PC Rupaheri Kalan, PC Narpatpura and PC Rupaheri Khurd of ILRC Kotkhawada, 2. Tehsil Phagi (Partly) - (I) ILRC Chittora (II) ILRC Madhorajpura (III) ILRC Renwal",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+59,Tijara,Tehsil Tijara,A_whole_subdistricts_and_towns_only
+60,Kishangarh Bas,"1. Tehsil Kishangarh Bas, 2. Tehsil Kotkasim",A_whole_subdistricts_and_towns_only
+61,Mundawar,1. Tehsil Mundawar 2. Tehsil Behror (Partly) - (I) ILRC Neemrana,B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+62,Behror,1. Tehsil Behror (Partly) - (I) ILRC Behror including Municipal Board Behror (II) ILRC Bardod (III) ILRC Mandhan (IV) ILRC Gandala,B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+63,Bansur,1. Tehsil Bansur 2. Tehsil Thanagazi (Partly) - (I) ILRC Narainpur,B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+64,Thanagazi,1. Tehsil Thanagazi excluding ILRC Narainpur 2. Tehsil Rajgarh (Partly) - (I) ILRC Rajpur Bara (II) ILRC Tahla (III) ILRC Khoh (IV) ILRC Rajgarh (Partly) - (i) PC Dubbi (ii) PC Karoth (iii) PC Nayagaon Bolka (iv) PC Dhamred (v) PC Thanarajaji,B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+65,Alwar Rural (SC),"Tehsil Alwar excluding Municipal Council Alwar, PC Alwar (Rural), PC Bhoogor and PC Diwakari of ILRC Alwar.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+66,Alwar Urban,1. Tehsil Alwar (Partly) - (I) ILRC Alwar (Partly) - (i) Municipal Council Alwar (ii) PC Alwar (Rural) (iii) PC Bhoogor (iv) PC Diwakari.,B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+67,Ramgarh,1. Tehsil Ramgarh 2. Tehsil Laxmangarh (Partly) - (I) ILRC Govindgarh (II) ILRC Baroda Meo (III) ILRC Moliya (Partly) - (i) PC Dongari (ii) PC Semla Khurd (iii) PC Bhainsrawat (iv) PC Phahri,B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+68,Rajgarh- Laxmangarh (ST),1. Tehsil Rajgarh (Partly) - (I) ILRC Machari (II) ILRC Pinan (III) ILRC Reni (IV) ILRC Dhigawara (V) ILRC Rajgarh (Partly) - (i) Municipal Board Rajgarh (ii) PC Rajgarh-A (iii) PC Rajgarh (B) (iv) PC Alei 2. Tehsil Laxmangarh (Partly) - (I) ILRC Laxmangarh (II) ILRC Bichgaon (III) ILRC Mojpur .,B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+69,Kathumar (SC),1. Tehsil Kathumar 2. Tehsil Laxmangarh (Partly) - (I) ILRC Khudiyana (II) ILRC Moliya (Partly) - (i) PC Moliya (ii) PC Badka (iii) PC Itera,B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+70,Kaman,1. Tehsil Kaman 2. Tehsil Pahari,A_whole_subdistricts_and_towns_only
+71,Nagar,1. Tehsil Nagar 2. Tehsil Deeg (Partly) - (I) ILRC Khoh (II) ILRC Pasta (III) ILRC Bedham (IV) ILRC Januthar,B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+72,Deeg-Kumher,1. Tehsil Kumher 2. Tehsil Deeg (Partly) - (I) ILRC Deeg including Municipal Board Deeg (II) ILRC Kasot (III) ILRC Baroli Chauth (IV) ILRC Sinsini,B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+73,Bharatpur,Tehsil Bharatpur (Partly) - (I) ILRC Bharatpur including Municipal Council Bharatpur (II) ILRC Peepla (III) ILRC Chiksana (IV) ILRC Jaghina,B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+74,Nadbai,"1. Tehsil Nadbai 2. Tehsil Bharatpur (Partly) - (I) ILRC Sewar excluding area of Municipal Council, Bharatpur (II) ILRC Aghapur 3. Tehsil Rupbas (Partly) - (I) ILRC Khanuwa (II) ILRC Uchchain",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+75,Weir (SC),1. Tehsil Weir 2. Tehsil Bayana (Partly) - (I) ILRC Farso (II) ILRC Khareri,B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+76,Bayana (SC),1. Tehsil Bayana (Partly) - (I) ILRC Bayana including Municipal Board Bayana (II) ILRC Samogar (III) ILRC Mahmadpura (IV) ILRC Milakpur 2. Tehsil Rupbas (Partly) - (I) ILRC Rupbas (II) ILRC Khansurjapur (III) ILRC Rudawal,B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+77,Baseri (SC),1. Tehsil Baseri 2. Tehsil Bari (Partly) - (I) ILRC Umreh,B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+78,Bari,1. Tehsil Bari (Partly) - (I) ILRC Kasbabari including Municipal Board Bari (II) ILRC Basai Dang (III) ILRC Talab Shahi (IV) ILRC Kanchanpur 2. Tehsil Saipau (Partly) - (I) ILRC Saipau (II) ILRC Donari (III) ILRC Basai Nawab,B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+79,Dholpur,1. Tehsil Dholpur (Partly) - (I) ILRC Dholpur including Municipal Board Dholpur (II) ILRC Jatoli (III) ILRC Pachgaon 2. Tehsil Saipau (Partly) - (I) ILRC Kareempur (II) ILRC Kolari,B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+80,Rajakhera,1. Tehsil Rajakhera 2. Tehsil Dholpur (Partly) - (I) ILRC Marhabhau (II) ILRC Maniyan,B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+81,Todabhim (ST),1. Tehsil Nadoti 2. Tehsil Todabhim (Partly) - (I) ILRC Todabhim including Municipal Board Todabhim (II) ILRC Kamalpura (III) ILRC Kariri (IV) ILRC Padampura (V) ILRC Nangal Sherpur (VI) ILRC Balghat,B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+82,Hindaun (SC),1. Tehsil Hindaun (Partly) - (I) ILRC Hindaun including Municipal Board Hindaun (II) ILRC Shri Mahaveerji (III) ILRC Bargawan (IV) ILRC Mahoo Ibrahimpur (V) ILRC Suroth 2. Tehsil Todabhim (Partly) - (I) ILRC Mahamadpur,B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+83,Karauli,1. Tehsil Karauli (Partly) - (I) ILRC Karauli including Municipal Board Karauli (II) ILRC Chainpur (III) ILRC Gunesra (IV) ILRC Kheriya (V) ILRC Masalpur 2. Tehsil Hindaun (Partly) - (I) ILRC Khera (II) ILRC Sherpur,B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+84,Sapotra (ST),1. Tehsil Sapotra 2. Tehsil Mandrail 3. Tehsil Karauli (Partly) - (I) ILRC Maholi (II) ILRC Kailadevi,B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+85,Bandikui,1. Tehsil Baswa (Partly) - (I) ILRC Bandikui including Municipal Board Bandikui (II) ILRC Baswa (III) ILRC Badiyal Kalan (IV) ILRC Gurha Katla (V) ILRC Gurhaliya (VI) ILRC Biwai,B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+86,Mahuwa,1. Tehsil Mahuwa 2. Tehsil Baswa (Partly) - (I) ILRC Baijupara,B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+87,Sikrai (SC),1. Tehsil Sikrai 2. Tehsil Dausa (Partly) - (I) ILRC Alooda (II) ILRC Bhandarej,B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+88,Dausa,1. Tehsil Dausa (Partly) - (I) ILRC Dausa including Municipal Board Dausa (II) ILRC Jasota (III) ILRC Kundal (IV) ILRC Lawan (V) ILRC Sainthal (VI) ILRC Baniyana (VII) ILRC Nangal Rajawatan,B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+89,Lalsot (ST),1. Tehsil Lalsot,A_whole_subdistricts_and_towns_only
+90,Gangapur,Tehsil Gangapur,A_whole_subdistricts_and_towns_only
+91,Bamanwas (ST),1. Tehsil Bamanwas 2. Tehsil Bonli,A_whole_subdistricts_and_towns_only
+92,Sawai Madhopur,1. Tehsil Malarna Dungar 2. Tehsil Sawai Madhopur (Partly) - (I) ILRC Sawai Madhopur including Municipal Board Sawai Madhopur (II) ILRC Seloo (III) ILRC Soorwal (IV) ILRC Kundera,B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+93,Khandar (SC),1. Tehsil Khandar 2. Tehsil Choth Ka Barwara 3. Tehsil Sawai Madhopur (Partly) - (I) ILRC Kustala (II) ILRC Phalaudi (III) ILRC Rawajana Chaur,B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+94,Malpura,1. Tehsil Malpura 2. Tehsil Todaraisingh (Partly) - (I) ILRC Todaraisingh including Municipal Board Todaraisingh (II) ILRC Datob (III) ILRC Mor,B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+95,Niwai (SC),1. Tehsil Niwai 2. Tehsil Peeplu,A_whole_subdistricts_and_towns_only
+96,Tonk,1. Tehsil Tonk 2. Tehsil Todaraisingh (Partly) - (I) ILRC Khareda (II) ILRC Lamba Kalan,B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+97,Deoli- Uniara,1. Tehsil Deoli 2. Tehsil Uniara,A_whole_subdistricts_and_towns_only
+98,Kishangarh,1. Tehsil Kishangarh (Partly) - (I) ILRC Kishangarh including Municipal Board Kishangarh (II) ILRC Harmara (III) ILRC Sironj (IV) ILRC Akodiya (V) ILRC Arain (VI) ILRC Bandar Seendri (VII) ILRC Lamba (VIII) ILRC Barna (IX) ILRC Ralawata 2. Tehsil Sarwar (Partly) - (I) ILRC Dabrela (II) ILRC Borada,B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+99,Pushkar,1. Tehsil Ajmer excluding area of Municipal Council Ajmer and ILRC Ajmer - III 2. Tehsil Kishangarh (Partly) - (I) ILRC Karkeri (II) ILRC Kotri (III) ILRC Roopangarh,B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+100,Ajmer North,"1. Tehsil Ajmer (Partly) - (I) Ajmer Municipal Council (Partly) - Ward No. 1 to 5, 16, 17, 19 to 32 and 49 to 55 including Cantonment Board, Ajmer, (II) ILRC Ajmer -III",C_ward_or_EB_level
+101,Ajmer South (SC),"1. Tehsil Ajmer (Partly) (I) Ajmer Municipal Council (Partly) - Ward No. 6 to 15, 18 and 33 to 48",C_ward_or_EB_level
+102,Nasirabad,1. Tehsil Nasirabad 2. Tehsil Pisangan,A_whole_subdistricts_and_towns_only
+103,Beawar,1. Tehsil Beawar,A_whole_subdistricts_and_towns_only
+104,Masuda,1. Tehsil Masuda 2. Tehsil Bhinay,A_whole_subdistricts_and_towns_only
+105,Kekri,1. Tehsil Kekri 2. Tehsil Sarwar (Partly) - (I) ILRC Sarwar including Municipal Board Sarwar (II) ILRC Ajgara (III) ILRC Hingoniya (IV) ILRC Sapala (V) ILRC Fatehgarh (VI) ILRC Goyla (VII) ILRC Tantoti,B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+106,Ladnun,1. Tehsil Ladnun 2. Tehsil Deedwana (Partly) - (I) ILRC Noowa,B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+107,Deedwana,1. Tehsil Deedwana (Partly) - (I) ILRC Deedwana including Municipal Board Deedwana (II) ILRC Khunkhuna (III) ILRC Molasar (IV) ILRC Khatu Khurd,B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+108,Jayal (SC),1. Tehsil Jayal 2. Tehsil Nagaur (Partly) - (I) ILRC Jodhiyasi,B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+109,Nagaur,1. Tehsil Nagaur (Partly) - (I) ILRC Nagaur including Municipal Board Nagaur (II) ILRC Alay (III) ILRC Mundwa including Municipal Board Mundwa (IV) ILRC Kumari,B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+110,Khinwsar,1. Tehsil Khinwsar 2. Tehsil Nagaur (Partly) - (I) ILRC Kharnal (II) ILRC Sankhwas (III) ILRC Khajwana including Municipal Board Kuchera 3. Tehsil Merta (Partly) - (I) ILRC Nokha Chandawatan,B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+111,Merta (SC),1. Tehsil Merta (Partly) - (I) ILRC Merta including Municipal Board Merta City (II) ILRC Riyan Bari (III) ILRC Padukalan (IV) ILRC Gotan (V) ILRC Jasnagar (VI) ILRC Gagrana (VII) ILRC Merta Road (Phalodi),B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+112,Degana,Tehsil Degana,A_whole_subdistricts_and_towns_only
+113,Makrana,Tehsil Makrana,A_whole_subdistricts_and_towns_only
+114,Parbatsar,1. Tehsil Parbatsar 2. Tehsil Nawan (Partly) - (I) ILRC Meethari (II) ILRC Kuchaman City (Partly) - (i) PC Anandpura (ii) PC Rasal (iii) PC Rooppura,B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+115,Nawan,1. Tehsil Nawan (Partly) - (I) ILRC Nawan including Municipal Board Nawan (II) ILRC Chitawa (III) ILRC Loonwa (IV) ILRC Maroth (V) ILRC Kuchaman City (Partly) - (i) Municipal Board Kuchaman City (ii) PC Bhanwata (iii) PC Heerani (iv) PC Jiliya (v) PC Panchawa (vi) PC Parewadi (vii) PC Sabalpura,B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+116,Jaitaran,1. Tehsil Jaitaran 2. Tehsil Raipur (Partly) - (I) ILRC Kot Kirana (II) ILRC Babra (III) ILRC Sendra (IV) ILRC Raipur (Partly) - (i) PC Bar (ii) PC Deepawas,B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+117,Sojat (SC),1. Tehsil Sojat 2. Tehsil Raipur (Partly) - (I) ILRC Raipur excluding PC Bar and PC Deepawas (II) ILRC Pipliya Kalan,B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+118,Pali,1. Tehsil Pali (Partly) - (I) Municipal Council Pali 2. Tehsil Rohat,B2_part_unit_other
+119,Marwar Junction,1. Tehsil Marwar Junction 2. Tehsil Desuri (Partly) - (I) ILRC Khiwara (II) ILRC Magar Talav (III) ILRC Rani including Municipal Board Rani Khurd,B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+120,Bali,1. Tehsil Bali 2. Tehsil Desuri (Partly) - (I) ILRC Desuri including Municipal Board Sadri (II) ILRC Nadol,B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+121,Sumerpur,1. Tehsil Sumerpur 2. Tehsil Pali excluding area of Municipal Council Pali,B2_part_unit_other
+122,Phalodi,1. Tehsil Phalodi (Partly) - (I) ILRC Phalodi including Municipal Board Phalodi (II) ILRC Bap (III) ILRC Aau (Partly) - (i) PC Bheenyasar (ii) PC Bhojasar (iii) PC Boongdi (iv) PC Champasar (v) PC Ghantiyali (vi) PC Jaisala (vii) PC Pariyal (viii) PC Kelansar,B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+123,Lohawat,1. Tehsil Phalodi (Partly) - (I) ILRC Lohawat (II) ILRC Aau (Partly) - (i) PC Aau (ii) PC Chadi (iii) PC Ishru (iv) PC Ridmalsar 2. Tehsil Osian (Partly) - (I) ILRC Bapini 3. Tehsil Shergarh (Partly) - (I) ILRC Setrawa,B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+124,Shergarh,1. Tehsil Shergarh (Partly) - (I) ILRC Shergarh (II) ILRC Solankiya Tala (III) ILRC Balesar (IV) ILRC Chamu,B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+125,Osian,1. Tehsil Osian (Partly) - (I) ILRC Osian (II) ILRC Mathaniya (III) ILRC Tinwari (IV) ILRC Cherai,B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+126,Bhopalgarh (SC),1. Tehsil Bhopalgarh 2. Tehsil Jodhpur (Partly) - (I) ILRC Jajiwal Kalan,B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+127,Sardarpura,"1. Tehsil Jodhpur (Partly)- (I) Jodhpur Municipal Corporation (Partly) - Ward No. 32 to 34, 36, 38, 39 and 48 to 59",C_ward_or_EB_level
+128,Jodhpur,"1. Tehsil Jodhpur (Partly) - Jodhpur Municipal Corporation (Partly) -Ward No. 19 to 31, 35, 37 and 40 to 47",C_ward_or_EB_level
+129,Soorsagar,1. Tehsil Jodhpur (Partly) - Jodhpur Municipal Corporation (Partly) - Ward No. 1 to 18 and 60,C_ward_or_EB_level
+130,Luni,1. Tehsil Luni 2. Tehsil Jodhpur (Partly) - (I) ILRC Keroo (II) ILRC Mandor (III) ILRC Jodhpur (Partly) - (i) PC Bagan (ii) PC Nandra Kalan (iii) PC Jhalamand (iv) PC Pal,B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+131,Bilara (SC),1. Tehsil Bilara 2. Tehsil Jodhpur (Partly) - (I) ILRC Bisalpur (II) ILRC Dangiyawas,B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+132,Jaisalmer,1. Tehsil Jaisalmer 2. Tehsil Fatehgarh,A_whole_subdistricts_and_towns_only
+133,Pokaran,Tehsil Pokaran,A_whole_subdistricts_and_towns_only
+134,Sheo,1. Tehsil Sheo 2. Tehsil Ramsar 3. Tehsil Chohtan (Partly) - (I) ILRC Bijrar.,B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+135,Barmer,Tehsil Barmer,A_whole_subdistricts_and_towns_only
+136,Baytoo,1. Tehsil Baytoo 2. Tehsil Pachpadra (Partly) - (I) ILRC Patodi,B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+137,Pachpadra,Tehsil Pachpadra (Partly) - (I) ILRC Pachpadra (II) ILRC Jasol including Municipal Board Balotra (III) ILRC Kalyanpur (IV) ILRC Tilwara (V) ILRC Thob,B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+138,Siwana,1. Tehsil Siwana 2. Tehsil Gudha Malani (Partly) - (I) ILRC Sindhari,B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+139,Gudha Malani,Tehsil Gudha Malani excluding ILRC Sindhari,B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+140,Chohtan (SC),Tehsil Chohtan excluding ILRC Bijrar,B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+141,Ahore,1. Tehsil Ahore 2. Tehsil Jalore (Partly) - (I) ILRC Bagra,B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+142,Jalore (SC),1. Tehsil Sayla 2. Tehsil Jalore (Partly) - (I) ILRC Jalore including Municipal Board Jalore (II) ILRC Bakra (III) ILRC Mandwala,B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+143,Bhinmal,1. Tehsil Bagora 2. Tehsil Bhinmal (Partly) - (I) ILRC Bharoori (II) ILRC Daspan (III) ILRC Modra (IV) ILRC Ramseen (V) ILRC Bhinmal (Partly) - (i) Municipal Board Bhinmal (ii) PC Bhagalbhim (iii) PC Gajipura (iv) PC Sindhara (v) PC Nimbawas (vi) PC Nimbora (vii) PC Dantiwas (viii) PC Phagotra (ix) PC Punasa (x) PC Thobau,B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+144,Sanchore,1. Tehsil Sanchore (Partly) - (I) ILRC Sanchore including Municipal Board Sanchore (II) ILRC Chitalwana (III) ILRC Jhab (IV) ILRC Sarwana (V) ILRC Surachand (VI) ILRC Arnay,B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+145,Raniwara,1. Tehsil Raniwara 2. Tehsil Sanchore (Partly) - (I) ILRC Sarnau 3. Tehsil Bhinmal (Partly) - (I) ILRC Jaswantpura (II) ILRC Bhinmal (Partly) - (i) PC Pawli (ii) PC Sawidar,B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+146,Sirohi,1. Tehsil Sirohi 2. Tehsil Sheoganj,A_whole_subdistricts_and_towns_only
+147,Pindwara Abu (ST),1. Tehsil Pindwara 2. Tehsil Abu Road (Partly) - (I) ILRC Mount Abu (Partly) - (i) Mount Abu Municipal Board (ii) PC Oriya (II) ILRC Kiwarli,B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+148,Reodar (SC),1. Tehsil Reodar 2. Tehsil Abu Road (Partly) - (I) ILRC Abu Road including Municipal Board Abu Road (II) ILRC Mungthala (III) ILRC Mount Abu (Partly) - (i) PC Manpur (ii) PC Morthala.,B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+149,Gogunda (ST),1. Tehsil Gogunda 2. Tehsil Kotra (Partly) - (I) ILRC Malwa ka Chora (II) ILRC Was 3. Tehsil Girwa (Partly) - (I) ILRC Iswal (II) ILRC Badgaon (Partly) - (i) PC Badgaon (ii) PC Madar (iii) PC Thoor (iv) PC Lakhawali,B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+150,Jhadol (ST),1. Tehsil Jhadol 2. Tehsil Kotra (Partly) - (I) ILRC Kotra (II) ILRC Bikarni,B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+151,Kherwara (ST),1. Tehsil Kherwara 2. Tehsil Sarada (Partly) - (I) ILRC Semari,B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+152,Udaipur Rural (ST),"1. Tehsil Girwa (Partly) - (I) Udaipur Municipal Council (Partly) - Ward No. 6 to 9, 24 to 27 and 39 (II) ILRC Barapal (III) ILRC Bhoiyon ki Pancholi (IV) ILRC Nai (V) ILRC City (Partly) - (i) PC Savina (ii) PC Shobhagpura (iii) PC Teetardi (iv) PC Goverdhan Vilas (v) PC Dheekli (vi) PC Madari Purohitan (vii) PC Bhuwana",C_ward_or_EB_level
+153,Udaipur,"1. Tehsil Girwa (Partly) (I) Udaipur Municipal Council (Partly) - Ward No. 1 to 5, 10 to 23, 28 to 38 and 40 to 50",C_ward_or_EB_level
+154,Mavli,1. Tehsil Mavli 2. Tehsil Girwa (Partly) - (I) ILRC Badgaon (Partly) - (i) PC Bedla (ii) PC Chirwa (iii) PC Kailashpuri (iv) PC Sapetiya (II) ILRC Debari (Partly) - (i) PC Bhensda Kalan (ii) PC Bhalon ka Gudha (iii) PC Debari (iv) PC Lakadwas (v) PC Sakroda,B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+155,Vallabhnagar,1. Tehsil Vallabhnagar 2. Tehsil Girwa (Partly) - (I) ILRC Bambora (II) ILRC Kurabad (III) ILRC Debari (Partly) - (i) PC Sheeshwi,B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+156,Salumber (ST),1. Tehsil Salumber (Partly) - (I) ILRC Salumber including Municipal Board Salumber (II) ILRC Baroda (III) ILRC Kharka 2. Tehsil Sarada (Partly) - (I) ILRC Sarada (II) ILRC Jaisamand (III) ILRC Palodara (IV) ILRC Sallara,B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+157,Dhariawad (ST),1. Tehsil Dhariawad 2. Tehsil Salumber (Partly) - (I) ILRC Jhallara (II) ILRC Bhabrana,B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+158,Dungarpur (ST),1. Tehsil Dungarpur (Partly) - (I) ILRC Dungarpur including Municipal Board Dungarpur (II) ILRC Bichhiwara (III) ILRC Dewal (IV) ILRC Thana (V) ILRC Genji (Partly) - (i) PC Mada (ii) PC Bhehana (iii) PC Galandar (iv) PC Gamri Ahara (v) PC Mewara (vi) PC Rampur Mewara,B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+159,Aspur (ST),1. Tehsil Aspur 2. Tehsil Dungarpur (Partly) - (I) ILRC Antri (II) ILRC Faloj,B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+160,Sagwara (ST),1. Tehsil Sagwara,A_whole_subdistricts_and_towns_only
+161,Chorasi (ST),1. Tehsil Simalwara 2. Tehsil Dungarpur (Partly) - (I) ILRC Genji (Partly) - (i) PC Renta (ii) PC Vikas Nagar (iii) PC Genji (iv) PC Mahuri,B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+162,Ghatol (ST),Tehsil Ghatol,A_whole_subdistricts_and_towns_only
+163,Garhi (ST),1. Tehsil Garhi 2. Tehsil Banswara (Partly) - (i) ILRC Talwara,B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+164,Banswara (ST),1. Tehsil Banswara excluding ILRC Talwara,B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+165,Bagidora (ST),Tehsil Bagidora,A_whole_subdistricts_and_towns_only
+166,Kushalgarh (ST),Tehsil Kushalgarh,A_whole_subdistricts_and_towns_only
+167,Kapasan (SC),1. Tehsil Kapasan 2. Tehsil Rashmi 3. Tehsil Bhadesar (Partly) - (I) ILRC Bansen (II) ILRC Bhadsora,B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+168,Begun,1. Tehsil Begun 2. Tehsil Rawatbhata 3. Tehsil Gangrar excluding area of Municipal Board Chittorgarh,B2_part_unit_other
+169,Chittorgarh,1. Tehsil Chittorgarh 2. Tehsil Gangrar (Partly) - Area of Municipal Board Chittorgarh 3. Tehsil Bhadesar (Partly) - (I) ILRC Bhadesar,B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+170,Nimbahera,1. Tehsil Nimbahera 2. Tehsil Chhoti Sadri,A_whole_subdistricts_and_towns_only
+171,Bari Sadri,1. Tehsil Bari Sadri 2. Tehsil Dungla 3. Tehsil Bhadesar (Partly) - (I) ILRC Asawara 4. Tehsil Pratapgarh (Partly) - (I) ILRC Deogarh (II) ILRC Dhamotar,B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+172,Pratapgarh (ST),1. Tehsil Arnod 2. Tehsil Pratapgarh (Partly) - (I) ILRC Pratapgarh including Municipal Board Pratapgarh (II) ILRC Panmori (III) ILRC Awaleshwar (IV) ILRC Suhagpura,B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+173,Bhim,1. Tehsil Bhim 2. Tehsil Deogarh,A_whole_subdistricts_and_towns_only
+174,Kumbhalgarh,1. Tehsil Kumbhalgarh 2. Tehsil Amet,A_whole_subdistricts_and_towns_only
+175,Rajsamand,1. Tehsil Rajsamand 2. Tehsil Railmagra (Partly) - (I) ILRC Kuraj (II) ILRC Gilund.,B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+176,Nathdwara,1. Tehsil Nathdwara 2. Tehsil Railmagra (Partly) - (I) ILRC Railmagra (II) ILRC Banedian,B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+177,Asind,1. Tehsil Asind 2. Tehsil Hurda,A_whole_subdistricts_and_towns_only
+178,Mandal,"1. Tehsil Mandal 2. Tehsil Bhilwara (Partly) - (I) ILRC Danthal (II) ILRC Mangrop (III) ILRC Suwana (IV) ILRC Bhilwara excluding Municipal Council, Bhilwara",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+179,Sahara,"1. Tehsil Sahara 2. Tehsil Raipur 3. Tehsil Bhilwara (Partly) - (I) ILRC Karoi Kalan (II) ILRC Pur excluding area of Municipal Council, Bhilwara (III) ILRC Hameergarh",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+180,Bhilwara,"1. Tehsil Bhilwara (Partly) - (I) Municipal Council, Bhilwara",B2_part_unit_other
+181,Shahpura (SC),1. Tehsil Shahpura 2. Tehsil Banera,A_whole_subdistricts_and_towns_only
+182,Jahazpur,1. Tehsil Jahazpur 2.Tehsil Kotri (Partly) - (I) ILRC Kotri (II) ILRC Sawaipur (III) ILRC Paroli,B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+183,Mandalgarh,1. Tehsil Mandalgarh 2. Tehsil Bijoliya 3. Tehsil Kotri (Partly) - (i) ILRC Nandrai (ii) ILRC Badliyas,B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+184,Hindoli,1. Tehsil Hindoli 2. Tehsil Nainwa (Partly) - (I) ILRC Nainwa including Municipal Board Nainwa (II) ILRC Jajawar (III) ILRC Bansi (IV) ILRC Dei,B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+185,Keshoraipatan (SC),1. Tehsil Keshoraipatan 2. Tehsil Indergarh 3. Tehsil Nainwa (Partly) - (I) ILRC Jetpur (II) ILRC Karwar (III) ILRC Bamangaon,B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+186,Bundi,Tehsil Bundi,A_whole_subdistricts_and_towns_only
+187,Pipalda,1. Tehsil Pipalda 2. Tehsil Digod (Partly) - (I) ILRC Barod (II) ILRC Sultanpur (III) ILRC Jhargaon,B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+188,Sangod,1. Tehsil Sangod 2. Tehsil Digod (Partly) - (I) ILRC Digod (II) ILRC Rel (III) ILRC Seemalya,B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+189,Kota North,"1. Tehsil Ladpura (Partly) - (I) Kota Municipal Corporation (Partly) - Ward No. 1, 2, 12 to 32 and 49 to 52.",C_ward_or_EB_level
+190,Kota South,"1. Tehsil Ladpura (Partly) (I) Kota Municipal Corporation (Partly) - Ward No. 3 to 6, 33 to 42, 53 to 58 and 60.",C_ward_or_EB_level
+191,Ladpura,"1. Tehsil Ladpura (Partly) - (I) Kota Muncipal Corporation (Partly) - Ward No. 7 to 11, 43 to 48 and 59 (II) ILRC Kaithoon including Municipal Board Kaithoon (III) ILRC Tather (IV) ILRC Mandana (Partly) - (i) PC Kalyakheri (ii) PC Mandana (iii) PC Mandlaya (iv) PC Alniya (v) PC Ranpur (vi) PC Kasar (V) ILRC Ladpura (Partly) - (i) PC Kishanpura Takiya (ii) PC Rangpur (iii) PC Girdharpura.",C_ward_or_EB_level
+192,Ramganj Mandi (SC),1. Tehsil Ramganj Mandi 2. Tehsil Ladpura (Partly) - (I) ILRC Mandana (Partly) - (i) PC Borabans (ii) PC Dharampura (iii) PC Bhanwariya (iv) PC Dolya (v) PC Dobara.,B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+193,Anta,1. Tehsil Anta 2. Tehsil Mangrol 3. Tehsil Baran (Partly) - (I) ILRC Koyala (II) ILRC Bamala.,B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+194,Kishanganj (ST),1. Tehsil Kishanganj 2. Tehsil Shahbad,A_whole_subdistricts_and_towns_only
+195,Baran-Atru (SC),1. Tehsil Atru 2. Tehsil Baran (Partly) - (I) ILRC Baran including Municipal Board Baran (II) ILRC Fatehpur,B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+196,Chhabra,1. Tehsil Chhabra 2. Tehsil Chhipabarod,A_whole_subdistricts_and_towns_only
+197,Dag (SC),1. Tehsil Pachpahar 2. Tehsil Gangdhar.,A_whole_subdistricts_and_towns_only
+198,Jhalrapatan,1. Tehsil Pirawa 2.Tehsil Jhalrapatan (Partly) - (I) ILRC Jhalrapatan including Municipal Board Jhalrapatan (II) ILRC Samrai (III) ILRC Jhalawar (Partly) - (i) Municipal Board Jhalawar (ii) PC Durgpura (iii) PC Gindor (iv) PC Kalmandi Kalan (v) PC Khanpuriya (vi) PC Salotiya.,B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+199,Khanpur,1. Tehsil Khanpur 2. Tehsil Jhalrapatan (Partly) - (I) ILRC Mandawar (II) ILRC Ratlai (III) ILRC Salawad (IV) ILRC Bakani (V) ILRC Reechwa (VI) ILRC Jhalawar (Partly) - (i) PC Gagron (ii) PC Govindpura.,B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+200,Manohar Thana,1. Tehsil Manohar Thana 2. Tehsil Aklera 3. Tehsil Jhalrapatan (Partly) - (I) ILRC Asnawar.,B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)

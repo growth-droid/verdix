@@ -1,0 +1,603 @@
+{
+ "rows_written": {
+  "religion_units.parquet": 26031,
+  "religion_units.parquet SUBDISTRICT": 17964,
+  "religion_units.parquet TOWN": 8067,
+  "religion_town_whole.parquet": 7933
+ },
+ "c01_level_counts": {
+  "DISTRICT/Rural": 640,
+  "DISTRICT/Total": 640,
+  "DISTRICT/Urban": 640,
+  "STATE/Rural": 35,
+  "STATE/Total": 35,
+  "STATE/Urban": 35,
+  "SUBDISTRICT/Rural": 5988,
+  "SUBDISTRICT/Total": 5988,
+  "SUBDISTRICT/Urban": 5988,
+  "TOWN/Urban": 8067,
+  "TOWN_WHOLE/Urban": 63
+ },
+ "pca_crosscheck_inputs": {
+  "town_file": "C:\\Users\\minds\\AppData\\Local\\Temp\\claude\\C--Users-minds-OneDrive-Desktop-Data-Project\\b4ee2c9a-d22a-44f3-9d75-56cb29e4f656\\scratchpad\\census\\option2\\bpf\\2011-IndiaStateDistSbDistTwn-0000.xlsx",
+  "ward_rows": 82256,
+  "village_rows": 640949
+ },
+ "all_ok": true,
+ "checks": [
+  {
+   "check": "C-01 state files read (DDW01..DDW35)",
+   "ok": true,
+   "expected": "35",
+   "got": "35"
+  },
+  {
+   "check": "only Urban rows at town grain",
+   "ok": true,
+   "expected": null,
+   "got": null
+  },
+  {
+   "check": "sub-districts (state, district, subdistt)",
+   "ok": true,
+   "expected": "5988",
+   "got": "5988"
+  },
+  {
+   "check": "every sub-district has exactly one Total, Rural and Urban row",
+   "ok": true,
+   "expected": "5988",
+   "got": "5988"
+  },
+  {
+   "check": "sub-district code alone is NOT unique (99999 = 'Area not under any Sub-district' recurs) -> key is (state, district, subdistt)",
+   "ok": true,
+   "expected": null,
+   "got": "codes used in >1 district: ['01901', '01905', '01911', '02001', '02004', '02005', '02007', '02008', '02009', '02010', '02018', '02024', '02025', '02041', '02053', '02054', '02110', '02114', '02115', '02116', '02126', '02132', '02138', '02139', '02140', '02141', '02142', '02145', '02146', '02148', '02149', '02150', '02995', '03109', '99999']"
+  },
+  {
+   "check": "sub-district Rural + Urban = Total (9 categories)",
+   "ok": true,
+   "expected": "0",
+   "got": "0"
+  },
+  {
+   "check": "districts covered by sub-districts",
+   "ok": true,
+   "expected": "1920",
+   "got": "1920"
+  },
+  {
+   "check": "sum of sub-districts = district, Total (640 districts x 9 categories)",
+   "ok": true,
+   "expected": "0",
+   "got": "0"
+  },
+  {
+   "check": "sum of sub-districts = district, Rural (640 districts x 9 categories)",
+   "ok": true,
+   "expected": "0",
+   "got": "0"
+  },
+  {
+   "check": "sum of sub-districts = district, Urban (640 districts x 9 categories)",
+   "ok": true,
+   "expected": "0",
+   "got": "0"
+  },
+  {
+   "check": "town part keys unique",
+   "ok": true,
+   "expected": "0",
+   "got": "0"
+  },
+  {
+   "check": "towns with >1 part == towns with a C-01 whole-town row",
+   "ok": true,
+   "expected": "63",
+   "got": "63",
+   "detail": {
+    "only_parts": [],
+    "only_whole": []
+   }
+  },
+  {
+   "check": "every town spanning districts has a state-level whole-town row; only extra = Delhi Cantonment",
+   "ok": true,
+   "expected": "13 + 800443",
+   "got": "14",
+   "detail": {
+    "state_level_but_one_district": [
+     "800443"
+    ]
+   }
+  },
+  {
+   "check": "whole-town row at district level <=> town spans sub-districts within one district (except 800443)",
+   "ok": true,
+   "expected": "49",
+   "got": "49"
+  },
+  {
+   "check": "district-level whole-town rows sit in their parts' district",
+   "ok": true,
+   "expected": null,
+   "got": null
+  },
+  {
+   "check": "sum of parts = C-01 whole-town row for all 63 multi-part towns (9 categories)",
+   "ok": true,
+   "expected": "0",
+   "got": "0"
+  },
+  {
+   "check": "Greater Mumbai (802794): parts across districts ['518', '519'] sum to whole row",
+   "ok": true,
+   "expected": "12442373",
+   "got": "12442373"
+  },
+  {
+   "check": "Siliguri (801638): parts across districts ['327', '328'] sum to whole row",
+   "ok": true,
+   "expected": "513264",
+   "got": "513264"
+  },
+  {
+   "check": "DMC (U) Delhi (800441): parts across districts ['090', '091', '092', '093', '094', '095', '096', '097', '098'] sum to whole row",
+   "ok": true,
+   "expected": "11034555",
+   "got": "11034555"
+  },
+  {
+   "check": "Srinagar (800013): parts across districts ['002', '010'] sum to whole row",
+   "ok": true,
+   "expected": "1206419",
+   "got": "1206419"
+  },
+  {
+   "check": "GHMC Hyderabad (802918): parts across districts ['535', '536', '537'] sum to whole row",
+   "ok": true,
+   "expected": "6993262",
+   "got": "6993262"
+  },
+  {
+   "check": "every part row of a multi-part town carries a part marker ((Part)/(Major part)/(Minor part))",
+   "ok": true,
+   "expected": "197",
+   "got": "197"
+  },
+  {
+   "check": "single-part towns whose NAME says '(Part)' (CTs carved from part of a village; not splits)",
+   "ok": true,
+   "expected": null,
+   "got": "6",
+   "detail": [
+    {
+     "state": "06",
+     "district": "070",
+     "subdistt": "00359",
+     "town": "057510",
+     "area_name_raw": "Jandli (Part) (113) (CT)"
+    },
+    {
+     "state": "06",
+     "district": "089",
+     "subdistt": "00427",
+     "town": "063731",
+     "area_name_raw": "Palwal (Rural) (Part) (73) (CT)"
+    },
+    {
+     "state": "14",
+     "district": "277",
+     "subdistt": "01881",
+     "town": "270123",
+     "area_name_raw": "Sagolband (Part) (CT)"
+    },
+    {
+     "state": "16",
+     "district": "290",
+     "subdistt": "01941",
+     "town": "272235",
+     "area_name_raw": "Fulkumari (Part) (CT)"
+    },
+    {
+     "state": "21",
+     "district": "384",
+     "subdistt": "03009",
+     "town": "404119",
+     "area_name_raw": "Kandasar (Part) (CT)"
+    },
+    {
+     "state": "21",
+     "district": "384",
+     "subdistt": "03009",
+     "town": "404120",
+     "area_name_raw": "Kulad (Part) (CT)"
+    }
+   ]
+  },
+  {
+   "check": "town parts in each sub-district sum to the sub-district Urban row (5,988 x 9)",
+   "ok": true,
+   "expected": "0",
+   "got": "0",
+   "detail": []
+  },
+  {
+   "check": "towns in each district sum to the district Urban row (640 x 9)",
+   "ok": true,
+   "expected": "0",
+   "got": "0"
+  },
+  {
+   "check": "sub-districts with zero urban population have no town rows",
+   "ok": true,
+   "expected": null,
+   "got": null
+  },
+  {
+   "check": "religions sum to total on every unit row",
+   "ok": true,
+   "expected": "0",
+   "got": "0"
+  },
+  {
+   "check": "no negative counts",
+   "ok": true,
+   "expected": null,
+   "got": null
+  },
+  {
+   "check": "India Total population = sum of sub-districts",
+   "ok": true,
+   "expected": "1210854977",
+   "got": "1210854977"
+  },
+  {
+   "check": "India Rural population = sum of sub-districts",
+   "ok": true,
+   "expected": "833748852",
+   "got": "833748852"
+  },
+  {
+   "check": "India Urban population = sum of sub-districts",
+   "ok": true,
+   "expected": "377106125",
+   "got": "377106125"
+  },
+  {
+   "check": "India urban population = sum of town parts",
+   "ok": true,
+   "expected": "377106125",
+   "got": "377106125"
+  },
+  {
+   "check": "India total: sum of sub-districts = DDW00C-01 India row",
+   "ok": true,
+   "expected": "1210854977",
+   "got": "1210854977"
+  },
+  {
+   "check": "India urban total: sum of town parts = DDW00C-01 India Urban row",
+   "ok": true,
+   "expected": "377106125",
+   "got": "377106125"
+  },
+  {
+   "check": "India hindu: sum of sub-districts = DDW00C-01 India row",
+   "ok": true,
+   "expected": "966257353",
+   "got": "966257353"
+  },
+  {
+   "check": "India urban hindu: sum of town parts = DDW00C-01 India Urban row",
+   "ok": true,
+   "expected": "282163402",
+   "got": "282163402"
+  },
+  {
+   "check": "India muslim: sum of sub-districts = DDW00C-01 India row",
+   "ok": true,
+   "expected": "172245158",
+   "got": "172245158"
+  },
+  {
+   "check": "India urban muslim: sum of town parts = DDW00C-01 India Urban row",
+   "ok": true,
+   "expected": "68740419",
+   "got": "68740419"
+  },
+  {
+   "check": "India christian: sum of sub-districts = DDW00C-01 India row",
+   "ok": true,
+   "expected": "27819588",
+   "got": "27819588"
+  },
+  {
+   "check": "India urban christian: sum of town parts = DDW00C-01 India Urban row",
+   "ok": true,
+   "expected": "11162523",
+   "got": "11162523"
+  },
+  {
+   "check": "India sikh: sum of sub-districts = DDW00C-01 India row",
+   "ok": true,
+   "expected": "20833116",
+   "got": "20833116"
+  },
+  {
+   "check": "India urban sikh: sum of town parts = DDW00C-01 India Urban row",
+   "ok": true,
+   "expected": "5902324",
+   "got": "5902324"
+  },
+  {
+   "check": "India buddhist: sum of sub-districts = DDW00C-01 India row",
+   "ok": true,
+   "expected": "8442972",
+   "got": "8442972"
+  },
+  {
+   "check": "India urban buddhist: sum of town parts = DDW00C-01 India Urban row",
+   "ok": true,
+   "expected": "3628123",
+   "got": "3628123"
+  },
+  {
+   "check": "India jain: sum of sub-districts = DDW00C-01 India row",
+   "ok": true,
+   "expected": "4451753",
+   "got": "4451753"
+  },
+  {
+   "check": "India urban jain: sum of town parts = DDW00C-01 India Urban row",
+   "ok": true,
+   "expected": "3546944",
+   "got": "3546944"
+  },
+  {
+   "check": "India other_religions: sum of sub-districts = DDW00C-01 India row",
+   "ok": true,
+   "expected": "7937734",
+   "got": "7937734"
+  },
+  {
+   "check": "India urban other_religions: sum of town parts = DDW00C-01 India Urban row",
+   "ok": true,
+   "expected": "738727",
+   "got": "738727"
+  },
+  {
+   "check": "India religion_not_stated: sum of sub-districts = DDW00C-01 India row",
+   "ok": true,
+   "expected": "2867303",
+   "got": "2867303"
+  },
+  {
+   "check": "India urban religion_not_stated: sum of town parts = DDW00C-01 India Urban row",
+   "ok": true,
+   "expected": "1223663",
+   "got": "1223663"
+  },
+  {
+   "check": "sum of sub-districts = religion_district_2011.csv (1,920 rows x 9)",
+   "ok": true,
+   "expected": null,
+   "got": null
+  },
+  {
+   "check": "religion_units: (state, district, subdistt, town, tru) unique",
+   "ok": true,
+   "expected": "0",
+   "got": "0"
+  },
+  {
+   "check": "religion_units rows = 3 x sub-districts + town parts",
+   "ok": true,
+   "expected": "26031",
+   "got": "26031"
+  },
+  {
+   "check": "town codes unique within India (one state each)",
+   "ok": true,
+   "expected": null,
+   "got": null
+  },
+  {
+   "check": "PCA sub-district keys (x T/R/U) == C-01 sub-district keys",
+   "ok": true,
+   "expected": "17964",
+   "got": "17964"
+  },
+  {
+   "check": "every sub-district with PCA rural population has a C-01 Rural row with population",
+   "ok": true,
+   "expected": "5882",
+   "got": "5882"
+  },
+  {
+   "check": "sub-district population C-01 = PCA (T/R/U) except 4 known UP sub-districts, offsetting within district",
+   "ok": true,
+   "expected": "0",
+   "got": "8",
+   "detail": {
+    "note": "Two Uttar Pradesh sub-district pairs: C-01 and PCA place a few villages in different sub-districts of the same district (offsetting; district totals identical). Urban rows match everywhere.",
+    "rows": [
+     {
+      "state": "09",
+      "district": "135",
+      "subdistt": "00717",
+      "tru": "Rural",
+      "c01_minus_pca": 2560,
+      "name": "Thakurdwara",
+      "district_name": "Moradabad"
+     },
+     {
+      "state": "09",
+      "district": "135",
+      "subdistt": "00717",
+      "tru": "Total",
+      "c01_minus_pca": 2560,
+      "name": "Thakurdwara",
+      "district_name": "Moradabad"
+     },
+     {
+      "state": "09",
+      "district": "135",
+      "subdistt": "00718",
+      "tru": "Rural",
+      "c01_minus_pca": -2560,
+      "name": "Kanth",
+      "district_name": "Moradabad"
+     },
+     {
+      "state": "09",
+      "district": "135",
+      "subdistt": "00718",
+      "tru": "Total",
+      "c01_minus_pca": -2560,
+      "name": "Kanth",
+      "district_name": "Moradabad"
+     },
+     {
+      "state": "09",
+      "district": "179",
+      "subdistt": "00915",
+      "tru": "Rural",
+      "c01_minus_pca": -222,
+      "name": "Sultanpur",
+      "district_name": "Sultanpur"
+     },
+     {
+      "state": "09",
+      "district": "179",
+      "subdistt": "00915",
+      "tru": "Total",
+      "c01_minus_pca": -222,
+      "name": "Sultanpur",
+      "district_name": "Sultanpur"
+     },
+     {
+      "state": "09",
+      "district": "179",
+      "subdistt": "00916",
+      "tru": "Rural",
+      "c01_minus_pca": 222,
+      "name": "Jaisinghpur",
+      "district_name": "Sultanpur"
+     },
+     {
+      "state": "09",
+      "district": "179",
+      "subdistt": "00916",
+      "tru": "Total",
+      "c01_minus_pca": 222,
+      "name": "Jaisinghpur",
+      "district_name": "Sultanpur"
+     }
+    ]
+   }
+  },
+  {
+   "check": "district population C-01 = PCA (640 x T/R/U)",
+   "ok": true,
+   "expected": "0",
+   "got": "0"
+  },
+  {
+   "check": "every PCA town key (state, district, subdistt, town) has a C-01 town row, and vice versa",
+   "ok": true,
+   "expected": "8067",
+   "got": "8067",
+   "detail": {
+    "pca_only": [],
+    "c01_only": [],
+    "pca_core_duplicates_dropped": 330
+   }
+  },
+  {
+   "check": "town population C-01 = PCA (+OG unit) for every town part",
+   "ok": true,
+   "expected": "0",
+   "got": "0"
+  },
+  {
+   "check": "every PCA ward's town part has a C-01 town row",
+   "ok": true,
+   "expected": "8067",
+   "got": "8067"
+  },
+  {
+   "check": "PCA wards sum to the C-01 town-part total (all parts)",
+   "ok": true,
+   "expected": "8067",
+   "got": "8067"
+  },
+  {
+   "check": "every populated PCA village's sub-district has a C-01 Rural row with population",
+   "ok": true,
+   "expected": "5882",
+   "got": "5882",
+   "detail": {
+    "subdistricts_with_only_uninhabited_villages": [
+     {
+      "state": "07",
+      "district": "090",
+      "subdistt": "00432",
+      "TOT_P": 0
+     },
+     {
+      "state": "28",
+      "district": "537",
+      "subdistt": "04526",
+      "TOT_P": 0
+     },
+     {
+      "state": "31",
+      "district": "587",
+      "subdistt": "05628",
+      "TOT_P": 0
+     },
+     {
+      "state": "31",
+      "district": "587",
+      "subdistt": "05629",
+      "TOT_P": 0
+     }
+    ]
+   }
+  },
+  {
+   "check": "PCA village sums = C-01 sub-district Rural (same 4 UP exceptions as above)",
+   "ok": true,
+   "expected": "0",
+   "got": "4",
+   "detail": [
+    {
+     "state": "09",
+     "district": "135",
+     "subdistt": "00717",
+     "c01_minus_villages": 2560
+    },
+    {
+     "state": "09",
+     "district": "135",
+     "subdistt": "00718",
+     "c01_minus_villages": -2560
+    },
+    {
+     "state": "09",
+     "district": "179",
+     "subdistt": "00915",
+     "c01_minus_villages": -222
+    },
+    {
+     "state": "09",
+     "district": "179",
+     "subdistt": "00916",
+     "c01_minus_villages": 222
+    }
+   ]
+  }
+ ]
+}

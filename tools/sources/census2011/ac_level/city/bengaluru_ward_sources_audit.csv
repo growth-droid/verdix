@@ -1,0 +1,199 @@
+census_ward,ward_no,census_TOT_P,census_No_HH,census_P_SC,census_P_ST,ward_name_ceo,ac_ceo,ac_ceo_no,ward_name_bbmp,ac_bbmp,ac_bbmp_no,pop2011_bbmp,hh2011_bbmp,ward_name_wiki,ac_wiki,ac_wiki_no,pop2011_wiki,hh2011_wiki,ward_name_gis2012,ac_gis2012,ac_gis2012_no,pop2001_delim_gis2012,sc2001_delim_gis2012
+0001,1,34783,8647,2816,1097,Kempegowda Ward,Yelahanka,150,Kempegowda Ward,Yelahanka,150,34783,8647,Kempegowda Ward,Yelahanka,150,34783,8647,Kempegowda Ward,Yelahanka,150,21866.0,1912.0
+0002,2,36602,9506,3941,810,Chowdeshwari Ward,Yelahanka,150,Chowdeswari Ward,Yelahanka,150,36602,9506,Chowdeshwari Ward,Yelahanka,150,36602,9506,Chowdeswari Ward,Yelahanka,150,19626.0,2630.0
+0003,3,58129,14605,6480,1859,Attur,Yelahanka,150,Atturu,Yelahanka,150,58129,14605,Attur,Yelahanka,150,58129,14605,Atturu,Yelahanka,150,24020.0,2921.0
+0004,4,41986,10583,6319,1065,Yelahanka Satellite Town,Yelahanka,150,Yelahanka Satellite Town,Yelahanka,150,41986,10583,Yelahanka Satellite Town,Yelahanka,150,41986,10583,Yelahanka Satellite Town,Yelahanka,150,25782.0,3687.0
+0005,5,52025,12387,6423,973,Jakkur,Bytarayanapura,152,Jakkuru,Byatarayanapura,152,52025,12387,Jakkur,Byatarayanapura,152,52025,12387,Jakkuru,Byatarayanapura,152,20964.0,3470.0
+0006,6,71855,16470,6894,1540,Thanisandra,Bytarayanapura,152,Thanisandra,Byatarayanapura,152,71855,16470,Thanisandra,Byatarayanapura,152,71855,16470,Thanisandra,Byatarayanapura,152,20402.0,3924.0
+0007,7,72154,18691,6152,2959,Bytarayanapura,Bytarayanapura,152,Byatarayanapura,Byatarayanapura,152,72154,18691,Byatarayanapura,Byatarayanapura,152,72154,18691,Byatarayanapura,Byatarayanapura,152,31400.0,3085.0
+0008,8,47546,12036,4789,1026,Kodigehalli,Bytarayanapura,152,Kodigehalli,Byatarayanapura,152,47546,12036,Kodigehalli,Byatarayanapura,152,47546,12036,Kodigehalli,Byatarayanapura,152,21635.0,2724.0
+0009,9,57195,14448,4913,1143,Vidyaranyapura,Bytarayanapura,152,Vidyaranyapura,Byatarayanapura,152,57195,14448,Vidyaranyapura,Byatarayanapura,152,57195,14448,Vidyaranyapura,Byatarayanapura,152,23136.0,1982.0
+0010,10,36396,8379,3669,660,Doddabommasandra,Bytarayanapura,152,Dodda Bommasandra,Byatarayanapura,152,36396,8379,Doddabommasandra,Byatarayanapura,152,36396,8379,Dodda Bommasandra,Byatarayanapura,152,21640.0,3188.0
+0011,11,37128,8519,10314,1099,Kuvempunagara,Bytarayanapura,152,Kuvempu Nagar,Byatarayanapura,152,37128,8519,Kuvempunagar,Byatarayanapura,152,37128,8519,Kuvempu Nagar,Byatarayanapura,152,25295.0,4961.0
+0012,12,61071,15530,10377,1624,Shettyhalli,Dasarahalli,155,Shettihalli,Dasarahalli,155,61071,15530,Shettyhalli,Dasarahalli,155,61071,15530,Shettihalli,Dasarahalli,155,28309.0,6418.0
+0013,13,41482,11221,4441,917,Mallasandra,Dasarahalli,155,Mallasandra,Dasarahalli,155,41482,11221,Mallasandra,Dasarahalli,155,41482,11221,Mallasandra,Dasarahalli,155,26253.0,2749.0
+0014,14,65113,17117,3708,1971,Baagalakunte,Dasarahalli,155,Bagalakunte,Dasarahalli,155,65113,17117,Bagalagunte,Dasarahalli,155,65113,17117,Bagalakunte,Dasarahalli,155,28306.0,1627.0
+0015,15,33042,8849,2365,650,T.Dasarahalli,Dasarahalli,155,T Dasarahalli,Dasarahalli,155,33042,8849,T. Dasarahalli,Dasarahalli,155,33042,8849,T Dasarahalli,Dasarahalli,155,26050.0,1364.0
+0016,16,37959,9191,9010,1416,Jalahalli,Rajarajeswarinagar,154,Jalahalli,Rajarajeswari Nagar,154,37959,9191,Jalahalli,Rajarajeshwarinagar,154,37959,9191,Jalahalli,Rajarajeswari Nagar,154,29037.0,6257.0
+0017,17,49610,12553,4515,1286,J.P.Park,Rajarajeswarinagar,154,J P Park,Rajarajeswari Nagar,154,49610,12553,J. P. Park,Rajarajeshwarinagar,154,49610,12553,J P Park,Rajarajeswari Nagar,154,35174.0,3344.0
+0018,18,35122,9058,3883,741,Radhakrishna Temple Ward,Hebbal,158,Radhakrishna Temple Ward,Hebbal,158,35122,9058,Radhakrishna Temple,Hebbal,158,35122,9058,Radhakrishna Temple Ward,Hebbal,158,26211.0,3320.0
+0019,19,32491,8153,1754,477,Sanjaynagar,Hebbal,158,Sanjaya Nagar,Hebbal,158,32491,8153,Sanjaynagar,Hebbal,158,32491,8153,Sanjaya Nagar,Hebbal,158,24178.0,848.0
+0020,20,27361,6592,3773,501,Ganganagar,Hebbal,158,Ganga Nagar,Hebbal,158,27361,6592,Ganganagar,Hebbal,158,27361,6592,Ganga Nagar,Hebbal,158,26256.0,2842.0
+0021,21,32516,8181,4294,765,Hebbala,Hebbal,158,Hebbala,Hebbal,158,32516,8181,Hebbala,Hebbal,158,32516,8181,Hebbala,Hebbal,158,24161.0,3131.0
+0022,22,51592,12704,4145,667,Vishwanath Nagenahalli,Hebbal,158,Vishwanath Nagenahalli,Hebbal,158,51592,12704,Vishwanatha Nagenahalli,Hebbal,158,51592,12704,Vishwanath Nagenahalli,Hebbal,158,25697.0,2422.0
+0023,23,60483,12295,6567,574,Nagavara,Sarvagnanagar,160,Nagavara,Sarvagna Nagar,160,60483,12295,Nagavara,Sarvagnanagar,160,60483,12295,Nagavara,Sarvagna Nagar,160,35264.0,4331.0
+0024,24,58967,13612,7435,1313,H.B.R Layout,Sarvagnanagar,160,HBR Layout,Sarvagna Nagar,160,58967,13612,HBR Layout,Sarvagnanagar,160,58967,13612,HBR Layout,Sarvagna Nagar,160,32156.0,4584.0
+0025,25,95368,23999,12171,1699,Horamavu,K.R.Puram,151,Horamavu,K.R. Puram,151,95368,23999,Horamavu,Krishnarajapuram,151,95368,23999,Horamavu,K.R. Puram,151,28167.0,5677.0
+0026,26,47358,11674,6691,1033,Rammurthynagar,K.R.Puram,151,Ramamurthy Nagar,K.R. Puram,151,47358,11674,Ramamurthynagar,Krishnarajapuram,151,47358,11674,Ramamurthy Nagar,K.R. Puram,151,21999.0,3489.0
+0027,27,51268,12922,6116,907,Banaswadi,Sarvagnanagar,160,Banasavadi,Sarvagna Nagar,160,51268,12922,Banaswadi,Sarvagnanagar,160,51268,12922,Banasavadi,Sarvagna Nagar,160,31998.0,3419.0
+0028,28,47074,11479,7287,926,Kammanahalli,Sarvagnanagar,160,Kammanahalli,Sarvagna Nagar,160,47074,11479,Kammanahalli,Sarvagnanagar,160,47074,11479,Kammanahalli,Sarvagna Nagar,160,34819.0,4031.0
+0029,29,33588,8700,3100,429,Kacharakanahalli,Sarvagnanagar,160,Kacharkanahalli,Sarvagna Nagar,160,33588,8700,Kacharakanahalli,Sarvagnanagar,160,33588,8700,Kacharkanahalli,Sarvagna Nagar,160,29018.0,2593.0
+0030,30,45748,9758,5410,1418,Kadugondanahalli,Sarvagnanagar,160,Kadugondanahalli,Sarvagna Nagar,160,45748,9758,Kadugondanahalli,Sarvagnanagar,160,45748,9758,Kadugondanahalli,Sarvagna Nagar,160,34842.0,3897.0
+0031,31,41936,8192,5327,582,Kushalanagar,Pulakeshinagar,159,Kushal Nagar,Pulakeshi Nagar (SC),159,41936,8192,Kushalnagar,Pulakeshinagar,159,41936,8192,Kushal Nagar,Pulakeshi Nagar (SC),159,34046.0,5167.0
+0032,32,39334,9540,4621,709,Kavalbyrasandra,Pulakeshinagar,159,Kaval Bairasandra,Pulakeshi Nagar (SC),159,39334,9540,Kavalbyrasandra,Pulakeshinagar,159,39334,9540,Kaval Bairasandra,Pulakeshi Nagar (SC),159,26550.0,3669.0
+0033,33,47926,10572,1932,546,Manorayanapalya,Hebbal,158,Manorayana Palya,Hebbal,158,47926,10572,Manorayanapalya,Hebbal,158,47926,10572,Manorayanapalya,Hebbal,158,34777.0,838.0
+0034,34,24308,6058,2988,339,Gangenahalli,Hebbal,158,Gangenahalli,Hebbal,158,24308,6058,Gangenahalli,Hebbal,158,24308,6058,Gangenahalli,Hebbal,158,24954.0,2373.0
+0035,35,36738,8825,3429,657,Palace Nagar,Malleshwaram,157,Aramane Nagara,Malleshwaram,157,36738,8825,Aramanenagar,Malleshwaram,157,36738,8825,Aramane Nagara,Malleswaram,157,30397.0,2376.0
+0036,36,37036,9592,4769,763,Mathikere,Malleshwaram,157,Mattikere,Malleshwaram,157,37036,9592,Mathikere,Malleshwaram,157,37036,9592,Mattikere,Malleswaram,157,35882.0,4459.0
+0037,37,41107,10326,4031,577,Yeshwanthpura,Rajarajeswarinagar,154,Yeshwanthpura,Rajarajeswari Nagar,154,41107,10326,Yeshwanthpura,Rajarajeshwarinagar,154,41107,10326,Yeshwanthpura,Rajarajeswari Nagar,154,35972.0,3555.0
+0038,38,36879,9524,6281,1447,H.M.T,Rajarajeswarinagar,154,HMT Ward,Rajarajeswari Nagar,154,36879,9524,H. M. T.,Rajarajeshwarinagar,154,36879,9524,HMT Ward,Rajarajeswari Nagar,154,29764.0,3761.0
+0039,39,59289,16537,4132,1830,Chokkasandra,Dasarahalli,155,Chokkasandra,Dasarahalli,155,59289,16537,Chokkasandra,Dasarahalli,155,59289,16537,Chokkasandra,Dasarahalli,155,30117.0,2571.0
+0040,40,72794,19506,6241,3556,Doddabidarakalu,Yeshwanthpur,153,Dodda Bidarakallu,Yeshwantpura,153,72794,19506,Dodda Bidarkallu,Yeshvanthapura,153,72794,19506,Dodda Bidarakallu,Yeshwantpura,153,19349.0,3055.0
+0041,41,57814,15805,3715,1601,Peenya Industrial Area,Dasarahalli,155,Peenya Industrial Area,Dasarahalli,155,57814,15805,Peenya Industrial Area,Dasarahalli,155,57814,15805,Peenya Industrial Area,Dasarahalli,155,27467.0,1595.0
+0042,42,41352,10620,8353,1203,Lakshmidevinagar,Rajarajeswarinagar,154,Lakshmi Devi Nagar,Rajarajeswari Nagar,154,41352,10620,Lakshmidevinagar,Rajarajeshwarinagar,154,41352,10620,Lakshmi Devi Nagar,Rajarajeswari Nagar,154,25578.0,4568.0
+0043,43,51200,13291,5856,993,Nandini Layout,Mahalakshmi Layout,156,Nandini Layout,Mahalakshmi Layout,156,51200,13291,Nandini Layout,Mahalakshmi Layout,156,51200,13291,Nandini Layout,Mahalakshmi Layout,156,34318.0,4421.0
+0044,44,40212,10051,6767,653,Marappanapalya,Mahalakshmi Layout,156,Marappana Palya,Mahalakshmi Layout,156,40212,10051,Marappana Palya,Mahalakshmi Layout,156,40212,10051,Marappana Palya,Mahalakshmi Layout,156,34002.0,5202.0
+0045,45,34196,8503,2907,612,Malleshwaram,Malleshwaram,157,Malleshwaram,Malleshwaram,157,34196,8503,Malleshwaram,Malleshwaram,157,34196,8503,Malleswaram,Malleswaram,157,36321.0,3493.0
+0046,46,31449,7696,2633,284,Jayachamarajendra  Nagar,Hebbal,158,Jayachamarajendra Nagar,Hebbal,158,31449,7696,Jayachamarajendranagar,Hebbal,158,31449,7696,Jayachamarajendra Nagar,Hebbal,158,30743.0,2465.0
+0047,47,42135,8941,7645,418,Devarajeevanahalli,Pulakeshinagar,159,Devara Jeevanahalli,Pulakeshi Nagar (SC),159,42135,8941,Devarajeevanahalli,Pulakeshinagar,159,42135,8941,Devara Jeevanahalli,Pulakeshi Nagar (SC),159,33483.0,7021.0
+0048,48,35814,7419,7118,425,Muneshwaranagar,Pulakeshinagar,159,Muneshwara Nagar,Pulakeshi Nagar (SC),159,35814,7419,Muneshwaranagar,Pulakeshinagar,159,35814,7419,Muneshwara Nagar,Pulakeshi Nagar (SC),159,30508.0,6605.0
+0049,49,37955,8850,6579,1419,Lingarajapura,Sarvagnanagar,160,Lingarajapura,Sarvagna Nagar,160,37955,8850,Lingarajapuram,Sarvagnanagar,160,37955,8850,Lingarajapura,Sarvagna Nagar,160,32375.0,5013.0
+0050,50,49094,12384,10790,1225,Benaganahalli,C.V.Ramannagar,161,Benniganahalli,C.V. Ramannagar (SC),161,49094,12384,Benniganahalli,C. V. Raman Nagar,161,49094,12384,Benniganahalli,C.V. Ramannagar (SC),161,31985.0,7346.0
+0051,51,46159,11087,10819,755,Vignananapura,K.R.Puram,151,Vijnanapura,K.R. Puram,151,46159,11087,Vijinapura,Krishnarajapuram,151,46159,11087,Vijnanapura,K.R. Puram,151,35087.0,6454.0
+0052,52,35168,8961,3563,933,K.R.Puram,K.R.Puram,151,KR Puram,K.R. Puram,151,35168,8961,Krishnarajapuram,Krishnarajapuram,151,35168,8961,K R Puram,K.R. Puram,151,26485.0,2483.0
+0053,53,48585,11936,7476,1008,Basavanapura,K.R.Puram,151,Basavanapura,K.R. Puram,151,48585,11936,Basavanapura,Krishnarajapuram,151,48585,11936,Basavanapura,K.R. Puram,151,22012.0,4115.0
+0054,54,50191,12579,6964,1132,Hoodi,Mahadevpura,174,Hudi,Mahadevapura,174,50191,12579,Hoodi,Mahadevapura,174,50191,12579,Hudi,K.R. Puram,151,20700.0,4364.0
+0055,55,33946,8638,4851,771,Devasandra,K.R.Puram,151,Devasandra,K.R. Puram,151,33946,8638,Devasandra,Krishnarajapuram,151,33946,8638,Devasandra,K.R. Puram,151,22057.0,3225.0
+0056,56,43443,11039,8354,622,A.Narayanapura,K.R.Puram,151,A Narayanapura,K.R. Puram,151,43443,11039,A. Narayanapura,Krishnarajapuram,151,43443,11039,A Narayanapura,K.R. Puram,151,29420.0,5827.0
+0057,57,58815,16710,4516,943,C.V.Ramannagar,C.V.Ramannagar,161,C.V. Raman Nagar,C.V. Ramannagar (SC),161,58815,16710,C. V. Raman Nagar,C. V. Raman Nagar,161,58815,16710,C V Raman Nagar,C.V. Ramannagar (SC),161,29760.0,2710.0
+0058,58,43983,12200,4473,794,Hosa Thippasandra,C.V.Ramannagar,161,New Tippa Sandra,C.V. Ramannagar (SC),161,43983,12200,Hosathippasandra,C. V. Raman Nagar,161,43983,12200,New Tippasandara,C.V. Ramannagar (SC),161,34577.0,2498.0
+0059,59,40362,10113,10088,353,Maruthisevanagar,Sarvagnanagar,160,Maruthi Seva Nagar,Sarvagna Nagar,160,40362,10113,Maruthisevanagar,Sarvagnanagar,160,40362,10113,Maruthi Seva Nagar,Sarvagna Nagar,160,35811.0,8453.0
+0060,60,35334,7340,9985,336,Sagayapuram,Pulakeshinagar,159,Sagayara Puram,Pulakeshi Nagar (SC),159,35334,7340,Sagayarapuram,Pulakeshinagar,159,35334,7340,Sagayarapuram,Pulakeshi Nagar (SC),159,34874.0,10444.0
+0061,61,38050,7941,6497,541,S.K.Garden,Pulakeshinagar,159,SK Garden,Pulakeshi Nagar (SC),159,38050,7941,S. K. Garden,Pulakeshinagar,159,38050,7941,S K Garden,Pulakeshi Nagar (SC),159,33939.0,7226.0
+0062,62,34394,7530,8666,268,Ramaswamy Palya,Shivajinagar,162,Ramaswamy Palya,Shivaji Nagar,162,34394,7530,Ramaswamypalya,Shivajinagar,162,34394,7530,Ramaswamy Palya,Shivaji Nagar,162,32400.0,7046.0
+0063,63,21728,4808,3297,225,Jayamahal,Shivajinagar,162,Jaya Mahal,Shivaji Nagar,162,21728,4808,Jayamahal,Shivajinagar,162,21728,4808,Jayamahal,Shivaji Nagar,162,24065.0,3291.0
+0064,64,31118,7641,3604,402,Rajamahal Guttahalli,Malleshwaram,157,Raj Mahal Guttahalli,Malleshwaram,157,31118,7641,Rajamahal,Malleshwaram,157,31118,7641,Rajamahal Guttahalli,Malleswaram,157,33964.0,3922.0
+0065,65,35609,9823,1066,222,Kadu Malleshwaram,Malleshwaram,157,Kadu Malleshwar Ward,Malleshwaram,157,35609,9823,Kadumalleshwara,Malleshwaram,157,35609,9823,Kadu Malleshwar Ward,Malleswaram,157,34053.0,612.0
+0066,66,35709,9383,1179,410,Subramanyanagar,Malleshwaram,157,Subramanya Nagar,Malleshwaram,157,35709,9383,Subrahmanyanagar,Malleshwaram,157,35709,9383,Subramanya Nagar,Malleswaram,157,34883.0,1040.0
+0067,67,34574,8667,2388,592,Nagapura,Mahalakshmi Layout,156,Nagapura,Mahalakshmi Layout,156,34574,8667,Nagapura,Mahalakshmi Layout,156,34575,8667,Nagapura,Mahalakshmi Layout,156,35553.0,2520.0
+0068,68,44615,11563,2093,545,Mahalakshmipuram,Mahalakshmi Layout,156,Mahalakshmipuram,Mahalakshmi Layout,156,44615,11563,Mahalakshmipuram,Mahalakshmi Layout,156,44615,11563,Mahalakshimpuram,Mahalakshmi Layout,156,35976.0,1258.0
+0069,69,57077,15178,3847,1240,Laggere,Rajarajeswarinagar,154,Laggere,Rajarajeswari Nagar,154,57077,15178,Laggere,Rajarajeshwarinagar,154,57077,15178,Laggere,Rajarajeswari Nagar,154,25370.0,1403.0
+0070,70,61479,17262,4847,1426,Rajagopalanagar,Dasarahalli,155,Rajagopal Nagar,Dasarahalli,155,61479,17262,Rajagopalanagar,Dasarahalli,155,61479,17262,Rajagopal Nagar,Dasarahalli,155,28604.0,2364.0
+0071,71,66314,18438,4305,1515,Heggenahalli,Dasarahalli,155,Hegganahalli,Dasarahalli,155,66314,18438,Hegganahalli,Dasarahalli,155,66314,18438,Hegganahalli,Dasarahalli,155,30889.0,1879.0
+0072,72,62272,16215,4160,1509,Herohalli,Yeshwanthpur,153,Herohalli,Yeshwantpura,153,62272,16215,Herohalli,Yeshvanthapura,153,62272,16215,Herohalli,Yeshwantpura,153,19668.0,2026.0
+0073,73,68922,17739,5409,1499,Kottegepalya,Rajarajeswarinagar,154,Kottegepalya,Rajarajeswari Nagar,154,68922,17739,Kottigepalya,Rajarajeshwarinagar,154,68922,17739,Kottegepalya,Rajarajeswari Nagar,154,29100.0,2299.0
+0074,74,43844,11074,7710,543,Shakti Ganapathiinagar,Mahalakshmi Layout,156,Shakthi Ganapathi Nagar,Mahalakshmi Layout,156,43844,11074,Shakthiganapathinagar,Mahalakshmi Layout,156,43844,11074,Shakthi Ganapathi Nagar,Mahalakshmi Layout,156,34530.0,5595.0
+0075,75,48734,12433,1933,553,Shankaramatha,Mahalakshmi Layout,156,Shankar Matt,Mahalakshmi Layout,156,48734,12433,Shankara Matha,Mahalakshmi Layout,156,48734,12433,Shankar Matt,Mahalakshmi Layout,156,35679.0,1280.0
+0076,76,33236,8489,1022,325,Gayathrinagar,Malleshwaram,157,Gayithri Nagar,Malleshwaram,157,33236,8489,Gayathrinagar,Malleshwaram,157,33236,8489,Gayithri Nagar,Malleswaram,157,35389.0,980.0
+0077,77,33388,8325,3453,463,Dattatreya Temple,Gandhinagar,164,Dattatreya Temple Ward,Gandhi Nagar,164,33388,8325,Dattathreya Temple,Gandhi Nagar,164,33388,8325,Dattatreya Temple,Gandhi Nagar,164,34236.0,3351.0
+0078,78,28835,6595,2262,429,Pulakeshinagar,Pulakeshinagar,159,Pulakeshi Nagar,Pulakeshi Nagar (SC),159,28835,6595,Pulakeshinagar,Pulakeshinagar,159,28835,6595,Pulikeshinagar,Pulakeshi Nagar (SC),159,28149.0,2474.0
+0079,79,37291,9052,13506,442,Sarvagnanagar,C.V.Ramannagar,161,Sarvagna Nagar,C.V. Ramannagar (SC),161,37291,9052,Sarvagnanagar,C. V. Raman Nagar,161,37291,9052,Sarvagna Nagar,C.V. Ramannagar (SC),161,34943.0,12221.0
+0080,80,35228,8877,11220,398,Hoysalanagar,C.V.Ramannagar,161,Hoysala Nagar,C.V. Ramannagar (SC),161,35228,8877,Hoysalanagar,C. V. Raman Nagar,161,35228,8877,Hoysala Nagar,C.V. Ramannagar (SC),161,35890.0,10775.0
+0081,81,57062,15419,6055,761,Vignanannagar,K.R.Puram,151,Vijnana Nagar,K.R. Puram,151,57062,15419,Vignananagar,Krishnarajapuram,151,57062,15419,Vijnana Nagar,K.R. Puram,151,24757.0,3761.0
+0082,82,49631,13453,6566,1293,Garudacharpalya,Mahadevpura,174,Garudachar palya,Mahadevapura,174,49631,13453,Garudacharpalya,Mahadevapura,174,49631,13453,Garudachar Playa,Mahadevapura,174,20920.0,3635.0
+0083,83,43942,11423,8138,784,Kadugodi,Mahadevpura,174,Kadugodi,Mahadevapura,174,43942,11423,Kadugudi,Mahadevapura,174,43942,11423,Kadugodi,Mahadevapura,174,22205.0,4557.0
+0084,84,50556,13419,5614,901,Hagadooru,Mahadevpura,174,Hagadur,Mahadevapura,174,50556,13419,Hagadooru,Mahadevapura,174,50556,13419,Hagadur,Mahadevapura,174,25915.0,3664.0
+0085,85,63083,17755,5430,1078,Dodda Nekkundi,Mahadevpura,174,Dodda Nekkundi,Mahadevapura,174,63083,17755,Doddanekkundi,Mahadevapura,174,63083,17755,Dodda Nekkundi,Mahadevapura,174,22016.0,4283.0
+0086,86,39768,11051,5390,712,Marathhalli,Mahadevpura,174,Marathahalli,Mahadevapura,174,39768,11051,Marathahalli,Mahadevapura,174,39768,11051,Marathahalli,Mahadevapura,174,22489.0,4126.0
+0087,87,39926,10044,6793,1113,HAL Airport,K.R.Puram,151,HAL Airport,K.R. Puram,151,39926,10044,HAL Airport,Krishnarajapuram,151,39926,10044,HAL Airport,K.R. Puram,151,33066.0,5487.0
+0088,88,38251,9741,9311,678,Jeevanbhimanagar,C.V.Ramannagar,161,Jeevanbhima Nagar,C.V. Ramannagar (SC),161,38251,9741,Jeevanabima Nagar,C. V. Raman Nagar,161,38251,9741,Jeevanbhima Nagar,C.V. Ramannagar (SC),161,36152.0,8116.0
+0089,89,33793,8806,3861,659,Jogupalya,Shanthinagar,163,Jogupalya,Shanthi Nagar,163,33793,8806,Jogupalya,Shanthinagar,163,33793,8806,Jogupalya,Shanthi Nagar,163,34611.0,3570.0
+0090,90,35090,7771,8566,369,Halsur,Shivajinagar,162,Halsoor,Shivaji Nagar,162,35090,7771,Ulsoor,Shivajinagar,162,35090,7771,Halsoor,Shivaji Nagar,162,35891.0,6474.0
+0091,91,32689,7074,2007,157,Bharathinagar,Shivajinagar,162,Bharathi Nagar,Shivaji Nagar,162,32689,7074,Bharathinagar,Shivajinagar,162,32689,7074,Bharathi Nagar,Shivaji Nagar,162,32632.0,1613.0
+0092,92,37506,7276,2379,152,Shivajinagar,Shivajinagar,162,Shivaji Nagar,Shivaji Nagar,162,37506,7276,Shivajinagar,Shivajinagar,162,37506,7276,Shivaji Nagar,Shivaji Nagar,162,35740.0,1438.0
+0093,93,22815,5304,2757,243,Vasanthanagar,Shivajinagar,162,Vasanth Nagar,Shivaji Nagar,162,22815,5304,Vasanthnagar,Shivajinagar,162,22815,5304,Vasanth Nagar,Shivaji Nagar,162,25632.0,2198.0
+0094,94,31208,6599,6377,263,Gandhinagar,Gandhinagar,164,Gandhi Nagar,Gandhi Nagar,164,31208,6599,Gandhinagar,Gandhi Nagar,164,31208,6599,Gandhinagar,Gandhi Nagar,164,35310.0,6153.0
+0095,95,37693,8711,16365,607,Subhashnagar,Gandhinagar,164,Subhash Nagar,Gandhi Nagar,164,37693,8711,Subhashnagar,Gandhi Nagar,164,37693,8711,Subhash Nagar,Gandhi Nagar,164,35427.0,11378.0
+0096,96,38110,8693,6637,357,Okalipuram,Gandhinagar,164,Okalipuram,Gandhi Nagar,164,38110,8693,Okalipuram,Gandhi Nagar,164,38110,8693,Okalipuram,Gandhi Nagar,164,35875.0,6352.0
+0097,97,35721,8253,11005,245,Dayanandanagar,Rajajinagar,165,Dayananda Nagar,Rajaji Nagar,165,35721,8253,Dayanandanagar,Rajaji Nagar,165,35721,8253,Dayananda Nagar,Rajaji Nagar,165,34595.0,10651.0
+0098,98,32913,8276,1979,184,Prakashnagar,Rajajinagar,165,Prakash Nagar,Rajaji Nagar,165,32913,8276,Prakashnagar,Rajaji Nagar,165,32913,8276,Prakash Nagar,Rajaji Nagar,165,35465.0,1994.0
+0099,99,33084,8398,2322,361,Rajajinagar,Rajajinagar,165,Rajaji Nagar,Rajaji Nagar,165,33084,8398,Rajajinagar,Rajaji Nagar,165,33084,8398,Rajaji Nagar,Rajaji Nagar,165,33231.0,2175.0
+0100,100,30333,7495,1820,529,Basaveshwarnagar,Rajajinagar,165,Basaveshwara Nagar,Rajaji Nagar,165,30333,7495,Basaveshwaranagar,Rajaji Nagar,165,30333,7495,Basaveshwara Nagar,Rajaji Nagar,165,27002.0,1236.0
+0101,101,30051,7482,2538,456,Kamakshipalya,Rajajinagar,165,Kamakshipalya,Rajaji Nagar,165,30051,7482,Kamakshipalya,Rajaji Nagar,165,30051,7482,Kamakshipalya,Rajaji Nagar,165,25742.0,2004.0
+0102,102,50893,13443,2041,831,Vrishabavathinagar,Mahalakshmi Layout,156,Vrisahbhavathi Nagar,Mahalakshmi Layout,156,50893,13443,Vrishabhavathi,Mahalakshmi Layout,156,50893,13443,Vrisabhavathi Nagar,Mahalakshmi Layout,156,34339.0,1187.0
+0103,103,53532,14168,1959,1138,Kaveripura,Govindarjnagara,166,Kaveripura,Govindaraja Nagar,166,53532,14168,Kaveripura,Govindraj Nagar,166,53532,14168,Kaveripura,Govindaraja Nagar,166,35256.0,924.0
+0104,104,26873,6678,2723,467,Govindarajanagar,Govindarjnagara,166,Govindaraja Nagar,Govindaraja Nagar,166,26873,6678,Govindarajanagar,Govindraj Nagar,166,26873,6678,Govindaraja Nagar,Govindaraja Nagar,166,25773.0,2278.0
+0105,105,28355,7192,3225,599,Agrahara Dasarahalli,Govindarjnagara,166,Agrahara Dasarahalli,Govindaraja Nagar,166,28355,7192,Agrahara Dasarahalli,Govindraj Nagar,166,28355,7192,Agrahara Dasarahalli,Govindaraja Nagar,166,26857.0,3172.0
+0106,106,24181,6077,2158,678,Dr.Rajkumar Ward,Govindarjnagara,166,Dr.Raj Kumar Ward,Govindaraja Nagar,166,24181,6077,Dr. Rajkumar,Govindraj Nagar,166,24181,6077,Dr. Raj Kumar Ward,Govindaraja Nagar,166,24752.0,2111.0
+0107,107,36461,9260,1197,510,Shivanagar,Rajajinagar,165,Shiva Nagar,Rajaji Nagar,165,36461,9260,Shivanagar,Rajaji Nagar,165,36461,9260,Shivanagara,Rajaji Nagar,165,35979.0,858.0
+0108,108,33866,8156,1577,301,Sri Rama Mandir,Rajajinagar,165,Sri Rama Mandir Ward,Rajaji Nagar,165,33866,8156,Srirama Mandir,Rajaji Nagar,165,33866,8156,Sriramamandir,Rajaji Nagar,165,33613.0,905.0
+0109,109,33292,6842,277,185,Chikpet,Gandhinagar,164,Chickpete,Gandhi Nagar,164,33292,6842,Chickpete,Gandhi Nagar,164,33292,6842,Chickpete,Gandhi Nagar,164,33698.0,228.0
+0110,110,27504,6423,1890,155,Sampangiramanagar,Shivajinagar,162,Sampangiram Nagar,Shivaji Nagar,162,27504,6423,Sampangiramanagar,Shivajinagar,162,27504,6423,Sampangiram Nagar,Shivaji Nagar,162,33120.0,1503.0
+0111,111,22995,5493,3178,291,Shantalanagar,Shanthinagar,163,Shantala Nagar,Shanthi Nagar,163,22995,5493,Shanthalanagar,Shanthinagar,163,22995,5493,Shantala Nagar,Shanthi Nagar,163,30225.0,4033.0
+0112,112,30638,7844,6055,762,Domlur,Shanthinagar,163,Domlur,Shanthi Nagar,163,30638,7844,Domlur,Shanthinagar,163,30638,7844,Domlur,Shanthi Nagar,163,34703.0,5338.0
+0113,113,38108,10725,4576,306,Konena Agrahara,C.V.Ramannagar,161,Konena Agrahara,C.V. Ramannagar (SC),161,38108,10725,Konena Agrahara,C. V. Raman Nagar,161,38108,10725,Konena Agrahara,C.V. Ramannagar (SC),161,29344.0,4133.0
+0114,114,36916,7734,11469,270,Agara,Shanthinagar,163,Agaram,Shanthi Nagar,163,36916,7734,Agaram,Shanthinagar,163,36916,7734,Agaram,Shanthi Nagar,163,35632.0,12434.0
+0115,115,37060,8466,10668,1274,Vanarpete,Shanthinagar,163,Vannar Pet,Shanthi Nagar,163,37060,8466,Vannarpet,Shanthinagar,163,37060,8466,Vannarpet,Shanthi Nagar,163,35532.0,9468.0
+0116,116,48534,10743,8950,643,Neelasandra,Shanthinagar,163,Nilasandra,Shanthi Nagar,163,48534,10743,Neelasandra,Shanthinagar,163,48534,10743,Nilasandra,Shanthi Nagar,163,36279.0,4888.0
+0117,117,42095,9465,6246,649,Shanthinagar,Shanthinagar,163,Shanthi Nagar,Shanthi Nagar,163,42095,9465,Shanthinagar,Shanthinagar,163,42095,9465,Shanthi Nagar,Shanthi Nagar,163,36426.0,4113.0
+0118,118,28784,5953,10840,297,Sudhamanagar,Chikpet,169,Sudham Nagar,Chickpet,169,28784,5953,Sudhamanagar,Chickpet,169,28784,5953,Sudham Nagara,Chickpet,169,32202.0,8344.0
+0119,119,27076,5485,1990,150,Dharmarayaswamy Temple,Chikpet,169,Dharmaraya Swamy Temple,Chickpet,169,27076,5485,Dharmarayaswamy Temple,Chickpet,169,27076,5485,Dharmaraya Swamy Temple,Chickpet,169,33199.0,2037.0
+0120,120,37344,8652,5438,446,Cottonpet,Gandhinagar,164,Cottonpete,Gandhi Nagar,164,37344,8652,Cottonpet,Gandhi Nagar,164,37344,8652,Cottonpete,Gandhi Nagar,164,36582.0,3115.0
+0121,121,37354,9061,4561,981,Binnypet,Gandhinagar,164,Binni Pete,Gandhi Nagar,164,37354,9061,Binnipete,Gandhi Nagar,164,37354,9061,Binnipete,Gandhi Nagar,164,33946.0,16499.0
+0122,122,40032,10051,1073,2395,Kempapura Agrahara,Vijayanagar,167,Kempapura Agrahara,Vijaya Nagar,167,40032,10051,Kempapura Agrahara,Vijay Nagar,167,40032,10051,Kempapura Agrahara,Vijaya Nagar,167,33736.0,894.0
+0123,123,40331,9943,1897,606,Vijayanagar,Vijayanagar,167,Vijaya Nagar,Vijaya Nagar,167,40331,9943,Vijaynagar,Vijay Nagar,167,40331,9943,Vijayanagar,Vijaya Nagar,167,36077.0,1297.0
+0124,124,37347,9068,4817,851,Hosahalli,Vijayanagar,167,Hosahalli,Vijaya Nagar,167,37347,9068,Hosahalli,Vijay Nagar,167,37347,9068,Hosahalli,Vijaya Nagar,167,32103.0,3613.0
+0125,125,21171,5423,748,215,Marenahalli,Govindarjnagara,166,Marenahalli,Govindaraja Nagar,166,21171,5423,Marenahalli,Govindraj Nagar,166,21171,5423,Marenahalli,Govindaraja Nagar,166,20068.0,698.0
+0126,126,29319,7716,1468,356,Maruthi Mandira Ward,Govindarjnagara,166,Maruthi Mandir Ward,Govindaraja Nagar,166,29319,7716,Maruthi Mandira,Govindraj Nagar,166,29319,7716,Maruthi Mandir ward,Govindaraja Nagar,166,21784.0,1072.0
+0127,127,43729,11125,2362,797,Moodalapalya,Govindarjnagara,166,Mudalapalya,Govindaraja Nagar,166,43729,11125,Moodalapalya,Govindraj Nagar,166,43729,11125,Mudalapalya,Govindaraja Nagar,166,24487.0,854.0
+0128,128,35780,8255,3020,490,Nagarabhavi,Govindarjnagara,166,Nagarabhavi,Govindaraja Nagar,166,35780,8255,Nagarabhavi,Govindraj Nagar,166,35780,8255,Nagarabhavi,Govindaraja Nagar,166,20269.0,1343.0
+0129,129,68132,17410,7659,1819,Jnanabharathi,Rajarajeswarinagar,154,Jnana Bharathi Ward,Rajarajeswari Nagar,154,68132,17410,Jnanabharathi,Rajarajeshwarinagar,154,68132,17410,Jnana Bharathi ward,Rajarajeswari Nagar,154,25889.0,3732.0
+0130,130,58199,14511,7461,1365,Ullalu,Yeshwanthpur,153,Ullalu,Yeshwantpura,153,58199,14511,Ullalu,Yeshvanthapura,153,58199,14511,Ullalu,Yeshwantpura,153,20332.0,3751.0
+0131,131,42785,10285,5309,704,Nayandahalli,Govindarjnagara,166,Nayandahalli,Govindaraja Nagar,166,42785,10285,Nayandahalli,Govindraj Nagar,166,42785,10285,Nayandahalli,Govindaraja Nagar,166,22878.0,3499.0
+0132,132,41487,10576,2268,424,Athiguppe,Vijayanagar,167,Attiguppe,Vijaya Nagar,167,41487,10576,Attiguppe,Vijay Nagar,167,41487,10576,Attiguppe,Vijaya Nagar,167,26806.0,1318.0
+0133,133,35113,8456,4082,807,Hampinagar,Vijayanagar,167,Hampi Nagar,Vijaya Nagar,167,35113,8456,Hampinagar,Vijay Nagar,167,35113,8456,Hampi Nagar,Vijaya Nagar,167,30355.0,3502.0
+0134,134,49484,10647,2456,632,Bapujinagar,Vijayanagar,167,Bapuji Nagar,Vijaya Nagar,167,49484,10647,Bapujinagar,Vijay Nagar,167,49484,10647,Bapuji Nagar,Vijaya Nagar,167,36234.0,1564.0
+0135,135,37599,7273,163,89,Padarayanapura,Chamajpet,168,Padarayanapura,Chamarajpet,168,37599,7273,Padarayanapura,Chamrajpet,168,37599,7273,Padarayanapura,Chamarajpet,168,35213.0,378.0
+0136,136,38639,7751,6221,333,Jagajeevanramnagar,Chamajpet,168,Jagajivanaram Nagar,Chamarajpet,168,38639,7751,Jagjivanram Nagar,Chamrajpet,168,38639,7751,Jagajivanaramnagar,Chamarajpet,168,33758.0,5330.0
+0137,137,36039,7549,13639,458,Rayapuram,Chamajpet,168,Rayapuram,Chamarajpet,168,36039,7549,Rayapuram,Chamrajpet,168,36039,7549,Rayapuram,Chamarajpet,168,32949.0,10777.0
+0138,138,24801,4896,13039,187,Balavadhinagar,Chamajpet,168,Chelavadi Palya,Chamarajpet,168,24801,4896,Chalavadipalya,Chamrajpet,168,24801,4896,Chalavadipalya,Chamarajpet,168,25319.0,12632.0
+0139,139,29344,5903,10480,349,K.R.Market,Chamajpet,168,KR Market,Chamarajpet,168,29344,5903,Krishnarajendra Market,Chamrajpet,168,29344,5903,K R Market,Chamarajpet,168,28514.0,8845.0
+0140,140,32213,7500,1214,525,Chamajpet,Chamajpet,168,Chamraja Pet,Chamarajpet,168,32213,7500,Chamarajapet,Chamrajpet,168,32213,7500,Chamrajapet,Chamarajpet,168,33398.0,948.0
+0141,141,38825,9246,2118,1480,Azadnagar,Chamajpet,168,Azad Nagar,Chamarajpet,168,38825,9246,Azadnagar,Chamrajpet,168,38825,9246,Azad Nagar,Chamarajpet,168,35741.0,2189.0
+0142,142,34666,8643,1366,327,Sukenahalli,Chikpet,169,Sunkenahalli,Chickpet,169,34666,8643,Sunkenahalli,Chickpet,169,34666,8643,Sunkenahalli,Chickpet,169,36158.0,1966.0
+0143,143,32462,7361,1766,346,Vishveshwarapuram,Chikpet,169,Vishveshwara Puram,Chickpet,169,32462,7361,Visvesvarapuram,Chickpet,169,32462,7361,Vishveshwara Puram,Chickpet,169,36093.0,1744.0
+0144,144,34879,7396,6803,751,Siddapura,Chikpet,169,Siddapura,Chickpet,169,34879,7396,Siddapura,Chickpet,169,34879,7396,Siddapura,Chickpet,169,32194.0,4498.0
+0145,145,38309,8948,3482,408,Hombegowdanagar,Chikpet,169,Hombegowda Nagar,Chickpet,169,38309,8948,Hombegowdanagar,Chickpet,169,38309,8948,Hombegowda Nagara,Chickpet,169,36455.0,3979.0
+0146,146,30667,7229,5425,510,Lakkasandra,B.T.M Layout,172,Lakkasandra,B.T.M. Layout,172,30667,7229,Lakkasandra,B.T.M Layout,172,30667,7229,Lakkasandra,B.T.M. Layout,172,28303.0,4562.0
+0147,147,34299,8236,9039,1082,Adugodi,B.T.M Layout,172,Adugodi,B.T.M. Layout,172,34299,8236,Adugodi,B.T.M Layout,172,34299,8236,Adugodi,B.T.M. Layout,172,29945.0,5381.0
+0148,148,47004,12575,7231,953,Ejipura,B.T.M Layout,172,Ejipura,B.T.M. Layout,172,47004,12575,Ejipura,B.T.M Layout,172,47004,12575,Ejipura,B.T.M. Layout,172,29105.0,4906.0
+0149,149,54625,14256,8734,782,Varthur,Mahadevpura,174,Varthur,Mahadevapura,174,54625,14256,Varthur,Mahadevapura,174,54625,14256,Varthuru,Mahadevapura,174,25067.0,5581.0
+0150,150,80180,22368,9060,1844,Bellandur,Mahadevpura,174,Bellanduru,Mahadevapura,174,80180,22368,Bellandur,Mahadevapura,174,80180,22368,Bellanduru,Mahadevapura,174,20526.0,5838.0
+0151,151,38316,9719,4943,864,Koramangala,B.T.M Layout,172,Koramangala,B.T.M. Layout,172,38316,9719,Koramangala,B.T.M Layout,172,38316,9719,Koramangala,B.T.M. Layout,172,35359.0,3246.0
+0152,152,39997,10933,3402,463,Sudduguntepalya,B.T.M Layout,172,Suddagunte Palya,B.T.M. Layout,172,39997,10933,Suddaguntepalya,B.T.M Layout,172,39997,10933,Suddagunte Palya,B.T.M. Layout,172,35910.0,3193.0
+0153,153,38151,8427,4619,1082,Jayanagar,Chikpet,169,Jaya Nagar,Chickpet,169,38151,8427,Jayanagar,Chickpet,169,38151,8427,Jayanagar,Chickpet,169,35963.0,3743.0
+0154,154,32640,8624,1022,415,Basavanagudi,Basavanagudi,170,Basavanagudi,Basavanagudi,170,32640,8624,Basavanagudi,Basavanagudi,170,32640,8624,Basavanagudi,Basavanagudi,170,36015.0,956.0
+0155,155,36982,9483,1522,573,Hanumanthanagar,Basavanagudi,170,Hanumanth Nagar,Basavanagudi,170,36982,9483,Hanumanthanagar,Basavanagudi,170,36982,9483,Hanumanth Nagar,Basavanagudi,170,35065.0,857.0
+0156,156,41379,10574,748,886,Sriinagar,Basavanagudi,170,Sri Nagar,Basavanagudi,170,41379,10574,Srinagar,Basavanagudi,170,41379,10574,Srinagar,Basavanagudi,170,36045.0,272.0
+0157,157,34653,8668,3161,672,Gali Anjaneya Temple,Vijayanagar,167,Gali Anjenaya Temple Ward,Vijaya Nagar,167,34653,8668,Gali Anjaneya Temple,Vijay Nagar,167,34653,8668,Gali Anjenaya Temple ward,Vijaya Nagar,167,27264.0,1874.0
+0158,158,45928,11676,4267,781,Deepanjalinagar,Vijayanagar,167,Deepanjali Nagar,Vijaya Nagar,167,45928,11676,Deepanjalinagar,Vijay Nagar,167,45928,11676,Deepanjali Nagar,Vijaya Nagar,167,30924.0,1776.0
+0159,159,40771,10168,3554,751,Kengeri,Yeshwanthpur,153,Kengeri,Yeshwantpura,153,40771,10168,Kengeri,Yeshvanthapura,153,40771,10168,Kengeri,Yeshwantpura,153,24870.0,2440.0
+0160,160,56897,14408,3853,1535,Rajarajeshwarinagar,Rajarajeswarinagar,154,Raja Rajeshawari Nagar,Rajarajeswari Nagar,154,56897,14408,Rajarajeshwarinagar,Rajarajeshwarinagar,154,56897,14408,Rajarajeshwari Nagar,Rajarajeswari Nagar,154,23282.0,2605.0
+0161,161,46805,12122,1889,530,Hosakerehalli,Padmanabhanagar,171,Hosakerehalli,Padmanaba Nagar,171,46805,12122,Hosakerehalli,Padmanabhanagar,171,46805,12122,Hosakerehalli,Padmanaba Nagar,171,21185.0,1192.0
+0162,162,43195,11180,863,483,Girinagar,Basavanagudi,170,Giri Nagar,Basavanagudi,170,43195,11180,Girinagar,Basavanagudi,170,43195,11180,Girinagar,Basavanagudi,170,34912.0,474.0
+0163,163,45572,11997,827,618,Kathriguppe,Basavanagudi,170,Katriguppe,Basavanagudi,170,45572,11997,Kathriguppe,Basavanagudi,170,45572,11997,Katriguppe,Basavanagudi,170,35736.0,574.0
+0164,164,43483,11425,2300,745,Vidyapeeta Ward,Basavanagudi,170,Vidya Peeta Ward,Basavanagudi,170,43483,11425,Vidyapeetha,Basavanagudi,170,43483,11425,Vidyapeeta ward,Basavanagudi,170,34535.0,1261.0
+0165,165,25998,6472,809,247,Ganesha Temple Ward,Padmanabhanagar,171,Ganesh Mandir Ward,Padmanaba Nagar,171,25998,6472,Ganesh Mandira,Padmanabhanagar,171,25998,6472,Ganesh Mandir ward,Padmanaba Nagar,171,23101.0,652.0
+0166,166,27040,6492,2117,444,Karisandra,Padmanabhanagar,171,Kari Sandra,Padmanaba Nagar,171,27040,6492,Karisandra,Padmanabhanagar,171,27040,6492,Karisandra,Padmanaba Nagar,171,30206.0,2575.0
+0167,167,32756,8455,1344,556,Yediyur,Padmanabhanagar,171,Yediyur,Padmanaba Nagar,171,32756,8455,Yediyur,Padmanabhanagar,171,32756,8455,Yediyur,Padmanaba Nagar,171,34591.0,1111.0
+0168,168,28353,7163,1754,299,Patttabiramannagar,Jayanagar,173,Pattabhi Ram Nagar,Jaya Nagar,173,28353,7163,Pattabhiramnagar,Jayanagar,173,28353,7163,Pattabhiram Nagar,Jaya Nagar,173,30989.0,1473.0
+0169,169,32066,7423,4886,274,Byrasandra,Jayanagar,173,Byra Sandra,Jaya Nagar,173,32066,7423,Byrasandra,Jayanagar,173,32066,7423,Byrasandra,Jaya Nagar,173,30638.0,3767.0
+0170,170,33927,7961,5997,382,Jayanagar East,Jayanagar,173,Jaya Nagar East,Jaya Nagar,173,33927,7961,Jayanagar East,Jayanagar,173,33927,7961,Jayanagar East,Jaya Nagar,173,30846.0,5274.0
+0171,171,48991,10513,1470,1008,Gurappanapalya,Jayanagar,173,Gurappana Palya,Jaya Nagar,173,48991,10513,Gurappanapalya,Jayanagar,173,42624,11517,Gurappanapalya,Jaya Nagar,173,35828.0,950.0
+0172,172,42624,11517,3197,745,Madivala,B.T.M Layout,172,Madivala,B.T.M. Layout,172,42624,11517,Madiwala,B.T.M Layout,172,42694,11517,Madivala,B.T.M. Layout,172,35155.0,2658.0
+0173,173,33521,9040,3641,942,Jakkasandra,B.T.M Layout,172,Jakka Sandra,B.T.M. Layout,172,33521,9040,Jakkasandra,B.T.M Layout,172,33521,9040,Jakkasandra,B.T.M. Layout,172,24088.0,2829.0
+0174,174,63033,16847,5681,925,H.S.R.Layout,Bommanahalli,175,HSR Layout,Bommana Halli,175,63033,16847,HSR Layout,Bommanahalli,175,63033,16847,HSR Layout,Bommana Halli,175,24749.0,2723.0
+0175,175,43585,11368,4241,557,Bommanahalli,Bommanahalli,175,Bommanahalli,Bommana Halli,175,43585,11368,Bommanahalli,Bommanahalli,175,43585,11368,Bommanahalli,Bommana Halli,175,24307.0,2767.0
+0176,176,52250,14540,3897,644,B.T.M Layout,B.T.M Layout,172,BTM Layout,B.T.M. Layout,172,52250,14540,BTM Layout,B.T.M Layout,172,52250,14540,BTM Layout,B.T.M. Layout,172,34436.0,1512.0
+0177,177,28846,7566,3399,415,J.P.Nagar,Jayanagar,173,JP Nagar,Jaya Nagar,173,28846,7566,J. P. Nagar,Jayanagar,173,28846,7566,J P Nagar,Jaya Nagar,173,28508.0,2497.0
+0178,178,31034,7985,1945,394,Sarakki,Jayanagar,173,Sarakki,Jaya Nagar,173,31034,7985,Sarakki,Jayanagar,173,31034,7985,Sarakki,Jaya Nagar,173,26707.0,1379.0
+0179,179,25871,6537,500,302,Shakambarinagar,Jayanagar,173,Shakambari Narar,Jaya Nagar,173,25871,6537,Shakambarinagar,Jayanagar,173,25871,6537,Shakambari Nagar,Jaya Nagar,173,23239.0,607.0
+0180,180,42171,9461,3271,1487,Banashankari Temple Ward,Padmanabhanagar,171,Banashankari Temple Ward,Padmanaba Nagar,171,42171,9461,Banashankari Temple,Padmanabhanagar,171,42171,9461,Banashankari Temple ward,Padmanaba Nagar,171,34022.0,2548.0
+0181,181,47182,11881,2274,567,Kumaraswamy Layout,Padmanabhanagar,171,Kumara Swamy Layout,Padmanaba Nagar,171,47182,11881,Kumaraswamy Layout,Padmanabhanagar,171,47182,11881,Kumaraswamy Layout,Padmanaba Nagar,171,35384.0,1428.0
+0182,182,41037,10771,1875,281,Padmanabhanagar,Padmanabhanagar,171,Padmanabha Nagar,Padmanaba Nagar,171,41037,10771,Padmanabhanagar,Padmanabhanagar,171,41037,10771,Padmanabha Nagar,Padmanaba Nagar,171,25454.0,1150.0
+0183,183,43364,11403,745,410,Chikkalasandra,Padmanabhanagar,171,Chikkala Sandra,Padmanaba Nagar,171,43364,11403,Chikkalasandra,Padmanabhanagar,171,43364,11403,Chikkalsandra,Padmanaba Nagar,171,24677.0,519.0
+0184,184,57209,14675,6344,1200,Uttarahalli,Bangalore south,176,Uttarahalli,Bangalore South,176,57209,14675,Uttarahalli,Bangalore South,176,57209,14675,Uttarahalli,Bangalore South,176,21845.0,3960.0
+0185,185,46943,11338,2873,437,Yelachenahalli,Bangalore south,176,Yelchenahalli,Bangalore South,176,46943,11338,Yelachenahalli,Bangalore South,176,46943,11338,Yelchenahalli,Bangalore South,176,28000.0,2108.0
+0186,186,38294,9818,1487,733,Jaraganahalli,Bommanahalli,175,Jaraganahalli,Bommana Halli,175,38294,9818,Jaraganahalli,Bommanahalli,175,38294,9818,Jaraganahalli,Bommana Halli,175,23299.0,830.0
+0187,187,49207,13230,2041,666,Puttenahalli,Bommanahalli,175,Puttenahalli,Bommana Halli,175,49207,13230,Puttenahalli,Bommanahalli,175,49207,13230,Puttenahalli,Bommana Halli,175,20544.0,1176.0
+0188,188,49884,13186,4301,523,Bilekahalli,Bommanahalli,175,Bilekhalli,Bommana Halli,175,49884,13186,Bilekahalli,Bommanahalli,175,49884,13186,Bilekhalli,Bommana Halli,175,22510.0,3988.0
+0189,189,68554,18192,3639,1280,Hongasandra,Bommanahalli,175,Honga Sandra,Bommana Halli,175,68554,18192,Hongasandra,Bommanahalli,175,68554,18192,Hongasandra,Bommana Halli,175,23058.0,1529.0
+0190,190,65890,16903,5464,1527,Mangamanapalya,Bommanahalli,175,Mangammana Palya,Bommana Halli,175,65890,16903,Mangammanapalya,Bommanahalli,175,65890,16903,Mangammanapalya,Bommana Halli,175,27391.0,1918.0
+0191,191,71004,18214,9644,1714,Singasandra,Bangalore south,176,Singa Sandra,Bommana Halli,175,71004,18214,Singasandra,Bangalore South,176,71004,18214,Singasandra,Bommana Halli,175,21410.0,2955.0
+0192,192,80037,21322,7262,1375,Begur,Bangalore south,176,Begur,Bangalore South,176,80037,21322,Begur,Bangalore South,176,80037,21322,Begur,Bangalore South,176,19287.0,3488.0
+0193,193,58355,15272,5190,1094,Arakere,Bommanahalli,175,Arakere,Bommana Halli,175,58355,15272,Arakere,Bommanahalli,175,58355,15272,Arakere,Bommana Halli,175,25003.0,3311.0
+0194,194,51911,13457,7276,779,Gottigere,Bangalore south,176,Gottigere,Bangalore South,176,51911,13457,Gottigere,Bangalore South,176,51911,13457,Gottigere,Bangalore South,176,21526.0,3487.0
+0195,195,57335,14984,2219,537,Konanakunte,Bangalore south,176,Konankunte,Bangalore South,176,57335,14984,Konanakunte,Bangalore South,176,57335,14984,Konankunte,Bangalore South,176,20181.0,1032.0
+0196,196,45608,11049,4091,549,Anjanapura,Bangalore south,176,Anjanapura,Bangalore South,176,45608,11049,Anjanapura,Bangalore South,176,45608,11049,Anjanapura,Bangalore South,176,21080.0,2671.0
+0197,197,62057,16079,5280,1117,Vasanthapura,Bangalore south,176,Vasanthpura,Bangalore South,176,62057,16079,Vasanthapura,Bangalore South,176,62057,16079,Vasanthpura,Bangalore South,176,24522.0,2425.0
+0198,198,50440,12687,6456,832,Hemigepura,Yeshwanthpur,153,Hemmigepura,Yeshwantpura,153,50440,12687,Hemmigepura,Yeshvanthapura,153,50440,12687,Hemmigepura,Yeshwantpura,153,24311.0,3997.0

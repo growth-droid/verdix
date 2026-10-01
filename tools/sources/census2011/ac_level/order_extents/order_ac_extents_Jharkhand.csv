@@ -1,0 +1,82 @@
+n,name,extent,class
+1,Rajmahal,Rajmahal and Sahebganj Police Stations in Rajmahal sub-division.,A_whole_subdistricts_and_towns_only
+2,Borio (ST),"Borio and Taljhari Police Stations in Rajmahal sub-division; and Boarijor Police Station (excluding G.Ps. Rajabhita, Kero, Kairasol, Bara Telo and Barapipra) in Godda sub-division.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+3,Barhait (ST),"Barhait and Ranga Police Stations in Rajmahal sub-division; and Sundarpahari Police Station and G.Ps. Rajabhita, Kero, Kairasol, Bara Telo and Barapipra in Boarijar Police station in Godda sub- division.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+4,Litipara (ST),"Litipara, Amrapara and Hiranpur Police Stations in Pakaur sub- division; and Gopikandar Police Station in Dumka Sadar sub- division.",A_whole_subdistricts_and_towns_only
+5,Pakaur,Pakaur Police Station in Pakaur sub-division; and Barharwa Police Station in Rajmahal sub-division.,A_whole_subdistricts_and_towns_only
+6,Maheshpur (ST),Maheshpur and Pakuria Police Stations in Pakaur sub-division.,A_whole_subdistricts_and_towns_only
+7,Sikaripara (ST),"Sikaripara, Raneshwar and Kathikund Police Stations in Dumka Sadar sub-division.",A_whole_subdistricts_and_towns_only
+8,Nala,Nala and Kundahit Police Stations in Jamtara sub-division.,A_whole_subdistricts_and_towns_only
+9,Jamtara,"Jamtara Police Station (excluding G.Ps. Karmatanr, Sahajpur, Pindari, Lakhanpur, Rataniya, Rampurbhitra and Kajra) and Narayanpur Police Station in Jamtara sub-division.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+10,Dumka (ST),"Dumka Town, Dumka Muffassil and Masalia Police Stations in Dumka Sadar sub-division.",A_whole_subdistricts_and_towns_only
+11,Jama (ST),Jama and Ramgarh Police Stations in Dumka Sadar sub-division.,A_whole_subdistricts_and_towns_only
+12,Jarmundi,Jarmundi Police Station in Dumka Sadar sub-division; and Sarawan Police Station in Deoghar sub-division.,A_whole_subdistricts_and_towns_only
+13,Madhupur,"Madhupur and Karon Police Stations and G.Ps. Kusmil, Chanddih, Pathra and Basbariya in Jasidih Police Station in Deoghar sub- division.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+14,Sarath,"Sarath and Palojori Police Stations in Deoghar sub-division; and G.Ps. Karmatanr, Shahajpur, Pindari, Lakhanpur, Rataniya, Rampurbhitra and Kajra in Jamtara Police Station in Jamtara sub- division.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+15,Deoghar (SC),"Deoghar town and Mohanpur Police Stations and Jasidih Police Station (excluding G.Ps. Kusmil, Chanddih, Pathra and Basbariya) in Deoghar sub-division.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+16,Poreyahat,"Poreyahat Police Station and G.Ps. Burhikura, Dammajhilua, Sandmara, Nonbatta, Makhni, Pathra and Punsiya in Godda Police Station in Godda sub-division; and Saraiyahat Police Station in Dumka Sadar sub-division..",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+17,Godda,"Godda Police Station (excluding G.Ps. Burhikura, Dammajhilua, Sandmara, Nonbatta, Makhni, Pathra and Punsiya) and Pathargama Police Station in Godda sub-division.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+18,Mahagama,Mahagama and Meherma Police Stations in Godda sub-division.,A_whole_subdistricts_and_towns_only
+19,Kodarma,Kodarma and Sargawan Police Stations in Kodarma sub-division.,A_whole_subdistricts_and_towns_only
+20,Barkatha,Barkatha and Jainagar Police Stations in Kodarma sub-division; and Ichak Police Stations in Kodarma sub-division; and Ichak Police Station in Hazaribagh Sadar sub-division,A_whole_subdistricts_and_towns_only
+21,Barhi,Barhi Police Station in Hazaribagh Sadar sub-division; and Chauparan Police Station in Kodarma sub-division.,A_whole_subdistricts_and_towns_only
+22,Barkagaon,"Barkagaon Police Station and G.Ps. Terpa, Patratu, Koto, Palani, Hapuhua, Harijarpu Gegda, Deoria, Bargama, Pali, Salgo, Sanki, Jabo, Chaingara, Chikor, Lapanga, Ghutua, Barkakana and Sidhwar-Kalan in Ramgarh Police Station in Hazaribagh Sadar sub- division.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+23,Ramgarh,"Ramgarh Police Station (excluding G.Ps. Terpa, Patratu, Koto, Palani, Hapuhua, Harikarpur, Gegda, Deoria, Bargama, Pali, Salgo, Sanki, Jabo, Chaingari, Chikor, Lapanga, Ghutua, Barkakana and Sidhwar-Kalan) and Gola Police Station in Hazaribagh Sadar sub- division. Mandu and Bishnugarh Police Stations in Hazaribagh Sadar sub-",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+24,Mandu,division.,A_whole_subdistricts_and_towns_only
+25,Hazaribagh,Hazaribagh Police Station in Hazaribagh Sadar sub-division.,A_whole_subdistricts_and_towns_only
+26,Simaria (SC),"Simaria, Ithkori and Tandwa Police Stations in Chatra sub-division.",A_whole_subdistricts_and_towns_only
+27,Chatra (SC),"Chatra, Pratappur and Hunterganj Police Stations in Chatra sub- division.",A_whole_subdistricts_and_towns_only
+28,Dhanwar,Dhanwar and Gawan Police Stations.in Giridih Sadar sub-division.,A_whole_subdistricts_and_towns_only
+29,Bagodar,Bagodar and Birni Police Station in Giridih Sadar sub-division.,A_whole_subdistricts_and_towns_only
+30,Jamua (SC),Jamua and Deori Police Stations in Giridih Sadar sub-division.,A_whole_subdistricts_and_towns_only
+31,Gandey,"Gandey and Bengabad Police Stations and G.Ps. Leda, Semaria, Badgunda, Palmo, Sathibad, Senadoni, Dhanaidih, Guro, Jitpur, Telodih, Ranidih and Karharbari in Giridih Mufassil Police Station in Giridih Sadar sub-division.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+32,Giridih,"Giridih Town Police Station and Giridih Mufassil Police Station (excluding G.Ps. Leda, Semaria, Badgunda, Palmo, Sathibad Senadoni, Dhanaidih, Guro, Jitpur, Telodih, Ranidih and Karharbari) and Pirtanr Police Station in Giridih Sadar sub-division.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+33,Dumri,Dumri Police Station in Giridih Sadar sub-division; and Nawadih Police Station in Bermo sub-division.,A_whole_subdistricts_and_towns_only
+34,Gomia,"Gomia Police Station and Petarbar Police Station (excluding G.Ps. Champi, Rohar, Chando, Pichhri, Angwali and Chalkari) in Bermo sub-division.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+35,Bermo,"Jaridih and Bermo Police Stations and G.Ps. Champi, Rohar, Chando, Pichhri, Angwali and Chalkari in Petarbar Police Station in Bermo sub-division.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+36,Bokaro,"Chas Police Station (excluding G.Ps. Bijulia, Alkusa, Buribinor, Khamarbendi, Dudhigajar, Kura Dabartupara, Jaitara, Pundru and Sardaha) in Baghmara sub-division.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+37,Chandankiyari (SC),"Chandankiyari Police Station and G.Ps. Bijulia, Alkusa, Buribinor, Khamarbendi, Dudhigajar, Kura Dabartupara, Jaitara, Pundru and Sardaha in Chas Police Station in Baghmara sub-division.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+38,Sindri,"Sindri, Baliapur and Gobindpur Police Station in Dhanbad Sadar sub-division.",A_whole_subdistricts_and_towns_only
+39,Nirsa,Nirsa and Chirkunda Police Stations in Dhanbad Sadar sub- division.,A_whole_subdistricts_and_towns_only
+40,Dhanbad,"Dhanbad, Putki and Kenduadih Police Stations in Dhanbad Sadar sub-division.",A_whole_subdistricts_and_towns_only
+41,Jharia,Jharia and Jorapokhar Police Stations in Dhanbad Sadar sub- division.,A_whole_subdistricts_and_towns_only
+42,Tundi,"Tundi Police Station in Dhanbad Sadar sub-division; Topchanchi Police Station and G.Ps. Dharkiro, Daludih, Rajganj, Bagdaha, Dhawachita, Nagri Kalan and Ramkanalichandur in Katras Police Station in Baghmara sub-division.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+43,Baghmara,"Baghmara Police Station and Katras Police Station (excluding G.Ps. Dharkiro, Daludih, Rajganj Bagdaha, Dhawachita, Nagri Kalan and Ramkanalichandur) in Baghmara sub-division; and Jogta Police Station in Dhanbad Sadar sub-division.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+44,Baharagora,Bharagora and Chakulia Police Stations in Dhalbhum sub-division.,A_whole_subdistricts_and_towns_only
+45,Ghatsila (ST),"Ghatsila Police Station and Musabnai Police Station (excluding G.Ps. Palasbani, Asta Koyali, Nunia, Kumarasol, Barakanjiya, Bomaro Bangoriya and Damudih) in Dhalbhum sub-division.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+46,Potka (ST),"Potka Police Station, G.Ps. Palasbani, Asta Koyali, Nunia, Kumarasol, Barakanjiya, Bomaro Bangoriya and Damudih in Musabnai Police Station. Bagbera town and G.Ps. Karandih - Purihasa, Hargarghutu, Bagbera and village 1167-Kitadih in Jugsalai Police Station in Dhalbhum sub-division.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+47,Jugsalai (SC),"Jugsalai Police Station (excluding Bagbera town and G.Ps. Karandih-Purihasa, Hargarghutu, Bagbera and village 1167-Kitadih) Golmuri and Patamda Police Station in Dhalbhum sub-division.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+48,Jamshedpur East,Census wards 20 and 23 to 40 in Jamshdepur Notified Area Committee in Dhalbhum sub-division.,C_ward_or_EB_level
+49,Jamshedpur West,Jamshedpur Notified Area Committee (excluding census wards 20 and 23 to 40) in Dhalbhum sub-division.,C_ward_or_EB_level
+50,Ichagarh,"Ichagarh, Chandil and Nimdih Police Stations in Seraikella sub- division.",A_whole_subdistricts_and_towns_only
+51,Seraikella (ST),"Seraikella municipality and G.Ps. Govindpur, Pandra, Manik Bazar, Tangrani, Pathanmara, Jordiha, Gurgudia and Badakakda in Seraikella Police Station, Rajnagar Police Station (excluding village 98-Dighi) and Adityapur Police Station in Seraikella sub-division.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+52,Chaibasa (ST),"Chaibasa Sadar and Jhinkpani Police Stations and Chaibasa Mufassil Police Station (exluding G.Ps. Bhoya, Keadchalam, Domra-Parnia, Lota, Thakuragutu, Dopai-Gamhariya, Sarda, Makamhatu, Khuntpani, Chiru and Rajabasa) in Chaibasa Sadar sub-division.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+53,Majhgaon (ST),Majhgaon and Manjhari Police Stations in Chaibasa Sadar sub- division.,A_whole_subdistricts_and_towns_only
+54,Jaganathpur (ST),"Naomundi and Gua Police Stations and G.Ps. Kurtabera, Urkiya, Makaramda, Thalkobad (Part I) and Chhotanagra (Part I) in Manoharpur Police Station in Chaibasa Sadar sub-division.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+55,Manoharpur (ST),"Manoharpur Police Station (excluding G.Ps. Kurtabera, Urkiya, Makaramda, Thalkobad (Part I) and Chhotanagra (Part I) and G.Ps. Beralumin, Jojoda, Serengda, Orenga, Jhilrua, Goilkera, Kuira, Kadamdiha, Dalaikela, Sonua-Jorapokhar, Porahat, Sogoisai, Gudri Jarakel, Asantaliya, Dalki-Gobindpur, Bhalurangj, Harimara, Tunian Gajpur, Bandu, Poronger, Koloeda, Kulda, Bari, Lonjo, Bera Kayam, Mamail, Piring, Komrora, Komrora-Dairyo, Dura-Jante and Banskata and Chakradharpur Police Station in Chaibasa Sadar sub-division.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+56,Chakradharpur (ST),"Chakradharpur Police Station (excluding G.Ps. Beralumin, Jojoda, Serengda, Orenga, Jhilrua, Goilkera, Kuira, Kadamdiha, Dalaikela, Sonua-Jorapokhar, Porahat, Sogoisai,Gudri Jarakel, Asantaliya, Dalki-Gobindpur, Bhalurangj, Harimara, Tunian Gajpur, Bandu, Poronger, Koloeda, Kulda, Bari, Lonjo, Bera Kayam, Mamail, Piring, Komrora, Komrora-Dariyo, Dura-Jante and Banskata) in Chaibasa Sadar sub-division.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+57,Kharsawan (ST),"Kharsawan and Kuchai Police Stations and Seraikella Police Station (excluding Seraikella municipality and G.Ps. Govindpur, Para, Manik Bazar, Tangrani, Pathanmara, Jordiha Gurugudia and Badakakda) and village 98-Dighi in Rajnagar Police Station in Seraikella sub-division; and G.Ps. Bhoya Keadchalam, Domra- Parnia, Lota, Thakurgutu, Dopai-Gamhariya, Sarda, Matkamhatu- Khuntpani, Chiru and Rajabasa in Chaibasa Mufassil Police Station in Chaibasa Sadar sub-division.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+58,Tamar (ST),"Tamar, Erki and Bundu Police Stations in Khunti sub-divisions.",A_whole_subdistricts_and_towns_only
+59,Torpa (ST),"Torpa and Rania Police Stations and G.Ps. Gumru, Gobindpur, Tilmi, Lapa, Jariagarh, Urikel and Hutub and Karra Police Station in Khunti sub-division; and Bano Police Station in Simdega sub- divison.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+60,Khunti (ST),"Khunti and Murhu Police Stations and Karra Police Station (excluding G.Ps. Gumru, Gobindpur, Tilmi, Lapa, Jariagarh, Urikel and Hutub) in Khunti sub-division.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+61,Silli,"Silli Police Station, GPs. Barwadag, Tati, Jonha, Kashidih, Merha, Ambajharia and Kontatoli and Angara Police Station in Ranchi Sadar sub-division; and Sonahatu Police Station in Khunti sub- division.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+62,Khijri (ST),"Ormanjhi, Mamkum and Hatia Police Stations and Angara Police Station (excluding G.Ps. Barwadag, Tati, Jonha, Kashidih, Merha, Ambajharia and Kontatoli) in Ranchi Sadar sub-division.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+63,Ranchi,Ranchi municipality in Ranchi Kotwali Police Station in Ranchi Sadar sub-division.,A_whole_subdistricts_and_towns_only
+64,Hatia,"Jaganathpur, Ratu and Doranda Police Stations and Ranchi Kotwali Police Station (excluding Ranchi municipality) in Ranchi Sadar sub- division.",B2_part_unit_other
+65,Kanke (SC),"Kanke, Ranchi Sadar, Burmu and Khelari Police Stations in Ranchi Sadar sub-division.",A_whole_subdistricts_and_towns_only
+66,Mandar (ST),"Bero, Mandar and Lapung Police Stations in Ranchi Sadar sub- division.",A_whole_subdistricts_and_towns_only
+67,Sisai (ST),"Sisai, Kamdara and Basia Police Stations in Gumla sub-division.",A_whole_subdistricts_and_towns_only
+68,Gumla (ST),"Gumla Municipality G.Ps. Hurhuria, Ghatagaon, Asani, Chandali, Telgaon, Pugu, Bangaru, Karaundi, Dumardih and Murkunda in Gumla Police Station and Raidih, Chainpur and Dumri Police Stations in Gumla sub-division.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+69,Bishunpur (ST),"Bishunpur and Ghaghra Police Stations and Gumla Police Station (excluding Gumla municipality and G.Ps. Hurhuria, Ghatagaon, Asani, Chandali, Telgaon, Pugu, Bangaru, Karaundi, Dumardih and Murkunda) in Gumla sub-division; and Senha Police Station Lohardaga sub-division.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+70,Simdega (ST),Simdega and Kurdeg Police Stations in Simdega sub-division; and Palkot Police Station in Gumla sub-division.,A_whole_subdistricts_and_towns_only
+71,Kolebira (ST),"Kolebira, Thethaitangar and Bolba Police Stations in Simdega sub- division.",A_whole_subdistricts_and_towns_only
+72,Lohardaga (ST),"Lohardaga, Kuru and Kisko Police Station in Lohardaga sub- division.",A_whole_subdistricts_and_towns_only
+73,Manika (ST),"Latehar Police Station (excluding Latehar (N.A.C.) and G.Ps. Pochra, Luti, Kaima, Kura, Bishnupur, Mungar, Nindir, Laharpur and Zalim), Barwadih, Garoo and Mahuadanr Police Stations in Latehar sub-division.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+74,Latehar (SC),"Latehar (N.A.C.), G.Ps. Pochra, Luti, Kaima, Kura, Bishunpur, Mungar, Nindir, Laharpur and Zalim in Latehar Police Station, Chandwa and Balumath Police Station in Latehar sub-division.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+75,Panki,"Panki, Lesliganj and Manatu Police Station in Palamu Sadar sub- division.",A_whole_subdistricts_and_towns_only
+76,Daltonganj,Daltonganj and Chainpur Police Station in Palamu Sadar sub- division; and Bhandaria Police Station in Garhwa sub-division.,A_whole_subdistricts_and_towns_only
+77,Bishrampur,Bishrampur Police Station in Palamu Sadar sub-division; and Majhiaon Police Station in Garhwa sub-division.,A_whole_subdistricts_and_towns_only
+78,Chhatarpur (SC),Chhatarpur and Patan Police Station in Palamu Sadar sub-division.,A_whole_subdistricts_and_towns_only
+79,Hussainabad,Hussainabad and Hariharganj Police Station in Palamau Sadar sub- division.,A_whole_subdistricts_and_towns_only
+80,Garhwa,"Garhwa Police Station (excluding G.Ps. Jarhi Balekhar, Raro, Sonehara and Dandai) and Ranka Police Station in Garhwa sub- division.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+81,Bhawanathpur,"Bhawanathpur and Nagar Untari Police Station and G.Ps. Jarhi, Balekhar, Raro, Sonehara and Dandai in Garhwa Police Station in Garhwa sub-division”.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)

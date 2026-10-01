@@ -1,0 +1,6 @@
+state,lgd_ac_code,lgd_eci_ac_code,eci_points_to_app_j,eci_points_to_app_name,similarity
+Andhra Pradesh,3170,62,181,TADEPALLIGUDEM,0.083
+Haryana,416,42,42,KALANWALI,0.625
+Jharkhand,2175,41,41,JHARIA,0.5
+Maharashtra,2923,5,5,SAKRI,0.4
+West Bengal,2121,195,195,JANGIPARA,0.556

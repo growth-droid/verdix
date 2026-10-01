@@ -1,0 +1,210 @@
+state,lgd_ac_code,lgd_ac_name,lgd_pc_name,old_map_pc,lgd_pc_matches_old_map,newer_map_same_name_seat,newer_map_pc,lgd_pc_matches_newer_map
+Assam,1792,Ratabari,Karimganj,KARIMGANJ,True,,,
+Assam,1791,Patherkandi,Karimganj,KARIMGANJ,True,,,
+Assam,1788,Karimganj North,Karimganj,KARIMGANJ,True,KARIMGANJ NORTH,KARIMGANJ,True
+Assam,1789,Karimganj South,Karimganj,KARIMGANJ,True,KARIMGANJ SOUTH,KARIMGANJ,True
+Assam,1786,Badarpur,Karimganj,KARIMGANJ,True,,,
+Assam,1787,Hailakandi,Karimganj,KARIMGANJ,True,HAILAKANDI,KARIMGANJ,True
+Assam,1790,Katlicherra,Karimganj,KARIMGANJ,True,,,
+Assam,1785,Algapur,Karimganj,KARIMGANJ,True,,,
+Assam,1835,Silchar,Silchar,SILCHAR,True,SILCHAR,SILCHAR,True
+Assam,1836,Sonai,Silchar,SILCHAR,True,SONAI,SILCHAR,True
+Assam,1832,Dholai,Silchar,SILCHAR,True,DHOLAI,SILCHAR,True
+Assam,1837,Udharbond,Silchar,SILCHAR,True,UDHARBOND,SILCHAR,True
+Assam,1834,Lakhipur,Silchar,SILCHAR,True,LAKHIPUR,SILCHAR,True
+Assam,1831,Borkhola,Silchar,SILCHAR,True,BORKHOLA,SILCHAR,True
+Assam,1833,Katigorah,Silchar,SILCHAR,True,KATIGORAH,SILCHAR,True
+Assam,1724,Haflong,Autonomous District,AUTONOMOUS DISTRICT,True,HAFLONG,DIPHU,False
+Assam,1722,Bokajan,Autonomous District,AUTONOMOUS DISTRICT,True,BOKAJAN,DIPHU,False
+Assam,1725,Howraghat,Autonomous District,AUTONOMOUS DISTRICT,True,HOWRAGHAT,DIPHU,False
+Assam,1723,Diphu,Autonomous District,AUTONOMOUS DISTRICT,True,DIPHU,DIPHU,False
+Assam,1721,Baithalangso,Autonomous District,AUTONOMOUS DISTRICT,True,,,
+Assam,1744,Birsing Jarua,Dhubri,DHUBRI,True,BIRSING JARUA,DHUBRI,True
+Assam,1745,Salmara South,Dhubri,DHUBRI,True,,,
+Assam,1738,Dhubri,Dhubri,DHUBRI,True,DHUBRI,DHUBRI,True
+Assam,1739,Gauripur,Dhubri,DHUBRI,True,GAURIPUR,DHUBRI,True
+Assam,1742,Golokganj,Dhubri,DHUBRI,True,,,
+Assam,1737,Bilasipara West,Dhubri,DHUBRI,True,,,
+Assam,1736,Bilasipara East,Dhubri,DHUBRI,True,,,
+Assam,1797,Gossaigaon,Kokrajhar,KOKRAJHAR,True,GOSSAIGAON,KOKRAJHAR,True
+Assam,1799,Kokrajhar West,Kokrajhar,KOKRAJHAR,True,,,
+Assam,1798,Kokrajhar East,Kokrajhar,KOKRAJHAR,True,,,
+Assam,1801,Sidli,Kokrajhar,KOKRAJHAR,True,,,
+Assam,1730,Bongaigaon,Barpeta,BARPETA,True,BONGAIGAON,BARPETA,True
+Assam,1795,Bijni,Kokrajhar,KOKRAJHAR,True,BIJNI,KOKRAJHAR,True
+Assam,1726,SRIJANGRAM,Dhubri,BARPETA,False,SRIJANGRAM,DHUBRI,True
+Assam,1727,Abhayapuri,Barpeta,BARPETA,True,ABHAYAPURI,BARPETA,True
+Assam,1759,Dudhnoi,Gauhati,GAUHATI,True,,,
+Assam,1740,Goalpara East,Dhubri,DHUBRI,True,GOALPARA EAST,DHUBRI,True
+Assam,1741,Goalpara West,Gauhati,DHUBRI,False,GOALPARA WEST,GUWAHATI,True
+Assam,1743,Jaleswar,Dhubri,DHUBRI,True,JALESHWAR,DHUBRI,True
+Assam,1735,Sorbhog,Kokrajhar,KOKRAJHAR,True,,,
+Assam,1794,Bhowanipur Sorbhog,Barpeta,KOKRAJHAR,False,BHOWANIPUR–SORBHOG,BARPETA,True
+Assam,1800,Bajali,Barpeta,BARPETA,True,BAJALI,BARPETA,True
+Assam,1729,Barpeta,Barpeta,BARPETA,True,BARPETA,BARPETA,True
+Assam,1733,Jania,Dhubri,BARPETA,False,,,
+Assam,1728,Baghbar,Barpeta,BARPETA,True,,,
+Assam,1734,Sarukhetri,Barpeta,BARPETA,True,,,
+Assam,1731,Chenga,Dhubri,BARPETA,False,CHENGA,DHUBRI,True
+Assam,1756,Boko,Gauhati,GAUHATI,True,,,
+Assam,1757,Chhaygaon,Gauhati,GAUHATI,True,,,
+Assam,1764,Palasbari,Gauhati,GAUHATI,True,PALASBARI,GUWAHATI,True
+Assam,1763,Jalukbari,Gauhati,GAUHATI,True,JALUKBARI,GUWAHATI,True
+Assam,1758,Dispur,Gauhati,GAUHATI,True,DISPUR,GUWAHATI,True
+Assam,1760,Gauhati East,Gauhati,GAUHATI,True,,,
+Assam,1761,Gauhati West,Gauhati,GAUHATI,True,,,
+Assam,1762,Hajo,Barpeta,GAUHATI,False,,,
+Assam,1814,Kamalpur,Mangaldoi,MANGALDOI,True,KAMALPUR,DARRANG-UDALGURI,False
+Assam,1819,Rangia,Mangaldoi,MANGALDOI,True,RANGIYA,DARRANG-UDALGURI,False
+Assam,1802,Tamulpur,Kokrajhar,KOKRAJHAR,True,TAMULPUR,DARRANG-UDALGURI,False
+Assam,1817,Nalbari,Barpeta,MANGALDOI,False,NALBARI,BARPETA,True
+Assam,1755,Barkhetri,Gauhati,GAUHATI,True,BARKHETRI,BARPETA,False
+Assam,1732,Dharmapur,Barpeta,BARPETA,True,,,
+Assam,1793,Barama,Kokrajhar,KOKRAJHAR,True,,,
+Assam,1796,Chapaguri,Kokrajhar,KOKRAJHAR,True,,,
+Assam,1818,Panery,Mangaldoi,MANGALDOI,True,,,
+Assam,1813,Kalaigaon,Mangaldoi,MANGALDOI,True,,,
+Assam,1820,Sipajhar,Mangaldoi,MANGALDOI,True,SIPAJHAR,DARRANG-UDALGURI,False
+Assam,1815,Mangaldoi,Mangaldoi,MANGALDOI,True,,,
+Assam,1812,Dalgaon,Mangaldoi,MANGALDOI,True,DALGAON,DARRANG-UDALGURI,False
+Assam,1821,Udalguri,Mangaldoi,MANGALDOI,True,UDALGURI,DARRANG-UDALGURI,False
+Assam,1816,Mazbat,Mangaldoi,MANGALDOI,True,MAJBAT,DARRANG-UDALGURI,False
+Assam,1842,Dhekiajuli,Sonitpur,TEZPUR,True,DHEKIAJULI,SONITPUR,True
+Assam,1838,Barchalla,Sonitpur,TEZPUR,True,BARCHALLA,SONITPUR,True
+Assam,1846,Tezpur,Sonitpur,TEZPUR,True,TEZPUR,SONITPUR,True
+Assam,1844,Rangapara,Sonitpur,TEZPUR,True,RANGAPARA,SONITPUR,True
+Assam,1845,Sootea,Sonitpur,TEZPUR,True,,,
+Assam,1841,Biswanath,Sonitpur,TEZPUR,True,BISWANATH,SONITPUR,True
+Assam,1839,Behali,Sonitpur,TEZPUR,True,BEHALI,SONITPUR,True
+Assam,1843,Gohpur,Sonitpur,TEZPUR,True,GOHPUR,SONITPUR,True
+Assam,1824,Jagiroad,Nagaon,NOWGONG,True,JAGIROAD,NAGAON,True
+Assam,1828,Morigaon,Nagaon,NOWGONG,True,MORIGAON,NAGAON,True
+Assam,1826,Laharighat,Nagaon,NOWGONG,True,LAHARIGHAT,NAGAON,True
+Assam,1830,Raha,Nagaon,NOWGONG,True,RAHA,NAGAON,True
+Assam,1778,Dhing,Nagaon,KALIABOR,False,DHING,NAGAON,True
+Assam,1775,Batadraba,Nagaon,KALIABOR,False,,,
+Assam,1782,Rupahihat,Nagaon,KALIABOR,False,,,
+Assam,1829,Nagaon,Nagaon,NOWGONG,True,,,
+Assam,1822,Barhampur,Kaziranga,NOWGONG,False,BARHAMPUR,KAZIRANGA,True
+Assam,1783,Samaguri,Nagaon,KALIABOR,False,SAMAGURI,NAGAON,True
+Assam,1780,Kaliabor,Kaziranga,KALIABOR,True,KALIABOR,KAZIRANGA,True
+Assam,1825,Jamunamukh,Nagaon,NOWGONG,True,,,
+Assam,1823,Hojai,Kaziranga,NOWGONG,False,HOJAI,KAZIRANGA,True
+Assam,1827,Lumding,Kaziranga,NOWGONG,False,LUMDING,KAZIRANGA,True
+Assam,1776,Bokakhat,Kaziranga,KALIABOR,True,BOKAKHAT,KAZIRANGA,True
+Assam,1784,Sarupathar,Kaziranga,KALIABOR,True,SARUPATHAR,KAZIRANGA,True
+Assam,1779,Golaghat,Kaziranga,KALIABOR,True,GOLAGHAT,KAZIRANGA,True
+Assam,1781,Khumtai,Kaziranga,KALIABOR,True,KHUMTAI,KAZIRANGA,True
+Assam,1777,Dergaon,Kaziranga,KALIABOR,True,DERGAON,KAZIRANGA,True
+Assam,1766,Jorhat,Jorhat,JORHAT,True,JORHAT,JORHAT,True
+Assam,1809,Majuli ST,Jorhat,LAKHIMPUR,False,MAJULI,JORHAT,True
+Assam,1774,Titabar,Jorhat,JORHAT,True,,,
+Assam,1768,Mariani,Jorhat,JORHAT,True,MARIANI,JORHAT,True
+Assam,1772,Teok,Jorhat,JORHAT,True,TEOK,JORHAT,True
+Assam,1765,Amguri,Jorhat,JORHAT,True,,,
+Assam,1769,Nazira,Jorhat,JORHAT,True,NAZIRA,JORHAT,True
+Assam,1767,Mahmora,Jorhat,JORHAT,True,MAHMORA,JORHAT,True
+Assam,1771,Sonari,Jorhat,JORHAT,True,SONARI,JORHAT,True
+Assam,1773,Demow,Jorhat,JORHAT,True,DEMOW,JORHAT,True
+Assam,1770,Sivasagar,Jorhat,JORHAT,True,SIBSAGAR,JORHAT,True
+Assam,1840,Bihpuria,Sonitpur,TEZPUR,True,BIHPURIA,SONITPUR,True
+Assam,1810,Naoboicha,Lakhimpur,LAKHIMPUR,True,NAOBOICHA,LAKHIMPUR,True
+Assam,1808,Lakhimpur,Lakhimpur,LAKHIMPUR,True,LAKHIMPUR,LAKHIMPUR,True
+Assam,1804,Dhakuakhana,Lakhimpur,LAKHIMPUR,True,DHAKUAKHANA,LAKHIMPUR,True
+Assam,1805,Dhemaji,Lakhimpur,LAKHIMPUR,True,DHEMAJI,LAKHIMPUR,True
+Assam,1807,Jonai,Lakhimpur,LAKHIMPUR,True,JONAI,LAKHIMPUR,True
+Assam,1751,Moran,Dibrugarh,DIBRUGARH,True,,,
+Assam,1746,Dibrugarh,Dibrugarh,DIBRUGARH,True,DIBRUGARH,DIBRUGARH,True
+Assam,1749,Lahowal,Dibrugarh,DIBRUGARH,True,,,
+Assam,1748,Dulijan,Dibrugarh,DIBRUGARH,True,,,
+Assam,1753,Tingkhong,Dibrugarh,DIBRUGARH,True,TINGKHONG,DIBRUGARH,True
+Assam,1752,Naharkatia,Dibrugarh,DIBRUGARH,True,NAHARKATIA,DIBRUGARH,True
+Assam,1803,Chabua,Dibrugarh,LAKHIMPUR,False,,,
+Assam,1754,Tinsukia,Dibrugarh,DIBRUGARH,True,TINSUKIA,DIBRUGARH,True
+Assam,1747,Digboi,Dibrugarh,DIBRUGARH,True,DIGBOI,DIBRUGARH,True
+Assam,1750,Margherita,Dibrugarh,DIBRUGARH,True,MARGHERITA,DIBRUGARH,True
+Assam,1806,Doomdooma,Lakhimpur,LAKHIMPUR,True,DOOM DOOMA,LAKHIMPUR,True
+Assam,1811,Sadiya,Lakhimpur,LAKHIMPUR,True,SADIYA,LAKHIMPUR,True
+Jammu & Kashmir,22,Karnah,Baramulla,BARAMULLA,True,KARNAH,BARAMULLA,True
+Jammu & Kashmir,23,Kupwara,Baramulla,BARAMULLA,True,KUPWARA,BARAMULLA,True
+Jammu & Kashmir,25,Lolab,Baramulla,BARAMULLA,True,LOLAB,BARAMULLA,True
+Jammu & Kashmir,21,Handwara,Baramulla,BARAMULLA,True,HANDWARA,BARAMULLA,True
+Jammu & Kashmir,24,Langate,Baramulla,BARAMULLA,True,LANGATE,BARAMULLA,True
+Jammu & Kashmir,31,Uri,Baramulla,BARAMULLA,True,URI,BARAMULLA,True
+Jammu & Kashmir,27,Rafiabad,Baramulla,BARAMULLA,True,RAFIABAD,BARAMULLA,True
+Jammu & Kashmir,30,Sopore,Baramulla,BARAMULLA,True,SOPORE,BARAMULLA,True
+Jammu & Kashmir,20,Gurez,Baramulla,BARAMULLA,True,GUREZ,BARAMULLA,True
+Jammu & Kashmir,17,Bandipora,Baramulla,BARAMULLA,True,BANDIPORA,BARAMULLA,True
+Jammu & Kashmir,29,Sonawari,Baramulla,BARAMULLA,True,SONAWARI,BARAMULLA,True
+Jammu & Kashmir,28,Sangrama,Baramulla,BARAMULLA,True,,,
+Jammu & Kashmir,18,Baramulla,Baramulla,BARAMULLA,True,BARAMULLA,BARAMULLA,True
+Jammu & Kashmir,19,Gulmarg,Baramulla,BARAMULLA,True,GULMARG,BARAMULLA,True
+Jammu & Kashmir,26,Pattan,Baramulla,BARAMULLA,True,PATTAN,BARAMULLA,True
+Jammu & Kashmir,66,Kangan,Srinagar,SRINAGAR,True,KANGAN,SRINAGAR,True
+Jammu & Kashmir,63,Ganderbal,Srinagar,SRINAGAR,True,GANDERBAL,SRINAGAR,True
+Jammu & Kashmir,65,Hazratbal,Srinagar,SRINAGAR,True,HAZRATBAL,SRINAGAR,True
+Jammu & Kashmir,70,Zadibal,Srinagar,SRINAGAR,True,ZADIBAL,SRINAGAR,True
+Jammu & Kashmir,62,Eidgah,Srinagar,SRINAGAR,True,EIDGAH,SRINAGAR,True
+Jammu & Kashmir,68,Khanyar,Srinagar,SRINAGAR,True,KHANYAR,SRINAGAR,True
+Jammu & Kashmir,64,Habba kadal,Srinagar,SRINAGAR,True,HABBA KADAL,SRINAGAR,True
+Jammu & Kashmir,56,Amira kadal,Srinagar,SRINAGAR,True,,,
+Jammu & Kashmir,69,Sonawar,Srinagar,SRINAGAR,True,,,
+Jammu & Kashmir,57,Batmaloo,Srinagar,SRINAGAR,True,,,
+Jammu & Kashmir,60,Chadoora,Srinagar,SRINAGAR,True,CHADOORA,SRINAGAR,True
+Jammu & Kashmir,59,Budgam,Baramulla,SRINAGAR,False,BUDGAM,BARAMULLA,True
+Jammu & Kashmir,58,Beerwah,Baramulla,SRINAGAR,False,BEERWAH,BARAMULLA,True
+Jammu & Kashmir,67,Khan Sahib,Srinagar,SRINAGAR,True,KHAN SAHIB,SRINAGAR,True
+Jammu & Kashmir,61,Chrar-i-sharief,Srinagar,SRINAGAR,True,,,
+Jammu & Kashmir,15,Tral,Srinagar,ANANTNAG,False,TRAL,SRINAGAR,True
+Jammu & Kashmir,10,Pampore,Srinagar,ANANTNAG,False,PAMPORE,SRINAGAR,True
+Jammu & Kashmir,11,Pulwama,Srinagar,ANANTNAG,False,PULWAMA,SRINAGAR,True
+Jammu & Kashmir,12,Rajpora,Srinagar,ANANTNAG,False,RAJPORA,SRINAGAR,True
+Jammu & Kashmir,16,Wachi,Anantnag,ANANTNAG,True,,,
+Jammu & Kashmir,14,Shopian,Srinagar,ANANTNAG,False,SHOPIAN,SRINAGAR,True
+Jammu & Kashmir,8,Noorabad,Anantnag,ANANTNAG,True,,,
+Jammu & Kashmir,7,Kulgam,Anantnag,ANANTNAG,True,KULGAM,ANANTNAG-RAJOURI,False
+Jammu & Kashmir,5,Hom Shali Bugh,Anantnag,ANANTNAG,True,,,
+Jammu & Kashmir,1,Anantnag,Anantnag,ANANTNAG,True,ANANTNAG,ANANTNAG-RAJOURI,False
+Jammu & Kashmir,3,Devsar,Anantnag,ANANTNAG,True,DEVSAR,ANANTNAG-RAJOURI,False
+Jammu & Kashmir,4,Dooru,Anantnag,ANANTNAG,True,DOORU,ANANTNAG-RAJOURI,False
+Jammu & Kashmir,6,Kokernag,Anantnag,ANANTNAG,True,KOKERNAG,ANANTNAG-RAJOURI,False
+Jammu & Kashmir,13,Shangus,Anantnag,ANANTNAG,True,,,
+Jammu & Kashmir,2,Bijbehara,Anantnag,ANANTNAG,True,,,
+Jammu & Kashmir,9,Pahalgam,Anantnag,ANANTNAG,True,PAHALGAM,ANANTNAG-RAJOURI,False
+Jammu & Kashmir,83,Kishtwar,Udhampur,UDHAMPUR,True,KISHTWAR,UDHAMPUR,True
+Jammu & Kashmir,81,Inderwal,Udhampur,UDHAMPUR,True,INDERWAL,UDHAMPUR,True
+Jammu & Kashmir,77,Doda,Udhampur,UDHAMPUR,True,DODA,UDHAMPUR,True
+Jammu & Kashmir,74,Bhaderwah,Udhampur,UDHAMPUR,True,,,
+Jammu & Kashmir,85,Ramban,Udhampur,UDHAMPUR,True,RAMBAN,UDHAMPUR,True
+Jammu & Kashmir,72,Banihal,Udhampur,UDHAMPUR,True,BANIHAL,UDHAMPUR,True
+Jammu & Kashmir,79,Gulab Garh,Udhampur,UDHAMPUR,True,GULABGARH,JAMMU,False
+Jammu & Kashmir,86,Reasi,Udhampur,UDHAMPUR,True,REASI,JAMMU,False
+Jammu & Kashmir,78,Gool Arnas,Udhampur,UDHAMPUR,True,,,
+Jammu & Kashmir,87,Udhampur,Udhampur,UDHAMPUR,True,,,
+Jammu & Kashmir,76,Chenani,Udhampur,UDHAMPUR,True,CHENANI,UDHAMPUR,True
+Jammu & Kashmir,84,Ram Nagar,Udhampur,UDHAMPUR,True,RAMNAGAR,UDHAMPUR,True
+Jammu & Kashmir,71,Bani,Udhampur,UDHAMPUR,True,BANI,UDHAMPUR,True
+Jammu & Kashmir,73,Basohli,Udhampur,UDHAMPUR,True,BASOHLI,UDHAMPUR,True
+Jammu & Kashmir,82,Kathua,Udhampur,UDHAMPUR,True,KATHUA,UDHAMPUR,True
+Jammu & Kashmir,75,Billawar,Udhampur,UDHAMPUR,True,BILLAWAR,UDHAMPUR,True
+Jammu & Kashmir,80,Hira Nagar,Udhampur,UDHAMPUR,True,HIRANAGAR,UDHAMPUR,True
+Jammu & Kashmir,48,Samba,Jammu,JAMMU,True,SAMBA,JAMMU,True
+Jammu & Kashmir,51,Vijay pur,Jammu,JAMMU,True,VIJAYPUR,JAMMU,True
+Jammu & Kashmir,42,Nagrota,Jammu,JAMMU,True,NAGROTA,JAMMU,True
+Jammu & Kashmir,36,Bahu,Jammu,JAMMU,True,BAHU,JAMMU,True
+Jammu & Kashmir,37,Jammu East,Jammu,JAMMU,True,JAMMU EAST,JAMMU,True
+Jammu & Kashmir,38,Jammu West,Jammu,JAMMU,True,JAMMU WEST,JAMMU,True
+Jammu & Kashmir,33,Bishnah,Jammu,JAMMU,True,BISHNAH,JAMMU,True
+Jammu & Kashmir,47,RS Pura South,Jammu,JAMMU,True,,,
+Jammu & Kashmir,49,Suchet Garh,Jammu,JAMMU,True,SUCHETGARH,JAMMU,True
+Jammu & Kashmir,40,Marh,Jammu,JAMMU,True,MARH,JAMMU,True
+Jammu & Kashmir,45,JAMMU NORTH,Jammu,JAMMU,True,JAMMU NORTH,JAMMU,True
+Jammu & Kashmir,32,Akhnoor,Jammu,JAMMU,True,AKHNOOR,JAMMU,True
+Jammu & Kashmir,34,Chhamb,Jammu,JAMMU,True,CHHAMB,JAMMU,True
+Jammu & Kashmir,43,Nowshera,Jammu,JAMMU,True,NOWSHERA,ANANTNAG-RAJOURI,False
+Jammu & Kashmir,35,Darhal,Jammu,JAMMU,True,,,
+Jammu & Kashmir,46,Rajouri,Jammu,JAMMU,True,RAJOURI,ANANTNAG-RAJOURI,False
+Jammu & Kashmir,39,Kala kote,Jammu,JAMMU,True,,,
+Jammu & Kashmir,50,Suran kote,Jammu,JAMMU,True,SURANKOTE,ANANTNAG-RAJOURI,False
+Jammu & Kashmir,41,Mendhar,Jammu,JAMMU,True,MENDHAR,ANANTNAG-RAJOURI,False
+Jammu & Kashmir,44,Poonch Haveli,Jammu,JAMMU,True,POONCH HAVELI,ANANTNAG-RAJOURI,False

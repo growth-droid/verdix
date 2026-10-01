@@ -1,0 +1,59 @@
+{
+ "dataset": "Census of India 2011, Table C-01 (population by religious community), persons, at SUB-DISTRICT (Total/Rural/Urban) and TOWN (town part per sub-district, Urban) grain - the finest grain Census 2011 published religion at",
+ "producer": "Office of the Registrar General & Census Commissioner, India (ORGI), Ministry of Home Affairs",
+ "built": "2026-10-01 by build_religion_units.py (offline; pandas + xlrd + openpyxl + pyarrow)",
+ "inputs": {
+  "../../religion/raw_nada/DDW{01..35}C-01 MDDS.XLS": "Official C-01 state files (NADA catalog 11362-11396, idno PC11_C01-{SS}); exact URLs, bytes and sha256 in ../../religion/sources_manifest.csv. Read with read_c01() from ../../religion/build_religion_district_2011.py, which asserts the 34-column layout (9 categories x P/M/F) before any value is used.",
+  "../../religion/raw_nada/DDW00C-01 MDDS.XLS": "India + state rows, used only to check India totals.",
+  "../../religion/religion_district_2011.csv": "Existing validated district tidy file, used as a cross-check.",
+  "PCA cross-check (optional, env CENSUS_PCA_DIR; not needed to build)": {
+   "2011-IndiaStateDistSbDistTwn-0000.xlsx": "PCA India, state/district/sub-district/town rows. https://censusindia.gov.in/nada/index.php/catalog/42559/download/46185 sha256 da487f7a1181fd9f43ccf354a8b5864ffca5920fc82b5183d644d483445cb380",
+   "india_ward_level.parquet": "Slim parse of PCA India ward-level file https://censusindia.gov.in/nada/index.php/catalog/42560/download/46186 (82,256 wards); its TOWN rows were verified identical to the town file above.",
+   "india_village_level.parquet": "Slim parse of PCA India village-level file https://censusindia.gov.in/nada/index.php/catalog/42554/download/46180 (640,949 villages)."
+  }
+ },
+ "outputs": {
+  "religion_units.parquet": {
+   "rows": 26031,
+   "grain": "one row per (state, district, subdistt, town, tru); ADDITIVE - every person counted once per tru",
+   "level=SUBDISTRICT": "17,964 rows = 5,988 sub-districts x Total/Rural/Urban; town='000000'",
+   "level=TOWN": "8,067 rows = town parts (a town's slice inside one sub-district), tru='Urban'. 7,870 towns are single-part; 63 towns are split (49 across sub-districts of one district, 13 across districts, plus Delhi Cantonment).",
+   "columns": {
+    "state, district, subdistt, town": "Census 2011 location codes as zero-padded STRINGS (2/3/5/6 digits). Sub-district codes repeat across districts (99999 = 'Area not under any Sub-district', e.g. both Mumbai districts) so the sub-district key is (state, district, subdistt).",
+    "state_name, district_name, subdistt_name, town_name": "From C-01. town_name has '(Part)'/'(Major part)'/'(Minor part)' stripped for split towns only; area_name_raw is the verbatim C-01 label.",
+    "level": "SUBDISTRICT | TOWN",
+    "tru": "Total | Rural | Urban",
+    "is_ct": "town is a Census Town ('(CT)'); CT codes are village-style 6-digit codes and appear in LGD as villages",
+    "town_span": "single | multi_subdistrict | multi_district (for TOWN rows)",
+    "town_n_parts": "number of part rows the town has (1 = not split)",
+    "total, hindu, muslim, christian, sikh, buddhist, jain, other_religions, religion_not_stated": "persons (int64); religions sum to total on every row",
+    "source_file": "C-01 file the row came from"
+   }
+  },
+  "religion_town_whole.parquet": {
+   "rows": 7933,
+   "grain": "one row per town code (sum of its parts) - for joins that only know the 6-digit Census 2011 town code (e.g. LGD 'Census 2011 Code' on ULBs and CT-villages). For the 63 split towns it equals C-01's own printed whole-town row (checked, all 9 categories); c01_whole_row_name is that row's label. districts / subdistts list where the parts lie.",
+   "warning": "NOT additive with religion_units TOWN rows - it is the same people regrouped."
+  },
+  "validation_report.json": "Every check with expected vs got (all pass)."
+ },
+ "how_the_seat_build_should_use_it": [
+  "Villages: religion share = the RURAL row of the village's (state, district, subdistt). Every one of the 5,882 sub-districts with populated villages has a Rural row with population (106 sub-districts are fully urban, Rural = 0).",
+  "Town parts / wards: religion share = the TOWN row with the same (state, district, subdistt, town). Every PCA town part (8,067) and every PCA ward's town part has exactly one row, and PCA ward populations sum to it exactly.",
+  "Split towns (Greater Mumbai, Siliguri, DMC, GHMC, Srinagar, ...): prefer the part-level row (finer, official) over the whole-town row.",
+  "PCA prints 330 statutory towns twice in a sub-district - the '+ OG' unit and its core body (e.g. 'Kathua (M Cl + OG)' and 'Kathua (M Cl)'); C-01 carries only the '+ OG' unit, which is the one that sums to the sub-district. Drop the core-body duplicate before joining (keep the larger TOT_P per key).",
+  "Census Towns are listed by LGD as villages: a LGD village whose Census 2011 code is a CT must take the TOWN share, not the sub-district rural share."
+ ],
+ "known_differences_and_quirks": [
+  "C-01 vs PCA sub-district population: identical for all 17,964 rows except 4 Uttar Pradesh sub-districts where the two tables place a few villages in different sub-districts of the same district (offsetting; district, urban and town figures identical): Moradabad - Thakurdwara C-01 +2,560 / Kanth -2,560; Sultanpur - Sultanpur -222 / Jaisinghpur +222 (rural persons). Impact on shares is negligible; the seat build should follow PCA/LGD placement and apply that sub-district's rural shares.",
+  "Delhi Cantonment (CB, 800443): C-01 prints its whole-town row at state level although both parts lie in district 097 (South West); the only exception to the state-level <=> spans-districts convention.",
+  "Six single-part CTs are named 'X (Part) (CT)' (carved from part of village X); they are not split towns. Manipur marks split towns '(Major part)' / '(Minor part)' instead of '(Part)'. Splits are therefore identified by codes, never by names.",
+  "Census 2011 published NO village- or ward-level religion; anything below sub-district (rural) or town part (urban) is an allocation by the seat build, not a census figure."
+ ],
+ "india_totals_checked": {
+  "population": 1210854977, "rural": 833748852, "urban": 377106125,
+  "hindu": 966257353, "muslim": 172245158, "christian": 27819588, "sikh": 20833116,
+  "buddhist": 8442972, "jain": 4451753, "other_religions": 7937734, "religion_not_stated": 2867303
+ },
+ "terms": "Census of India material: reproduce accurately, do not use in a derogatory or misleading context, acknowledge the source (censusindia.gov.in Terms & Conditions). Cite: Office of the Registrar General & Census Commissioner, India. Population Census 2011, Table C-01."
+}

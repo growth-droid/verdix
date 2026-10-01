@@ -1,0 +1,2557 @@
+{
+ "placed_share": 0.99675,
+ "lost_to_unmatched_lgd_acs": 1055450,
+ "unmatched_lgd_acs": [
+  "273"
+ ],
+ "by_method": {
+  "city-ward": 0.0436,
+  "ct-code": 0.0375,
+  "og-code": 0.0031,
+  "order-town": 0.0064,
+  "subdistrict": 0.0102,
+  "subdistrict-split": 0.0068,
+  "town-code": 0.2038,
+  "town-name": 0.0064,
+  "town-namesake": 0.0064,
+  "village-code": 0.6724
+ },
+ "unplaced_by_census_state": {
+  "01": 0.02,
+  "03": 0.005,
+  "06": 0.0024,
+  "08": 0.0013,
+  "09": 0.0023,
+  "10": 0.0012,
+  "14": 0.0106,
+  "18": 0.01,
+  "19": 0.0045,
+  "21": 0.0004,
+  "22": 0.0003,
+  "23": 0.0025,
+  "24": 0.0014,
+  "25": 1.0,
+  "26": 1.0,
+  "28": 0.0031,
+  "29": 0.0057,
+  "31": 1.0,
+  "33": 0.0017,
+  "35": 1.0
+ },
+ "largest_unplaced_towns": [
+  [
+   "29",
+   "803051",
+   "Bijapur (CMC)",
+   327427
+  ],
+  [
+   "19",
+   "801638",
+   "Siliguri (M Corp.) (Part)",
+   218718
+  ],
+  [
+   "19",
+   "801729",
+   "Rishra (M)",
+   124577
+  ],
+  [
+   "35",
+   "804041",
+   "Port Blair (M Cl)",
+   108058
+  ],
+  [
+   "26",
+   "802639",
+   "Silvassa (M CI)",
+   98265
+  ],
+  [
+   "24",
+   "802557",
+   "Mahuva (M)",
+   82772
+  ],
+  [
+   "09",
+   "801096",
+   "Nawabganj (NPP)",
+   81163
+  ],
+  [
+   "06",
+   "800391",
+   "Narwana (M Cl)",
+   62090
+  ],
+  [
+   "08",
+   "800465",
+   "Rajgarh (M)",
+   59193
+  ],
+  [
+   "09",
+   "801236",
+   "Ramnagar (NPP)",
+   49132
+  ],
+  [
+   "03",
+   "800223",
+   "Rampura Phul (M Cl)",
+   48450
+  ],
+  [
+   "19",
+   "801667",
+   "Sainthia (M)",
+   44601
+  ],
+  [
+   "25",
+   "802638",
+   "Daman (M CI)",
+   44282
+  ],
+  [
+   "18",
+   "801601",
+   "Golaghat (MB)",
+   41989
+  ],
+  [
+   "33",
+   "803784",
+   "Gudalur (M)",
+   41915
+  ],
+  [
+   "33",
+   "803971",
+   "Gudalur (TP)",
+   38859
+  ],
+  [
+   "09",
+   "800967",
+   "Shamsabad (NP)",
+   28454
+  ],
+  [
+   "08",
+   "800491",
+   "Rajgarh (M)",
+   26631
+  ],
+  [
+   "23",
+   "802278",
+   "Barwaha (M)",
+   26459
+  ],
+  [
+   "19",
+   "801737",
+   "Raghunathpur (M)",
+   25561
+  ],
+  [
+   "09",
+   "800970",
+   "Mohammadabad (NP)",
+   24687
+  ],
+  [
+   "25",
+   "802637",
+   "Diu (M CI)",
+   23991
+  ],
+  [
+   "09",
+   "801127",
+   "Bhinga (NP)",
+   23780
+  ],
+  [
+   "03",
+   "800284",
+   "Tapa (M Cl)",
+   23248
+  ],
+  [
+   "09",
+   "800960",
+   "Lalganj (NP)",
+   23124
+  ],
+  [
+   "14",
+   "801476",
+   "Lilong (Thoubal) (NP) (Major part)",
+   22888
+  ],
+  [
+   "23",
+   "802287",
+   "Rajpur (NP)",
+   20947
+  ],
+  [
+   "29",
+   "803208",
+   "Chincholi (TP)",
+   20897
+  ],
+  [
+   "18",
+   "801600",
+   "Dergaon (MB)",
+   20059
+  ],
+  [
+   "23",
+   "802440",
+   "Shahpur (NP)",
+   19719
+  ],
+  [
+   "03",
+   "800190",
+   "Samrala (M Cl)",
+   19678
+  ],
+  [
+   "03",
+   "800209",
+   "Talwandi Bhai (M Cl)",
+   17285
+  ],
+  [
+   "33",
+   "803400",
+   "Thorapadi (TP)",
+   16700
+  ],
+  [
+   "03",
+   "800182",
+   "Rahon (M Cl)",
+   15676
+  ],
+  [
+   "18",
+   "801553",
+   "Lakhipur (TC)",
+   15633
+  ],
+  [
+   "03",
+   "800225",
+   "Goniana (M Cl)",
+   15208
+  ],
+  [
+   "33",
+   "803569",
+   "Adikaratti (TP)",
+   14178
+  ],
+  [
+   "09",
+   "801110",
+   "Gosainganj (NP)",
+   12931
+  ],
+  [
+   "33",
+   "803717",
+   "Keeranur (TP)",
+   11667
+  ],
+  [
+   "18",
+   "801565",
+   "Kampur Town (TC)",
+   10371
+  ],
+  [
+   "18",
+   "801615",
+   "Lakhipur (MB)",
+   10277
+  ],
+  [
+   "22",
+   "801953",
+   "Nawagarh (NP)",
+   8118
+  ],
+  [
+   "09",
+   "801184",
+   "Mahrajganj (NP)",
+   6735
+  ],
+  [
+   "14",
+   "801469",
+   "Nambol (MCI) (Minor part)",
+   5431
+  ],
+  [
+   "18",
+   "801628",
+   "Tihu (TC)",
+   4599
+  ],
+  [
+   "01",
+   "800083",
+   "Lakhanpur (MC)",
+   3461
+  ],
+  [
+   "14",
+   "801476",
+   "Lilong (Thoubal) (NP) ( Minor part)",
+   2012
+  ]
+ ],
+ "states": {
+  "Andaman & Nicobar Islands": {
+   "ae_seat_level": 0,
+   "ae_total": 0,
+   "pc_seat_level": 1,
+   "pc_total": 1
+  },
+  "Andhra Pradesh": {
+   "ae_seat_level": 175,
+   "ae_total": 175,
+   "pc_seat_level": 25,
+   "pc_total": 25
+  },
+  "Arunachal Pradesh": {
+   "ae_seat_level": 57,
+   "ae_total": 60,
+   "pc_seat_level": 1,
+   "pc_total": 2
+  },
+  "Assam": {
+   "ae_seat_level": 89,
+   "ae_total": 252,
+   "pc_seat_level": 3,
+   "pc_total": 14
+  },
+  "Bihar": {
+   "ae_seat_level": 243,
+   "ae_total": 243,
+   "pc_seat_level": 40,
+   "pc_total": 40
+  },
+  "Chandigarh": {
+   "ae_seat_level": 0,
+   "ae_total": 0,
+   "pc_seat_level": 1,
+   "pc_total": 1
+  },
+  "Chhattisgarh": {
+   "ae_seat_level": 88,
+   "ae_total": 90,
+   "pc_seat_level": 9,
+   "pc_total": 11
+  },
+  "Dadra & Nagar Haveli and Daman & Diu": {
+   "ae_seat_level": 0,
+   "ae_total": 0,
+   "pc_seat_level": 2,
+   "pc_total": 2
+  },
+  "Delhi": {
+   "ae_seat_level": 70,
+   "ae_total": 70,
+   "pc_seat_level": 7,
+   "pc_total": 7
+  },
+  "Goa": {
+   "ae_seat_level": 34,
+   "ae_total": 40,
+   "pc_seat_level": 1,
+   "pc_total": 2
+  },
+  "Gujarat": {
+   "ae_seat_level": 161,
+   "ae_total": 182,
+   "pc_seat_level": 19,
+   "pc_total": 26
+  },
+  "Haryana": {
+   "ae_seat_level": 82,
+   "ae_total": 90,
+   "pc_seat_level": 7,
+   "pc_total": 10
+  },
+  "Himachal Pradesh": {
+   "ae_seat_level": 66,
+   "ae_total": 68,
+   "pc_seat_level": 3,
+   "pc_total": 4
+  },
+  "Jammu & Kashmir": {
+   "ae_seat_level": 74,
+   "ae_total": 173,
+   "pc_seat_level": 1,
+   "pc_total": 5
+  },
+  "Jharkhand": {
+   "ae_seat_level": 67,
+   "ae_total": 81,
+   "pc_seat_level": 7,
+   "pc_total": 14
+  },
+  "Karnataka": {
+   "ae_seat_level": 215,
+   "ae_total": 224,
+   "pc_seat_level": 21,
+   "pc_total": 28
+  },
+  "Kerala": {
+   "ae_seat_level": 130,
+   "ae_total": 140,
+   "pc_seat_level": 16,
+   "pc_total": 20
+  },
+  "Ladakh": {
+   "ae_seat_level": 2,
+   "ae_total": 4,
+   "pc_seat_level": 1,
+   "pc_total": 1
+  },
+  "Lakshadweep": {
+   "ae_seat_level": 0,
+   "ae_total": 0,
+   "pc_seat_level": 1,
+   "pc_total": 1
+  },
+  "Madhya Pradesh": {
+   "ae_seat_level": 209,
+   "ae_total": 230,
+   "pc_seat_level": 18,
+   "pc_total": 29
+  },
+  "Maharashtra": {
+   "ae_seat_level": 276,
+   "ae_total": 288,
+   "pc_seat_level": 40,
+   "pc_total": 48
+  },
+  "Manipur": {
+   "ae_seat_level": 57,
+   "ae_total": 60,
+   "pc_seat_level": 0,
+   "pc_total": 2
+  },
+  "Meghalaya": {
+   "ae_seat_level": 58,
+   "ae_total": 60,
+   "pc_seat_level": 1,
+   "pc_total": 2
+  },
+  "Mizoram": {
+   "ae_seat_level": 23,
+   "ae_total": 40,
+   "pc_seat_level": 0,
+   "pc_total": 1
+  },
+  "Nagaland": {
+   "ae_seat_level": 59,
+   "ae_total": 60,
+   "pc_seat_level": 0,
+   "pc_total": 1
+  },
+  "Odisha": {
+   "ae_seat_level": 145,
+   "ae_total": 147,
+   "pc_seat_level": 20,
+   "pc_total": 21
+  },
+  "Puducherry": {
+   "ae_seat_level": 21,
+   "ae_total": 30,
+   "pc_seat_level": 0,
+   "pc_total": 1
+  },
+  "Punjab": {
+   "ae_seat_level": 85,
+   "ae_total": 117,
+   "pc_seat_level": 1,
+   "pc_total": 13
+  },
+  "Rajasthan": {
+   "ae_seat_level": 192,
+   "ae_total": 200,
+   "pc_seat_level": 21,
+   "pc_total": 25
+  },
+  "Sikkim": {
+   "ae_seat_level": 30,
+   "ae_total": 31,
+   "pc_seat_level": 0,
+   "pc_total": 1
+  },
+  "Tamil Nadu": {
+   "ae_seat_level": 228,
+   "ae_total": 234,
+   "pc_seat_level": 33,
+   "pc_total": 39
+  },
+  "Telangana": {
+   "ae_seat_level": 113,
+   "ae_total": 119,
+   "pc_seat_level": 13,
+   "pc_total": 17
+  },
+  "Tripura": {
+   "ae_seat_level": 50,
+   "ae_total": 60,
+   "pc_seat_level": 0,
+   "pc_total": 2
+  },
+  "Uttar Pradesh": {
+   "ae_seat_level": 394,
+   "ae_total": 403,
+   "pc_seat_level": 72,
+   "pc_total": 80
+  },
+  "Uttarakhand": {
+   "ae_seat_level": 61,
+   "ae_total": 70,
+   "pc_seat_level": 1,
+   "pc_total": 5
+  },
+  "West Bengal": {
+   "ae_seat_level": 278,
+   "ae_total": 294,
+   "pc_seat_level": 29,
+   "pc_total": 42
+  }
+ },
+ "gated": [
+  [
+   "Arunachal Pradesh",
+   "def",
+   "42",
+   "DAMBUK",
+   1.73,
+   11020
+  ],
+  [
+   "Arunachal Pradesh",
+   "def",
+   "43",
+   "ROING",
+   0.46,
+   43060
+  ],
+  [
+   "Arunachal Pradesh",
+   "def",
+   "49",
+   "BORDUMSA - DIYUN",
+   0.46,
+   61052
+  ],
+  [
+   "Assam",
+   "def",
+   "110",
+   "NAOBOICHA",
+   1.82,
+   148199
+  ],
+  [
+   "Assam",
+   "def",
+   "112",
+   "DHAKUAKHANA",
+   0.44,
+   605494
+  ],
+  [
+   "Assam",
+   "def",
+   "17",
+   "BOKAJAN",
+   2.05,
+   111134
+  ],
+  [
+   "Assam",
+   "def",
+   "21",
+   "MANKACHAR",
+   0.37,
+   722179
+  ],
+  [
+   "Assam",
+   "def",
+   "22",
+   "SALMARA SOUTH",
+   12.77,
+   19214
+  ],
+  [
+   "Assam",
+   "def",
+   "26",
+   "BILASIPARA WEST",
+   5.94,
+   37461
+  ],
+  [
+   "Assam",
+   "def",
+   "29",
+   "KOKRAJHAR WEST",
+   1.66,
+   152977
+  ],
+  [
+   "Assam",
+   "def",
+   "30",
+   "KOKRAJHAR EAST",
+   6.66,
+   38302
+  ],
+  [
+   "Assam",
+   "def",
+   "33",
+   "BIJNI",
+   5.6,
+   34444
+  ],
+  [
+   "Assam",
+   "def",
+   "34",
+   "ABHAYAPURI NORTH",
+   0.55,
+   390350
+  ],
+  [
+   "Assam",
+   "def",
+   "35",
+   "ABHAYAPURI SOUTH",
+   2.37,
+   106464
+  ],
+  [
+   "Assam",
+   "def",
+   "40",
+   "SORBHOG",
+   1.82,
+   151957
+  ],
+  [
+   "Assam",
+   "def",
+   "44",
+   "JANIA",
+   0.58,
+   410215
+  ],
+  [
+   "Assam",
+   "def",
+   "45",
+   "BAGHBAR",
+   24.69,
+   7567
+  ],
+  [
+   "Assam",
+   "def",
+   "47",
+   "CHENGA",
+   0.57,
+   322210
+  ],
+  [
+   "Assam",
+   "def",
+   "49",
+   "CHAYGAON",
+   1.99,
+   121805
+  ],
+  [
+   "Assam",
+   "def",
+   "5",
+   "BADARPUR",
+   5.01,
+   44644
+  ],
+  [
+   "Assam",
+   "def",
+   "51",
+   "JALUKBARI",
+   2.22,
+   130842
+  ],
+  [
+   "Assam",
+   "def",
+   "52",
+   "DISPUR",
+   48.78,
+   11291
+  ],
+  [
+   "Assam",
+   "def",
+   "53",
+   "GAUHATI EAST",
+   0.34,
+   1150000
+  ],
+  [
+   "Assam",
+   "def",
+   "54",
+   "GAUHATI WEST",
+   116.21,
+   3557
+  ],
+  [
+   "Assam",
+   "def",
+   "55",
+   "HAJO",
+   0.6,
+   400170
+  ],
+  [
+   "Assam",
+   "def",
+   "57",
+   "RANGIYA",
+   1.9,
+   141996
+  ],
+  [
+   "Assam",
+   "def",
+   "62",
+   "BARAMA",
+   1.76,
+   131640
+  ],
+  [
+   "Assam",
+   "def",
+   "63",
+   "CHAPAGURI",
+   0.47,
+   477631
+  ],
+  [
+   "Assam",
+   "def",
+   "65",
+   "KALAIGAON",
+   2.26,
+   109102
+  ],
+  [
+   "Assam",
+   "def",
+   "67",
+   "MANGALDOI",
+   1.66,
+   194363
+  ],
+  [
+   "Assam",
+   "def",
+   "69",
+   "UDALGURI",
+   0.59,
+   373171
+  ],
+  [
+   "Assam",
+   "def",
+   "7",
+   "KATLICHERRA",
+   2.0,
+   126212
+  ],
+  [
+   "Assam",
+   "def",
+   "71",
+   "DHEKIAJULI",
+   9.19,
+   31331
+  ],
+  [
+   "Assam",
+   "def",
+   "72",
+   "BORCHALLA",
+   1.61,
+   142035
+  ],
+  [
+   "Assam",
+   "def",
+   "73",
+   "TEZPUR",
+   0.33,
+   788543
+  ],
+  [
+   "Assam",
+   "def",
+   "74",
+   "RANGAPARA",
+   1.92,
+   120626
+  ],
+  [
+   "Assam",
+   "def",
+   "84",
+   "BATADROBA",
+   3.61,
+   62654
+  ],
+  [
+   "Assam",
+   "def",
+   "96",
+   "KHUMTAI",
+   1.75,
+   111620
+  ],
+  [
+   "Chhattisgarh",
+   "def",
+   "1",
+   "BHARATPUR-SONHAT",
+   1.6,
+   135649
+  ],
+  [
+   "Chhattisgarh",
+   "def",
+   "6",
+   "PRATAPPUR",
+   1.64,
+   173837
+  ],
+  [
+   "Goa",
+   "def",
+   "21",
+   "PONDA",
+   0.58,
+   69192
+  ],
+  [
+   "Goa",
+   "def",
+   "24",
+   "MORMUGAO",
+   0.3,
+   94393
+  ],
+  [
+   "Goa",
+   "def",
+   "26",
+   "DABOLIM",
+   1.77,
+   15835
+  ],
+  [
+   "Goa",
+   "def",
+   "31",
+   "MARGAO",
+   0.45,
+   87650
+  ],
+  [
+   "Gujarat",
+   "def",
+   "141",
+   "VADODARA CITY",
+   0.21,
+   1686021
+  ],
+  [
+   "Gujarat",
+   "def",
+   "142",
+   "SAYAJIGANJ",
+   13.75,
+   26158
+  ],
+  [
+   "Gujarat",
+   "def",
+   "144",
+   "RAOPURA",
+   151.57,
+   2402
+  ],
+  [
+   "Gujarat",
+   "def",
+   "145",
+   "MANJALPUR",
+   61.26,
+   4929
+  ],
+  [
+   "Gujarat",
+   "def",
+   "158",
+   "KAMREJ",
+   2.44,
+   191581
+  ],
+  [
+   "Gujarat",
+   "def",
+   "159",
+   "SURAT EAST",
+   0.32,
+   902282
+  ],
+  [
+   "Gujarat",
+   "def",
+   "160",
+   "SURAT NORTH",
+   0.32,
+   718827
+  ],
+  [
+   "Gujarat",
+   "def",
+   "161",
+   "VARACHHA ROAD",
+   0.32,
+   877022
+  ],
+  [
+   "Gujarat",
+   "def",
+   "162",
+   "KARANJ",
+   76.73,
+   2878
+  ],
+  [
+   "Gujarat",
+   "def",
+   "165",
+   "MAJURA",
+   0.32,
+   1039794
+  ],
+  [
+   "Gujarat",
+   "def",
+   "167",
+   "SURAT WEST",
+   0.32,
+   929870
+  ],
+  [
+   "Gujarat",
+   "def",
+   "168",
+   "CHORASI",
+   2.7,
+   172737
+  ],
+  [
+   "Gujarat",
+   "def",
+   "170",
+   "MAHUVA (ST)",
+   1.88,
+   165669
+  ],
+  [
+   "Gujarat",
+   "def",
+   "41",
+   "GHATLODIA",
+   7.29,
+   60145
+  ],
+  [
+   "Gujarat",
+   "def",
+   "57",
+   "DASKROI",
+   1.69,
+   220030
+  ],
+  [
+   "Haryana",
+   "def",
+   "52",
+   "HISAR",
+   57.01,
+   3792
+  ],
+  [
+   "Haryana",
+   "def",
+   "53",
+   "NALWA",
+   0.56,
+   395608
+  ],
+  [
+   "Haryana",
+   "def",
+   "76",
+   "BADSHAHPUR",
+   2.75,
+   150922
+  ],
+  [
+   "Haryana",
+   "def",
+   "77",
+   "GURGAON",
+   0.47,
+   899579
+  ],
+  [
+   "Haryana",
+   "def",
+   "86",
+   "FARIDABAD NIT",
+   3.86,
+   61362
+  ],
+  [
+   "Haryana",
+   "def",
+   "88",
+   "BALLABHGARH",
+   0.34,
+   697108
+  ],
+  [
+   "Haryana",
+   "def",
+   "89",
+   "FARIDABAD",
+   0.34,
+   716941
+  ],
+  [
+   "Himachal Pradesh",
+   "def",
+   "62",
+   "KASUMPTI",
+   0.48,
+   181801
+  ],
+  [
+   "Himachal Pradesh",
+   "def",
+   "65",
+   "JUBBAL-KOTKHAI",
+   33.22,
+   2830
+  ],
+  [
+   "Jammu & Kashmir",
+   "def",
+   "10",
+   "BANDIPORA",
+   0.49,
+   345512
+  ],
+  [
+   "Jammu & Kashmir",
+   "def",
+   "11",
+   "SONAWARI",
+   5.78,
+   29339
+  ],
+  [
+   "Jammu & Kashmir",
+   "def",
+   "12",
+   "SANGRAMA",
+   1.85,
+   61092
+  ],
+  [
+   "Jammu & Kashmir",
+   "def",
+   "24",
+   "SONAWAR",
+   4.32,
+   30608
+  ],
+  [
+   "Jammu & Kashmir",
+   "def",
+   "59",
+   "GOOL ARNAS",
+   6.59,
+   15908
+  ],
+  [
+   "Jammu & Kashmir",
+   "def",
+   "61",
+   "CHENANI",
+   1.63,
+   91383
+  ],
+  [
+   "Jammu & Kashmir",
+   "def",
+   "67",
+   "HIRA NAGAR",
+   1.68,
+   112044
+  ],
+  [
+   "Jammu & Kashmir",
+   "def",
+   "9",
+   "GUREZ",
+   1.73,
+   17379
+  ],
+  [
+   "Jharkhand",
+   "def",
+   "1",
+   "RAJMAHAL",
+   0.59,
+   741725
+  ],
+  [
+   "Jharkhand",
+   "def",
+   "12",
+   "JARMUNDI",
+   1.82,
+   185286
+  ],
+  [
+   "Jharkhand",
+   "def",
+   "13",
+   "MADHUPUR",
+   2.92,
+   156575
+  ],
+  [
+   "Jharkhand",
+   "def",
+   "14",
+   "SARATH",
+   2.44,
+   163417
+  ],
+  [
+   "Jharkhand",
+   "def",
+   "15",
+   "DEOGHAR",
+   0.46,
+   1174216
+  ],
+  [
+   "Jharkhand",
+   "def",
+   "16",
+   "POREYAHAT",
+   2.65,
+   156291
+  ],
+  [
+   "Jharkhand",
+   "def",
+   "17",
+   "GODDA",
+   1.68,
+   270255
+  ],
+  [
+   "Jharkhand",
+   "def",
+   "18",
+   "MAHAGAMA",
+   0.55,
+   839503
+  ],
+  [
+   "Jharkhand",
+   "def",
+   "2",
+   "BORIO",
+   3.91,
+   97845
+  ],
+  [
+   "Jharkhand",
+   "def",
+   "47",
+   "JUGASHLAI",
+   1.72,
+   272486
+  ],
+  [
+   "Jharkhand",
+   "def",
+   "59",
+   "TORPA",
+   3.32,
+   80462
+  ],
+  [
+   "Jharkhand",
+   "def",
+   "60",
+   "KHUNTI",
+   0.59,
+   531885
+  ],
+  [
+   "Jharkhand",
+   "def",
+   "64",
+   "HATIA",
+   3.98,
+   180279
+  ],
+  [
+   "Karnataka",
+   "def",
+   "118",
+   "BYNDOOR",
+   2.11,
+   127699
+  ],
+  [
+   "Karnataka",
+   "def",
+   "141",
+   "CHIKKABALLAPUR",
+   2.41,
+   101270
+  ],
+  [
+   "Karnataka",
+   "def",
+   "186",
+   "MALAVALLI",
+   8.49,
+   37601
+  ],
+  [
+   "Karnataka",
+   "def",
+   "192",
+   "KRISHNARAJPET",
+   0.52,
+   506143
+  ],
+  [
+   "Karnataka",
+   "def",
+   "22",
+   "BILGI",
+   1.65,
+   160294
+  ],
+  [
+   "Karnataka",
+   "def",
+   "30",
+   "BIJAPUR CITY",
+   26.69,
+   10990
+  ],
+  [
+   "Karnataka",
+   "def",
+   "66",
+   "GADAG",
+   0.57,
+   467819
+  ],
+  [
+   "Karnataka",
+   "def",
+   "88",
+   "HADAGALLI",
+   3.96,
+   54993
+  ],
+  [
+   "Karnataka",
+   "def",
+   "90",
+   "VIJAYANAGARA",
+   0.49,
+   486792
+  ],
+  [
+   "Kerala",
+   "def",
+   "124",
+   "KOLLAM",
+   0.55,
+   416927
+  ],
+  [
+   "Kerala",
+   "def",
+   "125",
+   "ERAVIPURAM",
+   5.06,
+   43302
+  ],
+  [
+   "Kerala",
+   "def",
+   "131",
+   "VAMANAPURAM",
+   1.8,
+   138320
+  ],
+  [
+   "Kerala",
+   "def",
+   "134",
+   "THIRUVANANTHAPURAM",
+   0.25,
+   1019984
+  ],
+  [
+   "Kerala",
+   "def",
+   "80",
+   "KOCHI",
+   0.34,
+   664742
+  ],
+  [
+   "Kerala",
+   "def",
+   "82",
+   "ERNAKULAM",
+   6.37,
+   30594
+  ],
+  [
+   "Kerala",
+   "def",
+   "83",
+   "THRIKKAKARA",
+   2.97,
+   76773
+  ],
+  [
+   "Madhya Pradesh",
+   "def",
+   "100",
+   "JABALPUR WEST",
+   0.6,
+   556609
+  ],
+  [
+   "Madhya Pradesh",
+   "def",
+   "103",
+   "SHAHPURA",
+   1.67,
+   217045
+  ],
+  [
+   "Madhya Pradesh",
+   "def",
+   "114",
+   "BARGHAT",
+   1.63,
+   197636
+  ],
+  [
+   "Madhya Pradesh",
+   "def",
+   "125",
+   "SAUSAR",
+   1.61,
+   171682
+  ],
+  [
+   "Madhya Pradesh",
+   "def",
+   "137",
+   "HOSHANGABAD",
+   1.73,
+   173963
+  ],
+  [
+   "Madhya Pradesh",
+   "def",
+   "204",
+   "INDORE-1",
+   0.23,
+   1987407
+  ],
+  [
+   "Madhya Pradesh",
+   "def",
+   "205",
+   "INDORE-2",
+   25.09,
+   17736
+  ],
+  [
+   "Madhya Pradesh",
+   "def",
+   "206",
+   "INDORE-3",
+   55.05,
+   5313
+  ],
+  [
+   "Madhya Pradesh",
+   "def",
+   "207",
+   "INDORE-4",
+   47.32,
+   7515
+  ],
+  [
+   "Madhya Pradesh",
+   "def",
+   "208",
+   "INDORE-5",
+   14.45,
+   33319
+  ],
+  [
+   "Madhya Pradesh",
+   "def",
+   "219",
+   "RATLAM RURAL",
+   1.96,
+   139139
+  ],
+  [
+   "Madhya Pradesh",
+   "def",
+   "62",
+   "RAIGAON",
+   32.57,
+   8793
+  ],
+  [
+   "Madhya Pradesh",
+   "def",
+   "7",
+   "DIMANI",
+   1.7,
+   174785
+  ],
+  [
+   "Madhya Pradesh",
+   "def",
+   "76",
+   "CHURHAT",
+   2.6,
+   128660
+  ],
+  [
+   "Madhya Pradesh",
+   "def",
+   "77",
+   "SIDHI",
+   0.47,
+   693480
+  ],
+  [
+   "Madhya Pradesh",
+   "def",
+   "82",
+   "DHAUHANI",
+   1.89,
+   175622
+  ],
+  [
+   "Madhya Pradesh",
+   "def",
+   "87",
+   "ANUPPUR",
+   0.53,
+   474907
+  ],
+  [
+   "Madhya Pradesh",
+   "def",
+   "88",
+   "PUSPRAJGARH",
+   2.59,
+   107629
+  ],
+  [
+   "Madhya Pradesh",
+   "def",
+   "98",
+   "JABALPUR NORTH",
+   0.58,
+   542720
+  ],
+  [
+   "Madhya Pradesh",
+   "def",
+   "99",
+   "JABALPUR CANTT",
+   3.01,
+   96551
+  ],
+  [
+   "Maharashtra",
+   "def",
+   "103",
+   "BHOKARDAN",
+   1.79,
+   188034
+  ],
+  [
+   "Maharashtra",
+   "def",
+   "110",
+   "PAITHAN",
+   0.49,
+   691548
+  ],
+  [
+   "Maharashtra",
+   "def",
+   "132",
+   "NALASOPARA",
+   0.41,
+   1256169
+  ],
+  [
+   "Maharashtra",
+   "def",
+   "133",
+   "VASAI",
+   9.38,
+   44494
+  ],
+  [
+   "Maharashtra",
+   "def",
+   "224",
+   "PARNER",
+   0.48,
+   802348
+  ],
+  [
+   "Maharashtra",
+   "def",
+   "225",
+   "AHMEDNAGAR CITY",
+   4.4,
+   89282
+  ],
+  [
+   "Maharashtra",
+   "def",
+   "255",
+   "PHALTAN",
+   4.64,
+   86761
+  ],
+  [
+   "Maharashtra",
+   "def",
+   "257",
+   "KOREGAON",
+   0.57,
+   669927
+  ],
+  [
+   "Maharashtra",
+   "def",
+   "284",
+   "SHIRALA",
+   2.26,
+   162911
+  ],
+  [
+   "Maharashtra",
+   "def",
+   "287",
+   "TASGAON - KAVATHE MAHANKAL",
+   6.24,
+   58735
+  ],
+  [
+   "Maharashtra",
+   "def",
+   "64",
+   "TIRORA",
+   0.54,
+   535528
+  ],
+  [
+   "Maharashtra",
+   "def",
+   "65",
+   "GONDIYA",
+   2.65,
+   138849
+  ],
+  [
+   "Manipur",
+   "def",
+   "30",
+   "LILONG",
+   1.74,
+   25977
+  ],
+  [
+   "Manipur",
+   "def",
+   "49",
+   "TADUBI",
+   0.5,
+   140199
+  ],
+  [
+   "Manipur",
+   "def",
+   "5",
+   "THONGJU",
+   2.04,
+   21861
+  ],
+  [
+   "Meghalaya",
+   "def",
+   "22",
+   "NONGKREM",
+   4.39,
+   11801
+  ],
+  [
+   "Mizoram",
+   "def",
+   "1",
+   "HACHHEK",
+   1.72,
+   18728
+  ],
+  [
+   "Mizoram",
+   "def",
+   "10",
+   "AIZAWL NORTH - I",
+   0.1,
+   294902
+  ],
+  [
+   "Mizoram",
+   "def",
+   "13",
+   "AIZAWL EAST - I",
+   3.59,
+   8593
+  ],
+  [
+   "Mizoram",
+   "def",
+   "15",
+   "AIZAWL WEST I",
+   5.34,
+   5950
+  ],
+  [
+   "Mizoram",
+   "def",
+   "23",
+   "CHAMPHAI NORTH",
+   0.54,
+   48212
+  ],
+  [
+   "Mizoram",
+   "def",
+   "24",
+   "CHAMPHAI SOUTH",
+   3.88,
+   6177
+  ],
+  [
+   "Mizoram",
+   "def",
+   "30",
+   "LUNGLEI NORTH",
+   0.32,
+   70903
+  ],
+  [
+   "Mizoram",
+   "def",
+   "31",
+   "LUNGLEI EAST",
+   10.28,
+   1937
+  ],
+  [
+   "Mizoram",
+   "def",
+   "32",
+   "LUNGLEI WEST",
+   4.26,
+   4686
+  ],
+  [
+   "Mizoram",
+   "def",
+   "38",
+   "LAWNGTLAI EAST",
+   1.93,
+   16739
+  ],
+  [
+   "Nagaland",
+   "def",
+   "1",
+   "DIMAPUR-I",
+   0.45,
+   67651
+  ],
+  [
+   "Odisha",
+   "def",
+   "11",
+   "RAGHUNATHPALI",
+   3.06,
+   75153
+  ],
+  [
+   "Odisha",
+   "def",
+   "12",
+   "ROURKELA",
+   0.51,
+   536450
+  ],
+  [
+   "Puducherry",
+   "def",
+   "13",
+   "MUTHIALPET",
+   0.35,
+   124768
+  ],
+  [
+   "Puducherry",
+   "def",
+   "15",
+   "OUPALAM",
+   0.35,
+   119608
+  ],
+  [
+   "Puducherry",
+   "def",
+   "19",
+   "ARIANKUPPAM",
+   1.69,
+   29808
+  ],
+  [
+   "Puducherry",
+   "def",
+   "5",
+   "VILLIANUR",
+   3.47,
+   13365
+  ],
+  [
+   "Punjab",
+   "def",
+   "1",
+   "SUJANPUR",
+   4.15,
+   52472
+  ],
+  [
+   "Punjab",
+   "def",
+   "104",
+   "MEHAL KALAN",
+   1.63,
+   129134
+  ],
+  [
+   "Punjab",
+   "def",
+   "11",
+   "AJNALA",
+   5.73,
+   36632
+  ],
+  [
+   "Punjab",
+   "def",
+   "110",
+   "PATIALA RURAL",
+   0.54,
+   497124
+  ],
+  [
+   "Punjab",
+   "def",
+   "111",
+   "RAJPURA",
+   11.41,
+   19477
+  ],
+  [
+   "Punjab",
+   "def",
+   "112",
+   "DERA BASSI",
+   0.53,
+   514648
+  ],
+  [
+   "Punjab",
+   "def",
+   "113",
+   "GHANAUR",
+   0.49,
+   427064
+  ],
+  [
+   "Punjab",
+   "def",
+   "114",
+   "SANOUR",
+   4.67,
+   57345
+  ],
+  [
+   "Punjab",
+   "def",
+   "116",
+   "SAMANA",
+   4.13,
+   55981
+  ],
+  [
+   "Punjab",
+   "def",
+   "15",
+   "AMRITSAR NORTH",
+   0.21,
+   1178200
+  ],
+  [
+   "Punjab",
+   "def",
+   "16",
+   "AMRITSAR WEST",
+   4.32,
+   58283
+  ],
+  [
+   "Punjab",
+   "def",
+   "18",
+   "AMRITSAR EAST",
+   54.3,
+   3882
+  ],
+  [
+   "Punjab",
+   "def",
+   "19",
+   "AMRITSAR SOUTH",
+   15.28,
+   14249
+  ],
+  [
+   "Punjab",
+   "def",
+   "2",
+   "BHOA",
+   0.52,
+   445205
+  ],
+  [
+   "Punjab",
+   "def",
+   "26",
+   "BHOLATH",
+   2.15,
+   83690
+  ],
+  [
+   "Punjab",
+   "def",
+   "27",
+   "KAPURTHALA",
+   0.51,
+   362295
+  ],
+  [
+   "Punjab",
+   "def",
+   "33",
+   "KARTARPUR",
+   2.09,
+   108449
+  ],
+  [
+   "Punjab",
+   "def",
+   "38",
+   "ADAMPUR",
+   5.46,
+   40294
+  ],
+  [
+   "Punjab",
+   "def",
+   "40",
+   "DASUYA",
+   2.54,
+   97697
+  ],
+  [
+   "Punjab",
+   "def",
+   "42",
+   "SHAM CHAURASI",
+   3.7,
+   61259
+  ],
+  [
+   "Punjab",
+   "def",
+   "43",
+   "HOSHIARPUR",
+   0.44,
+   518040
+  ],
+  [
+   "Punjab",
+   "def",
+   "45",
+   "GARHSHANKAR",
+   13.61,
+   16955
+  ],
+  [
+   "Punjab",
+   "def",
+   "75",
+   "ZIRA",
+   4.65,
+   52958
+  ],
+  [
+   "Punjab",
+   "def",
+   "78",
+   "GURU HAR SAHAI",
+   0.48,
+   450009
+  ],
+  [
+   "Punjab",
+   "def",
+   "80",
+   "FAZILKA",
+   0.55,
+   404152
+  ],
+  [
+   "Punjab",
+   "def",
+   "81",
+   "ABOHAR",
+   0.54,
+   413738
+  ],
+  [
+   "Punjab",
+   "def",
+   "82",
+   "BALLUANA",
+   8.07,
+   29528
+  ],
+  [
+   "Punjab",
+   "def",
+   "90",
+   "RAMPURA PHUL",
+   3.47,
+   63511
+  ],
+  [
+   "Punjab",
+   "def",
+   "92",
+   "BATHINDA URBAN",
+   0.56,
+   493602
+  ],
+  [
+   "Punjab",
+   "def",
+   "94",
+   "TALWANDI SABO",
+   4.1,
+   49019
+  ],
+  [
+   "Punjab",
+   "def",
+   "95",
+   "MAUR",
+   2.1,
+   103967
+  ],
+  [
+   "Rajasthan",
+   "def",
+   "128",
+   "JODHPUR",
+   0.28,
+   1070566
+  ],
+  [
+   "Rajasthan",
+   "def",
+   "129",
+   "SOORSAGAR",
+   29.45,
+   12483
+  ],
+  [
+   "Rajasthan",
+   "def",
+   "13",
+   "BIKANER WEST",
+   0.45,
+   644406
+  ],
+  [
+   "Rajasthan",
+   "def",
+   "14",
+   "BIKANER EAST",
+   39.33,
+   8162
+  ],
+  [
+   "Rajasthan",
+   "def",
+   "197",
+   "DAG",
+   1.64,
+   214080
+  ],
+  [
+   "Rajasthan",
+   "def",
+   "41",
+   "VIRATNAGAR",
+   0.56,
+   531157
+  ],
+  [
+   "Rajasthan",
+   "def",
+   "42",
+   "SHAHPURA",
+   2.48,
+   119958
+  ],
+  [
+   "Sikkim",
+   "def",
+   "31",
+   "LACHEN MANGAN",
+   0.54,
+   20834
+  ],
+  [
+   "Tamil Nadu",
+   "def",
+   "116",
+   "SULUR",
+   2.19,
+   148054
+  ],
+  [
+   "Tamil Nadu",
+   "def",
+   "124",
+   "VALPARAI",
+   1.66,
+   149918
+  ],
+  [
+   "Tamil Nadu",
+   "def",
+   "49",
+   "JOLARPET",
+   1.67,
+   175593
+  ],
+  [
+   "Tamil Nadu",
+   "def",
+   "58",
+   "PENNAGARAM",
+   5.09,
+   58920
+  ],
+  [
+   "Tamil Nadu",
+   "def",
+   "71",
+   "MAILAM",
+   1.78,
+   157729
+  ],
+  [
+   "Tamil Nadu",
+   "def",
+   "88",
+   "SALEM (WEST)",
+   3.07,
+   106078
+  ],
+  [
+   "Telangana",
+   "def",
+   "25",
+   "PEDDAPALLE",
+   0.55,
+   581867
+  ],
+  [
+   "Telangana",
+   "def",
+   "56",
+   "TANDUR",
+   3.83,
+   65115
+  ],
+  [
+   "Telangana",
+   "def",
+   "81",
+   "NAGARKURNOOL",
+   0.56,
+   539840
+  ],
+  [
+   "Telangana",
+   "def",
+   "93",
+   "MUNUGODE",
+   1.74,
+   172558
+  ],
+  [
+   "Tripura",
+   "def",
+   "10",
+   "MAJLISHPUR",
+   0.15,
+   452820
+  ],
+  [
+   "Tripura",
+   "def",
+   "14",
+   "BADHARGHAT",
+   2.8,
+   29144
+  ],
+  [
+   "Tripura",
+   "def",
+   "29",
+   "KRISHNAPUR",
+   1.83,
+   26592
+  ],
+  [
+   "Tripura",
+   "def",
+   "4",
+   "BARJALA",
+   2.55,
+   23154
+  ],
+  [
+   "Tripura",
+   "def",
+   "46",
+   "SURMA",
+   1.75,
+   36262
+  ],
+  [
+   "Tripura",
+   "def",
+   "6",
+   "AGARTALA",
+   5.47,
+   13104
+  ],
+  [
+   "Uttar Pradesh",
+   "def",
+   "158",
+   "SANDI",
+   1.72,
+   269804
+  ],
+  [
+   "Uttar Pradesh",
+   "def",
+   "162",
+   "BANGARMAU",
+   1.78,
+   261310
+  ],
+  [
+   "Uttar Pradesh",
+   "def",
+   "204",
+   "AURAIYA",
+   1.66,
+   285624
+  ],
+  [
+   "Uttar Pradesh",
+   "def",
+   "209",
+   "BILAUR",
+   1.64,
+   334817
+  ],
+  [
+   "Uttar Pradesh",
+   "def",
+   "269",
+   "ZAIDPUR",
+   20.56,
+   26210
+  ],
+  [
+   "Uttar Pradesh",
+   "def",
+   "309",
+   "RUDHAULI",
+   1.67,
+   335162
+  ],
+  [
+   "Uttar Pradesh",
+   "def",
+   "329",
+   "KHADDA",
+   1.78,
+   246425
+  ],
+  [
+   "Uttar Pradesh",
+   "def",
+   "39",
+   "DHANAURA",
+   3.05,
+   151358
+  ],
+  [
+   "Uttar Pradesh",
+   "def",
+   "40",
+   "NAUGAWAN SADAT",
+   0.57,
+   767791
+  ],
+  [
+   "Uttarakhand",
+   "def",
+   "18",
+   "DHARAMPUR",
+   2.42,
+   77330
+  ],
+  [
+   "Uttarakhand",
+   "def",
+   "22",
+   "MUSSOORIE",
+   2.57,
+   62014
+  ],
+  [
+   "Uttarakhand",
+   "def",
+   "49",
+   "SALT",
+   1.98,
+   70749
+  ],
+  [
+   "Uttarakhand",
+   "def",
+   "57",
+   "BHIMTAL",
+   2.39,
+   56206
+  ],
+  [
+   "Uttarakhand",
+   "def",
+   "59",
+   "HALDWANI",
+   0.49,
+   364129
+  ],
+  [
+   "Uttarakhand",
+   "def",
+   "60",
+   "KALADHUNGI",
+   2.92,
+   60070
+  ],
+  [
+   "Uttarakhand",
+   "def",
+   "67",
+   "KICHHA",
+   0.56,
+   264566
+  ],
+  [
+   "Uttarakhand",
+   "def",
+   "70",
+   "KHATIMA",
+   2.05,
+   68944
+  ],
+  [
+   "Uttarakhand",
+   "def",
+   "9",
+   "GHANSHALI",
+   1.79,
+   66808
+  ],
+  [
+   "West Bengal",
+   "def",
+   "116",
+   "BIDHANNAGAR",
+   2.26,
+   141895
+  ],
+  [
+   "West Bengal",
+   "def",
+   "14",
+   "MADARIHAT",
+   3.7,
+   69967
+  ],
+  [
+   "West Bengal",
+   "def",
+   "182",
+   "UDAYNARAYANPUR",
+   1.93,
+   158436
+  ],
+  [
+   "West Bengal",
+   "def",
+   "19",
+   "DABGRAM-PHULBARI",
+   2.83,
+   119040
+  ],
+  [
+   "West Bengal",
+   "def",
+   "204",
+   "PANSKURA PURBA",
+   0.52,
+   573427
+  ],
+  [
+   "West Bengal",
+   "def",
+   "205",
+   "PANSKURA PASCHIM",
+   5.86,
+   57932
+  ],
+  [
+   "West Bengal",
+   "def",
+   "228",
+   "KHARAGPUR",
+   2.27,
+   117739
+  ],
+  [
+   "West Bengal",
+   "def",
+   "236",
+   "MEDINIPUR",
+   1.95,
+   177066
+  ],
+  [
+   "West Bengal",
+   "def",
+   "268",
+   "PURBASTHALI DAKSHIN",
+   1.89,
+   162065
+  ],
+  [
+   "West Bengal",
+   "def",
+   "276",
+   "DURGAPUR PURBA",
+   3.8,
+   85554
+  ],
+  [
+   "West Bengal",
+   "def",
+   "277",
+   "DURGAPUR PASCHIM",
+   0.59,
+   566517
+  ],
+  [
+   "West Bengal",
+   "def",
+   "280",
+   "ASANSOL DAKSHIN",
+   3.56,
+   92242
+  ],
+  [
+   "West Bengal",
+   "def",
+   "281",
+   "ASANSOL UTTAR",
+   0.57,
+   563917
+  ],
+  [
+   "West Bengal",
+   "def",
+   "30",
+   "GOALPOKHAR",
+   0.54,
+   509732
+  ],
+  [
+   "West Bengal",
+   "def",
+   "63",
+   "RANINAGAR",
+   0.51,
+   591989
+  ],
+  [
+   "West Bengal",
+   "def",
+   "70",
+   "REJINAGAR",
+   4.87,
+   62275
+  ]
+ ],
+ "gate_years": {
+  "Andhra Pradesh|def": 2009,
+  "Arunachal Pradesh|def": 2009,
+  "Assam|def": 2011,
+  "Assam|new": 2026,
+  "Bihar|def": 2010,
+  "Chhattisgarh|def": 2013,
+  "Delhi|def": 2013,
+  "Goa|def": 2012,
+  "Gujarat|def": 2012,
+  "Haryana|def": 2009,
+  "Himachal Pradesh|def": 2012,
+  "Jammu & Kashmir|def": 2014,
+  "Jammu & Kashmir|new": 2024,
+  "Jharkhand|def": 2009,
+  "Karnataka|def": 2013,
+  "Kerala|def": 2011,
+  "Ladakh|def": 2014,
+  "Madhya Pradesh|def": 2013,
+  "Maharashtra|def": 2009,
+  "Manipur|def": 2012,
+  "Meghalaya|def": 2013,
+  "Mizoram|def": 2013,
+  "Nagaland|def": 2013,
+  "Odisha|def": 2009,
+  "Puducherry|def": 2011,
+  "Punjab|def": 2012,
+  "Rajasthan|def": 2013,
+  "Sikkim|def": 2009,
+  "Tamil Nadu|def": 2011,
+  "Telangana|def": 2009,
+  "Tripura|def": 2013,
+  "Uttar Pradesh|def": 2012,
+  "Uttarakhand|def": 2012,
+  "West Bengal|def": 2011
+ }
+}

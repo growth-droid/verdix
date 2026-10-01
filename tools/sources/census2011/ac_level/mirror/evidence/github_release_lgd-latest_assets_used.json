@@ -1,0 +1,93 @@
+{
+ "release": "https://github.com/ramSeraph/opendata/releases/tag/lgd-latest",
+ "tag": "lgd-latest",
+ "name": "Local Government Directory Current Month dumps",
+ "release_published_at": "2025-03-04T13:51:21Z",
+ "release_updated_at": "2026-09-29T10:42:07Z",
+ "assets_used": [
+  {
+   "name": "assembly_constituencies.29Sep2026.csv.7z",
+   "size": 31239,
+   "digest": "sha256:911d108703e00474f1d0e38ef7bc035903b9bf55c2578177494c2f5d39a10607",
+   "created_at": "2026-09-29T10:24:26Z",
+   "browser_download_url": "https://github.com/ramSeraph/opendata/releases/download/lgd-latest/assembly_constituencies.29Sep2026.csv.7z"
+  },
+  {
+   "name": "constituencies_mapping_urban.29Sep2026.csv.7z",
+   "size": 1012538,
+   "digest": "sha256:67d3bc41e97397d08f401cdc5d9885a244c78aeb760d8a61628f442bbd3a564d",
+   "created_at": "2026-09-29T10:24:34Z",
+   "browser_download_url": "https://github.com/ramSeraph/opendata/releases/download/lgd-latest/constituencies_mapping_urban.29Sep2026.csv.7z"
+  },
+  {
+   "name": "constituency_coverage.29Sep2026.csv.7z",
+   "size": 4548335,
+   "digest": "sha256:73d565e2a6d6c5c8fc1c86e31e95ede4e19b96777218800efc1cc3dae1a3ac93",
+   "created_at": "2026-09-29T10:24:36Z",
+   "browser_download_url": "https://github.com/ramSeraph/opendata/releases/download/lgd-latest/constituency_coverage.29Sep2026.csv.7z"
+  },
+  {
+   "name": "districts.29Sep2026.csv.7z",
+   "size": 8744,
+   "digest": "sha256:21d4a9d29e584e11a65bb41ed1ed8ef74caffcfa6591b07ba70aac5c8764a513",
+   "created_at": "2026-09-29T10:24:39Z",
+   "browser_download_url": "https://github.com/ramSeraph/opendata/releases/download/lgd-latest/districts.29Sep2026.csv.7z"
+  },
+  {
+   "name": "invalidated_census_villages.29Sep2026.csv.7z",
+   "size": 56614,
+   "digest": "sha256:eb3daf665b736a16eba22badfee1104e802ef85a15e375653760eabaa1522987",
+   "created_at": "2026-09-29T10:24:42Z",
+   "browser_download_url": "https://github.com/ramSeraph/opendata/releases/download/lgd-latest/invalidated_census_villages.29Sep2026.csv.7z"
+  },
+  {
+   "name": "parliament_constituencies.29Sep2026.csv.7z",
+   "size": 3999,
+   "digest": "sha256:6636ceb3892970d8c74d3b54afde09e4f77976a6383e5bd152a2e1951edfc5e4",
+   "created_at": "2026-09-29T10:24:43Z",
+   "browser_download_url": "https://github.com/ramSeraph/opendata/releases/download/lgd-latest/parliament_constituencies.29Sep2026.csv.7z"
+  },
+  {
+   "name": "states.29Sep2026.csv.7z",
+   "size": 1074,
+   "digest": "sha256:5ccc1be798d0a68a5ebab770819a8138c25f2400f2dcafa29accde7dc8060554",
+   "created_at": "2026-09-29T10:24:57Z",
+   "browser_download_url": "https://github.com/ramSeraph/opendata/releases/download/lgd-latest/states.29Sep2026.csv.7z"
+  },
+  {
+   "name": "statewise_ulbs_coverage.29Sep2026.csv.7z",
+   "size": 354686,
+   "digest": "sha256:e7b589709e6f874f56db3edc1aff71b3da314fafcae9c5db7a2f51ddf1097246",
+   "created_at": "2026-09-29T10:24:59Z",
+   "browser_download_url": "https://github.com/ramSeraph/opendata/releases/download/lgd-latest/statewise_ulbs_coverage.29Sep2026.csv.7z"
+  },
+  {
+   "name": "subdistricts.29Sep2026.csv.7z",
+   "size": 90140,
+   "digest": "sha256:7331c35f1456db8a111c53ae16ec6c6e02b5228de12e5b9355c835ef48557ccd",
+   "created_at": "2026-09-29T10:25:00Z",
+   "browser_download_url": "https://github.com/ramSeraph/opendata/releases/download/lgd-latest/subdistricts.29Sep2026.csv.7z"
+  },
+  {
+   "name": "urban_local_bodies.29Sep2026.csv.7z",
+   "size": 75956,
+   "digest": "sha256:ecfd497ed5b3bd4cbedb1e9e34893ae3c8eaa94f47501dd33e96496dc59e9994",
+   "created_at": "2026-09-29T10:25:03Z",
+   "browser_download_url": "https://github.com/ramSeraph/opendata/releases/download/lgd-latest/urban_local_bodies.29Sep2026.csv.7z"
+  },
+  {
+   "name": "urban_local_body_wards.29Sep2026.csv.7z",
+   "size": 1007827,
+   "digest": "sha256:7c11bc18b6ab558cb1af02d26cdf2d75185979e5a728425f9c26dc8c75dc70fb",
+   "created_at": "2026-09-29T10:25:04Z",
+   "browser_download_url": "https://github.com/ramSeraph/opendata/releases/download/lgd-latest/urban_local_body_wards.29Sep2026.csv.7z"
+  },
+  {
+   "name": "villages.29Sep2026.csv.7z",
+   "size": 9335955,
+   "digest": "sha256:8c9cd1fbf5ea4b4e4ccd07586706f983e8a4fc57e5c2d8d400d0e9cfd9d602ca",
+   "created_at": "2026-09-29T10:25:05Z",
+   "browser_download_url": "https://github.com/ramSeraph/opendata/releases/download/lgd-latest/villages.29Sep2026.csv.7z"
+  }
+ ]
+}

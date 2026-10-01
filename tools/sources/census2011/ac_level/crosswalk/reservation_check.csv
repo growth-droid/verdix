@@ -1,0 +1,30 @@
+check,state,eci_ac_no,app_name,reference_name,reference_r,app_r,agrees,verdict
+delimitation_order_2008,Telangana,32,HUSNABAD,Husnabad,GEN,SC,False,"app_r_wrong: order lists ""32-Husnabad"" unreserved; app marks SC (TG app SC=20 vs 19)"
+delimitation_order_2008,Telangana,113,PALAIR,Palair Madhira (SC),SC,GEN,False,order_parse_artifact: two AC names merged in the parsed order row; the tag belongs to the other AC
+delimitation_order_2008,Andhra Pradesh,76,AVANIGADDA,Avanigadda Pamarru (SC),SC,GEN,False,order_parse_artifact: two AC names merged in the parsed order row; the tag belongs to the other AC
+delimitation_order_2008,Andhra Pradesh,123,UDAYAGIRI,Udayagiri Badvel (SC),SC,GEN,False,order_parse_artifact: two AC names merged in the parsed order row; the tag belongs to the other AC
+delimitation_order_2008,Andhra Pradesh,142,PATTIKONDA,Pattikonda Kodumur (SC),SC,GEN,False,order_parse_artifact: two AC names merged in the parsed order row; the tag belongs to the other AC
+delimitation_order_2008,Madhya Pradesh,104,DINDORI,Dindori (ST),ST,SC,False,"app_r_wrong: order ""104-Dindori (ST)""; app marks SC (MP app SC 36/ST 46 vs 35/47)"
+delimitation_order_2008,Uttar Pradesh,402,OBRA,Obra,GEN,ST,False,app_right: Obra became ST by the 2017 amendment (order 2008 had it unreserved)
+delimitation_order_2008,Uttar Pradesh,403,DUDHI,Duddhi (SC),SC,ST,False,app_right: Duddhi became ST by the 2017 amendment (order 2008 had it SC)
+lgd_name_tag,Assam,99,MAJULI,Majuli ST,ST,ST,True,agree (but app r unreliable for this map)
+lgd_name_tag,Manipur,41,CHANDEL,Chandel (st),ST,ST,True,agree
+lgd_name_tag,Manipur,45,CHINGAI,Chingai (st),ST,ST,True,agree
+lgd_name_tag,Manipur,58,CHURACHANDPUR,Churachandpur (st),ST,ST,True,agree
+lgd_name_tag,Manipur,57,HENGLEP,Henglep (st),ST,ST,True,agree
+lgd_name_tag,Manipur,50,KANGPOKPI,Kangpokpi (st),ST,GEN,False,lgd_tag_wrong: Manipur has 19 ST seats (Schedule II) and the app has exactly 19; Kangpokpi is the unreserved hill seat
+lgd_name_tag,Manipur,47,KARONG,Karong (st),ST,ST,True,agree
+lgd_name_tag,Manipur,48,MAO,Mao (st),ST,ST,True,agree
+lgd_name_tag,Manipur,54,NUNGBA,Nungba (st),ST,ST,True,agree
+lgd_name_tag,Manipur,43,PHUNGYAR,Phungyar (st),ST,ST,True,agree
+lgd_name_tag,Manipur,59,SAIKOT,Saikot (st),ST,ST,True,agree
+lgd_name_tag,Manipur,46,SAIKUL,Saikul (st),ST,ST,True,agree
+lgd_name_tag,Manipur,51,SAITU,Saitu (st),ST,ST,True,agree
+lgd_name_tag,Manipur,60,SINGHAT,Singhat (st),ST,ST,True,agree
+lgd_name_tag,Manipur,49,TADUBI,Tadubi (st),ST,ST,True,agree
+lgd_name_tag,Manipur,52,TAMEI,Tamei (st),ST,ST,True,agree
+lgd_name_tag,Manipur,53,TAMENGLONG,Tamenglong (st),ST,ST,True,agree
+lgd_name_tag,Manipur,42,TENGNOUPAL,Tengnoupal (st),ST,ST,True,agree
+lgd_name_tag,Manipur,56,THANLON,Thanlon (st),ST,ST,True,agree
+lgd_name_tag,Manipur,55,TIPAIMUKH,Tipaimukh (st),ST,ST,True,agree
+lgd_name_tag,Manipur,44,UKHRUL,Ukhrul (st),ST,ST,True,agree

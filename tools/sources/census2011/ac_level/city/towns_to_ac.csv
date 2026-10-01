@@ -1,0 +1,235 @@
+census_state,census_district,census_subdistt,census_town,census_ward,app_state,eci_ac_no,weight,basis
+33,632,05898,803989,,Tamil Nadu,122,1.0,ECI Delimitation Order 2008: AC 122 Kinathukadavu extent names 'Kurichi (TP)' [whole town]
+33,632,05898,803990,,Tamil Nadu,119,1.0,ECI Delimitation Order 2008: AC 119 Thondamuthur extent names 'Kuniyamuthur (TP)' [whole town]
+33,623,05841,803756,,Tamil Nadu,195,1.0,ECI Delimitation Order 2008: AC 195 Thiruparankundram extent names 'Avaniapuram (TP)' [whole town]
+33,633,05904,804024,,Tamil Nadu,113,1.0,ECI Delimitation Order 2008: AC 113 Tiruppur (North) extent names 'Velampalayam (TP)' [whole town]
+33,610,05753,803541,,Tamil Nadu,98,1.0,ECI Delimitation Order 2008: AC 98 Erode (East) extent names 'Veerappanchatiram (TP)' [whole town]
+33,632,05897,803981,,Tamil Nadu,117,1.0,ECI Delimitation Order 2008: AC 117 Kavundampalayam extent names 'Kavundampalayam (TP)' (= census Goundampalayam) [whole town]
+33,604,05704,803354,,Tamil Nadu,30,1.0,ECI Delimitation Order 2008: AC 30 Pallavaram extent names 'Pammal (TP)' [whole town]
+33,633,05904,804025,,Tamil Nadu,114,1.0,ECI Delimitation Order 2008: AC 114 Tiruppur (South) extent names 'S.Nallur (TP)' [whole town]
+33,613,05769,803606,,Tamil Nadu,135,1.0,ECI Delimitation Order 2008: AC 135 Karur extent names 'Inam Karur (TP)' [whole town]
+33,623,05836,803742,,Tamil Nadu,189,1.0,ECI Delimitation Order 2008: AC 189 Madurai East extent names 'Anaiyur (TP)' (Madurai dist.) [whole town]
+33,605,05717,803396,,Tamil Nadu,43,1.0,ECI Delimitation Order 2008: AC 43 Vellore extent names 'Sathuvacheri (TP)' [whole town]
+33,625,05849,803796,,Tamil Nadu,205,1.0,ECI Delimitation Order 2008: AC 205 Sivakasi extent names 'Thiruthangal (TP)' [whole town]
+33,610,05753,803539,,Tamil Nadu,99,1.0,ECI Delimitation Order 2008: AC 99 Erode (West) extent names 'Periyasemur (TP)' [whole town]
+33,613,05769,803609,,Tamil Nadu,135,1.0,ECI Delimitation Order 2008: AC 135 Karur extent names 'Thanthoni (TP)' [whole town]
+33,604,05704,803353,,Tamil Nadu,30,1.0,ECI Delimitation Order 2008: AC 30 Pallavaram extent names 'Anakaputhur (TP)' [whole town]
+33,602,05700,803330,,Tamil Nadu,7,1.0,ECI Delimitation Order 2008: AC 7 Maduravoyal extent names 'Valasaravakkam (TP)' [whole town]
+33,602,05700,803331,,Tamil Nadu,7,1.0,ECI Delimitation Order 2008: AC 7 Maduravoyal extent names 'Porur (TP)' [whole town]
+33,604,05704,803350,,Tamil Nadu,28,1.0,ECI Delimitation Order 2008: AC 28 Alandur extent names 'St.Thomas Mount-cum-Pallavaram (CB)' [whole town]
+33,610,05753,803543,,Tamil Nadu,99,1.0,ECI Delimitation Order 2008: AC 99 Erode (West) extent names 'Surampatti (TP)' [whole town]
+33,632,05898,803983,,Tamil Nadu,118,1.0,ECI Delimitation Order 2008: AC 118 Coimbatore (North) extent names 'Vadavalli (TP)' [whole town]
+33,632,05897,803976,,Tamil Nadu,117,1.0,ECI Delimitation Order 2008: AC 117 Kavundampalayam extent names 'Kalapatti (TP)' [whole town]
+33,605,05713,803379,,Tamil Nadu,40,1.0,ECI Delimitation Order 2008: AC 40 Katpadi extent names 'Dharapadavedu (TP)' [whole town]
+33,602,05701,803332,,Tamil Nadu,10,1.0,ECI Delimitation Order 2008: AC 10 Tiruvottiyur extent names 'Kattivakkam (M)' [whole town]
+33,602,05701,803334,,Tamil Nadu,10,1.0,ECI Delimitation Order 2008: AC 10 Tiruvottiyur extent names 'Manali (TP)' [whole town]
+33,632,05897,803979,,Tamil Nadu,117,1.0,ECI Delimitation Order 2008: AC 117 Kavundampalayam extent names 'Thudiyalur (TP)' [whole town]
+33,632,05897,803977,,Tamil Nadu,117,1.0,ECI Delimitation Order 2008: AC 117 Kavundampalayam extent names 'Saravanampatti (TP)' [whole town]
+33,602,05701,803336,,Tamil Nadu,9,1.0,ECI Delimitation Order 2008: AC 9 Madavaram extent names 'Puzhal (TP)' [whole town]
+33,605,05717,803401,,Tamil Nadu,43,1.0,ECI Delimitation Order 2008: AC 43 Vellore extent names 'Allapuram (TP)' [whole town]
+33,623,05836,803744,,Tamil Nadu,194,1.0,ECI Delimitation Order 2008: AC 194 Madurai West extent names 'Vilangudi (TP)' [whole town]
+33,604,05704,803355,,Tamil Nadu,30,1.0,ECI Delimitation Order 2008: AC 30 Pallavaram extent names 'Thiruneermalai (TP)' [whole town]
+33,610,05753,803536,,Tamil Nadu,99,1.0,ECI Delimitation Order 2008: AC 99 Erode (West) extent names 'Suriyampalayam (TP)' [whole town]
+33,610,05753,803538,,Tamil Nadu,98,1.0,ECI Delimitation Order 2008: AC 98 Erode (East) extent names 'Brahmana Periya Agraharam (TP)' [whole town]
+33,629,05881,803890,,Tamil Nadu,234,1.0,ECI Delimitation Order 2008: AC 234 Killiyoor extent names 'Ezhudesam (TP)' [whole town]
+33,632,05897,803982,,Tamil Nadu,118,1.0,ECI Delimitation Order 2008: AC 118 Coimbatore (North) extent names 'Veerakeralam (TP)' [whole town]
+33,604,05707,803366,,Tamil Nadu,37,1.0,ECI Delimitation Order 2008: AC 37 Kancheepuram extent names 'Sevilimedu (TP)' [whole town]
+33,613,05769,803604,,Tamil Nadu,134,1.0,ECI Delimitation Order 2008: AC 134 Aravakurichi extent names 'Punjaipugalur (TP)' [whole town]
+33,631,05890,803952,,Tamil Nadu,55,1.0,ECI Delimitation Order 2008: AC 55 Hosur extent names 'Mathigiri (TP)' [whole town]
+33,632,05897,803980,,Tamil Nadu,117,1.0,ECI Delimitation Order 2008: AC 117 Kavundampalayam extent names 'Chinnavedampatti (TP)' [whole town]
+33,605,05713,803381,,Tamil Nadu,40,1.0,ECI Delimitation Order 2008: AC 40 Katpadi extent names 'Kalinjur (TP)' [whole town]
+33,611,05758,803567,,Tamil Nadu,110,1.0,ECI Delimitation Order 2008: AC 110 Coonoor extent names 'Wellington (CB)' [whole town]
+33,605,05717,803397,,Tamil Nadu,40,1.0,ECI Delimitation Order 2008: AC 40 Katpadi extent names 'Vellore Taluk (Part) Shenpakkam (TP)' [whole town]
+33,629,05884,803928,,Tamil Nadu,230,1.0,ECI Delimitation Order 2008: AC 230 Nagercoil extent names 'Asaripallam (TP)' [whole town]
+33,623,05841,803755,,Tamil Nadu,195,1.0,ECI Delimitation Order 2008: AC 195 Thiruparankundram extent names 'Thirunagar (TP)' [whole town]
+33,632,05897,803978,,Tamil Nadu,117,1.0,ECI Delimitation Order 2008: AC 117 Kavundampalayam extent names 'Vellaikinar (TP)' [whole town]
+33,620,05811,803699,,Tamil Nadu,171,1.0,ECI Delimitation Order 2008: AC 171 Kumbakonam extent names 'Dharasuram (TP)' [whole town]
+33,629,05882,803916,,Tamil Nadu,231,1.0,ECI Delimitation Order 2008: AC 231 Colachel extent names 'Alur (TP)' [whole town]
+33,629,05884,803935,,Tamil Nadu,229,1.0,ECI Delimitation Order 2008: AC 229 Kanniyakumari extent names 'Thengamputhoor (TP)' [whole town]
+33,602,05701,803338,,Tamil Nadu,10,1.0,ECI Delimitation Order 2008: AC 10 Tiruvottiyur extent names 'Chinnasekkadu (TP)' [whole town]
+33,604,05704,803349,,Tamil Nadu,28,1.0,ECI Delimitation Order 2008: AC 28 Alandur extent names 'Nandambakkam (TP)' [whole town]
+33,605,05713,803380,,Tamil Nadu,40,1.0,ECI Delimitation Order 2008: AC 40 Katpadi extent names 'Gandhinagar (Katpadi Extn) (TP)' [whole town]
+33,623,05841,803758,,Tamil Nadu,195,1.0,ECI Delimitation Order 2008: AC 195 Thiruparankundram extent names 'Harveypatti (TP)' [whole town]
+33,613,05769,803603,,Tamil Nadu,134,1.0,ECI Delimitation Order 2008: AC 134 Aravakurichi extent names 'TNPL Pugalur (TP)' [whole town]
+33,604,05704,803352,0001,Tamil Nadu,30,1.0,ECI Delimitation Order 2008: AC 30 Pallavaram extent names 'Meenambakkam (TP)' [ward rows: code also carries OG wards]
+33,604,05704,803352,0002,Tamil Nadu,30,1.0,ECI Delimitation Order 2008: AC 30 Pallavaram extent names 'Meenambakkam (TP)' [ward rows: code also carries OG wards]
+33,604,05704,803352,0003,Tamil Nadu,30,1.0,ECI Delimitation Order 2008: AC 30 Pallavaram extent names 'Meenambakkam (TP)' [ward rows: code also carries OG wards]
+33,604,05704,803352,0004,Tamil Nadu,30,1.0,ECI Delimitation Order 2008: AC 30 Pallavaram extent names 'Meenambakkam (TP)' [ward rows: code also carries OG wards]
+33,604,05704,803352,0005,Tamil Nadu,30,1.0,ECI Delimitation Order 2008: AC 30 Pallavaram extent names 'Meenambakkam (TP)' [ward rows: code also carries OG wards]
+33,604,05704,803352,0006,Tamil Nadu,30,1.0,ECI Delimitation Order 2008: AC 30 Pallavaram extent names 'Meenambakkam (TP)' [ward rows: code also carries OG wards]
+33,604,05704,803352,0007,Tamil Nadu,30,1.0,ECI Delimitation Order 2008: AC 30 Pallavaram extent names 'Meenambakkam (TP)' [ward rows: code also carries OG wards]
+33,604,05704,803352,0008,Tamil Nadu,30,1.0,ECI Delimitation Order 2008: AC 30 Pallavaram extent names 'Meenambakkam (TP)' [ward rows: code also carries OG wards]
+33,604,05704,803352,0009,Tamil Nadu,30,1.0,ECI Delimitation Order 2008: AC 30 Pallavaram extent names 'Meenambakkam (TP)' [ward rows: code also carries OG wards]
+33,604,05704,803352,0010,Tamil Nadu,30,1.0,ECI Delimitation Order 2008: AC 30 Pallavaram extent names 'Meenambakkam (TP)' [ward rows: code also carries OG wards]
+33,604,05704,803352,0011,Tamil Nadu,30,1.0,ECI Delimitation Order 2008: AC 30 Pallavaram extent names 'Meenambakkam (TP)' [ward rows: code also carries OG wards]
+33,604,05704,803352,0012,Tamil Nadu,30,1.0,ECI Delimitation Order 2008: AC 30 Pallavaram extent names 'Meenambakkam (TP)' [ward rows: code also carries OG wards]
+32,594,05653,803279,,Kerala,63,1.0,ECI Delimitation Order 2008: AC 63 Guruvayoor extent names 'Chavakkad Municipality' [whole town]
+32,599,05682,803304,,Kerala,113,1.0,ECI Delimitation Order 2008: AC 113 Aranmula extent names 'Pathanamthitta Municipality' [whole town]
+32,600,05688,803308,,Kerala,126,1.0,ECI Delimitation Order 2008: AC 126 Chathannoor extent names 'Paravoor Municipality' (Kollam dist.; not North Paravur) [whole town]
+32,589,05634,803262,,Kerala,14,1.0,ECI Delimitation Order 2008: AC 14 Kuthuparamba extent names 'Kuthuparamba Municipality' [whole town]
+32,593,05650,803276,,Kerala,58,1.0,ECI Delimitation Order 2008: AC 58 Chittur extent names 'Chittur-Thathamangalam Municipality' [whole town]
+32,597,05668,803294,,Kerala,93,1.0,ECI Delimitation Order 2008: AC 93 Pala extent names 'Pala Municipality' [whole town]
+34,637,05914,804040,0001,Puducherry,26,1.0,"ECI Delimitation Order 2008: Karaikal Municipality Ward Nos.1-5,8,9 -> AC 26 Karaikal North; 6,7,10-17 -> AC 27 Karaikal South; 18 -> AC 28 Neravy-T.R.Pattinam; census has the same 18 wards, joined by ward number"
+34,637,05914,804040,0002,Puducherry,26,1.0,"ECI Delimitation Order 2008: Karaikal Municipality Ward Nos.1-5,8,9 -> AC 26 Karaikal North; 6,7,10-17 -> AC 27 Karaikal South; 18 -> AC 28 Neravy-T.R.Pattinam; census has the same 18 wards, joined by ward number"
+34,637,05914,804040,0003,Puducherry,26,1.0,"ECI Delimitation Order 2008: Karaikal Municipality Ward Nos.1-5,8,9 -> AC 26 Karaikal North; 6,7,10-17 -> AC 27 Karaikal South; 18 -> AC 28 Neravy-T.R.Pattinam; census has the same 18 wards, joined by ward number"
+34,637,05914,804040,0004,Puducherry,26,1.0,"ECI Delimitation Order 2008: Karaikal Municipality Ward Nos.1-5,8,9 -> AC 26 Karaikal North; 6,7,10-17 -> AC 27 Karaikal South; 18 -> AC 28 Neravy-T.R.Pattinam; census has the same 18 wards, joined by ward number"
+34,637,05914,804040,0005,Puducherry,26,1.0,"ECI Delimitation Order 2008: Karaikal Municipality Ward Nos.1-5,8,9 -> AC 26 Karaikal North; 6,7,10-17 -> AC 27 Karaikal South; 18 -> AC 28 Neravy-T.R.Pattinam; census has the same 18 wards, joined by ward number"
+34,637,05914,804040,0006,Puducherry,27,1.0,"ECI Delimitation Order 2008: Karaikal Municipality Ward Nos.1-5,8,9 -> AC 26 Karaikal North; 6,7,10-17 -> AC 27 Karaikal South; 18 -> AC 28 Neravy-T.R.Pattinam; census has the same 18 wards, joined by ward number"
+34,637,05914,804040,0007,Puducherry,27,1.0,"ECI Delimitation Order 2008: Karaikal Municipality Ward Nos.1-5,8,9 -> AC 26 Karaikal North; 6,7,10-17 -> AC 27 Karaikal South; 18 -> AC 28 Neravy-T.R.Pattinam; census has the same 18 wards, joined by ward number"
+34,637,05914,804040,0008,Puducherry,26,1.0,"ECI Delimitation Order 2008: Karaikal Municipality Ward Nos.1-5,8,9 -> AC 26 Karaikal North; 6,7,10-17 -> AC 27 Karaikal South; 18 -> AC 28 Neravy-T.R.Pattinam; census has the same 18 wards, joined by ward number"
+34,637,05914,804040,0009,Puducherry,26,1.0,"ECI Delimitation Order 2008: Karaikal Municipality Ward Nos.1-5,8,9 -> AC 26 Karaikal North; 6,7,10-17 -> AC 27 Karaikal South; 18 -> AC 28 Neravy-T.R.Pattinam; census has the same 18 wards, joined by ward number"
+34,637,05914,804040,0010,Puducherry,27,1.0,"ECI Delimitation Order 2008: Karaikal Municipality Ward Nos.1-5,8,9 -> AC 26 Karaikal North; 6,7,10-17 -> AC 27 Karaikal South; 18 -> AC 28 Neravy-T.R.Pattinam; census has the same 18 wards, joined by ward number"
+34,637,05914,804040,0011,Puducherry,27,1.0,"ECI Delimitation Order 2008: Karaikal Municipality Ward Nos.1-5,8,9 -> AC 26 Karaikal North; 6,7,10-17 -> AC 27 Karaikal South; 18 -> AC 28 Neravy-T.R.Pattinam; census has the same 18 wards, joined by ward number"
+34,637,05914,804040,0012,Puducherry,27,1.0,"ECI Delimitation Order 2008: Karaikal Municipality Ward Nos.1-5,8,9 -> AC 26 Karaikal North; 6,7,10-17 -> AC 27 Karaikal South; 18 -> AC 28 Neravy-T.R.Pattinam; census has the same 18 wards, joined by ward number"
+34,637,05914,804040,0013,Puducherry,27,1.0,"ECI Delimitation Order 2008: Karaikal Municipality Ward Nos.1-5,8,9 -> AC 26 Karaikal North; 6,7,10-17 -> AC 27 Karaikal South; 18 -> AC 28 Neravy-T.R.Pattinam; census has the same 18 wards, joined by ward number"
+34,637,05914,804040,0014,Puducherry,27,1.0,"ECI Delimitation Order 2008: Karaikal Municipality Ward Nos.1-5,8,9 -> AC 26 Karaikal North; 6,7,10-17 -> AC 27 Karaikal South; 18 -> AC 28 Neravy-T.R.Pattinam; census has the same 18 wards, joined by ward number"
+34,637,05914,804040,0015,Puducherry,27,1.0,"ECI Delimitation Order 2008: Karaikal Municipality Ward Nos.1-5,8,9 -> AC 26 Karaikal North; 6,7,10-17 -> AC 27 Karaikal South; 18 -> AC 28 Neravy-T.R.Pattinam; census has the same 18 wards, joined by ward number"
+34,637,05914,804040,0016,Puducherry,27,1.0,"ECI Delimitation Order 2008: Karaikal Municipality Ward Nos.1-5,8,9 -> AC 26 Karaikal North; 6,7,10-17 -> AC 27 Karaikal South; 18 -> AC 28 Neravy-T.R.Pattinam; census has the same 18 wards, joined by ward number"
+34,637,05914,804040,0017,Puducherry,27,1.0,"ECI Delimitation Order 2008: Karaikal Municipality Ward Nos.1-5,8,9 -> AC 26 Karaikal North; 6,7,10-17 -> AC 27 Karaikal South; 18 -> AC 28 Neravy-T.R.Pattinam; census has the same 18 wards, joined by ward number"
+34,637,05914,804040,0018,Puducherry,28,1.0,"ECI Delimitation Order 2008: Karaikal Municipality Ward Nos.1-5,8,9 -> AC 26 Karaikal North; 6,7,10-17 -> AC 27 Karaikal South; 18 -> AC 28 Neravy-T.R.Pattinam; census has the same 18 wards, joined by ward number"
+34,635,05911,804038,0001,Puducherry,3,1.0,"ECI Delimitation Order 2008: AC 3 Oussudu extent names 'Kurumbapet Gram Panchayat (Part) - Ward Nos.1 to 4'; census 2011 has 7 GP wards, so wards 1-4 joined by number to AC 3 and wards 5-7 (not in the order) placed in AC 4 Mangalam, which the order gives the GP's other three named parts (Ariyapalayam, Kottamedu, Kanuvapet OGs) - inferred; Oussudu electors/pop 0.90x state median with wards 1-4 vs 0.76x with all 7"
+34,635,05911,804038,0002,Puducherry,3,1.0,"ECI Delimitation Order 2008: AC 3 Oussudu extent names 'Kurumbapet Gram Panchayat (Part) - Ward Nos.1 to 4'; census 2011 has 7 GP wards, so wards 1-4 joined by number to AC 3 and wards 5-7 (not in the order) placed in AC 4 Mangalam, which the order gives the GP's other three named parts (Ariyapalayam, Kottamedu, Kanuvapet OGs) - inferred; Oussudu electors/pop 0.90x state median with wards 1-4 vs 0.76x with all 7"
+34,635,05911,804038,0003,Puducherry,3,1.0,"ECI Delimitation Order 2008: AC 3 Oussudu extent names 'Kurumbapet Gram Panchayat (Part) - Ward Nos.1 to 4'; census 2011 has 7 GP wards, so wards 1-4 joined by number to AC 3 and wards 5-7 (not in the order) placed in AC 4 Mangalam, which the order gives the GP's other three named parts (Ariyapalayam, Kottamedu, Kanuvapet OGs) - inferred; Oussudu electors/pop 0.90x state median with wards 1-4 vs 0.76x with all 7"
+34,635,05911,804038,0004,Puducherry,3,1.0,"ECI Delimitation Order 2008: AC 3 Oussudu extent names 'Kurumbapet Gram Panchayat (Part) - Ward Nos.1 to 4'; census 2011 has 7 GP wards, so wards 1-4 joined by number to AC 3 and wards 5-7 (not in the order) placed in AC 4 Mangalam, which the order gives the GP's other three named parts (Ariyapalayam, Kottamedu, Kanuvapet OGs) - inferred; Oussudu electors/pop 0.90x state median with wards 1-4 vs 0.76x with all 7"
+34,635,05911,804038,0005,Puducherry,4,1.0,"ECI Delimitation Order 2008: AC 3 Oussudu extent names 'Kurumbapet Gram Panchayat (Part) - Ward Nos.1 to 4'; census 2011 has 7 GP wards, so wards 1-4 joined by number to AC 3 and wards 5-7 (not in the order) placed in AC 4 Mangalam, which the order gives the GP's other three named parts (Ariyapalayam, Kottamedu, Kanuvapet OGs) - inferred; Oussudu electors/pop 0.90x state median with wards 1-4 vs 0.76x with all 7"
+34,635,05911,804038,0006,Puducherry,4,1.0,"ECI Delimitation Order 2008: AC 3 Oussudu extent names 'Kurumbapet Gram Panchayat (Part) - Ward Nos.1 to 4'; census 2011 has 7 GP wards, so wards 1-4 joined by number to AC 3 and wards 5-7 (not in the order) placed in AC 4 Mangalam, which the order gives the GP's other three named parts (Ariyapalayam, Kottamedu, Kanuvapet OGs) - inferred; Oussudu electors/pop 0.90x state median with wards 1-4 vs 0.76x with all 7"
+34,635,05911,804038,0007,Puducherry,4,1.0,"ECI Delimitation Order 2008: AC 3 Oussudu extent names 'Kurumbapet Gram Panchayat (Part) - Ward Nos.1 to 4'; census 2011 has 7 GP wards, so wards 1-4 joined by number to AC 3 and wards 5-7 (not in the order) placed in AC 4 Mangalam, which the order gives the GP's other three named parts (Ariyapalayam, Kottamedu, Kanuvapet OGs) - inferred; Oussudu electors/pop 0.90x state median with wards 1-4 vs 0.76x with all 7"
+28,536,04499,802919,,Telangana,71,1.0,ECI Delimitation Order 2008: AC 71 Secunderabad Cantt. extent names 'Secunderabad Cantonment Board' [whole town]
+09,177,00905,801108,,Uttar Pradesh,275,1.0,ECI Delimitation Order 2008: AC 275 Ayodhya extent names 'Faizabad MB & Ayodhya MB' (census 2011 Faizabad NPP = Faizabad MB; Ayodhya NPP 801109 is a separate census town that LGD already places in AC 275) [whole town]
+09,177,00905,801107,,Uttar Pradesh,275,1.0,ECI Delimitation Order 2008: AC 275 Ayodhya extent names 'Faizabad CB' [whole town]
+09,145,00764,800795,,Uttar Pradesh,84,1.0,ECI Delimitation Order 2008: AC 84 Mathura extent names 'Vrindaban MB' [whole town]
+09,137,00729,800700,,Uttar Pradesh,39,1.0,ECI Delimitation Order 2008: AC 39 Dhanaura (SC) = whole 1-Dhanaura Tehsil (Gajraula's census subdistrict); LGD ULB 'Gajralua' wards -> Dhanaura [whole town]
+09,200,01006,801255,,Uttar Pradesh,402,1.0,ECI Delimitation Order 2008: AC 402 Obra takes Renukoot NP and PCs incl. 11-Murdhawa of 1-Pipri KC (Duddhi Tehsil) where the Hindalco township lies; LGD ULB 'Hindalco Industries Ltd. Renukoot' -> Obra [whole town]
+09,200,01006,801256,,Uttar Pradesh,402,1.0,ECI Delimitation Order 2008: AC 402 Obra takes Renukoot NP and the Renukoot PCs of 1-Pipri KC (Duddhi Tehsil); township adjoins Renukoot like the Hindalco ITS - inferred [whole town]
+09,175,00890,801087,0001,Uttar Pradesh,261,1.0,"ECI Delimitation Order 2008: Allahabad (CB) Ward Nos.1-4 -> AC 261 Allahabad West, 5-6 -> AC 262 Allahabad North, 7 -> AC 263 Allahabad South; census CB has the same 7 wards, joined by ward number"
+09,175,00890,801087,0002,Uttar Pradesh,261,1.0,"ECI Delimitation Order 2008: Allahabad (CB) Ward Nos.1-4 -> AC 261 Allahabad West, 5-6 -> AC 262 Allahabad North, 7 -> AC 263 Allahabad South; census CB has the same 7 wards, joined by ward number"
+09,175,00890,801087,0003,Uttar Pradesh,261,1.0,"ECI Delimitation Order 2008: Allahabad (CB) Ward Nos.1-4 -> AC 261 Allahabad West, 5-6 -> AC 262 Allahabad North, 7 -> AC 263 Allahabad South; census CB has the same 7 wards, joined by ward number"
+09,175,00890,801087,0004,Uttar Pradesh,261,1.0,"ECI Delimitation Order 2008: Allahabad (CB) Ward Nos.1-4 -> AC 261 Allahabad West, 5-6 -> AC 262 Allahabad North, 7 -> AC 263 Allahabad South; census CB has the same 7 wards, joined by ward number"
+09,175,00890,801087,0005,Uttar Pradesh,262,1.0,"ECI Delimitation Order 2008: Allahabad (CB) Ward Nos.1-4 -> AC 261 Allahabad West, 5-6 -> AC 262 Allahabad North, 7 -> AC 263 Allahabad South; census CB has the same 7 wards, joined by ward number"
+09,175,00890,801087,0006,Uttar Pradesh,262,1.0,"ECI Delimitation Order 2008: Allahabad (CB) Ward Nos.1-4 -> AC 261 Allahabad West, 5-6 -> AC 262 Allahabad North, 7 -> AC 263 Allahabad South; census CB has the same 7 wards, joined by ward number"
+09,175,00890,801087,0007,Uttar Pradesh,263,1.0,"ECI Delimitation Order 2008: Allahabad (CB) Ward Nos.1-4 -> AC 261 Allahabad West, 5-6 -> AC 262 Allahabad North, 7 -> AC 263 Allahabad South; census CB has the same 7 wards, joined by ward number"
+09,196,00993,801228,,Uttar Pradesh,380,1.0,ECI Delimitation Order 2008: AC 380 Mughalsarai extent names 'Mughalsarai Rly. Settelement NP' [whole town]
+09,159,00832,800969,,Uttar Pradesh,194,1.0,ECI Delimitation Order 2008: AC 194 Farrukhabad extent names 'Fatehgarh (CB)' [whole town]
+09,197,00996,801234,,Uttar Pradesh,386,1.0,ECI Delimitation Order 2008: AC 386 Shivpur extent names 'Maruadih Rly. Settlement (ITS)' [whole town]
+09,185,00938,801146,,Uttar Pradesh,307,1.0,"LGD ULB 'Babhnan Bazar' (name variant) wards -> Harraiya; ECI Delimitation Order 2008: AC 307 Harraiya takes KCs 1,2,3,7,8 of 1-Harraiya Tehsil (town not named) [whole town]"
+09,175,00889,801084,,Uttar Pradesh,256,1.0,ECI Delimitation Order 2008: AC 256 Phulpur extent names 'Jhusi Kohna (CT)' (became Jhusi NP) [whole town]
+09,152,00795,800888,,Uttar Pradesh,135,1.0,ECI Delimitation Order 2008: AC 135 Shahjahanpur extent names 'Rly. Settlement Roza NP' [whole town]
+09,194,00984,801216,,Uttar Pradesh,371,1.0,ECI Delimitation Order 2008: AC 371 Zafrabad takes KC 1-Zafrabad of 4-Jaunpur Tehsil & Zafrabad NP; LGD ULB 'Zafrabad' wards -> Zafrabad [whole town]
+23,444,03581,802313,,Madhya Pradesh,155,1.0,"ECI Delimitation Order 2008: Kolar (M) was not a 2001 town; it lies in Huzur tehsil south of Bhopal, whose non-city RI circles (Ratibad, Phanda Kalan, Bilkhiria Kalan) form AC 155 Huzur (Intkhedi RIC, the only other, is in Berasia; city ACs are Bhopal M Corp ward lists) - inferred [whole town]"
+23,421,03399,802101,,Madhya Pradesh,14,1.0,ECI Delimitation Order 2008: AC 14 Gwalior Rural extent names 'Morar Cantt. (CB)' [whole town]
+23,427,03449,802160,,Madhya Pradesh,40,1.0,ECI Delimitation Order 2008: AC 40 Naryoli extent names 'Sagar Cantt (CB)' [whole town]
+23,449,03618,802350,,Madhya Pradesh,139,1.0,ECI Delimitation Order 2008: AC 139 Pipariya (SC) = whole Pipariya Tehsil (census subdistrict of Pachmarhi Cantt) [whole town]
+27,521,04194,802815,,Maharashtra,209,1.0,ECI Delimitation Order 2008: AC 209 Shivajinagar extent names 'Khadki Cantonment' (= Kirkee CB) [whole town]
+27,516,04152,802777,,Maharashtra,126,1.0,ECI Delimitation Order 2008: AC 126 Deolali extent names 'Deolali (CB)' [whole town]
+27,521,04193,802812,,Maharashtra,204,1.0,ECI Delimitation Order 2008: AC 204 Maval extent names 'Dehu Road Cantonment' [whole town]
+03,043,00235,800208,,Punjab,76,1.0,ECI Delimitation Order 2008: AC 76 Firozpur City extent names 'Firozpur Cantt. (CB)' [whole town]
+03,052,00266,800264,,Punjab,52,1.0,"ECI Delimitation Order 2008: AC 52 Kharar takes KCs Khizarabad, Majri, Mullanpur Garib Dass, Kurali, Kharar of Kharar Tehsil (Naya Gaon NP is in Majri, Kharar tehsil; AC 53 S.A.S.Nagar = Mohali tehsil only); LGD's S.A.S.Nagar tag for today's council not used [whole town]"
+03,043,00234,800206,,Punjab,75,1.0,ECI Delimitation Order 2008: AC 75 Zira = whole Zira Tehsil; LGD ULB 'Mallanwala' wards -> Zira [whole town]
+03,049,00256,800250,,Punjab,16,1.0,ECI Delimitation Order 2008: AC 16 Amritsar West extent names 'Amritsar Cantt. (CB)' [whole town]
+06,086,00416,800427,,Haryana,75,1.0,ECI Delimitation Order 2008: AC 75 Pataudi (SC) takes the whole Pataudi Tehsil (Hailey Mandi's census subdistrict) [whole town]
+24,478,03822,802523,,Gujarat,83,1.0,ECI Delimitation Order 2008: AC 83 Porbandar extent names 'Chhaya (M)' [whole town]
+24,482,03864,802564,,Gujarat,112,1.0,ECI Delimitation Order 2008: AC 112 Anand extent names 'Karamsad (M)' [whole town]
+24,482,03864,802563,,Gujarat,112,1.0,ECI Delimitation Order 2008: AC 112 Anand extent names 'Vallabh Vidyanagar (M)' [whole town]
+24,482,03864,802565,,Gujarat,112,1.0,ECI Delimitation Order 2008: AC 112 Anand extent names 'Vithal Udyognagar (INA)' [whole town]
+24,492,03938,802633,,Gujarat,168,1.0,ECI Delimitation Order 2008: AC 168 Choryasi extent names village 'Kansad' (Choryasi Taluka) [whole town]
+24,473,03775,802478,,Gujarat,36,1.0,ECI Delimitation Order 2008: AC 36 Gandhinagar North extent names village 'Pethapur' [whole town]
+24,477,03814,802515,,Gujarat,77,1.0,ECI Delimitation Order 2008: AC 77 Jamnagar Rural extent names village 'Moti Khavdi' (site of the Reliance complex) [whole town]
+24,477,03814,802514,,Gujarat,77,1.0,ECI Delimitation Order 2008: AC 77 Jamnagar Rural extent names village 'Moti Khavdi' and 'Sikka (CT)' [whole town]
+24,492,03938,802630,,Gujarat,168,1.0,ECI Delimitation Order 2008: AC 168 Choryasi extent names 'Hajira (INA)' [whole town]
+24,492,03938,802632,,Gujarat,168,1.0,ECI Delimitation Order 2008: AC 168 Choryasi extent names 'Sachin (INA)' [whole town]
+24,492,03938,802631,,Gujarat,168,1.0,ECI Delimitation Order 2008: AC 168 Choryasi extent names village 'Magdalla' [whole town]
+24,486,03898,802593,,Gujarat,136,1.0,ECI Delimitation Order 2008: AC 136 Vaghodia extent names 'Nandesari (INA)' [whole town]
+24,486,03898,802594,,Gujarat,136,1.0,ECI Delimitation Order 2008: AC 136 Vaghodia extent names 'Petro-Chemical Complex (INA)' [whole town]
+24,486,03898,802595,,Gujarat,136,1.0,ECI Delimitation Order 2008: AC 136 Vaghodia extent names 'GSFC Complex (INA)' [whole town]
+24,486,03898,802597,,Gujarat,147,1.0,ECI Delimitation Order 2008: AC 147 Karjan extent names villages 'Por' and 'Raman Gamdi' [whole town]
+24,473,03773,802474,,Gujarat,38,1.0,ECI Delimitation Order 2008: AC 38 Kalol extent names 'Chhatral (INA)' [whole town]
+24,473,03773,802476,,Gujarat,38,1.0,ECI Delimitation Order 2008: AC 38 Kalol extent names 'Kalol (INA)' [whole town]
+24,488,03918,802610,,Gujarat,154,1.0,ECI Delimitation Order 2008: AC 154 Ankleshwar extent names village 'Panoli' [whole town]
+24,482,03867,802569,,Gujarat,109,1.0,ECI Delimitation Order 2008: AC 109 Borsad extent names 'Vasna Borsad (INA)' [whole town]
+05,068,00354,800358,,Uttarakhand,26,1.0,ECI Delimitation Order 2008: AC 26 B.H.E.L. Ranipur extent names 'B.H.E.L Ranipur N.A.C' [whole town]
+05,060,00304,800311,,Uttarakhand,18,1.0,ECI Delimitation Order 2008: AC 18 Dharampur extent names 'Claiment Town Cantonment' [whole town]
+05,060,00304,800308,,Uttarakhand,22,1.0,ECI Delimitation Order 2008: AC 22 Mussoorie extent names 'Landhaur Cantonment Board' [whole town]
+05,057,00287,800294,,Uttarakhand,6,1.0,ECI Delimitation Order 2008: AC 6 Karnprayag = whole 4-Karnprayag Tehsil (+ Gairsain); Gochar is in Karnaprayag tehsil [whole town]
+05,060,00305,800314,,Uttarakhand,24,1.0,ECI Delimitation Order 2008: AC 24 Rishikesh extent names 'Virbhadra (ITS)' [whole town]
+05,059,00294,800299,0001,Uttarakhand,10,1.0,ECI Delimitation Order 2008: AC 10 Deoprayag extent names 'Deoprayag NA'; both census parts (Tehri and Pauri sides) placed there [ward rows: town spans 2 subdistricts]
+05,059,00294,800299,0002,Uttarakhand,10,1.0,ECI Delimitation Order 2008: AC 10 Deoprayag extent names 'Deoprayag NA'; both census parts (Tehri and Pauri sides) placed there [ward rows: town spans 2 subdistricts]
+05,059,00294,800299,0003,Uttarakhand,10,1.0,ECI Delimitation Order 2008: AC 10 Deoprayag extent names 'Deoprayag NA'; both census parts (Tehri and Pauri sides) placed there [ward rows: town spans 2 subdistricts]
+05,061,00307,800299,0004,Uttarakhand,10,1.0,ECI Delimitation Order 2008: AC 10 Deoprayag extent names 'Deoprayag NA'; both census parts (Tehri and Pauri sides) placed there [ward rows: town spans 2 subdistricts]
+02,024,00099,800094,,Himachal Pradesh,18,1.0,ECI Delimitation Order 2008: AC 18 Dharamshala extent names 'Yol Cantonment Board' [whole town]
+02,031,00165,800129,,Himachal Pradesh,54,1.0,ECI Delimitation Order 2008: AC 54 Kasauli extent names 'Sapathu Cantonment Board' (= Sabathu) [whole town]
+02,031,00165,800127,,Himachal Pradesh,54,1.0,ECI Delimitation Order 2008: AC 54 Kasauli extent names 'Dagshai Cantonment Board' [whole town]
+02,033,00181,800136,,Himachal Pradesh,64,1.0,ECI Delimitation Order 2008: AC 64 Shimla Rural extent names 'Jutog Cantonment Board' [whole town]
+08,127,00667,800610,,Rajasthan,191,1.0,ECI Delimitation Order 2008: AC 191 Ladpura extent names 'ILRC Kaithoon including Municipal Board Kaithoon' [whole town]
+21,372,02788,801811,0001,Odisha,17,1.0,ECI Delimitation Order 2008: AC 17 Sambalpur extent names 'Burla (NAC)' [ward rows: code also carries OG wards]
+21,372,02788,801811,0002,Odisha,17,1.0,ECI Delimitation Order 2008: AC 17 Sambalpur extent names 'Burla (NAC)' [ward rows: code also carries OG wards]
+21,372,02788,801811,0003,Odisha,17,1.0,ECI Delimitation Order 2008: AC 17 Sambalpur extent names 'Burla (NAC)' [ward rows: code also carries OG wards]
+21,372,02788,801811,0004,Odisha,17,1.0,ECI Delimitation Order 2008: AC 17 Sambalpur extent names 'Burla (NAC)' [ward rows: code also carries OG wards]
+21,372,02788,801811,0005,Odisha,17,1.0,ECI Delimitation Order 2008: AC 17 Sambalpur extent names 'Burla (NAC)' [ward rows: code also carries OG wards]
+21,372,02788,801811,0006,Odisha,17,1.0,ECI Delimitation Order 2008: AC 17 Sambalpur extent names 'Burla (NAC)' [ward rows: code also carries OG wards]
+21,372,02788,801811,0007,Odisha,17,1.0,ECI Delimitation Order 2008: AC 17 Sambalpur extent names 'Burla (NAC)' [ward rows: code also carries OG wards]
+21,372,02788,801811,0008,Odisha,17,1.0,ECI Delimitation Order 2008: AC 17 Sambalpur extent names 'Burla (NAC)' [ward rows: code also carries OG wards]
+21,372,02788,801811,0009,Odisha,17,1.0,ECI Delimitation Order 2008: AC 17 Sambalpur extent names 'Burla (NAC)' [ward rows: code also carries OG wards]
+21,372,02788,801811,0010,Odisha,17,1.0,ECI Delimitation Order 2008: AC 17 Sambalpur extent names 'Burla (NAC)' [ward rows: code also carries OG wards]
+21,372,02788,801811,0011,Odisha,17,1.0,ECI Delimitation Order 2008: AC 17 Sambalpur extent names 'Burla (NAC)' [ward rows: code also carries OG wards]
+21,372,02788,801811,0012,Odisha,17,1.0,ECI Delimitation Order 2008: AC 17 Sambalpur extent names 'Burla (NAC)' [ward rows: code also carries OG wards]
+21,372,02788,801811,0013,Odisha,17,1.0,ECI Delimitation Order 2008: AC 17 Sambalpur extent names 'Burla (NAC)' [ward rows: code also carries OG wards]
+21,372,02788,801811,0014,Odisha,17,1.0,ECI Delimitation Order 2008: AC 17 Sambalpur extent names 'Burla (NAC)' [ward rows: code also carries OG wards]
+21,372,02788,801811,0015,Odisha,17,1.0,ECI Delimitation Order 2008: AC 17 Sambalpur extent names 'Burla (NAC)' [ward rows: code also carries OG wards]
+21,372,02787,801810,,Odisha,17,1.0,ECI Delimitation Order 2008: AC 17 Sambalpur extent names 'Hirakud (NAC)' [whole town]
+21,374,02814,801817,,Odisha,13,1.0,ECI Delimitation Order 2008: AC 13 Rajgangpur extent names 'Rajgangpur (M) including OCL Industrial Township' [whole town]
+22,406,03295,801976,,Chhattisgarh,29,1.0,ECI Delimitation Order 2008: AC 29 Bilha extent names '23-Tifra PC' of Bilaspur RIC [whole town]
+22,406,03295,801977,,Chhattisgarh,29,1.0,ECI Delimitation Order 2008: Sirgitti adjoins Tifra; AC 29 Bilha takes the Tifra PC of Bilaspur RIC (AC 30 Bilaspur is only M Corp wards; Beltara/Masturi take other named PCs) - inferred [whole town]
+22,401,03242,801924,,Chhattisgarh,4,1.0,ECI Delimitation Order 2008: AC 4 Premnagar extent names 'Surajpur R.I.Circle (Including Vishrampur CT)'; LGD ULB 'Vishrampur' wards -> Premnagar [whole town]
+10,226,01360,801359,,Bihar,164,1.0,ECI Delimitation Order 2008: AC 164 Tarapur extent names 'Kharagpur (NA)' [whole town]
+29,565,05498,803110,,Karnataka,90,1.0,ECI Delimitation Order 2008: AC 90 Vijayanagara extent names 'Kamalapura TP' [whole town]
+29,555,05438,803034,,Karnataka,11,1.0,ECI Delimitation Order 2008: AC 11 Belgaum Uttar extent names 'Belgaum (CB)' [whole town]
+29,555,05436,803029,,Karnataka,9,1.0,ECI Delimitation Order 2008: AC 9 Gokak extent names 'Gokak Falls NAC' [whole town]
+11,242,01550,801418,,Sikkim,8,1.0,ECI Delimitation Order 2008: AC 8 Salghari-Zoom extent names 'Nayabazar (NTA)' [whole town]
+19,337,99999,801717,,West Bengal,116,1.0,"ECI Delimitation Order 2008: AC 116 Bidhannagar = Bidhannagar (M) (+ South Dum Dum wards); Nabadiganta (Salt Lake Sector V) lies inside the Salt Lake area - inferred, not named [whole town]"
+18,301,02009,801551,,Assam,27,1.0,ECI 2008 compilation reprint of the 1976 order (deferred state): AC 27 Bilasipara East extent names 'Bilasipara town committee' [whole town]
+18,300,02004,801547,,Assam,30,1.0,ECI 2008 compilation reprint of the 1976 order (deferred state): AC 30 Kokrajhar East extent names 'Kokrajhar municipality' [whole town]
+18,305,02040,801569,,Assam,91,1.0,ECI 2008 compilation reprint of the 1976 order (deferred state): AC 91 Hojai extent names 'Lanka mouza in Lanka thana' (AC 92 Lumding takes only Kaki (part) mouza); NB LGD's ward map (2023-map PC Kaziranga) puts 'Lanka Mb' in Lumding - not used for the 1976 ACs [whole town]
+18,301,02010,801552,,Assam,27,1.0,ECI 2008 compilation reprint of the 1976 order (deferred state): AC 27 Bilasipara East = Bilasipara thana excluding Appendix items 9/10 (Chapar not listed there) - inferred; LGD (2023 map) also puts Chapar TC in Bilasipara East [whole town]
+12,250,01634,801432,,Arunachal Pradesh,31,0.5,"ECI 2008 compilation reprint of the 1976 order (deferred state): AC 31 Along East names '(1) Along Town' but AC 30 Along West lists the town's colonies (Vivek Nagar, P.I. Colony) and adjoining villages; single census ward split evenly - AE 2009 electors of the two ACs less the rural population each holds (villages re-read from the order, not LGD) imply an equal share (~13.8k each) [whole town]"
+12,250,01634,801432,,Arunachal Pradesh,30,0.5,"ECI 2008 compilation reprint of the 1976 order (deferred state): AC 31 Along East names '(1) Along Town' but AC 30 Along West lists the town's colonies (Vivek Nagar, P.I. Colony) and adjoining villages; single census ward split evenly - AE 2009 electors of the two ACs less the rural population each holds (villages re-read from the order, not LGD) imply an equal share (~13.8k each) [whole town]"
+12,247,01584,801427,,Arunachal Pradesh,10,1.0,ECI 2008 compilation reprint of the 1976 order (deferred state): AC 10 Seppa East extent names 'Seppa HQ' and the Seppa road settlements (single census ward) [whole town]
+12,254,01686,801441,,Arunachal Pradesh,55,1.0,ECI 2008 compilation reprint of the 1976 order (deferred state): AC 55 Khonsa East extent names 'Khonsa HQ' (single census ward) [whole town]
+12,253,01671,801437,,Arunachal Pradesh,53,1.0,ECI 2008 compilation reprint of the 1976 order (deferred state): AC 53 Changlang North extent names 'Changlang HQ' (single census ward) [whole town]
+14,276,01877,801478,0001,Manipur,35,1.0,"LGD ULB 'Wangjing Lamding' ward->AC (Manipur ACs unchanged since 1976): wards 1-3 -> AC 35 Khangabok, 4-9 -> AC 34 Wangjing Tentha; census has the same 9 wards; ECI 2008 compilation reprint of the 1976 order (deferred state) names 'Wangjing (including town portion)' in AC 34"
+14,276,01877,801478,0002,Manipur,35,1.0,"LGD ULB 'Wangjing Lamding' ward->AC (Manipur ACs unchanged since 1976): wards 1-3 -> AC 35 Khangabok, 4-9 -> AC 34 Wangjing Tentha; census has the same 9 wards; ECI 2008 compilation reprint of the 1976 order (deferred state) names 'Wangjing (including town portion)' in AC 34"
+14,276,01877,801478,0003,Manipur,35,1.0,"LGD ULB 'Wangjing Lamding' ward->AC (Manipur ACs unchanged since 1976): wards 1-3 -> AC 35 Khangabok, 4-9 -> AC 34 Wangjing Tentha; census has the same 9 wards; ECI 2008 compilation reprint of the 1976 order (deferred state) names 'Wangjing (including town portion)' in AC 34"
+14,276,01877,801478,0004,Manipur,34,1.0,"LGD ULB 'Wangjing Lamding' ward->AC (Manipur ACs unchanged since 1976): wards 1-3 -> AC 35 Khangabok, 4-9 -> AC 34 Wangjing Tentha; census has the same 9 wards; ECI 2008 compilation reprint of the 1976 order (deferred state) names 'Wangjing (including town portion)' in AC 34"
+14,276,01877,801478,0005,Manipur,34,1.0,"LGD ULB 'Wangjing Lamding' ward->AC (Manipur ACs unchanged since 1976): wards 1-3 -> AC 35 Khangabok, 4-9 -> AC 34 Wangjing Tentha; census has the same 9 wards; ECI 2008 compilation reprint of the 1976 order (deferred state) names 'Wangjing (including town portion)' in AC 34"
+14,276,01877,801478,0006,Manipur,34,1.0,"LGD ULB 'Wangjing Lamding' ward->AC (Manipur ACs unchanged since 1976): wards 1-3 -> AC 35 Khangabok, 4-9 -> AC 34 Wangjing Tentha; census has the same 9 wards; ECI 2008 compilation reprint of the 1976 order (deferred state) names 'Wangjing (including town portion)' in AC 34"
+14,276,01877,801478,0007,Manipur,34,1.0,"LGD ULB 'Wangjing Lamding' ward->AC (Manipur ACs unchanged since 1976): wards 1-3 -> AC 35 Khangabok, 4-9 -> AC 34 Wangjing Tentha; census has the same 9 wards; ECI 2008 compilation reprint of the 1976 order (deferred state) names 'Wangjing (including town portion)' in AC 34"
+14,276,01877,801478,0008,Manipur,34,1.0,"LGD ULB 'Wangjing Lamding' ward->AC (Manipur ACs unchanged since 1976): wards 1-3 -> AC 35 Khangabok, 4-9 -> AC 34 Wangjing Tentha; census has the same 9 wards; ECI 2008 compilation reprint of the 1976 order (deferred state) names 'Wangjing (including town portion)' in AC 34"
+14,276,01877,801478,0009,Manipur,34,1.0,"LGD ULB 'Wangjing Lamding' ward->AC (Manipur ACs unchanged since 1976): wards 1-3 -> AC 35 Khangabok, 4-9 -> AC 34 Wangjing Tentha; census has the same 9 wards; ECI 2008 compilation reprint of the 1976 order (deferred state) names 'Wangjing (including town portion)' in AC 34"
+14,276,01877,801480,,Manipur,33,1.0,LGD ULB 'Shikhong Sekmai' all 9 wards -> AC 33 Heirok (Manipur ACs unchanged since 1976) [whole town]
+14,277,01879,801486,,Manipur,16,1.0,LGD ULB 'Sekmai' all 9 wards -> AC 16 Sekmai (Manipur ACs unchanged since 1976) [whole town]
+14,277,01882,801490,,Manipur,22,1.0,LGD ULB 'Thongkhong Laxmi' all 11 wards -> AC 22 Wangoi (Manipur ACs unchanged since 1976) [whole town]
+14,276,01876,801488,0009,Manipur,30,1.0,"LGD ULB 'Samourou' ward->AC: wards 1-3 Langthabal (20), 3-8 Wangoi (22), 9-11 Lilong (30); census major part (Imphal West) = wards 1-8, minor part (Thoubal) = wards 9-12 -> Lilong, the Thoubal-side AC in ECI 2008 compilation reprint of the 1976 order (deferred state); ward 3 split evenly; NB LGD lists 11 wards vs census 12, so wards 1-8 rest on LGD numbering + the census district split"
+14,276,01876,801488,0010,Manipur,30,1.0,"LGD ULB 'Samourou' ward->AC: wards 1-3 Langthabal (20), 3-8 Wangoi (22), 9-11 Lilong (30); census major part (Imphal West) = wards 1-8, minor part (Thoubal) = wards 9-12 -> Lilong, the Thoubal-side AC in ECI 2008 compilation reprint of the 1976 order (deferred state); ward 3 split evenly; NB LGD lists 11 wards vs census 12, so wards 1-8 rest on LGD numbering + the census district split"
+14,276,01876,801488,0011,Manipur,30,1.0,"LGD ULB 'Samourou' ward->AC: wards 1-3 Langthabal (20), 3-8 Wangoi (22), 9-11 Lilong (30); census major part (Imphal West) = wards 1-8, minor part (Thoubal) = wards 9-12 -> Lilong, the Thoubal-side AC in ECI 2008 compilation reprint of the 1976 order (deferred state); ward 3 split evenly; NB LGD lists 11 wards vs census 12, so wards 1-8 rest on LGD numbering + the census district split"
+14,276,01876,801488,0012,Manipur,30,1.0,"LGD ULB 'Samourou' ward->AC: wards 1-3 Langthabal (20), 3-8 Wangoi (22), 9-11 Lilong (30); census major part (Imphal West) = wards 1-8, minor part (Thoubal) = wards 9-12 -> Lilong, the Thoubal-side AC in ECI 2008 compilation reprint of the 1976 order (deferred state); ward 3 split evenly; NB LGD lists 11 wards vs census 12, so wards 1-8 rest on LGD numbering + the census district split"
+14,277,01882,801488,0001,Manipur,20,1.0,"LGD ULB 'Samourou' ward->AC: wards 1-3 Langthabal (20), 3-8 Wangoi (22), 9-11 Lilong (30); census major part (Imphal West) = wards 1-8, minor part (Thoubal) = wards 9-12 -> Lilong, the Thoubal-side AC in ECI 2008 compilation reprint of the 1976 order (deferred state); ward 3 split evenly; NB LGD lists 11 wards vs census 12, so wards 1-8 rest on LGD numbering + the census district split"
+14,277,01882,801488,0002,Manipur,20,1.0,"LGD ULB 'Samourou' ward->AC: wards 1-3 Langthabal (20), 3-8 Wangoi (22), 9-11 Lilong (30); census major part (Imphal West) = wards 1-8, minor part (Thoubal) = wards 9-12 -> Lilong, the Thoubal-side AC in ECI 2008 compilation reprint of the 1976 order (deferred state); ward 3 split evenly; NB LGD lists 11 wards vs census 12, so wards 1-8 rest on LGD numbering + the census district split"
+14,277,01882,801488,0003,Manipur,20,0.5,"LGD ULB 'Samourou' ward->AC: wards 1-3 Langthabal (20), 3-8 Wangoi (22), 9-11 Lilong (30); census major part (Imphal West) = wards 1-8, minor part (Thoubal) = wards 9-12 -> Lilong, the Thoubal-side AC in ECI 2008 compilation reprint of the 1976 order (deferred state); ward 3 split evenly; NB LGD lists 11 wards vs census 12, so wards 1-8 rest on LGD numbering + the census district split"
+14,277,01882,801488,0003,Manipur,22,0.5,"LGD ULB 'Samourou' ward->AC: wards 1-3 Langthabal (20), 3-8 Wangoi (22), 9-11 Lilong (30); census major part (Imphal West) = wards 1-8, minor part (Thoubal) = wards 9-12 -> Lilong, the Thoubal-side AC in ECI 2008 compilation reprint of the 1976 order (deferred state); ward 3 split evenly; NB LGD lists 11 wards vs census 12, so wards 1-8 rest on LGD numbering + the census district split"
+14,277,01882,801488,0004,Manipur,22,1.0,"LGD ULB 'Samourou' ward->AC: wards 1-3 Langthabal (20), 3-8 Wangoi (22), 9-11 Lilong (30); census major part (Imphal West) = wards 1-8, minor part (Thoubal) = wards 9-12 -> Lilong, the Thoubal-side AC in ECI 2008 compilation reprint of the 1976 order (deferred state); ward 3 split evenly; NB LGD lists 11 wards vs census 12, so wards 1-8 rest on LGD numbering + the census district split"
+14,277,01882,801488,0005,Manipur,22,1.0,"LGD ULB 'Samourou' ward->AC: wards 1-3 Langthabal (20), 3-8 Wangoi (22), 9-11 Lilong (30); census major part (Imphal West) = wards 1-8, minor part (Thoubal) = wards 9-12 -> Lilong, the Thoubal-side AC in ECI 2008 compilation reprint of the 1976 order (deferred state); ward 3 split evenly; NB LGD lists 11 wards vs census 12, so wards 1-8 rest on LGD numbering + the census district split"
+14,277,01882,801488,0006,Manipur,22,1.0,"LGD ULB 'Samourou' ward->AC: wards 1-3 Langthabal (20), 3-8 Wangoi (22), 9-11 Lilong (30); census major part (Imphal West) = wards 1-8, minor part (Thoubal) = wards 9-12 -> Lilong, the Thoubal-side AC in ECI 2008 compilation reprint of the 1976 order (deferred state); ward 3 split evenly; NB LGD lists 11 wards vs census 12, so wards 1-8 rest on LGD numbering + the census district split"
+14,277,01882,801488,0007,Manipur,22,1.0,"LGD ULB 'Samourou' ward->AC: wards 1-3 Langthabal (20), 3-8 Wangoi (22), 9-11 Lilong (30); census major part (Imphal West) = wards 1-8, minor part (Thoubal) = wards 9-12 -> Lilong, the Thoubal-side AC in ECI 2008 compilation reprint of the 1976 order (deferred state); ward 3 split evenly; NB LGD lists 11 wards vs census 12, so wards 1-8 rest on LGD numbering + the census district split"
+14,277,01882,801488,0008,Manipur,22,1.0,"LGD ULB 'Samourou' ward->AC: wards 1-3 Langthabal (20), 3-8 Wangoi (22), 9-11 Lilong (30); census major part (Imphal West) = wards 1-8, minor part (Thoubal) = wards 9-12 -> Lilong, the Thoubal-side AC in ECI 2008 compilation reprint of the 1976 order (deferred state); ward 3 split evenly; NB LGD lists 11 wards vs census 12, so wards 1-8 rest on LGD numbering + the census district split"
+01,003,00010,800047,,Ladakh,48,1.0,ECI 2008 compilation Annexure (J&K 1995 order): AC 48 Leh takes PC 6-Leh (Khas) of Tehsil Leh [whole town]
+01,004,00013,800048,,Ladakh,49,1.0,ECI 2008 compilation Annexure (J&K 1995 order): AC 49 Kargil takes all PCs of Tehsil Kargil except a named list (town PC not excluded) [whole town]
+01,006,00022,800065,,Jammu & Kashmir,83,1.0,ECI 2008 compilation Annexure (J&K 1995 order): AC 83 Rajouri extent names '19-Rampur with NAC Rajouri' [whole town]
+01,021,00079,800072,,Jammu & Kashmir,71,1.0,"ECI 2008 compilation Annexure (J&K 1995 order): AC 71 Gandhinagar takes '30-Satwari in Tehsil Jammu' where Jammu Cantonment lies - inferred, the CB is not named [whole town]"
+01,010,00043,800014,,Jammu & Kashmir,24,1.0,ECI 2008 compilation Annexure (J&K 1995 order): AC 24 Sonawar extent names 'Badamibagh Cantonment' [whole town]
+01,015,00059,800041,,Jammu & Kashmir,39,1.0,"ECI 2008 compilation Annexure (J&K 1995 order): Quimoh (Qaimoh) is not named; it lies among PCs 10-Kujar, 12-Redwani and 14-Frisal of Tehsil Kulgam, all in AC 39 Home-shalibugh - inferred [whole town]"
+01,014,00054,800031,,Jammu & Kashmir,39,1.0,ECI 2008 compilation Annexure (J&K 1995 order): AC 39 Home-shalibugh extent names 'PC 13-Arwani' (Tehsil Kulgam in 1995) [whole town]
+01,015,00059,800045,,Jammu & Kashmir,37,1.0,"ECI 2008 compilation Annexure (J&K 1995 order): Mehmood Pora (Mohammadpora) is not named; it lies in today's Damhal Hanjipora tehsil, whose PCs (46-Damhal-Hanjipora etc.) form AC 37 Noorabad - inferred [whole town]"
+01,006,00025,800066,,Jammu & Kashmir,81,1.0,ECI 2008 compilation Annexure (J&K 1995 order): AC 81 Nowshera = all PCs of Tehsil Nowshera except 11-Narian (+ Sunderbani) [whole town]
+01,008,00033,800004,,Jammu & Kashmir,7,1.0,ECI 2008 compilation Annexure (J&K 1995 order): AC 7 Rafiabad extent names 'PC 8-Watergam' of Tehsil Sopore [whole town]
+01,015,00059,800044,,Jammu & Kashmir,38,1.0,ECI 2008 compilation Annexure (J&K 1995 order): AC 38 Kulgam extent names 'PC 11-Ashmuji' of Tehsil Kulgam [whole town]
+01,019,00073,800056,,Jammu & Kashmir,61,1.0,ECI 2008 compilation Annexure (J&K 1995 order): AC 61 Chenani = all PCs of Tehsil Chenani (Kud's census subdistrict) [whole town]
+01,020,00077,800060,,Jammu & Kashmir,58,1.0,"ECI 2008 compilation Annexure (J&K 1995 order): AC 58 Reasi = Tehsil Reasi except PCs 1-Salal, 15-Chinkah, 16-Jij, 17-Thakrakote - inferred [whole town]"

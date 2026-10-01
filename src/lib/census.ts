@@ -1,14 +1,16 @@
 // Census 2011 demographics for a seat.
 //
-// STEP 1 (live): DISTRICT-level. Each seat is placed in its 2011 census district(s) by overlaying the
-// seat's polygon on the 2011 district map (tools/build_census.py), so every seat in a district shows
-// that district's profile. Parliament seats are a BLEND of their assembly segments' districts,
-// weighted by each segment's electorate. The weights (`w`) are shares of the seat, summing to 1.
-// STEP 2 (planned): true seat-level estimates. The file shape is the same, so this module and the
-// briefing will not change when it lands — only the weights will point at finer units.
+// Two levels, one file shape:
+//  · SEAT level (`x` on a seat record) — the seat's own counts, summed from the census villages, towns
+//    and wards the Local Government Directory maps to it (tools/build_census_ac.py). Parliament seats
+//    are the sum of their assembly segments. `q` says how much of it comes from a split city's average.
+//  · DISTRICT level (fallback, always present) — the seat is placed in its 2011 census district(s)
+//    (`w`, shares summing to 1; tools/build_census.py) and shows that district's profile, blended
+//    when it spans several. Used wherever no seat-level build exists.
+// `w` is kept even on seat-level records: it names the district(s) the seat lies in.
 //
-// Everything is stored as raw COUNTS per district and turned into rates here, because rates can be
-// blended (weighted mean) but cannot be summed, and counts can be summed but not blended.
+// Everything is stored as raw COUNTS and turned into rates here, because rates can be blended
+// (weighted mean) but cannot be summed, and counts can be summed but not blended.
 import type { Seat } from './data'
 
 export type CensusDistrict = {
@@ -27,7 +29,17 @@ export type CensusDistrict = {
 export type Religion = 'hindu' | 'muslim' | 'christian' | 'sikh' | 'buddhist' | 'jain' | 'other' | 'none'
 export type Amenity = 'elec' | 'lpg' | 'latrine' | 'tap' | 'bank' | 'tv' | 'phone' | 'computer' | 'twowheeler' | 'car' | 'noasset'
 
-export type CensusSeat = { c: string; w: [string, number][] }   // seat name (for audit) + [district code, share]
+export type CensusQuality = {
+  v: number                                  // census villages placed in the seat
+  t: number                                  // towns (or town parts) placed in the seat
+  a: number                                  // share of its people from a city SPLIT across seats (carries the city's average)
+}
+export type CensusSeat = {
+  c: string                                  // seat name (for audit)
+  w: [string, number][]                      // [district code, share] — the district(s) it lies in
+  x?: CensusDistrict                         // seat-level counts, when built
+  q?: CensusQuality
+}
 export type CensusFile = {
   d: Record<string, CensusDistrict>          // the 2011 districts this state's seats touch
   st: CensusDistrict                         // the state as the app draws it (Telangana = its 10 districts, etc.)
@@ -89,10 +101,38 @@ function blend(parts: { r: Rates; w: number }[]): Rates {
   }
 }
 
+export type RankKey = 'sc' | 'st' | 'muslim' | 'christian' | 'sikh' | 'urban' | 'litF' | 'farm'
+export type Rank = { rank: number; of: number }                     // 1 = highest share in the state
 export type SeatCensus = {
+  level: 'seat' | 'district'
   rates: Rates
   state: Rates
+  pop: number | null                                                 // the seat's population (seat level only)
+  quality: CensusQuality | null
+  ranks: Partial<Record<RankKey, Rank>>
   districts: { code: string; name: string; share: number; pop: number }[]   // biggest share first
+}
+
+const PICK: Record<RankKey, (r: Rates) => number | null | undefined> = {
+  sc: r => r.sc, st: r => r.st, muslim: r => r.rel?.muslim, christian: r => r.rel?.christian, sikh: r => r.rel?.sikh,
+  urban: r => r.urban, litF: r => r.litF, farm: r => (r.work ? r.work.cl + r.work.al : null),
+}
+
+// Where a seat stands among the other seats of its state ON THE SAME BOUNDARIES. Only meaningful at
+// seat level — at district level every seat in a district would tie.
+function ranksOf(pool: Record<string, CensusSeat>, me: CensusSeat): SeatCensus['ranks'] {
+  if (!me.x) return {}
+  const all = Object.values(pool).filter(s => s.x).map(s => ratesOf(s.x!))
+  if (all.length < 8) return {}
+  const mine = ratesOf(me.x)
+  const out: SeatCensus['ranks'] = {}
+  for (const k of Object.keys(PICK) as RankKey[]) {
+    const v = PICK[k](mine)
+    if (v == null) continue
+    const vals = all.map(PICK[k]).filter((x): x is number => x != null)
+    out[k] = { rank: vals.filter(x => x > v).length + 1, of: vals.length }
+  }
+  return out
 }
 
 /** The census profile for a seat, or null when it can't be placed (pre-2008 boundaries, no shape). */
@@ -100,54 +140,71 @@ export function censusFor(file: CensusFile | null, arena: 'AE' | 'GE', seat: Sea
   if (!file) return null
   const override = (arena === 'AE' ? file.AEy : file.GEy)?.[String(seat.y)]
   // `j` >= 1000 marks the pre-2008 delimitation (the 2004 overlay): different ground, no mapping.
-  const rec = override ? override[String(seat.n)] : seat.j < 1000 ? (arena === 'AE' ? file.AE : file.GE)[String(seat.j)] : undefined
-  if (!rec?.w?.length) return null
+  const pool = override ?? (seat.j < 1000 ? (arena === 'AE' ? file.AE : file.GE) : undefined)
+  const rec = pool?.[String(override ? seat.n : seat.j)]
+  if (!pool || !rec?.w?.length) return null
   const parts = rec.w.filter(([code]) => file.d[code]).map(([code, w]) => ({ code, w, d: file.d[code] }))
-  if (!parts.length) return null
-  const tot = parts.reduce((s, p) => s + p.w, 0)
+  if (!parts.length && !rec.x) return null
+  const tot = parts.reduce((s, p) => s + p.w, 0) || 1
+  const districts = parts.map(p => ({ code: p.code, name: p.d.n, share: p.w / tot, pop: p.d.p })).sort((a, b) => b.share - a.share)
+  if (rec.x) return {
+    level: 'seat', rates: ratesOf(rec.x), state: ratesOf(file.st), pop: rec.x.p, quality: rec.q ?? null,
+    ranks: ranksOf(pool, rec), districts,
+  }
   return {
-    rates: blend(parts.map(p => ({ r: ratesOf(p.d), w: p.w / tot }))),
-    state: ratesOf(file.st),
-    districts: parts.map(p => ({ code: p.code, name: p.d.n, share: p.w / tot, pop: p.d.p })).sort((a, b) => b.share - a.share),
+    level: 'district', rates: blend(parts.map(p => ({ r: ratesOf(p.d), w: p.w / tot }))), state: ratesOf(file.st),
+    pop: null, quality: null, ranks: {}, districts,
   }
 }
 
 // ── plain-English reads: what makes this seat's population DIFFERENT from its state ──
 // Only claims a contrast when it is both relative (≥ 1.3× or ≤ 0.7× the state) and material in
 // absolute terms, so a 0.4% → 0.8% Jain share never reads as "double the state". Wording states
-// BOTH values instead of a difference (owner rule: no "points"). Every sentence NAMES the district:
-// these are district figures, and a city seat inside a largely tribal district (Visakhapatnam) must
-// not read as if the seat itself were tribal. A blend names every district it draws on (up to three).
+// BOTH values instead of a difference (owner rule: no "points").
+// At DISTRICT level every sentence NAMES the district(s) — those are district figures, and a city seat
+// inside a largely tribal district (Visakhapatnam) must not read as if the seat itself were tribal.
+// At SEAT level the figures are the seat's own, so it says "this seat" and adds where the seat ranks in
+// its state when it sits in the top or bottom tenth ("the 5th-highest of 224 seats in Karnataka").
 export function censusReads(sc: SeatCensus, stateName: string): string[] {
-  const { rates: r, state: s, districts: ds } = sc
+  const { rates: r, state: s, districts: ds, ranks } = sc
   const nm = ds.map(d => d.name)
-  const where = nm.length === 1 ? `${nm[0]} district`
-    : nm.length === 2 ? `${nm[0]} and ${nm[1]} districts`
-      : nm.length === 3 ? `${nm[0]}, ${nm[1]} and ${nm[2]} districts`
-        : `${nm[0]}, ${nm[1]} and ${nm.length - 2} other districts`
+  const where = sc.level === 'seat' ? 'this seat'
+    : nm.length === 1 ? `${nm[0]} district`
+      : nm.length === 2 ? `${nm[0]} and ${nm[1]} districts`
+        : nm.length === 3 ? `${nm[0]}, ${nm[1]} and ${nm[2]} districts`
+          : `${nm[0]}, ${nm[1]} and ${nm.length - 2} other districts`
   const out: { t: string; k: number }[] = []
   const f1 = (v: number) => v.toFixed(1) + '%'
-  const cmp = (label: string, v: number | null | undefined, sv: number | null | undefined, min: number) => {
+  const ord = (n: number) => n + (n % 100 >= 11 && n % 100 <= 13 ? 'th' : (['th', 'st', 'nd', 'rd'][n % 10] ?? 'th'))
+  const standing = (key?: RankKey) => {
+    const x = key ? ranks[key] : undefined
+    if (!x || x.of < 8) return ''
+    const tenth = Math.max(1, Math.round(x.of / 10))
+    if (x.rank <= tenth) return x.rank === 1 ? ` (the highest of ${x.of} seats in ${stateName})` : ` (the ${ord(x.rank)}-highest of ${x.of} seats in ${stateName})`
+    if (x.rank > x.of - tenth) return x.rank === x.of ? ` (the lowest of ${x.of} seats in ${stateName})` : ` (the ${ord(x.of - x.rank + 1)}-lowest of ${x.of} seats in ${stateName})`
+    return ''
+  }
+  const cmp = (label: string, key: RankKey | undefined, v: number | null | undefined, sv: number | null | undefined, min: number) => {
     if (v == null || sv == null || v < min || sv <= 0) return
     const k = v / sv
-    if (k >= 1.3) out.push({ t: `${label} are ${f1(v)} of the population in ${where} — ${k >= 1.9 ? `${k.toFixed(1)}×` : 'well above'} the ${stateName} figure of ${f1(sv)}.`, k })
-    else if (k <= 0.7 && sv >= min) out.push({ t: `${label} are ${f1(v)} of the population in ${where}, against ${f1(sv)} across ${stateName}.`, k: 1 / k })
+    if (k >= 1.3) out.push({ t: `${label} are ${f1(v)} of the population in ${where}${standing(key)} — ${k >= 1.9 ? `${k.toFixed(1)}×` : 'well above'} the ${stateName} figure of ${f1(sv)}.`, k })
+    else if (k <= 0.7 && sv >= min) out.push({ t: `${label} are ${f1(v)} of the population in ${where}${standing(key)}, against ${f1(sv)} across ${stateName}.`, k: 1 / k })
   }
-  cmp('Scheduled Castes', r.sc, s.sc, 8)
-  cmp('Scheduled Tribes', r.st, s.st, 8)
-  cmp('Muslims', r.rel?.muslim, s.rel?.muslim, 6)
-  cmp('Christians', r.rel?.christian, s.rel?.christian, 6)
-  cmp('Sikhs', r.rel?.sikh, s.rel?.sikh, 6)
-  cmp('Buddhists', r.rel?.buddhist, s.rel?.buddhist, 5)
+  cmp('Scheduled Castes', 'sc', r.sc, s.sc, 8)
+  cmp('Scheduled Tribes', 'st', r.st, s.st, 8)
+  cmp('Muslims', 'muslim', r.rel?.muslim, s.rel?.muslim, 6)
+  cmp('Christians', 'christian', r.rel?.christian, s.rel?.christian, 6)
+  cmp('Sikhs', 'sikh', r.rel?.sikh, s.rel?.sikh, 6)
+  cmp('Buddhists', undefined, r.rel?.buddhist, s.rel?.buddhist, 5)
   if (r.urban != null && s.urban != null && s.urban > 0) {
     const k = r.urban / s.urban
-    if (k >= 1.4 && r.urban >= 30) out.push({ t: `Urban: ${f1(r.urban)} of people in ${where} live in towns and cities, against ${f1(s.urban)} statewide.`, k })
-    else if (k <= 0.6) out.push({ t: `Largely rural: only ${f1(r.urban)} of people in ${where} live in towns and cities, against ${f1(s.urban)} statewide.`, k: 1 / Math.max(k, 0.05) })
+    if (k >= 1.4 && r.urban >= 30) out.push({ t: `Urban: ${f1(r.urban)} of people in ${where} live in towns and cities${standing('urban')}, against ${f1(s.urban)} statewide.`, k })
+    else if (k <= 0.6) out.push({ t: `Largely rural: only ${f1(r.urban)} of people in ${where} live in towns and cities${standing('urban')}, against ${f1(s.urban)} statewide.`, k: 1 / Math.max(k, 0.05) })
   }
   if (r.litM != null && r.litF != null && r.litM - r.litF >= 15)
     out.push({ t: `A wide literacy gap in ${where}: ${f1(r.litF)} of women can read and write, against ${f1(r.litM)} of men.`, k: 1.3 })
   if (r.work && r.work.cl + r.work.al >= 60)
-    out.push({ t: `A farm economy: ${f1(r.work.cl + r.work.al)} of workers in ${where} are cultivators or agricultural labourers.`, k: 1.25 })
+    out.push({ t: `A farm economy: ${f1(r.work.cl + r.work.al)} of workers in ${where} are cultivators or agricultural labourers${standing('farm')}.`, k: 1.25 })
   if (r.childSexRatio != null && Math.round(r.childSexRatio) < 900)     // round first: 899.7 must not read "Only 900"
     out.push({ t: `Only ${Math.round(r.childSexRatio)} girls per 1,000 boys under seven in ${where}${s.childSexRatio != null ? ` (${stateName}: ${Math.round(s.childSexRatio)})` : ''}.`, k: 1.2 })
   return out.sort((a, b) => b.k - a.k).slice(0, 4).map(o => o.t)

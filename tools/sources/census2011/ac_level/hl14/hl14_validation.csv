@@ -1,0 +1,54 @@
+check,expected,got,ok,detail
+NADA catalogue: district-level HL-14 entries (PC11_HL14-SS-DDD),640,640,True,
+downloaded files with manifest line,640,640,True,
+file name (HLPCA-SSDDD) matches catalogue idno (PC11_HL14-SS-DDD),0,0,True,
+raw files sha256 == manifest,0 mismatches,0 mismatches,True,
+identical HL-14 header (3 header rows x 145 table columns) in every file,1 signature,1 signature(s) over 640 files,True,
+"used columns carry the expected labels (e.g. col 85 'Electricity', 114 'LPG/PNG') + title 'HH-14'",0 files off,0 files off,True,
+files with extra trailing columns hold no data in them,0 non-blank cells,"59 files x [154] cols, 0 non-blank cells",True,
+"non-numeric value cells (all 135 % columns, all rows)",0,0,True,
+re-downloaded files byte-identical to the 15 earlier samples (hlo/raw/hl14_sample),15,15,True,
+every row's state+district code == the code in its file name,0,0,True,"1 non-numeric code cell(s) repaired from the file name: [{""src_file"": ""HLPCA-23451-2011_H14_census.xlsx"", ""state"": ""0\u2666"", ""district"": ""451"", ""subdistt"": ""03631"", ""town_village"": ""802361"", ""ward"": ""0077"", ""name"": ""Jabalpur (M Corp. + OG) - Ward No.77""}]"
+HL-14 rows not classifiable (district-level town rows / Total-unit rows),0,0,True,
+coverage: districts with a DISTRICT row in their own file,640,640,True,
+"unit key (state,district,subdistt,town_village,ward) unique",0,0,True,
+coverage: districts with village/town/ward rows,640,640,True,
+every WARD row has its TOWN row in the same sub-district,0,0,True,
+units with a blank % cell,0,0,True,
+PCA-TV unit key unique after keeping the '+ OG' row of a duplicated town; that row == sum of its wards,0 / 0,0 / 0,True,660 duplicated town rows resolved
+"HL-14 units without a PCA-TV unit of the same 5-part code (prior imputed, then calibrated)",a handful,"408 of 687,719",True,"by level: {""WARD"": 406, ""VILLAGE"": 2}; e.g. towns whose ward list was redrawn between houselisting (2010) and the PCA (2011): Jalgaon (Jamod) (M Cl); Pachora (M Cl); Noida (CT)"
+matched units have the same level in PCA-TV,0,0,True,
+PCA-TV units absent from HL-14 (no houselisting row; mostly villages with no/few households),small,"43,961 units / 1,362,865 PCA HH",True,"{""TOWN"": {""size"": 19, ""sum"": 47133}, ""VILLAGE"": {""size"": 43443, ""sum"": 71938}, ""WARD"": {""size"": 499, ""sum"": 1243794}}"
+HL-07 town-part key unique,0,0,True,
+HL-14 TOWN rows found among HL-07 town rows (exact HLO households),"8,048","8,048",True,
+HL-07 town rows present in HL-14,"8,048","8,048",True,
+HL-14 town % electricity == HL-07 town electricity count / households (independent table),within 1-dec rounding (0.05),"100.00% within, max 0.0500 (n=8,048)",True,
+HL-14 sub-district % electricity (T/R/U) == HL-07 counts,within 0.05,"100.00% within, max 0.0500 (n=15,138)",True,
+every sub-district with HL-14 villages has an HL-07 sub-district Rural total,0,0,True,
+calibration status of village / ward groups (units),calibrated,"{""VILLAGE"": {""calibrated"": 597496, ""single_unit"": 12}, ""WARD"": {""calibrated"": 78159, ""single_unit"": 4004}}",True,
+calibrated share / PCA-prior share (village + ward units),"within [0.2, 5.0]",min 0.200 p1 0.78 median 1.00 p99 1.24 max 5.000; 97.9% within 0.8-1.25,True,
+"(b) sum of unit total_households (villages+towns) == hlo_district_2011_counts per district, Total/Rural/Urban",0/0/0 mismatches of 640,0/0/0,True,
+"(b) sum of unit hh_prior (villages+towns) == hlo_district_2011_counts per district, Total/Rural/Urban",0/0/0 mismatches of 640,0/0/0,True,
+(b) India: sum of unit total_households,"246,740,228","246,740,228",True,
+(b) sum of unit total_households == HL-07 sub-district Rural / Urban totals,"0 of 5,988",0,True,
+(b) sum of WARD total_households == its TOWN row,"0 of 8,048 towns",0,True,
+(b) PCA reconciliation: unit pca_no_hh + PCA units absent from HL-14 == PCA-TV district No_HH,0 of 640,0,True,"India 249,501,663 vs 249,501,663"
+"(a) district % rebuilt from units vs HL-14 district row, Total, 11 core indicators",>=99% within rounding (0.1 per summed component),"99.90% within rounding, 100.00% within 0.2, p99 0.12, max 0.20 (n=7040)",True,"worst: pct_lpg_png_cooking ('13', '264', 'Total')"
+"(a) district % rebuilt from units vs HL-14 district row, Rural, 11 core indicators",>=99% within rounding (0.1 per summed component),"99.88% within rounding, 99.97% within 0.2, p99 0.12, max 0.28 (n=6941)",True,"worst: pct_lpg_png_cooking ('13', '264', 'Rural')"
+"(a) district % rebuilt from units vs HL-14 district row, Urban, 11 core indicators",>=99% within rounding (0.1 per summed component),"100.00% within rounding, 100.00% within 0.2, p99 0.15, max 0.19 (n=7007)",True,"worst: pct_telephone_any ('22', '408', 'Urban')"
+"(a) district % rebuilt from units vs hlo_district_2011.csv, Total, 11 core indicators",>=99% within 0.2,"99.79% within rounding, 100.00% within 0.2, p99 0.06, max 0.20 (n=7040)",True,"worst: pct_lpg_png_cooking ('13', '264', 'Total')"
+"(a) district % rebuilt from units vs hlo_district_2011.csv, Rural, 11 core indicators",>=99% within 0.2,"99.74% within rounding, 99.99% within 0.2, p99 0.06, max 0.24 (n=6941)",True,"worst: pct_lpg_png_cooking ('13', '264', 'Rural')"
+"(a) district % rebuilt from units vs hlo_district_2011.csv, Urban, 11 core indicators",>=99% within 0.2,"100.00% within rounding, 100.00% within 0.2, p99 0.09, max 0.13 (n=7007)",True,"worst: pct_telephone_any ('10', '214', 'Urban')"
+"(a') OUT-OF-SAMPLE district Rural rebuild of the 11 core indicators, housing-only calibration vs uncalibrated PCA prior",holdout beats prior,"holdout 97.5% within rounding (p99 0.28, max 0.79) vs prior 85.0% (p99 0.85, max 2.07)",True,
+"(a') OUT-OF-SAMPLE sub-district Rural rebuild of the 11 core indicators, housing-only calibration vs uncalibrated PCA prior",holdout beats prior,"holdout 92.0% within rounding (p99 0.66, max 3.26) vs prior 78.3% (p99 1.75, max 22.43)",True,
+"(a') OUT-OF-SAMPLE town (from its wards)  rebuild of the 11 core indicators, housing-only calibration vs uncalibrated PCA prior",holdout beats prior,"holdout 98.2% within rounding (p99 0.29, max 16.36) vs prior 79.9% (p99 1.90, max 30.52)",True,
+"(a) sub-district Total % rebuilt from units (shipped weights) vs HL-14 sub-district row, 11 core",>=97% within rounding,"99.62% within rounding, 99.85% within 0.2, p99 0.14, max 1.05 (n=65,868)",True,"worst: pct_tap_water ('12', '248', '01595', 'Total')"
+"(a) sub-district Rural % rebuilt from units (shipped weights) vs HL-14 sub-district row, 11 core",>=97% within rounding,"99.56% within rounding, 99.81% within 0.2, p99 0.12, max 1.65 (n=64,691)",True,"worst: pct_latrine_within_premises ('12', '252', '01663', 'Rural')"
+"(a) sub-district Urban % rebuilt from units (shipped weights) vs HL-14 sub-district row, 11 core",>=97% within rounding,"100.00% within rounding, 100.00% within 0.2, p99 0.14, max 0.20 (n=35,959)",True,"worst: pct_telephone_any ('03', '035', '00203', 'Urban')"
+"(a) town (from its wards)  % rebuilt from units (shipped weights) vs HL-14 town row, 11 core",>=97% within rounding,"99.79% within rounding, 99.89% within 0.2, p99 0.12, max 14.28 (n=88,528)",True,"worst: pct_tap_water ('33', '604', '05704', '803352')"
+units with households > 0 but a missing core %,0,0,True,
+"core % outside [0, 100 (+ rounding of summed parts)]",0,0,True,
+HL-14 col 11 'Total' == 100 on every unit row,all,"687,719 of 687,719",True,
+units with published % but 0 households after integer rounding (only possible where a group's official total < its number of units),0,0,True,{}
+hl14_units.parquet rows == HL-14 village + town + ward rows,"687,719","687,719 (VILLAGE 597,508, WARD 82,163, TOWN 8,048)",True,
+manifest rows (640 HL-14 + 35 HL-07 + 640 PCA-TV + 1 search),1316,1316,True,

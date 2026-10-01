@@ -121,7 +121,9 @@ Firebase → Authentication → Authorized domains for sign-in to work.
   constituency polygon in its 2011 census district(s) (output committed as
   `tools/sources/census2011/seat_district_overlay.csv`); `tools/build_census.py` checks that against
   the official delimitation orders and joins the official district tables (population, SC/ST,
-  literacy, work, religion, household amenities). District level for now.
+  literacy, work, religion, household amenities). Then `tools/build_census_ac.py` adds SEAT-LEVEL
+  figures (villages and wards summed per seat via the Local Government Directory + official ward lists;
+  inputs under `tools/sources/census2011/ac_level/`, see its `mirror/PROVENANCE.md`).
 - Boundaries in `public/geo/`, map-label fonts in `public/glyphs/`. Remaining gaps are reported by
   `tools/audit_datagaps.py` (2004 turnout is absent from the source; GE-2024 seat-level turnout).
 

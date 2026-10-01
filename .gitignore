@@ -39,3 +39,14 @@ tools/sources/census2011/boundaries/subdistricts/
 tools/sources/census2011/ac_district_lists/raw/**
 !tools/sources/census2011/ac_district_lists/raw/eci_delimitation_order_2008_english.pdf
 !tools/sources/census2011/ac_district_lists/raw/assam_final_order_ocr_p51-82.json
+
+# seat-level census build inputs: LGD snapshot (provenance + sha256 in ac_level/mirror/PROVENANCE.md) and the
+# consolidated PCA units (re-derive with tools/census_pcatv_units.py) - large, re-fetchable
+tools/sources/census2011/ac_level/lgd/
+tools/sources/census2011/ac_level/pca_units.parquet
+# seat-level build intermediates: re-derivable (hl14/build_hl14_units.py + its manifest; census_pcatv_units.py)
+tools/sources/census2011/ac_level/hl14/hl14_units.parquet
+tools/sources/census2011/ac_level/hl14/hl14_district_subdistrict_rows.parquet
+tools/sources/census2011/ac_level/hl14/pca_units_absent_from_hl14.parquet
+# city ward sources: large scanned orders, re-fetchable from the URLs in each CSV's basis column
+tools/sources/census2011/ac_level/city/*_sources/

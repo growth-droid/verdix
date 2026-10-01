@@ -1,0 +1,289 @@
+n,name,extent,class
+1,Akkalkuwa (ST),1. Akkalkuwa Tehsil and 2. Akrani Tehsil.,A_whole_subdistricts_and_towns_only
+2,Shahada (ST),"1. Taloda Tehsil, 2. Shahada Tehsil (Part) Revenue Circle - Mhasavad, Brahmanpuri, Asalod, Shahada and Shahada (MC).",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+3,Nandurbar (ST),"1. Shahada Tehsil (Part) Revenue Circle - Kalsadi, Prakasha, Sarangkheda, Vadali, 2. Nandurbar Tehsil (Part) Revenue Circle - Korit, Khondamali, Ranale, Nandurbar and Nandurbar (MC).",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+4,Nawapur (ST),"1. Nawapur Tehsil and 2. Nandurbar Tehsil (Part), Revenue Circle- Dhanora and Ashte.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+5,Sakri (ST),Sakri Tehsil (excluding Dusane Circle).,B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+6,Dhule Rural,"1. Dhule Tehsil (Part), Revenue Circle - Lamkani, Songir, Fagane, Mukati, Dhule, Kusumbe, Arvi and Shirur.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+7,Dhule City,1. Dhule Tehsil (Part) - Dhule (M.Corp.).,B2_part_unit_other
+8,Sindkheda,"1. Sindkheda Tehsil, 2. Sakri Tehsil (Part), Revenue Circle- Dusane.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+9,Shirpur (ST),Shirpur Tehsil.,A_whole_subdistricts_and_towns_only
+10,Chopda (ST),"1. Chopda Tehsil, 2.Yawal Tehsil (Part), Revenue Circle - Kingaon and Sakali.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+11,Raver,"1. Yawal Tehsil (Part), Revenue Circle - Yawal, Yawal (MC), Revenue Circle - Bhalod and Faizpur, Faizpur (MC), 2. Raver Tehsil (Part), Revenue Circle - Raver, and Raver (MC) Revenue Circle - Khiroda and Khanapur.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+12,Bhusawal (SC),Bhusawal Tehsil.,A_whole_subdistricts_and_towns_only
+13,Jalgaon City,1. Jalgaon Tehsil (Part) - Jalgaon (M.Corp.),B2_part_unit_other
+14,Jalgaon Rural,"1. Jalgaon Tehsil (Part) Revenue Circle Kanalde, Asoda, Jalgaon, Nashirabad and Mhasawad 2. Dharangaon Tehsil.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+15,Amalner,"1. Amalner Tehsil, 2. Parola Tehsil (Part), Revenue Circle - Bahadarpur and Shelave.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+16,Erandol,"1. Erandol Tehsil, 2. Parola Tehsil (Part), Revenue Circle- Chorwad, Tamaswadi, Parola and Parola (MC), and 3. Bhadgaon Tehsil (Part) Revenue Circle Amdade.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+17,Chalisgaon,Chalisgaon Tehsil.,A_whole_subdistricts_and_towns_only
+18,Pachora,"1. Pachora Tehsil (excluding Revenue Circle Kurhad), 2. Bhadgaon Tehsil (Part), Revenue Circle - Kolgaon, Bhadgaon and Gondgaon. 1. Jamner Tehsil, 2 Pachora Tehsil (Part), Revenue Circle -",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+19,Jamner,Kurhad.,A_whole_subdistricts_and_towns_only
+20,Muktainagar,"1. Raver Tehsil (Part), Revenue Circle -Khiradi, Savda and Savda (MC), 2. Muktainagar Tehsil and 3. Bodwad Tehsil.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+21,Malkapur,"1. Nandura Tehsil, 2. Malkapur Tehsil.",A_whole_subdistricts_and_towns_only
+22,Buldhana,"1. Motala Tehsil, 2. Buldhana Tehsil (Part), Revenue Circle - Padali, Buldhana (Rural) and Buldhana (MC).",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+23,Chikhli,"1. Chikhli Tehsil (Part), Revenue Circle - Undri, Amdapur, Eklara, Hatni, Kolara, Chikhli and Chikhli (MC), 2. Buldhana Tehsil (Part), Revenue Circle - Raipur, Dhad and Mhasla Bk.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+24,Sindkhed Raja,"1. Deolgaon Raja Tehsil, 2. Sindkhed Raja Tehsil, 3. Chikhli Tehsil (Part), Revenue Circle - Mera and 4. Lonar Tehsil (Part), Revenue Circle Bibi.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+25,Mehkar (SC),"1. Mehkar Tehsil, 2. Lonar Tehsil (Part), Revenue Circle Sultanpur, Titavi and Lonar, Lonar (MC).",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+26,Khamgaon,"1. Khamgaon Tehsil, 2. Shegaon Tehsil (Part), RevenueCircle - Jalamb, Pahurjira and Matargaon.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+27,Jalgaon (Jamod),"1. Sangrampur Tehsil, 2. Jalgaon (Jamod) Tehsil, 3. Shegaon Tehsil (Part), Revenue Circle - Manasgaon, Shegaon and Shegaon (MC).",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+28,Akot,"1. Telhara Tehsil, 2. Akot Tehsil (Part), Revenue Circle- Umara, Panaj, Akot and Akot (MC).",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+29,Balapur,"1. Balapur Tehsil, 2. Patur Tehsil, 3. Akola Tehsil (Part) Revenue Circle - Ugawa.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+30,Akola West,"Akola Tehsil (Part) - Akola (M.Corp.) (Part), Ward No 1 to 7,13 to 30, 38 to 53 and 56 to 65.",C_ward_or_EB_level
+31,Akola East,"Akola Tehsil (Part) - Akola (M.Corp.) (Part), Ward No 8 to 12, 31 to 37 and 54 to 55, 2. Akot Tehsil (Part), Revenue Circle-Kutasa, Chohatta, 3. Akola Tehsil (Part)-Ghusar, Palso BK., Borgaon Manju, Kapshi and Akola, Umari Pragane Balapur (CT) and Malkapur (CT).",C_ward_or_EB_level
+32,Murtizapur (SC),"1. Murtizapur Tehsil, 2. Barshitakli Tehsil, and 3. Akola Tehsil (Part), Revenue Circle - Kurankhed.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+33,Risod,"1. Malegaon Tehsil, 2. Risod Tehsil",A_whole_subdistricts_and_towns_only
+34,Washim (SC),"1. Mangrulpir Tehsil, 2. Washim Tehsil",A_whole_subdistricts_and_towns_only
+35,Karanja,"1. Karanja Tehsil, 2. Manora Tehsil",A_whole_subdistricts_and_towns_only
+36,Dhamangaon Railway,"1. Nandgaon-Khandeshwar Tehsil, 2. Chandur Railway Tehsil and 3. Dhamangaon Railway Tehsil.",A_whole_subdistricts_and_towns_only
+37,Badnera,"1. Amravati Tehsil (Part), Revenue Circle - Amravati and Badnera, 2. Amravati (M.Corp.)-Ward No. 6 to 18, 32 to 40, 57 to 61, 72,73, 3. Bhatkuli Tehsil (Part), Revenue Circle - Bhatkuli and Nimbha.",C_ward_or_EB_level
+38,Amravati,"1. Amravati Tehsil (Part), Amravati (M.Corp.) - Ward No. 1 to 5, 19 to 31, 41 to 56 and 62 to 71.",C_ward_or_EB_level
+39,Teosa,"1. Teosa Tehsil, 2. Morshi Tehsil (Part), Revenue Circle - Ner Pinglai and Dhamangaon, 3. Amravati Tehsil (Part), Revenue Circle - Shirala, Mahuli Jahangir, Nandgaon Peth and Walgaon and 4. Bhatkuli Tehsil (Part), Revenue Circle - Ashti and Kholapur.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+40,Daryapur (SC),"1. Daryapur Tehsil, 2. Anjangaon Surji Tehsil 3. Achalpur Tehsil (Part), Revenue Circle Rasegaon.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+41,Melghat (ST),"1. Dharni Tehsil, 2. Chikhaldara Tehsil. 3.Achalpur Tehsil (Part), Revenue Circle -Paratwada and Pathrot.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+42,Achalpur,"1. Chandurbazar Tehsil, 2. Achalpur Tehsil (Part), Revenue Circle- Shirajgaon Kasba, Achalpur and Achalpur (MC).",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+43,Morshi,"1. Warud Tehsil, 2. Morshi Tehsil (Part), Revenue Circle-Ambada, Hiwarkhed, Rithpur, Morshi and Morshi (MC).",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+44,Arvi,"1. Ashti Tehsil, 2. Karanja Tehsil 3. Arvi Tehsil.",A_whole_subdistricts_and_towns_only
+45,Deoli,"1. Deoli Tehsil, 2. Wardha Tehsil (Part), Revenue Circle Anji, Sevagram, Waigaon and Waifad 3. Hinganghat Tehsil (Part), Revenue Circle Kangaon and Alipur.",C_ward_or_EB_level
+46,Hinganghat,"1. Samudrapur Tehsil, 2. Seloo Tehsil (Part), Revenue Circle-Sindi and Sindi (MC), 3. Hinganghat Tehsil (Part) Revenue Circle -Sawali, Wadner, Pohana, Hinganghat and Hinganghat (MC).",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+47,Wardha,"1. Wardha Tehsil (Part), Revenue Circle Wardha and Wardha (MC) 2. Seloo Tehsil (Part), Revenue Circle Hingni, Zadshi and Seloo.",C_ward_or_EB_level
+48,Katol,"1. Narkhed Tehsil, 2. Katol Tehsil, 3. Nagpur (Rural) Tehsil (Part), Revenue Circle Wadi (Part A), Villages, Bandhara, Kavdimet, Sirpur, Bhuyari, Khairi, Amgaon, Dhaga, Bajargaon, Khapri, Shiwa, Sawanga, Wanjara, Pachnavari, Satnavari, Malegaon Kh, Malegaon Bk, Padri khapa, Mohgaon bk, Mohgaon kh, Dhamna, Linga, Pethkaldongari, Chandrapur and Vyahad.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+49,Savner,1. Kalameshwar Tehsil 2. Savner Tehsil.,A_whole_subdistricts_and_towns_only
+50,Hingna,"1. Hingna Tehsil, 2. Nagpur (Rural) Tehsil (Part), Revenue Circle- Bori, Wadi (Part B), Villages - Walani, Brahmanwada, Bailwada, Gumthala, Ghoghali, Lonare, Bhokara, Chakkikhapa, Bharatwada, Khandala, Pardi, Ashti, Borgaon, Mahurzari, Pithesur, Godhani (Railway), Fetari, Gonhi, Yerla, Chicholi, Bodhala, Lava, Khadgaon, Drugdhamna, Surabardi, 3. Wadi (CT), 4. Davlameti (CT), and 5. Sonegaon (Nipani) (CT).",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+51,Umred (SC),"1. Bhiwapur Tehsil, 2 Umred Tehsil 3. Kuhi Tehsil.",A_whole_subdistricts_and_towns_only
+52,Nagpur South West,"Nagpur Tehsil (Part), Nagpur (M. Corp) (Part) - Ward No. 12 to 16, 43 to 51, 79 to 82 and 103 to 105.",C_ward_or_EB_level
+53,Nagpur South,"Nagpur Tehsil (Part), Nagpur (M. Corp) (Part) - Ward No. 9 to 11, 37 to 42, 73 to 78, 99 to 102 and 120.",C_ward_or_EB_level
+54,Nagpur East,"Nagpur Tehsil (Part), Nagpur (M. Corp) (Part) - Ward No. 6 to 8, 28 to 36, and 67 to 72.",C_ward_or_EB_level
+55,Nagpur Central,"Nagpur Tehsil (Part), Nagpur (M. Corp) (Part) - Ward No. 66, 92 to 98, 109 to 119 and 121 to129.",C_ward_or_EB_level
+56,Nagpur West,"Nagpur Tehsil (Part), Nagpur (M. Corp) (Part) - Ward No 1, 17 to 21, 52 to 59, 83 to 87, 106 to 108 and 999.",C_ward_or_EB_level
+57,Nagpur North (SC),"Nagpur Tehsil (Part), Nagpur (M. Corp) (Part) - Ward No. 2 to 5, 22 to 27, 60 to 65 and 88 to 91.",C_ward_or_EB_level
+58,Kamthi,"1. Kamthi Tehsil, 2. Mouda Tehsil (Part), Revenue Circle Khat and Mouda and 3. Nagpur (Rural) Tehsil (Part), Revenue Circle Nagpur.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+59,Ramtek,"1. Parseoni Tehsil, 2. Ramtek Tehsil and 3. Mouda Tehsil (Part), Revenue Circle Nimkheda.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+60,Tumsar,1. Tumsar Tehsil 2. Mohadi Tehsil.,A_whole_subdistricts_and_towns_only
+61,Bhandara (SC),1. Bhandara Tehsil 2. Pauni Tehsil,A_whole_subdistricts_and_towns_only
+62,Sakoli,"1. Sakoli Tehsil, 2. Lakhani Tehsil, 3 Lakhandur Tehsil.",A_whole_subdistricts_and_towns_only
+63,Arjuni Morgaon (SC),"1. Sadak-Arjuni Tehsil, 2. Goregaon Tehsil (Part), Revenue Circle- Mohadi and 3. Arjuni Morgaon Tehsil.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+64,Tirora,"1. Tirora Tehsil and Tirora (MC), 2. Gondiya Tehsil (Part), Revenue Circle Gangazari, 3. Goregaon Tehsil (Part) Revenue Circle Goregaon.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+65,Gondiya,"1. Gondiya Tehsil (Part)- Revenue Circle- Kamtha, Ravanwadi, Dasgaon Bk, Gondiya and Gondiya (MC).",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+66,Amgaon (ST),"1. Deori Tehsil, 2. Salekasa Tehsil 3. Amgaon Tehsil.",A_whole_subdistricts_and_towns_only
+67,Armori (ST),"1. Desaiganj (Wadsa) Tehsil, 2. Armori Tehsil, 3. Kurkheda Tehsil, 4. Korchi Tehsil 5. Dhanora Tehsil (Part), Revenue Circle Murumgaon.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+68,Gadchiroli (ST),"1. Gadchiroli Tehsil, 2. Chamorshi Tehsil 3. Dhanora Tehsil (Part), Revenue Circle Dhanora and Chatgaon. 1. Aheri Tehsil, 2. Mulchera Tehsil, 3. Etapalli Tehsil,",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+69,Aheri (ST),"4. Bhamragad Tehsil 5. Sironcha Tehsil. 1. Korpana Tehsil, 2. Rajura Tehsil, 3. Gondpipri Tehsil,",A_whole_subdistricts_and_towns_only
+70,Rajura,4. Jiwti Tehsil.,A_whole_subdistricts_and_towns_only
+71,Chandrapur (SC),Chandrapur Tehsil (Part) Revenue Circle Ghugus and Chandrapur (MC).,B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+72,Ballarpur,"1. Mul Tehsil, 2. Pombhurna Tehsil, 3. Ballarpur Tehsil, 4. Chandrapur Tehsil (Part)- Revenue Circle - Chandrapur (2) and Chandrapur Rayatwari.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+73,Brahmapuri,"1. Sawali Tehsil, 2. Sindewahi Tehsil, 3. Brahmapuri Tehsil (Part), Revenue Circle- Gangalwadi, Brahmapuri and Brahmapuri (MC).",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+74,Chimur,"1. Chimur Tehsil, 2. Nagbhir Tehsil and 3. Brahmapuri Tehsil (Part), Revenue Circle Arher Navargaon.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+75,Warora,1. Warora Tehsil 2. Bhadravati Tehsil.,A_whole_subdistricts_and_towns_only
+76,Wani,"1. Maregaon Tehsil, 2. Zari-Jamani Tehsil, 3. Wani Tehsil.",A_whole_subdistricts_and_towns_only
+77,Ralegaon (ST),"1. Babulgaon Tehsil, 2. Kalamb Tehsil, 3. Ralegaon Tehsil, 4. Kelapur Tehsil (Part), Revenue Circle Runza.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+78,Yavatmal,1. Yavatmal Tehsil 2. Darwha Tehsil (Part)- Revenue Circle Ladkhed.,B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+79,Digras,"1. Digras Tehsil, 2. Ner Tehsil, 3. Darwha Tehsil (Part), Revenue Circle Loha, Chikhali, Darwha and Darwha (MC).",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+80,Arni (ST),"1. Arni Tehsil, 2. Ghatanji Tehsil, 3. Kelapur Tehsil (Part), Revenue Circle Patan Bori, Pandharkavda and Pandharkavda (MC). 1. Pusad Tehsil, 2. Mahagaon Tehsil (Part), Revenue Circle Kali",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+81,Pusad,(DK).,A_whole_subdistricts_and_towns_only
+82,Umarkhed (SC),"1. Umarkhed Tehsil, 2. Mahagaon Tehsil (Part), Revenue Circle- Gunj, Morath, Mahagaon.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+83,Kinwat,1. Mahur Tehsil 2. Kinwat Tehsil.,A_whole_subdistricts_and_towns_only
+84,Hadgaon,1. Himayatnagar Tehsil 2. Hadgaon Tehsil.,A_whole_subdistricts_and_towns_only
+85,Bhokar,"1. Ardhapur Tehsil, 2. Mudkhed Tehsil 3. Bhokar Tehsil.",A_whole_subdistricts_and_towns_only
+86,Nanded North,"Nanded Tehsil (Part), Revenue Circle, Nanded Urban, Nanded Rural, Limbgaon and Nanded - Waghala M. Corp. (Part), Ward No. 1 to 9, 28 to 39, 50 to 58.",C_ward_or_EB_level
+87,Nanded South,"1. Loha Tehsil (Part), Revenue Circle Sonkhed, 2. Nanded Tehsil (Part), Revenue Circle Tuppa, Vishnupuri and Nanded-Waghala M. Corp. (Part) -Ward No. 10 to 27, 40 to 49, 59 to 65.",C_ward_or_EB_level
+88,Loha,"1. Loha Tehsil (Part), Revenue Circle Malakoli Kalambar, Kapsi Bk., Loha and Loha M.C., 2. Kandhar Tehsil (Part), Revenue Circle Usman Nagar, Barul, Kandhar and Kandhar M.C.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+89,Naigaon,"1. Umri Tehsil, 2. Dharmabad Tehsil and 3. Naigaon Tehsil.",A_whole_subdistricts_and_towns_only
+90,Deglur (SC),1. Deglur Tehsil 2. Biloli Tehsil.,A_whole_subdistricts_and_towns_only
+91,Mukhed,"1. Mukhed Tehsil, 2. Kandhar Tehsil (Part) - Revenue Circle Pethwadaj and Kurla.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+92,Basmath,"1. Basmath Tehsil 2. Aundha (Nagnath) Tehsil (Part), Revenue Circle-Jawlabajar and Salna.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+93,Kalamnuri,"1. Aundha (Nagnath) Tehsil (Part), Revenue Circle Aundha Nagnath, Yehlegaon, 2. Hingoli Tehsil (Part) Revenue Circle Sirsam Bk. and Basamba 3. Kalamnuri Tehsil.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+94,Hingoli,"1. Sengaon Tehsil, 2. Hingoli Tehsil (Part), Revenue Circle Malhiwara, Narsi, Hingoli and Hingoli (MC).",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+95,Jintur,1. Sailu Tehsil 2. Jintur Tehsil.,A_whole_subdistricts_and_towns_only
+96,Parbhani,"Parbhani Tehsil (Part), Revenue Circle Zari, Pingali, Parbhani and Parbhani (MC).",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+97,Gangakhed,"1. Gangakhed Tehsil, 2. Palam Tehsil 3. Purna Tehsil.",A_whole_subdistricts_and_towns_only
+98,Pathri,"1. Pathri Tehsil, 2. Manwath Tehsil, 3. Sonpeth Tehsil, 4. Parbhani Tehsil (Part), Revenue Circle Pedgaon, Singnapur and Daithana.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+99,Partur,"1. Partur Tehsil, 2. Mantha Tehsil 3. Jalna Tehsil (Part), Revenue Circle Ner.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+100,Ghansawangi,"1. Ghansawangi Tehsil, 2. Jalna Tehsil (Part), Revenue Circle Viregaon and Pachanwadgaon, 3. Ambad Tehsil (Part) - Revenue Circle Wadi Godri and Gondi.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+101,Jalna,"1. Jalna Tehsil (Part), Revenue Circle Waghrul Jahagir, Ramnagar, Jalna (Rural) and Jalna (MC).",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+102,Badnapur (SC),"1. Badnapur Tehsil, 2. Bhokardan Tehsil (Part), Revenue Circle- Hasnabad and Rajur, 3. Ambad Tehsil (Part), Revenue Circle Jamkhed, Dhangar Pimpri, Ambad and Ambad (MC).",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+103,Bhokardan,"1. Jafferabad Tehsil, 2. Bhokardan Tehsil (Part), Revenue Circle Dhawada, Pimpalgaon (Renukai), Sipora Bazar, Bhokardan and Bhokardan (MC).",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+104,Sillod,"1. Sillod Tehsil, 2. Soegaon Tehsil (Part)- Revenue Circle Soegaon.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+105,Kannad,"1. Kannad Tehsil, 2. Soegaon Tehsil (Part)-Revenue Circle- Banoti.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+106,Phulambri,"1. Phulambri Tehsil, 2. Aurangabad Tehsil (Part), Revenue Circle Chauka, Ladsawangi, Karmad and Aurangabad (M. Corp.) (Part) - Ward No. 9 to 13.",C_ward_or_EB_level
+107,Aurangabad Central,"1. Aurangabad Tehsil (Part), Aurangabad (M. Corp.) (Part)-Ward No. 2 to 5, 34 to 48, 60 to 68 and 79 to 83.",C_ward_or_EB_level
+108,Aurangabad West (SC),"1. Aurangabad Tehsil (Part)-Revenue Circle Kanchanwadi, Aurangabad (CB), and Aurangabad (M Corp.) (Part) - Ward No. 1, 17 to 33.",C_ward_or_EB_level
+109,Aurangabad East,"Aurangabad Tehsil (Part), Aurangabad (M Corp.) - Ward No. 6 to 8, 14 to 16, 49 to 59 and 69 to 78.",C_ward_or_EB_level
+110,Paithan,"1. Paithan Tehsil, 2. Aurangabad Tehsil (Part), Revenue Circle Pimpri.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+111,Gangapur,"1. Gangapur Tehsil (Part), Revenue Circle Shendurwada, Waluj, Harsul, Turkabad, Gangapur and Gangapur (MC) 2. Khultabad Tehsil.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+112,Vaijapur,"1. Vaijapur Tehsil, 2. Gangapur Tehsil (Part), Revenue Circle Manjri and Siddhanath Wadgaon.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+113,Nandgaon,"1. Nandgaon Tehsil, 2. Malegaon Tehsil (Part), Revenue Circle- Kaulane (Nimbait), Nimgaon and Kalwadi.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+114,Malegaon Central,"Malegaon Tehsil (Part), Malegaon (M.Corp.) (Part) - Ward No. 8 to 20 and 26 to 65.",C_ward_or_EB_level
+115,Malegaon Outer,"Malegaon Tehsil (Part), Revenue Circle Vadner, Karanjgavan, Zodage, Dabhadi, Saundane, Malegaon and Malegaon (M.Corp.) (Part) - Ward No. 1 to 7, 21 to 25.",C_ward_or_EB_level
+116,Baglan (ST),Baglan Tehsil,A_whole_subdistricts_and_towns_only
+117,Kalwan (ST),1. Surgana Tehsil 2. KalwanTehsil. 1. Deola Tehsil 2. Chandvad Tehsil,A_whole_subdistricts_and_towns_only
+118,Chandvad,,A_whole_subdistricts_and_towns_only
+119,Yevla,"1. Yevla Tehsil, 2. Niphad Tehsil (Part), Revenue Circle-Lasalgaon and Deogaon.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+120,Sinnar,"1. Sinnar Tehsil and 2. Igatpuri Tehsil (Part), Revenue Circle Taked.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+121,Niphad,"Niphad Tehsil (Part), Revenue Circle Chandori, Pimpalgaon Baswant, Ranvad, Niphad and Saikheda.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+122,Dindori (ST),1. Dindori Tehsil 2. Peint Tehsil.,A_whole_subdistricts_and_towns_only
+123,Nashik East,"Nashik Tehsil (Part), Nashik (M Corp.) (Part) - Ward No. 1 to 10, 14, 16, 30 to 35, 40 to 42 and 67 to 70.",C_ward_or_EB_level
+124,Nashik Central,"Nashik Tehsil (Part), Nashik (M Corp.) (Part) - Ward No. 27 to 29, 36 to 39, 43, 44, 61 to 66, 71 to 87.",C_ward_or_EB_level
+125,Nashik West,"Nashik Tehsil (Part), Nashik (M Corp.) (Part) - Ward No. 21 to 26, 45 to 60.",C_ward_or_EB_level
+126,Deolali (SC),"1. Nashik Tehsil (Part), Revenue Circle Girnare, Makhamalabad, Satpur, Nashik, Madsangavi, Shinde, Deolali, Deolali (CB) and Bhagur (MC), 2. Nashik - (M Corp.) (Part) -Ward No. 11 to 13, 15, 17 to 20.",C_ward_or_EB_level
+127,Igatpuri (ST),"1. Trimbakeshwar Tehsil, 2. Igatpuri Tehsil (Part)-Revenue Circle- Dhargaon, Wadivarhe, Ghoti, Igatpuri and Igatpuri (MC).",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+128,Dahanu (ST),"1. Talasari Tehsil, 2. Dahanu Tehsil (Part), Revenue Circle Saivan, Malyan, Dahanu and Dahanu (M.C.)",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+129,Vikramgad (ST),"1. Vikramgad Tehsil, 2. Jawhar Tehsil, 3. Mokhada Tehsil, 4. Wada Tehsil (Part), Revenue Circle Kanchad.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+130,Palghar (ST),"1. Dahanu Tehsil (Part), Revenue Circle Kasa and Chinchani. 2. Palghar Tehsil (Part), Revenue Circle Tarapur, Palghar and Palghar (M.C.)",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+131,Boisar (ST),"1. Palghar Tehsil (Part), Revenue Circle-Saphala, Boisar and Manor 2. Vasai Tehsil (Part), Revenue Circle-Mandvi, Waliv (CT), and Gokhiware (CT).",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+132,Nalasopara,"Vasai Tehsil (Part) - Revenue Circle Virar, Virar (MC) and Nalasopara (MC). Vasai Tehsil (Part)-Revenue Circle-Vasai, Manikpur and Agashi",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+133,Vasai,"and Navghar Manikpur (MC), Vasai (MC) and Sandor (CT).",A_whole_subdistricts_and_towns_only
+134,Bhiwandi Rural (ST),"1. Bhiwandi Tehsil (Part), Revenue Circle Dighashi, Angaon, Padgha, Additional Bhiwandi, Kharbav, Padgha (CT), Kon (CT) 2. Wada Tehsil (Part), Revenue Circle-Wada.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+135,Shahapur (ST),"1. Shahapur Tehsil 2. Wada Tehsil (Part), Revenue Circle- Mandva.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+136,Bhiwandi West,"1. Bhiwandi Tehsil (Part), Bhiwandi (M.Corp.). (Part) - Ward No 1 to 5, 18 to 35, 51 to 61, Khoni (CT), Shelar (CT), Katai (CT), Karivali (CT).",C_ward_or_EB_level
+137,Bhiwandi East,"1. Bhiwandi Tehsil (Part), Bhiwandi M. Corp. (Part) -Ward No 6 to 17, 36 to 50 and 62 to 65, and Bhinar Saza in Bhiwandi Revenue Circle.",C_ward_or_EB_level
+138,Kalyan West,1. Kalyan Tehsil(Part) - Kalyan Dombivali M.Corp. (Part) - Ward No 1 to 12 and 35 to 50 and Manda Saza in Kalyan Revenue Circle.,C_ward_or_EB_level
+139,Murbad,"1. Murbad Tehsil, 2. Kalyan Tehsil (Part)-Revenue Circle-Titwala , Nadgaon 3.Ambernath Tehsil (Part), Revenue Circle Badlapur , Goregaon, Kulgaon-Badlapur (MC), Ambernath Revenue Circle (Part) Manjarli and Kharwai Saza.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+140,Ambernath (SC),"1. Ambernath Tehsil (Part), Revenue Circle Ambernath (Rural), and Ambernath (MC), 2. Ulhasnagar Tehsil (Part), Ulhasnagar (M.Corp.) (Part) - Ward No14 to 22 and 44 to 51.",C_ward_or_EB_level
+141,Ulhasnagar,"1. Kalyan Tehsil (Part) - Kalyan Revenue Circle (Part) Shahad Saza, 2. Ulhasnagar Tehsil (Part), Ulhasnagar M.Corp. (Part) - Ward No 1 to 13, 27 to 42 and 56 to 69. 1. Kalyan Tehsil (Part), Kalyan Dombivali (M.Corp.) (Part) - Ward",C_ward_or_EB_level
+142,Kalyan East,"No. 13 to 30, 2. Ambernath Tehsil (Part), Revenue Circle Kumbharli 3. Ulhasnagar Tehsil (Part) - Ulhasnagar (M.Corp.) (Part), Ward No. 23 to 26, 43, and 52 to 55.",C_ward_or_EB_level
+143,Dombivali,"Kalyan Tehsil (Part), Kalyan Dombivali (M.Corp.) (Part) - Ward No. 57 to 65, 68 and 78 to 96.",C_ward_or_EB_level
+144,Kalyan Rural,"1. Thane Tehsil (Part) - Navi Mumbai M.Corp. (Part) - Ward No. 6 & 7, Thane M.Corp. (Part) - Ward No. 6 & 7. 2. Kalyan Tehsil (Part), Kalyan Dombivali M.Corp. (Part) - Ward No. 31 to 34, 51 to 56, 66, 67 and 69 to 77, Kalyan Revenue Circle(Part)- Nilje and Hedutane Saza.",C_ward_or_EB_level
+145,Mira Bhayandar,"1. Thane Tehsil (Part), Mira Bhayandar M.Corp. (Part)- Ward No. 1 to 8, 17 to 36, 41 to 44, 46 and 47.",C_ward_or_EB_level
+146,Ovala - Majiwada,"1.Thane Tehsil (Part) - Mira Bhayandar M.Corp. (Part) - Ward No. 9 to16, 37 to 40, 45 and Thane M. Corp. (Part) - Ward No 9 and 11.",C_ward_or_EB_level
+147,Kopri- Pachpakhadi,"Thane Tehsil (Part), Thane M. Corp. (Part) - Ward No. 3 and 8.",C_ward_or_EB_level
+148,Thane,"Thane Tehsil (Part), Thane M.Corp. (Part) - Ward No. 1, 2, 10, 12 &13.",C_ward_or_EB_level
+149,Mumbra-Kalwa,"Thane Tehsil (Part), Thane M.Corp. (Part) - Ward No. 4 & 5.",C_ward_or_EB_level
+150,Airoli,"Thane Tehsil (Part), Navi Mumbai M.Corp. (Part) - Ward No. 1 to 5, 8, 9, 27 to 42 and 61.",C_ward_or_EB_level
+151,Belapur,"Thane Tehsil (Part), Navi Mumbai M.Corp. (Part) -Ward No.10 to 26, 43 to 60 and 62 to 66.",C_ward_or_EB_level
+152,Borivali,"Greater Mumbai M. Corp. (Part) - Ward No. 1566, 1771, 1769, Ward No. 1772 (Part) - E.B. No. 64 to 107 and 109 to 179.",C_ward_or_EB_level
+153,Dahisar,"Greater Mumbai M. Corp. (Part) - Ward No. 1770, 1870, 1874, Ward No. 1772 (Part), E.B. No. 1 to 63 and 108.",C_ward_or_EB_level
+154,Magathane,"Greater Mumbai M. Corp. (Part) - Ward No. 1773, 1873 and Ward No. 1668 (Part) - E.B. No. 213 to 356, 482 to 501 and 519 to 525.",C_ward_or_EB_level
+155,Mulund,Greater Mumbai M. Corp. (Part) - Ward No. 2486 to 2488.,C_ward_or_EB_level
+156,Vikhroli,"Greater Mumbai M. Corp. (Part) - Ward No. 2384 (Part) - E.B. No. 1 to 118, 124 to 254, 303 to 432, 611 to 613, Ward No. 2385 (Part) - E.B. No. 1 to 107, 111 to 169, 523 to 548, 595 to 627, 688, 689, 691 to 699, 832, and 834 to 836.",C_ward_or_EB_level
+157,Bhandup West,"Greater Mumbai M. Corp. (Part) - Ward No. 2384 (Part) - E.B. No. 119 to 123, and Ward No. 2385 (Part) - E.B. No. 108 to 110, 170 to 522, 640 to 687, 690 and 700 to 728.",C_ward_or_EB_level
+158,Jogeshwari East,"Greater Mumbai M. Corp. (Part) - Ward No. 1256, 1258 and 1459.",C_ward_or_EB_level
+159,Dindoshi,Greater Mumbai M. Corp. (Part) - Ward No. 1564.,C_ward_or_EB_level
+160,Kandivali East,"Greater Mumbai M. Corp. (Part) - Ward No. 1563, Ward No. 1668 (Part) - E.B. No. 1 to 212, 357 to 481, 502 to 518.",C_ward_or_EB_level
+161,Charkop,"Greater Mumbai M. Corp. (Part) - Ward No. 1667, Ward No. 1565 (Part) - E.B. No. 1 to 5, 23 to 51, 54, 377 and 1401 to 1403.",C_ward_or_EB_level
+162,Malad West,"Greater Mumbai M. Corp. (Part) - Ward No. 1354, 1561, 1562, Ward No. 1565 (Part)- E.B. No.6 to 22, 52, 53, 55 to 376.",C_ward_or_EB_level
+163,Goregaon,"Greater Mumbai M. Corp. (Part) - Ward No. 1458, 1460, 1463.",C_ward_or_EB_level
+164,Versova,"Greater Mumbai M. Corp. (Part) - Ward No. 1357, Ward No. 1352 (Part) - E.B. No.317, 318, 322, 323, 326, 329 to 418, 496 to 637 and Ward No. 1353 (Part) - E.B. No. 69 to 158, 161 to 163, 181 to 229.",C_ward_or_EB_level
+165,Andheri West,"Greater Mumbai M. Corp. (Part) - Ward No. 1351, Ward No. 1352 (Part) - E.B. No. 1 to 316, 319 to 321, 324, 325, 327, 328, 419 to 495, Ward No. 1353 (Part) - E.B. No. 1 to 68, 159, 160, 164 to 180.",C_ward_or_EB_level
+166,Andheri East,"Greater Mumbai M. Corp. (Part) - Ward No. 1255 (Part) - E.B. No. 1 to 220 and 330 to 680, Ward No. 2385 (Part) - E.B. No. 549 to 594, 628 to 639, 833.",C_ward_or_EB_level
+167,Vile Parle,"Greater Mumbai M. Corp. (Part) - Ward No. 1048 (Part)-E.B. No. 95 to 128, 325 to 339 & 431 to 437 Ward No. 1249, 1350, Ward No. 1255 (Part)- E.B.No. 221 to 329.",C_ward_or_EB_level
+168,Chandivali,"Greater Mumbai M. Corp. (Part) - Ward No.1978 (Part) - E.B.No. 55 to 61, 64 to 69, 73 to 78, 126 to 138, 164 to 352, 394 to 405, 422 to 573, 580 to 689, 707 to 831, Ward No. 2384(Part)-E.B. No. 255 to 302.",C_ward_or_EB_level
+169,Ghatkopar West,"Greater Mumbai M. Corp. (Part) - Ward No. 2284 (Part)-, E.B. No. 486 to 489, 492, 493, 495, 500 to 536, 538 to 587, 609, 610, Ward No. 2283, Ward No. 1978 (Part)-E.B. No. 353 to 393, 406 to 421, 690 to 706, 832 to 836",C_ward_or_EB_level
+170,Ghatkopar East,"Greater Mumbai M. Corp. (Part) - Ward No. 2281, 2284 (Part)-E.B. No. 430 to 485, 490, 491, 494, 496 to 499, 537, 588 to 608 and Ward No. 2282.",C_ward_or_EB_level
+171,Mankhurd Shivaji Nagar,"Greater Mumbai M. Corp. (Part) - Ward No. 2079, Ward No. 2080 (Part) - E.B. No. 1 to 59, 112 to 123, 179, 595 to 799, 805, 808 to 1048, 1200 to 1213, 1225, 1226, 1228 & 1230.",C_ward_or_EB_level
+172,Anushakti Nagar,"Greater Mumbai M. Corp. (Part) - Ward No. 2080 (Part) - E.B. No. 60 to 111, 124 to 178, 180 to 594, 800 to 804, 806 , 807, 1049 to 1057, 1190 to 1199, 1214 to 1224, 1227, 1229, 1231, 3301 & 3302.",C_ward_or_EB_level
+173,Chembur,"Greater Mumbai M. Corp. (Part) - Ward No. 2180, Ward No. 2179 (Part) - E.B. No. 87 to 507, 601 to 611, 617, 691 to 694, Ward No. 1977(Part) - E.B. No. 87, 88, 265, 266, 272, 273, 277 to 288 & 290.",C_ward_or_EB_level
+174,Kurla (SC),"Greater Mumbai M. Corp. (Part) - Ward No. 1976, Ward No. 1977 (Part)-E.B. No. 1 to 86, 89 to 264, 267 to 271, 274, 275, 289, 291 to 294, Ward No. 2179 (Part)- E.B. No. 1 to 86, 508 to 600, 612 to 616, Ward No. 1975 (Part) - E.B. No 1 to 27, 29 to 46, 127 to 147, 156 to 201.",C_ward_or_EB_level
+175,Kalina,"Greater Mumbai M. Corp. (Part) - Ward No. 1048 (Part) -E.B. No. 59 to 76, 129 to 324, 340 to 430, 438 to 483, Ward No. 1975 (Part) E.B. No. 28, 47 to 126, 148 to 155 and 202 to 240 Ward No. 1978 (Part)-E.B. No. 1 to 54, 62, 63, 70 to 72, 79 to 125, 139 to 163, 574 to 579, and 837.",C_ward_or_EB_level
+176,Vandre East,"Greater Mumbai M. Corp. (Part)-Ward No.1043, Ward No. 1045, Ward No. 1048, (Part)- E.B. No. 1 to 58 & 77 to 94.",C_ward_or_EB_level
+177,Vandre West,"Greater Mumbai M. Corp. (Part) - Ward No. 1139 to 1147, 1151.",C_ward_or_EB_level
+178,Dharavi (SC),"Greater Mumbai M. Corp. (Part) - Ward No. 933 (Part) Dadar - E.B. No. 12, EB. No. 16 to 507, 699 to 733 .",C_ward_or_EB_level
+179,Sion Koliwada,"Greater Mumbai (M. Corp.) (Part) - Ward No. 732 (Part)-Sion - E.B. No. 1 to 56, 58 to 74, 76 to 112, 116 to 178, 184 to 359, 378 to 393, 395 to 409, 414 to 449, 475 to 479, 482 to 489, 496 to 540, 552 to 570, 572 to 604, 616 to 643, 791 to 794, 797, 1601.",C_ward_or_EB_level
+180,Wadala,"Greater Mumbai (M Corp.) (Part)- Ward No. 630 - Naigaon, Ward No. 731 - Matunga - Ward No. 629 (Part) Shiwadi - E.B. No. 32 to 48, 304 to 306, 309, 310, - Ward No. 732 (Part) - Sion - E.B. No. 57, 75, 113 to 115, 179 to 183, 360 to 367, 394, 410 to 413, 450 to 474, 480, 481, 490 to 495, 541 to 551, 571, 605 to 615 , 644 to 790, 795 & 796, Ward No. 935 (Part)-Prabhadevi - E.B. No. 122 to 130, 132, 134 to 162. Greater Mumbai (M.Corp.) (Part)- Ward No. 934, Ward No. 835",C_ward_or_EB_level
+181,Mahim,"(Part)-Prabhadevi - E.B. No. 1 to 66, 182, 212 to 225, Ward No. 935 (Part)- Prabhadevi - E.B. No. 1 to 121, 131, 133, 163, Ward No. 836 (Part)-Worli - E.B. No. 120,122,127,129 to 157, 284, 287 and Ward No. 933 (Part) - Dadar - E.B. No 1 to 11, 13 to 15, 508 to 698 & 734.",C_ward_or_EB_level
+182,Worli,"Greater Mumbai (M.Corp.) (Part)- Ward No. 838 -Love Grove, Ward No. 837 (Part)-Chinchpokli, E.B. No. 27 to 186, 188 to 194, Ward No. 836 (Part)-Worli, E.B. No 1 to 119, 121, 123 to 126, 128, 158 to 283, 285, 286, 801,802 & 1001.",C_ward_or_EB_level
+183,Shivadi,"Greater Mumbai (M.Corp.) (Part), Ward No. 628 -Parel, Ward No. 837 (Part)-Chinchpokli - E.B. No. 1 to 26, and 187, Ward No. 835 (Part)-Prabhadevi,E.B. No 164 to 181, 183 to 211, Ward No. 629(Part)-Shivadi - E.B. No. 1 to 31, 49 to 303, 307, 308 & 311 to 317.",C_ward_or_EB_level
+184,Byculla,"Greater Mumbai (M Corp.) (Part), Ward No. 522 -Mazgaon, Ward No. 523 -Tadwadi, Ward No. 524 - 1st Nagpada and Ward No. 527-Byculla.",C_ward_or_EB_level
+185,Malabar Hill,"Greater Mumbai (M Corp.) (Part) - Ward No. 416 - Khetwadi, Ward No. 418-Girgaum, Ward No. 419 -Chowpaty, Ward No. 420- Walkeshwar and Ward No. 421-Mahalaxmi.",C_ward_or_EB_level
+186,Mumbadevi,"Greater Mumbai (M.Corp.)(Part) - Ward No. 208 -Umarkhadi, 209- Dongari, Ward No. 310 -Khara Talao, Ward No. 311 - Kumbharwada, Ward No. 312-Bhuleshwar, Ward No. 417 -Tardeo, Ward No. 525 -2nd Nagpada Ward No. 526 -Kamathipura.",C_ward_or_EB_level
+187,Colaba,"Greater Mumbai (M.Corp.) (Part)- Ward No. 101 -Upper Colaba, Ward No. 102 -Middle & Lower Colaba, Ward No. 103 -Fort South, Ward No. 104 -Fort North, Ward No. 105 -Esplanade, Ward No. 206-Mandavi, Ward No. 207 -Chakla, Ward No. 313 -Market, Ward No. 314-Dhobi Talao and Ward No.315 -Fanaswadi.",C_ward_or_EB_level
+188,Panvel,"1. Panvel Tehsil (Part), Revenue Circle Taloja, Morbe, Panvel, and Panvel (MC) .",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+189,Karjat,"1. Karjat Tehsil, 2. Khalapur Tehsil (Part), Revenue Circle Vavashi, Khopoli and Khopoli (MC).",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+190,Uran,"1. Uran Tehsil, 2. Khalapur Tehsil (Part) - Revenue Circle Chauk, 3. Panvel Tehsil (Part), Revenue Circle Owle and Poyanje.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+191,Pen,"1. Sudhagad Tehsil, 2. Pen Tehsil, 3. Roha Tehsil (Part)-Revenue Circle Nagothane and Kolad.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+192,Alibag,"1. Alibag Tehsil, 2. Murud Tehsil 3. Roha Tehsil (Part), Revenue Circle Chanere.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+193,Shrivardhan,"1. Shrivardhan Tehsil, 2. Mhasla Tehsil, 3. Roha Tehsil (Part) Revenue Circle Roha and Roha Ashtami (MC), 4. Mangaon Tehsil(Part)-Revenue Circle Mangaon, 5. Tala Tehsil.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+194,Mahad,"1. Mahad Tehsil, 2. Poladpur Tehsil, 3. Mangaon Tehsil (Part) Revenue Circle Nijampur and Goregaon.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+195,Junnar,Junnar Tehsil.,A_whole_subdistricts_and_towns_only
+196,Ambegaon,"1. Ambegaon Tehsil, 2. Shirur Tehsil (Part) - Revenue Circle Pabal, Taklihaji, Shirur (excluding Shirur and Karanjawane Sazas).",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+197,Khed Alandi,Khed Tehsil.,A_whole_subdistricts_and_towns_only
+198,Shirur,"1. Shirur Tehsil (Part) - Revenue Circle Nhavare, Wadgaon Rasai and Talegaon Dhamdhere, Shirur Saza and Karanjawane Saza of Shirur Revenue Circle and Shirur (M.C.), 2. Haveli Tehsil (Part) - Revenue Circle - Wagholi and Urali Kanchan .",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+199,Daund,Daund Tehsil.,A_whole_subdistricts_and_towns_only
+200,Indapur,Indapur Tehsil.,A_whole_subdistricts_and_towns_only
+201,Baramati,Baramati Tehsil.,A_whole_subdistricts_and_towns_only
+202,Purandar,"1. Purandar Tehsil, 2. Haveli Tehsil (Part) - Revenue Circle Hadapsar (Excluding area covered in PMC as wards), Pisoli village in Hadapsar Revenue Circle (Ward No. 135 of PMC), Undri village in Hadaspur Revenue Circle (Ward No. 136 of PMC), Ambegaon Bk village in Hadapsar Revenue Circle (Ward No 141 of PMC), Ambegaon Kd village in Hadapsar Revenue Circle (Ward No. 142 of PMC).",C_ward_or_EB_level
+203,Bhor,"1. Mulshi Tehsil, 2.Velhe Tehsil 3. Bhor Tehsil 4. Pune M. Corp(Part) - Wards 157, 159 and 160.",C_ward_or_EB_level
+204,Maval,"1. Maval Tehsil, 2. Haveli Tehsil (Part) - Chinchwad Revenue Circle (Dehu Saza) and Dehu Road Cantonment.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+205,Chinchwad,"Haveli Tehsil (Part) - Pimpri Chinchwad M.Corp. (Part)-Ward No 38 to 51, 53, 67 to 73, and 91 to 95.",C_ward_or_EB_level
+206,Pimpri (SC),"Haveli Tehsil (Part)-Pimpri Chinchwad M.Corp (Part) - Ward No. 1 to 7, 13 to 18, 31 to 37, 52, 54 to 58, 61 to 66, 74 to 79, 87 to 90, CME - 999.",C_ward_or_EB_level
+207,Bhosari,"Haveli Tehsil (Part),-Pimpri Chinchwad M.Corp. (Part) - Ward No. 8 to 12, 19 to 30, 59, 60, 80 to 86.",C_ward_or_EB_level
+208,Vadgaon Sheri,"1. Pune Municipal Corp. (Part)-Ward No. 8 to 15, 64 to 68, 125 to 129, 2. Haveli Tehsil (Part)- Revenue Circle Kalas (excluding Area Transferred to PMC).",C_ward_or_EB_level
+209,Shivajinagar,"Pune M. Corp. (Part)- Ward No. 1 to 7, 59 to 63, 95 to 101, 119 and Khadki Cantonment.",C_ward_or_EB_level
+210,Kothrud,"Pune M. Corp (Part)-Ward No. 43 to 58, 161 & 162.",C_ward_or_EB_level
+211,Khadakwasala,"Haveli Tehsil (Part)-Revenue Circle - Khed Shivapur, (excluding area covered in PMC as wards), Narhe village in Khed Shivapur Revenue Circle (Ward No. 143 of PMC), Nanded village in Khed Shivapur Revenue Circle (Ward No. 146 of PMC), Kirkatwadi Vill. in Khed Shivapur Revenue Circle (Ward No. 147 of PMC), Khadakwasla Vill. in Khed Shivapur Revenue Circle (Ward No. 148 of PMC), Kothrud Revenue Circle in Haveli Tehsil excluding area transferred to PMC as Wards, Shivne Vill. in Kothrud Revenue Circle shown as Ward No. 152, Uttamnagar village. in Kothrud Revenue Circle shown as Ward. No. 153, Kopre village in Kothrud Revenue Circle shown as Ward No. 154, Kondhwe Dhavde village in Kothrud Revenue Circle shown as Ward No. 155, Pune M.Corp(Part) - Ward No. 31, 140, 144, 145, 149, 151,156, 158.",C_ward_or_EB_level
+212,Parvati,"Pune M. Corp (Part) - Ward No. 27 to 30, 32 to 40, 42, 86 to 90 &150.",C_ward_or_EB_level
+213,Hadapsar,"1. Pune City Tehsil (Part)-Revenue Circle - Yerwada (Mundhava Saza) shown as Ward No. 130 of PMC, 2. Pune M. Corp-(Part) Ward No. 17, 19 to 23, 26, 131 to 134, 137 to 139.",C_ward_or_EB_level
+214,Pune Cantonment (SC),"Pune M. Corp-(Part) - Ward No. 16, 18, 24 to 25, 69 to 75, 77, 79 to 80, 83 to 85, 102, 104 and Pune Cantonment.",C_ward_or_EB_level
+215,Kasba Peth,"Pune M. Corp.(Part) - Ward No. 41, 76, 78, 81 to 82, 91 to 94, 103, 105 to 118, 120 to 124.",C_ward_or_EB_level
+216,Akole (ST),"1. Akole Tehsil, 2. Sangamner Tehsil (Part) Revenue Circle Ghargaon",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+217,Sangamner,"Sangamner Tehsil (Part) Revenue Circle - Talegaon, Sakur, Sangamner and Sangamner (MC)",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+218,Shirdi,"1. Sangamner Tehsil (Part) Revenue Circle - Ashwi . 2. Rahata Tehsil (Part) Revenue Circle - Rahata, Rajuri, Loni, Shirdi (MC), and Rahata Pimplas (MC).",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+219,Kopargaon,"1. Kopargaon Tehsil, 2. Rahata Tehsil (Part) Revenue Circle - Puntamba and Chitali.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+220,Shrirampur (SC),"1. Shrirampur Tehsil, 2. Rahuri Tehsil (Part) Revenue Circle Deolali, and Deolali Pravara (MC).",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+221,Nevasa,Nevasa Tehsil.,A_whole_subdistricts_and_towns_only
+222,Shevgaon,"1. Shevgaon Tehsil, 2. Pathardi Tehsil (Part) Revenue Circle - Pathardi, Takali Manur, and Pathardi (MC).",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+223,Rahuri,"1. Rahuri Tehsil (Part)-Revenue Circle Rahuri, Vambori, and Rahuri (MC), 2. Ahmednagar Tehsil (Part)- Revenue Circle - Jeur 3. Pathardi Tehsil (Part) Revenue Circle - Karanji,",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+224,Parner,"1. Parner Tehsil, 2. Ahmednagar Tehsil (Part) - Revenue Circle - Nalegaon, Chas.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+225,Ahmednagar City,1. Ahmednagar Tehsil (Part)-Ahmednagar (M.Corp.) and Ahmednagar (C.B.) .,B2_part_unit_other
+226,Shrigonda,"1. Shrigonda Tehsil, 2. Ahmednagar Tehsil (Part)-Revenue Circle Chichondi, Walki.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+227,Karjat Jamkhed,"1. Karjat Tehsil, 2. Jamkhed Tehsil.",A_whole_subdistricts_and_towns_only
+228,Georai,"1. Georai Tehsil, 2. Majalgaon Tehsil (Part) Revenue Circle Talkhed, 3. Beed Tehsil (Part) Revenue Circle Pimpalner, Pendgaon.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+229,Majalgaon,"1. Majalgaon Tehsil (Part) Revenue Circle-Kitti Adgaon, Gangamasla, Nitrud, Dindrud, Majalgaon and Majalgaon (MC), 2. Dharur Tehsil, 3. Wadwani Tehsil.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+230,Beed,"1. Beed Tehsil (Part) Revenue Circle - Manjarsumba, Chausala, Nalwandi, Rajuri Navgan, Beed and Beed (MC), 2. Shirur Tehsil (Part) Revenue Circle, Raimoha. 1. Ashti Tehsil, 2. Patoda Tehsil, 3. Shirur Tehsil (Part) Revenue",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+231,Ashti,Circle - Shirur.,B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+232,Kaij (SC),"1. Kaij Tehsil, 2. Beed Tehsil (Part) Revenue Circle Neknoor, 3. Ambajogai Tehsil (Part) Revenue Circle Lokhandi Sawargaon, Ambajogai and Ambajogai (MC)",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+233,Parli,"1. Parli Tehsil, 2. Ambajogai Tehsil (Part) Revenue Circle - Bardapur, Ghatnandur. 1. Renapur Tehsil, 2. Latur Tehsil (Part) Revenue Circle, Murud,",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+234,Latur Rural,"Tandulja, Gategaon, Kasar Kheda, 3. Ausa Tehsil (Part) Revenue Circle - Bhada.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+235,Latur City,Latur Tehsil (Part) Revenue Circle - Latur and Latur (MC).,B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+236,Ahmadpur,"1. Ahmadpur Tehsil, 2. Chakur Tehsil.",A_whole_subdistricts_and_towns_only
+237,Udgir (SC),"1. Jalkot Tehsil, 2. Udgir Tehsil.",A_whole_subdistricts_and_towns_only
+238,Nilanga,"1. Shirur-Anantpal Tehsil, 2. Deoni Tehsil, 3. Nilanga Tehsil (Part) Revenue Circle - Ambulaga, Aurad Shahajani, Nilanga and Nilanga (MC).",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+239,Ausa,"1. Ausa Tehsil (Part) Revenue Circle Lamjana, Matola, Killari, Ausa and Ausa (MC), 2. Nilanga Tehsil (Part) Revenue Circle - Madansuri, Kasar Shirshi, Kasar Balkunda.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+240,Umarga (SC),"1. Lohara Tehsil, 2. Umarga Tehsil.",A_whole_subdistricts_and_towns_only
+241,Tuljapur,"1. Osmanabad Tehsil (Part) Revenue Circle, Bembli, Padoli, Ter, 2. Tuljapur Tehsil.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+242,Osmanabad,"1. Kalamb Tehsil, 2. Osmanabad Tehsil (Part) Revenue Circle - Dhoki, Osmanabad and Osmanabad (MC).",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+243,Paranda,"1. Paranda Tehsil, 2. Bhum Tehsil 3. Washi Tehsil",A_whole_subdistricts_and_towns_only
+244,Karmala,"1. Karmala Tehsil, 2. Madha Tehsil (Part) Revenue Circle - Ropale, Kurduwadi and Kurduwadi (MC).",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+245,Madha,"1. Madha Tehsil (Part) Revenue Circle- Tembhurni, Modnimb , Laul, Madha, Darfal, 2. Pandharpur Tehsil (Part) Revenue Circle-Patvardhan Kuroli, Karkamb,Tungat, 3. Malsiras Tehsil(Part) Revenue Circle Mahalung.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+246,Barshi,Barshi Tehsil.,A_whole_subdistricts_and_towns_only
+247,Mohol (SC),"1. Mohol Tehsil, 2. Pandharpur Tehsil (Part) Revenue Circle Puluj, 3. Solapur North Tehsil (Part)- Revenue Circle - Wadala, Mardi.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+248,Solapur City North,"Solapur North Tehsil (Part) - Revenue Circle Solapur, Solapur (M. Corp.) (Part) -Ward No. 1 to 5, 15 to 28, 48 to 49, 52 to 65, 86 to 88.",C_ward_or_EB_level
+249,Solapur City Central,"Solapur North Tehsil (Part) - Solapur (M. Corp.) (Part) - Ward No.6, 29 to 39, 44 to 47, 50, 51, 66 to 85, 89 & 90.",C_ward_or_EB_level
+250,Akkalkot,"1. Akkalkot Tehsil, 2. Solapur South Tehsil (Part) Revenue Circle - Boramani, Musti, Valsang.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+251,Solapur South,"1. Solapur North Tehsil (Part) Revenue Circle- Tirhe, Shelga, Solapur (M. Corp.) (Part) -Ward No. 7 to 14, 40 to 43. 2. Solapur South Tehsil (Part) Revenue Circle - Hotgi, Mandrup, Vinchur.",C_ward_or_EB_level
+252,Pandharpur,"1. Mangalvedhe Tehsil, 2. Pandharpur Tehsil (Part) Revenue Circle- Kasegaon, Pandharpur and Pandharpur (MC).",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+253,Sangole,"1. Sangole Tehsil, 2. Pandharpur Tehsil (Part)- Revenue Circle Bhalawani.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+254,Malshiras (SC),"Malshiras Tehsil (Part) Revenue Circle - Dahigaon, Natepute, Sadashivnagar, Malshiras, Akluj, Velapur, Piliv.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+255,Phaltan (SC),"1. Phaltan Tehsil, 2. Koregaon Tehsil (Part) Revenue Circle - Wathar Station.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+256,Wai,"1. Wai Tehsil, 2. Khandala Tehsil, 3. Mahabaleshwar Tehsil.",A_whole_subdistricts_and_towns_only
+257,Koregaon,"1. Khatav Tehsil (Part) Revenue Circle - Pusegaon, Khatav, 2. Koregaon Tehsil (Part) Revenue Circle Satara Road, Kinhai, Kumthe, Koregaon, 3. Satara Tehsil (Part) Revenue Circle - Vaduth, Khed, Tasgaon.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+258,Man,"1. Man Tehsil, 2. Khatav Tehsil (Part) Revenue Circle Aundh, Vaduj, Katar Khatav, Mayani.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+259,Karad North,"1. Khatav Tehsil (Part) Revenue Circle - Puse Sawali, 2. Koregaon Tehsil (Part) Revenue Circle - Wathar Kiroli, Rahimatpur and Rahimatpur (MC), 3. Satara Tehsil (Part) Revenue Circle - Apashinge, Nagthane, 4. Karad Tehsil (Part) Revenue Circle-Endoli, Masur, Umbraj, Koparde Haveli.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+260,Karad South,"Karad Tehsil (Part) Revenue Circle - Kole, Undale, Kale, Shenoli, Karad and Karad (MC).",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+261,Patan,"1. Patan Tehsil, 2. Karad Tehsil (Part) Revenue Circle - Supane.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+262,Satara,"1. Jaoli Tehsil, 2. Satara Tehsil (Part) Revenue Circle Varye, Dahivad, Parali, Ambavade Kh, Shendre, Satara and Satara(MC).",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+263,Dapoli,"1. Mandangad Tehsil, 2. Dapoli Tehsil, 3. Khed Tehsil (Part) Revenue Circle Bharane, Ambavali, Khed and Khed (MC).",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+264,Guhagar,"1. Guhagar Tehsil, 2. Khed Tehsil (Part) Revenue Circle, Shirshi, Lavel, Dhamanand, 3. Chiplun Tehsil (Part) Revenue Circle, Rampur, Kharavate, Vahal.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+265,Chiplun,"1. Chiplun Tehsil (Part) Revenue Circle Kalkavane, Shirgaon, Savarde, Chiplun and Chiplun (MC), 2. Sangameshwar Tehsil (Part) Revenue Circle Makhajan, Kadvai, Phansavane, Vashi Tarfe Sangameshwar, Devrukh, Angavali.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+266,Ratnagiri,"1. Ratnagiri Tehsil, 2. Sangmeshwar Tehsil (Part) Revenue Circle, Mabhale.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+267,Rajapur,"1. Rajapur Tehsil, 2. Lanja Tehsil, 3. Sangameshwar Tehsil (Part) Revenue Circle-Kondgaon. 33 - DISTRICT SINDHUDURG",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+268,Kankavli,"1. Devgad Tehsil, 2. Vaibhavvadi Tehsil, 3. Kankavli Tehsil.",A_whole_subdistricts_and_towns_only
+269,Kudal,"1. Malwan Tehsil, 2. Kudal Tehsil",A_whole_subdistricts_and_towns_only
+270,Sawantwadi,"1. Vengurla Tehsil, 2. Sawantwadi Tehsil, 3. Dodamarg Tehsil.",A_whole_subdistricts_and_towns_only
+271,Chandgad,"1. Chandgad Tehsil, 2. Ajra Tehsil (Part) Revenue Circle, Maligre, 3. Gadhinglaj Tehsil (Part) Revenue Circle, Dundage, Halkarni, Mahagaon, Nesari.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+272,Radhanagari,"1. Radhanagari Tehsil, 2. Bhudargad Tehsil, 3. Ajra Tehsil (Part) Revenue Circle, Ajra.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+273,Kagal,"1. Kagal Tehsil, 2. Ajra Tehsil (Part) Revenue Circle, Uttur, 3. Gadhinglaj Tehsil (Part) Revenue Circle ,Gadhinglaj and Gadhinglaj (MC).",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+274,Kolhapur South,"1. Karvir Tehsil (Part) Revenue Circle, Mudsungi, Kaneri, Ispurli, 2. Kolhapur (M.Corp.) (Part) - Ward No. 15, 16, 23, 43 to 46, 51, 57, 58, 61, 64 & 66 to 72.",C_ward_or_EB_level
+275,Karvir,"1. Gagan Bavda Tehsil, 2. Panhala Tehsil (Part) Revenue Circle, Bajar Bhogaon, Kale, 3. Karvir Tehsil (Part) Revenue Circle, Kuditre, Nigave Dumala, Haladi, Beed, Sangarul.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+276,Kolhapur North,"Karvir Tehsil (Part) Kolhapur (M.Corp.) (Part) - Ward No. 1 to 14, 17 to 22, 24 to 42, 47 to 50, 52 to 56, 59, 60, 62, 63 & 65.",C_ward_or_EB_level
+277,Shahuwadi,"1. Shahuwadi Tehsil, 2. Panhala Tehsil(Part) Revenue Circle, Kodoli, Kotoli, Panhala and Panhala (MC).",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+278,Hatkanangle (SC),"1. Hatkanangle Tehsil (Part) Revenue Circle, Vathar tarfe Vadgaon, Vadgaon Kasba, Hatkanangle, Herle, Rui, Hupari, and Vadgaon Kasba (MC).",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+279,Ichalkaranji,1. Hatkanangle Tehsil (Part) Revenue Circle Ichalkaranji and Ichalkaranji (MC).,B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+280,Shirol,Shirol Tehsil.,A_whole_subdistricts_and_towns_only
+281,Miraj (SC),"1. Miraj Tehsil (Part)-Revenue Circle Miraj, Malgaon Arag, Kavalapur and Sangli-Miraj Kupwad (M.Corp.) (Part) - Ward No. 4 to 9, 26 to 37, 54 to 60.",C_ward_or_EB_level
+282,Sangli,"1. Miraj Tehsil (Part) Revenue Circle Sangli, Budhgaon and Sangli- Miraj Kupwad (M.Corp.) (Part) - Ward No. 1 to 3, 10 to 25, 38 to 53 and 61 to 69.",C_ward_or_EB_level
+283,Islampur,"1. Walwa Tehsil (Part) Revenue Circle Takari Walwa, Islampur and Uran Islampur (MC), Ashta and Ashta (MC), 2. Miraj Tehsil (Part) Revenue Circle Kasbe Digras.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+284,Shirala,"1. Shirala Tehsil, 2. Walwa Tehsil (Part) Revenue Circle , Chikurde, Peth , Yelur, Kasegaon .",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+285,Palus- Kadegaon,"1. Palus Tehsil, 2. Kadegaon Tehsil.",A_whole_subdistricts_and_towns_only
+286,Khanapur,"1. Khanapur (Vita) Tehsil, 2. Atpadi Tehsil, 3. Tasgaon Tehsil (Part) - Revenue Circle Visapur.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+287,Tasgaon - Kavathe Mahankal,"1. Kavathe Mahankal Tehsil, 2. Tasgaon Tehsil (Part) (excluding Visapur Revenue Circle).",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+288,Jat,Jat Tehsil.,A_whole_subdistricts_and_towns_only

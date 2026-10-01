@@ -1,0 +1,247 @@
+state,lgd_ac_code,lgd_ac_name,lgd_pc_name,lgd_eci_ac_code,method,similarity,eci_ac_no,app_name,app_pc_name,pc_check,delimitation,note
+Andhra Pradesh,3413,Satyaveedu,Tirupati,,fuzzy,0.947,169,SATYAVEDU,THIRUPATHI,agrees,2008,similarity; PC agrees; consonant skeleton equal
+Arunachal Pradesh,1424,Mechukha,Arunachal West,,fuzzy,1.0,33,MECHUKA,ARUNACHAL WEST,agrees,1976-deferred,phonetic key equal
+Arunachal Pradesh,1382,Bordumsa - Diyum,Arunachal East,,fuzzy,0.923,49,BORDUMSA - DIYUN,ARUNACHAL EAST,agrees,1976-deferred,similarity; PC agrees
+Arunachal Pradesh,1404,Pongchao wakka,Arunachal East,,fuzzy,0.923,60,PONGCHAU WAKKA,ARUNACHAL EAST,agrees,1976-deferred,similarity; PC agrees; consonant skeleton equal
+Assam,1791,Patherkandi,Karimganj,2,eci_code,0.909,2,PATHARKANDI,KARIMGANJ,agrees,1976-deferred,eci code; name spelled differently
+Assam,1831,Borkhola,Silchar,,fuzzy,0.875,14,BARKHOLA,SILCHAR,agrees,1976-deferred,similarity; PC agrees; consonant skeleton equal
+Assam,1833,Katigorah,Silchar,,fuzzy,1.0,15,KATIGORA,SILCHAR,agrees,1976-deferred,phonetic key equal
+Assam,1744,Birsing Jarua,Dhubri,,manual,0.3,21,MANKACHAR,DHUBRI,agrees,unknown,"Assam: LGD ""Birsing Jarua"" (2023 name) covers South Salmara-Mankachar district; old Mankachar slot is otherwise absent"
+Assam,1742,Golokganj,Dhubri,25,eci_code,0.889,25,GOLAKGANJ,DHUBRI,agrees,1976-deferred,eci code; name spelled differently
+Assam,1797,Gossaigaon,Kokrajhar,28,eci_code,0.9,28,GOSSALGAON,KOKRAJHAR,agrees,1976-deferred,eci code; name spelled differently
+Assam,1726,SRIJANGRAM,Dhubri,34,manual,0.3,34,ABHAYAPURI NORTH,BARPETA,differs,unknown,"Assam: LGD ""Srijangram"" (2023 name) carries LGD ECI code 34 = old Abhayapuri North; coverage includes Abhayapuri town"
+Assam,1727,Abhayapuri,Barpeta,,manual,0.952,35,ABHAYAPURI SOUTH,BARPETA,agrees,unknown,"Assam: LGD ""Abhayapuri"" is the remaining Abhayapuri slot = old Abhayapuri South (SC) once Srijangram takes 34; old Abhayapuri North/South are otherwise absent"
+Assam,1759,Dudhnoi,Gauhati,,fuzzy,0.857,36,DUDHNAI,GAUHATI,agrees,1976-deferred,similarity; PC agrees; consonant skeleton equal
+Assam,1794,Bhowanipur Sorbhog,Barpeta,,manual,0.593,41,BHABANIPUR,KOKRAJHAR,differs,unknown,"Assam: LGD ""Bhowanipur Sorbhog"" (2023 name) = old Bhabanipur slot (absent otherwise)"
+Assam,1800,Bajali,Barpeta,26,manual,0.353,42,PATACHARKUCHI,BARPETA,agrees,unknown,"Assam: LGD ""Bajali"" (2023 name) sits on the old Patacharkuchi slot - coverage = Patacharkuchi town + part of Tihu; old Patacharkuchi is otherwise absent from LGD; LGD ECI code 26 is Bajali's 2023 number, not an old one"
+Assam,1757,Chhaygaon,Gauhati,,fuzzy,1.0,49,CHAYGAON,GAUHATI,agrees,1976-deferred,phonetic key equal
+Assam,1819,Rangia,Mangaldoi,,fuzzy,1.0,57,RANGIYA,MANGALDOI,agrees,1976-deferred,phonetic key equal
+Assam,1755,Barkhetri,Gauhati,60,eci_code,1.0,60,BARKHETRY,GAUHATI,agrees,1976-deferred,eci code; name spelled differently
+Assam,1838,Barchalla,Sonitpur,,fuzzy,0.889,72,BORCHALLA,TEZPUR,agrees,1976-deferred,similarity; PC differs; consonant skeleton equal
+Assam,1839,Behali,Sonitpur,,fuzzy,0.833,77,BIHALI,TEZPUR,agrees,1976-deferred,similarity; PC differs; consonant skeleton equal
+Assam,1843,Gohpur,Sonitpur,78,eci_code,0.833,78,GAHPUR,TEZPUR,agrees,1976-deferred,eci code; name spelled differently
+Assam,1775,Batadraba,Nagaon,,fuzzy,0.889,84,BATADROBA,KALIABOR,differs,1976-deferred,similarity; PC differs; consonant skeleton equal
+Assam,1782,Rupahihat,Nagaon,,fuzzy,0.889,85,RUPOHIHAT,KALIABOR,differs,1976-deferred,similarity; PC differs; consonant skeleton equal
+Assam,1829,Nagaon,Nagaon,86,eci_code,1.0,86,NOWGONG,NOWGONG,agrees,1976-deferred,eci code; official rename (NAGAON=NOWGONG)
+Assam,1768,Mariani,Jorhat,101,eci_code,0.857,101,MORIANI,JORHAT,agrees,1976-deferred,eci code; name spelled differently
+Assam,1767,Mahmora,Jorhat,105,eci_code,0.857,105,MAHMARA,JORHAT,agrees,1976-deferred,eci code; name spelled differently
+Assam,1773,Demow,Jorhat,95,manual,0.4,107,THOWRA,JORHAT,agrees,unknown,"Assam: LGD ""Demow"" (2023 name) = old Thowra slot (Sivasagar dist.; absent otherwise); LGD ECI code 95 is Demow's 2023 number"
+Assam,1770,Sivasagar,Jorhat,108,eci_code,1.0,108,SIBSAGAR,JORHAT,agrees,1976-deferred,eci code; official rename (SIVASAGAR=SIBSAGAR)
+Assam,1748,Dulijan,Dibrugarh,118,eci_code,0.933,118,DULIAJAN,DIBRUGARH,agrees,1976-deferred,eci code; name spelled differently
+Bihar,1328,Pipra,Supaul,,fuzzy,0.625,42,PIPRA (SUPAUL),SUPAUL,agrees,2008,similarity; PC agrees
+Bihar,1156,Gora bauram,Darbhanga,79,eci_code,0.857,79,GAURA BAURAM,DARBHANGA,agrees,2008,eci code; name spelled differently
+Bihar,1172,Manhar,Hajipur,129,eci_code,1.0,129,MAHNAR,HAJIPUR,agrees,2008,eci code; name spelled differently
+Bihar,1248,Bisharsharif,Nalanda,172,eci_code,0.957,172,BIHARSHARIF,NALANDA,agrees,2008,eci code; name spelled differently
+Chhattisgarh,2413,Kobra,Korba,21,eci_code,0.8,21,KORBA,KORBA,agrees,2008,eci code; name spelled differently
+Chhattisgarh,2396,Chandrapura,Janjgir Champa,36,eci_code,0.952,36,CHANDRAPUR,JANJGIR-CHAMPA,agrees,2008,eci code; name spelled differently
+Chhattisgarh,2442,Raipur Rural,Raipur,48,eci_code,0.846,48,RAIPUR CITY GRAMIN,RAIPUR,agrees,2008,eci code; name spelled differently
+Chhattisgarh,2404,Dondi Lohara,Kanker,60,eci_code,0.947,60,DONDI LAHARA,KANKER,agrees,2008,eci code; name spelled differently
+Chhattisgarh,2388,Durg-nagar,Durg,65,eci_code,0.526,65,BHILAI NAGAR,DURG,agrees,2008,eci code; name spelled differently
+Chhattisgarh,2390,Nawagarh,Durg,70,eci_code,1.0,70,NAVAGARH,DURG,agrees,2008,eci code; name spelled differently
+Chhattisgarh,2376,Narayanpur,Bastar,84,eci_code,0.947,84,NARAINPUR,BASTAR,agrees,2008,eci code; name spelled differently
+Chhattisgarh,2372,Dantewada,Bastar,88,eci_code,0.889,88,DANTEWARA,BASTAR,agrees,2008,eci code; name spelled differently
+Gujarat,2796,Mahesana,Mahesana,25,eci_code,0.923,25,MEHSANA,MAHESANA,agrees,2008,eci code; name spelled differently
+Gujarat,2785,Morbi,Rajkot,65,eci_code,0.8,65,MORVI,KACHCHH,differs,2008,eci code; name spelled differently
+Gujarat,2771,Kalavad,Jamnagar,76,eci_code,1.0,76,KALAWAD,JAMNAGAR,agrees,2008,eci code; name spelled differently
+Gujarat,2770,Jamnagr Rural,Jamnagar,77,eci_code,0.96,77,JAMNAGAR RURAL,JAMNAGAR,agrees,2008,eci code; name spelled differently
+Gujarat,2792,Mehmedabad,Kheda,117,eci_code,0.941,117,MEHEMDABAD,KHEDA,agrees,2008,eci code; name spelled differently
+Gujarat,2789,Kapadvanj,Kheda,120,eci_code,1.0,120,KAPADWANJ,KHEDA,agrees,2008,eci code; name spelled differently
+Gujarat,2753,Devgadbaria,Dahod,134,eci_code,1.0,134,DEVGADH BARIA,DAHOD,agrees,2008,eci code; name spelled differently
+Gujarat,2861,Sayajigunj,Vadodara,,fuzzy,0.9,142,SAYAJIGANJ,VADODARA,agrees,2008,similarity; PC agrees; consonant skeleton equal
+Gujarat,2801,Choryasi,Navsari,,fuzzy,0.933,168,CHORASI,NAVSARI,agrees,2008,similarity; PC agrees; consonant skeleton equal
+Haryana,406,Tanesar,Kurukshetra,13,eci_code,1.0,13,THANESAR,KURUKSHETRA,agrees,2008,eci code; name spelled differently
+Haryana,419,Kalawali,Sirsa,42,eci_code,0.941,42,KALANWALI,SIRSA,agrees,2008,eci code; name spelled differently
+Jammu & Kashmir,61,Chrar-i-sharief,Srinagar,30,eci_code,0.556,30,CHRAR,SRINAGAR,agrees,1995-JK,eci code; name spelled differently
+Jammu & Kashmir,36,Bahu,Jammu,71,manual,0.267,71,GANDHI NAGAR,JAMMU,agrees,unknown,"J&K: LGD ""Bahu"" (2022 name) carries LGD ECI code 71 = old Gandhi Nagar; coverage = Jammu South tehsil + part of Jammu MC"
+Jammu & Kashmir,47,RS Pura South,Jammu,75,eci_code,0.571,75,RANBIR SINGH PURA,JAMMU,agrees,unknown,eci code; name spelled differently
+Jammu & Kashmir,45,JAMMU NORTH,Jammu,78,manual,0.353,78,RAIPUR DOMANA,JAMMU,agrees,unknown,"J&K: LGD ""Jammu North"" (2022 name) carries LGD ECI code 78 = old Raipur Domana; coverage = Jammu North tehsil"
+Karnataka,3497,Belagavi Uttar,Belagavi,11,eci_code,1.0,11,BELGAUM UTTAR,BELGAUM,agrees,2008,eci code; official rename (BELAGAVI=BELGAUM)
+Karnataka,3495,Belagavi Dakshin,Belagavi,12,eci_code,1.0,12,BELGAUM DAKSHIN,BELGAUM,agrees,2008,eci code; official rename (BELAGAVI=BELGAUM)
+Karnataka,3496,Belagavi Rural,Belagavi,13,eci_code,1.0,13,BELGAUM RURAL,BELGAUM,agrees,2008,eci code; official rename (BELAGAVI=BELGAUM)
+Karnataka,3519,Vijayapura City,Vijayapura,30,eci_code,1.0,30,BIJAPUR CITY,BIJAPUR,agrees,2008,eci code; official rename (VIJAYAPURA=BIJAPUR)
+Karnataka,3584,Kalaburagi Rural,Kalaburagi,43,eci_code,1.0,43,GULBARGA RURAL,GULBARGA,agrees,2008,eci code; official rename (KALABURAGI=GULBARGA)
+Karnataka,3583,Kalaburagi Dakshin,Kalaburagi,44,eci_code,1.0,44,GULBARGA DAKSHIN,GULBARGA,agrees,2008,eci code; official rename (KALABURAGI=GULBARGA)
+Karnataka,3585,Kalaburagi Uttar,Kalaburagi,45,eci_code,1.0,45,GULBARGA UTTAR,GULBARGA,agrees,2008,eci code; official rename (KALABURAGI=GULBARGA)
+Karnataka,3576,Hubballi Dharwad East,Dharwad,72,eci_code,1.0,72,HUBLI-DHARWAD-EAST,DHARWAD,agrees,2008,eci code; official rename (HUBBALLI=HUBLI)
+Karnataka,3575,Hubballi Dharwad Central,Dharwad,73,eci_code,1.0,73,HUBLI-DHARWAD-CENTRAL,DHARWAD,agrees,2008,eci code; official rename (HUBBALLI=HUBLI)
+Karnataka,3574,Hubballi Dharwad West,Dharwad,74,eci_code,1.0,74,HUBLI-DHARWAD- WEST,DHARWAD,agrees,2008,eci code; official rename (HUBBALLI=HUBLI)
+Karnataka,3501,Ballari,Ballari,,fuzzy,1.0,93,BELLARY,BELLARY,agrees,2008,official rename (BALLARI=BELLARY)
+Karnataka,3502,Ballari City,Ballari,94,eci_code,1.0,94,BELLARY CITY,BELLARY,agrees,2008,eci code; official rename (BALLARI=BELLARY)
+Karnataka,3650,Shivamogga Rural,Shivamogga,111,eci_code,1.0,111,SHIMOGA RURAL,SHIMOGA,agrees,2008,eci code; official rename (SHIVAMOGGA=SHIMOGA)
+Karnataka,3649,Shivamogga,Shivamogga,113,eci_code,1.0,113,SHIMOGA,SHIMOGA,agrees,2008,eci code; official rename (SHIVAMOGGA=SHIMOGA)
+Karnataka,3661,Chikkamagaluru,Udupi Chikkamagaluru,125,eci_code,1.0,125,CHIKMAGALUR,UDUPI CHIKMAGALUR,agrees,2008,eci code; official rename (CHIKKAMAGALURU=CHIKMAGALUR)
+Karnataka,3658,Tumakuru City,Tumakuru,132,eci_code,1.0,132,TUMKUR CITY,TUMKUR,agrees,2008,eci code; official rename (TUMAKURU=TUMKUR)
+Karnataka,3659,Tumakuru Rural,Tumakuru,,fuzzy,1.0,133,TUMKUR RURAL,TUMKUR,agrees,2008,official rename (TUMAKURU=TUMKUR)
+Karnataka,3478,Bengaluru South,Bengaluru Rural,176,eci_code,1.0,176,BANGALORE SOUTH,BANGALORE RURAL,agrees,2008,eci code; official rename (BENGALURU=BANGALORE)
+Karnataka,3560,Mangaluru City North,Dakshina Kannada,202,eci_code,1.0,202,MANGALORE CITY NORTH,DAKSHINA KANNADA,agrees,2008,eci code; official rename (MANGALURU=MANGALORE)
+Karnataka,3561,Mangaluru City South,Dakshina Kannada,203,eci_code,1.0,203,MANGALORE CITY SOUTH,DAKSHINA KANNADA,agrees,2008,eci code; official rename (MANGALURU=MANGALORE)
+Karnataka,3559,Mangaluru,Dakshina Kannada,204,eci_code,1.0,204,MANGALORE,DAKSHINA KANNADA,agrees,2008,eci code; official rename (MANGALURU=MANGALORE)
+Karnataka,3635,Piriyapatna,Mysuru,210,eci_code,0.909,210,PERIYAPATNA,MYSORE,agrees,2008,eci code; name spelled differently
+Kerala,3772,Uduma,Kasaragod,,fuzzy,0.889,3,UDMA,KASARAGOD,agrees,2008,similarity; PC agrees; consonant skeleton equal
+Kerala,3855,Thiruvanambadi,Wayanad,,fuzzy,0.917,32,THIRUVAMBADY,WAYANAD,agrees,2008,similarity; PC agrees
+Kerala,3850,Ernad,Wayanad,,fuzzy,0.909,34,ERANAD,WAYANAD,agrees,2008,similarity; PC agrees; consonant skeleton equal
+Kerala,3814,Shoranur,Palakkad,,fuzzy,0.933,51,SHORNUR,PALAKKAD,agrees,2008,similarity; PC agrees; consonant skeleton equal
+Kerala,3811,Ottappalam,Palakkad,,fuzzy,1.0,52,OTTAPALAM,PALAKKAD,agrees,2008,phonetic key equal
+Kerala,3810,Mannarkkad,Palakkad,,fuzzy,1.0,54,MANNARKAD,PALAKKAD,agrees,2008,phonetic key equal
+Kerala,3728,Nemmara,Alathur,,fuzzy,0.923,59,NENMARA,ALATHUR,agrees,2008,similarity; PC agrees
+Kerala,3837,Irinjalakuda,Thrissur,,fuzzy,1.0,70,IRINJALAKKUDA,THRISSUR,agrees,2008,phonetic key equal
+Kerala,3740,Chalakudy,Chalakudy,,fuzzy,1.0,72,CHALAKKUDY,CHALAKUDY,agrees,2008,phonetic key equal
+Kerala,3751,Vypeen,Ernakulam,,fuzzy,0.909,79,VYPEN,ERNAKULAM,agrees,2008,similarity; PC agrees; consonant skeleton equal
+Kerala,3750,Thrippunithura,Ernakulam,,fuzzy,1.0,81,THRIPUNITHURA,ERNAKULAM,agrees,2008,phonetic key equal
+Kerala,3718,Ambalappuzha,Alappuzha,,fuzzy,1.0,105,AMBALAPUZHA,ALAPPUZHA,agrees,2008,phonetic key equal
+Kerala,3806,Mavelikkara,Mavelikkara,,fuzzy,1.0,109,MAVELIKARA,MAVELIKKARA,agrees,2008,phonetic key equal
+Kerala,3774,Chathannoor,Kollam,,fuzzy,1.0,126,CHATHANNUR,KOLLAM,agrees,2008,phonetic key equal
+Kerala,3829,Kazhakoottam,Thiruvananthapuram,,fuzzy,1.0,132,KAZHAKKOOTTAM,THIRUVANANTHAPURAM,agrees,2008,phonetic key equal
+Kerala,3835,Vattiyooukavu,Thiruvananthapuram,,fuzzy,0.947,133,VATTIYOORKAVU,THIRUVANANTHAPURAM,agrees,2008,similarity; PC agrees
+Madhya Pradesh,2606,Sabalgarh,Morena,3,eci_code,0.842,3,SABALAGADH,MORENA,agrees,2008,eci code; name spelled differently
+Madhya Pradesh,2608,Sumawali,Morena,,fuzzy,0.8,5,SUMAOLI,MORENA,agrees,2008,similarity; PC agrees
+Madhya Pradesh,2530,Bhitarwar,Gwalior,18,eci_code,0.941,18,BHITRWAR,GWALIOR,agrees,2008,eci code; name spelled differently
+Madhya Pradesh,2531,Dabra,Gwalior,19,eci_code,0.909,19,DABARA,GWALIOR,agrees,2008,eci code; name spelled differently
+Madhya Pradesh,2611,Chachoura,Rajgarh,30,eci_code,0.824,30,CHACHODA,RAJGARH,agrees,2008,eci code; name spelled differently
+Madhya Pradesh,2637,Naryoli,Sagar,40,eci_code,0.75,40,NARYAWALI,SAGAR,agrees,2008,eci code; name spelled differently
+Madhya Pradesh,2564,Gunnaor,Khajuraho,59,eci_code,0.857,59,GUNNOUR,KHAJURAHO,agrees,2008,eci code; name spelled differently
+Madhya Pradesh,2664,Singrauli,Sidhi,80,eci_code,0.889,80,SINGAROULI,SIDHI,agrees,2008,eci code; name spelled differently
+Madhya Pradesh,2654,Kotma,Shahdol,86,eci_code,0.909,86,KOTAMA,SHAHDOL,agrees,2008,eci code; name spelled differently
+Madhya Pradesh,2656,Pushprajgarh,Shahdol,88,eci_code,1.0,88,PUSPRAJGARH,SHAHDOL,agrees,2008,eci code; name spelled differently
+Madhya Pradesh,2655,Manpur,Shahdol,90,eci_code,0.923,90,MANAPUR,SHAHDOL,agrees,2008,eci code; name spelled differently
+Madhya Pradesh,2590,Lakhnadon,Mandla,117,eci_code,0.947,117,LAKHANADON,MANDLA,agrees,2008,eci code; name spelled differently
+Madhya Pradesh,2497,Saunsar,Chhindwara,125,eci_code,0.923,125,SAUSAR,CHHINDWARA,agrees,2008,eci code; name spelled differently
+Madhya Pradesh,2496,Parasia,Chhindwara,127,eci_code,1.0,127,PARASIYA,CHHINDWARA,agrees,2008,eci code; name spelled differently
+Madhya Pradesh,2470,Ghoradongri,Betul,132,eci_code,0.909,132,GHODADONGRI,BETUL,agrees,2008,eci code; name spelled differently
+Madhya Pradesh,2484,Bhopal Dakshin- paschim,Bhopal,,fuzzy,0.632,152,BHOPAL DAKSHINA-PASHCHIM,BHOPAL,agrees,2008,similarity; PC agrees
+Madhya Pradesh,2571,Bagali,Khandwa,174,eci_code,0.909,174,BAGLI,KHANDWA,agrees,2008,eci code; name spelled differently
+Madhya Pradesh,2570,Badwah,Khandwa,182,eci_code,1.0,182,BARWAH,KHANDWA,agrees,2008,eci code; name spelled differently
+Madhya Pradesh,2585,Sendhawa,Khargone,187,eci_code,0.933,187,SENDHWA (S.T.),KHARGONE,agrees,2008,eci code; name spelled differently
+Madhya Pradesh,2578,Badwani,Khargone,190,eci_code,0.857,190,BARWANI (S.T.),KHARGONE,agrees,2008,eci code; name spelled differently
+Madhya Pradesh,2677,Nagada-khachrod,Ujjain,212,eci_code,0.966,212,NAGADA - KHACHAROD,UJJAIN,agrees,2008,eci code; name spelled differently
+Madhya Pradesh,2673,Alot,Ujjain,223,eci_code,0.889,223,ALOTE,UJJAIN,agrees,2008,eci code; name spelled differently
+Meghalaya,1690,Sohing,Shillong,,fuzzy,0.923,23,SOHIONG,SHILLONG,agrees,2008,similarity; PC agrees; consonant skeleton equal
+Meghalaya,1718,Southtura,Tura,51,eci_code,0.909,51,SOUTH TURA,TURA,agrees,2008,eci code; name spelled differently
+Meghalaya,1697,Ampathi,Tura,,fuzzy,1.0,53,AMPATI,TURA,agrees,2008,phonetic key equal
+Mizoram,1567,Aizawl South ii   (aizawl x),Mizoram,19,eci_code,0.696,19,AIZAWL SOUTH II,MIZORAM,agrees,2008,eci code; name spelled differently
+Odisha,2365,Rajgangpur,Sundargarh,13,eci_code,0.952,13,RAJGANGAPUR,SUNDARGARH,agrees,2008,eci code; name spelled differently
+Odisha,2355,Athmallik,Sambalpur,63,eci_code,0.947,63,ATHAMALLIK,SAMBALPUR,agrees,2008,eci code; name spelled differently
+Odisha,2270,Titilagarh,Bolangir,69,eci_code,0.947,69,TITLAGARH,BOLANGIR,agrees,2008,eci code; name spelled differently
+Odisha,2331,Lakshmipur,Koraput,,fuzzy,1.0,141,LAKHMIPUR,KORAPUT,agrees,2008,phonetic key equal
+Puducherry,4117,Thirubuvanai,PUDUCHERRY,,fuzzy,1.0,2,THIRUBHUVANAI,PUDUCHERRY,agrees,2008,phonetic key equal
+Puducherry,4111,Orleanpeth,PUDUCHERRY,,fuzzy,0.9,16,ORLEAMPETH,PUDUCHERRY,agrees,2008,similarity; PC agrees
+Puducherry,4110,Nettpakkam,PUDUCHERRY,,fuzzy,0.952,22,NETTAPAKKAM,PUDUCHERRY,agrees,2008,similarity; PC agrees; consonant skeleton equal
+Punjab,221,Dasua,Hoshiarpur,40,eci_code,0.909,40,DASUYA,HOSHIARPUR,agrees,2008,eci code; name spelled differently
+Punjab,186,Giddarbaha,Faridkot,84,eci_code,0.9,84,GIDDERBAHA,FARIDKOT,agrees,2008,eci code; name spelled differently
+Punjab,188,Katkapura,Faridkot,88,eci_code,0.889,88,KOTKAPURA,FARIDKOT,agrees,2008,eci code; name spelled differently
+Rajasthan,659,Ladnun,Nagaur,106,eci_code,0.909,106,LADNU,NAGAUR,agrees,2008,eci code; name spelled differently
+Rajasthan,563,Kapasan,Chittorgarh,167,eci_code,0.857,167,KAPASIN,CHITTORGARH,agrees,2008,eci code; name spelled differently
+Rajasthan,550,Sahara,Bhilwara,179,eci_code,0.833,179,SAHADA,BHILWARA,agrees,2008,eci code; name spelled differently
+Sikkim,1371,Salghari-zoom,Sikkim,8,eci_code,0.957,8,SALGHARI-ZOO,SIKKIM,agrees,2008,eci code; name spelled differently
+Sikkim,1378,West pendam,Sikkim,18,eci_code,0.923,18,WEST PENDA,SIKKIM,agrees,2008,eci code; name spelled differently
+Tamil Nadu,4062,Gummidipoondi,Tiruvallur,1,eci_code,1.0,1,GUMMIDIPUNDI,TIRUVALLUR,agrees,2008,eci code; name spelled differently
+Tamil Nadu,3880,Tiruvottiyur,Chennai North,10,eci_code,1.0,10,THIRUVOTTIYUR,CHENNAI NORTH,agrees,2008,eci code; name spelled differently
+Tamil Nadu,3883,Sholinganallur,Chennai South,27,eci_code,0.917,27,SHOZHINGANALLUR,CHENNAI SOUTH,agrees,2008,eci code; name spelled differently
+Tamil Nadu,3932,Madurantakam,Kancheepuram,35,eci_code,1.0,35,MADURANTHAKAM,KANCHEEPURAM,agrees,2008,eci code; name spelled differently
+Tamil Nadu,3857,Arakkonam,Arakkonam,38,eci_code,1.0,38,ARAKONAM,ARAKKONAM,agrees,2008,eci code; name spelled differently
+Tamil Nadu,3861,Sholingur,Arakkonam,39,eci_code,1.0,39,SHOLINGHUR,ARAKKONAM,agrees,2008,eci code; name spelled differently
+Tamil Nadu,4075,Gudiyattam,Vellore,46,eci_code,1.0,46,GUDIYATHAM,VELLORE,agrees,2008,eci code; name spelled differently
+Tamil Nadu,4077,Vaniyambadi,Vellore,47,eci_code,0.957,47,VANIAYAMBADI,VELLORE,agrees,2008,eci code; name spelled differently
+Tamil Nadu,3908,Palacodu,Dharmapuri,57,eci_code,0.875,57,PALACODE,DHARMAPURI,agrees,2008,eci code; name spelled differently
+Tamil Nadu,4084,Viluppuram,Viluppuram,74,eci_code,1.0,74,VILLUPURAM,VILUPPURAM,agrees,2008,eci code; name spelled differently
+Tamil Nadu,4079,Thirukoilur,Viluppuram,76,eci_code,1.0,76,TIRUKKOYILUR,VILUPPURAM,agrees,2008,eci code; name spelled differently
+Tamil Nadu,4081,Ulundurpettai,Viluppuram,77,eci_code,0.909,77,ULUNDURPET,VILUPPURAM,agrees,2008,eci code; name spelled differently
+Tamil Nadu,3926,Rishivandiyam,Kallakurichi,78,eci_code,1.0,78,RISHIVANDIAM,KALLAKURICHI,agrees,2008,eci code; name spelled differently
+Tamil Nadu,4001,Edappadi,Salem,86,eci_code,1.0,86,EDAPADI,SALEM,agrees,2008,eci code; name spelled differently
+Tamil Nadu,3975,Senthamangalam,Namakkal,93,eci_code,0.923,93,SENDAMANGALAM,NAMAKKAL,agrees,2008,eci code; name spelled differently
+Tamil Nadu,3976,Tiruchengodu,Namakkal,96,eci_code,0.917,96,TIRUCHENGODE,NAMAKKAL,agrees,2008,eci code; name spelled differently
+Tamil Nadu,3981,Mettuppalayam,Nilgiris,111,eci_code,1.0,111,METTUPALAYAM,NILGIRIS,agrees,2008,eci code; name spelled differently
+Tamil Nadu,3993,Udumalaipettai,Pollachi,125,eci_code,0.818,125,UDUMALPET,POLLACHI,agrees,2008,eci code; name spelled differently
+Tamil Nadu,3914,Nilakkottai,Dindigul,130,eci_code,1.0,130,NILAKOTTAI,DINDIGUL,agrees,2008,eci code; name spelled differently
+Tamil Nadu,4048,Tiruchirappalli (west),Tiruchirappalli,140,eci_code,1.0,140,TIRUCHIRAPALLI (WEST),TIRUCHIRAPPALLI,agrees,2008,eci code; name spelled differently
+Tamil Nadu,4047,Tiruchirappalli (east),Tiruchirappalli,141,eci_code,1.0,141,TIRUCHIRAPALLI (EAST),TIRUCHIRAPPALLI,agrees,2008,eci code; name spelled differently
+Tamil Nadu,4046,Thiruverumbur,Tiruchirappalli,142,eci_code,0.923,142,THIRUVERAMBUR,TIRUCHIRAPPALLI,agrees,2008,eci code; name spelled differently
+Tamil Nadu,3963,Sirkazhi,Mayiladuthurai,160,eci_code,0.857,160,SIRKALI,MAYILADUTHURAI,agrees,2008,eci code; name spelled differently
+Tamil Nadu,3968,Thiruthuraipoondi,Nagapattinam,166,eci_code,1.0,166,THIRUTHURAIPUNDI,NAGAPATTINAM,agrees,2008,eci code; name spelled differently
+Tamil Nadu,3964,Thiruvidaimarudur,Mayiladuthurai,170,eci_code,0.97,170,THIRUVIDAMARUDUR,MAYILADUTHURAI,agrees,2008,eci code; name spelled differently
+Tamil Nadu,4026,Orattanadu,Thanjavur,175,eci_code,0.941,175,ORATHANAD,THANJAVUR,agrees,2008,eci code; name spelled differently
+Tamil Nadu,4043,Gandarvakottai,Tiruchirappalli,178,eci_code,1.0,178,GANDHARVAKOTTAI,TIRUCHIRAPPALLI,agrees,2008,eci code; name spelled differently
+Tamil Nadu,3995,Aranthangi,Ramanathapuram,183,eci_code,1.0,183,ARANTANGI,RAMANATHAPURAM,agrees,2008,eci code; name spelled differently
+Tamil Nadu,4032,Bodinayackanur,Theni,200,eci_code,0.963,200,BODINAYAKANUR,THENI,agrees,2008,eci code; name spelled differently
+Tamil Nadu,4085,Aruppukkottai,Virudhunagar,207,eci_code,1.0,207,ARUPPUKOTTAI,VIRUDHUNAGAR,agrees,2008,eci code; name spelled differently
+Tamil Nadu,3996,Mudhukulathur,Ramanathapuram,212,eci_code,1.0,212,MUDUKULATHUR,RAMANATHAPURAM,agrees,2008,eci code; name spelled differently
+Tamil Nadu,4052,Palayamkottai,Tirunelveli,,fuzzy,0.923,226,PALAYAMCOTTAI,TIRUNELVELI,agrees,2008,similarity; PC agrees
+Telangana,3214,Vicaradab,Chevella,55,eci_code,0.778,55,VICARABAD,CHEVELLA,agrees,2008,eci code; name spelled differently
+Tripura,1643,Kakraban-salgarh,Tripura West,,fuzzy,0.968,33,KAKRABAN-SALGARAH,TRIPURA WEST,agrees,2008,similarity; PC agrees; consonant skeleton equal
+Tripura,1619,Karmachhara,Tripura East,,fuzzy,0.909,48,KARAMCHHARA,TRIPURA EAST,agrees,2008,similarity; PC agrees; consonant skeleton equal
+Tripura,1607,Chawamanu,Tripura East,,fuzzy,0.933,49,CHHAWMANU,TRIPURA EAST,agrees,2008,similarity; PC agrees; consonant skeleton equal
+Tripura,1614,Kailashahar,Tripura East,53,eci_code,1.0,53,KAILASAHAR,TRIPURA EAST,agrees,2008,eci code; name spelled differently
+Uttar Pradesh,1014,Thkurdwara,Moradabad,26,eci_code,0.952,26,THAKURDWARA,MORADABAD,agrees,2008,eci code; name spelled differently
+Uttar Pradesh,1012,Moradabad Nagar,Moradabad,28,eci_code,0.783,28,MORADABAD,MORADABAD,agrees,2008,eci code; name spelled differently
+Uttar Pradesh,1049,Suar,Rampur,34,eci_code,0.615,34,SUAR TANDA,RAMPUR,agrees,2008,eci code; name spelled differently
+Uttar Pradesh,756,Chhaprauli,Baghpat,50,eci_code,1.0,50,CHAPRAULI,BAGHPAT,agrees,2008,eci code; name spelled differently
+Uttar Pradesh,871,Gaziabad,Ghaziabad,56,eci_code,1.0,56,GHAZIABAD,GHAZIABAD,agrees,2008,eci code; name spelled differently
+Uttar Pradesh,757,Moni Nagar,Baghpat,57,eci_code,0.889,57,MODINAGAR,BAGHPAT,agrees,2008,eci code; name spelled differently
+Uttar Pradesh,736,Garhmukteshwar,Amroha,60,eci_code,1.0,60,GARMUKHTESHWAR,AMROHA,agrees,2008,eci code; name spelled differently
+Uttar Pradesh,987,Goverdhan,Mathura,83,eci_code,0.889,83,GOVARDHAN,MATHURA,agrees,2008,eci code; name spelled differently
+Uttar Pradesh,858,Fatehpur sikari,Fatehpur Sikri,91,eci_code,0.963,91,FATEHPUR SIKRI,FATEHPUR SIKRI,agrees,2008,eci code; name spelled differently
+Uttar Pradesh,833,Patiyali,Etah,102,eci_code,1.0,102,PATIALI,ETAH,agrees,2008,eci code; name spelled differently
+Uttar Pradesh,983,Kishani,Mainpuri,109,eci_code,0.923,109,KISHNI,MAINPURI,agrees,2008,eci code; name spelled differently
+Uttar Pradesh,751,Budaun,Badaun,115,eci_code,0.833,115,BADAUN,BADAUN,agrees,2008,eci code; name spelled differently
+Uttar Pradesh,786,Ghojipura,Bareilly,120,eci_code,0.889,120,BHOJIPURA,BAREILLY,agrees,2008,eci code; name spelled differently
+Uttar Pradesh,784,Bareilly,Bareilly,124,eci_code,0.8,124,BAREILLY CITY,BAREILLY,agrees,2008,eci code; name spelled differently
+Uttar Pradesh,785,Barelly Cantt.,Bareilly,125,eci_code,0.96,125,BAREILLY CANTONMENT,BAREILLY,agrees,2008,eci code; name spelled differently
+Uttar Pradesh,819,Dhaurahra,Dhaurahra,141,eci_code,0.889,141,DHAUREHRA,DHAURAHRA,agrees,2008,eci code; name spelled differently
+Uttar Pradesh,823,Mohammdi,Dhaurahra,144,eci_code,0.941,144,MOHAMMADI,DHAURAHRA,agrees,2008,eci code; name spelled differently
+Uttar Pradesh,1088,Mahmoodabad,Sitapur,151,eci_code,1.0,151,MAHMUDABAD,SITAPUR,agrees,2008,eci code; name spelled differently
+Uttar Pradesh,1001,Bilgram-mallanwan,Misrikh,159,eci_code,1.0,159,BILGRAM - MALANWAN,MISRIKH,agrees,2008,eci code; name spelled differently
+Uttar Pradesh,1002,Bilhaur,Misrikh,209,eci_code,1.0,209,BILAUR,MISRIKH,agrees,2008,eci code; name spelled differently
+Uttar Pradesh,944,Sishamau,Kanpur,213,eci_code,1.0,213,SISAMAU,KANPUR,agrees,2008,eci code; name spelled differently
+Uttar Pradesh,941,Didwai Nagar,Kanpur,215,eci_code,0.909,215,KIDWAI NAGAR,KANPUR,agrees,2008,eci code; name spelled differently
+Uttar Pradesh,913,Madhaugarh,Jalaun,219,eci_code,0.842,219,MADHOGARH,JALAUN,agrees,2008,eci code; name spelled differently
+Uttar Pradesh,850,Binkdi,Fatehpur,239,eci_code,0.833,239,BINDKI,FATEHPUR,agrees,2008,eci code; name spelled differently
+Uttar Pradesh,721,Karchhana,Allahabad,,fuzzy,0.947,260,KARACHHANA,ALLAHABAD,agrees,2008,similarity; PC agrees; consonant skeleton equal
+Uttar Pradesh,825,Dumariyaganj,Domariyaganj,306,eci_code,0.909,306,DOMARIAGANJ,DOMARIYAGANJ,agrees,2008,eci code; name spelled differently
+Uttar Pradesh,791,Kaptanganj,Basti,308,eci_code,0.857,308,CAPTAINGANJ,BASTI,agrees,2008,eci code; name spelled differently
+Uttar Pradesh,792,Mahadewa,Basti,311,eci_code,1.0,311,MAHADEVA,BASTI,agrees,2008,eci code; name spelled differently
+Uttar Pradesh,1074,Menhdawal,Sant Kabir Nagar,312,eci_code,1.0,312,MEHNDAWAL,SANT KABIR NAGAR,agrees,2008,eci code; name spelled differently
+Uttar Pradesh,977,Paniyara,Maharajganj,319,eci_code,1.0,319,PANIARA,MAHARAJGANJ,agrees,2008,eci code; name spelled differently
+Uttar Pradesh,1072,Khajni,Sant Kabir Nagar,,fuzzy,0.923,325,KHAJANI,SANT KABIR NAGAR,agrees,2008,similarity; PC agrees; consonant skeleton equal
+Uttar Pradesh,960,Atrauliya,Lalganj,343,eci_code,1.0,343,ATRAULIA,LALGANJ,agrees,2008,eci code; name spelled differently
+Uttar Pradesh,883,Muhammadabad- gohna,Ghosi,355,eci_code,0.941,355,MOHAMMADABAD GOHNA,GHOSI,agrees,2008,eci code; name spelled differently
+Uttar Pradesh,884,Rasara,Ghosi,358,eci_code,0.909,358,RASRA,GHOSI,agrees,2008,eci code; name spelled differently
+Uttar Pradesh,1064,Sikandarpur,Salempur,359,eci_code,0.909,359,SIKANDERPUR,SALEMPUR,agrees,2008,eci code; name spelled differently
+Uttar Pradesh,1060,Bansdeeh,Salempur,362,eci_code,1.0,362,BANSDIH,SALEMPUR,agrees,2008,eci code; name spelled differently
+Uttar Pradesh,972,Mariyahu,Machhlishahr,370,eci_code,1.0,370,MARIAHU,MACHHLISHAHR,agrees,2008,eci code; name spelled differently
+Uttar Pradesh,876,Jakhanian,Ghazipur,373,eci_code,0.941,373,JAKHANIA,GHAZIPUR,agrees,2008,eci code; name spelled differently
+Uttar Pradesh,1051,Duddhi,Robertsganj,403,eci_code,1.0,403,DUDHI,ROBERTSGANJ,agrees,2008,eci code; name spelled differently
+West Bengal,2067,Manikchak,Maldaha Dakshin,,fuzzy,0.947,49,MANICKCHAK,MALDAHA DAKSHIN,agrees,2008,similarity; PC agrees
+West Bengal,2064,Baisnabnagar,Maldaha Dakshin,,fuzzy,1.0,54,BAISHNAB NAGAR,MALDAHA DAKSHIN,agrees,2008,phonetic key equal
+West Bengal,1882,Bagda,Bangaon,,fuzzy,1.0,94,BAGDAH,BANGAON,agrees,2008,phonetic key equal
+West Bengal,2026,Joynagar,Jaynagar,,fuzzy,0.875,136,JAYNAGAR,JAYNAGAR,agrees,2008,similarity; PC agrees; consonant skeleton equal
+West Bengal,1972,Satgachhia,Diamond Harbour,,fuzzy,1.0,145,SATGACHIA,DIAMOND HARBOUR,agrees,2008,phonetic key equal
+West Bengal,2003,Bhangar,Jadavpur,,fuzzy,0.8,148,BHANGORE,JADAVPUR,agrees,2008,similarity; PC agrees; consonant skeleton equal
+West Bengal,2007,Tollyganj,Jadavpur,152,eci_code,0.889,152,TOLLYGUNJ,JADAVPUR,agrees,2008,eci code; name spelled differently
+West Bengal,2055,Maniktola,Kolkata Uttar,167,eci_code,0.889,167,MANIKTALA,KOLKATA UTTAR,agrees,2008,eci code; name spelled differently
+West Bengal,2054,Kashipur-belgachhia,Kolkata Uttar,168,eci_code,1.0,168,KASHIPUR-BELGACHIA,KOLKATA UTTAR,agrees,2008,eci code; name spelled differently
+West Bengal,1988,Chandannagar,Hooghly,189,eci_code,0.88,189,CHANDANNAGORE,HOOGHLY,agrees,2008,eci code; name spelled differently
+West Bengal,2128,Mahishadal,Tamluk,,fuzzy,1.0,208,MAHISADAL,TAMLUK,agrees,2008,phonetic key equal
+West Bengal,1893,Ranibandh,Bankura,,fuzzy,0.889,249,RANIBUNDH,BANKURA,agrees,2008,similarity; PC agrees; consonant skeleton equal
+West Bengal,1904,Burdwan Dakshin,Bardhaman - Durgapur,260,eci_code,1.0,260,BARDHAMAN DAKSHIN,BARDHAMAN-DURGAPUR,agrees,2008,eci code; official rename (BURDWAN=BARDHAMAN)
+West Bengal,1905,Burdwan Uttar,Bardhaman - Durgapur,,fuzzy,1.0,266,BARDHAMAN UTTAR,BARDHAMAN-DURGAPUR,agrees,2008,official rename (BURDWAN=BARDHAMAN)
+West Bengal,1862,Asnsol Dakshin,Asansol,,fuzzy,0.933,280,ASANSOL DAKSHIN,ASANSOL,agrees,2008,similarity; PC agrees; consonant skeleton equal
+West Bengal,1863,Barabani,Asansol,,fuzzy,0.933,283,BARBANI,ASANSOL,agrees,2008,similarity; PC agrees; consonant skeleton equal
+Assam,1741,Goalpara West,Gauhati,38,eci_code,1.0,38,GOALPARA WEST,DHUBRI,differs,1976-deferred,
+Assam,1733,Jania,Dhubri,,exact_name,1.0,44,JANIA,BARPETA,differs,1976-deferred,
+Assam,1731,Chenga,Dhubri,,exact_name,1.0,47,CHENGA,BARPETA,differs,1976-deferred,
+Assam,1762,Hajo,Barpeta,,exact_name,1.0,55,HAJO,GAUHATI,differs,1976-deferred,
+Assam,1817,Nalbari,Barpeta,,exact_name,1.0,59,NALBARI,MANGALDOI,differs,1976-deferred,
+Assam,1778,Dhing,Nagaon,,exact_name,1.0,83,DHING,KALIABOR,differs,1976-deferred,
+Assam,1822,Barhampur,Kaziranga,87,eci_code,1.0,87,BARHAMPUR,NOWGONG,differs,1976-deferred,
+Assam,1783,Samaguri,Nagaon,,exact_name,1.0,88,SAMAGURI,KALIABOR,differs,1976-deferred,
+Assam,1823,Hojai,Kaziranga,91,eci_code,1.0,91,HOJAI,NOWGONG,differs,1976-deferred,
+Assam,1827,Lumding,Kaziranga,92,eci_code,1.0,92,LUMDING,NOWGONG,differs,1976-deferred,
+Assam,1809,Majuli ST,Jorhat,,exact_name,1.0,99,MAJULI,LAKHIMPUR,differs,1976-deferred,
+Assam,1803,Chabua,Dibrugarh,,exact_name,1.0,121,CHABUA,LAKHIMPUR,differs,1976-deferred,
+Jammu & Kashmir,59,Budgam,Baramulla,27,eci_code,1.0,27,BUDGAM,SRINAGAR,differs,1995-JK,
+Jammu & Kashmir,58,Beerwah,Baramulla,28,eci_code,1.0,28,BEERWAH,SRINAGAR,differs,1995-JK,
+Jammu & Kashmir,15,Tral,Srinagar,31,eci_code,1.0,31,TRAL,ANANTNAG,differs,1995-JK,
+Jammu & Kashmir,10,Pampore,Srinagar,32,eci_code,1.0,32,PAMPORE,ANANTNAG,differs,1995-JK,
+Jammu & Kashmir,11,Pulwama,Srinagar,33,eci_code,1.0,33,PULWAMA,ANANTNAG,differs,1995-JK,
+Jammu & Kashmir,12,Rajpora,Srinagar,,exact_name,1.0,34,RAJPORA,ANANTNAG,differs,1995-JK,
+Jammu & Kashmir,14,Shopian,Srinagar,36,eci_code,1.0,36,SHOPIAN,ANANTNAG,differs,1995-JK,

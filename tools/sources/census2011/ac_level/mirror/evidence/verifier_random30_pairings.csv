@@ -1,0 +1,31 @@
+vc,st,census_dist,census_sd,census_name,pop,lgd_vcode,lgd_name,lgd_sd,ac_code,ac_name,eci,src,verdict,evidence
+472398,23,Shajapur,Badod,Lodha Khedi,507,472398,Lodha Khedi,Badod,2506,Agar,166,SD fully,CONSISTENT,Order l.17589: 166 Agar = Agar Tehsil + Badod Tehsil (whole)
+596934,28,Chittoor,Kuppam,Pedda Bangarunatham,1271,596934,Pedda Bangarunatham,Kuppam,3218,Kuppam,294,SD fully,CONSISTENT,"Order l.2724-2731: 294 Kuppam = Santipuram, Gudupalle, Kuppam, Ramakuppam mandals"
+115529,09,Moradabad,Bilari,Ibrahimpur,3015,115529,Ibrahimpur,Bilari,1066,Bilari,30,village row,CONSISTENT,"Order l.36979-36980: 30 Bilari = KCs Bilari, Jargawan of Bilari Tehsil (Part); KC of village not checkable"
+137327,09,Sitapur,Misrikh,Gopalpur,1330,137327,Gopalpur,Misrikh,1003,Misrikh,153,village row,CONSISTENT,"Order l.37908: 153 Misrikh = KCs Mishrikh, Machhrehata, Aurangabad of Misrikh Tehsil (Part); KC of village not checkable"
+038649,03,Rupnagar,Rup Nagar,Dhaloh (347),77,38649,Dhaloh (347),Rup Nagar,169,Garhshankar,45,village row,WRONG,Order l.25336-25339: 45 Garhshankar = KCs of Garhshankar Tehsil (Hoshiarpur). Village is in Rup Nagar tehsil (Rupnagar district); LGD AC 169 Garhshankar holds only 19 Rup Nagar villages and no Garhshankar-tehsil villages
+078574,08,Dausa,Dausa,Moond Ghisya,1185,78574,Moond Ghisya,Bhandarej,579,Dausa,88,village row,CONSISTENT,Order l.26400: 88 Dausa = Tehsil Dausa (Partly) by ILRC; ILRC of village not checkable
+547090,27,Parbhani,Palam,Khurlewadi,700,547090,Khurlewadi,Palam,3075,Gangakhed,97,SD fully,CONSISTENT,"Order l.18798: 97 Gangakhed = Gangakhed, Palam, Purna Tehsils (whole)"
+359340,20,Sahibganj,Udhwa,Paranpur,2173,359340,Paranpur,Udhwa,2209,Rajmahal,1,SD fully,PLAUSIBLE,Order l.12403: 1 Rajmahal = Rajmahal and Sahebganj police stations; Udhwa block/PS was carved from Rajmahal PS (not named)
+022262,02,Solan,Kandaghat,Neon (313),103,22262,Niew (313),Mamlig,153,Solan,53,village row,CONSISTENT,Order l.12196-12198: 53 Solan (SC) = Kandaghat Tehsil (whole) + KC Solan; village is in census-2011 Kandaghat tehsil (LGD name Niew vs census Neon)
+594870,28,Anantapur,Vajrakarur,Pottipadu,1032,594870,Pottipadu,Vajrakarur,3186,Uravakonda,,SD fully,CONSISTENT,Order l.2541-2543: 268 Uravakonda includes Vajrakarur mandal (whole)
+347954,20,Garhwa ,Bhandaria,Kanjia,1038,347954,Kanjia,Bhandaria,2201,Daltonganj,76,village row,CONSISTENT,Order l.12851: 76 Daltonganj includes Bhandaria Police Station (Garhwa)
+088371,08,Barmer,Barmer,Heerpura,175,88371,Heerpura,Barmer Gramin,528,Barmer,135,village row,CONSISTENT,Order l.26647: 135 Barmer = Tehsil Barmer
+642597,33,Thoothukkudi,Sathankulam,Kattarimangalam,2842,642597,Kattarimangalam,Sathankulam,4039,Srivaikuntam,216,village row,CONSISTENT,Order l.35291-35292: 216 Srivaikuntam = Sathankulam Taluk (whole) + part of Srivaikuntam Taluk
+405137,21,Anugul  ,Purunakot ,Kantabeda,579,405137,Kantabeda,Anugola,2355,Athmallik,63,village row,CONSISTENT,Order l.24102: 63 Athamallik includes Purunakote GP of Angul Block
+397113,21,Kendrapara ,Mahakalapada ,Sarumunhi,397,397113,Sarumunhi,Mahakalapada,2315,Mahakalapada,,village row,CONSISTENT,Order l.24407: 100 Mahakalapada = Mahakalapada Block + GPs
+013491,02,Mandi,Lad Bharol,Bharol (114),964,13491,Bharol (113),Lad Bharol,127,Jogindernagar,31,village row,CONSISTENT,"Order l.12052-12053: 31 Jogindernagar = Lad Bharol Tehsil + Jogindernagar Tehsil (LGD hadbast (113) vs census (114) differs, same tehsil)"
+466381,23,Rewa,Hanumana,Tilaya,888,466381,Tilaya,Hanumana,2629,Mauganj,71,SD fully,CONSISTENT,Order l.16938: 71 Mauganj = Hanumana Tehsil (whole) + patwari circles
+512329,24,Surendranagar,Chotila,Gugaliyana,956,512329,Gugaliyana,Thangadh,2850,Chotila,63,village row,CONSISTENT,Order l.9561: 63 Chotila = Chotila Taluka + Muli Taluka
+636333,33,Ariyalur  ,Udayarpalayam,Olaiyur,3090,636333,Olaiyur,Andimadam,3890,Jayankondam,150,village row,CONSISTENT,Order l.32885-32888: 150 Jayankondam lists Olaiyur village by name
+516103,24,Bhavnagar,Vallabhipur,Pipali,902,516103,Pipali,Vallabhipur,2742,Gadhada,106,village row,CONSISTENT,Order l.10122-10138: 106 Gadhada (SC) includes Vallabhipur Taluka (whole)
+525163,27,Nandurbar,Akkalkuwa,Kankala,1604,525163,Kankala,Akkalkuwa,3051,Akkalkuwa,1,village row,CONSISTENT,Order l.18299: 1 Akkalkuwa = Akkalkuwa Tehsil + Akrani Tehsil
+624417,29,Chikkaballapura,Chintamani ,Nallagutlahalli,296,624417,Nallagutlahalli,Chintamani,3606,Chintamani,143,village row,CONSISTENT,Order l.14309: 143 Chintamani = Chintamani Taluk (Part) circles; circle of village not checkable
+380370,21,Bargarh,Bijepur,Dhumapali,887,380370,Dhumapali,Bijepur,2239,Bijepur,2,village row,CONSISTENT,Order l.23578: 2 Bijepur includes Bijepur Block (whole)
+401762,21,Jajapur  ,Badachana ,Sukadeipur,354,401762,Sukadeipur,Darpan,2292,Barchana,,village row,CONSISTENT,Order l.23974-23975: 50 Barachana = Barachana Block
+465368,23,Rewa,Jawa,Mahilo (444),582,465368,Mahilo (444),Jawa,2632,Sirmour,68,SD fully,CONSISTENT,Order l.16925-16928: 68 Sirmour includes Dabhaura and Jawa R.I. Circles of Teonthar Tehsil
+630328,33,Vellore,Gudiyatham,Reddimankuppam,2644,630328,Reddimankuppam,Pernambut,4075,Gudiyattam,46,village row,CONSISTENT,Order l.28793-28819: 46 Gudiyattam (SC) lists Reddimankuppam village by name
+424993,21,Rayagada  ,Muniguda,Danga Sorada,1461,424993,Danga Sorada,Chandrapur,2328,Gunupur,138,village row,CONSISTENT,Order l.24711: 138 Gunupur includes Chandrapur Block
+032443,03,Shahid Bhagat Singh Nagar ,Balachaur,Raju Majra (383),1345,32443,Raju Majara (383),Balachaur,165,Anandpur Sahib,49,district fully,WRONG,Order l.25358-25359: 48 Balachaur = Balachaur Tehsil. LGD marks the whole Shahid Bhagat Singh Nagar district Fully Covered by AC 165 Anandpur Sahib (district fallback)
+382539,21,Sambalpur,Naktideul,Tangianisa,41,382539,Tangianisa,Naktideul,2359,Rairakhol,18,village row,CONSISTENT,Order l.23681: 18 Rairakhol includes Naktideul Block
+143570,09,Lucknow,Mohanlalganj ,Noorpur Behata,1486,143570,Noorpur Behata,Mohanlalganj,1007,Mohanlalganj,176,SD fully,CONSISTENT,Order l.38039-38041: 176 Mohanlalganj = Mohanlalganj Tehsil

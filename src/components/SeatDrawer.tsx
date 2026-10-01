@@ -383,7 +383,7 @@ export default function SeatDrawer({ seat, all, arena, onClose }:
             </Section>
           )}
 
-          {/* the people — Census 2011, district level (see lib/census.ts) */}
+          {/* the people — Census 2011, seat level where built, else district level (see lib/census.ts) */}
           {CEN && (() => {
             const r = CEN.rates, s = CEN.state, ds = CEN.districts, d0 = ds[0]
             // "X district" only when it IS one district — a 92/8 blend shows blended figures, so it says so
@@ -392,9 +392,15 @@ export default function SeatDrawer({ seat, all, arena, onClose }:
             const st = (v: number | null | undefined, unit = '%') => (v == null ? '' : `state ${unit === '%' ? v.toFixed(1) + '%' : Math.round(v)}`)
             const people = (n: number) => (n >= 1e7 ? `${(n / 1e7).toFixed(2)} crore` : `${(n / 1e5).toFixed(1)} lakh`)
             const shares = ds.map(d => `${d.name} ${Math.round(d.share * 100)}%`).join(' · ')
-            const title = single
-              ? `${d0.name} district · ${people(d0.pop)} people`
-              : arena === 'GE' ? `Spans ${ds.length} districts · mostly ${d0.name}` : `Mostly ${d0.name} district · part ${ds.slice(1).map(d => d.name).join(', ')}`
+            const seatLevel = CEN.level === 'seat'
+            const inDistricts = single ? `in ${d0.name} district`
+              : `across ${ds.slice(0, 3).map(d => d.name).join(', ')}${ds.length > 3 ? ` and ${ds.length - 3} more` : ''}`
+            const title = seatLevel
+              ? `${people(CEN.pop ?? 0)} people · ${inDistricts}`
+              : single
+                ? `${d0.name} district · ${people(d0.pop)} people`
+                : arena === 'GE' ? `Spans ${ds.length} districts · mostly ${d0.name}` : `Mostly ${d0.name} district · part ${ds.slice(1).map(d => d.name).join(', ')}`
+            const q = CEN.quality
             const farm = r.work ? r.work.cl + r.work.al : null
             const farmS = s.work ? s.work.cl + s.work.al : null
             const bar = (items: { k: string; label: string; v: number; c: string }[]) => (
@@ -478,12 +484,19 @@ export default function SeatDrawer({ seat, all, arena, onClose }:
 
                 <div style={{ fontSize: 10.5, color: C.faint, marginTop: 11, lineHeight: 1.5 }}>
                   Source: Census of India 2011 (Office of the Registrar General &amp; Census Commissioner), the latest
-                  published census; district map © DataMeet, CC BY 2.5 IN. District level —{' '}
-                  {single
-                    ? `every seat in ${d0.name} district shows this same profile.`
-                    : arena === 'GE'
-                      ? `blended across this seat's assembly segments, weighted by each segment's electorate (${shares}).`
-                      : `blended by how much of the seat lies in each district (${shares}).`}
+                  published census.{' '}
+                  {seatLevel
+                    ? <>Seat level — summed from the {q ? `${q.v.toLocaleString('en-IN')} villages and ${q.t.toLocaleString('en-IN')} towns ` : 'villages and towns '}
+                        of Census 2011 that lie in this constituency
+                        {q && q.a >= 0.02 ? `; ${Math.round(q.a * 100)}% of its people live in a city split across several seats and carry that city's average` : ''}.
+                        {' '}Villages and towns are matched to seats with the Local Government Directory (lgdirectory.gov.in) and the
+                        Election Commission's delimitation orders.</>
+                    : <>District level (district map © DataMeet, CC BY 2.5 IN) —{' '}
+                        {single
+                          ? `every seat in ${d0.name} district shows this same profile.`
+                          : arena === 'GE'
+                            ? `blended across this seat's assembly segments, weighted by each segment's electorate (${shares}).`
+                            : `blended by how much of the seat lies in each district (${shares}).`}</>}
                 </div>
               </Section>
             )

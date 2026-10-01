@@ -1,0 +1,293 @@
+n,name,extent,class
+1,MEKLIGANJ (SC),"1. CDB Haldibari, 2. Haldibari (M), 3. CDB Mekliganj and 4. Mekliganj (M)",A_whole_subdistricts_and_towns_only
+2,MATHABHANGA (SC),"1. CDB Mathabhanga-II, 2. Mathabhanga (M). and 3. Hazrahat- I, Hazrahat-II and Pachagarh GPs of CDB Mathabhanga-I",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+3,COOCHBEHAR UTTAR (SC),CDB Cooch Behar-II,A_whole_subdistricts_and_towns_only
+4,COOCHBEHAR DAKSHIN,"1. Coochbehar(M) and 2. Chandamari, Chilkirhat, Falimari, Ghughumari, Haribhanga, Moyamari, Patchhara, Putimari Fuleswari and Sutkabari GPs of CDB Cooch Behar-I",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+5,SITALKUCHI (SC),"1. CDB Sitalkuchi and 2. Bairagirhat, Gopalpur, Jorpatiki, Kedarhat, Kursamari, Nayarhat and Shikarpur GPs of CDB Mathabhanga-I",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+6,SITAI (SC),"1. CDB Sitai and 2. Bara Atiabari-I, Bara Atiabari-II, Bara Soulmari, Bhetaguri-IIGitaldaha-I, Gitaldaha-II, Gosanimari-I, Gosanimari-II, Matalhat, Okrabari, Petla and Putimari-II GPs of CDB Dinhata-I 1CDB Dinhata-II, 2. Bhetaguri-I, Dinhata Gram-I, Dinhata",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+7,DINHATA,Gram-II and Putimari-I GPs of CDB Dinhata-I and 3. Dinhata (M),B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+8,NATABARI,"1. Deoanhat, Dauaguri, Guriahati-I, Guriahati-II, Jiranpur and Panisala GPs of Cooch Behar-I and 2. Andaran Fulbari-II, Balarampur-I, Balarampur-II, Chilakhana-I, Chilakhana-II, Deocharai, Dhalpal-II, Maruganj, Natabari-I, Natabari-II GPs of CDB Tufanganj-I",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+9,TUFANGANJ,"1. CDB Tufanganj-II, 2.Tufanganj (M) and 3. Andaran Fulbari-I, Balabhut, Dhalpal-I, Nakkatigachh GPs of CDB Tufanganj-I",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+10,KUMARGRAM (ST),"1. CDB Kumargram and 2. Bhatibari, Kohinoor, Mahakalguri Parokata, Samuktala, Tatpara-I and Turturi GPs of CDB Alipurduar-II",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+11,KALCHINI (ST),"1. CDB Kalchini, 2. Majherdabri GP of CDB Alipurduar-II",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+12,ALIPURDUARS,"1. Banchukamari, Chakowakheti, Mathura, Parorpar, Patlakhawa, Shalkumar-I, Shalkumar-II, Tapsikhata, Vivekananda-II, Vivekananda-I, GPs of CDB Alipurduar-I 2. Alipurduar Rly Jnc(ct) 3.. Alipurduar (M), 4. Chaporerpar-I, Chaporerpar-II, and Tatpara-II GPs of CDB Alipurduar-II",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+13,FALAKATA (SC),1. CDB Falakata and 2. Purba Kanthalbari GP of CDB Alipurduar-I,B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+14,MADARIHAT (ST),1. CDB Madarihat and 2. Binnaguri and Sakoyajhora-I GPs of CDB Dhupguri,B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+15,DHUPGURI (SC),"1. Banarhat-I, Barogharia, Gadhearkuthi, Gadong-I, Gadong-II, Jharaltagram-I, Jharaltagram-II, Magurmari-I, Magurmari-II, Sakoyajhora-II, Salbari-I, Salbari-II, Dhupguri-I and Dhupguri-II GPs of CDB Dhupguri",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+16,MAYNAGURI (SC),1. CDB Maynaguri,A_whole_subdistricts_and_towns_only
+17,JALPAIGURI (SC),"1. Jalpaiguri (M), 2. Arabinda, Bahadur, Boalmari Nandanpur, Garalbari, Kharia, Kharija Berubari-I, Kharija Berubari-II, Mondalghat, Nagar Berubari and South Berubari GPs of CDB Jalpaiguri",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+18,RAJGANJ (SC),"1. Binnaguri, Kukurjan, Majhiali, Mantadari, Panikauri, Sannyasikata, Sikarpur and Sukhani GPs of CDB Rajganj. 2. Baropatia Nutanabos Belakoba, Paharpur and Patkata GPs of CDB Jalpaiguri.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+19,ABGRAM-FULBARI,"1. Ward Nos. 31 to 44 of Siliguri M Corp.2. Dabgram-I, Dabgram-II, Fulbari-I and Fulbari-II GPs of CDB Rajganj",C_ward_or_EB_level
+20,MAL (ST),1. CDB Mal & 2. Mal (M),A_whole_subdistricts_and_towns_only
+21,NAGRAKATA (ST),"1. CDB Nagrakata, 2. CDB Matiali, 3. Banarhat-II and Chamurchi GPs of CDB Dhupguri.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+22,KALIMPONG,"1. CDB Kalimpong-I 2. Kalimpong (M) 3. CDB Kalimpong-II, 4. CDB Gorubathan",A_whole_subdistricts_and_towns_only
+23,DARJEELING,"1. CDB Darjeeling-Pulbazar, 2. Darjeeling (M) and 3.Dhootria Kalej Valley, Ghum Khasmahal, Sukhia-Simana, Rangbhang Gopaldhara, Pokhriabong-I, Pokhriabong-II, Pokhriabong-III, Lingia Maraybong, Permaguri Tamsang, Plungdung and Rangbul GPs of CDB Jorebunglow Sukiapokhri",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+24,KURSEONG,"1. Gorabari Margaret’s Hope, Lower Sonada-I, Lower Sonada- II, Munda Kothi and Upper Sonada GPs of CDB Jorebunglow Sukiapokhri 2. CDB Mirik, 3. Mirik (NA), 4. CDB Kurseong, 5. Kurseong (M) 6. (i) Sitong Forest (Village), (ii) Sivok Hill Forest (Village), (iii) Sivok Forest (Village) in Champasari GP of CDB Matigara and 7. CDB Rangli Rangliot",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+25,MATIGARA- NAXALBARI (SC),"1. CDB Naxalbari, 2. Atharakhai, Champasari (excluding Villages Sitong Forest, Sivoke Hill Forest and Sivoke Forest) Matigara-I, Matigara-II, Patharghata GPs of CDB Matigara",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+26,SILIGURI,Ward Nos 1 to 30 and 45 to 47 of Siliguri M Corp.,C_ward_or_EB_level
+27,PHANSIDEWA (ST),1. CDB Phansidewa & 2. CDB Kharibari,A_whole_subdistricts_and_towns_only
+28,CHOPRA,1. CDB Chopra 2. Gobindopur and Kamalagaon Sujali GPs of CDB Islampur,B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+29,ISLAMPUR,"1. Islampur (M) and 2. Agdimti Khanti, Gaisal-I, Gaisal-II, Gunjaria, Islampur, Matikunda-I, Matikunda-II, Panditpota-I, Panditpota-II, Ramganj-I and Ramganj-II GPs of CDB Islampur",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+30,GOALPOKHAR,1. CDB Goalpokhar-I,A_whole_subdistricts_and_towns_only
+31,CHAKULIA,1. CDB Goalpokhar-II 2. Bazargaon-I and Bazargaon-II GPs of CDB Karandighi,B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+32,KARANDIGHI,"Altapur-I, Altapur-II, Dalkhola-I, Dalkhola-II, Domhana, Karandighi-I, Karandighi-II, Lahutara-I, Lahutara-II, Raniganj, Rasakhowa-I and Rasakhowa-II GPs of CDB Karandighi",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+33,HEMTABAD (SC),"1. CDB Hemtabad 2. Bhatun, Bindol, Jagadishpur, Mahipur, Sherpur, Rampur and Sitgram GPs of CDB Raiganj",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+34,KALIAGANJ (SC),"1. CDB Kaliaganj, 2. Kaliaganj (M) 3. Barua and Birghai GPs of CDB Raiganj",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+35,RAIGANJ,"1. Raiganj (M) and 2. Bahin, Maraikura, Gouri, Kamalabati-I and Kamalabati-II GPs of CDB Raiganj",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+36,ITAHAR,CDB Itahar,A_whole_subdistricts_and_towns_only
+37,KUSHMANDI (SC),"1. CDB Kushmandi, 2. Belbari-II, Jahangirpur and Sukdebpur GPs of CDB Gangarampur",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+38,KUMARGANJ,"1. CDB Kumarganj, 2. Ashokegram, Basuria, Chaloon and Uday GPs of CDB Gangarampur",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+39,BALURGHAT,"1. CDB Hilli 2. Amritakhand, Vatpara and Chingishpur GPs of CDB Balurghat 3. Balurghat (M)",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+40,TAPAN(ST),"1. Boaldar, Chak Vrigu, Jalghar, Bolla, Danga, Gpalbati, Najirpur and Patiram GPs of CDB Balurghat 2. Dwipkhanda, Gophanagar, Harsura, Malancha and Tapan Chandipur GPs of CDB Tapan",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+41,GANGARAMPUR (SC),"1. Gangarampur (M), 2. Belbari-I, Damdama, Gangarampur and Nandanpur GPs of CDB Gangarampur 3. Ajmatpur, Autina, Gurail, Hazratpur, Ramchandrapur and Rampara Chenchra GPs ofCDB Tapan",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+42,HARIRAMPUR,1. CDB Harirampur & 2. CDB Banshihari,A_whole_subdistricts_and_towns_only
+43,HABIBPUR (ST),"1. CDB Bamangola, 2. Aktail, Baidyapur, Bulbul Chandi, Dhumpur, Habibpur, Jajail, Kanturka and Mangalpur GPs of CDB Habibpur",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+44,GAZOLE (SC),1. CDB Gazole,A_whole_subdistricts_and_towns_only
+45,CHANCHAL,"1. CDB Chanchal-I, 2. Barui, Kusidha, Rashidabad and Tulsihatta GPs of CDB Harischandrapur-I",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+46,HARISCHANDRA PUR,"1. CDB Harischandrapur-II 2. Bhingole, Harishchandrapur and Mahendrapur GPs of CDB Harischandrapur-I",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+47,MALATIPUR,"1. CDB Chanchal-II 2. Maharajpur, Peerganj, Sreepur-I and Sreepur-II GPs of CDB Ratua-II",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+48,RATUA,"1. CDB Ratua-I, 2. Araidanga, Paranpur, Pukuria and Sambalpur GPs of CDB Ratua-II",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+49,MANIKCHAK,"1. CDB Manikchak, 2. Milki, Fulbaria and Sovanagar GPs of CDB English Bazar",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+50,MALDAHA (SC),"1. CDB Maldaha 2. Old Maldaha (M) 3. Narhatta GP of CDB English Bazar 4. Aiho, Rishipur and Sreerampur GPs of CDB Habibpur",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+51,ENGLISH BAZAR,"1. English Bazar (M) 2. Amriti, Binodpur, Jadupur-I, Jadupur- II, Kajigram, Kotwali and Mahadipur GPs of CDB English Bazar",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+52,MOTHABARI,"1. CDB Kaliachak-II, 2. Alinagar and Kaliachak-I GPs of CDB Kaliachak-I",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+53,SUJAPUR,"1. Alipur-I, Alipur-II, Bamongram Mashimpur, Gayeshbari, Jalalpur, Jalua Badhal, Kalia Chak-II, Mozampur, Naoda Jadupur, Silampur-I, Silampur-II and Sujapur GPs of CDB Kaliachak-I",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+54,BAISNABNAGAR,1. CDB Kaliachak-III,A_whole_subdistricts_and_towns_only
+55,FARAKKA,"1. CDB Farakka, 2. Gajinagar Malancha and Kanchantala GPs of CDB Samserganj",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+56,SAMSERGANJ,"1. Dhulian (M), 2. Bhasaipaikar, Bogdadnagar, Chachanda, Dogachhi Napara, Nimtita, Pratapganj and Tinpukuria GPs of CDB Samserganj",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+57,SUTI,"1. CDB Suti-II, 2. Bahutali, Harua and Sadikpur GPs of CDB Suti-I",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+58,JANGIPUR,1. Jangipur (M) 2. CDB Raghunathganj-I 3. Ahiran and Bansabati GPs of CDB Suti-I,B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+59,RAGHUNATHGANJ,"1. CDB Raghunathganj-II, 2. Nurpur GP of CDB Suti-I and 3. Maiya GP of CDB Lalgola",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+60,SAGARDIGHI,CDB Sagardighi,A_whole_subdistricts_and_towns_only
+61,LALGOLA,"1. Airmari Krishnapur, Bahadurpur, Bilbora Kopra, Dewansarai, Jasaitala, Kalmegha, Lalgola, Manikchak, Nashipur, Paikpara and Ramchandrapur GPs of CDB Lalgola and 2. Kantanagar GP of CDB Bhagawangola-I",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+62,BHAGAWANGOLA,"1. CDB Bhagawangola-II, 2. Bhagawangola, Habaspur, Hanumantanagar, Kuthirampur, Mahammadpur, Mahisasthali and Sundarpur GPs of CDB Bhagawangola-I",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+63,RANINAGAR,"1. CDB Raninagar-I, 2. Kalinagar-I, Kalinagar-II, Malibari-I, Malibari-II and Raninagar-I GPs of CDB Raninagar-II and 3. Dhulauri GP of CDB Domkal",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+64,MURSHIDABAD,"1. CDB Murshidabad Jiaganj, 2. Jiaganj Azimganj (M) and 3. Murshidabad (M)",A_whole_subdistricts_and_towns_only
+65,NABAGRAM (SC),"1. CDB Nabagram, 2. Neallishpara Goaljan, Radharghat-I, Radharghat-II and Sahajadpur GPs of CDB Baharampur",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+66,KHARGRAM (SC),"1. CDB Khargram, 2. Kalyanpur-I and Kalyanpur-II GPs of CDB Burwan",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+67,BURWAN (SC),"1. Biprasekhar, Burwan-I, Burwan-II, Kharjuna, Kuli, Kurunnurun, Panchthupi, Sabaldaha, Sabalpur, Sahora and Sundarpur GPs of CDB Burwan and 2. Godda, Jajan and Gundiria GPs of CDB Bharatpur-I 1. CDB Kandi, 2. Kandi (M), 3. Satui Chowrigachha GP of",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+68,KANDI,CDB Baharampur,A_whole_subdistricts_and_towns_only
+69,BHARATPUR,"1. CDB Bharatpur-II, 2. Alugram, Amlai, Bharatpur, Sijgram and Talgram GPs of CDB Bharatpur-I",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+70,REJINAGAR,"1. CDB Beldanga-II, 2. Begunbari, Kapasdanga and Mirjapur-I GPs of CDB Beldanga-I",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+71,BELDANGA,"1. Beldanga (M), 2. Bhabta-I, Bhabta-II, Debkundu, Mirjapur-II, Mahula-I and Sujapur Kumarpur GPs of CDB Beldanga-I 2. Bhakuri-II, Haridasmati, Nowda Panur, Rajdharpara and Rangamati Chandpara GPs of CDB Baharampur",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+72,BAHARAMPUR,"1. Baharampur (M), 2. Bhakuri-I, Daulatabad, Gurudaspur, Hatinagar and Manindranagar GPs of CDB Baharampur",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+73,HARIHARPARA,"1. CDB Hariharpara, 2. Chhaighari and Madanpur GPs of CDB Baharampur",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+74,NOWDA,"1. CDB Nowda, 2. Chaitannapur-I, Chaitannapur-II, Madda and Mahula-II GPs of CDB Beldanga-I",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+75,DOMKAL,"1. Ajimganjgola, Bhagirathpur, Domkal, Garaimari, Garibpur, Ghoramara, Jitpur, Juginda, Juranpur, Madhurkul, Raipur and Sarangpur GPs of CDB Domkal",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+76,JALANGI,"1. CDB Jalangi 2. Katlamari-I, Katlamari-II, Rajapur and Raninagar-II GPs of CDB Raninagar-II",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+77,KARIMPUR,"1. CDB Karimpur-I, 2. Dhoradaha-I, Dhoradaha-II, Murutia, Natidanga-I, Natidanga-II and Rahamatpur GPs of CDB Karimpur-II",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+78,TEHATTA,"1. Betai-I, Betai-II, Chhitka, Kanainagar, Natna, Patharghata-I, Raghunathpur, Shyamnagar and Tehatta GPs of CDB Tehatta-I 2. Dighal Kandi, Nandanpur, Narayanpur-I and Narayanpur-II GPs of CDB Karimpur-II",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+79,PALASHIPARA,"1. Chanderghat and Patharghata-II GPs of CDB Tehatta-I 2. CDB Tehatta-II, 3. Bikrampur, Bilkumari, Dhananjaypur and Haranagar GPs of CDB Nakashipara",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+80,KALIGANJ,"Bara Chandghar. Debagram, Faridpur, Gobra, Hatgachha, Juranpur, Kaliganj, Matiari, Mira-I, Mira-II, Panighata, Plassey- I and Plassey-II GPs of CDB Kaliganj",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+81,NAKASHIPARA,"1. Bethua Dahari-I and Bethua Dahari-II, Billwa Gram, Birpur- I, Birpur-II, Dharmada, Dogachhia, Majher Gram, Muragachha, Nakasipara and Patikabari GPs of CDB Nakashipara 2. Palit Begia and Rajarampur Ghoraikhetra GPs of CDB Kaliganj",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+82,CHAPRA,CDB Chapra,A_whole_subdistricts_and_towns_only
+83,KRISHNANAGAR UTTAR,"1. Krishnanagar (M), 2. Bhandar Khola, Bhimpur, Asannagar, Dogachhi and Pora Gachha GPs of CDB Krishnanagar-I",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+84,NABADWIP,"1. CDB Nabadwip, 2. Nabadwip (M), 3. Bhaluka and Joania GPs of CDB Krishnanagar-I",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+85,KRISHNANAGAR DAKSHIN,"Bhat Jungla, Chak Dilnagar, Daypara, Dignagar and Ruipukur GPs of CDB Krishnanagar-I and 2. CDB Krishnanagar-II",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+86,SANTIPUR,"1. Babla, Baganchra, Belgoria-I, Belgoria-II Gayeshpur and Haripur GPs of CDB Santipur and 2. Santipur(M)",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+87,RANAGHAT UTTAR PASCHIM,"1. Taherpur NA 2. Birnagar (M), 3. Ranaghat (M), 4. Ramnagar-I, Barasat, Kalinarayanpur-Paharpur and Khisma GPs of CDB Ranaghat-I 5. Arbandi-I, Arbandi-II, Fulia Township and Nabla GPs of CDB Santipur",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+88,KRISHNAGANJ (SC),"1. CDB Krishnaganj, 2. Badkulla-I, Badkulla-II, Betna Gobindapur, Dakshin Para-I, Dakshin Para-II, Gajna, Mayurhat-I and Mayurhat-II GPs of CDB Hanskhali",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+89,RANAGHAT UTTAR PURBA (SC),"1. Aranghata, Bahirgachhi, Dutta Fulia, Jugalkishore, Kamalpur and Raghunathpur Hijuli-II GPs of CDB Ranaghat-II 2. Bagula-I, Bagula-II, Mamjoan, Ramnagar Bara Chupria-I and Ramnagar Bara Chupria-II GPs of CDB Hanskhali",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+90,RANAGHAT DAKSHIN (SC),"1. Anishmali, Baidyapur-I, Baidyapur-II, Debagram, Majher Gram, Nokari, Raghunathpur Hijuli-I and Shyamnagar GPs of CDB Ranaghat-II 2. Anulia, Habibpur, Nawpara Masunda, Payradanga, Ramnagar-II and Tarapur GPs of CDB Ranaghat-I and 3. Cooper's Camp (NA)",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+91,CHAKDAHA,"1. Chanduria-I, Dubra, Ghetugachhi, Rautari, Silinda-I, Silinda-II, Tatla-I and Tatla-II GPs of CDB Chakdaha and 2. Chakdaha Municipality",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+92,KALYANI (SC),"1. Chanduria-II, Kanchrapara, Madanpur-I, Madanpur-II, Saguna, Sarati and Simurali GPs of CDB Chakdaha 2. Kalyani Municipality and 3. Gayespur Municipality",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+93,HARINGHATA (SC),"1. CDB Haringhata, 2. Dewli and Hingara GPs of CDB Chakdaha",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+94,BAGDA (SC),"1. CDB Bagda 2. Gangrapota, Sundarpur and Tengra GPs of CDB Bangaon",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+95,BANGAON UTTAR (SC),"1. Bangaon (M), 2. Akaipur, Chhaigheria, Dharma Pukuria, Ganganandapur, Ghatbore, Gopalnagar-I and Gopalnagar-II GPs of CDB Bangaon",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+96,BANGAON DAKSHIN (SC),"1. Bairampur, Chauberia-I, Chauberia-II, Dighari, Kalupur and Palla GPs of CDB Bangaon 2. Chandpara, Dooma, Fulsara, Jaleswar-II, Jhaudanga and Ramnagar GPs of CDB Gaighata",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+97,GAIGHATA (SC),"1. Dharmapur-I, Dharmapur-II, Ichapur-I, Ichapur-II, Jaleswar- I, Shimulpur and Sutia GPs of CDB Gaighata 2. Bergum-I, Bergum-II and Machhalandpur-I GPs of CDB Habra-I and 3. Gobardanga (M)",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+98,SWARUPNAGAR (SC),"1. CDB Swarupnagar, 2. Ramchandrapur Uday and Sayesta Nagar -I GPs of CDB Baduria",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+99,BADURIA,"1. Aturia, Bagjola, Bajitpur, Chandipur, Chhatra, South Jadurhati, North jadurhati, Jagannathpur, Jasikati Atghara, Nayabastia Milani, Raghunathpur and Sayesta nagar-II GPs of CDB Baduria and 2. Baduria (M)",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+100,HABRA,"1. Kumra, Pritibha, Rautara and Machhalandpur-II GPs of CDB Habra-I 2. Habra (M)",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+101,ASHOKNAGAR,1. CDB Habra-II and 2. Ashoknagar Kalyangarh (M),A_whole_subdistricts_and_towns_only
+102,AMDANGA,"1. CDB Amdanga 2. Dattapukur-I, Dattapukur-II and Kashimpur GPs of CDB Barasat-I",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+103,BIJPUR,1. Kanchrapara (M) and 2. Halisahar (M),A_whole_subdistricts_and_towns_only
+104,NAIHATI,"1. Naihati(M), 2. Jethia, Kampa-Chakla, Majhipara-Palasi and Shibdaspur GPs of CDB Barrackpur-I",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+105,BHATPARA,Ward No.1 to 17 of Bhatpara (M),C_ward_or_EB_level
+106,JAGATDAL,"1. Ward Nos.18 to 35 of Bhatpara (M), 2. Kogachi-I, Kogachi- II, Mamudpur, Panpur Keutia GPs of CDB Barrackpur-I",C_ward_or_EB_level
+107,NOAPARA,"1. North Barrackpur (M), 2. Garulia (M), 3. Ichapur Def. Estate, 4. Barrackpur CB 5. Mohanpur and Seuli GPs of CDB Barrackpur-II",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+108,BARRACKPUR,1. Barrackpur (M) and 2. Titagarh (M),A_whole_subdistricts_and_towns_only
+109,KHARDAHA,"1. Khardaha (M), 2. Ward Nos.15, 18 to 21 and 35 of Panihati (M), 5. Bandipur, Bilkanda-I, Bilkanda-II and Patulia GPs of CDB Barrackpur-II",C_ward_or_EB_level
+110,DUM DUM UTTAR,1. North DumDum (M) and 2. New Barrackpur (M),A_whole_subdistricts_and_towns_only
+111,PANIHATI,"Ward Nos.1 to 14, 16, 17 and 22 to 34 of Panihati (M)",C_ward_or_EB_level
+112,KAMARHATI,Ward Nos.1 to 16 and 21 to 35 of Kamarhati (M),C_ward_or_EB_level
+113,BARANAGAR,1. Baranagar (M) and 2. Ward Nos.17 to 20 of Kamarhati (M),C_ward_or_EB_level
+114,DUM DUM,1. Dum Dum (M) and 2. Ward Nos.1 to 17 of South Dum Dum (M),C_ward_or_EB_level
+115,RAJARHAT NEW TOWN,1. CDB Rajarhat and 2. Ward Nos. 1 to 6 and 10 to 13 of Rajarhat Gopalpur (M),C_ward_or_EB_level
+116,BIDHANNAGAR,"1. Bidhannagar (M) and 2. Ward Nos. 19, 20 and 28 to 35 of South Dum Dum (M)",C_ward_or_EB_level
+117,RAJARHAT GOPALPUR,1. Ward Nos. 7 to 9 and 14 to 27 of Rajarhat Gopalpur (M) and 2. Ward Nos.18 and 21 to 27 of South Dum Dum (M),C_ward_or_EB_level
+118,MADHYAMGRAM,"1. Madhyamgram (M) 2. Chandipur Rohanda, Kemia Khamarpara GPs of CDB Barasat-II and 3. Ichhapur Nilganj, Paschim Khilkapur and Purba Khilkapur GPs of CDB Barasat-I",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+119,BARASAT,1. Barasat (M) and 2. Chhoto Jagulia GPs of CDB Barasat-I,B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+120,DEGANGA,"1. Kadambagachhi and Katra GPs of CDB Barasat-I, 2. Amulia, Berachampa-I, Berachampa-II, Chakla, Chaurasi, Hadipur Jhikra-I, Kalsur, Nur Nagar and Sohai-Shwetpur GPs of CDB Deganga",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+121,HAROA,"1. Falti Beleghata, Dadpur, Kiritipur -I, Kiritipur-II, Shashan GPs of CDB Barasat-II 2. Champatala, Deganga-I, Deganga-II, Hadipur Jhikra-II GPs of CDB Deganga and 3. Gopalpur-I, Gopalpur-II, Haroa and Khasbalanda GPs of CDB Haroa",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+122,MINAKHAN (SC),"1. CDB Minakhan 2. Bakjuri, Kulti, Shalipur and Sonapukur Sankarpur GPs of CDB Haroa",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+123,SANDESHKHALI (ST),"1. Bayermari-I, Bayermari-II, Hathgachhi, Nazat-I, Nazat-II, Sarberia Agarhati, Sohara Radhanagar and Kalinagar GPs of CDB Sandeshkhali-I, 2.Beramajur-I, Beramajur-II, Durgamandap, Jeliakhali, Korakati, Manipur and Sandeshkhali GPs of CDB Sandeshkhali-II",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+124,BASIRHAT DAKSHIN,"1. Basirhat (M), 2. CDB Basirhat-I and 3. Taki (M)",A_whole_subdistricts_and_towns_only
+125,BASIRHAT UTTAR,"1. Amlani, Bhebia, MakhalGachha, Murarisha GPs of CDB Hasnabad and 2. CDB Bashirhat -II",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+126,HINGALGANJ (SC),"1. CDB Hingalganj, 2. Barunhat Rameshwarpur, Bhabanipur - I, Bhabanipur - II, Hasnabad, PatliKhanpur GPs of CDB Hasnabad and 3. Khulna GP of CDB Sandeshkhali -II",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+127,GOSABA (SC),1. CDB Gosaba and 2. Maszidbati and Chunakhali GPs of CDB Basanti,B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+128,BASANTI (SC),"1. Amjhara, Basanti, Bharatgarh, Fool Malancha, Jharkhali, Jyotishpur, Kanthalberia, Nafarganj, Ramchandrakhali, Uttar Mokamberia, Charabidya GPs of CDB Basanti and 2. Atharobanki GP of CDB Canning - II",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+129,KULTALI (SC),"1. CDB Kultali and 2. Baishata, Chuprijhara, Manirhat, Nalgora GPs of CDB Jaynagar - II",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+130,PATHARPRATIMA,CDB Patharpratima,A_whole_subdistricts_and_towns_only
+131,KAKDWIP,"1. CDB Kakdwip, 2. Budhakhali and Narayanpur GPs of CDB Namkhana",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+132,SAGAR,"1. CDB Sagar 2. Frezarganj, Haripur, Mausini, Namkhana and Shibrampur GPs of CDB Namkhana",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+133,KULPI,1. CDB Kulpi,A_whole_subdistricts_and_towns_only
+134,RAIDIGHI,"1. CDB Mathurapur-II, 2. Abad Bhagawanpur, Debipur, Krishnachandrapur, Lalpur, Shankarpur and Nalua GPs of CDB Mathurapur-I",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+135,MANDIRBAZAR (SC),"1. CDB Mandirbazar, 2. Laksmi-Narayanpur Dakshin, Laksmi-Narayanpur Uttar, Mathurapur Paschim and Mathurapur Purba GPs of CDB Mathurapur-I",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+136,JAYNAGAR (SC),"1. Jaynagar Mazilpur (M), 2. Bele Durganagar, Futigoda, Gardoani, Mayahauri, Mayda, Sahajadapur GPs of CDB Jaynagar - II and 3. Baharu Kshetra, Dakshin Barasat, Hari Narayanpur, Rajapur Korabeg, Sripur and Uttar Durgapur GPs of CDB Jaynagar - I",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+137,BARUIPUR PURBA (SC),"1. Bamangachhi, Chaltaberia, Dhosa Chandaneswar, Jangalia, Khakurdaha and Narayanitala GPs of CDB Jaynagar - I and 2. Begumpur, Belegachhi, Brindakhali, Champahati, Hardhah, Nabagram, Ramnagar-I, Ramnagar-II and South Garia GPs of CDB Baruipur",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+138,CANNING PASCHIM (SC),1. CDB Canning - I and 2. Narayanpur GP of CDB Canning - II,B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+139,CANNING PURBA,"1. Deuli-I, Deuli-II, Kalikatala, Matherdighi, Sarengabad, Tambuldaha-I and Tambuldaha-II GPs of CDB Canning - II and 2. Bodra, Chandaneswar-I, Chandaneswar-II, Durgapur, Shanksahar and Tarda GPs of CDB Bhangar - I",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+140,BARUIPUR PASCHIM,"1. Baruipur (M) and 2. Dhapdhapi-I, Dhapdhapi-II, Hariharpur, Kalyanpur, Mallikpur, Madarat, Shankarpur-I, Shankarpur-II, Shikharbali-I and Shikharbali-II GPs of CDB Baruipur",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+141,MAGRAHAT PURBA (SC),1. CDB Magrahat - II,A_whole_subdistricts_and_towns_only
+142,MAGRAHAT PASCHIM,1. CDB Magrahat-I and Netra GP of CDB Diamond Harbour-I,B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+143,DIAMOND HARBOUR,"1. Kamarpol, Khordo, Mathur, Nurpur, Patra and Sarisa GPs of CDB Diamond Harbour - II 2. Diamond Harbour (M) and 3. Basuldanga, Bolsiddhi Kali Nagar, Derak, Harindanga, Kanpur Dhanaberia, Mashat and Parulia GPs of CDB Diamond Harbour-I",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+144,FALTA,1. CDB Falta and 2. Bhadura Haridas and Kalatalahat GPs of CDB Diamond Harbour - II,B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+145,SATGACHHIA,"1. CDB Bishnupur - II and 2. Chak Manik, Burul, Gaja-Poyali, Kamrabad, Naskarpur, Rania and Satgachhia GPs of CDB Budge Budge - II",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+146,BISHNUPUR (SC),"1. CDB Bishnupur - I and 2. Asuti-I, Asuti-II, Chatta and Raspunja GPs of CDB Thakurpukur Mahestola",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+147,SONARPUR DAKSHIN,"1. Ward Nos-8 to 24 of Rajpur Sonarpur (M), 2. Kalikapur-I, Kalikapur-II, Langalberia, Poleghat, Pratapnagar and Sonarpur-II GPs of CDB Sonarpur",C_ward_or_EB_level
+148,BHANGAR,"1. CDB Bhangar - II 2. Jagulgachhi, Narayanpur and Pranganj GPs of CDB Bhangar-I",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+149,KASBA,"1. Ward Nos. 66, 67, 91, 92, 107 and 108 of Kolkata M. Corp.",C_ward_or_EB_level
+150,JADAVPUR,"1. Ward Nos. 96, 99, 101 to 106, 109 and 110 of Kolkata M. Corp.",C_ward_or_EB_level
+151,SONARPUR UTTAR,"1. Ward Nos. 1 to 7 and 25 to 33 of Rajpur Sonarpur (M) and 2. Banhooghly-I, Banhooghly-II, Kamrabad, Kheyadaha-I and Kheyadaha-II GPs of CDB Sonarpur",C_ward_or_EB_level
+152,TOLLYGANJ,"1. Ward Nos. 94, 95, 97, 98, 100, 111 to 114 of Kolkata M. Corp.",C_ward_or_EB_level
+153,BEHALA PURBA,1. Ward Nos.115 to 117 and 120 to 124 of Kolkata M. Corp. 2. Joka-I and Joka-II GPs of CDB Thakurpukur Mahestola,C_ward_or_EB_level
+154,BEHALA PASCHIM,1. Ward-118 to 119 and 125 to 132 of Kolkata M. Corp.,C_ward_or_EB_level
+155,MAHESHTALA,1. Ward Nos. 8 and 11 to 35 of Maheshtala (M),C_ward_or_EB_level
+156,BUDGE BUDGE,"1.CDB Budge Budge - I 2. Budge Budge (M) 3. Pujali (M) and 4. Kasipur Alampur North Baoyali, South Baoyali and Dongaria Raipur GPs of CDB Budge Budge - II",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+157,METIABURUZ,"1. Ward Nos.136 to 141 of Kolkata M. Corp. and 2. Ward Nos. 1 to 7, 9 and 10 of Maheshtala (M) Ward Nos.-75, 76, 78 to 80 and 133 to 135 of Kolkata M.",C_ward_or_EB_level
+158,KOLKATA PORT,Corp.,A_whole_subdistricts_and_towns_only
+159,BHABANIPUR,"Ward Nos.-63, 70 to 74, 77 and 82 of Kolkata M. Corp.",C_ward_or_EB_level
+160,RASHBEHARI,"Ward Nos.-81, 83, 84, 86 to 90 and 93 of Kolkata M. Corp.",C_ward_or_EB_level
+161,BALLYGUNGE,"Ward Nos.-60, 61, 64, 65, 68, 69 and 85 of Kolkata M. Corp.",C_ward_or_EB_level
+162,CHOWRANGEE,Ward Nos.-44 to 53 and 62 of Kolkata M. Corp.,C_ward_or_EB_level
+163,ENTALLY,"Ward Nos.-54 to 56, 58 and 59 of Kolkata M. Corp.",C_ward_or_EB_level
+164,BELEGHATA,"Ward Nos.-28 to 30, 33 to 36 and 57 of Kolkata M. Corp.",C_ward_or_EB_level
+165,JORASANKO,"Ward Nos.-22, 23, 25, 27 and 37 to 43 of Kolkata M. Corp.",C_ward_or_EB_level
+166,SHYAMPUKUR,"Ward Nos.-7 to 10, 17 to 21, 24 and 26 of Kolkata M. Corp.",C_ward_or_EB_level
+167,MANIKTALA,"Ward Nos.-11 to 16, 31 and 32 of Kolkata M. Corp.",C_ward_or_EB_level
+168,KASHIPUR- BELGACHHIA,Ward Nos.-1to 6 of Kolkata M. Corp.,C_ward_or_EB_level
+169,BALLY,Bally (M),A_whole_subdistricts_and_towns_only
+170,HOWRAH UTTAR,1. Ward Nos.-1 to 7 and 10 to 16 of Howrah M. Corp.,C_ward_or_EB_level
+171,HOWRAH MADHYA,"1. Ward Nos.-17 to 20, 24 to 34, 36, 37 and 42 of Howrah M. Corp.",C_ward_or_EB_level
+172,SHIBPUR,"1. Ward Nos.-8, 9, 21 to 23, 43 and 47 to 50 of Howrah M. Corp.",C_ward_or_EB_level
+173,HOWRAH DAKSHIN,"Ward Nos.-35, 38 to 41 and 44 to 46 of Howrah M. Corp. 2. Duila, Jorhat, Panchpara and Thanamakua GPs of CDB Sankrail",C_ward_or_EB_level
+174,SANKRAIL (SC),"1. Andul, Banpur-I, Banpur-II, Dakshin Sankrail, Dhulagari, Kandua, Manikpur, Mashila, Nalpur, Raghudebbati, Sankrail, Sarenga GPs of CDB Sankrail and 2. Kolora-I, Kolora-II, Mahiyari-I, Mahiyari-II GPs of CDB Domjur.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+175,PANCHLA,"1. CDB Panchla and 2. Gobindapur, Islampur, Laskarpur, Polegustia GPs of CDB Jagatballavpur",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+176,ULUBERIA PURBA,"1. Uluberia (M), 2. Khalisani and Raghudevpur GPs of CDB Uluberia-II",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+177,ULUBERIA UTTAR (SC),"1. Amta, Bhandargachha, Chandrapur, Khardah, Raspur, Sirajbati, Udang-I and Udang-II GPs of CDB Amta - I and 2. Baniban, Basudevpur, Joyargori, Tehatta Kantaberia-I, Tehatta Kantaberia-II and Tulsiberia GPs of CDB Uluberia-II",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+178,ULUBERIA DAKSHIN,"1. CDB Uluberia-I and 2. Belari, Dhandali, Balichaturi and Nabagram GPs of CDB Shyampur - I",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+179,SHYAMPUR,"1. Baneswarpur-I, Baneswarpur-II, Dingakhola, Kamalpur, Radhapur and Syampur GPs of CDB Shyampur - I, 2. Bachhri, Dihi Mondalghat-I, Dihi Mondalghat-II, Kharuberia, Nakol, Shashati, Amardaha and Bargram GPs of CDB Shyampur - II",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+180,BAGNAN,"1. CDB Bagnan-II, 2. Bagnan-I, Bagnan-II, Bangalpur, Haturia-I, Haturia-II and Khalore of CDB Bagnan-I",A_whole_subdistricts_and_towns_only
+181,AMTA UDAYNARAYANPUR JAGATBALLAVPUR,"1. CDB Amta-II and 2. Bainan, Baksihat, Kalyanpur and Sabsit GPs of CDB Bagnan-I 1. CDB Udaynarayanpur 2. Anulia, Balichak, Basantapur, Kanpur and Khosalpur GPs of CDB Amta-I 1. Baragachhia-I, Baragachhia-II, Hantal Anantabati, Jagatballavpur-I, Jagatballavpur-II, Pantihal, Shankarhati-I, Shankarhati-II, Shialdanga and Maju GPs of CDB Jagatballavpur and 2. Begari, Domjur, Dakshin-Jhapardaha, Parbatipur, Rudrapur, Uttar Jhapardaha and Makardah-I GPs of CDB Domjur",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+184,DOMJUR,"1. CDB Bally Jagachha and 2. Bankra-I, Bankra-II, Bankra-III, Makardah-II, Narna, Shalap-I and Shalap-II GPs of CDB Domjur",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+185,UTTARPARA,"1. Uttarpara-Kotrang (M), 2. Konnagar (M), 3. Nabagram, Kanaipur, Raghunathpur of CDB Sreerampur-Uttarpara (Part)",B2_part_unit_other
+186,SREERAMPUR,"1. Rishra (M), 2. Ward Nos.3 to 19 and 25 of Sreerampur (M), 3. Rajyadharpur and Rishra GPs of CDB Sreerampur- Uttarpara",C_ward_or_EB_level
+187,CHAMPDANI,"1. Baidyabati (M), 2. Champdani (M), 3. Ward Nos.1 & 2 and 20 to 24 of Sreerampur (M) and 4. Payarapur GP of CDB Sreerampur-Uttarpara",C_ward_or_EB_level
+188,SINGUR,"1. Anandanagore, Bagdanga Chinamore, Baruipara Paltagarh, Beraberi, Bighati, Bouichipota, Bora, Borai Pahalampur, Gopalnagore, Mirzapur-Bankipur, Nasibpur, Singur-I and Singur-II GPs of CDB Singur, 2. Begumpur, Kapasaria and Panchghora GPs of CDB Chanditala -II",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+189,CHANDANNAGAR,1. Chandannagar (MC) and 2. Bhadreswar (M),A_whole_subdistricts_and_towns_only
+190,CHUNCHURA,"1. Hooghly-Chunchura(M), 2. Bandel, Debanandapur, Kodalia-I and Kodalia-II GPs of CDB Chunchura-Mogra, 3. Polba, Rajhat and Sugandha GPs of CDB Polba Dadpur",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+191,BALAGARH (SC),"1. CDB Balagarh, 2. Chandrahati-I, Chandrahati-II, Digsui and Mogra-I GPs of CDB Chunchura-Mogra",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+192,PANDUA,1. CDB Pandua,A_whole_subdistricts_and_towns_only
+193,SAPTAGRAM,"1. Aknna, Amnan, Goswami Malipara, Harit and Mahanad GPs of CDB Polba Dadpur 2. Mogra-II and Saptagram GPs of CDB Chunchura-Mogra and 3. Bansberia (M)",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+194,CHANDITALA,"1. Bhogabatipur, Gangadharpur, Krishnarampur, Kumirmorah and Nababpur GPs of CDB Chanditala-I 2. Baksa, Barijhati, Chanditala, Dankuni, Garalgacha, Janai, Monaharpur, Mrigala and Naiti GPs of CDB Chanditala-II",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+195,JANGIPARA,"1. CDB Jangipara, 2 Ainya, Haripur, Masat and Shiyakhala GPs of CDB Chanditala-I",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+196,HARIPAL,"1. CDB Haripal, 2. Balarambati, Basubati and Kamarkundu Gopalnagar Daluig achha GPs of CDB Singur",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+197,DHANEKHALI (SC),"1. Belmuri, Bhastara, Dashghara-I, Dashghara-II, Dhanekhali- I, Dhanekhali-II, Gurap, Gurbari-I, Gurbari-II, Khajurdaha Milki, Mandra, Somaspur-I and Somaspur-II GPs of CDB Dhanekhali, 2. Babnan, Dadpur, Makalpur and Satithan GPs of CDB Polba-Dadpur",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+198,TARAKESWAR,"1. CDB Tarakeswar, 2. Tarakeswar (M), 3. Bhanderhati-I, Bhanderhati-II, Gopinathpur-I, Gopinathpur-II and Perambua Sahabazar GPs of CDB Dhanekhali",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+199,PURSURAH,"1. CDB Pursurah, 2. Arunda, Balipur, Rammohan-I, Rammohan-II and Tantisal GPs of CDB Khanakul-I, 3. Harinkhola-I and Harinkhola-II GPs of CDB Arambag",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+200,ARAMBAG (SC),"1. Arandi-I, Arandi-II, Batanal, Gaurhati-I, Gaurhati-II, Madhabpur, Mayapur-I, Mayapur-II, Malaypur-I, Malaypur-II, Salepur-I, Salepur-II and Tirol GPs of CDB Arambag and 2. Arambag (M)",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+201,GOGHAT (SC),1. CDB Goghat-I and 2. CDB Goghat-II,A_whole_subdistricts_and_towns_only
+202,KHANAKUL,"1. CDB Khanakul-II, 2. Ghoshpur, Khanakul-II, Kishorpur-I, Kishorpur-II, Pole-I,Pole-II, Thakuranichak-I, Thakuranichak-II and Khanakul-I GPs of CDB Khanakul-I",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+203,TAMLUK,"1. CDB Sahid Matangini, 2. Tamluk (M), 3. Bishnubarh-II, Pipulberia-I, Pipulberia-II and Uttar Sonamui GPs of CDB Tamluk",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+204,PANSKURA PURBA,1. CDB Panskura-II,A_whole_subdistricts_and_towns_only
+205,PANSKURA PASCHIM,1. CDB Panskura-I,A_whole_subdistricts_and_towns_only
+206,MOYNA,"1. CDB Moyna, 2. Anantapur-I, Anantapur-II, Nilkunthia, Sreerampur-I and Sreerampur-II GPs of CDB Tamluk",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+207,NANDAKUMAR,"1. CDB Nanda Kumar 2. Bishnubarh-I, Padumpur-I and Padumpur-II GPs of CDB Tamluk",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+208,MAHISADAL,1. CDB Mahisadal and 2. CDB Haldia,A_whole_subdistricts_and_towns_only
+209,HALDIA (SC),1. CDB Sutahata and 2. Haldia (M),A_whole_subdistricts_and_towns_only
+210,NANDIGRAM,1. CDB Nandigram-I and 2. CDB Nandigram-II,A_whole_subdistricts_and_towns_only
+211,CHANDIPUR,"1. CDB Chandipur, 2. Benodia, Bivisanpur, Gurgram, Kakra, Mahammadpur-I and Mahammadpur-II GPs of CDB Bhagawanpur-I",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+212,PATASHPUR,"1. CDB Patashpur-I 2. Khargram, Panchet, Pataspur, South Khanda and Sreerampur GPs of CDB Patashpur-II",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+213,KANTHI UTTAR,"1. CDB Kanthi-II, 2. Brajachauli, Debendra, Kanaidighi, Kumirda, Lauda and Marishda GPs of CDB Kanthi-III and 3. Bathuari GP of CDB Egra-II",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+214,BHAGABANPUR,"1. Bhagabanpur, Kajlagarh, Kotbarh and Shimulia GPs of CDB Bhagawanpur-I, 2. Arjunnagar, Basudevberia, Baroj, Itaberia, Jukhia, Mugberia and Radhapur GPs of CDB Bhagawanpur-II , 3. Argoyal and Mathura GPs of CDB Patashpur-II",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+215,KHEJURI (SC),"1. CDB Khejuri-I, 2. CDB Khejuri-II, 3. Garbari-I and Garbari-II GPs of CDB Bhagawanpur-II",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+216,KANTHI DAKSHIN,1. CDB Kanthi-I 2. Kanthi (M) 3. Durmuth and Kusumpur GPs of CDB Kanthi-III,B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+217,RAMNAGAR,1. CDB Ramnagar-I and 2. CDB Ramnagar-II,A_whole_subdistricts_and_towns_only
+218,EGRA,"1. CDB Egra-I, 2. Egra (M), 3. Basudevpur, Deshbandhu, Dubda, Manjusree, Paniparul, Sarbaday and Bibekananda GPs of CDB Egra-II",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+219,DANTAN,1. CDB Dantan-II 1. CDB Mohanpur and 2. Chak Ismailpur GPs of CDB Dantan-I,B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+220,NAYAGRAM (ST),"1. CDB Nayagram, 2. CDB Gopiballavpur-I and 3 Chorchita, Kuliana and Nota GPs of CDB Gopiballavpur-II",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+221,GOPIBALLAVPUR,"Beliabera, Kharbandhi, Pet Bindhi and Tapshia of Gopiballavpur-II, 2. Aguiboni, Chandri, Chubka, Dudhkundi, Lodhasuli, Nedabahara, Patashimul, Shalboni and Sardiha GPs of CDB Jhargram and 3. CDB Sankrail",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+222,JHARGRAM,"1. Jhargram (M), 2. Bandhgora, Manikpara, Radhanagar and Sapdhara GPs of CDB Jhargram, 3. CDB Binpur-I",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+223,KESHIARY (ST),"1. CDB Keshiary, 2. Alikosha, Angua, Ainkola, Dantan-I, Dantan-II, Monoharpur, Salikotha and Tararui GPs of CDB Dantan-I",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+224,KHARAGPUR SADAR,1. Kharagpur (M) 2. Kharagpur Rly. Settlement (Ct) of CDB Kharagpur-I,A_whole_subdistricts_and_towns_only
+225,NARAYANGARH,CDB Narayangarh,A_whole_subdistricts_and_towns_only
+226,SABANG,"1. CDB Sabang, 2. Jalchak-I, Jalchak-II and Maligram GPs of CDB Pingla",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+227,PINGLA,"1. Dhaneswarpur, Gobordhanpur, Jamna, Karkai, Kshirai, Kusumda and Pindurui GPs of CDB Pingla and 2. CDB Kharagpur - II",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+228,KHARAGPUR,"1. CDB Kharagpur-I, 2. Banpura, Panchkhuri-I, Panchkhuri-II, Pathra and Shiromoni GPs of CDB Midnapore",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+229,DEBRA,CDB Debra,A_whole_subdistricts_and_towns_only
+230,DASPUR,"1. CDB Daspur-II, 2. Basudevpur, Daspur-I, Daspur-II, Nandanpur-I, Nandanpur-II and Panchberia GPs of CDB Daspur-I",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+231,GHATAL (SC),"1. CDB Ghatal, 2. Ghatal (M), 3. Kharar (M) and 4. Rajnagar, Sarberia-I and Sarberia-II GPs of CDB Daspur-I",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+232,CHANDRAKONA (SC),"1. CDB Chandrakona-I, 2.Ramjibanpur(M), 3. Kshirpai (M), 4.CDB Chandrakona-II, 5. Niz-Narajol GPs of CDB Daspur-I and 6.Chandrakona (M)",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+233,GARBETA,"1. CDB Garbeta-I, 2. Amlasuli, Jogardanga, Piyasala and Sarboth GPs of CDB Garbeta-II",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+234,SALBONI,"1. Goaltor, Gohaldanga, Jeerapara, Makli, Patharpara and Pingbani GPs of CDB-Garbeta-II, 2. Bhimpur, Bishnupur, Debgram, Lalgeria and Shalboni GPs of CDB Salbani and 3. CDB Garbeta-III",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+235,KESHPUR (SC),1. CDB Keshpur,A_whole_subdistricts_and_towns_only
+236,MEDINIPUR,"1. Medinipur (M), 2. Chandra, Dherua, Monidaha and Tantigeria GPs of CDB Medinipur, 3. Bankibandh, Garhmal, Karnagarh, Kashijora and Shatpati GPs of CDB Salbani",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+237,BINPUR (ST),1. CDB Binpur-II and 2. CDB Jamboni,A_whole_subdistricts_and_towns_only
+238,BANDWAN (ST),"1. CDB Barabazar, 2. CDB Manbazar-II and 3. CDB Bundwan",A_whole_subdistricts_and_towns_only
+239,BALARAMPUR,"1. CDB Balarampur, 2. Chakaltore, Dimdiha, Durku, Garafusra, Lagda and Sonaijuri GPs CDB Purulia-I and 3. Chatu Hansa, Hensla and Puara GPs of CDB Arsha",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+240,BAGHMUNDI,"1. CDB Jhalda-I, 2. Jhalda (M), 3. CDB Baghmundi and 4. Hetgugui and Sirkabad GPs of CDB Arsha",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+241,JOYPUR,"1. CDB Jhalda-II, 2. CDB Jaipur, 3. Arsha, Beldih and Manikary GPs of CDB Arsha",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+242,PURULIA,"1. CDB Purulia-II, 2. Purulia (M), 3. Bhandar Puara Chipida and Manara GPs of CDB Purulia-I",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+243,MANBAZAR (ST),"1. CDB Manbazar-I, 2. CDB Puncha and 3. Chatumadar, Daldali and Manguria Lalpur GPs of CDB Hura",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+244,KASHIPUR,"1. CDB Kashipur, 2. Hura, Jabarrah, Kalabani, Keshargarh, Ladhurka, Lakhanpur and Rakhera Bishpuri GPs of CDB Hura",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+245,PARA (SC),1. CDB Para and 2. CDB Raghunathpur-II,A_whole_subdistricts_and_towns_only
+246,RAGHUNATHPUR (SC),"1. CDB Raghunathpur-I, 2. Raghunathpur (M), 3. CDB Neturia and 4. CDB Santuri",A_whole_subdistricts_and_towns_only
+247,SALTORA (SC),"1. CDB Saltora, 2. CDB Mejhia, 3. Banasuria, Barashal, Lachhmanpur and Latiaboni GPs of CDB Gangajalghati",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+248,CHHATNA,"1. CDB Chatna, 2. Veduasol, Brahmandiha, Hatgram, Indpur and Raghunathpur GPs of CDB Indpur",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+249,RANIBANDH (ST),"1. CDB Ranibandh, 2. CDB Hirbandh and 3. CDB Khatra",A_whole_subdistricts_and_towns_only
+250,RAIPUR (ST),1. CDB Raipur and 2. CDB Sarenga,A_whole_subdistricts_and_towns_only
+251,TALDANGRA,"1. Bibarda, Fulmati, Harmasra, Khalgram, Panchmura and Taldangra GPs of CDB Taldangra 2. Brojarajpur and Gaurbazar GPs of CDB Indpur and 3. CDB Simlapal",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+252,BANKURA,"1. CDB Bankura-I, 2. Bankura (M). 3. Janbedia, Mankanali and Purandarpur GPs of CDB Bankura-II.",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+253,BARJORA,"1. Bhaktabandh, Gangajalghati, Gobindadham, Kapista, Nityanandapur and Piraboni GPs of CDB Gangajalghati and 2. CDB Barjora",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+254,ONDA,"1. CDB Onda, 2. Bikna, Kosthia, Narrah and Sanbandha GPs of CDB Bankura-II",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+255,BISHNUPUR,"1. Bishnupur (M) 2. CDB Bishnupur, 3. Amdangra, Saltora and Satmauli GPs of CDB Taldangra",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+256,KATULPUR (SC),"1. Deshrahkoyalpara, Gopinathpur, Kotulpur, Lego, Mirzapur and Sihar GPs of CDB Kotulpur, 2. Gelia, Jagannathpur, Kuchiakol, Maynapur, Salda, Uttarbarh, Hetia, Routkhanda and Shyamnagar GPs of CDB Jaypur",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+257,INDUS (SC),"1. CDB Indus 2. Balsi-I, Balsi-II, Biur betur, Jamkuri and Kushdwip GPs of CDB Patrasayer and 3. Laugram, Madanmohanpur GPs of CDB Kotulpur",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+258,SONAMUKHI (SC),"1. CDB Sonamukhi, 2. Sonamukhi(M) and 3. Belut Rasulpur, Beersingha, Hamirpur, Narayanpur and Patrasayar GPs of CDB Patrasayer",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+259,KHANDAGHOSH (SC),"1. CDB Khandaghosh, 2. Adra, Bhunri, Gohogram, Khano, Maszidpur, Sanko and Satinadi GPs of CDB Galsi-II",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+260,BARDHAMAN DAKSHIN,Bardhaman (M),A_whole_subdistricts_and_towns_only
+261,RAINA (SC),"1. CDB Raina-II and 2. Hijalna, Natu, Palsona, Sehara, Narugram, Shyamsundar, and Rayna GPs of CDB Raina-I",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+262,JAMALPUR (SC),1. CDB Jamalpur and 2. Mugura GP of CDB Raina-I,B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+263,MONTESWAR,"1.Baghsan, Vagra Mulgram, Denur, Jamna, Kusumgram, Majhergram, Mamudpur-I, Manteswar, Pipalan and Shushunia GPs of CDB Manteswar and 2. Barapalason-I, Barapalason-II, Bohar-I, Bohar-II, Bijur-I, Bijur-II and Satgachhia-I GPs of CDB Memari-II",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+264,KALNA (SC),"1. CDB Kalna-II, 2. Kalna (M) and 3. Bagnapara, Hatkalna and Krishnadevpur GPs of CDB Kalna-I 1. Kuchut, Satgachhia-II GPs of CDB Memari-II 2. Memari(M)",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+265,MEMARI,and 3. CDB Memari-I,A_whole_subdistricts_and_towns_only
+266,BARDHAMAN UTTAR (SC),"1. CDB Bardhaman-II and 2. Belkash, Bandul-I, Rayan-I, Rayan-II, Saraitikar, Baghar-I and Baghar-II GPs of CDB Bardhaman-I",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+267,BHATAR,1. CDB Bhatar and 2. Kurman-I and Kshetia GPs of CDB Bardhaman-I,B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+268,PURBASTHALI DAKSHIN,"1. Nandai, Kankuria, Begpur, Atghoria Simlan, Dhatrigram and Sultanpur GPs of CDB Kalna-I and 2. Nasratpur, Samudragarh, Bagpur, Sreerampur and Nadanghat GPs of CDB Purbasthali-I",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+269,PURBASTHALI UTTAR,"1. CDB Purbasthali-II, 2. Jahannagar and Dogachia GPs of CDB Purbasthali-I , 3. Bamunpara, Mamudpur-II and Putsuri GPs of CDB Manteswar",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+270,KATWA,"1. Katwa (M), 2. Dainhat (M), 3. CDB Katwa-II and 4. Khajurdihi, Sudpur, Karajgram and Goai GPs of CDB Katwa-I",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+271,KETUGRAM,"1. CDB Ketugram-I, 2. CDB Ketugram-II and 3. Koshigram and Srikhanda GPs of CDB Katwa-I",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+272,MANGALKOT,"1. CDB Mangalkot 2. Saragram, Gidhgram and Alampur GPs of CDB Katwa-I",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+273,AUSGRAM (SC),1. CDB Ausgram-I 2. CDB Ausgram-II and 3. Guskara (M),A_whole_subdistricts_and_towns_only
+274,GALSI (SC),"1. CDB Galsi-I, 2. Galsi and Kurkuba GPs of CDB Galsi-II, 3. Kanksa, Trilokchandrapur, Bankati and Bidbehar GPs of CDB Kanksa",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+275,PANDABESWAR,1. CDB Pandabeswar and 2. CDB Faridpur Durgapur,A_whole_subdistricts_and_towns_only
+276,DURGAPUR PURBA,"1. Ward Nos. 1-10, 23-28 of Durgapur M. Corp. and 2. Amlajora, Gopalpur and Molandighi GPs of CDB Kanksa",C_ward_or_EB_level
+277,DURGAPUR PASCHIM,"1. Ward Nos. 11-22, 29-43 of Durgapur M. Corp.",C_ward_or_EB_level
+278,RANIGANJ,CDB Ondal and 2. Raniganj (M),A_whole_subdistricts_and_towns_only
+279,JAMURIA,"1. Jamuria (M), 2. CDB Jamuria and 3. Ratibati GP of CDB Raniganj",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+280,ASANSOL DAKSHIN,"1. Ward Nos. 9, 18, 20, 34 to 50 of Asansol M. Corp., 2. Amrasota, Egra, Ballavpur, Jemari and Tirat GPs of CDB Raniganj",C_ward_or_EB_level
+281,ASANSOL UTTAR,"Ward Nos. 1 to 8, 10 to 17, 19, 21 to 33 of Asansol M. Corp.",C_ward_or_EB_level
+282,KULTI,Kulti (M),A_whole_subdistricts_and_towns_only
+283,BARABANI,1. CDB Barabani and 2. CDB Salanpur,A_whole_subdistricts_and_towns_only
+284,DUBRAJPUR (SC),"1. CDB Khoyrasol, 2. Dubrajpur (M), 3. Balijuri, Hetampur, Jashpur, Laxmi Narayanpur, Loba and Paduma GPs of CDB Dubrajpur",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+285,SURI,"1. CDB Suri-I, 2. Suri (M)., 3. CDB Rajnagar and 4. Chinpai, Gohaliara, Parulia and Sahapur GPs of CDB Dubrajpur",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+286,BOLPUR,"1. CDB Illambazar, 2. Bolpur (M)., 3. Raipur Supur, Ruppur and Sattor GPs of CDB Bolpur Sriniketan",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+287,NANOOR (SC),"1. CDB Nanoor and 2. Bahiri Panchshowa, Kankalitala, Kasba, Sarpalehana Albandha, Sian Muluk and Singhee GPs of CDB Bolpur Sriniketan",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+288,LABPUR,"1. CDB Labpur, 2. Ahmedpur, Amarpur, Bhromorkol, Panrui, Sangra and Sreenidhipur GPs of CDB Sainthia",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+289,SAINTHIA (SC),"1. Sainthia (M). 2. Angargaria, Bhutura, Charicha, Mahamad Bazar, Deucha and Puranagram GPs of CDB Mohammadbazar, 3. Banagram, Deriapur, Fulur, Horisara, Hatora and Mathpalsa GPs of CDB Sainthia and 4. CDB Suri-II",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+290,MAYURESWAR,1. CDB Mayureswar-I and 2. CDB Mayureswar-II,A_whole_subdistricts_and_towns_only
+291,RAMPURHAT,"1. CDB Rampurhat-I, 2. Rampurhat (M). 3. Bharkata, Gonpur, Hinglow, Kapista, Rampur and Sekedda GPs of CDB Mohammadbazar",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+292,HANSAN,1. CDB Rampurhat-II and 2. CDB Nalhati-II,A_whole_subdistricts_and_towns_only
+293,NALHATI,"1. CDB Nalhati-I, 2. Kushmore-I, Kushmore-II and Rudranagar GPs of CDB Murarai-II",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)
+294,MURARAI,"1. CDB Murarai-I, 2. Amdole, Jajigram, Mitrapur, Nandigram, Paikar-I and Paikar-II GPs of CDB Murarai-II",B_sub_tehsil_units(GP/village/circle/KC/PC/mouza)

@@ -1,0 +1,12 @@
+census_state,census_district,census_subdistt,census_town,census_ward,app_state,eci_ac_no,weight,basis
+29,572,05542,803162,0199,Karnataka,155,1.0,BBMP UA outgrowth ward (OG village); inferred: no LGD code for MDDS 612955; LGD Bengaluru North villages Guddada Halli/Guddadhahalli -> Dasarahalli; adjacent OG Totadaguddadahalli -> Dasarahalli
+29,572,05542,803162,0200,Karnataka,155,1.0,"BBMP UA outgrowth ward (OG village); LGD village 612956 Totadaguddadahalli (Og) -> Dasarahalli, fully covered"
+29,572,05542,803162,0201,Karnataka,155,1.0,"BBMP UA outgrowth ward (OG village); LGD village 612957 Srikantapura (Anchepalya) -> Dasarahalli, fully covered"
+29,572,05542,803162,0202,Karnataka,153,1.0,"BBMP UA outgrowth ward (OG village); LGD village 612822 Kodigehalli(Part) -> Yeshvanthapura, fully covered; matches 2008 Order list (Kodigehally)"
+29,572,05543,803162,0203,Karnataka,153,1.0,"BBMP UA outgrowth ward (OG village); LGD village 613064 Ramasandra (Og) -> Yeshvanthapura, fully covered (Kengeri circle)"
+29,572,05543,803162,0204,Karnataka,176,1.0,BBMP UA outgrowth ward (OG village); LGD village 924174 Doddathoguru (name match; no census code) -> Bengaluru South (Begur circle)
+29,572,05544,803162,0205,Karnataka,174,1.0,"BBMP UA outgrowth ward (OG village); LGD village 613126 Doddagubbi (Og) -> Mahadevapura, fully covered (Bidarahalli circle)"
+29,572,05544,803162,0206,Karnataka,174,1.0,"BBMP UA outgrowth ward (OG village); LGD village 613125 Chikkagubbi (Og) -> Mahadevapura, fully covered"
+29,572,05544,803162,0207,Karnataka,174,1.0,"BBMP UA outgrowth ward (OG village); LGD village 613124 Kannur (Og) -> Mahadevapura, fully covered"
+29,572,05542,803162,0208,Karnataka,150,1.0,"BBMP UA outgrowth ward (OG village); LGD village 612953 Suggatta (Og) -> Yelahanka, fully covered"
+29,572,05542,803162,0209,Karnataka,150,1.0,"BBMP UA outgrowth ward (OG village); LGD village 612954 Vaderapura (Og) -> Yelahanka, fully covered"
